@@ -1,0 +1,17 @@
+{
+  "id": "pcgamingwiki",
+  "slug": "pcgamingwiki",
+  "name": "PCGamingWiki",
+  "aliases": ["PCGW"],
+  "summary": "PC 游戏技术资料百科：配置文件位置、启动参数、常见问题修复。",
+  "category": "guide-wiki",
+  "url": "https://www.pcgamingwiki.com/",
+  "languages": ["en"],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

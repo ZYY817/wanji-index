@@ -1,0 +1,14 @@
+{
+  "id": "demo-record",
+  "slug": "demo-record",
+  "name": { "zh": "示例记录" },
+  "summary": "示例数据（docs/04 §7 隔离区），绝不进入构建。",
+  "channels": [{ "platform": "steam", "type": "buy", "url": "https://example.com/x", "linkHealth": "ok", "checkedAt": "2026-10-01" }],
+  "sources": [],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-01",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-01",
+  "publishStatus": "published",
+  "_demo": true
+}

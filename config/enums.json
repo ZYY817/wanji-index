@@ -1,0 +1,16 @@
+{
+  "platform": ["steam", "epic", "gog", "itch", "official", "xbox-pc", "other"],
+  "freeType": ["permanent", "limited", "trial", "weekend", "opensource"],
+  "linkHealth": ["ok", "unchecked", "suspect", "dead"],
+  "publishStatus": ["draft", "published", "offline"],
+  "reviewStatus": ["unverified", "verified"],
+  "siteCategory": ["store", "free-platform", "indie", "mod", "localization", "guide-wiki", "patch-support", "other"],
+  "toolType": ["mod-manager", "save", "perf-monitor", "game-manager", "trainer-channel", "compat-fix", "other"],
+  "entryType": ["mod", "localization", "patch", "guide-page", "save", "tool-page", "other"],
+  "guideKind": ["tutorial", "troubleshooting"],
+  "guideCategory": ["install-run", "launch-crash", "mod", "save-backup", "settings-compat", "performance"],
+  "channelType": ["buy", "free", "trial", "subscription"],
+  "stepVerified": ["self", "community", "unverified"],
+  "os": ["windows", "linux", "macos"],
+  "osVersions": ["win7", "win10", "win11", "macos-13"]
+}

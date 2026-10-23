@@ -1,0 +1,102 @@
+---
+import { withBase } from '../../lib/url.mjs';
+// 工具详情 —— docs/05 §7.7：头(名称+类型+OS+█官方获取)→功能→安装要点→兼容/版本→风险→关联→核验
+import Base from '../../layouts/Base.astro';
+import Section from '../../components/Section.astro';
+import MetaDate from '../../components/MetaDate.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import AcquireButton from '../../components/AcquireButton.astro';
+import WarningStrip from '../../components/WarningStrip.astro';
+import IndexRow from '../../components/IndexRow.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { softwareAppLd, breadcrumbLd } from '../../lib/jsonld.mjs';
+import site from '../../../config/site.json';
+import { loadData } from '../../lib/load.mjs';
+import { zh } from '../../lib/labels.mjs';
+
+export function getStaticPaths() {
+  const data = loadData();
+  return data.tools.map((t) => ({ params: { slug: t.slug }, props: { tool: t, data } }));
+}
+const { tool: t, data } = Astro.props;
+const games = (t.supportedGames ?? []).map((id) => data.games.find((g) => g.id === id)).filter(Boolean);
+const guides = data.guides.filter((g) => (g.tools ?? []).includes(t.id));
+---
+<Base title={t.name} description={t.summary}>
+  <JsonLd data={[softwareAppLd(t, Astro.site.href), breadcrumbLd([['首页', '/'], ['工具', '/tools/'], [t.name, `/tools/${t.slug}/`]], Astro.site.href)]} />
+  <nav class="crumb meta"><a href={withBase('/')}>首页</a> / <a href={withBase('/tools/')}>工具</a> / {t.name}</nav>
+  <header class="th">
+    <h1>{t.name}</h1>
+    <p class="th-sub">
+      <span class="tag">{zh('toolType', t.type)}</span>
+      {(t.os ?? []).map((o: string) => <span class="tag">{zh('os', o)}</span>)}
+      <AcquireButton href={t.officialUrl} label="官方获取" health={t.linkHealth} />
+    </p>
+    <p class="sub">{t.summary}</p>
+    <p class="th-meta"><MetaDate checkedAt={t.checkedAt} staleDays={site.review.staleDays.entity} />{t.reviewStatus !== 'verified' && <StatusBadge kind="unverified" />}</p>
+  </header>
+
+  {t.description && <Section title="功能" id="features"><p>{t.description}</p></Section>}
+
+  {t.installNotes && (
+    <Section title="安装与使用要点" id="install">
+      <div class="mono-notes">{t.installNotes}</div>
+    </Section>
+  )}
+
+  <Section title="兼容与版本" id="compat">
+    <dl class="info">
+      <dt>版本</dt>
+      <dd>{t.version?.latest ? <span class="mono">{t.version.latest}</span> : <StatusBadge kind="unchecked" />}{t.version?.checkedAt && <span class="meta">（核验 {t.version.checkedAt}）</span>}</dd>
+      <dt>兼容性</dt>
+      <dd>{t.compatibility ?? <StatusBadge kind="unchecked" />}</dd>
+      {t.osVersions?.length > 0 && <><dt>适用系统版本</dt><dd>{t.osVersions.join(' / ')}</dd></>}
+      {t.limitations?.length > 0 && <><dt>已知限制</dt><dd>{t.limitations.join('；')}</dd></>}
+    </dl>
+  </Section>
+
+  {(t.risks?.length ?? 0) > 0 && <WarningStrip>{t.risks.join('；')}</WarningStrip>}
+  {t.uninstallNote && <p class="sub">恢复/卸载：{t.uninstallNote}</p>}
+
+  {games.length > 0 && (
+    <Section title="适用游戏" id="games">
+      {games.map((g) => (
+        <IndexRow href={withBase(`/games/${g.slug}/`)}><span slot="main">{g.name.zh}</span><span slot="action">→</span></IndexRow>
+      ))}
+    </Section>
+  )}
+  {guides.length > 0 && (
+    <Section title="相关教程" id="guides">
+      {guides.map((g) => <p class="rel"><a href={withBase(`/guides/${g.slug}/`)}>{g.title}</a></p>)}
+    </Section>
+  )}
+
+  <footer class="gfoot meta">
+    <MetaDate checkedAt={t.checkedAt} staleDays={site.review.staleDays.entity} /> ·
+    <a href={withBase('/about/#feedback')}>反馈</a>
+  </footer>
+  <nav class="ptoc" aria-label="页内目录">
+    <a href="#compat">兼容与版本</a>
+    {games.length > 0 && <a href="#games">适用游戏</a>}
+    {guides.length > 0 && <a href="#guides">相关教程</a>}
+  </nav>
+</Base>
+
+<style>
+  .crumb { margin-bottom: var(--space-5); }
+  .th { margin-bottom: var(--space-5); }
+  .th-sub { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-2); }
+  .th-meta { display: flex; gap: var(--space-3); }
+  .mono-notes { font-size: var(--fs-sub); white-space: pre-line; }
+  .info { margin: 0; }
+  .info dt { font-size: var(--fs-meta); color: var(--text-tertiary); margin-top: var(--space-3); }
+  .info dd { margin: 4px 0 0; font-size: var(--fs-sub); }
+  .rel { margin: 0 0 var(--space-2); font-size: var(--fs-sub); }
+  .gfoot { margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--border); display: flex; gap: var(--space-3); align-items: center; }
+  .ptoc { display: none; }
+  @media (min-width: 1200px) {
+    .ptoc { display: flex; flex-direction: column; gap: var(--space-2); position: fixed; top: calc(var(--nav-h) + var(--space-7)); right: max(var(--space-5), calc((100vw - var(--w-doc)) / 2 - 220px)); width: 200px; font-size: var(--fs-meta); }
+    .ptoc a { color: var(--text-tertiary); }
+    .ptoc a:hover { color: var(--accent); }
+  }
+</style>

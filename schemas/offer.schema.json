@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FreeOffer（docs/04 §3）",
+  "type": "object",
+  "required": ["id", "gameTitle", "type", "platform", "url", "checkedAt", "linkHealth", "createdAt", "updatedAt", "publishStatus"],
+  "properties": {
+    "id": { "type": "string", "minLength": 1 },
+    "gameTitle": { "type": "string", "minLength": 1 },
+    "gameId": { "type": "string" },
+    "type": { "type": "string", "x-enum": "freeType" },
+    "platform": { "type": "string", "x-enum": "platform" },
+    "url": { "type": "string", "pattern": "^https?://" },
+    "claimNote": { "type": "string" },
+    "startDate": { "type": "string" },
+    "endDate": { "type": "string" },
+    "checkedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "linkHealth": { "type": "string", "x-enum": "linkHealth" },
+    "note": { "type": "string" },
+    "createdAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "updatedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "publishStatus": { "type": "string", "x-enum": "publishStatus" },
+    "_demo": { "type": "boolean" }
+  }
+}

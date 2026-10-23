@@ -1,0 +1,13 @@
+{
+  "id": "fixture-ok",
+  "slug": "fixture-ok",
+  "name": { "zh": "测试游戏" },
+  "summary": "测试构建专用 fixture，与正式数据隔离。",
+  "channels": [{ "platform": "steam", "type": "buy", "url": "https://example.com/fixture", "linkHealth": "ok", "checkedAt": "2026-10-20" }],
+  "sources": [],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published"
+}

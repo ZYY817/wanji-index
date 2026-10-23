@@ -1,0 +1,40 @@
+---
+import { withBase } from '../lib/url.mjs';
+// 搜索框 —— 全局（H44，用于页头/首页 Hero）与页内（H40）两档（docs/05 §8）
+// action 指向 /search/，q 参数名固定；页内过滤型由页面脚本接管（M5）
+interface Props {
+  variant?: 'global' | 'inline';
+  placeholder?: string;
+  value?: string;
+}
+const { variant = 'global', placeholder = '搜游戏名、报错、工具…', value = '' } = Astro.props;
+---
+<form class:list={['searchbar', variant]} action={withBase('/search/')} method="get" role="search">
+  <input type="search" name="q" placeholder={placeholder} value={value} aria-label="站内搜索" />
+  <button type="submit">搜索</button>
+</form>
+<style>
+  .searchbar { display: flex; gap: 8px; }
+  .searchbar input {
+    flex: 1; min-width: 0;
+    border: 1px solid var(--border-control);
+    border-radius: var(--r-ctl);
+    padding: 0 12px;
+    font-size: var(--fs-sub); font-family: inherit;
+    background: var(--bg-raised); color: var(--text-primary);
+    transition: border-color var(--dur) var(--ease);
+  }
+  .searchbar input:focus { border-color: var(--accent); outline: none; }
+  .searchbar button {
+    border: 1px solid var(--border-control);
+    border-radius: var(--r-ctl);
+    background: var(--bg-raised); color: var(--accent);
+    font-size: var(--fs-sub); font-weight: 500;
+    padding: 0 16px; cursor: pointer; font-family: inherit;
+    transition: border-color var(--dur) var(--ease);
+  }
+  .searchbar button:hover { border-color: var(--accent); }
+  .global { height: 44px; }
+  .inline { height: 40px; }
+  @media (max-width: 639px) { .searchbar { width: 100%; } .searchbar button { min-height: 44px; } }
+</style>

@@ -1,0 +1,15 @@
+{
+  "id": "fixture-tool",
+  "slug": "fixture-tool",
+  "name": "测试工具",
+  "type": "mod-manager",
+  "summary": "fixture 工具。",
+  "officialUrl": "https://example.com/tool",
+  "supportedGames": ["fixture-ok"],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published"
+}

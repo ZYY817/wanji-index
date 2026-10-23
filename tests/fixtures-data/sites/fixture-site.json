@@ -1,0 +1,14 @@
+{
+  "id": "fixture-site",
+  "slug": "fixture-site",
+  "name": "测试资源站",
+  "summary": "fixture 资源站。",
+  "category": "mod",
+  "url": "https://example.com/site",
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published"
+}

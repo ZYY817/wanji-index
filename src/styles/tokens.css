@@ -1,0 +1,60 @@
+/* 设计 Token —— docs/05 §3/§4/§5/§6 全量落地（冻结规范，数值未经批准不得改）
+   语义命名已为未来深色主题预留（05 §13-1）；对比度数值为公式计算值，M6 实机核验 */
+
+:root {
+  /* ── 色彩（§3.1）── */
+  --bg-base: #FAFAF8;          /* 页面主背景，全站唯一页底色 */
+  --bg-raised: #FFFFFF;        /* 浮层：下拉/抽屉/弹层 */
+  --bg-sunken: #F1F2EF;        /* 内嵌区：代码块/表头/速查条底（仅小面积） */
+  --text-primary: #1D2129;
+  --text-secondary: #4E5969;
+  --text-tertiary: #646C78;    /* 仅限四种中性浅底；状态色底上禁用（§3.1） */
+  --border: #E4E6E9;           /* 纯装饰线/表线，不承担控件识别 */
+  --border-control: #7E8793;   /* 控件边框：输入框/下拉/描边按钮/筛选控件（≥3:1） */
+  --accent: #2F5BD7;
+  --accent-hover: #1F46B8;
+  --accent-soft: #E9EFFB;      /* 选中态底/tag 底，不用于状态徽标 */
+  --success: #1E7F4F;
+  --warning: #A05E00;
+  --danger: #B93A32;
+  --info: #35618F;
+  --neutral-badge: #5B6470;
+  --warn-strip-bg: #FCF6EC;    /* 风险警示条底（§8） */
+
+  /* 状态色 → 白字对比度（公式值≥4.5）：success 5.00/warning 5.13/danger 5.65/
+     info 6.45/neutral 6.00/accent 5.84 */
+
+  /* ── 字体栈（§4.1，全系统字体零外部依赖）── */
+  --font-zh: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Source Han Sans SC", sans-serif;
+  --font-latin: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", Consolas, "Courier New", monospace;
+
+  /* ── 字号（§4.2）── */
+  --fs-h1: 28px;   --lh-h1: 1.3;
+  --fs-h2: 20px;   --lh-h2: 1.35;
+  --fs-h3: 16px;   --lh-h3: 1.4;
+  --fs-body: 15px; --lh-body: 1.75;
+  --fs-sub: 14px;  --lh-sub: 1.6;
+  --fs-meta: 13px; --lh-meta: 1.5;
+  --fs-badge: 12px;
+
+  /* ── 间距（§5.1，4px 基频）── */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px;
+
+  /* ── 容器宽（§5.2）── */
+  --w-index: 1120px;  /* 索引页/首页 */
+  --w-doc: 800px;     /* 详情页/about/404/search */
+
+  /* ── 圆角/阴影/动效（§6）── */
+  --r-ctl: 6px;    /* 按钮/输入/徽标/小卡片 */
+  --r-box: 8px;    /* 大行容器/抽屉 */
+  --r-pill: 999px; /* 胶囊徽标 */
+  --shadow-overlay: 0 2px 8px rgba(29, 33, 41, .08);  /* 仅浮层，内容零阴影 */
+  --dur: 160ms;    /* 常规过渡；抽屉 180ms；悬停 120ms */
+  --ease: ease-out;
+
+  /* ── 布局常量 ── */
+  --nav-h: 56px;
+  --anchor-offset: 72px;  /* scroll-margin-top：导航 56+余量（§10） */
+}

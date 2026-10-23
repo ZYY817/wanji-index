@@ -1,0 +1,24 @@
+---
+// 描边次级按钮 —— 站内导航/普通操作（docs/05 §8：border-control 边 + accent 字 + 白底）
+// 外链别用本组件（外链=ExtLink 文字链+↗）；获取动作用 AcquireButton
+interface Props { href?: string; label: string }
+const { href, label } = Astro.props;
+const Tag = href ? 'a' : 'button';
+---
+<Tag class="obtn" href={href} type={href ? undefined : 'button'}>{label}</Tag>
+<style>
+  .obtn {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 36px; padding: 0 16px;
+    background: var(--bg-raised); color: var(--accent);
+    border: 1px solid var(--border-control);
+    border-radius: var(--r-ctl);
+    font-size: var(--fs-sub); font-weight: 500;
+    cursor: pointer;
+    transition: border-color var(--dur) var(--ease), color var(--dur) var(--ease);
+    text-decoration: none !important;
+    font-family: inherit;
+  }
+  .obtn:hover { border-color: var(--accent); }
+  @media (max-width: 639px) { .obtn { min-height: 44px; } }
+</style>

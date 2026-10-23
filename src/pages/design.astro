@@ -1,0 +1,91 @@
+---
+import { withBase } from '../lib/url.mjs';
+// 设计系统预览页 —— M2 验收用；noindex + sitemap 排除（非正式内容页）
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import LifecycleBadge from '../components/LifecycleBadge.astro';
+import StatusBadge from '../components/StatusBadge.astro';
+import ExtLink from '../components/ExtLink.astro';
+import AcquireButton from '../components/AcquireButton.astro';
+import OutlineButton from '../components/OutlineButton.astro';
+import SearchBar from '../components/SearchBar.astro';
+import IndexRow from '../components/IndexRow.astro';
+import WarningStrip from '../components/WarningStrip.astro';
+import StepBlock from '../components/StepBlock.astro';
+import TextCover from '../components/TextCover.astro';
+import MetaDate from '../components/MetaDate.astro';
+import SourceLine from '../components/SourceLine.astro';
+import EmptyState from '../components/EmptyState.astro';
+import FilterChip from '../components/FilterChip.astro';
+---
+<Base title="设计系统预览" description="组件与 Token 验收页（非正式页面）" noindex wide>
+  <h1>设计系统预览</h1>
+  <p class="sub">M2 验收页：docs/05 冻结规范的组件级落地。本页 noindex，不进 sitemap。</p>
+
+  <Section title="双轨徽标（§9）">
+    <p class="sub">生命周期 = 实心胶囊轨：</p>
+    <p class="demo-row">
+      <LifecycleBadge state="active" /> <LifecycleBadge state="upcoming" />
+      <LifecycleBadge state="ended" /> <LifecycleBadge state="deadline_unknown" />
+      <LifecycleBadge state="uncertain" /> <LifecycleBadge state={null} />（permanent 无徽标）
+    </p>
+    <p class="sub">链接健康/核验 = 描边胶囊轨：</p>
+    <p class="demo-row">
+      <StatusBadge kind="unchecked" /> <StatusBadge kind="unverified" />
+      <StatusBadge kind="suspect" /> <StatusBadge kind="dead" /> <StatusBadge kind="stale" />
+    </p>
+    <p class="sub">步骤核验（描边）：<StatusBadge kind="self" /> <StatusBadge kind="community" /> <StatusBadge kind="unverified" /></p>
+  </Section>
+
+  <Section title="按钮与链接（§8：实色仅限获取/领取）">
+    <p class="demo-row">
+      <AcquireButton href="https://example.com" label="前往" />
+      <AcquireButton href="https://example.com" label="前往领取" health="suspect" />
+      <AcquireButton href="https://example.com" label="前往" health="dead" />
+    </p>
+    <p class="demo-row">
+      <OutlineButton href={withBase('/games/')} label="浏览游戏库" />
+      <ExtLink href="https://example.com" label="官方网站" site="Example" />
+      <ExtLink href="https://example.com" label="某资源页" health="suspect" />
+      <ExtLink href="https://example.com" label="失效链接" health="dead" alt="可尝试 XX 站镜像" />
+    </p>
+  </Section>
+
+  <Section title="搜索与筛选（§8）">
+    <div style="max-width:480px"><SearchBar variant="global" /></div>
+    <p class="demo-row" style="margin-top:16px">
+      <FilterChip label="类型：RPG" removeHref="#" />
+      <FilterChip label="平台：Steam" removeHref="#" />
+    </p>
+  </Section>
+
+  <Section title="索引行（D2，行高 64–72、移动两行式）">
+    <IndexRow href="#demo">
+      <span slot="main"><TextCover name="星露谷物语" /> 星露谷物语 <span class="meta">Stardew Valley</span></span>
+      <span slot="sub"><span class="tag">simulation</span> <span class="tag">rpg</span></span>
+      <span slot="meta"><span class="mono">MOD3 工具2 教程1</span> <StatusBadge kind="unverified" /></span>
+      <span slot="action">→</span>
+    </IndexRow>
+    <IndexRow href="#demo">
+      <span slot="main"><TextCover name="Elden Ring" /> 艾尔登法环 <span class="meta">Elden Ring</span></span>
+      <span slot="sub"><span class="tag">rpg</span></span>
+      <span slot="meta"><MetaDate checkedAt="2026-10-20" /></span>
+      <span slot="action">→</span>
+    </IndexRow>
+  </Section>
+
+  <Section title="警示条 / 步骤块 / 元数据（§7.8/§8）">
+    <WarningStrip>仅限单机使用；联机使用可能触发反作弊封禁。</WarningStrip>
+    <div style="margin-top:16px"><WarningStrip tone="info">本条为信息提示样式（accent-soft 底）。</WarningStrip></div>
+    <StepBlock n={1} step={{ action: '查看游戏安装目录下的 crash.log', expected: '找到错误码 0xDEMO0001', ifFail: '继续下一步', verified: 'self' }} />
+    <p><MetaDate checkedAt="2026-10-20" staleDays={14} />　<MetaDate checkedAt="2026-09-01" staleDays={14} /></p>
+    <SourceLine sources={[{ name: 'PCGamingWiki', url: 'https://example.com' }, { name: '官方文档', url: 'https://example.com' }]} />
+  </Section>
+
+  <Section title="空态（§8）">
+    <EmptyState message="未找到符合条件的游戏" clearHref="#" submitHref="#" />
+  </Section>
+</Base>
+<style>
+  .demo-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: var(--space-3); }
+</style>

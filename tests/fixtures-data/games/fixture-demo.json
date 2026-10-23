@@ -1,0 +1,14 @@
+{
+  "id": "fixture-demo",
+  "slug": "fixture-demo",
+  "name": { "zh": "演示 fixture" },
+  "summary": "_demo:true 且达标，仍应被排除。",
+  "channels": [{ "platform": "steam", "type": "buy", "url": "https://example.com/fx", "linkHealth": "ok", "checkedAt": "2026-10-20" }],
+  "sources": [],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published",
+  "_demo": true
+}

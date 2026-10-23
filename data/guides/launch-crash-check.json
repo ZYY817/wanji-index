@@ -1,0 +1,24 @@
+{
+  "id": "launch-crash-check",
+  "slug": "launch-crash-check",
+  "title": "游戏启动无反应/崩溃排查",
+  "kind": "troubleshooting",
+  "category": "launch-crash",
+  "keywords": ["启动没反应", "闪退", "crash on launch"],
+  "problem": { "description": "双击游戏后无窗口弹出，或启动后立即崩溃退出。", "errorText": "", "conditions": "Windows PC 通用" },
+  "games": [],
+  "os": ["windows"],
+  "prerequisites": ["以管理员身份确认一次"],
+  "steps": [
+    { "title": "查看报错", "action": "在事件查看器（eventvwr）→ Windows 日志 → 应用程序中找对应时间的错误条目", "expected": "找到错误模块名或错误码", "ifFail": "继续下一步", "verified": "self" },
+    { "title": "验证游戏文件", "action": "Steam → 库 → 右键游戏 → 属性 → 已安装文件 → 验证游戏文件完整性", "expected": "校验完成并修复缺失文件", "ifFail": "完全卸载后重装到默认路径", "verified": "self" },
+    { "title": "排查运行库", "action": "确认已安装最新 Visual C++ Redistributable（x64）与显卡驱动", "expected": "运行库与驱动为最新", "ifFail": "从微软/NVIDIA 官网下载安装后重启", "verified": "community" }
+  ],
+  "recovery": ["重装前备份存档（存档位置见对应游戏档案页）"],
+  "sources": [{ "name": "PCGamingWiki", "url": "https://www.pcgamingwiki.com/" }],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "fixture-entry-nogame",
+  "name": "无游戏关联入口",
+  "type": "guide-page",
+  "siteId": "fixture-site",
+  "url": "https://example.com/site/board",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-20",
+  "publishStatus": "published"
+}

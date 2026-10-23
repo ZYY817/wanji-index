@@ -1,0 +1,19 @@
+{
+  "id": "nexus-mods",
+  "slug": "nexus-mods",
+  "name": "Nexus Mods",
+  "aliases": ["N网"],
+  "summary": "全球最大单机游戏 MOD 站点，覆盖数千款游戏的 MOD 专区。",
+  "category": "mod",
+  "url": "https://www.nexusmods.com/",
+  "languages": ["en"],
+  "feeNote": "免费注册下载，付费会员加速",
+  "risks": ["注意区分官方与转载 MOD", "部分 MOD 需登录后下载"],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

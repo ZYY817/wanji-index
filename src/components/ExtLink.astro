@@ -1,0 +1,28 @@
+---
+// 外部链接（文字链+↗）—— 非"获取/领取"类外链的唯一形态（docs/05 §7.6/§8/§9）
+// dead：禁用+删除线+「已失效」徽标，不可点（§9 铁律）；suspect：可点+徽标
+import StatusBadge from './StatusBadge.astro';
+interface Props {
+  href: string;
+  label: string;            // 链接文字
+  site?: string;            // 站名（外链提示，§3.2）
+  health?: 'ok' | 'unchecked' | 'suspect' | 'dead';
+  alt?: string;             // dead 时的替代去向提示（纯文字）
+}
+const { href, label, site, health = 'ok', alt } = Astro.props;
+const dead = health === 'dead';
+---
+<span class="ext">
+  {dead
+    ? <span class="ext-dead" aria-disabled="true">{label}<StatusBadge kind="dead" /></span>
+    : <a href={href} target="_blank" rel="noopener noreferrer">{label}<span class="ext-arrow" aria-hidden="true">↗</span>{site && <span class="ext-site">{site}</span>}</a>}
+  {health === 'suspect' && <StatusBadge kind="suspect" />}
+  {dead && alt && <span class="ext-alt meta">{alt}</span>}
+</span>
+<style>
+  .ext { display: inline-flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+  .ext-arrow { font-size: 0.85em; vertical-align: super; }
+  .ext-site { font-size: var(--fs-meta); color: var(--text-tertiary); }
+  .ext-dead { color: var(--text-tertiary); text-decoration: line-through; display: inline-flex; align-items: center; gap: 6px; }
+  .ext-alt { margin-left: 2px; }
+</style>

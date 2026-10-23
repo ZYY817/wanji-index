@@ -1,0 +1,14 @@
+{
+  "name": "玩机索引",
+  "url": "https://wanji-index.pages.dev",
+  "urlStatus": "placeholder——未购买自定义域名时的开发用地址，正式域名确定后改此一处即可",
+  "base": "/",
+  "review": {
+    "staleDays": {
+      "offerTimed": 14,
+      "offerLong": 90,
+      "entity": 90,
+      "guide": 180
+    }
+  }
+}

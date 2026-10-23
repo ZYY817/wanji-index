@@ -1,0 +1,8 @@
+{
+  "id": "dup-id", "slug": "dup-b",
+  "name": { "zh": "重复B" }, "summary": "与 a 同 id。",
+  "channels": [{ "platform": "epic", "type": "buy", "url": "https://example.com/b", "linkHealth": "ok", "checkedAt": "2026-10-20" }],
+  "sources": [{ "name": "s", "url": "https://example.com" }],
+  "reviewStatus": "verified", "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01", "updatedAt": "2026-10-20", "publishStatus": "published"
+}

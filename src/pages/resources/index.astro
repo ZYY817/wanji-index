@@ -1,0 +1,90 @@
+---
+import { withBase } from '../../lib/url.mjs';
+// 资源站索引 /resources/ —— docs/05 §7.5：8 分类 tab（带计数）+ 索引行双操作
+import Base from '../../layouts/Base.astro';
+import IndexRow from '../../components/IndexRow.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import ExtLink from '../../components/ExtLink.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { loadData, buildRelations } from '../../lib/load.mjs';
+import { zh, ZH } from '../../lib/labels.mjs';
+
+const data = loadData();
+const rel = buildRelations(data);
+const sites = [...data.sites].sort((a, b) => a.name.localeCompare(b.name));
+const cats = Object.keys(ZH.siteCategory).map((k) => ({ k, n: sites.filter((s) => s.category === k).length })).filter((c) => c.n > 0);
+const entryCount = (sid: string) => rel.entriesBySite.get(sid)?.length ?? 0;
+const gameCount = (sid: string) => new Set((rel.gamesBySite.get(sid) ?? []).map((g: any) => g.id)).size;
+---
+<Base title="资源站" description="MOD、汉化、攻略、补丁等可信游戏资源站索引" wide>
+  <h1>资源站 <span class="meta">已收录 <span data-count>{sites.length}</span> 个</span></h1>
+
+  <div class="filterbar">
+    <input type="search" class="fq" data-param="q" placeholder="页内搜索：站名 / 别名…" aria-label="页内搜索" />
+  </div>
+  <div class="cattabs" role="tablist" aria-label="分类筛选">
+    <button class="cattab cur" data-cat="" role="tab">全部 {sites.length}</button>
+    {cats.map((c) => <button class="cattab" data-cat={c.k} role="tab">{zh('siteCategory', c.k)} {c.n}</button>)}
+  </div>
+  <div class="chips" data-chips></div>
+
+  <div data-list>
+    {sites.map((s) => (
+      <div data-row data-q={[s.name, ...(s.aliases ?? [])].join(' ').toLowerCase()} data-cat={s.category}>
+        <IndexRow href={withBase(`/resources/${s.slug}/`)}>
+          <span slot="main">{s.name}{s.aliases?.length ? <span class="meta"> {s.aliases[0]}</span> : null}</span>
+          <span slot="sub"><span class="tag">{zh('siteCategory', s.category)}</span> <span class="meta">{s.summary}</span></span>
+          <span slot="meta">
+            {entryCount(s.id) > 0 && <span class="mono">入口{entryCount(s.id)}</span>}
+            {gameCount(s.id) > 0 && <span class="mono">关联{gameCount(s.id)}</span>}
+            {s.linkHealth !== 'ok' && <StatusBadge kind={s.linkHealth} />}
+          </span>
+          <span slot="action"><ExtLink href={s.url} label="访问" health={s.linkHealth} /></span>
+        </IndexRow>
+      </div>
+    ))}
+  </div>
+  <div data-empty hidden><EmptyState message="未找到符合条件的资源站" submitHref="/about/#feedback" /></div>
+</Base>
+
+<script>
+  import { initListFilter } from '../../client/list-filter.js';
+  let curCat = '';
+  const filters = {
+    q: (v, row) => row.dataset.q.includes(v.toLowerCase()),
+    cat: (v, row) => row.dataset.cat === v,
+  };
+  // 分类 tab：写进 URL（?cat=），与筛选同一套状态
+  initListFilter({
+    filters: { q: filters.q, cat: filters.cat },
+    labels: { cat: Object.fromEntries([...document.querySelectorAll('[data-cat]')].filter(b=>b.tagName==='BUTTON').map(b=>[b.dataset.cat, b.textContent.trim().replace(/ \d+$/,'')])) },
+  });
+  const catInput = document.createElement('input');
+  catInput.type = 'hidden'; catInput.dataset.param = 'cat';
+  document.querySelector('.filterbar').appendChild(catInput);
+  const syncTabs = () => {
+    const u = new URL(location.href); curCat = u.searchParams.get('cat') ?? '';
+    document.querySelectorAll('.cattab').forEach((t) => t.classList.toggle('cur', t.dataset.cat === curCat));
+  };
+  document.querySelectorAll('.cattab').forEach((t) =>
+    t.addEventListener('click', () => { catInput.value = t.dataset.cat; catInput.dispatchEvent(new Event('input', { bubbles: true })); }));
+  new MutationObserver(syncTabs).observe(document.querySelector('[data-chips]'), { childList: true });
+  syncTabs();
+  // 初始 ?cat= 已读入隐藏 input——同步一次 tabs
+  catInput.value = new URL(location.href).searchParams.get('cat') ?? '';
+  catInput.dispatchEvent(new Event('input'));
+</script>
+
+<style>
+  h1 { display: flex; align-items: baseline; gap: var(--space-4); }
+  .filterbar { margin-bottom: var(--space-3); }
+  .fq { width: 100%; max-width: 480px; height: 40px; border: 1px solid var(--border-control); border-radius: var(--r-ctl); padding: 0 12px; font-size: var(--fs-sub); font-family: inherit; background: var(--bg-raised); }
+  .fq:focus { border-color: var(--accent); outline: none; }
+  .cattabs { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+  .cattab { min-height: 36px; padding: 0 14px; border: 1px solid var(--border-control); border-radius: var(--r-pill); background: var(--bg-raised); color: var(--text-secondary); font-size: var(--fs-sub); cursor: pointer; font-family: inherit; transition: all 120ms var(--ease); }
+  .cattab.cur { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 500; }
+  .chips { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3); }
+  .chips:empty { display: none; }
+  .fchip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border: 0; cursor: pointer; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--text-secondary); font-size: var(--fs-badge); font-weight: 500; font-family: inherit; }
+  .fchip:hover { color: var(--danger); }
+</style>

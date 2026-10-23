@@ -1,0 +1,18 @@
+{
+  "id": "elden-ring",
+  "slug": "elden-ring",
+  "name": { "zh": "艾尔登法环", "en": "Elden Ring" },
+  "aliases": ["老头环"],
+  "summary": "FromSoftware 开放世界动作 RPG，PC 版经多次更新后优化稳定。",
+  "genres": ["rpg", "action"],
+  "os": ["windows"],
+  "channels": [
+    { "platform": "steam", "type": "buy", "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/", "priceNote": "买断制", "linkHealth": "ok", "checkedAt": "2026-10-24" }
+  ],
+  "sources": [{ "name": "Steam", "url": "https://store.steampowered.com/app/1245620/ELDEN_RING/" }],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

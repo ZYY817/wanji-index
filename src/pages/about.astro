@@ -1,0 +1,56 @@
+---
+// /about/ —— docs/05 §7.10：800px 文档页，分节=介绍/标准/核验/声明/反馈/联系
+import Base from '../layouts/Base.astro';
+import Section from '../components/Section.astro';
+import site from '../../config/site.json';
+---
+<Base title="关于与收录说明" description={`${site.name} 是什么、收录什么、不收录什么`}>
+  <h1>关于</h1>
+  <nav class="toc meta" aria-label="页内目录">
+    <a href="#intro">介绍</a> · <a href="#standard">收录标准</a> · <a href="#check">核验方式</a> ·
+    <a href="#legal">声明</a> · <a href="#feedback">反馈</a>
+  </nav>
+
+  <Section title="这是什么" id="intro">
+    <p>{site.name} 是一个面向中文 PC 玩家的<strong>资源与工具索引</strong>：游戏档案、免费情报、MOD/汉化资源站、实用工具、报错排查教程。</p>
+    <p>它做的事只有一件：<strong>把散在各处的可信来源整理成能扫读的索引</strong>——每条记录标注来源与核验日期，链接只指向官方或可信原始页面。</p>
+  </Section>
+
+  <Section title="收录标准" id="standard">
+    <ul>
+      <li>只收录<strong>官方渠道</strong>或社区公认的可信站点（如 Nexus Mods、PCGamingWiki）</li>
+      <li>每条记录必须有来源与核验日期；核验状态如实标注</li>
+      <li>信息不足的内容保持「待核验」或直接不上线，<strong>不写猜测</strong></li>
+    </ul>
+  </Section>
+
+  <Section title="不收录什么" id="exclude">
+    <ul>
+      <li>不托管、不提供任何游戏文件/安装包下载</li>
+      <li>不收录破解、盗版、私服相关资源</li>
+      <li>不做账号、社区、评论功能——这是索引，不是论坛</li>
+    </ul>
+  </Section>
+
+  <Section title="核验方式" id="check">
+    <p>每条记录带「核验于 YYYY-MM-DD」日期；超过核验周期未复查的内容会标注「久未核验」。链接分三种状态：正常（无徽标）、疑似失效、已失效（禁用不可点）。</p>
+    <p>免费活动的进行中/已结束等状态由系统在构建时根据日期自动判定，非人工标注。</p>
+  </Section>
+
+  <Section title="声明" id="legal">
+    <p>本站为个人维护的非商业项目，与收录的游戏厂商、站点无任何隶属关系。游戏名称、商标归各自权利方所有。链接健康状态仅代表"上次核验时能否打开"，不构成对目标站安全性的承诺。</p>
+  </Section>
+
+  <Section title="反馈" id="feedback">
+    <p>发现链接失效、信息错误，或想推荐收录：</p>
+    <ul>
+      <li>到项目仓库提交 Issue（首选，可追踪）</li>
+      <li>或直接说明：什么页面 + 什么问题 + 正确来源链接</li>
+    </ul>
+  </Section>
+</Base>
+<style>
+  .toc { margin-bottom: var(--space-5); }
+  ul { padding-left: 1.4em; }
+  li { margin-bottom: var(--space-2); font-size: var(--fs-sub); }
+</style>

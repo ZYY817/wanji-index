@@ -1,0 +1,7 @@
+{
+  "id": "no-channels", "slug": "no-channels",
+  "name": { "zh": "缺渠道" }, "summary": "缺必填 channels。",
+  "sources": [{ "name": "s", "url": "https://example.com" }],
+  "reviewStatus": "verified", "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01", "updatedAt": "2026-10-20", "publishStatus": "published"
+}

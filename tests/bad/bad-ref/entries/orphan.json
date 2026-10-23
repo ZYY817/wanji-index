@@ -1,0 +1,7 @@
+{
+  "id": "orphan-entry", "name": "孤儿入口",
+  "type": "mod", "siteId": "ghost-site",
+  "url": "https://example.com/x",
+  "linkHealth": "ok", "checkedAt": "2026-10-20",
+  "publishStatus": "published"
+}

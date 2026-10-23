@@ -1,0 +1,12 @@
+{
+  "id": "nexus-stardew",
+  "name": "星露谷物语 MOD 专区",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "stardew-valley",
+  "url": "https://www.nexusmods.com/stardewvalley",
+  "note": "星露谷最大 MOD 库",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,23 @@
+---
+import { withBase } from '../lib/url.mjs';
+// 页脚 —— 上分隔线 + 收录原则句 + 链接组 + 版权，tertiary 13px（docs/05 §8）
+---
+<footer class="site-footer">
+  <div class="container container-index ft-inner">
+    <p class="ft-rule">只收录官方与可信来源，不托管游戏文件，不收录破解资源。</p>
+    <nav class="ft-links" aria-label="页脚导航">
+      <a href={withBase('/about/')}>关于与收录说明</a>
+      <a href={withBase('/about/#feedback')}>反馈</a>
+      <a href={withBase('/sitemap-index.xml')}>Sitemap</a>
+    </nav>
+    <p class="ft-copy meta">玩机索引 · 个人维护项目</p>
+  </div>
+</footer>
+<style>
+  .site-footer { border-top: 1px solid var(--border); margin-top: var(--space-8); }
+  .ft-inner { padding-top: var(--space-5); padding-bottom: var(--space-6); font-size: var(--fs-meta); color: var(--text-tertiary); }
+  .ft-rule { margin-bottom: var(--space-3); }
+  .ft-links { display: flex; gap: var(--space-5); margin-bottom: var(--space-3); }
+  .ft-copy { margin: 0; }
+  @media (max-width: 639px) { .ft-links { flex-direction: column; gap: var(--space-2); } }
+</style>

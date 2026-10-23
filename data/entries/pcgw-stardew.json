@@ -1,0 +1,12 @@
+{
+  "id": "pcgw-stardew",
+  "name": "星露谷物语技术资料页",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "stardew-valley",
+  "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley",
+  "note": "存档位置、启动参数、兼容性资料",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "fixture-guide",
+  "slug": "fixture-guide",
+  "title": "测试教程",
+  "kind": "troubleshooting",
+  "category": "launch-crash",
+  "games": ["fixture-ok"],
+  "problem": { "description": "启动即崩溃" },
+  "steps": [
+    { "action": "查看报错日志", "expected": "找到错误码", "ifFail": "继续下一步", "verified": "self" },
+    { "action": "更新显卡驱动", "expected": "驱动为最新版", "ifFail": "回退到稳定版驱动", "verified": "community" }
+  ],
+  "sources": [{ "name": "fixture source", "url": "https://example.com" }],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published"
+}

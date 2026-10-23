@@ -1,0 +1,11 @@
+{
+  "id": "fixture-entry",
+  "name": "测试入口（关联 fixture-ok）",
+  "type": "mod",
+  "siteId": "fixture-site",
+  "gameId": "fixture-ok",
+  "url": "https://example.com/site/entry",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-20",
+  "publishStatus": "published"
+}

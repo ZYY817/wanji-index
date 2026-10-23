@@ -1,0 +1,27 @@
+---
+import { withBase } from '../lib/url.mjs';
+// 404 —— docs/05 §7.10：居中大数字+去向入口（描边次级按钮）+搜索框+反馈
+import Base from '../layouts/Base.astro';
+import OutlineButton from '../components/OutlineButton.astro';
+import SearchBar from '../components/SearchBar.astro';
+---
+<Base title="页面不存在" noindex>
+  <div class="nf">
+    <p class="nf-code mono">404</p>
+    <p class="nf-msg">这个页面不存在——可能链接已失效，或内容从未收录。</p>
+    <div class="nf-acts">
+      <OutlineButton href={withBase('/')} label="回首页" />
+      <OutlineButton href={withBase('/games/')} label="游戏库" />
+      <OutlineButton href={withBase('/resources/')} label="资源站" />
+    </div>
+    <div class="nf-search"><SearchBar variant="global" placeholder="试试搜索…" /></div>
+    <p class="meta">如果这个地址应该存在，<a href={withBase('/about/#feedback')}>告诉我们</a>。</p>
+  </div>
+</Base>
+<style>
+  .nf { padding: var(--space-8) 0; text-align: center; }
+  .nf-code { font-size: 72px; font-weight: 700; color: var(--text-tertiary); margin: 0 0 var(--space-3); }
+  .nf-msg { color: var(--text-secondary); margin-bottom: var(--space-5); }
+  .nf-acts { display: flex; gap: var(--space-3); justify-content: center; margin-bottom: var(--space-6); flex-wrap: wrap; }
+  .nf-search { max-width: 420px; margin: 0 auto var(--space-4); }
+</style>

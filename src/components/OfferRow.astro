@@ -1,0 +1,41 @@
+---
+import { withBase } from '../lib/url.mjs';
+// 免费活动条目行 —— /free/ 与首页快报共用（docs/05 §7.4 字段序：名→平台→生命周期→截止→条件→核验→链接徽标→CTA）
+import IndexRow from './IndexRow.astro';
+import LifecycleBadge from './LifecycleBadge.astro';
+import StatusBadge from './StatusBadge.astro';
+import ExtLink from './ExtLink.astro';
+import MetaDate from './MetaDate.astro';
+import { computeLifecycle } from '../lib/lifecycle.mjs';
+import site from '../../config/site.json';
+
+interface Props { offer: any; now?: number }
+const { offer: o, now = Date.now() } = Astro.props;
+const lc = computeLifecycle(o, now, site.review.staleDays.offerTimed);
+const ended = lc === 'ended';
+const FREE_LABEL: Record<string, string> = {
+  permanent: '永久免费', limited: '限时领取', trial: '免费试玩', weekend: '免费周末', opensource: '开源',
+};
+---
+<IndexRow>
+  <span slot="main" class:list={[{ dim: ended }]} data-name={o.gameTitle}>
+    {o.gameTitle}
+  </span>
+  <span slot="sub">
+    <span class="tag">{FREE_LABEL[o.type] ?? o.type}</span>
+    <span class="tag">{o.platform}</span>
+    <LifecycleBadge state={lc} />
+  </span>
+  <span slot="meta">
+    {o.claimNote && <span class="orow-note">{o.claimNote}</span>}
+    {o.endDate && <span class="mono">截止 {o.endDate}</span>}
+    <MetaDate checkedAt={o.checkedAt} />
+    {o.linkHealth !== 'ok' && <StatusBadge kind={o.linkHealth} />}
+    {o.gameId && <a href={withBase(`/games/${o.gameId}/`)}>档案→</a>}
+  </span>
+  <span slot="action"><ExtLink href={o.url} label={ended ? '查看' : '领取'} health={o.linkHealth} /></span>
+</IndexRow>
+<style>
+  .orow-note { max-width: 20em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .dim { color: var(--text-tertiary); }
+</style>

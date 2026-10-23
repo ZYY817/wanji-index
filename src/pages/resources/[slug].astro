@@ -1,0 +1,97 @@
+---
+import { withBase } from '../../lib/url.mjs';
+// 资源站详情 —— docs/05 §7.6：档案头→信息块→关联游戏→关联入口→核验（不做成游戏档案翻版）
+import Base from '../../layouts/Base.astro';
+import Section from '../../components/Section.astro';
+import MetaDate from '../../components/MetaDate.astro';
+import StatusBadge from '../../components/StatusBadge.astro';
+import ExtLink from '../../components/ExtLink.astro';
+import WarningStrip from '../../components/WarningStrip.astro';
+import IndexRow from '../../components/IndexRow.astro';
+import site from '../../../config/site.json';
+import { loadData, buildRelations } from '../../lib/load.mjs';
+import { zh } from '../../lib/labels.mjs';
+
+export function getStaticPaths() {
+  const data = loadData();
+  return data.sites.map((s) => ({ params: { slug: s.slug }, props: { site: s, data } }));
+}
+const { site: s, data } = Astro.props;
+const rel = buildRelations(data);
+const entries = rel.entriesBySite.get(s.id) ?? [];
+const games = [...new Map((rel.gamesBySite.get(s.id) ?? []).map((g) => [g.id, g])).values()];
+---
+<Base title={s.name} description={s.summary}>
+  <nav class="crumb meta"><a href={withBase('/')}>首页</a> / <a href={withBase('/resources/')}>资源站</a> / {s.name}</nav>
+  <header class="sh">
+    <h1>{s.name}</h1>
+    <p class="sh-sub">
+      <span class="tag">{zh('siteCategory', s.category)}</span>
+      {s.aliases?.map((a: string) => <span class="meta">{a}</span>)}
+      <ExtLink href={s.url} label="官网" site={s.name} health={s.linkHealth} />
+    </p>
+    <p class="sub">{s.summary}</p>
+    <p class="sh-meta"><MetaDate checkedAt={s.checkedAt} staleDays={site.review.staleDays.entity} />{s.reviewStatus !== 'verified' && <StatusBadge kind="unverified" />}</p>
+  </header>
+
+  {(s.risks?.length ?? 0) > 0 && <WarningStrip>{s.risks.join('；')}</WarningStrip>}
+
+  <Section title="站点信息" id="info">
+    <dl class="info">
+      {s.purposes?.length > 0 && <><dt>主要用途</dt><dd>{s.purposes.join('；')}</dd></>}
+      {s.languages?.length > 0 && <><dt>语言</dt><dd>{s.languages.join(' / ')}</dd></>}
+      {s.feeNote && <><dt>费用</dt><dd>{s.feeNote}</dd></>}
+      {s.restrictions?.length > 0 && <><dt>使用限制</dt><dd>{s.restrictions.join('；')}</dd></>}
+    </dl>
+  </Section>
+
+  {games.length > 0 && (
+    <Section title="关联游戏" id="games">
+      <div class="gchips">
+        {games.map((g) => <a class="gchip" href={withBase(`/games/${g.slug}/`)}>{g.name.zh}</a>)}
+      </div>
+    </Section>
+  )}
+
+  {entries.length > 0 && (
+    <Section title="站内入口" id="entries">
+      {entries.map((e) => (
+        <IndexRow>
+          <span slot="main"><ExtLink href={e.url} label={e.name} health={e.linkHealth} /></span>
+          <span slot="sub"><span class="tag">{zh('entryType', e.type)}</span>{e.note && <span class="meta"> {e.note}</span>}</span>
+          <span slot="meta">{e.linkHealth !== 'ok' && <StatusBadge kind={e.linkHealth} />}</span>
+        </IndexRow>
+      ))}
+    </Section>
+  )}
+
+  <footer class="gfoot meta">
+    <MetaDate checkedAt={s.checkedAt} staleDays={site.review.staleDays.entity} /> ·
+    <a href={withBase('/about/#feedback')}>反馈</a>
+  </footer>
+  <nav class="ptoc" aria-label="页内目录">
+    <a href="#info">站点信息</a>
+    {games.length > 0 && <a href="#games">关联游戏</a>}
+    {entries.length > 0 && <a href="#entries">站内入口</a>}
+  </nav>
+</Base>
+
+<style>
+  .crumb { margin-bottom: var(--space-5); }
+  .sh { margin-bottom: var(--space-5); }
+  .sh-sub { display: flex; align-items: baseline; gap: var(--space-3); flex-wrap: wrap; margin-bottom: var(--space-2); }
+  .sh-meta { display: flex; align-items: center; gap: var(--space-3); }
+  .info { margin: 0; }
+  .info dt { font-size: var(--fs-meta); color: var(--text-tertiary); margin-top: var(--space-3); }
+  .info dd { margin: 4px 0 0; font-size: var(--fs-sub); }
+  .gchips { display: flex; gap: var(--space-2); flex-wrap: wrap; }
+  .gchip { padding: 4px 12px; border: 1px solid var(--border-control); border-radius: var(--r-pill); font-size: var(--fs-sub); color: var(--accent); text-decoration: none !important; }
+  .gchip:hover { border-color: var(--accent); }
+  .gfoot { margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--border); display: flex; gap: var(--space-3); align-items: center; }
+  .ptoc { display: none; }
+  @media (min-width: 1200px) {
+    .ptoc { display: flex; flex-direction: column; gap: var(--space-2); position: fixed; top: calc(var(--nav-h) + var(--space-7)); right: max(var(--space-5), calc((100vw - var(--w-doc)) / 2 - 220px)); width: 200px; font-size: var(--fs-meta); }
+    .ptoc a { color: var(--text-tertiary); }
+    .ptoc a:hover { color: var(--accent); }
+  }
+</style>

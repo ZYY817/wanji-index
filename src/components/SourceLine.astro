@@ -1,0 +1,21 @@
+---
+// 来源行 —— 「来源：name ↗」tertiary 13px，多来源竖排小列表（docs/05 §4.3/§8）
+interface Props { sources: { name: string; url: string }[] }
+const { sources = [] } = Astro.props;
+---
+{sources.length > 0 && (
+  <div class="srcline">
+    <span class="meta">来源：</span>
+    <ul>
+      {sources.map((s) => (
+        <li><a href={s.url} target="_blank" rel="noopener noreferrer">{s.name}<span class="arr" aria-hidden="true">↗</span></a></li>
+      ))}
+    </ul>
+  </div>
+)}
+<style>
+  .srcline { display: flex; gap: 6px; font-size: var(--fs-meta); }
+  ul { list-style: none; margin: 0; padding: 0; display: inline-flex; flex-direction: column; gap: 2px; }
+  li { display: inline; }
+  .arr { font-size: 0.85em; vertical-align: super; }
+</style>

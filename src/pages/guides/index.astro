@@ -1,0 +1,68 @@
+---
+import { withBase } from '../../lib/url.mjs';
+// 教程库 /guides/ —— docs/05 §7.8 索引：标题+类型徽标+关联游戏+核验日期
+import Base from '../../layouts/Base.astro';
+import IndexRow from '../../components/IndexRow.astro';
+import MetaDate from '../../components/MetaDate.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { loadData } from '../../lib/load.mjs';
+import { zh, ZH } from '../../lib/labels.mjs';
+
+const data = loadData();
+const guides = [...data.guides].sort((a, b) => a.title.localeCompare(b.title, 'zh'));
+const games = new Map(data.games.map((g) => [g.id, g]));
+const cats = Object.keys(ZH.guideCategory).filter((k) => guides.some((g) => g.category === k));
+---
+<Base title="教程与排查" description="游戏安装、报错排查、MOD 安装、存档备份教程" wide>
+  <h1>教程与排查 <span class="meta">已收录 <span data-count>{guides.length}</span> 篇</span></h1>
+  <div class="filterbar">
+    <input type="search" class="fq" data-param="q" placeholder="页内搜索：标题 / 报错原文…" aria-label="页内搜索" />
+    <select data-param="cat" aria-label="分类筛选"><option value="">全部分类</option>{cats.map((c) => <option value={c}>{zh('guideCategory', c)}</option>)}</select>
+    <button type="button" class="fclear" data-clear hidden>清除全部</button>
+  </div>
+  <div class="chips" data-chips></div>
+
+  <div data-list>
+    {guides.map((g) => (
+      <div data-row data-q={[g.title, ...(g.keywords ?? [])].join(' ').toLowerCase()} data-cat={g.category}>
+        <IndexRow href={withBase(`/guides/${g.slug}/`)}>
+          <span slot="main">{g.title}</span>
+          <span slot="sub">
+            <span class="tag">{zh('guideKind', g.kind)}</span>
+            <span class="tag">{zh('guideCategory', g.category)}</span>
+            {(g.games ?? []).slice(0, 2).map((id: string) => games.get(id)?.name.zh && <span class="meta">{games.get(id).name.zh}</span>)}
+          </span>
+          <span slot="meta"><MetaDate checkedAt={g.checkedAt} /></span>
+          <span slot="action">→</span>
+        </IndexRow>
+      </div>
+    ))}
+  </div>
+  <div data-empty hidden><EmptyState message="未找到符合条件的教程" submitHref="/about/#feedback" /></div>
+</Base>
+
+<script>
+  import { initListFilter } from '../../client/list-filter.js';
+  initListFilter({
+    filters: {
+      q: (v, row) => row.dataset.q.includes(v.toLowerCase()),
+      cat: (v, row) => row.dataset.cat === v,
+    },
+  });
+  const obs = () => document.querySelectorAll('[data-clear]').forEach((b) => (b.hidden = document.querySelectorAll('.fchip').length === 0));
+  new MutationObserver(obs).observe(document.querySelector('[data-chips]'), { childList: true });
+</script>
+
+<style>
+  h1 { display: flex; align-items: baseline; gap: var(--space-4); }
+  .filterbar { display: flex; gap: var(--space-3); margin-bottom: var(--space-3); flex-wrap: wrap; }
+  .fq { flex: 1; min-width: 160px; height: 40px; border: 1px solid var(--border-control); border-radius: var(--r-ctl); padding: 0 12px; font-size: var(--fs-sub); font-family: inherit; background: var(--bg-raised); }
+  .fq:focus { border-color: var(--accent); outline: none; }
+  select { height: 40px; padding: 0 10px; border: 1px solid var(--border-control); border-radius: var(--r-ctl); background: var(--bg-raised); font-size: var(--fs-sub); font-family: inherit; color: var(--text-primary); }
+  .fclear { height: 40px; padding: 0 14px; border: 1px solid var(--border-control); border-radius: var(--r-ctl); background: var(--bg-raised); color: var(--accent); font-size: var(--fs-sub); cursor: pointer; font-family: inherit; }
+  .chips { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-3); }
+  .chips:empty { display: none; }
+  .fchip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 10px; border: 0; cursor: pointer; border-radius: var(--r-pill); background: var(--accent-soft); color: var(--text-secondary); font-size: var(--fs-badge); font-weight: 500; font-family: inherit; }
+  .fchip:hover { color: var(--danger); }
+  @media (max-width: 639px) { select, .fclear { flex: 1; min-height: 44px; } }
+</style>

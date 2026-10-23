@@ -1,0 +1,13 @@
+{
+  "id": "fixture-draft",
+  "slug": "fixture-draft",
+  "name": { "zh": "草稿 fixture" },
+  "summary": "draft 状态，应被排除。",
+  "channels": [{ "platform": "steam", "type": "buy", "url": "https://example.com/fd", "linkHealth": "ok", "checkedAt": "2026-10-20" }],
+  "sources": [],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-20",
+  "createdAt": "2026-10-01",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "draft"
+}

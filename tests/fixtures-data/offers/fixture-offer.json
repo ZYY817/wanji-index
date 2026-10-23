@@ -1,0 +1,15 @@
+{
+  "id": "fixture-offer",
+  "gameTitle": "测试游戏",
+  "gameId": "fixture-ok",
+  "type": "limited",
+  "platform": "epic",
+  "url": "https://example.com/offer",
+  "claimNote": "截止前领取永久入库",
+  "endDate": "2026-11-30",
+  "checkedAt": "2026-10-20",
+  "linkHealth": "ok",
+  "createdAt": "2026-10-15",
+  "updatedAt": "2026-10-20",
+  "publishStatus": "published"
+}
