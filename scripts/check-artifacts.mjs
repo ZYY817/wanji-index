@@ -1,57 +1,67 @@
-// 产物一致性检查（M0 基础版）：任一断言失败 = 非零退出 = 不部署
-// 用法：node scripts/check-artifacts.mjs [distDir]（默认 dist；测试构建传 dist-test）
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
-import { join } from 'node:path';
+// 产物断言门 —— Next.js 静态导出版（out/ 目录）
+// 用法：node check-artifacts.mjs [distDir]（默认 out）
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { join, relative } from 'node:path';
 import { loadSiteConfig, PROJECT_ROOT } from '../src/lib/config.mjs';
 
-const DIST = join(PROJECT_ROOT, process.argv[2] || 'dist');
+const DIST = join(PROJECT_ROOT, process.argv[2] ?? 'out');
 const site = loadSiteConfig();
-const fail = [], ok = [];
-const A = (cond, msg) => (cond ? ok : fail).push(msg);
-const exists = (p) => existsSync(join(DIST, p));
-const read = (p) => readFileSync(join(DIST, p), 'utf8');
-
-const htmlFiles = (dir, acc = []) => {
+let pass = 0, fail = 0;
+const A = (ok, msg) => { ok ? pass++ : fail++; console.log(`${ok ? '✓' : '✗'} ${msg}`); };
+const read = (f) => readFileSync(join(DIST, f), 'utf8');
+const exists = (f) => existsSync(join(DIST, f));
+const htmlFiles = (dir, out = []) => {
   for (const f of readdirSync(dir)) {
     const p = join(dir, f);
-    try { readdirSync(p); htmlFiles(p, acc); }
-    catch { f.endsWith('.html') && acc.push(p); }
+    if (statSync(p).isDirectory()) htmlFiles(p, out);
+    else if (f === 'index.html') out.push(p);
   }
-  return acc;
+  return out;
 };
+const siteBase = site.url.replace(/\/$/, '');
 
-A(exists('index.html'), '首页已生成');
-if (exists('index.html')) {
-  const html = read('index.html');
-  A(html.includes('canonical'), '首页含 canonical');
-  const m = html.match(/canonical" href="([^"]+)"/);
-  A(m && m[1].startsWith(site.url), `canonical 域名与 site.json 一致（${m?.[1]}）`);
-  A(m && m[1].endsWith('/'), 'canonical 尾斜杠');
-}
+// ── 首页 ──
+A(exists('index.html'), 'index.html 存在');
+const home = read('index.html');
+A(home.includes(`<link rel="canonical" href="${siteBase}/"`), `canonical 正确（${siteBase}/）`);
+A(/<title>/.test(home), '首页有 title');
+A(!home.includes('localhost'), '首页无 localhost 残留');
 
-// 全产物扫描：demo/draft/offline/fixture 标记不得出现在任何 HTML
-const pages = existsSync(DIST) ? htmlFiles(DIST) : [];
+// ── 全产物扫描 ──
+const pages = htmlFiles(DIST);
+const banned = ['fixture-demo', 'fixture-draft', '_demo', 'undefined', 'NaN'];
 for (const f of pages) {
   const html = readFileSync(f, 'utf8');
-  for (const marker of ['fixture-demo', 'fixture-draft', '_demo'])
-    A(!html.includes(marker), `${f.split(DIST)[1]} 不含禁用标记 ${marker}`);
+  const rel = relative(DIST, f);
+  for (const m of ['fixture-demo', 'fixture-draft', '_demo'])
+    A(!html.includes(m), `${rel} 不含禁用标记 ${m}`);
 }
+A(!pages.some((f) => f.includes('fixture-')), '无 fixture 页面生成');
 
-// sitemap ⊆ 实有 HTML（docs/06 产物断言）
-if (exists('sitemap-0.xml')) {
-  const xml = read('sitemap-0.xml');
+// ── sitemap ⊆ HTML ──
+if (exists('sitemap.xml')) {
+  const xml = read('sitemap.xml');
   const locs = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
-  const base = site.url.replace(/\/$/, '') + (site.base === '/' ? '' : site.base.replace(/\/$/, ''));
-  const htmlPaths = new Set(pages.map((f) => base + f.split(DIST)[1].replace(/\\/g, '/').replace(/index\.html$/, '')));
-  A(!locs.some((l) => l.includes('/search/')), 'sitemap 不含 /search/');
-  A(!locs.some((l) => l.endsWith('404')), 'sitemap 不含 404');
-  for (const l of locs) A(htmlPaths.has(l), `sitemap 条目存在对应 HTML：${l.replace(base, '')}`);
+  const htmlPaths = new Set(pages.map((f) => siteBase + '/' + relative(DIST, f).replace(/\\/g, '/').replace(/index\.html$/, '')));
+  A(!locs.some((l) => l.includes('/search')), 'sitemap 不含 /search/');
+  A(!locs.some((l) => l.includes('404')), 'sitemap 不含 404');
+  for (const l of locs) A(htmlPaths.has(l), `sitemap 条目存在对应 HTML：${l.replace(siteBase, '')}`);
 }
 
-// _redirects 已生成
+// ── robots / 搜索索引 / _redirects ──
+A(exists('robots.txt'), 'robots.txt 存在');
+if (exists('robots.txt')) {
+  A(read('robots.txt').includes('Disallow: /search/'), 'robots 禁 /search/');
+  A(read('robots.txt').includes(`Sitemap: ${siteBase}/sitemap.xml`), 'robots 指向正确 sitemap');
+}
+A(exists('search-index.json'), 'search-index.json 存在');
+if (exists('search-index.json')) {
+  const idx = JSON.parse(read('search-index.json'));
+  A(Array.isArray(idx.items) && idx.items.length > 0, `搜索索引非空（${idx.items?.length} 条）`);
+  A(!idx.items.some((i) => i.url.includes('fixture')), '索引无 fixture 条目');
+}
 A(exists('_redirects'), '_redirects 已生成');
+A(exists('404.html') || exists('404/index.html'), '404 页存在');
 
-for (const m of ok) console.log('✓', m);
-for (const m of fail) console.log('✗', m);
-console.log(`\n产物检查：${ok.length} 通过 / ${fail.length} 失败`);
-process.exit(fail.length ? 1 : 0);
+console.log(`\n产物检查：${pass} 通过 / ${fail} 失败`);
+process.exit(fail ? 1 : 0);

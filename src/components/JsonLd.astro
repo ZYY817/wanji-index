@@ -1,6 +1,0 @@
----
-// JSON-LD 输出 —— 用法：<JsonLd data={[ld1, ld2]} />（src/lib/jsonld.mjs 构建对象）
-interface Props { data: object | object[] }
-const { data } = Astro.props;
----
-<script type="application/ld+json" set:html={JSON.stringify(data)} />

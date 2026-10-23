@@ -3,9 +3,11 @@
 // .astro/.js 组件内请直接 `import cfg from '.../config/site.json'`（Vite 打包为数据），
 // 勿使用本文件——它经打包后文件路径不再指向项目根。
 import { readFileSync } from 'node:fs';
-import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 
-const ROOT = fileURLToPath(new URL('../../', import.meta.url));
+// 项目根=进程工作目录（npm scripts / next build / next dev 均以项目根为 cwd）
+export const PROJECT_ROOT = process.cwd();
+const ROOT = PROJECT_ROOT + '/';
 
 function readJson(rel, label) {
   const path = `${ROOT}${rel}`;
@@ -40,5 +42,4 @@ export function loadRedirects() {
   return map;
 }
 
-export const PROJECT_ROOT = ROOT;
 export const DATA_DIR = process.env.DATA_DIR || 'data';
