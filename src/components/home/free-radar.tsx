@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import { motion, useMotionValue, useMotionValueEvent, useScroll, useSpring, useTransform } from 'motion/react';
+import { motion, useMotionValue, useMotionValueEvent, useScroll, useSpring } from 'motion/react';
 import { ArrowRight, MoveHorizontal } from 'lucide-react';
 import type { OfferVM } from '@/lib/present';
 import { ExtLink } from '@/components/ui/ext-link';
@@ -10,7 +10,7 @@ import { OfferPanel } from '@/components/offer/offer-panel';
 import { Countdown, useNow } from '@/components/offer/countdown';
 import { isUrgent, liveLifecycle } from '@/components/offer/use-lifecycle';
 import { RadarDial } from '@/components/offer/radar-dial';
-import { RadarTimeline } from '@/components/offer/radar-timeline';
+import { SectionLabel } from '@/components/ui/section-label';
 import { useIsDesktop, useMotionOK, useMedia } from '@/components/fx/hooks';
 import { shDateTime, pad2 } from '@/lib/time';
 import { cn } from '@/lib/utils';
@@ -21,23 +21,14 @@ const TRACKERS = [
   { name: 'SteamDB 免费活动', url: 'https://steamdb.info/upcoming/free/' },
 ];
 
-const clockFmt = new Intl.DateTimeFormat('zh-CN', {
-  timeZone: 'Asia/Shanghai',
-  hour: '2-digit',
-  minute: '2-digit',
-  second: '2-digit',
-  hour12: false,
-});
-
-function Clock({ now }: { now: number | null }) {
-  return <span className="tabular-nums text-foreground">{now == null ? '--:--:--' : clockFmt.format(now)}</span>;
-}
-
 function clamp(n: number, min: number, max: number) {
   return Math.min(max, Math.max(min, n));
 }
 
-// 第 4 章 · 免费雷达 / 雷达室：桌面 sticky 100svh，左侧雷达盘 + 右侧横向胶片带 + 全宽时间轴。
+// 只展示最紧迫的几条：横滑长度与信息量都受控，完整列表交给 /free/ 页
+const RADAR_LIMIT = 5;
+
+// 第 4 章 · 免费雷达：桌面 sticky 100svh，左侧雷达盘（跟随当前卡片）+ 右侧横向胶片带。
 // 移动端和 reduced-motion 使用同一套内容的静态版：紧凑读数 + 原生横滑 + snap，没有 pin。
 export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number }) {
   const sectionRef = useRef<HTMLElement>(null);
@@ -51,14 +42,13 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
   const [activePos, setActivePos] = useState(0);
   const metricsRef = useRef({ step: 538, cardWidth: 518, viewportWidth: 797 });
 
-  const items = offers.filter((o) => liveLifecycle(o, now) !== 'ended').slice(0, 10);
+  const items = offers.filter((o) => liveLifecycle(o, now) !== 'ended').slice(0, RADAR_LIMIT);
   const activeCount = offers.filter((o) => liveLifecycle(o, now) === 'active').length;
   const upcomingCount = offers.filter((o) => liveLifecycle(o, now) === 'upcoming').length;
   const pinned = ok && desktop && tall;
   const activePinned = pinned && dist > 0;
   const currentCardIndex = Math.min(activePos, Math.max(0, items.length - 1));
   const atEnd = items.length > 0 && activePos >= items.length;
-  const cardCount = items.length;
 
   const countRef = useRef(items.length);
   countRef.current = items.length;
@@ -94,10 +84,6 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
   }, [pinned, items.length]);
 
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end end'] });
-  const titleY = useTransform(scrollYProgress, [0, 0.85], [0, -34]);
-  const titleFade = useTransform(scrollYProgress, [0, 0.7, 0.94], [1, 1, 0.16]);
-  const backdropX = useTransform(scrollYProgress, [0, 1], [0, -70]);
-  const backdropY = useTransform(scrollYProgress, [0, 1], [0, 46]);
 
   // 横向位置按 activePos 吸附：每越过一步，弹簧把当前卡完整停在视口左侧，不再任意裁切。
   const xTarget = useMotionValue(0);
@@ -116,18 +102,6 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
     if (!n) return;
     const next = Math.round(clamp(v, 0, 1) * n);
     setActivePos((prev) => (prev === next ? prev : next));
-  });
-
-  // playhead 从同一个弹簧位移推导，和卡片完全同步；最后一步把 playhead 推到 100%。
-  const playheadProgress = useTransform(x, (v) => {
-    const n = countRef.current;
-    const { step } = metricsRef.current;
-    const px = Math.max(0, -v);
-    if (n <= 1) return 0;
-    const lastCardX = (n - 1) * step;
-    if (px <= lastCardX) return clamp(px / Math.max(1, step) / n, 0, 0.9);
-    const tail = Math.max(1, distRef.current - lastCardX);
-    return clamp(((n - 1) + clamp((px - lastCardX) / tail, 0, 1)) / n, 0, 1);
   });
 
   const onStripScroll = (e: React.UIEvent<HTMLDivElement>) => {
@@ -173,38 +147,11 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
         'relative',
         activePinned ? 'sticky top-0 h-[100svh] overflow-hidden' : 'pb-20 pt-[calc(var(--header-h)+28px)] md:pb-28',
       )}>
-        {/* 尺度反差：巨型描边编号作为背景层，只在雷达室上方微微漂移 */}
-        <motion.span
-          aria-hidden
-          className="pointer-events-none absolute left-[calc(var(--gutter)-0.05em)] top-[13%] z-0 select-none font-serif text-[clamp(240px,31vw,460px)] font-black leading-[0.7] tracking-[-0.09em] text-outline opacity-[0.085] [--stroke-w:1px]"
-          style={activePinned ? { x: backdropX, y: backdropY } : undefined}
-        >
-          04
-        </motion.span>
-        <span aria-hidden className="pointer-events-none absolute left-[calc(var(--gutter)+6px)] top-[12%] z-0 hidden select-none font-mono text-2xs tracking-[0.3em] text-fg-3 opacity-50 [writing-mode:vertical-rl] sm:block">
-          Nº 04 · RADAR ROOM
-        </span>
-
         <div className={cn(
           'relative z-10 px-[var(--gutter)]',
           activePinned ? 'flex h-full flex-col pb-4 pt-[calc(var(--header-h)+14px)]' : '',
         )}>
-          <header className="relative z-10 flex shrink-0 items-center justify-between gap-4 border-b border-border pb-3">
-            <div className="meta flex min-w-0 items-center gap-3 text-2xs text-fg-3">
-              <span className="shrink-0 text-foreground">Nº 04</span>
-              <span aria-hidden className="h-px w-7 shrink-0 bg-current opacity-50" />
-              <span className="truncate text-fg-2">免费雷达 / RADAR ROOM</span>
-              <span className="hidden shrink-0 text-fg-3 xl:inline">免费情报 · 实时重算</span>
-            </div>
-            <div className="meta flex shrink-0 items-center gap-3 text-2xs text-fg-3 sm:gap-4">
-              <span className="hidden items-center gap-1.5 sm:inline-flex">
-                <span aria-hidden className="size-1.5 bg-ok" /> LIVE · 扫描中
-              </span>
-              <span className="hidden text-fg-3 md:inline">北京时间</span>
-              <Clock now={now} />
-              <span className="hidden text-fg-3 xl:inline">UTC+8</span>
-            </div>
-          </header>
+          <SectionLabel no="04" aside="北京时间 · 按截止时间排序" className="relative z-10 shrink-0">免费雷达</SectionLabel>
 
           <div className={cn(
             'relative z-10',
@@ -213,26 +160,19 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
               : 'mt-7 grid gap-8 lg:grid-cols-[minmax(0,360px)_minmax(0,1fr)] lg:gap-10',
           )}>
             <div className={cn('relative flex min-h-0 flex-col', activePinned && 'justify-between')}>
-              <motion.div
-                className="relative z-10"
-                style={activePinned ? { y: titleY, opacity: titleFade } : undefined}
-              >
-                <p className="meta mb-4 flex items-center gap-2 text-2xs text-fg-3">
-                  <span aria-hidden className="size-1 bg-primary" />
-                  当前章节 / FREE FEED
-                </p>
+              <div className="relative z-10">
                 <h2
                   id="radar-title"
-                  className="font-serif text-[clamp(48px,5.1vw,80px)] font-black leading-[0.91] tracking-[-0.055em]"
+                  className="font-serif text-[clamp(44px,4.4vw,72px)] font-black leading-[1.02] tracking-[-0.05em]"
                 >
                   此刻，
                   <br />
                   免费的。
                 </h2>
-                <p className="mt-4 max-w-[36ch] text-sm leading-[1.8] text-fg-2 sm:text-sm">
+                <p className="mt-4 max-w-[34ch] text-base leading-[1.75] text-fg-2">
                   限时领取按截止时间排在最前，倒计时以北京时间计算；永久免费与开源游戏常驻雷达。
                 </p>
-              </motion.div>
+              </div>
 
               {activePinned ? (
                 <>
@@ -252,15 +192,15 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
                   </div>
                   <dl className="relative z-10 grid shrink-0 grid-cols-3 border-y border-border">
                     <div className="border-r border-border py-3 pr-3">
-                      <dt className="meta text-2xs text-fg-3">进行中</dt>
+                      <dt className="text-xs text-fg-3">进行中</dt>
                       <dd className="mt-1 font-mono text-lg leading-none tabular-nums text-ok">{pad2(activeCount)}</dd>
                     </div>
                     <div className="border-r border-border px-3 py-3">
-                      <dt className="meta text-2xs text-fg-3">预告</dt>
+                      <dt className="text-xs text-fg-3">预告</dt>
                       <dd className="mt-1 font-mono text-lg leading-none tabular-nums text-info">{pad2(upcomingCount)}</dd>
                     </div>
                     <div className="py-3 pl-3">
-                      <dt className="meta text-2xs text-fg-3">收录</dt>
+                      <dt className="text-xs text-fg-3">收录</dt>
                       <dd className="mt-1 font-mono text-lg leading-none tabular-nums text-foreground">{pad2(total)}</dd>
                     </div>
                   </dl>
@@ -280,14 +220,9 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
             </div>
 
             <div className={cn('flex min-h-0 min-w-0 flex-col', activePinned && 'pt-0.5')}>
-              <div className="meta mb-3 flex shrink-0 items-center justify-between gap-4 text-2xs text-fg-3">
-                <span className="flex items-center gap-2.5">
-                  <span className="text-fg-2">胶片带 / FREE FEED</span>
-                  <span aria-hidden className="h-px w-6 bg-border-strong" />
-                  <span className="hidden sm:inline">按紧迫度排序</span>
-                </span>
-                <span className="tabular-nums text-fg-2">
-                  T{pad2(Math.min(currentCardIndex + 1, items.length))} / {pad2(items.length)}
+              <div className="mb-3 flex shrink-0 justify-end font-mono text-xs tabular-nums text-fg-2">
+                <span>
+                  <span className="text-foreground">{pad2(Math.min(currentCardIndex + 1, items.length))}</span> / {pad2(items.length)}
                 </span>
               </div>
 
@@ -326,7 +261,7 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
 
                   {!items.length && (
                     <div className={cn('flex shrink-0 snap-start flex-col justify-between border border-dashed border-border-strong p-6', cardWidth, cardHeight)}>
-                      <p className="meta text-fg-3">NO SIGNAL</p>
+                      <p className="meta text-fg-3">雷达静默</p>
                       <div>
                         <p className="font-serif text-3xl font-bold leading-tight tracking-[-0.03em]">雷达静默，<br />此刻没有在架情报。</p>
                         <Link href="/free/" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'mt-7 w-full justify-between')}>
@@ -346,7 +281,7 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
                   >
                     <div>
                       <div className="meta flex items-center justify-between text-2xs text-fg-3">
-                        <span>OUT OF RANGE</span>
+                        <span>更多追踪源</span>
                         <span aria-hidden className="text-foreground">+</span>
                       </div>
                       <p className="mt-8 max-w-[10em] font-serif text-3xl font-bold leading-[1.12] tracking-[-0.03em]">
@@ -374,28 +309,15 @@ export function FreeRadar({ offers, total }: { offers: OfferVM[]; total: number 
                 </motion.div>
               </div>
 
-              <div className="meta mt-3 flex shrink-0 items-center justify-between gap-4 text-2xs text-fg-3">
-                <span className="flex items-center gap-2">
-                  <MoveHorizontal aria-hidden className="size-3" />
-                  {activePinned ? '纵向滚动 · 横向检索' : '左右滑动 · 查看全部'}
-                </span>
-                {activePinned && (
-                  <span className="hidden tabular-nums text-fg-3 sm:inline">
-                    {leadUrgent ? <span className="text-primary">有一项即将截止</span> : '所有时间均为 UTC+8'}
-                  </span>
-                )}
-              </div>
+              {!activePinned && (
+                <p className="mt-3 flex items-center gap-2 text-xs text-fg-3">
+                  <MoveHorizontal aria-hidden className="size-3.5" />
+                  左右滑动查看全部
+                </p>
+              )}
             </div>
           </div>
 
-          <RadarTimeline
-            items={items}
-            now={now}
-            progress={playheadProgress}
-            activeIndex={currentCardIndex}
-            moving={activePinned}
-            className={cn('relative z-10', activePinned ? 'mt-4' : 'mt-9 border-t border-border pt-4')}
-          />
         </div>
       </div>
     </section>
@@ -421,15 +343,15 @@ function Readout({
       <div aria-hidden className="pointer-events-none absolute -right-8 -top-14 size-44 rounded-full border border-border" />
       <div className="relative">
         <div className="meta flex items-center justify-between gap-4 border-b border-border px-4 py-2.5 text-2xs text-fg-3">
-          <span className="text-fg-2">雷达读数 / READOUT</span>
+          <span className="text-fg-2">雷达读数</span>
           <span className="flex items-center gap-2">
             <span aria-hidden className="size-1 bg-ok" />
             {lead ? (urgent ? '紧急' : '扫描中') : '静默'}
           </span>
         </div>
         <div className="px-4 pb-4 pt-4">
-          <p className="meta text-2xs tracking-[0.16em] text-fg-3">
-            {leadLc === 'upcoming' ? '最近开始 / STARTS IN' : leadLc === 'active' ? '最近截止 / NEXT DEADLINE' : '常驻 / OPEN-ENDED'}
+          <p className="meta text-2xs tracking-[0.04em] text-fg-3">
+            {leadLc === 'upcoming' ? '最近开始' : leadLc === 'active' ? '最近截止' : '常驻'}
           </p>
 
           {target != null ? (
@@ -464,15 +386,15 @@ function Readout({
         </div>
         <dl className="grid grid-cols-3 border-t border-border">
           <div className="border-r border-border px-4 py-2.5">
-            <dt className="meta text-2xs text-fg-3">进行中</dt>
+            <dt className="text-xs text-fg-3">进行中</dt>
             <dd className="mt-0.5 font-mono text-base leading-none tabular-nums text-ok">{pad2(activeCount)}</dd>
           </div>
           <div className="border-r border-border px-4 py-2.5">
-            <dt className="meta text-2xs text-fg-3">预告</dt>
+            <dt className="text-xs text-fg-3">预告</dt>
             <dd className="mt-0.5 font-mono text-base leading-none tabular-nums text-info">{pad2(upcomingCount)}</dd>
           </div>
           <div className="px-4 py-2.5">
-            <dt className="meta text-2xs text-fg-3">收录</dt>
+            <dt className="text-xs text-fg-3">收录</dt>
             <dd className="mt-0.5 font-mono text-base leading-none tabular-nums text-foreground">{pad2(total)}</dd>
           </div>
         </dl>

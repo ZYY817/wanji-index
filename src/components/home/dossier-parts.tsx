@@ -8,11 +8,11 @@ import { cn } from '@/lib/utils';
 
 // 第 3 章 · 档案五步：顺序即装配顺序（渠道 → MOD/汉化 → 工具 → 排障 → 存档路径）
 export const DOSSIER_STEPS = [
-  { no: '01', title: '渠道', en: 'Channels', desc: '官方商店与正版平台，标明买断、免费或订阅。' },
-  { no: '02', title: 'MOD · 汉化', en: 'Mods', desc: '只链到公认社区的游戏专区，不转载任何文件。' },
-  { no: '03', title: '工具', en: 'Tools', desc: '加载器、管理器、监控工具，附官网与风险提示。' },
-  { no: '04', title: '排障', en: 'Fixes', desc: '报错原文可搜，步骤写明预期结果与失败分支。' },
-  { no: '05', title: '存档路径', en: 'Saves', desc: '存档与配置路径一键复制，重装前先备份。' },
+  { no: '01', title: '渠道', desc: '官方商店与正版平台，标明买断、免费或订阅。' },
+  { no: '02', title: 'MOD · 汉化', desc: '只链到公认社区的游戏专区，不转载任何文件。' },
+  { no: '03', title: '工具', desc: '加载器、管理器、监控工具，附官网与风险提示。' },
+  { no: '04', title: '排障', desc: '报错原文可搜，步骤写明预期结果与失败分支。' },
+  { no: '05', title: '存档路径', desc: '存档与配置路径一键复制，重装前先备份。' },
 ] as const;
 
 export function stepCount(d: DossierVM, i: number) {
@@ -114,8 +114,9 @@ export function StepContent({ d, index, mode = 'board' }: { d: DossierVM; index:
   }
 }
 
-// 16:9 官方美术板：FIG 片头字幕 + 透明 logo 覆盖（桌面档案顶栏 / 移动端全出血首图共用）
-export function DossierPlate({ d, className }: { d: DossierVM; className?: string }) {
+// 16:9 官方美术板：透明 logo + 类型 / 平台（桌面档案顶栏 / 移动端全出血首图共用）
+// eager：桌面 sticky 舞台里的图片不走懒加载（吸顶容器内浏览器可能永远不触发加载）
+export function DossierPlate({ d, className, eager }: { d: DossierVM; className?: string; eager?: boolean }) {
   const g = d.game;
   return (
     <div className={cn('relative aspect-video w-full overflow-hidden border-b border-border-strong bg-shell', className)}>
@@ -123,27 +124,20 @@ export function DossierPlate({ d, className }: { d: DossierVM; className?: strin
         <img
           src={g.art.hero}
           alt=""
-          loading="lazy"
+          loading={eager ? 'eager' : 'lazy'}
           decoding="async"
           className="absolute inset-0 size-full object-cover object-[50%_42%]"
         />
       )}
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,7,6,0.7)_0%,rgba(7,7,6,0.04)_36%,rgba(7,7,6,0.12)_62%,rgba(7,7,6,0.9)_100%)]" />
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(7,7,6,0.52)_0%,transparent_58%)]" />
-      <div className="relative flex h-full flex-col justify-between p-3.5 md:p-4">
-        <div className="meta flex items-start justify-between gap-3 text-2xs text-foreground/85">
-          <span className="flex items-center gap-2">
-            <span aria-hidden className="size-1 shrink-0 bg-foreground/60" />
-            FIG.03 — {g.name} / 官方美术
-          </span>
-          <span className="shrink-0 text-right text-foreground/60">档案 Nº {g.art?.appid ?? '—'}</span>
-        </div>
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(180deg,rgba(12,11,10,0.7)_0%,rgba(12,11,10,0.04)_36%,rgba(12,11,10,0.12)_62%,rgba(12,11,10,0.9)_100%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(12,11,10,0.52)_0%,transparent_58%)]" />
+      <div className="relative flex h-full flex-col justify-end p-3.5 md:p-4">
         <div className="flex items-end justify-between gap-4">
           {g.art ? (
             <img
               src={g.art.logo}
               alt=""
-              loading="lazy"
+              loading={eager ? 'eager' : 'lazy'}
               decoding="async"
               onError={(e) => { e.currentTarget.style.display = 'none'; }}
               className="w-[44%] max-w-[250px] object-contain object-left"
@@ -151,7 +145,7 @@ export function DossierPlate({ d, className }: { d: DossierVM; className?: strin
           ) : (
             <span className="font-serif text-2xl font-black leading-none">{g.name}</span>
           )}
-          <div className="meta space-y-1 text-right text-2xs leading-[1.4] text-foreground/75">
+          <div className="space-y-0.5 text-right text-xs leading-[1.5] text-foreground/80">
             <p>{g.genres.map(genreZh).join(' · ')}</p>
             <p>{g.os.map((o) => zh('os', o)).join(' / ')}</p>
           </div>
@@ -161,31 +155,30 @@ export function DossierPlate({ d, className }: { d: DossierVM; className?: strin
   );
 }
 
-// 桌面档案板：五行真实内容常驻，当前行抬升 + 左侧橙色刻度 + mono 行号 / 步骤名解码
-export function DossierBoard({ d, active, runKey = -1, className }: { d: DossierVM; active: number | null; runKey?: number; className?: string }) {
+// 桌面档案板：五行真实内容常驻；当前行抬升 + 左侧橙色刻度，其余行压暗，视线只落在一处
+export function DossierBoard({ d, active, className, eager }: { d: DossierVM; active: number | null; className?: string; eager?: boolean }) {
   const g = d.game;
   return (
     <article className={cn('relative border border-border-strong bg-card', className)} aria-label={`${g.name} 档案示例`}>
       <CropMarks size={16} inset={-9} className="text-fg-3" />
-      <header className="meta flex h-9 items-center gap-2.5 border-b border-border px-4 text-2xs text-fg-3">
-        <span className="shrink-0 text-foreground/90">档案 Nº {g.art?.appid ?? '—'}</span>
-        <span aria-hidden className="h-3 w-px shrink-0 bg-border-strong" />
-        <span className="truncate font-serif text-sm font-bold tracking-normal text-foreground">{g.name}</span>
-        <span className="hidden truncate tracking-[0.1em] text-fg-3 sm:inline">{g.en}</span>
-        <span className="ml-auto shrink-0">核验 {g.checkedAt}</span>
+      <header className="flex h-11 items-center gap-3 border-b border-border px-4">
+        <span className="truncate font-serif text-base font-bold text-foreground">{g.name}</span>
+        <span className="ml-auto shrink-0 text-xs text-fg-3">核验于 {g.checkedAt}</span>
       </header>
-      <DossierPlate d={d} />
+      <DossierPlate d={d} eager={eager} />
       <div>
         {DOSSIER_STEPS.map((s, i) => {
           const isActive = active === i;
+          const dim = active !== null && !isActive;
           return (
             <div
               key={s.no}
               data-state={isActive ? 'active' : 'idle'}
               aria-current={isActive ? 'step' : undefined}
               className={cn(
-                'relative grid grid-cols-[52px_minmax(0,1fr)] gap-3 border-b border-border px-4 py-[5px] transition-colors duration-500 last:border-b-0',
+                'relative grid grid-cols-[64px_minmax(0,1fr)] gap-3 border-b border-border px-4 py-2 transition-[background-color,opacity] duration-500 last:border-b-0',
                 isActive ? 'bg-surface-2' : 'bg-transparent',
+                dim && 'opacity-45',
               )}
             >
               <span
@@ -193,10 +186,10 @@ export function DossierBoard({ d, active, runKey = -1, className }: { d: Dossier
                 className={cn('absolute inset-y-0 left-0 w-[2px] bg-primary transition-opacity duration-500', isActive ? 'opacity-100' : 'opacity-0')}
               />
               <div className="min-w-0">
-                <p className={cn('meta text-2xs leading-none transition-colors duration-300', isActive ? 'text-primary' : 'text-fg-3')}>
+                <p className={cn('font-mono text-2xs leading-none tabular-nums transition-colors duration-300', isActive ? 'text-primary' : 'text-fg-3')}>
                   {s.no}
                 </p>
-                <p className={cn('meta mt-1.5 whitespace-nowrap text-2xs leading-none transition-colors duration-300', isActive ? 'text-foreground' : 'text-fg-3')}>
+                <p className={cn('mt-1.5 whitespace-nowrap text-xs font-medium leading-none transition-colors duration-300', isActive ? 'text-foreground' : 'text-fg-2')}>
                   {s.title}
                 </p>
               </div>

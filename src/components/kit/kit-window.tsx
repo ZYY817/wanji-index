@@ -122,7 +122,7 @@ export function KitWindow({ scanned: scannedProp, interactive, className }: { sc
             {scanning && (
               <span
                 aria-hidden
-                className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-primary/70 shadow-[0_0_18px_2px_rgba(255,107,44,0.4)] transition-[top] duration-500 ease-out"
+                className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-primary/70 shadow-[0_0_18px_2px_rgba(216,182,122,0.4)] transition-[top] duration-500 ease-out"
                 style={{ top: `${(scanned / total) * 100}%` }}
               />
             )}

@@ -7,21 +7,21 @@ import { Dialog, DialogContent, DialogTitle, DialogClose, DialogDescription } fr
 import { Kbd } from '@/components/ui/kbd';
 import { NAV, type NavCounts } from '@/lib/nav';
 import { cn } from '@/lib/utils';
+import { EASE_OUT } from '@/components/fx/tokens';
 
-const EASE = [0.16, 1, 0.3, 1] as const;
 const LIST: Variants = {
   hidden: {},
   show: { transition: { staggerChildren: 0.035, delayChildren: 0.12 } },
 };
 const ITEM: Variants = {
   hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE_OUT } },
 };
 
 function Row({
-  no, href, label, en, count, active,
+  no, href, label, count, active,
 }: {
-  no: string; href: string; label: string; en: string; count?: number; active: boolean;
+  no: string; href: string; label: string; count?: number; active: boolean;
 }) {
   return (
     <motion.li variants={ITEM}>
@@ -47,7 +47,6 @@ function Row({
                 {String(count).padStart(2, '0')}
               </span>
             )}
-            <span className="meta hidden text-2xs leading-none text-fg-3 min-[380px]:inline">{en}</span>
           </span>
         </span>
       </Link>
@@ -84,7 +83,7 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
         <motion.div
           initial={reduced ? false : { x: '100%' }}
           animate={{ x: 0 }}
-          transition={{ duration: reduced ? 0 : 0.55, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: reduced ? 0 : 0.55, ease: EASE_OUT }}
           className="flex h-full min-h-0 flex-col bg-shell"
         >
           <div className="relative flex h-14 shrink-0 items-center justify-between gap-4 border-b border-border px-[var(--gutter)]">
@@ -112,19 +111,18 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
             </div>
 
             <motion.ul variants={LIST} initial={reduced ? false : 'hidden'} animate={reduced ? false : 'show'}>
-              <Row no="00" href="/" label="首页" en="Hero" active={pathname === '/'} />
+              <Row no="00" href="/" label="首页" active={pathname === '/'} />
               {NAV.map((n) => (
                 <Row
                   key={n.href}
                   no={n.no}
                   href={n.href}
                   label={n.label}
-                  en={n.en}
                   count={counts[n.key]}
                   active={pathname === n.href || pathname.startsWith(n.href)}
                 />
               ))}
-              <Row no="07" href="/about/" label="关于本站" en="About" active={pathname.startsWith('/about')} />
+              <Row no="07" href="/about/" label="关于本站" active={pathname.startsWith('/about')} />
             </motion.ul>
 
             <div className="mt-8 flex items-center gap-3">

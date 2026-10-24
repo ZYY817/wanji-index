@@ -35,7 +35,7 @@ export function CopyButton({ text, className, label = '复制' }: { text: string
         timer.current = setTimeout(() => setState('idle'), copied ? 1600 : 4000);
       }}
       className={cn(
-        'touch-target inline-flex h-8 shrink-0 items-center gap-1.5 rounded-sm border border-border-strong px-2.5 font-mono text-2xs uppercase tracking-[0.1em] text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground',
+        'touch-target inline-flex h-8 shrink-0 items-center gap-1.5 rounded-sm border border-border-strong px-2.5 font-mono text-2xs tracking-[0.04em] text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground',
         done && 'border-ok text-ok hover:border-ok hover:text-ok',
         className,
       )}

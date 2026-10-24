@@ -2,7 +2,7 @@
 import type { GameVM } from '@/lib/present';
 import { genreZh } from '@/lib/genre';
 import { PosterCard } from '@/components/game/poster-card';
-import { GameRow } from '@/components/game/game-row';
+import { GameRow, GameTableHead } from '@/components/game/game-row';
 import { Button } from '@/components/ui/button';
 import { useCatalogQuery } from './use-catalog-query';
 import {
@@ -10,7 +10,6 @@ import {
   type ActiveChip, type Counted,
 } from './filter-index';
 
-const pad3 = (n: number) => String(n).padStart(3, '0');
 const PLATFORM_RANK = ['steam', 'epic', 'gog', 'itch', 'official', 'xbox-pc', 'other'];
 
 function countBy(games: GameVM[], pick: (g: GameVM) => string[]) {
@@ -71,7 +70,7 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
           {/* 桌面 · 索引册页眉：计数、活动筛选、视图 */}
           <div className="hidden min-h-11 flex-wrap items-center gap-x-3 gap-y-2 border-b border-border pb-3 lg:flex">
             <p aria-live="polite" aria-atomic="true" className="meta shrink-0 text-fg-3">
-              <span className="text-foreground">{pad3(filtered.length)}</span> / {pad3(games.length)} 档案
+              <span className="text-foreground">{filtered.length}</span> / {games.length} 款游戏
             </p>
             {chips.length > 0 && <span aria-hidden className="h-4 w-px shrink-0 bg-border" />}
             <ActiveChips chips={chips} onRemove={removeFilter} className="min-w-0 flex-1 flex-wrap gap-1.5" />
@@ -81,20 +80,19 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
           {/* 移动 · 结果计数行（筛选栏自身保持单行） */}
           <div className="flex items-center justify-between gap-4 py-4 lg:hidden">
             <p aria-live="polite" aria-atomic="true" className="meta text-fg-3">
-              <span className="text-foreground">{pad3(filtered.length)}</span> / {pad3(games.length)} 档案
+              <span className="text-foreground">{filtered.length}</span> / {games.length} 款游戏
             </p>
             <p className="meta shrink-0 text-fg-3">按 <span className="text-fg-2">{sortLabel}</span></p>
           </div>
 
           {filtered.length ? (
-            <div className={view === 'list' ? 'mt-5 border-t border-border lg:mt-8' : 'mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:mt-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'}>
+            <div className={view === 'list' ? 'mt-5 lg:mt-8' : 'mt-6 grid grid-cols-2 gap-x-4 gap-y-10 sm:grid-cols-3 lg:mt-8 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'}>
               {view === 'list'
-                ? filtered.map((g, i) => <GameRow key={g.id} g={g} index={i + 1} />)
-                : filtered.map((g, i) => <PosterCard key={g.id} g={g} index={i + 1} priority={i < 4} />)}
+                ? <><GameTableHead />{filtered.map((g) => <GameRow key={g.id} g={g} />)}</>
+                : filtered.map((g, i) => <PosterCard key={g.id} g={g} priority={i < 4} />)}
             </div>
           ) : (
             <div className="mt-6 border-y border-border py-20 text-center lg:mt-8">
-              <p className="meta text-fg-3">NO RECORD / {pad3(0)}</p>
               <p className="mt-4 font-serif text-3xl">没有找到这份档案</p>
               <p className="mt-3 text-sm text-fg-3">试试其他名称，或放宽筛选条件。</p>
               <Button className="mt-6" onClick={resetFilters}>清除筛选</Button>

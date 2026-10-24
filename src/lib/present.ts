@@ -16,7 +16,7 @@ export type GameVM = {
 };
 
 export type SiteVM = {
-  id: string; slug: string; name: string; aliases: string[]; summary: string; category: string;
+  id: string; slug: string; name: string; en?: string; aliases: string[]; summary: string; category: string;
   url: string; domain: string; languages: string[]; feeNote?: string; linkHealth: string;
   reviewStatus: string; entryCount: number; gameCount: number; checkedAt: string; purposes: string[];
 };

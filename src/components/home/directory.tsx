@@ -31,7 +31,7 @@ export function Directory({ sites, groups, counts }: {
   return (
     <section aria-labelledby="dir-title" className="paper-texture relative overflow-hidden bg-paper py-24 text-ink md:py-36">
       <div className="container-x">
-        <SectionLabel no="05" tone="paper" aside={`${counts.categories} 个分类`} className="mb-12">资源站目录 / Directory</SectionLabel>
+        <SectionLabel no="05" tone="paper" aside={`${counts.categories} 个分类`} className="mb-12">资源站目录</SectionLabel>
         <div className="grid items-end gap-10 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="flex items-end gap-5 font-serif font-black leading-[0.8] tracking-[-0.065em]">

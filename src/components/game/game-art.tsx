@@ -5,10 +5,13 @@ import { TextCover } from './text-cover';
 
 // 游戏美术：固定宽高比容器 + 占位底色 + 懒加载；onError 回退到文字封面（客户端组件）
 export function GameArt({
-  src, name, en, seed, variant = 'poster', priority, className, imgClassName, sizes,
+  src, name, en, seed, variant = 'poster', priority, loading, className, imgClassName, sizes,
 }: {
   src?: string | null; name: string; en?: string; seed: string; variant?: 'poster' | 'wide';
-  priority?: boolean; className?: string; imgClassName?: string; sizes?: string;
+  priority?: boolean;
+  /** 显式覆盖加载策略：sticky / pin 舞台里的图片要用 eager，浏览器的懒加载在吸顶容器里可能永远不触发 */
+  loading?: 'eager' | 'lazy';
+  className?: string; imgClassName?: string; sizes?: string;
 }) {
   const [failedSrc, setFailedSrc] = useState<string | null>(null);
   const failed = !src || failedSrc === src;
@@ -29,7 +32,7 @@ export function GameArt({
           alt=""
           aria-hidden
           sizes={sizes}
-          loading={priority ? 'eager' : 'lazy'}
+          loading={loading ?? (priority ? 'eager' : 'lazy')}
           fetchPriority={priority ? 'high' : 'auto'}
           decoding="async"
           onError={() => setFailedSrc(src!)}

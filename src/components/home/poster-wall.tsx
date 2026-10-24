@@ -35,10 +35,10 @@ function Column({
             href={`/games/${g.slug}/`}
             tabIndex={-1}
             aria-hidden
-            className="group relative block aspect-[2/3] overflow-hidden rounded-sm bg-surface-2 ring-1 ring-white/[0.06] transition-[box-shadow,ring-color] duration-500 hover:ring-primary/50 hover:shadow-[0_30px_70px_-26px_rgba(255,107,44,0.55)]"
+            className="group relative block aspect-[2/3] overflow-hidden rounded-sm bg-surface-2 ring-1 ring-white/[0.06] transition-[box-shadow,ring-color] duration-500 hover:ring-primary/50 hover:shadow-[0_30px_70px_-26px_rgba(216,182,122,0.55)]"
           >
             <img src={g.art!.poster} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.07]" />
-            <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(10,10,9,0.97)_0%,rgba(10,10,9,0.5)_42%,transparent_72%)] opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+            <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(19,18,17,0.97)_0%,rgba(19,18,17,0.5)_42%,transparent_72%)] opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
             <span className="absolute inset-0 flex flex-col justify-end p-[8%] opacity-0 transition-opacity duration-400 group-hover:opacity-100">
               <span className="font-serif text-[clamp(14px,1.15vw,20px)] font-bold leading-tight">{g.name}</span>
               <span className="meta mt-1.5 flex items-center gap-2 text-2xs text-fg-2">
@@ -89,12 +89,12 @@ export function PosterWall({ games, total, entries }: { games: GameVM[]; total: 
         </div>
 
         {/* 暗场：保证文字可读 */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#0A0A09_0%,rgba(10,10,9,0.9)_24%,rgba(10,10,9,0.18)_60%,rgba(10,10,9,0.68)_100%)]" />
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(10,10,9,0.95)_0%,rgba(10,10,9,0.55)_34%,rgba(10,10,9,0.04)_72%)]" />
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(10,10,9,0.8),transparent)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(0deg,#131211_0%,rgba(19,18,17,0.9)_24%,rgba(19,18,17,0.18)_60%,rgba(19,18,17,0.68)_100%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[linear-gradient(90deg,rgba(19,18,17,0.95)_0%,rgba(19,18,17,0.55)_34%,rgba(19,18,17,0.04)_72%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(19,18,17,0.8),transparent)]" />
 
         <div className="pointer-events-none relative z-10 flex h-full flex-col justify-end px-[var(--gutter)] pb-[8vh]">
-          <SectionLabel no="02" aside={`${String(entries).padStart(3, '0')} 条外部入口`} className="pointer-events-auto mb-6 max-w-[860px]">片库 / Library</SectionLabel>
+          <SectionLabel no="02" aside={`${String(entries).padStart(3, '0')} 条外部入口`} className="pointer-events-auto mb-6 max-w-[860px]">片库</SectionLabel>
           <div className="flex flex-wrap items-end gap-x-10 gap-y-8">
             <p aria-hidden className="font-serif text-[clamp(134px,22vw,340px)] font-black leading-[0.76] tracking-[-0.06em] text-outline [--stroke-w:1.5px] max-md:pb-[0.08em] max-md:leading-[0.84] max-md:[--stroke-w:1px]">
               <CountUp value={total} pad={3} />

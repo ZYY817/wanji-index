@@ -11,7 +11,7 @@ export default function NotFound() {
     <section className="relative overflow-hidden border-b border-border">
       <div className="container-x grid min-h-[86svh] content-end gap-10 pb-16 pt-[calc(var(--header-h)+64px)] lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <p className="meta text-fg-3">Nº 404 — 未建档 / Not Found</p>
+          <p className="meta text-fg-3">Nº 404 — 未建档</p>
           <h1 className="mt-6">
             <span aria-hidden className="display-xl block">
               4<span className="text-outline [--stroke-w:1.5px]">0</span>4

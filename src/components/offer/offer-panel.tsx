@@ -8,7 +8,7 @@ import { AcquireButton } from '@/components/ui/button';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { GameArt } from '@/components/game/game-art';
 import { healthStatus } from '@/lib/status';
-import { shDateTime, pad2 } from '@/lib/time';
+import { shDateTime } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { Countdown } from './countdown';
 import { isUrgent, liveLifecycle } from './use-lifecycle';
@@ -133,15 +133,16 @@ function RadarOfferPanel({
           className="absolute inset-0"
           imgClassName="object-[50%_38%] transition-transform duration-[1400ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.025]"
           sizes="(min-width: 1024px) 520px, 92vw"
+          loading="eager"
         />
       </motion.div>
 
       {/* 压暗而不是发光：顶部给元数据，底部给全部正文 */}
-      <div aria-hidden className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(10,10,9,0.48)_0%,rgba(10,10,9,0.08)_29%,rgba(10,10,9,0.24)_52%,rgba(10,10,9,0.88)_78%,rgba(10,10,9,0.98)_100%)]" />
-      <div aria-hidden className="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(10,10,9,0.58)_0%,rgba(10,10,9,0.2)_52%,rgba(10,10,9,0.02)_100%)]" />
+      <div aria-hidden className="absolute inset-0 z-[1] bg-[linear-gradient(180deg,rgba(19,18,17,0.48)_0%,rgba(19,18,17,0.08)_29%,rgba(19,18,17,0.24)_52%,rgba(19,18,17,0.88)_78%,rgba(19,18,17,0.98)_100%)]" />
+      <div aria-hidden className="absolute inset-0 z-[1] bg-[linear-gradient(90deg,rgba(19,18,17,0.58)_0%,rgba(19,18,17,0.2)_52%,rgba(19,18,17,0.02)_100%)]" />
       {/* 无原画时文字封面升到压暗层之上，否则整张胶片卡会读成空黑块 */}
       {!hasArt && (
-        <div aria-hidden className="absolute inset-0 z-[2] bg-[linear-gradient(180deg,rgba(10,10,9,0.2)_0%,rgba(10,10,9,0)_34%,rgba(10,10,9,0.62)_64%,rgba(10,10,9,0.97)_100%)]" />
+        <div aria-hidden className="absolute inset-0 z-[2] bg-[linear-gradient(180deg,rgba(19,18,17,0.2)_0%,rgba(19,18,17,0)_34%,rgba(19,18,17,0.62)_64%,rgba(19,18,17,0.97)_100%)]" />
       )}
       <span aria-hidden className="pointer-events-none absolute left-3 top-3 z-[2] size-3 border-l border-t border-foreground/35" />
       <span aria-hidden className="pointer-events-none absolute bottom-3 right-3 z-[2] size-3 border-b border-r border-foreground/35" />
@@ -154,12 +155,6 @@ function RadarOfferPanel({
         aria-hidden
         className="pointer-events-none absolute inset-y-0 right-0 z-[3] w-3 border-l border-foreground/15 bg-[#080807]/90 [background-image:repeating-linear-gradient(180deg,rgba(255,255,255,0.24)_0_9px,transparent_9px_25px)] shadow-[inset_1px_0_0_rgba(0,0,0,0.6)]"
       />
-      <span
-        aria-hidden
-        className="pointer-events-none absolute -right-[0.08em] top-[10%] z-[1] select-none font-serif text-[clamp(144px,14.2vw,208px)] font-black leading-[0.72] tracking-[-0.09em] text-outline opacity-[0.14] [--stroke-w:1px]"
-      >
-        {pad2(index + 1)}
-      </span>
       {current && <span aria-hidden className="absolute inset-x-0 top-0 z-20 h-[2px] bg-primary" />}
 
       <div className="relative z-10 flex h-full min-h-0 flex-col px-6 py-5 sm:px-8 sm:py-6 lg:px-9 lg:py-7">
@@ -168,30 +163,16 @@ function RadarOfferPanel({
             <span className="inline-flex h-7 items-center border border-foreground/25 bg-background/90 px-2.5 text-foreground">
               <PlatformMark platform={o.platform} withLabel />
             </span>
-            <span className="meta inline-flex h-7 items-center border border-foreground/20 bg-background/80 px-2.5 text-2xs text-fg-2">
+            <span className="inline-flex h-7 items-center border border-foreground/20 bg-background/80 px-2.5 text-xs text-fg-2">
               {zh('freeType', o.type)}
             </span>
-            {current && (
-              <span className="meta inline-flex h-7 items-center gap-1.5 border border-primary/50 bg-background/80 px-2.5 text-2xs text-primary">
-                <span aria-hidden className="size-1 bg-primary" /> 当前
-              </span>
-            )}
           </div>
-          <span className="meta shrink-0 bg-background/55 px-2 py-1 text-right text-2xs leading-relaxed text-fg-3">
-            <span className="block text-fg-2">FIG.<span className="text-foreground">{pad2(index + 1)}</span></span>
-            <span className="block">04 / RADAR</span>
-          </span>
         </div>
 
         <div className="mt-auto min-h-0 pt-10">
           <div className="flex flex-wrap items-center gap-2">
             <LifecycleBadge value={lc} pulse />
             {health && <StatusBadge value={health} className="bg-background/50" />}
-            {!lc && (
-              <span className="meta inline-flex h-[22px] items-center border border-foreground/30 px-2 text-2xs tracking-[0.1em] text-fg-2">
-                长期 · 常驻
-              </span>
-            )}
           </div>
 
           <h3 id={`radar-offer-${o.id}`} className="mt-4 max-w-[18em] font-serif text-[clamp(30px,2.7vw,42px)] font-bold leading-[1.12] tracking-[-0.03em]">
@@ -200,9 +181,9 @@ function RadarOfferPanel({
           {o.claimNote && <p className="mt-2 line-clamp-2 max-w-[42ch] text-sm leading-[1.65] text-fg-2">{o.claimNote}</p>}
 
           <div className="mt-5 border-t border-foreground/20 pt-4">
-            <div className="meta flex items-end justify-between gap-4 text-2xs text-fg-3">
+            <div className="flex items-end justify-between gap-4 text-xs text-fg-3">
               <span className="text-fg-2">
-                {lc === 'active' ? '剩余时间 / TIME LEFT' : lc === 'upcoming' ? '距离开始 / STARTS IN' : '状态 / STATUS'}
+                {lc === 'active' ? '剩余时间' : lc === 'upcoming' ? '距离开始' : '状态'}
               </span>
               <span className={cn(urgent && 'text-primary')}>
                 {o.endMs ? `截止 ${shDateTime(o.endMs)}` : o.startMs ? `开始 ${shDateTime(o.startMs)}` : '无截止'}
@@ -234,9 +215,7 @@ function RadarOfferPanel({
           </div>
 
           <div className="mt-4 flex items-end justify-between gap-4">
-            <span className="meta max-w-[21ch] text-2xs leading-[1.7] text-fg-3">
-              {o.endMs || o.startMs ? '北京时间 · UTC+8' : `核验 ${o.checkedAt}`}
-            </span>
+            <span className="text-xs text-fg-3">核验于 {o.checkedAt}</span>
             {!ended && <AcquireButton href={o.url} health={o.linkHealth} label={CTA[o.type] ?? '获取'} size="md" />}
           </div>
         </div>

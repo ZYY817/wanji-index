@@ -22,7 +22,7 @@ export function DossierMobile({ d }: { d: DossierVM }) {
         <div className="meta flex items-center gap-3 text-2xs text-fg-3">
           <span className="shrink-0 text-foreground">Nº 03</span>
           <span aria-hidden className="h-px w-6 shrink-0 bg-current opacity-60" />
-          <span className="shrink-0">档案 / Dossier</span>
+          <span className="shrink-0">档案</span>
           <span aria-hidden className="h-px flex-1 bg-current opacity-30" />
           <span className="shrink-0">{pad(stepTotal(d))} 项</span>
         </div>
@@ -37,7 +37,6 @@ export function DossierMobile({ d }: { d: DossierVM }) {
         </p>
 
         <div className="meta mt-6 flex flex-wrap items-center gap-x-4 gap-y-2 border-y border-border py-3 text-2xs text-fg-3">
-          <span className="text-foreground">档案 Nº {g.art?.appid ?? '—'}</span>
           <span>{g.genres.map(genreZh).join(' · ')}</span>
           <span>{g.os.map((o) => zh('os', o)).join(' / ')}</span>
           <span className="sm:ml-auto">核验 {g.checkedAt}</span>
@@ -50,10 +49,7 @@ export function DossierMobile({ d }: { d: DossierVM }) {
                 <summary className="flex min-h-[64px] cursor-pointer list-none items-center gap-3 py-3 [&::-webkit-details-marker]:hidden">
                   <span className="meta w-6 shrink-0 text-2xs text-fg-3">{s.no}</span>
                   <span className="min-w-0 flex-1">
-                    <span className="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
-                      <span className="font-serif text-2xl font-bold leading-[1.05] tracking-[-0.025em]">{s.title}</span>
-                      <span className="meta text-2xs text-fg-3">{s.en}</span>
-                    </span>
+                    <span className="font-serif text-2xl font-bold leading-[1.05] tracking-[-0.025em]">{s.title}</span>
                   </span>
                   <span className="meta shrink-0 tabular text-2xs text-fg-3">{pad(stepCount(d, i))}</span>
                   <Plus aria-hidden className="size-4 shrink-0 text-fg-3 transition-transform duration-300 group-open:rotate-45" />
@@ -67,8 +63,7 @@ export function DossierMobile({ d }: { d: DossierVM }) {
           ))}
         </ol>
 
-        <div className="mt-7 flex flex-wrap items-center justify-between gap-4">
-          <span className="meta text-2xs text-fg-3">FIG.03 — 真实数据，非示意</span>
+        <div className="mt-7">
           <Link
             href={`/games/${g.slug}/`}
             className="group inline-flex min-h-11 items-center gap-2 border-b border-primary/70 text-base text-foreground hover:text-primary"

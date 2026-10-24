@@ -9,9 +9,9 @@ type Crumb = [string, string?];
  * 裁切线绝对定位在容器四角，随外框高度自适应，不参与布局。
  */
 export function PageMastheadFrame({
-  no, en, crumbs, children, className,
+  no, crumbs, children, className,
 }: {
-  no: string; en: string; crumbs?: Crumb[]; children: React.ReactNode; className?: string;
+  no: string; crumbs?: Crumb[]; children: React.ReactNode; className?: string;
 }) {
   return (
     <header className={cn('relative border-b border-border pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
@@ -31,7 +31,7 @@ export function PageMastheadFrame({
                 );
               })}
             </nav>
-            <span className="ml-auto whitespace-nowrap pr-3">Nº {no} — {en}</span>
+            <span className="ml-auto whitespace-nowrap pr-3">Nº {no}</span>
           </div>
           {children}
         </div>
@@ -40,27 +40,42 @@ export function PageMastheadFrame({
   );
 }
 
-// 详情页刊头：面包屑 + Nº 编号 + 超大宋体标题（右上角 mono 计数）+ 右侧不对称说明。
-// 索引页改用 PageMastheadFrame 自排章节版面；这里的默认排式保持不变以兼容所有详情页。
-export function PageMasthead({
-  no, en, title, count, description, crumbs, children, className, outline,
+export type MastheadStat = { value: number | string; label: string };
+
+/**
+ * 索引页刊头（游戏库 / 免费游戏 / 资源站 / 工具 / 教程 / 搜索 / 关于 / 装机）：全站同一套三段式——
+ * 标题（与顶栏导航同名）→ 一句说明 → 右侧 1–3 个关键数字。第一个数字用信号橙，其余白色。
+ * `aside` 替换右侧数字栏（如装机页的产品状态板）；`children` 渲染在标题区下方（如关于页的版本信息）。
+ * 刻意不放任何「下方内容的预览」：刊头只负责告诉用户这是哪一页、有多少东西，内容本身紧随其后。
+ */
+export function IndexMasthead({
+  no, title, description, stats, aside, crumbs, children, className,
 }: {
-  no: string; en: string; title: string; count?: number; description?: React.ReactNode;
-  crumbs?: Crumb[]; children?: React.ReactNode; className?: string; outline?: string;
+  no: string; title: React.ReactNode; description?: React.ReactNode; stats?: MastheadStat[];
+  aside?: React.ReactNode; crumbs?: Crumb[]; children?: React.ReactNode; className?: string;
 }) {
+  const label = typeof title === 'string' ? title : undefined;
   return (
-    <PageMastheadFrame no={no} en={en} crumbs={crumbs ?? [[title]]} className={className}>
-      <div className="grid items-end gap-6 pb-10 pt-8 md:grid-cols-12 md:pb-14 md:pt-12">
-        <h1 className="display-m relative md:col-span-8">
-          {title}
-          {outline && <span className="text-outline [--stroke-c:var(--color-fg-3)] [--stroke-w:1px]">{outline}</span>}
-          {count != null && (
-            <sup className="ml-2 align-top font-mono text-sm font-normal tracking-[0.08em] text-primary md:text-base">
-              {String(count).padStart(3, '0')}
-            </sup>
-          )}
-        </h1>
-        {description && <div className="max-w-[46ch] text-base leading-[1.8] text-fg-2 md:col-span-4 md:pb-2">{description}</div>}
+    <PageMastheadFrame no={no} crumbs={crumbs ?? (label ? [[label]] : undefined)} className={className}>
+      <div className="grid gap-8 pb-10 pt-8 md:grid-cols-12 md:items-end md:gap-10 md:pb-12 md:pt-10">
+        <div className="md:col-span-7">
+          <h1 className="display-m">{title}</h1>
+          {description && <div className="mt-5 max-w-[44ch] text-base leading-[1.8] text-fg-2 md:text-lg md:leading-[1.75]">{description}</div>}
+        </div>
+        {aside ? (
+          <div className="md:col-span-5">{aside}</div>
+        ) : stats?.length ? (
+          <dl className="flex flex-wrap gap-x-10 gap-y-4 border-t border-border pt-4 md:col-span-5 md:justify-end md:border-t-0 md:pt-0">
+            {stats.map((s, i) => (
+              <div key={s.label} className="flex flex-col-reverse gap-2">
+                <dt className="text-sm text-fg-3">{s.label}</dt>
+                <dd className={cn('font-mono text-4xl leading-none tracking-[-0.03em] tabular-nums md:text-5xl', i === 0 ? 'text-primary' : 'text-foreground')}>
+                  {s.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        ) : null}
       </div>
       {children}
     </PageMastheadFrame>

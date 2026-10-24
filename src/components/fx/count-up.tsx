@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 import { animate, useReducedMotion } from 'motion/react';
+import { EASE_OUT } from './tokens';
 
 // 数字滚动计数：SSR 直接输出最终值；挂载后若仍在视口外才回退到起点，进入视口时滚动到终值。
 // 起点取终值的 60%（不从 0 起跳：快速滚动时也不会看到「000」这类错误数字）。
@@ -23,7 +24,7 @@ export function CountUp({
     if (intro) {
       setN(from);
       timer = setTimeout(() => {
-        ctrl = animate(from, value, { duration, ease: [0.16, 1, 0.3, 1], onUpdate: (v) => setN(Math.round(v)) });
+        ctrl = animate(from, value, { duration, ease: EASE_OUT, onUpdate: (v) => setN(Math.round(v)) });
       }, 180);
       return () => { clearTimeout(timer); ctrl?.stop(); };
     }
@@ -34,7 +35,7 @@ export function CountUp({
     const io = new IntersectionObserver(([e]) => {
       if (!e.isIntersecting) return;
       io.disconnect();
-      ctrl = animate(from, value, { duration, ease: [0.16, 1, 0.3, 1], onUpdate: (v) => setN(Math.round(v)) });
+      ctrl = animate(from, value, { duration, ease: EASE_OUT, onUpdate: (v) => setN(Math.round(v)) });
     }, { threshold: 0.15 });
     io.observe(el);
     return () => { io.disconnect(); ctrl?.stop(); };

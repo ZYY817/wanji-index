@@ -8,6 +8,7 @@ import { KitWindow } from '@/components/kit/kit-window';
 import { SectionLabel } from '@/components/ui/section-label';
 import { buttonVariants } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { EASE_OUT } from '@/components/fx/tokens';
 
 // 第 6 章 · 揭幕：工具窗口从倾斜远处一次升起摆正，检测清单随后每 400ms 逐行扫描
 export function KitReveal() {
@@ -54,13 +55,12 @@ export function KitReveal() {
       </span>
       <div className="container-x relative z-10 grid gap-12 lg:min-h-[calc(100svh-var(--header-h))] lg:grid-cols-12 lg:items-center lg:py-6">
         <div className="lg:col-span-4">
-          <SectionLabel no="06" className="mb-8">装机 / Kit</SectionLabel>
+          <SectionLabel no="06" className="mb-8">装机</SectionLabel>
           <span
-            className="meta mb-5 inline-flex items-center gap-2 border border-primary/40 px-2.5 py-1 text-2xs tracking-[0.16em] text-primary motion-safe:animate-neon"
-            style={{ textShadow: '0 0 10px currentColor, 0 0 22px color-mix(in oklab, var(--color-primary) 55%, transparent)' }}
+            className="meta mb-5 inline-flex items-center gap-2 border border-primary/40 px-2.5 py-1 text-2xs tracking-[0.04em] text-primary"
           >
-            <span aria-hidden className="size-1.5 rounded-full bg-primary shadow-[0_0_10px_2px_rgba(255,107,44,0.55)]" />
-            IN DEVELOPMENT · 开发中
+            <span aria-hidden className="size-1.5 rounded-full bg-primary" />
+            开发中
           </span>
           <h2 id="kit-title" className="display-l !text-[clamp(42px,5.6vw,96px)]">
             <span className="block">缺什么，</span>
@@ -85,7 +85,7 @@ export function KitReveal() {
             initial={{ opacity: 0, y: '20vh', rotateX: 48, scale: 0.6 }}
             whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
             viewport={{ once: true, amount: 0.35 }}
-            transition={reduced ? { duration: 0 } : { duration: 1.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={reduced ? { duration: 0 } : { duration: 1.6, ease: EASE_OUT }}
             style={{ transformOrigin: '50% 100%' }}
             className="will-change-transform"
           >

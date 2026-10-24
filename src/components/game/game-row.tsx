@@ -5,26 +5,46 @@ import { genreZh } from '@/lib/genre';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { GameArt } from './game-art';
 
-// 高密度列表行：编号 · 缩略图 · 名称 · 类型 · 平台 · 资源计数 · 更新
-export function GameRow({ g, index }: { g: GameVM; index: number }) {
+// 列表视图的列宽：表头（GameTableHead）与每一行共用，保证上下对齐
+const COLS = 'grid-cols-[88px_minmax(0,1fr)_auto] md:grid-cols-[104px_minmax(0,1.4fr)_minmax(0,1fr)_120px_56px_56px_56px_20px] xl:grid-cols-[120px_minmax(0,1.4fr)_minmax(0,1fr)_140px_64px_64px_64px_96px_20px]';
+
+const num = (n: number) => (n ? String(n) : '—');
+
+export function GameTableHead() {
   return (
-    <Link
-      href={`/games/${g.slug}/`}
-      className="group grid min-h-[68px] grid-cols-[auto_1fr_auto] items-center gap-x-4 border-b border-border px-1 py-2.5 transition-colors hover:bg-surface-2/60 md:grid-cols-[36px_96px_minmax(0,1fr)_minmax(0,0.9fr)_96px_60px_20px] lg:grid-cols-[36px_96px_minmax(0,1fr)_minmax(0,140px)_60px_20px] xl:grid-cols-[40px_112px_minmax(0,1.6fr)_minmax(0,1fr)_112px_64px_84px_20px]"
-    >
-      <span className="meta hidden text-fg-3 md:block">{String(index).padStart(3, '0')}</span>
-      <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="aspect-[460/215] w-[88px] rounded-xs md:w-[96px] xl:w-[112px]" />
+    <div className={`hidden items-end gap-x-4 border-b border-border-strong pb-3 text-sm text-fg-3 md:grid ${COLS}`}>
+      <span />
+      <span>游戏</span>
+      <span>类型</span>
+      <span>渠道</span>
+      <span className="text-right">MOD</span>
+      <span className="text-right">工具</span>
+      <span className="text-right">教程</span>
+      <span className="hidden text-right xl:block">核验</span>
+      <span />
+    </div>
+  );
+}
+
+// 高密度列表行：缩略图 · 名称 · 类型 · 渠道 · MOD / 工具 / 教程计数 · 核验日期
+export function GameRow({ g }: { g: GameVM }) {
+  return (
+    <Link href={`/games/${g.slug}/`} className={`group grid min-h-[72px] items-center gap-x-4 border-b border-border py-3 transition-colors hover:bg-card ${COLS}`}>
+      <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="aspect-[460/215] w-full rounded-xs" />
       <span className="min-w-0">
-        <span className="block truncate font-serif text-lg font-bold tracking-[-0.01em] group-hover:text-primary">{g.name}</span>
-        <span className="block truncate font-mono text-2xs text-fg-3">{g.en}</span>
+        <span className="block truncate font-serif text-lg font-bold tracking-[-0.01em] transition-colors group-hover:text-primary">{g.name}</span>
+        <span className="block truncate text-sm text-fg-3">
+          {g.en}
+          {g.hasOffer && <span className="ml-2 text-primary">免费中</span>}
+        </span>
       </span>
-      <span className="hidden truncate text-sm text-fg-2 md:block xl:block">{g.genres.map(genreZh).join(' · ')}</span>
-      <span className="hidden items-center gap-1.5 text-fg-2 md:flex lg:hidden xl:flex">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
-      <span className="text-right font-mono text-xs tabular-nums text-foreground md:text-left">
-        <span className="text-fg-3 md:hidden">资源 </span>{String(g.counts.total).padStart(2, '0')}
-      </span>
-      <span className="hidden font-mono text-2xs tabular-nums text-fg-3 xl:block">{g.updatedAt}</span>
-      <ArrowRight aria-hidden className="hidden size-4 text-fg-3 transition-colors group-hover:text-foreground md:block" />
+      <span className="hidden truncate text-sm text-fg-2 md:block">{g.genres.map(genreZh).join(' · ')}</span>
+      <span className="hidden items-center gap-1.5 text-fg-2 md:flex">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
+      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.entries)}</span>
+      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.tools)}</span>
+      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.guides)}</span>
+      <span className="hidden text-right font-mono text-xs tabular-nums text-fg-3 xl:block">{g.checkedAt}</span>
+      <ArrowRight aria-hidden className="size-4 text-fg-3 transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
     </Link>
   );
 }

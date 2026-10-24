@@ -121,21 +121,16 @@ export function RadarDial({
       <motion.div aria-hidden className="pointer-events-none absolute inset-[3%] z-[1] rounded-full will-change-transform" style={{ rotate: angle }}>
         <div
           className="absolute inset-0 rounded-full opacity-90 mix-blend-screen"
-          style={{ background: 'conic-gradient(from -5deg, rgba(255,107,44,0.52) 0deg, rgba(255,107,44,0.2) 26deg, rgba(255,107,44,0.05) 52deg, transparent 68deg, transparent 360deg)' }}
+          style={{ background: 'conic-gradient(from -5deg, rgba(216,182,122,0.52) 0deg, rgba(216,182,122,0.2) 26deg, rgba(216,182,122,0.05) 52deg, transparent 68deg, transparent 360deg)' }}
         />
-        <span className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 origin-bottom bg-primary shadow-[0_0_14px_rgba(255,107,44,0.6)]" />
+        <span className="absolute left-1/2 top-0 h-1/2 w-px -translate-x-1/2 origin-bottom bg-primary shadow-[0_0_14px_rgba(216,182,122,0.6)]" />
       </motion.div>
 
-      {/* 环上方位读数 */}
-      <span className="meta pointer-events-none absolute left-1/2 top-[3.2%] -translate-x-1/2 text-2xs text-fg-3">N · 000</span>
-      <span className="meta pointer-events-none absolute right-[2.8%] top-1/2 -translate-y-1/2 text-2xs text-fg-3">E · 090</span>
-      <span className="meta pointer-events-none absolute bottom-[3.2%] left-1/2 -translate-x-1/2 text-2xs text-fg-3">S · 180</span>
-      <span className="meta pointer-events-none absolute left-[2.8%] top-1/2 -translate-y-1/2 text-2xs text-fg-3">W · 270</span>
 
       {/* 盘心读数 */}
       <div className="absolute inset-x-[3%] top-1/2 flex -translate-y-1/2 flex-col items-center text-center">
-        <span className="meta text-2xs tracking-[0.24em] text-fg-3">
-          {urgent ? <span className="text-primary">紧急 / URGENT</span> : targetLabel}
+        <span className="text-xs tracking-[0.04em] text-fg-3">
+          {urgent ? <span className="text-primary">紧急</span> : targetLabel}
         </span>
 
         {target != null && lead ? (
@@ -160,13 +155,13 @@ export function RadarDial({
 
         <div className="mt-3 flex w-full items-center justify-center gap-2 text-2xs text-fg-3">
           <span aria-hidden className="h-px w-5 bg-border-strong" />
-          <span className="meta max-w-[30ch] truncate text-2xs">
+          <span className="max-w-[26ch] truncate text-sm text-foreground">
             {lead ? lead.title : '暂无在架免费情报'}
           </span>
           <span aria-hidden className="h-px w-5 bg-border-strong" />
         </div>
-        <span className={cn('meta mt-1.5 text-2xs tracking-[0.16em]', urgent ? 'text-primary' : 'text-fg-3')}>
-          {target != null ? `${leadLc === 'upcoming' ? '开始' : '截止'} ${shDateTime(target)}` : 'NO DEADLINE · 无截止'}
+        <span className={cn('mt-1.5 text-xs', urgent ? 'text-primary' : 'text-fg-3')}>
+          {target != null ? `${leadLc === 'upcoming' ? '开始' : '截止'} ${shDateTime(target)}` : '无截止'}
         </span>
       </div>
 

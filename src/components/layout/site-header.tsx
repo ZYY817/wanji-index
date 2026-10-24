@@ -1,18 +1,18 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { motion, useAnimate, useReducedMotion, useScroll, useSpring } from 'motion/react';
+import { motion, useAnimate, useReducedMotion } from 'motion/react';
 import type { NavCounts } from '@/lib/nav';
 import { cn } from '@/lib/utils';
 import { SearchTrigger } from './search-trigger';
 import { MobileMenu } from './mobile-menu';
 import { HeaderLockup } from './header-lockup';
 import { HeaderNav } from './header-nav';
+import { EASE_OUT } from '@/components/fx/tokens';
 
-const EASE = [0.16, 1, 0.3, 1] as const;
 
 // 全站顶栏：放映机操作台。首页初始 72px 透明压在 Hero 上，滚过 80px 收为 60px 实色；
-// 内页始终实色 60px；移动端固定 56px。底边是一条 1px 的滚动进度线。
+// 内页始终实色 60px；移动端固定 56px。
 export function SiteHeader({ counts }: { counts: NavCounts }) {
   const pathname = usePathname() ?? '/';
   const home = pathname === '/';
@@ -38,14 +38,14 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
     const apply = (instant = false) => {
       const desktop = window.matchMedia('(min-width: 1024px)').matches;
       const height = desktop ? (home && !scrolled ? 72 : 60) : 56;
-      const backgroundColor = solid ? 'rgba(10,10,9,1)' : 'rgba(10,10,9,0)';
+      const backgroundColor = solid ? 'rgba(19,18,17,1)' : 'rgba(19,18,17,0)';
       ctrl?.stop();
       if (reduced) {
         el.style.height = `${height}px`;
         el.style.backgroundColor = backgroundColor;
         return;
       }
-      ctrl = animate(el, { height, backgroundColor }, { duration: instant ? 0 : 0.45, ease: EASE });
+      ctrl = animate(el, { height, backgroundColor }, { duration: instant ? 0 : 0.45, ease: EASE_OUT });
     };
 
     apply();
@@ -57,9 +57,6 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
     };
   }, [scope, animate, home, scrolled, solid, reduced]);
 
-  const { scrollYProgress } = useScroll();
-  const smoothed = useSpring(scrollYProgress, { stiffness: 140, damping: 30, mass: 0.35 });
-  const progress = reduced ? scrollYProgress : smoothed;
 
   return (
     <header
@@ -97,12 +94,6 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         </div>
       </div>
 
-      {/* 滚动进度：1px 信号橙，reduced-motion 下直接映射滚动位置，不做追赶动画 */}
-      <motion.div
-        aria-hidden
-        style={{ scaleX: progress }}
-        className="absolute inset-x-0 bottom-0 z-10 h-px origin-left bg-primary"
-      />
     </header>
   );
 }

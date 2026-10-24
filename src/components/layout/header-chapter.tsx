@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { cn } from '@/lib/utils';
 import { getLenis } from './providers';
+import { EASE_OUT } from '@/components/fx/tokens';
 
 const CHAPTERS = [
   { no: '01', label: '开映' },
@@ -31,7 +32,7 @@ export function useChapterIndex(enabled: boolean) {
     let raf = 0;
 
     const measure = () => {
-      tops = Array.from(document.querySelectorAll<HTMLElement>('main > section')).map(
+      tops = Array.from(document.querySelectorAll<HTMLElement>('main > section, main > [data-chapter]')).map(
         (el) => el.getBoundingClientRect().top + window.scrollY,
       );
       const footer = document.querySelector<HTMLElement>('footer');
@@ -92,7 +93,7 @@ export function ChapterRail() {
   const jump = (i: number) => {
     const target = i === CHAPTERS.length - 1
       ? document.querySelector<HTMLElement>('footer')
-      : document.querySelectorAll<HTMLElement>('main > section')[i];
+      : document.querySelectorAll<HTMLElement>('main > section, main > [data-chapter]')[i];
     if (!target) return;
     const top = target.getBoundingClientRect().top + window.scrollY;
     const lenis = getLenis();
@@ -135,7 +136,7 @@ export function ChapterRail() {
             initial={{ y: 10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -10, opacity: 0 }}
-            transition={{ duration: reduced ? 0 : 0.35, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: reduced ? 0 : 0.35, ease: EASE_OUT }}
             className="absolute right-0 top-0 flex items-center gap-1.5 font-mono tracking-[0.12em] text-foreground/70 [writing-mode:vertical-rl]"
           >
             <span className="text-foreground">{chapter.no}</span>

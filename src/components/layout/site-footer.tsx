@@ -12,24 +12,23 @@ const PRINCIPLES: [string, string][] = [
   ['只指向原始来源', 'Source first'],
 ];
 
-function Eyebrow({ no, label, en }: { no: string; label: string; en: string }) {
+function Eyebrow({ no, label }: { no: string; label: string }) {
   return (
     <div className="flex items-baseline gap-3 border-t border-border pt-3">
       <span className="meta text-2xs leading-none text-fg-3">{no}</span>
       <span className="meta text-2xs leading-none text-foreground">{label}</span>
       <span aria-hidden className="h-px flex-1 bg-border" />
-      <span className="meta text-2xs leading-none text-fg-3">{en}</span>
     </div>
   );
 }
 
-// 片尾 / End Credits：原则声明、索引、数据戳按电影片尾排版；原则跑马灯 + 居中的 FIN + 被页底裁切的巨型字标
+// 片尾 Credits：原则声明、索引、数据戳按电影片尾排版；原则跑马灯 + 居中的 FIN + 被页底裁切的巨型字标
 export function SiteFooter({ arts, stats, build }: { arts?: (string | null | undefined)[]; stats: { label: string; value: number }[]; build: string }) {
   const domain = SITE.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
   const artList = (arts ?? []).filter((u): u is string => Boolean(u)).slice(0, 3);
   const artLayers = artList.length
     ? [
-        'linear-gradient(180deg, rgba(7,7,6,0.02) 0%, rgba(7,7,6,0.22) 44%, rgba(7,7,6,0.84) 100%)',
+        'linear-gradient(180deg, rgba(12,11,10,0.02) 0%, rgba(12,11,10,0.22) 44%, rgba(12,11,10,0.84) 100%)',
         ...artList.map((u) => `url(${u})`),
       ].join(', ')
     : null;
@@ -46,18 +45,17 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
         {/* 片尾字幕头：细线由 footer 的 border-t 承担，这里只放编号与 FIN. 对位 */}
         <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 pt-6 md:pt-7">
           <p className="meta text-fg-3">
-            <span className="text-foreground">Nº ∞</span> — 片尾 / Colophon
+            <span className="text-foreground">Nº ∞</span> — 片尾
           </p>
           <p className="meta flex items-center gap-2.5 text-fg-3">
-            卷终
             <span aria-hidden className="inline-block size-[7px] border border-fg-3" />
-            <span className="text-foreground">END OF REEL</span>
+            <span className="text-foreground">卷终</span>
           </p>
         </div>
 
         <div className="grid grid-cols-2 gap-x-6 gap-y-10 pb-12 pt-10 lg:grid-cols-12 lg:gap-x-8 lg:gap-y-12 lg:pb-20 lg:pt-24">
           <div className="col-span-2 lg:col-span-6">
-            <Eyebrow no="01" label="原则" en="Principles" />
+            <Eyebrow no="01" label="原则" />
             <p className="mt-6 font-serif text-[clamp(37px,4.6vw,66px)] font-black leading-[1.06] tracking-[-0.05em] md:mt-9">
               只整理，
               <br />
@@ -70,12 +68,12 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
             </p>
             <div className="mt-7 hidden items-center gap-3 lg:flex">
               <span aria-hidden className="h-px w-8 bg-border-strong" />
-              <span className="meta text-2xs leading-none text-fg-3">只指向原始来源 / Source first</span>
+              <span className="meta text-2xs leading-none text-fg-3">只指向原始来源</span>
             </div>
           </div>
 
           <nav aria-label="页脚导航" className="lg:col-span-3 lg:col-start-7">
-            <Eyebrow no="02" label="索引" en="Index" />
+            <Eyebrow no="02" label="索引" />
             <ul className="mt-4">
               {NAV.map((n) => (
                 <li key={n.href}>
@@ -86,8 +84,7 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
                     <span className="meta text-2xs leading-none text-fg-3 transition-colors group-hover:text-foreground">{n.no}</span>
                     <span className="text-sm text-fg-2 transition-colors group-hover:text-foreground">{n.label}</span>
                     <span aria-hidden className="leader" />
-                    <span className="meta hidden text-2xs leading-none text-fg-3 sm:inline">{n.en}</span>
-                    <span aria-hidden className="meta text-2xs leading-none text-fg-3 sm:hidden">→</span>
+                    <span aria-hidden className="meta text-2xs leading-none text-fg-3">→</span>
                   </Link>
                 </li>
               ))}
@@ -99,15 +96,14 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
                   <span className="meta text-2xs leading-none text-fg-3 transition-colors group-hover:text-foreground">07</span>
                   <span className="text-sm text-fg-2 transition-colors group-hover:text-foreground">关于与反馈</span>
                   <span aria-hidden className="leader" />
-                  <span className="meta hidden text-2xs leading-none text-fg-3 sm:inline">Colophon</span>
-                  <span aria-hidden className="meta text-2xs leading-none text-fg-3 sm:hidden">→</span>
+                  <span aria-hidden className="meta text-2xs leading-none text-fg-3">→</span>
                 </Link>
               </li>
             </ul>
           </nav>
 
           <div className="lg:col-span-3 lg:col-start-10">
-            <Eyebrow no="03" label="数据戳" en="Data stamp" />
+            <Eyebrow no="03" label="数据戳" />
             <dl className="mt-4 font-mono text-xs tabular-nums">
               {stats.map((s) => (
                 <div key={s.label} className="flex items-baseline gap-2 border-b border-border/60 py-2.5 text-fg-2">
@@ -144,7 +140,7 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
         <div className="border-y border-border">
           <div className="flex items-stretch">
             <div className="hidden shrink-0 items-center gap-3 border-r border-border px-4 md:flex xl:px-6">
-              <span className="meta text-2xs leading-none text-fg-3">原则 / Principles</span>
+              <span className="meta text-2xs leading-none text-fg-3">原则</span>
               <span aria-hidden className="h-3 w-px bg-border-strong" />
               <span className="meta text-2xs leading-none text-fg-3">∞</span>
             </div>
@@ -173,7 +169,7 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
         <div className="relative flex flex-col items-center border-t border-border py-16 text-center md:py-24">
           <span className="meta flex items-center gap-3 text-2xs text-fg-3">
             <span aria-hidden className="h-px w-8 bg-border-strong" />
-            放映结束 / END OF REEL · Nº ∞
+            放映结束 · Nº ∞
             <span aria-hidden className="h-px w-8 bg-border-strong" />
           </span>
           <p aria-hidden className="mt-6 font-serif text-[clamp(88px,10.5vw,164px)] font-black leading-[0.78] tracking-[-0.065em]">
@@ -183,7 +179,7 @@ export function SiteFooter({ arts, stats, build }: { arts?: (string | null | und
             放映结束。<span className="text-foreground">下一场，从开映开始。</span>
           </p>
           <div className="mt-9 flex w-full max-w-[720px] flex-col items-center justify-between gap-4 border-t border-border pt-5 sm:flex-row">
-            <span className="meta text-2xs text-fg-3">FIG. ∞ — 玩机索引 / Wordmark</span>
+            <span className="meta text-2xs text-fg-3">FIG. ∞ — 玩机索引</span>
             <FooterBackToTop />
           </div>
         </div>

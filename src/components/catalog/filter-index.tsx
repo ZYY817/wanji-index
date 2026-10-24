@@ -13,9 +13,9 @@ export type Counted = { key: string; count: number };
 export type ActiveChip = { key: 'q' | 'genre' | 'platform'; label: string };
 
 export const SORTS = [
-  { key: 'richness', label: '资源最多', en: 'RICHNESS' },
-  { key: 'updated', label: '最近更新', en: 'UPDATED' },
-  { key: 'name', label: '名称顺序', en: 'NAME' },
+  { key: 'richness', label: '资源最多' },
+  { key: 'updated', label: '最近更新' },
+  { key: 'name', label: '名称顺序' },
 ] as const;
 
 const pad2 = (n: number) => String(n).padStart(2, '0');
@@ -23,12 +23,11 @@ const pad3 = (n: number) => String(n).padStart(3, '0');
 
 /* ── 共用的索引标签 ───────────────────────────────────────── */
 
-function SectionHead({ label, en, count }: { label: string; en: string; count?: number }) {
+function SectionHead({ label, count }: { label: string; count?: number }) {
   return (
     <div className="mb-2 flex items-baseline justify-between gap-3 border-b border-border pb-2">
-      <h3 className="text-2xs font-medium tracking-[0.14em] text-fg-2">
+      <h3 className="text-xs font-medium tracking-[0.08em] text-foreground">
         {label}
-        <span className="ml-1.5 font-mono text-2xs tracking-[0.16em] text-fg-3">{en}</span>
       </h3>
       {count != null && <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>}
     </div>
@@ -37,10 +36,6 @@ function SectionHead({ label, en, count }: { label: string; en: string; count?: 
 
 function Mark({ active }: { active: boolean }) {
   return <span aria-hidden className={cn('h-px w-3 shrink-0 transition-colors', active ? 'bg-primary' : 'bg-border-strong group-hover:bg-fg-3')} />;
-}
-
-function Count({ n, active }: { n: number; active?: boolean }) {
-  return <span className={cn('shrink-0 font-mono text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(n)}</span>;
 }
 
 function SearchField({ value, onChange, variant = 'rail' }: { value: string; onChange: (v: string) => void; variant?: 'rail' | 'bar' }) {
@@ -101,7 +96,6 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
           >
             <Mark active={active} />
             <span className="flex-1">{s.label}</span>
-            <span className={cn('font-mono text-2xs tracking-[0.12em]', active ? 'text-primary' : 'text-fg-3')}>{s.en}</span>
           </button>
         );
       })}
@@ -109,8 +103,11 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
   );
 }
 
+const GENRE_PREVIEW = 8;
+
 function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; update: CatalogUpdate; genres: Counted[]; total: number; primary?: boolean }) {
   const allActive = !q.genre;
+  const [expanded, setExpanded] = useState(false);
   const allRow = (
     <button
       type="button"
@@ -157,30 +154,43 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
     );
   }
 
+  // 桌面侧栏：默认只列出收录最多的几个类型，其余收起；当前选中的类型始终可见
+  const shown = expanded ? genres : genres.filter((g, i) => i < GENRE_PREVIEW || g.key === q.genre);
   return (
     <>
       {allRow}
-      <div className="mt-1.5 grid grid-cols-2 gap-x-4">
-        {genres.map(({ key, count }) => {
+      <ul className="mt-1">
+        {shown.map(({ key, count }) => {
           const active = q.genre === key;
           return (
-            <button
-              key={key}
-              type="button"
-              aria-pressed={active}
-              onClick={() => update({ genre: active ? '' : key })}
-              className={cn(
-                'group flex min-h-[26px] min-w-0 items-center gap-1.5 text-left text-xs leading-tight transition-colors',
-                active ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
-              )}
-            >
-              <span aria-hidden className={cn('size-1 shrink-0', active ? 'bg-primary' : 'bg-transparent')} />
-              <span className="truncate">{genreZh(key)}</span>
-              <span className={cn('ml-auto shrink-0 font-mono text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
-            </button>
+            <li key={key}>
+              <button
+                type="button"
+                aria-pressed={active}
+                onClick={() => update({ genre: active ? '' : key })}
+                className={cn(
+                  'group flex min-h-8 w-full min-w-0 items-center gap-2 text-left text-sm transition-colors',
+                  active ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+                )}
+              >
+                <Mark active={active} />
+                <span className="flex-1 truncate">{genreZh(key)}</span>
+                <span className={cn('shrink-0 text-xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{count}</span>
+              </button>
+            </li>
           );
         })}
-      </div>
+      </ul>
+      {genres.length > GENRE_PREVIEW && (
+        <button
+          type="button"
+          aria-expanded={expanded}
+          onClick={() => setExpanded((v) => !v)}
+          className="mt-1 min-h-8 text-sm text-fg-3 underline-offset-4 transition-colors hover:text-foreground hover:underline"
+        >
+          {expanded ? '收起' : `展开全部 ${genres.length} 个类型`}
+        </button>
+      )}
     </>
   );
 }
@@ -322,7 +332,6 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
       >
         <div className="flex items-baseline justify-between gap-3 border-b border-border-strong pb-3">
           <h2 className="font-serif text-xl font-bold tracking-[-0.02em]">筛选</h2>
-          <span className="meta text-2xs text-fg-3">FILTER INDEX</span>
         </div>
 
         <div className="mt-4">
@@ -330,17 +339,17 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="排序" en="SORT" count={3} />
+          <SectionHead label="排序" count={3} />
           <SortRows q={q} update={update} />
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="类型" en="GENRE" count={genres.length} />
+          <SectionHead label="类型" count={genres.length} />
           <GenreButtons q={q} update={update} genres={genres} total={total} />
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="平台" en="PLATFORM" count={platforms.length} />
+          <SectionHead label="平台" count={platforms.length} />
           <PlatformButtons q={q} update={update} platforms={platforms} total={total} />
         </div>
 
@@ -404,7 +413,7 @@ export function MobileFilterBar({
 
             <div className="flex shrink-0 items-start justify-between gap-4 border-b border-border px-[var(--gutter)] pb-3 pt-4">
               <div>
-                <p className="meta text-2xs text-fg-3">FILTER INDEX / {pad3(resultCount)}</p>
+                <p className="meta text-fg-3">筛选结果 {resultCount} 款</p>
                 <div className="mt-1 flex items-baseline gap-2.5">
                   <span aria-hidden className="h-px w-5 bg-primary" />
                   <DialogTitle className="font-serif text-2xl font-bold leading-none tracking-[-0.02em]">筛选</DialogTitle>
@@ -431,22 +440,22 @@ export function MobileFilterBar({
 
             <div data-lenis-prevent className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-[var(--gutter)] pb-8 pt-5">
               <section aria-labelledby="sheet-sort">
-                <h3 id="sheet-sort" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.14em] text-fg-2">
-                  排序 <span className="font-mono text-2xs tracking-[0.16em] text-fg-3">SORT</span>
+                <h3 id="sheet-sort" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
+                  排序
                 </h3>
                 <SortRows q={q} update={update} touch />
               </section>
 
               <section aria-labelledby="sheet-genre" className="mt-7">
-                <h3 id="sheet-genre" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.14em] text-fg-2">
-                  类型 <span className="font-mono text-2xs tracking-[0.16em] text-fg-3">GENRE / {pad2(genres.length)}</span>
+                <h3 id="sheet-genre" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
+                  类型 <span className="font-mono text-2xs text-fg-3">{pad2(genres.length)}</span>
                 </h3>
                 <GenreButtons q={q} update={update} genres={genres} total={total} primary />
               </section>
 
               <section aria-labelledby="sheet-platform" className="mt-7">
-                <h3 id="sheet-platform" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.14em] text-fg-2">
-                  平台 <span className="font-mono text-2xs tracking-[0.16em] text-fg-3">PLATFORM / {pad2(platforms.length)}</span>
+                <h3 id="sheet-platform" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
+                  平台 <span className="font-mono text-2xs text-fg-3">{pad2(platforms.length)}</span>
                 </h3>
                 <PlatformButtons q={q} update={update} platforms={platforms} total={total} primary />
               </section>

@@ -155,7 +155,6 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
                     >
                       <span className="meta w-6 text-fg-3">{n.no}</span>
                       <span className="flex-1 font-serif text-lg font-semibold text-foreground">{n.label}</span>
-                      <span className="meta text-fg-3">{n.en}</span>
                       <ArrowRight aria-hidden className="size-3.5 text-fg-3 opacity-0 group-data-[selected=true]:opacity-100" />
                     </Command.Item>
                   ))}

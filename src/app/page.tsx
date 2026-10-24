@@ -10,6 +10,7 @@ import { FreeRadar } from '@/components/home/free-radar';
 import { Directory } from '@/components/home/directory';
 import { KitReveal } from '@/components/home/kit-reveal';
 import { ChapterRail } from '@/components/layout/header-chapter';
+import { Scene } from '@/components/fx/scene';
 
 export const metadata: Metadata = {
   title: { absolute: `${SITE.name} — PC 游戏资源与工具索引` },
@@ -25,11 +26,12 @@ export default function Home() {
       <JsonLd data={webSiteLd(SITE, `${SITE_BASE}/`)} />
       <ChapterRail />
       <Hero heroes={d.heroes} floaters={d.floaters} counts={{ games: d.counts.games, sites: d.counts.sites, offers: d.counts.offers }} build={d.build} />
-      <PosterWall games={d.wall} total={d.counts.games} entries={d.counts.entries} />
-      {d.dossier && <Dossier d={d.dossier} />}
-      <FreeRadar offers={d.offers} total={d.counts.offers} />
-      <Directory sites={d.sites} groups={d.siteGroups} counts={{ sites: d.counts.sites, categories: d.counts.categories, entries: d.counts.entries }} />
-      <KitReveal />
+      {/* 第 2–6 章用 Scene 包裹：离场时下沉、缩小、压暗，下一章从上方接力（层级逐章递增） */}
+      <Scene order={1}><PosterWall games={d.wall} total={d.counts.games} entries={d.counts.entries} /></Scene>
+      {d.dossier && <Scene order={2}><Dossier d={d.dossier} /></Scene>}
+      <Scene order={3}><FreeRadar offers={d.offers} total={d.counts.offers} /></Scene>
+      <Scene order={4}><Directory sites={d.sites} groups={d.siteGroups} counts={{ sites: d.counts.sites, categories: d.counts.categories, entries: d.counts.entries }} /></Scene>
+      <Scene order={5}><KitReveal /></Scene>
     </>
   );
 }
