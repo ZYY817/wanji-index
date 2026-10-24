@@ -11,7 +11,7 @@ export default function NotFound() {
     <section className="relative overflow-hidden border-b border-border">
       <div className="container-x grid min-h-[86svh] content-end gap-10 pb-16 pt-[calc(var(--header-h)+64px)] lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <p className="meta text-fg-3">Nº 404 — 未建档</p>
+          <p className="text-sm text-fg-3">404 · 页面不存在</p>
           <h1 className="mt-6">
             <span aria-hidden className="display-xl block">
               4<span className="text-outline [--stroke-w:1.5px]">0</span>4
@@ -26,18 +26,18 @@ export default function NotFound() {
           </div>
         </div>
         <nav aria-label="目录" className="self-end lg:col-span-4 lg:col-start-9">
-          <p className="meta mb-3 text-fg-3">目录</p>
+          <p className="mb-3 text-sm text-fg-3">从这里重新进入</p>
           <ul className="border-t border-border">
             <li>
-              <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-base">
-                <span className="meta w-6 text-fg-3">00</span><span className="flex-1 font-serif font-bold">首页</span>
+              <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
+                <span className="flex-1 font-serif font-bold">首页</span>
                 <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
               </Link>
             </li>
             {NAV.map((n) => (
               <li key={n.href}>
-                <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-base">
-                  <span className="meta w-6 text-fg-3">{n.no}</span><span className="flex-1 font-serif font-bold">{n.label}</span>
+                <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
+                  <span className="flex-1 font-serif font-bold">{n.label}</span>
                   <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
                 </Link>
               </li>

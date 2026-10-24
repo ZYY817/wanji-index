@@ -19,16 +19,18 @@ export function SectionLabel({
   );
 }
 
-/** 分节标题（内页）：宋体 h2 + 编号 + 计数 + 发丝线 */
+/**
+ * 分节标题（内页列表的分组）：宋体标题 + 条数 + 可选一句说明，底部发丝线。
+ * 与详情页 DetailSection 同一种读法：先看「这是什么」，再看「有多少」，最后一句「为什么在这里」。
+ */
 export function SectionHeading({
-  no, title, count, id, className, children,
-}: { no?: string; title: string; count?: number | string; id?: string; className?: string; children?: React.ReactNode }) {
+  title, count, description, id, className, children,
+}: { title: string; count?: number | string; description?: React.ReactNode; id?: string; className?: string; children?: React.ReactNode }) {
   return (
-    <div id={id} className={cn('mb-6 flex items-end gap-4 border-b border-border pb-3', className)}>
-      {no && <span className="meta pb-[0.4em] text-fg-3">{no}</span>}
-      <h2 className="font-serif text-2xl font-bold leading-none tracking-[-0.02em] md:text-3xl">{title}</h2>
-      {count != null && <span className="meta pb-[0.4em] text-fg-3">{typeof count === 'number' ? String(count).padStart(2, '0') : count}</span>}
-      <span className="flex-1" />
+    <div id={id} className={cn('mb-8 flex flex-wrap items-end gap-x-4 gap-y-2 border-b border-border pb-4', className)}>
+      <h2 className="font-serif text-3xl font-bold leading-tight tracking-[-0.03em] md:text-4xl">{title}</h2>
+      {count != null && <span className="pb-1 font-mono text-base tabular-nums text-fg-3">{count}</span>}
+      {description && <p className="basis-full text-base text-fg-2 md:ml-auto md:basis-auto md:pb-1.5 md:text-right">{description}</p>}
       {children}
     </div>
   );

@@ -47,17 +47,11 @@ export function KitReveal() {
 
   return (
     <section aria-labelledby="kit-title" className="relative isolate overflow-hidden border-t border-border bg-background py-24 md:py-32">
-      <span
-        aria-hidden
-        className="pointer-events-none absolute right-[var(--gutter)] top-0 z-0 hidden select-none font-serif text-[clamp(220px,26vw,380px)] font-black leading-[0.7] tracking-[-0.09em] text-outline opacity-[0.055] [--stroke-w:1px] lg:block"
-      >
-        06
-      </span>
       <div className="container-x relative z-10 grid gap-12 lg:min-h-[calc(100svh-var(--header-h))] lg:grid-cols-12 lg:items-center lg:py-6">
         <div className="lg:col-span-4">
           <SectionLabel no="06" className="mb-8">装机</SectionLabel>
           <span
-            className="meta mb-5 inline-flex items-center gap-2 border border-primary/40 px-2.5 py-1 text-2xs tracking-[0.04em] text-primary"
+            className="mb-5 inline-flex items-center gap-2 border border-primary/40 px-2.5 py-1 text-xs text-primary"
           >
             <span aria-hidden className="size-1.5 rounded-full bg-primary" />
             开发中
@@ -91,7 +85,7 @@ export function KitReveal() {
           >
             <KitWindow scanned={scanned} />
           </motion.div>
-          <p className="meta mt-5 text-right text-fg-3">FIG.06 — 界面示意，检测结果为演示数据</p>
+          <p className="mt-5 text-right text-sm text-fg-3">界面示意 · 检测结果为演示数据</p>
         </div>
       </div>
     </section>

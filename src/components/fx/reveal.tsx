@@ -12,8 +12,8 @@ const EASE_CSS = `cubic-bezier(${EASE_OUT.join(',')})`;
  * 所以无 JS、reduced-motion、已在首屏内的内容都不会被藏起来。只动 transform / opacity。
  */
 export function Reveal({
-  children, className, delay = 0, y = 32, as: Tag = 'div',
-}: { children: React.ReactNode; className?: string; delay?: number; y?: number; as?: React.ElementType }) {
+  children, className, delay = 0, y = 32, as: Tag = 'div', ...rest
+}: { children: React.ReactNode; className?: string; delay?: number; y?: number; as?: React.ElementType } & Omit<React.HTMLAttributes<HTMLElement>, 'style'>) {
   const ref = useRef<HTMLElement>(null);
   const reduced = useReducedMotion();
   const [state, setState] = useState<'idle' | 'armed' | 'shown'>('idle');
@@ -25,13 +25,14 @@ export function Reveal({
     setState('armed');
     const io = new IntersectionObserver(([e]) => {
       if (e.isIntersecting) { setState('shown'); io.disconnect(); }
-    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0, rootMargin: '0px 0px -10% 0px' }); // 不用面积阈值：再高的区块也会在顶部入场时触发
     io.observe(el);
     return () => io.disconnect();
   }, [reduced]);
 
   return (
     <Tag
+      {...rest}
       ref={ref}
       className={cn(state !== 'idle' && 'will-change-transform', className)}
       style={{

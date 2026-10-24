@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { FeedbackChannels } from '@/components/layout/feedback';
-import { SectionHeading } from '@/components/ui/section-label';
+import { DetailSection } from '@/components/layout/detail-section';
 import { loadData } from '@/lib/data.mjs';
 import { buildStamp } from '@/lib/present';
-import { pad } from '@/lib/utils';
 import site from '../../../config/site.json';
 import pkg from '../../../package.json';
 
@@ -30,36 +29,40 @@ const SECTIONS: [string, string, React.ReactNode][] = [
   ['feedback', '反馈', <FeedbackChannels />],
 ];
 
+// 关于：刊头（版本与收录）→ 六个两栏章节（是什么 / 收录标准 / 不收录 / 核验 / 声明 / 反馈）
 export default function AboutPage() {
   const data = loadData();
   const build = buildStamp();
-  const colophon: [string, React.ReactNode][] = [
-    ['版本', <>{pkg.version} · 初版 {build}</>],
-    ['字体', <>Noto Serif SC Variable / Geist Sans / Geist Mono</>],
-    ['技术', <>Next.js 16 · React 19 · Tailwind CSS v4 · Motion</>],
-    ['收录', <>{pad(data.games.length, 3)} 游戏 · {pad(data.sites.length, 3)} 资源站 · {pad(data.tools.length, 3)} 工具 · {pad(data.guides.length, 3)} 教程</>],
-    ['原则', <>只指向官方与可信原始来源；不托管任何游戏文件。</>],
-    ['维护', <>个人非商业项目；与收录厂商、站点无隶属关系。</>],
+  const facts: [string, React.ReactNode][] = [
+    ['版本', <>{pkg.version}，最近构建 {build}</>],
+    ['收录', <>{data.games.length} 款游戏、{data.sites.length} 个资源站、{data.tools.length} 个工具、{data.guides.length} 篇教程</>],
+    ['技术', <>Next.js · React · Tailwind CSS · Motion</>],
+    ['字体', <>思源宋体 · Geist</>],
   ];
-  return <>
-    <IndexMasthead
-      no="07"
-      title="关于"
-      description="把分散的入口整理成档案：来源可追溯，状态可辨认，信息可纠正。"
-      stats={[{ value: build, label: '最近构建' }]}
-    >
-          <dl className="mb-10 grid md:mb-12 grid-cols-2 border-l border-t border-border lg:grid-cols-3">
-            {colophon.map(([k, v]) => (
-              <div key={k} className="border-b border-r border-border p-3 md:p-4">
-                <dt className="meta text-2xs text-fg-3">{k}</dt>
-                <dd className="mt-2 text-xs leading-[1.7] text-fg-2">{v}</dd>
+  return (
+    <>
+      <IndexMasthead
+        no="07"
+        title="关于"
+        description="把分散的入口整理成档案：来源可追溯，状态可辨认，信息可纠正。"
+        aside={(
+          <dl className="border-t border-border-strong">
+            {facts.map(([k, v]) => (
+              <div key={k} className="grid grid-cols-[72px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
+                <dt className="text-fg-3">{k}</dt>
+                <dd className="leading-[1.7] text-foreground">{v}</dd>
               </div>
             ))}
           </dl>
-    </IndexMasthead>
-    <div className="container-x grid gap-12 py-12 lg:grid-cols-[220px_minmax(0,1fr)] lg:gap-20 lg:py-16">
-      <nav aria-label="关于页目录" className="flex flex-wrap gap-x-6 lg:sticky lg:top-[calc(var(--header-h)+28px)] lg:flex-col lg:self-start">{SECTIONS.map(([id, title], i) => <a key={id} href={`#${id}`} className="flex min-h-12 items-center gap-4 border-b border-border text-sm text-fg-2 hover:text-foreground"><span className="font-mono text-xs text-fg-3">{String(i + 1).padStart(2, '0')}</span>{title}</a>)}</nav>
-      <div className="max-w-3xl">{SECTIONS.map(([id, title, body], i) => <section key={id} id={id} className="mb-14 scroll-mt-28"><SectionHeading no={String(i + 1).padStart(2, '0')} title={title} /><div className="prose-doc text-fg-2">{body}</div></section>)}</div>
-    </div>
-  </>;
+        )}
+      />
+      <div className="container-x">
+        {SECTIONS.map(([id, title, body], i) => (
+          <DetailSection key={id} index={i} meta={{ id, title }}>
+            <div className="prose-doc max-w-[62ch] text-fg-2">{body}</div>
+          </DetailSection>
+        ))}
+      </div>
+    </>
+  );
 }
