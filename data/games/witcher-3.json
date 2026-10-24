@@ -1,0 +1,63 @@
+{
+  "id": "witcher-3",
+  "slug": "witcher-3",
+  "name": {
+    "zh": "巫师 3：狂猎",
+    "en": "The Witcher 3: Wild Hunt"
+  },
+  "aliases": [
+    "巫师3",
+    "TW3"
+  ],
+  "summary": "CD PROJEKT RED 开放世界 RPG，猎魔人杰洛特的终章；次世代更新后画面与功能均有提升。",
+  "genres": [
+    "rpg",
+    "open-world"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/292030/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/the_witcher_3_wild_hunt_game_of_the_year_edition",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\The Witcher 3\\gamesaves"
+    }
+  ],
+  "relatedGameIds": [
+    "cyberpunk-2077",
+    "skyrim-special-edition"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/292030/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=292030"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

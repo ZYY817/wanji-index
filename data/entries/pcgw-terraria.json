@@ -1,0 +1,12 @@
+{
+  "id": "pcgw-terraria",
+  "name": "泰拉瑞亚 技术资料页",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "terraria",
+  "url": "https://www.pcgamingwiki.com/api/appid.php?appid=105600",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

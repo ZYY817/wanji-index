@@ -1,0 +1,32 @@
+{
+  "id": "ubisoft-connect",
+  "slug": "ubisoft-connect",
+  "name": "Ubisoft Connect",
+  "aliases": [
+    "育碧",
+    "Uplay"
+  ],
+  "summary": "育碧官方 PC 平台，购买与启动育碧游戏，含 Ubisoft+ 订阅。",
+  "category": "store",
+  "url": "https://www.ubisoft.com/en-us/ubisoft-connect",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "平台免费，订阅可选",
+  "purposes": [
+    "育碧游戏购买与启动"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Ubisoft Connect",
+      "url": "https://www.ubisoft.com/en-us/ubisoft-connect"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

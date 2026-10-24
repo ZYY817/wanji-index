@@ -1,0 +1,65 @@
+{
+  "id": "baldurs-gate-3",
+  "slug": "baldurs-gate-3",
+  "name": {
+    "zh": "博德之门 3",
+    "en": "Baldur's Gate 3"
+  },
+  "aliases": [
+    "博德3",
+    "BG3"
+  ],
+  "summary": "Larian Studios 基于《龙与地下城》第五版规则打造的回合制 RPG，支持多人合作。",
+  "genres": [
+    "rpg",
+    "turn-based",
+    "coop"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1086940/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/baldurs_gate_iii",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\PlayerProfiles\\Public\\Savegames\\Story"
+    }
+  ],
+  "relatedGameIds": [
+    "witcher-3",
+    "cyberpunk-2077"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/1086940/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=1086940"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

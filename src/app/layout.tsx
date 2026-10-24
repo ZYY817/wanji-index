@@ -1,25 +1,61 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+import '@fontsource-variable/noto-serif-sc/wght.css';
 import './globals.css';
-import { SiteHeader } from '@/components/site-header';
-import { SiteFooter } from '@/components/site-footer';
-import { MotionRoot } from '@/components/motion';
-import site from '../../config/site.json';
+import { Providers } from '@/components/layout/providers';
+import { CommandProvider } from '@/components/layout/command-palette';
+import { SiteHeader } from '@/components/layout/site-header';
+import { SiteFooter } from '@/components/layout/site-footer';
+import { loadData } from '@/lib/data.mjs';
+import { steamArt } from '@/lib/data.mjs';
+import { buildStamp, SITE } from '@/lib/present';
+import { withBase } from '@/lib/base';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(site.url),
-  title: { default: site.name, template: `%s · ${site.name}` },
-  description: '面向中文 PC 玩家的游戏资源与工具索引：游戏档案、免费情报、MOD/汉化资源站、实用工具与报错排查。',
+  metadataBase: new URL(SITE.url),
+  title: { default: `${SITE.name} — PC 游戏资源与工具索引`, template: `%s · ${SITE.name}` },
+  description: '面向中文 PC 玩家的游戏资源与工具索引：游戏档案、免费情报、MOD 与资源站目录、实用工具与报错排查。只指向官方与可信的原始来源。',
+  icons: { icon: withBase('/favicon.svg') },
+  openGraph: { siteName: SITE.name, locale: 'zh_CN', type: 'website' },
 };
 
+export const viewport: Viewport = { themeColor: '#0A0A09', colorScheme: 'dark' };
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const data = loadData();
+  const counts = { games: data.games.length, free: data.offers.length, sites: data.sites.length, tools: data.tools.length, guides: data.guides.length };
+  const footerGames = [
+    data.games.find((g: any) => g.id === 'black-myth-wukong'),
+    ...data.games.filter((g: any) => g.id !== 'black-myth-wukong'),
+  ];
+  const arts = footerGames
+    .map((g: any) => (g ? steamArt(g)?.hero : null))
+    .filter((u: string | null | undefined): u is string => Boolean(u))
+    .slice(0, 3);
   return (
-    <html lang="zh-CN">
-      <body className="flex min-h-screen flex-col">
-        <MotionRoot>
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-          <SiteFooter />
-        </MotionRoot>
+    <html lang="zh-CN" className={`${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className="min-h-screen">
+        <a href="#main" className="sr-only z-[100] bg-primary px-4 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
+          跳到正文
+        </a>
+        <Providers>
+          <CommandProvider>
+            <SiteHeader counts={counts} />
+            <main id="main">{children}</main>
+            <SiteFooter
+              arts={arts}
+              build={buildStamp()}
+              stats={[
+                { label: '游戏档案', value: counts.games },
+                { label: '资源站', value: counts.sites },
+                { label: '免费情报', value: counts.free },
+                { label: '工具', value: counts.tools },
+                { label: '教程', value: counts.guides },
+              ]}
+            />
+          </CommandProvider>
+        </Providers>
       </body>
     </html>
   );

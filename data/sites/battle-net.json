@@ -1,0 +1,32 @@
+{
+  "id": "battle-net",
+  "slug": "battle-net",
+  "name": "战网 Battle.net",
+  "aliases": [
+    "战网",
+    "暴雪"
+  ],
+  "summary": "暴雪娱乐官方客户端，用于下载与启动暴雪及动视旗下游戏。",
+  "category": "store",
+  "url": "https://download.battle.net/en-us/desktop",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "客户端免费",
+  "purposes": [
+    "暴雪 / 动视游戏"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "战网 Battle.net",
+      "url": "https://download.battle.net/en-us/desktop"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

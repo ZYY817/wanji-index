@@ -1,0 +1,12 @@
+{
+  "id": "pcgw-cities-skylines",
+  "name": "城市：天际线 技术资料页",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "cities-skylines",
+  "url": "https://www.pcgamingwiki.com/api/appid.php?appid=255710",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

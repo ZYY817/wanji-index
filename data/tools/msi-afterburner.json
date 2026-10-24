@@ -1,0 +1,30 @@
+{
+  "id": "msi-afterburner",
+  "slug": "msi-afterburner",
+  "name": "MSI Afterburner",
+  "aliases": [
+    "小飞机"
+  ],
+  "type": "perf-monitor",
+  "summary": "MSI 出品的显卡超频与监控工具，配合 RivaTuner Statistics Server 实现游戏内帧率、温度叠加显示。",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://www.msi.com/Landing/afterburner/graphics-cards",
+  "installNotes": "安装时一并勾选 RivaTuner Statistics Server，才能在游戏内显示监控数据。",
+  "risks": [
+    "超频存在硬件风险；只做监控时无需调整频率与电压"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "MSI Afterburner 官方",
+      "url": "https://www.msi.com/Landing/afterburner/graphics-cards"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

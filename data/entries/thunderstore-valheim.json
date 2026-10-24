@@ -1,0 +1,12 @@
+{
+  "id": "thunderstore-valheim",
+  "name": "英灵神殿 Thunderstore 社区 MOD",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "valheim",
+  "url": "https://thunderstore.io/c/valheim/",
+  "note": "配合 r2modman 一键安装",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

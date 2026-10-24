@@ -1,0 +1,32 @@
+{
+  "id": "ea-app",
+  "slug": "ea-app",
+  "name": "EA app",
+  "aliases": [
+    "Origin",
+    "橘子"
+  ],
+  "summary": "EA 官方 PC 平台（取代 Origin），购买与启动 EA 发行的游戏，含 EA Play 订阅。",
+  "category": "store",
+  "url": "https://www.ea.com/ea-app",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "平台免费，订阅可选",
+  "purposes": [
+    "EA 游戏购买与启动"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "EA app",
+      "url": "https://www.ea.com/ea-app"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

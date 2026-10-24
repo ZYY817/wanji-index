@@ -1,17 +1,73 @@
 {
   "id": "terraria",
   "slug": "terraria",
-  "name": { "zh": "泰拉瑞亚", "en": "Terraria" },
+  "name": {
+    "zh": "泰拉瑞亚",
+    "en": "Terraria"
+  },
   "summary": "Re-Logic 沙盒冒险游戏，挖掘建造战斗内容量极大，tModLoader 提供完整 MOD 支持。",
-  "genres": ["sandbox", "adventure"],
-  "os": ["windows", "macos", "linux"],
-  "channels": [
-    { "platform": "steam", "type": "buy", "url": "https://store.steampowered.com/app/105600/Terraria/", "priceNote": "买断制", "linkHealth": "ok", "checkedAt": "2026-10-24" }
+  "genres": [
+    "sandbox",
+    "adventure"
   ],
-  "sources": [{ "name": "Steam", "url": "https://store.steampowered.com/app/105600/Terraria/" }],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/105600/Terraria/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/terraria",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/105600/Terraria/"
+    }
+  ],
   "reviewStatus": "verified",
   "checkedAt": "2026-10-24",
   "createdAt": "2026-10-24",
   "updatedAt": "2026-10-24",
-  "publishStatus": "published"
+  "publishStatus": "published",
+  "aliases": [
+    "泰拉"
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Terraria\\Players",
+      "note": "角色"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Terraria\\Worlds",
+      "note": "世界"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "泰拉瑞亚怎么装 MOD？",
+      "answer": "在 Steam 免费获取官方认可的 tModLoader，启动后在其内置的创意工坊浏览器中订阅 MOD 即可，原版存档不受影响。"
+    }
+  ],
+  "relatedGameIds": [
+    "stardew-valley",
+    "dont-starve-together",
+    "hollow-knight"
+  ]
 }

@@ -1,0 +1,108 @@
+'use client';
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
+import { motion, useAnimate, useReducedMotion, useScroll, useSpring } from 'motion/react';
+import type { NavCounts } from '@/lib/nav';
+import { cn } from '@/lib/utils';
+import { SearchTrigger } from './search-trigger';
+import { MobileMenu } from './mobile-menu';
+import { HeaderLockup } from './header-lockup';
+import { HeaderNav } from './header-nav';
+
+const EASE = [0.16, 1, 0.3, 1] as const;
+
+// 全站顶栏：放映机操作台。首页初始 72px 透明压在 Hero 上，滚过 80px 收为 60px 实色；
+// 内页始终实色 60px；移动端固定 56px。底边是一条 1px 的滚动进度线。
+export function SiteHeader({ counts }: { counts: NavCounts }) {
+  const pathname = usePathname() ?? '/';
+  const home = pathname === '/';
+  const reduced = useReducedMotion();
+  const [scrolled, setScrolled] = useState(false);
+  const [scope, animate] = useAnimate<HTMLElement>();
+
+  const solid = !home || scrolled;
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  // 高度/背景交给 Motion：从元素当前 CSS 高度起步，首帧与 SSR 完全一致，滚动时不产生布局抖动。
+  useEffect(() => {
+    const el = scope.current;
+    if (!el) return;
+    let ctrl: { stop: () => void } | null = null;
+
+    const apply = (instant = false) => {
+      const desktop = window.matchMedia('(min-width: 1024px)').matches;
+      const height = desktop ? (home && !scrolled ? 72 : 60) : 56;
+      const backgroundColor = solid ? 'rgba(10,10,9,1)' : 'rgba(10,10,9,0)';
+      ctrl?.stop();
+      if (reduced) {
+        el.style.height = `${height}px`;
+        el.style.backgroundColor = backgroundColor;
+        return;
+      }
+      ctrl = animate(el, { height, backgroundColor }, { duration: instant ? 0 : 0.45, ease: EASE });
+    };
+
+    apply();
+    const onResize = () => apply(true);
+    window.addEventListener('resize', onResize);
+    return () => {
+      ctrl?.stop();
+      window.removeEventListener('resize', onResize);
+    };
+  }, [scope, animate, home, scrolled, solid, reduced]);
+
+  const { scrollYProgress } = useScroll();
+  const smoothed = useSpring(scrollYProgress, { stiffness: 140, damping: 30, mass: 0.35 });
+  const progress = reduced ? scrollYProgress : smoothed;
+
+  return (
+    <header
+      ref={scope}
+      className={cn(
+        // CSS 兜底高度保证 SSR / 首帧不跳；Motion 从同一高度接管
+        'fixed inset-x-0 top-0 z-50 h-14',
+        home ? 'bg-transparent lg:h-[72px]' : 'bg-background lg:h-[60px]',
+      )}
+    >
+      {/* 首页透明态压在亮美术上：顶部压暗，保证操作台可读；收为实色后淡出 */}
+      <motion.div
+        aria-hidden
+        initial={false}
+        animate={{ opacity: solid ? 0 : 1 }}
+        transition={{ duration: reduced ? 0 : 0.4 }}
+        className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.34)_46%,transparent_100%)]"
+      />
+      {/* 发丝底线：透明态隐去，实色态出现 */}
+      <div
+        aria-hidden
+        className={cn(
+          'pointer-events-none absolute inset-x-0 bottom-0 border-b transition-colors duration-500',
+          solid ? 'border-border' : 'border-transparent',
+        )}
+      />
+
+      <div className="relative flex h-full items-center gap-4 px-[var(--gutter)] lg:grid lg:grid-cols-[1fr_auto_1fr] lg:gap-5">
+        <HeaderLockup solid={solid} />
+        <HeaderNav pathname={pathname} />
+        <div className="ml-auto flex shrink-0 items-center gap-1 lg:ml-0 lg:justify-self-end">
+          <SearchTrigger className="hidden lg:inline-flex" />
+          <SearchTrigger variant="icon" className="lg:hidden" />
+          <MobileMenu counts={counts} pathname={pathname} />
+        </div>
+      </div>
+
+      {/* 滚动进度：1px 信号橙，reduced-motion 下直接映射滚动位置，不做追赶动画 */}
+      <motion.div
+        aria-hidden
+        style={{ scaleX: progress }}
+        className="absolute inset-x-0 bottom-0 z-10 h-px origin-left bg-primary"
+      />
+    </header>
+  );
+}

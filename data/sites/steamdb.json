@@ -1,0 +1,29 @@
+{
+  "id": "steamdb",
+  "slug": "steamdb",
+  "name": "SteamDB",
+  "summary": "第三方 Steam 数据库：价格历史、版本更新记录、在线人数与免费活动追踪。",
+  "category": "other",
+  "url": "https://steamdb.info/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "价格史与史低",
+    "版本更新记录",
+    "免费活动追踪"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "SteamDB",
+      "url": "https://steamdb.info/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -15,19 +15,46 @@ const lum = (hex) => {
 };
 const ratio = (a, b) => (Math.max(lum(a), lum(b)) + 0.05) / (Math.min(lum(a), lum(b)) + 0.05);
 
+// V2「放映厅 × 索引册」token（src/app/globals.css @theme）
 const CASES = [
-  ['txt-1', 'ink-0', 4.5, '正文/底'],
-  ['txt-2', 'ink-0', 4.5, '次要/底'],
-  ['txt-3', 'ink-0', 4.5, 'tertiary/底'],
-  ['txt-1', 'ink-1', 4.5, '正文/卡片'],
-  ['txt-2', 'ink-1', 4.5, '次要/卡片'],
-  ['txt-3', 'ink-1', 4.5, 'tertiary/卡片'],
-  ['#0B0E13', 'amber', 4.5, '黑字/琥珀按钮'],
-  ['#0B0E13', 'ok', 4.5, '黑字/ok徽标'],
-  ['#0B0E13', 'warn', 4.5, '黑字/warn徽标'],
-  ['#0B0E13', 'bad', 4.5, '黑字/bad徽标'],
-  ['#0B0E13', 'info', 4.5, '黑字/info徽标'],
-  ['amber-hi', 'ink-0', 4.5, '琥珀亮字/底'],
+  // 文字三级 × 画布与抬升层
+  ['foreground', 'background', 4.5, '正文/画布'],
+  ['fg-2', 'background', 4.5, '次要/画布'],
+  ['fg-3', 'background', 4.5, '弱化/画布'],
+  ['foreground', 'card', 4.5, '正文/card'],
+  ['fg-2', 'card', 4.5, '次要/card'],
+  ['fg-3', 'card', 4.5, '弱化/card'],
+  ['fg-2', 'surface-2', 4.5, '次要/surface-2'],
+  ['fg-3', 'surface-2', 4.5, '弱化/surface-2'],
+  ['fg-2', 'popover', 4.5, '次要/浮层'],
+  ['foreground', 'shell', 4.5, '正文/终端块'],
+  // 主按钮与强调
+  ['primary-foreground', 'primary', 4.5, '主按钮字/信号橙'],
+  ['primary-foreground', 'primary-hover', 4.5, '主按钮字/悬停'],
+  ['primary', 'background', 4.5, '信号橙字/画布（当前态）'],
+  ['bad-text', 'background', 4.5, '报错原文红/画布'],
+  ['bad-text', 'shell', 4.5, '报错原文红/终端块'],
+  // 生命周期徽标（实心）
+  ['on-solid', 'ok', 4.5, '进行中徽标'],
+  ['on-solid', 'info', 4.5, '预告徽标'],
+  ['on-solid', 'ended', 4.5, '已结束徽标'],
+  ['on-solid', 'ongoing', 4.5, '长期进行徽标'],
+  ['on-solid', 'warn', 4.5, '待确认徽标'],
+  // 状态徽标（描边：字色 = 线色，置于画布/card）
+  ['warn', 'background', 4.5, '疑似失效/画布'],
+  ['bad', 'background', 4.5, '已失效/画布'],
+  ['ok', 'background', 4.5, '已验证·亲测/画布'],
+  ['info', 'background', 4.5, '社区验证/画布'],
+  ['fg-3', 'background', 4.5, '待核验/画布'],
+  ['warn', 'card', 4.5, '疑似失效/card'],
+  ['bad', 'card', 4.5, '已失效/card'],
+  ['ok', 'card', 4.5, '已验证/card'],
+  ['info', 'card', 4.5, '社区验证/card'],
+  // 纸面反白章
+  ['ink', 'paper', 4.5, '纸面正文'],
+  ['ink-2', 'paper', 4.5, '纸面次要'],
+  ['ink-3', 'paper', 4.5, '纸面弱化'],
+  ['ink-3', 'paper-2', 4.5, '纸面弱化/纸面二级'],
 ];
 
 let pass = 0, fail = 0;

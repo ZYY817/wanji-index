@@ -1,0 +1,31 @@
+{
+  "id": "itch-io",
+  "slug": "itch-io",
+  "name": "itch.io",
+  "aliases": [
+    "itch"
+  ],
+  "summary": "独立开发者自主发布平台，大量免费与「自定价格」的独立作品及 Game Jam 作品。",
+  "category": "indie",
+  "url": "https://itch.io/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "大量免费，部分自定价格",
+  "purposes": [
+    "独立游戏",
+    "免费小品与 Jam 作品"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "itch.io",
+      "url": "https://itch.io/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

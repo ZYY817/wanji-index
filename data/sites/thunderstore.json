@@ -1,0 +1,28 @@
+{
+  "id": "thunderstore",
+  "slug": "thunderstore",
+  "name": "Thunderstore",
+  "summary": "面向 Unity 游戏的社区 MOD 仓库，英灵神殿等游戏的 MOD 首选分发渠道。",
+  "category": "mod",
+  "url": "https://thunderstore.io/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "Unity 游戏 MOD",
+    "配合 r2modman 使用"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Thunderstore",
+      "url": "https://thunderstore.io/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

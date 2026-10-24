@@ -11,3 +11,4 @@ _m0a-verify/
 dev.log
 *.log
 .DS_Store
+.shots/

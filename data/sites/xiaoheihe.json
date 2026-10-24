@@ -1,0 +1,31 @@
+{
+  "id": "xiaoheihe",
+  "slug": "xiaoheihe",
+  "name": "小黑盒",
+  "aliases": [
+    "黑盒"
+  ],
+  "summary": "国内游戏社区与工具应用：资讯、Steam 价格与库存查询、战绩工具。",
+  "category": "other",
+  "url": "https://www.xiaoheihe.cn/",
+  "languages": [
+    "zh"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "游戏资讯",
+    "价格与库存查询"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "小黑盒",
+      "url": "https://www.xiaoheihe.cn/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

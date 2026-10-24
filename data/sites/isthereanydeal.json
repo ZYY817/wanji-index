@@ -1,0 +1,31 @@
+{
+  "id": "isthereanydeal",
+  "slug": "isthereanydeal",
+  "name": "IsThereAnyDeal",
+  "aliases": [
+    "ITAD"
+  ],
+  "summary": "跨商店比价与史低记录，覆盖 Steam、GOG、Epic 等正规商店，并追踪限免活动。",
+  "category": "other",
+  "url": "https://isthereanydeal.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "跨商店比价",
+    "限免提醒"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "IsThereAnyDeal",
+      "url": "https://isthereanydeal.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

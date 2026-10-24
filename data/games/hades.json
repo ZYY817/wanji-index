@@ -1,0 +1,55 @@
+{
+  "id": "hades",
+  "slug": "hades",
+  "name": {
+    "zh": "哈迪斯",
+    "en": "Hades"
+  },
+  "aliases": [
+    "黑帝斯"
+  ],
+  "summary": "Supergiant Games 的 Roguelike 动作游戏，扮演冥王之子一次次逃离冥界。",
+  "genres": [
+    "roguelike",
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1145360/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Saved Games\\Hades"
+    }
+  ],
+  "relatedGameIds": [
+    "slay-the-spire",
+    "hollow-knight"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/1145360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=1145360"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

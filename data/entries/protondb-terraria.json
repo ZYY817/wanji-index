@@ -1,0 +1,12 @@
+{
+  "id": "protondb-terraria",
+  "name": "泰拉瑞亚 Linux / Steam Deck 兼容报告",
+  "type": "other",
+  "siteId": "protondb",
+  "gameId": "terraria",
+  "url": "https://www.protondb.com/app/105600",
+  "note": "社区运行评级与启动参数",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

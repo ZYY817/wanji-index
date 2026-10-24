@@ -1,0 +1,57 @@
+{
+  "id": "dont-starve-together",
+  "slug": "dont-starve-together",
+  "name": {
+    "zh": "饥荒联机版",
+    "en": "Don't Starve Together"
+  },
+  "aliases": [
+    "饥荒",
+    "DST"
+  ],
+  "summary": "Klei Entertainment 生存冒险游戏的多人版本，手绘暗黑童话风格；MOD 通过创意工坊订阅。",
+  "genres": [
+    "survival",
+    "coop"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/322330/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Klei\\DoNotStarveTogether"
+    }
+  ],
+  "relatedGameIds": [
+    "terraria",
+    "stardew-valley"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/322330/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=322330"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

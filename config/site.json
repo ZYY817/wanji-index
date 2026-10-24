@@ -3,6 +3,11 @@
   "url": "https://wanji-index.pages.dev",
   "urlStatus": "placeholder——未购买自定义域名时的开发用地址，正式域名确定后改此一处即可",
   "base": "/",
+  "feedback": {
+    "issueUrl": "",
+    "email": "",
+    "note": "留空时反馈入口指向 /about/#feedback 并提示渠道未开通；填写后全站反馈链接自动启用"
+  },
   "review": {
     "staleDays": {
       "offerTimed": 14,

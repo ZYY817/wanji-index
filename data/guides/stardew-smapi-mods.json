@@ -1,0 +1,30 @@
+{
+  "id": "stardew-smapi-mods",
+  "slug": "stardew-smapi-mods",
+  "title": "星露谷物语：安装 SMAPI 并加载 MOD",
+  "kind": "tutorial",
+  "category": "mod",
+  "keywords": ["星露谷 MOD", "SMAPI 安装", "Stardew Valley mods", "Mods 文件夹"],
+  "problem": {
+    "description": "第一次给星露谷物语装 MOD：绝大多数 MOD 依赖 SMAPI 加载器，需要先装好 SMAPI，再把 MOD 放进正确的文件夹。",
+    "conditions": "Windows 版，Steam 或 GOG 正版"
+  },
+  "games": ["stardew-valley"],
+  "os": ["windows"],
+  "prerequisites": ["游戏已至少正常启动过一次", "先备份 %APPDATA%\\StardewValley\\Saves"],
+  "steps": [
+    { "title": "下载 SMAPI", "action": "打开 SMAPI 官网 smapi.io，下载最新版安装包并解压到任意文件夹。", "expected": "得到包含安装脚本的 SMAPI 文件夹", "ifFail": "官网无法访问时稍后重试；不要从网盘或第三方站点获取 SMAPI", "verified": "community" },
+    { "title": "运行安装程序", "action": "在解压后的文件夹中运行 Windows 安装脚本，按提示确认游戏路径并选择安装。", "expected": "安装程序提示 SMAPI 已安装完成", "ifFail": "未自动识别游戏路径时，手动输入游戏安装目录", "verified": "community" },
+    { "title": "放入 MOD", "action": "把下载的 MOD 解压后，整个文件夹放进游戏安装目录下的 Mods 文件夹（每个 MOD 一个子文件夹，内含 manifest.json）。", "expected": "Mods 文件夹中每个 MOD 都是独立子文件夹", "ifFail": "如果解压后多套了一层文件夹，把含 manifest.json 的那一层移到 Mods 下", "verified": "community" },
+    { "title": "通过 SMAPI 启动", "action": "按 SMAPI 安装结束时的提示设置启动方式后启动游戏，观察弹出的 SMAPI 控制台窗口。", "expected": "控制台列出已加载的 MOD，游戏正常进入标题画面", "ifFail": "控制台中红色条目会指出缺失的前置 MOD 或版本不兼容，按提示补齐或更新", "verified": "community" }
+  ],
+  "recovery": ["把 Mods 文件夹整体改名即可临时停用全部 MOD", "从备份恢复 Saves 文件夹即可回到装 MOD 前的存档"],
+  "tools": ["smapi"],
+  "relatedEntries": ["nexus-stardew"],
+  "sources": [{ "name": "SMAPI 官网", "url": "https://smapi.io/" }],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

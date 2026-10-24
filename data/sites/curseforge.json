@@ -1,0 +1,28 @@
+{
+  "id": "curseforge",
+  "slug": "curseforge",
+  "name": "CurseForge",
+  "summary": "Overwolf 旗下 MOD 平台，Minecraft、魔兽世界等游戏的主要 MOD 来源。",
+  "category": "mod",
+  "url": "https://www.curseforge.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "Minecraft 模组",
+    "插件与整合包"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "CurseForge",
+      "url": "https://www.curseforge.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

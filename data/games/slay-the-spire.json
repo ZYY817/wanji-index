@@ -1,0 +1,57 @@
+{
+  "id": "slay-the-spire",
+  "slug": "slay-the-spire",
+  "name": {
+    "zh": "杀戮尖塔",
+    "en": "Slay the Spire"
+  },
+  "aliases": [
+    "尖塔",
+    "StS"
+  ],
+  "summary": "Mega Crit 卡牌构筑 Roguelike 的开创者之一，每局随机路线、卡组与遗物组合。",
+  "genres": [
+    "roguelike",
+    "card"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/646570/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>\\steamapps\\common\\SlayTheSpire\\saves"
+    }
+  ],
+  "relatedGameIds": [
+    "hades",
+    "hollow-knight"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/646570/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=646570"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

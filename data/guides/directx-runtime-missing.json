@@ -1,0 +1,30 @@
+{
+  "id": "directx-runtime-missing",
+  "slug": "directx-runtime-missing",
+  "title": "缺少 d3dx9_43.dll：安装 DirectX 最终用户运行时",
+  "kind": "troubleshooting",
+  "category": "launch-crash",
+  "keywords": ["d3dx9_43.dll", "xinput1_3.dll", "DirectX 9.0c", "DirectX 运行时", "XAudio2_7.dll"],
+  "problem": {
+    "description": "较老的游戏启动时提示缺少 d3dx9 / d3dx10 / d3dx11 / xinput1_3 等文件。Windows 10/11 自带的 DirectX 12 并不包含这些旧版组件。",
+    "errorText": "由于找不到 d3dx9_43.dll，无法继续执行代码。重新安装程序可能会解决此问题。",
+    "conditions": "Windows 10 / 11，多见于 2015 年以前发行的游戏"
+  },
+  "games": [],
+  "os": ["windows"],
+  "osVersions": ["win10", "win11"],
+  "steps": [
+    { "title": "确认属于 DirectX 旧组件", "action": "对照弹窗中的文件名：d3dx9_xx.dll、d3dx10_xx.dll、d3dx11_xx.dll、xinput1_3.dll、XAudio2_7.dll 都来自旧版 DirectX 最终用户运行时。", "expected": "确认缺失文件属于上述范围", "ifFail": "若是 VCRUNTIME140.dll 等，请改看 Visual C++ 运行库教程", "verified": "community" },
+    { "title": "从微软下载中心获取安装程序", "action": "打开微软下载中心的「DirectX End-User Runtime Web Installer」页面并下载。", "expected": "得到 dxwebsetup.exe", "ifFail": "下载中心无法访问时稍后重试；不要单独下载 DLL", "verified": "community" },
+    { "title": "运行安装", "action": "运行 dxwebsetup.exe，按提示完成安装（可取消勾选附带的其他软件）。", "expected": "安装程序提示已成功安装", "ifFail": "以管理员身份重新运行；仍失败时检查系统更新是否正常", "verified": "community" },
+    { "title": "重新启动游戏", "action": "再次启动游戏。", "expected": "不再出现缺少 DLL 的提示", "ifFail": "按「游戏启动无反应/崩溃排查」继续检查驱动与游戏文件", "verified": "community" }
+  ],
+  "recovery": ["该运行时与系统自带的 DirectX 12 并存，不会降级系统组件"],
+  "relatedGuides": ["vcredist-install", "launch-crash-check"],
+  "sources": [{ "name": "Microsoft 下载中心：DirectX End-User Runtime Web Installer", "url": "https://www.microsoft.com/zh-cn/download/details.aspx?id=35" }],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "wegame",
+  "slug": "wegame",
+  "name": "WeGame",
+  "aliases": [
+    "腾讯 WeGame"
+  ],
+  "summary": "腾讯游戏平台，国内正版 PC 游戏商店与启动器。",
+  "category": "store",
+  "url": "https://www.wegame.com.cn/",
+  "languages": [
+    "zh"
+  ],
+  "feeNote": "平台免费，游戏单独定价",
+  "purposes": [
+    "国内正版游戏购买与启动"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "WeGame",
+      "url": "https://www.wegame.com.cn/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

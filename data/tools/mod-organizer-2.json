@@ -1,0 +1,34 @@
+{
+  "id": "mod-organizer-2",
+  "slug": "mod-organizer-2",
+  "name": "Mod Organizer 2",
+  "aliases": [
+    "MO2"
+  ],
+  "type": "mod-manager",
+  "summary": "基于虚拟文件系统的 MOD 管理器，不直接改动游戏目录，适合 B 社游戏的大型 MOD 整合。",
+  "os": [
+    "windows"
+  ],
+  "supportedGames": [
+    "skyrim-special-edition",
+    "fallout-4"
+  ],
+  "officialUrl": "https://www.modorganizer.org/",
+  "installNotes": "建议安装在游戏目录之外的独立文件夹，并为每个游戏单独建立实例。",
+  "risks": [
+    "学习成本高于 Vortex，需要理解加载顺序"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Mod Organizer 2 官方",
+      "url": "https://www.modorganizer.org/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

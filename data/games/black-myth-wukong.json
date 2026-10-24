@@ -1,0 +1,53 @@
+{
+  "id": "black-myth-wukong",
+  "slug": "black-myth-wukong",
+  "name": {
+    "zh": "黑神话：悟空",
+    "en": "Black Myth: Wukong"
+  },
+  "aliases": [
+    "黑猴",
+    "悟空"
+  ],
+  "summary": "游戏科学开发、取材于《西游记》的动作 RPG，以高水准的美术与战斗设计著称。",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2358720/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "official",
+      "type": "buy",
+      "url": "https://www.heishenhua.com/",
+      "priceNote": "官方网站",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "relatedGameIds": [
+    "sekiro",
+    "elden-ring"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/2358720/"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

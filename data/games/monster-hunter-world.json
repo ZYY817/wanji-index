@@ -1,0 +1,55 @@
+{
+  "id": "monster-hunter-world",
+  "slug": "monster-hunter-world",
+  "name": {
+    "zh": "怪物猎人：世界",
+    "en": "Monster Hunter: World"
+  },
+  "aliases": [
+    "怪猎世界",
+    "MHW"
+  ],
+  "summary": "CAPCOM 狩猎动作游戏，支持四人联机共斗；大型资料片《冰原》扩展了大量内容。",
+  "genres": [
+    "action",
+    "coop"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/582010/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>\\userdata\\<用户 ID>\\582010\\remote"
+    }
+  ],
+  "relatedGameIds": [
+    "elden-ring",
+    "palworld"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/582010/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=582010"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

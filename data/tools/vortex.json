@@ -1,0 +1,36 @@
+{
+  "id": "vortex",
+  "slug": "vortex",
+  "name": "Vortex",
+  "type": "mod-manager",
+  "summary": "Nexus Mods 官方 MOD 管理器，支持一键安装、加载顺序管理与多配置档切换。",
+  "os": [
+    "windows"
+  ],
+  "supportedGames": [
+    "skyrim-special-edition",
+    "fallout-4",
+    "witcher-3",
+    "cyberpunk-2077",
+    "baldurs-gate-3",
+    "stardew-valley"
+  ],
+  "officialUrl": "https://www.nexusmods.com/about/vortex/",
+  "officialSiteId": "nexus-mods",
+  "installNotes": "安装后登录 Nexus Mods 账号，即可在网页上点击「Mod Manager Download」直接交给 Vortex 安装。",
+  "risks": [
+    "部分游戏需要额外的游戏支持扩展"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Vortex 官方",
+      "url": "https://www.nexusmods.com/about/vortex/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,56 @@
+{
+  "id": "red-dead-redemption-2",
+  "slug": "red-dead-redemption-2",
+  "name": {
+    "zh": "荒野大镖客：救赎 2",
+    "en": "Red Dead Redemption 2"
+  },
+  "aliases": [
+    "大镖客2",
+    "RDR2"
+  ],
+  "summary": "Rockstar Games 西部题材开放世界动作冒险游戏，PC 版包含线上模式《荒野大镖客 Online》。",
+  "genres": [
+    "action",
+    "open-world",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1174180/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Rockstar Games\\Red Dead Redemption 2\\Profiles"
+    }
+  ],
+  "relatedGameIds": [
+    "cyberpunk-2077",
+    "witcher-3"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/1174180/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=1174180"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

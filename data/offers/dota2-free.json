@@ -1,0 +1,13 @@
+{
+  "id": "dota2-free",
+  "gameTitle": "Dota 2",
+  "type": "permanent",
+  "platform": "steam",
+  "url": "https://store.steampowered.com/app/570/",
+  "claimNote": "免费游玩，全部英雄开放",
+  "checkedAt": "2026-10-24",
+  "linkHealth": "ok",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "sonkwo",
+  "slug": "sonkwo",
+  "name": "杉果游戏",
+  "aliases": [
+    "杉果",
+    "Sonkwo"
+  ],
+  "summary": "国内正版游戏数字分销商店，销售正版游戏激活码与独立游戏。",
+  "category": "store",
+  "url": "https://www.sonkwo.cn/",
+  "languages": [
+    "zh"
+  ],
+  "feeNote": "游戏单独定价",
+  "purposes": [
+    "正版激活码购买"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "杉果游戏",
+      "url": "https://www.sonkwo.cn/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

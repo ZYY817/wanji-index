@@ -28,6 +28,10 @@ export function loadSiteConfig() {
   const sd = cfg.review?.staleDays;
   for (const k of ['offerTimed', 'offerLong', 'entity', 'guide'])
     if (!Number.isInteger(sd?.[k]) || sd[k] <= 0) err(`review.staleDays.${k} 必须是正整数（docs/04 §4.10）`);
+  const fb = cfg.feedback;
+  if (fb != null && typeof fb !== 'object') err('feedback 必须是对象');
+  if (fb?.issueUrl && !/^https?:\/\//.test(fb.issueUrl)) err('feedback.issueUrl 必须是合法 http(s) 地址');
+  if (fb?.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(fb.email)) err('feedback.email 格式不合法');
   return { ...cfg, base, staleDays: sd };
 }
 

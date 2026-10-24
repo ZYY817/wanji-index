@@ -1,0 +1,12 @@
+{
+  "id": "workshop-rimworld",
+  "name": "环世界 创意工坊",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "rimworld",
+  "url": "https://steamcommunity.com/app/294100/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

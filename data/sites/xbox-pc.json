@@ -1,0 +1,32 @@
+{
+  "id": "xbox-pc",
+  "slug": "xbox-pc",
+  "name": "Xbox PC 应用",
+  "aliases": [
+    "Game Pass",
+    "XGP"
+  ],
+  "summary": "微软官方 PC 游戏应用，用于 PC Game Pass 订阅游戏与微软商店游戏的下载与管理。",
+  "category": "store",
+  "url": "https://www.xbox.com/zh-CN/apps/xbox-app-for-pc",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "订阅制 / 单独购买",
+  "purposes": [
+    "PC Game Pass 订阅游戏"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Xbox PC 应用",
+      "url": "https://www.xbox.com/zh-CN/apps/xbox-app-for-pc"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,28 @@
+{
+  "id": "moddb",
+  "slug": "moddb",
+  "name": "ModDB",
+  "summary": "历史悠久的 MOD 与独立游戏社区，收录大量大型改版（Total Conversion）作品。",
+  "category": "mod",
+  "url": "https://www.moddb.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "大型改版 MOD",
+    "老游戏社区补丁"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "ModDB",
+      "url": "https://www.moddb.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

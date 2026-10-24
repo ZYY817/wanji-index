@@ -1,0 +1,55 @@
+{
+  "id": "palworld",
+  "slug": "palworld",
+  "name": {
+    "zh": "幻兽帕鲁",
+    "en": "Palworld"
+  },
+  "aliases": [
+    "帕鲁"
+  ],
+  "summary": "Pocketpair 开发的开放世界生存建造游戏，可捕捉「帕鲁」参与战斗、建造与生产，支持多人联机。",
+  "genres": [
+    "survival",
+    "crafting",
+    "coop"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1623730/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Pal\\Saved\\SaveGames"
+    }
+  ],
+  "relatedGameIds": [
+    "valheim",
+    "monster-hunter-world"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/1623730/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=1623730"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

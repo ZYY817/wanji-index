@@ -1,0 +1,56 @@
+{
+  "id": "valheim",
+  "slug": "valheim",
+  "name": {
+    "zh": "英灵神殿",
+    "en": "Valheim"
+  },
+  "aliases": [
+    "瓦尔海姆"
+  ],
+  "summary": "Iron Gate 北欧神话题材生存建造游戏，支持最多 10 人联机；社区 MOD 主要通过 Thunderstore 分发。",
+  "genres": [
+    "survival",
+    "crafting",
+    "coop"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/892970/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\IronGate\\Valheim"
+    }
+  ],
+  "relatedGameIds": [
+    "palworld",
+    "dont-starve-together"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/892970/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=892970"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

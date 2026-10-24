@@ -1,17 +1,50 @@
 import Link from 'next/link';
-import { OutlineButton } from '@/components/buttons';
+import type { Metadata } from 'next';
+import { ArrowRight } from 'lucide-react';
+import { SearchTrigger } from '@/components/layout/search-trigger';
+import { NAV } from '@/lib/nav';
+
+export const metadata: Metadata = { title: '未找到页面', robots: { index: false } };
 
 export default function NotFound() {
   return (
-    <div className="wrap py-24 text-center">
-      <p className="mono text-7xl font-black text-[var(--color-txt-3)]">404</p>
-      <p className="mt-3 text-[var(--color-txt-2)]">这个页面不存在——可能链接已失效，或内容从未收录。</p>
-      <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <OutlineButton href="/" label="回首页" />
-        <OutlineButton href="/games/" label="游戏库" />
-        <OutlineButton href="/resources/" label="资源站" />
+    <section className="relative overflow-hidden border-b border-border">
+      <div className="container-x grid min-h-[86svh] content-end gap-10 pb-16 pt-[calc(var(--header-h)+64px)] lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <p className="meta text-fg-3">Nº 404 — 未建档 / Not Found</p>
+          <h1 className="mt-6">
+            <span aria-hidden className="display-xl block">
+              4<span className="text-outline [--stroke-w:1.5px]">0</span>4
+            </span>
+            <span className="mt-6 block font-serif text-[clamp(28px,3.4vw,52px)] font-black leading-tight tracking-[-0.035em]">这份档案还没建立。</span>
+          </h1>
+          <p className="mt-5 max-w-[46ch] text-base leading-[1.8] text-fg-2">
+            链接可能已更改，或者这款游戏、这个站点还没被收录。试试搜索，或从目录重新进入。
+          </p>
+          <div className="mt-8 max-w-[560px]">
+            <SearchTrigger variant="bar" />
+          </div>
+        </div>
+        <nav aria-label="目录" className="self-end lg:col-span-4 lg:col-start-9">
+          <p className="meta mb-3 text-fg-3">目录</p>
+          <ul className="border-t border-border">
+            <li>
+              <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-base">
+                <span className="meta w-6 text-fg-3">00</span><span className="flex-1 font-serif font-bold">首页</span>
+                <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
+              </Link>
+            </li>
+            {NAV.map((n) => (
+              <li key={n.href}>
+                <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-base">
+                  <span className="meta w-6 text-fg-3">{n.no}</span><span className="flex-1 font-serif font-bold">{n.label}</span>
+                  <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-      <p className="meta mt-8">如果这个地址应该存在，<Link href="/about/#feedback" className="text-[var(--color-amber-hi)]">告诉我们</Link>。</p>
-    </div>
+    </section>
   );
 }

@@ -1,0 +1,57 @@
+{
+  "id": "cities-skylines",
+  "slug": "cities-skylines",
+  "name": {
+    "zh": "城市：天际线",
+    "en": "Cities: Skylines"
+  },
+  "aliases": [
+    "天际线",
+    "CS1"
+  ],
+  "summary": "Colossal Order 城市建造模拟游戏，交通与区划系统深入，创意工坊资产极为丰富。",
+  "genres": [
+    "city-builder",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/255710/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Colossal Order\\Cities_Skylines\\Saves"
+    }
+  ],
+  "relatedGameIds": [
+    "civilization-6",
+    "factorio"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/255710/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=255710"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

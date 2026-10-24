@@ -1,20 +1,92 @@
 {
   "id": "stardew-valley",
   "slug": "stardew-valley",
-  "name": { "zh": "星露谷物语", "en": "Stardew Valley" },
-  "aliases": ["星露谷", "SV"],
-  "summary": "ConcernedApe 开发的农场经营模拟游戏，支持单人耕种养殖与多人联机，MOD 生态成熟。",
-  "genres": ["simulation", "rpg"],
-  "os": ["windows", "macos", "linux"],
-  "channels": [
-    { "platform": "steam", "type": "buy", "url": "https://store.steampowered.com/app/413150/Stardew_Valley/", "priceNote": "买断制", "linkHealth": "ok", "checkedAt": "2026-10-24" },
-    { "platform": "official", "type": "buy", "url": "https://www.stardewvalley.net/", "priceNote": "官网", "linkHealth": "ok", "checkedAt": "2026-10-24" }
+  "name": {
+    "zh": "星露谷物语",
+    "en": "Stardew Valley"
+  },
+  "aliases": [
+    "星露谷",
+    "SV"
   ],
-  "savePaths": [{ "os": "windows", "path": "%APPDATA%\\StardewValley\\Saves", "note": "每存档一个文件夹" }],
-  "sources": [{ "name": "Steam", "url": "https://store.steampowered.com/app/413150/Stardew_Valley/" }],
+  "summary": "ConcernedApe 开发的农场经营模拟游戏，支持单人耕种养殖与多人联机，MOD 生态成熟。",
+  "genres": [
+    "simulation",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/413150/Stardew_Valley/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "official",
+      "type": "buy",
+      "url": "https://www.stardewvalley.net/",
+      "priceNote": "官网",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/stardew_valley",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\StardewValley\\Saves",
+      "note": "每存档一个文件夹"
+    }
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/413150/Stardew_Valley/"
+    }
+  ],
   "reviewStatus": "verified",
   "checkedAt": "2026-10-24",
   "createdAt": "2026-10-24",
   "updatedAt": "2026-10-24",
-  "publishStatus": "published"
+  "publishStatus": "published",
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\StardewValley\\startup_preferences",
+      "note": "窗口模式、语言等启动设置"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "星露谷物语怎么装 MOD？",
+      "guideId": "stardew-smapi-mods"
+    },
+    {
+      "question": "MOD 会不会损坏存档？",
+      "answer": "多数 MOD 不会改动存档结构，但移除新增物品或 NPC 类 MOD 可能导致相关数据丢失。安装或卸载 MOD 前，先复制一份 Saves 文件夹。"
+    },
+    {
+      "question": "游戏大版本更新后 MOD 失效怎么办？",
+      "answer": "先更新 SMAPI，再根据 SMAPI 启动时的兼容性提示逐个更新 MOD；暂未适配的 MOD 可先移出 Mods 文件夹。"
+    }
+  ],
+  "relatedGameIds": [
+    "terraria",
+    "dont-starve-together",
+    "rimworld"
+  ]
 }

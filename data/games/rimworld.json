@@ -1,0 +1,64 @@
+{
+  "id": "rimworld",
+  "slug": "rimworld",
+  "name": {
+    "zh": "环世界",
+    "en": "RimWorld"
+  },
+  "aliases": [
+    "边缘世界"
+  ],
+  "summary": "Ludeon Studios 殖民地模拟游戏，由「AI 叙事者」驱动事件；创意工坊 MOD 数量庞大。",
+  "genres": [
+    "colony",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/294100/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/rimworld",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Ludeon Studios\\RimWorld by Ludeon Studios\\Saves"
+    }
+  ],
+  "relatedGameIds": [
+    "factorio",
+    "dont-starve-together"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/294100/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=294100"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

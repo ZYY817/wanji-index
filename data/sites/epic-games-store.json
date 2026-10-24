@@ -1,0 +1,33 @@
+{
+  "id": "epic-games-store",
+  "slug": "epic-games-store",
+  "name": "Epic 游戏商城",
+  "aliases": [
+    "Epic Games Store",
+    "E 宝"
+  ],
+  "summary": "Epic Games 运营的 PC 游戏商店，每周固定发放限时免费游戏。",
+  "category": "store",
+  "url": "https://store.epicgames.com/",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "平台免费，每周限免",
+  "purposes": [
+    "购买正版游戏",
+    "每周限时免费领取"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Epic 游戏商城",
+      "url": "https://store.epicgames.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

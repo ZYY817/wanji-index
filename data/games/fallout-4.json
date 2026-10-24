@@ -1,0 +1,55 @@
+{
+  "id": "fallout-4",
+  "slug": "fallout-4",
+  "name": {
+    "zh": "辐射 4",
+    "en": "Fallout 4"
+  },
+  "aliases": [
+    "辐射4",
+    "FO4"
+  ],
+  "summary": "Bethesda 后末日开放世界 RPG，聚落建造系统与庞大的 MOD 社区是其长青的原因。",
+  "genres": [
+    "rpg",
+    "open-world"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/377160/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Fallout4\\Saves"
+    }
+  ],
+  "relatedGameIds": [
+    "skyrim-special-edition",
+    "cyberpunk-2077"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/377160/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=377160"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

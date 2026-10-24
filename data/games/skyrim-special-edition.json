@@ -1,0 +1,56 @@
+{
+  "id": "skyrim-special-edition",
+  "slug": "skyrim-special-edition",
+  "name": {
+    "zh": "上古卷轴 5：天际 特别版",
+    "en": "The Elder Scrolls V: Skyrim Special Edition"
+  },
+  "aliases": [
+    "老滚5",
+    "天际",
+    "Skyrim SE"
+  ],
+  "summary": "Bethesda 开放世界 RPG 的重制版，拥有 PC 上规模最大的 MOD 生态之一。",
+  "genres": [
+    "rpg",
+    "open-world"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/489830/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Skyrim Special Edition\\Saves"
+    }
+  ],
+  "relatedGameIds": [
+    "fallout-4",
+    "witcher-3"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/489830/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=489830"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "gog",
+  "slug": "gog",
+  "name": "GOG.com",
+  "aliases": [
+    "GOG"
+  ],
+  "summary": "CD PROJEKT 旗下 PC 游戏商店，主打无 DRM 安装包与经典老游戏的兼容修复版。",
+  "category": "store",
+  "url": "https://www.gog.com/",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "平台免费，游戏单独定价",
+  "purposes": [
+    "购买无 DRM 游戏",
+    "经典老游戏"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "GOG.com",
+      "url": "https://www.gog.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

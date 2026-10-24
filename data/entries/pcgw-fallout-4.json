@@ -1,0 +1,12 @@
+{
+  "id": "pcgw-fallout-4",
+  "name": "辐射 4 技术资料页",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "fallout-4",
+  "url": "https://www.pcgamingwiki.com/api/appid.php?appid=377160",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-24",
+  "publishStatus": "published"
+}

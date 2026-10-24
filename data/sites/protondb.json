@@ -1,0 +1,27 @@
+{
+  "id": "protondb",
+  "slug": "protondb",
+  "name": "ProtonDB",
+  "summary": "社区驱动的 Linux / Steam Deck 兼容性报告库，按游戏汇总运行评级与启动参数。",
+  "category": "guide-wiki",
+  "url": "https://www.protondb.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "purposes": [
+    "Linux 与 Steam Deck 兼容性"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "ProtonDB",
+      "url": "https://www.protondb.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

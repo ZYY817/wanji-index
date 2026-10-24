@@ -1,0 +1,29 @@
+{
+  "id": "r2modman",
+  "slug": "r2modman",
+  "name": "r2modman",
+  "type": "mod-manager",
+  "summary": "Thunderstore 社区的 MOD 管理器，支持英灵神殿等 Unity 游戏的配置档与一键安装。",
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "supportedGames": [
+    "valheim"
+  ],
+  "officialUrl": "https://thunderstore.io/package/ebkr/r2modman/",
+  "officialSiteId": "thunderstore",
+  "installNotes": "在 r2modman 中选择游戏并新建配置档，通过「Start modded」启动带 MOD 的游戏。",
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "r2modman 官方",
+      "url": "https://thunderstore.io/package/ebkr/r2modman/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

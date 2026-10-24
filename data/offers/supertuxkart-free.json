@@ -1,0 +1,13 @@
+{
+  "id": "supertuxkart-free",
+  "gameTitle": "SuperTuxKart",
+  "type": "opensource",
+  "platform": "official",
+  "url": "https://supertuxkart.net/",
+  "claimNote": "开源卡丁车竞速，官网免费下载",
+  "checkedAt": "2026-10-24",
+  "linkHealth": "ok",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

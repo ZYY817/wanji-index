@@ -1,182 +1,43 @@
-// 游戏档案页：封面横幅 + 档案头 + 速查条 + 渠道 + FAQ + MOD/工具反查 + 相关区
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { loadData, buildRelations, steamCover } from '@/lib/data.mjs';
-import { computeLifecycle } from '@/lib/lifecycle.mjs';
+import { loadData, buildRelations } from '@/lib/data.mjs';
+import { gameVM, offerVM, SITE_BASE } from '@/lib/present';
+import { genreZh } from '@/lib/genre';
 import { zh } from '@/lib/labels.mjs';
-import { LifecycleBadge, StatusBadge, Tag } from '@/components/badges';
-import { AcquireButton, OutlineButton } from '@/components/buttons';
-import { ExtLink } from '@/components/ext-link';
-import { CopyButton } from '@/components/copy-button';
-import site from '../../../../config/site.json';
-import { webSiteLd } from '@/lib/jsonld.mjs';
-import { JsonLd } from '@/components/json-ld';
-
-export function generateStaticParams() {
-  return loadData().games.map((g) => ({ slug: g.slug }));
-}
-
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const g = loadData().games.find((x) => x.slug === slug);
-  return g ? { title: g.name.zh, description: g.summary, alternates: { canonical: `/games/${g.slug}/` } } : {};
-}
-
-export default async function GamePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const data = loadData();
-  const g = data.games.find((x) => x.slug === slug);
-  if (!g) notFound();
-  const rel = buildRelations(data);
-  const entries = rel.entriesByGame.get(g.id) ?? [];
-  const tools = rel.toolsByGame.get(g.id) ?? [];
-  const guides = rel.guidesByGame.get(g.id) ?? [];
-  const offers = rel.offersByGame.get(g.id) ?? [];
-  const sitesMap = new Map(data.sites.map((s) => [s.id, s]));
-  const now = Date.now();
-  const activeOffer = offers.find((o) => ['active', 'upcoming'].includes(computeLifecycle(o, now, site.review.staleDays.offerTimed) ?? ''));
-  const related = (g.relatedGameIds ?? []).map((id) => data.games.find((x) => x.id === id)).filter(Boolean);
-  const quick = [...(g.savePaths ?? []).map((p: any) => ({ ...p, k: '存档' })), ...(g.configPaths ?? []).map((p: any) => ({ ...p, k: '配置' }))];
-  const cover = steamCover(g);
-
-  return (
-    <div>
-      <JsonLd data={[
-        { '@context': 'https://schema.org', '@type': 'VideoGame', name: g.name.zh, alternateName: g.name.en, description: g.summary, url: `${site.url.replace(/\/$/, '')}/games/${g.slug}/`, ...(g.genres?.length && { genre: g.genres }), ...(g.os?.length && { operatingSystem: g.os.join(', ') }) },
-        { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [['首页', '/'], ['游戏库', '/games/'], [g.name.zh, `/games/${g.slug}/`]].map(([n, p], i) => ({ '@type': 'ListItem', position: i + 1, name: n, item: site.url.replace(/\/$/, '') + p })) },
-      ]} />
-
-      {/* 封面横幅（有 Steam 图时） */}
-      {cover && (
-        <div className="relative h-44 overflow-hidden md:h-60">
-          <img src={cover} alt="" className="h-full w-full scale-110 object-cover blur-[2px]" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-ink-0)] via-[rgba(11,14,19,0.45)] to-transparent" />
-        </div>
-      )}
-
-      <div className={`wrap-doc ${cover ? '-mt-16 relative' : 'pt-10'}`}>
-        <nav className="meta mb-4"><Link href="/" className="hover:text-[var(--color-txt-2)]">首页</Link> / <Link href="/games/" className="hover:text-[var(--color-txt-2)]">游戏库</Link> / {g.name.zh}</nav>
-
-        <header className="mb-8">
-          <h1 className="text-3xl font-black tracking-tight">{g.name.zh}</h1>
-          <div className="mt-3 flex flex-wrap items-center gap-2">
-            {g.name.en && <span className="text-[var(--color-txt-3)]">{g.name.en}</span>}
-            {(g.genres ?? []).map((t: string) => <Tag key={t}>{t}</Tag>)}
-            {(g.os ?? []).map((o: string) => <Tag key={o}>{zh('os', o)}</Tag>)}
-          </div>
-          <p className="mt-3 text-[var(--color-txt-2)]">{g.summary}</p>
-          <p className="meta mt-2 flex items-center gap-3">
-            核验 {g.checkedAt}
-            {g.reviewStatus !== 'verified' && <StatusBadge kind="unverified" />}
-            <Link href="/about/#feedback" className="hover:text-[var(--color-amber-hi)]">反馈</Link>
-          </p>
-        </header>
-
-        {quick.length > 0 && (
-          <div className="mb-8 rounded-[var(--radius-ctl)] bg-[var(--color-ink-1)] p-4">
-            {quick.map((p, i) => (
-              <div key={i} className="flex items-center gap-3 py-1.5 text-[13px]">
-                <span className="shrink-0 text-[var(--color-txt-3)]">{p.k}{p.os ? `·${p.os}` : ''}</span>
-                <code className="mono min-w-0 break-all">{p.path}</code>
-                <CopyButton text={p.path} />
-                {p.note && <span className="meta hidden lg:inline">{p.note}</span>}
-              </div>
-            ))}
-          </div>
-        )}
-
-        <section className="mb-10">
-          <div className="sect"><h2>获取渠道</h2></div>
-          {activeOffer && (
-            <div className="mb-4 flex items-center gap-2 rounded-[var(--radius-ctl)] border border-[var(--color-warn)] bg-[rgba(240,160,48,0.08)] px-4 py-3 text-sm">
-              ⚠ 限免进行中{activeOffer.endDate ? `，截止 ${activeOffer.endDate}` : ''} —— <ExtLink href={activeOffer.url} label="前往活动页" />
-            </div>
-          )}
-          <div className="space-y-2">
-            {g.channels.map((c: any, i: number) => {
-              const dead = c.linkHealth === 'dead';
-              return (
-                <div key={i} className={`card flex items-center gap-4 !rounded-[var(--radius-ctl)] px-4 py-3.5 ${dead ? 'opacity-60' : ''}`}>
-                  <span className={`font-medium ${dead ? 'line-through text-[var(--color-txt-3)]' : ''}`}>{zh('platform', c.platform)}</span>
-                  <span className="tag">{zh('channelType', c.type)}</span>
-                  <span className="meta hidden flex-1 sm:block">{c.priceNote ?? '—'}</span>
-                  <span className="mono meta hidden md:block">核验 {c.checkedAt}</span>
-                  <AcquireButton href={c.url} health={c.linkHealth} />
-                </div>
-              );
-            })}
-          </div>
-        </section>
-
-        {(g.faqs?.length ?? 0) > 0 && (
-          <section className="mb-10">
-            <div className="sect"><h2>常见问题</h2></div>
-            {g.faqs.map((f: any, i: number) => {
-              const guide = f.guideId && data.guides.find((x) => x.id === f.guideId);
-              return (
-                <details key={i} className="group border-b border-[var(--color-line-0)] py-3">
-                  <summary className="flex cursor-pointer items-center gap-2 font-medium list-none">
-                    <span className="text-[var(--color-txt-3)] transition-transform group-open:rotate-90">▸</span>{f.question}
-                  </summary>
-                  <div className="ml-6 mt-2 text-sm text-[var(--color-txt-2)]">
-                    {guide ? <Link href={`/guides/${guide.slug}/`} className="text-[var(--color-amber-hi)]">查看教程：{guide.title} →</Link> : <p>{f.answer}</p>}
-                  </div>
-                </details>
-              );
-            })}
-          </section>
-        )}
-
-        {entries.length > 0 && (
-          <section className="mb-10">
-            <div className="sect"><h2>MOD 与汉化</h2></div>
-            {entries.map((e) => {
-              const s = sitesMap.get(e.siteId) as any;
-              return (
-                <div key={e.id} className="irow">
-                  <ExtLink href={e.url} label={e.name} health={e.linkHealth} className="font-medium" />
-                  {s && <Link href={`/resources/${s.slug}/`} className="tag hover:text-[var(--color-amber-hi)]">{s.name}</Link>}
-                  {e.note && <span className="meta hidden flex-1 sm:block">{e.note}</span>}
-                  {e.linkHealth !== 'ok' && <StatusBadge kind={e.linkHealth} />}
-                </div>
-              );
-            })}
-          </section>
-        )}
-
-        {tools.length > 0 && (
-          <section className="mb-10">
-            <div className="sect"><h2>工具与修改器</h2></div>
-            {tools.map((t) => (
-              <Link key={t.id} href={`/tools/${t.slug}/`} className="irow">
-                <span className="font-medium">{t.name}</span>
-                <span className="meta flex-1 hidden sm:block">{t.summary}</span>
-                <span className="tag">{zh('toolType', t.type)}</span>
-              </Link>
-            ))}
-          </section>
-        )}
-
-        {(guides.length > 0 || related.length > 0) && (
-          <div className="mb-10 grid gap-8 sm:grid-cols-2">
-            {guides.length > 0 && (
-              <section><div className="sect"><h2>相关教程</h2></div>
-                {guides.map((x) => <Link key={x.id} href={`/guides/${x.slug}/`} className="block py-1.5 text-[var(--color-amber-hi)] hover:underline">{x.title}</Link>)}
-              </section>
-            )}
-            {related.length > 0 && (
-              <section><div className="sect"><h2>相关游戏</h2></div>
-                {related.map((x) => <Link key={x.id} href={`/games/${x.slug}/`} className="block py-1.5 text-[var(--color-amber-hi)] hover:underline">{x.name.zh}</Link>)}
-              </section>
-            )}
-          </div>
-        )}
-
-        <footer className="meta border-t border-[var(--color-line-0)] pt-4 text-[13px]">
-          本页核验于 {g.checkedAt} · 信息有误或已失效？<Link href="/about/#feedback" className="text-[var(--color-amber-hi)]">告诉我们</Link>
-        </footer>
-      </div>
-    </div>
-  );
+import { StatusBadge, Tag } from '@/components/ui/badge';
+import { AcquireButton } from '@/components/ui/button';
+import { ExtLink } from '@/components/ui/ext-link';
+import { CopyButton } from '@/components/ui/copy-button';
+import { PlatformMark } from '@/components/ui/platform-mark';
+import { SectionHeading } from '@/components/ui/section-label';
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
+import { GameArt } from '@/components/game/game-art';
+import { GameLogo } from '@/components/game/game-logo';
+import { PosterCard } from '@/components/game/poster-card';
+import { Parallax } from '@/components/fx/parallax';
+import { PageMasthead } from '@/components/layout/page-masthead';
+import { FeedbackLink } from '@/components/layout/feedback';
+import { JsonLd } from '@/components/seo/json-ld';
+import { GamesOfferNotice } from '@/components/catalog/games-offer-notice';
+export function generateStaticParams(){return loadData().games.map(g=>({slug:g.slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const{slug}=await params;const g=loadData().games.find(x=>x.slug===slug);return g?{title:g.name.zh,description:g.summary,alternates:{canonical:`/games/${g.slug}/`}}:{}}
+export default async function GamePage({params}:{params:Promise<{slug:string}>}){
+ const{slug}=await params;const data=loadData();const g=data.games.find(x=>x.slug===slug);if(!g)notFound();const rel=buildRelations(data);const vm=gameVM(g,rel);const entries=rel.entriesByGame.get(g.id)??[];const tools=rel.toolsByGame.get(g.id)??[];const guides=rel.guidesByGame.get(g.id)??[];const offers=(rel.offersByGame.get(g.id)??[]).map(o=>offerVM(o,data,Date.now()));const related=(g.relatedGameIds??[]).map(id=>data.games.find(x=>x.id===id)).filter(Boolean);const paths=[...(g.savePaths??[]).map((p:any)=>({...p,kind:'存档'})),...(g.configPaths??[]).map((p:any)=>({...p,kind:'配置'}))];
+ const sections=[['channels','获取渠道',g.channels.length],['paths','存档与配置',paths.length],['entries','MOD 与汉化',entries.length],['tools','工具',tools.length],['guides','教程',guides.length],['faq','常见问题',g.faqs?.length??0]].filter(([, ,count])=>Number(count)>0);
+ return <>
+ <JsonLd data={[{'@context':'https://schema.org','@type':'VideoGame',name:g.name.zh,alternateName:g.name.en,description:g.summary,url:`${SITE_BASE}/games/${g.slug}/`,genre:g.genres,operatingSystem:g.os?.join(', ')},{'@context':'https://schema.org','@type':'BreadcrumbList',itemListElement:[['首页','/'],['游戏库','/games/'],[g.name.zh,`/games/${g.slug}/`]].map(([name,path],i)=>({'@type':'ListItem',position:i+1,name,item:SITE_BASE+path}))}]}/>
+ <div className="relative overflow-hidden pt-[var(--header-h)]"><Parallax distance={45} className="absolute inset-0"><GameArt src={vm.art?.hero} name={vm.name} en={vm.en} seed={vm.id} variant="wide" priority className="h-full min-h-[520px] w-full"/></Parallax><div className="absolute inset-0 bg-[linear-gradient(0deg,#0a0a09_0%,rgba(10,10,9,.75)_40%,rgba(10,10,9,.3)_100%)]"/><div className="relative pt-20 md:pt-44"><PageMasthead no={vm.art?.appid??'01'} en="GAME DOSSIER" title={g.name.zh} description={<div><GameLogo src={vm.art?.logo} className="mb-4 h-auto w-[clamp(150px,18vw,260px)] max-w-full drop-shadow-[0_6px_18px_rgba(0,0,0,0.55)]"/><p>{g.summary}</p></div>} crumbs={[["游戏库","/games/"],[g.name.zh]]} className="!pt-8"><div className="flex flex-wrap items-center gap-3 pb-8"><span className="mr-3 font-mono text-xs text-fg-2">{g.name.en}</span>{vm.genres.map(t=><Tag key={t}>{genreZh(t)}</Tag>)}{vm.os.map(o=><Tag key={o}>{zh('os',o)}</Tag>)}</div></PageMasthead></div></div>
+ <nav aria-label="档案章节" className="sticky top-[var(--header-h)] z-30 border-b border-border bg-background"><div className="container-x flex overflow-x-auto">{sections.map(([id,label],i)=><a key={id} href={`#${id}`} className="flex min-h-14 shrink-0 items-center gap-2 px-4 text-sm text-fg-2 hover:text-primary"><span className="font-mono text-2xs text-fg-3">{String(i+1).padStart(2,'0')}</span>{label}</a>)}</div></nav>
+ <div className="container-x grid gap-14 py-12 lg:grid-cols-[minmax(0,1fr)_250px] lg:gap-20 lg:py-20"><div className="min-w-0 space-y-16">
+ <GamesOfferNotice offers={offers}/>
+ {g.channels.length>0&&<section id="channels" className="scroll-mt-36"><SectionHeading title="获取渠道" count={g.channels.length}/>{g.channels.map((c:any,i:number)=><div key={i} className="flex flex-wrap items-center gap-4 border-b border-border py-5"><PlatformMark platform={c.platform} withLabel className="min-w-28 text-sm"/><Tag>{zh('channelType',c.type)}</Tag><p className="min-w-28 flex-1 text-sm text-fg-2">{c.priceNote??'价格以商店为准'}</p><span className="font-mono text-2xs text-fg-3">核验 {c.checkedAt}</span><AcquireButton href={c.url} health={c.linkHealth}/></div>)}</section>}
+ {paths.length>0&&<section id="paths" className="scroll-mt-36"><SectionHeading title="存档与配置" count={paths.length}/><div className="border border-border bg-shell">{paths.map((p,i)=><div key={i} className="border-b border-border p-5 last:border-0"><div className="mb-3 flex items-center gap-3"><span className="meta flex-1 text-fg-3">{p.kind} / {p.os??'PC'}</span><CopyButton text={p.path}/></div><code className="block break-all font-mono text-sm leading-relaxed text-foreground">{p.path}</code>{p.note&&<p className="mt-3 text-xs leading-relaxed text-fg-3">{p.note}</p>}</div>)}</div></section>}
+ {entries.length>0&&<section id="entries" className="scroll-mt-36"><SectionHeading title="MOD 与汉化" count={entries.length}/>{entries.map(e=>{const s=data.sites.find(s=>s.id===e.siteId);return <div key={e.id} className="border-b border-border py-5"><div className="flex flex-wrap items-baseline gap-3"><ExtLink href={e.url} health={e.linkHealth} className="font-serif text-xl font-bold">{e.name}</ExtLink>{s&&<Link href={`/resources/${s.slug}/`} className="text-xs text-fg-3 underline underline-offset-4">{s.name}</Link>}<StatusBadge value={e.linkHealth}/></div>{e.note&&<p className="mt-2 text-sm text-fg-2">{e.note}</p>}<p className="meta mt-3 text-fg-3">核验 {e.checkedAt}</p></div>})}</section>}
+ {tools.length>0&&<section id="tools" className="scroll-mt-36"><SectionHeading title="工具" count={tools.length}/>{tools.map(t=><Link key={t.id} href={`/tools/${t.slug}/`} className="group flex items-start gap-4 border-b border-border py-5"><div className="flex-1"><h3 className="font-serif text-xl font-bold group-hover:text-primary">{t.name}</h3><p className="mt-2 text-sm text-fg-2">{t.summary}</p></div><Tag>{zh('toolType',t.type)}</Tag></Link>)}</section>}
+ {guides.length>0&&<section id="guides" className="scroll-mt-36"><SectionHeading title="相关教程" count={guides.length}/>{guides.map((guide,i)=><Link key={guide.id} href={`/guides/${guide.slug}/`} className="flex gap-5 border-b border-border py-5 hover:text-primary"><span className="meta text-fg-3">{String(i+1).padStart(2,'0')}</span><span className="font-serif text-xl">{guide.title}</span><span className="ml-auto" aria-hidden>↗</span></Link>)}</section>}
+ {!!g.faqs?.length&&<section id="faq" className="scroll-mt-36"><SectionHeading title="常见问题" count={g.faqs.length}/><Accordion type="multiple">{g.faqs.map((f:any,i:number)=>{const guide=data.guides.find(x=>x.id===f.guideId);return <AccordionItem key={i} value={String(i)}><AccordionTrigger index={i+1}>{f.question}</AccordionTrigger><AccordionContent>{f.answer&&<p>{f.answer}</p>}{guide&&<Link href={`/guides/${guide.slug}/`} className="mt-2 inline-block underline underline-offset-4">查看教程：{guide.title}</Link>}</AccordionContent></AccordionItem>})}</Accordion></section>}
+ </div><aside><div className="sticky top-[calc(var(--header-h)+88px)] border-t border-border-strong pt-6"><p className="meta text-fg-3">ARCHIVE RECORD</p><p className="my-6 font-mono text-4xl tracking-tighter">Nº {vm.art?.appid??'—'}</p><dl>{[['获取渠道',vm.counts.channels],['资源入口',vm.counts.entries],['关联工具',vm.counts.tools],['排障教程',vm.counts.guides]].map(([k,v])=><div key={k} className="flex justify-between border-t border-border py-3 text-sm"><dt className="text-fg-3">{k}</dt><dd className="font-mono">{String(v).padStart(2,'0')}</dd></div>)}</dl><div className="mt-6 flex flex-wrap gap-2"><StatusBadge value={g.reviewStatus}/></div><p className="meta mt-4 text-fg-3">核验 {g.checkedAt}</p><FeedbackLink page={`${g.name.zh}（/games/${g.slug}/）`} className="mt-3 inline-flex min-h-11 items-center text-sm underline underline-offset-4">反馈档案信息</FeedbackLink></div></aside></div>
+ {related.length>0&&<section className="container-x pb-24"><SectionHeading title="继续探索" count={related.length}/><div className="grid grid-cols-2 gap-5 sm:grid-cols-4 lg:grid-cols-6">{related.map(x=><PosterCard key={x!.id} g={gameVM(x,rel)}/>)}</div></section>}
+ </>;
 }

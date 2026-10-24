@@ -65,3 +65,32 @@ export function steamCover(game) {
   const m = ch?.url?.match(/app\/(\d+)/);
   return m ? `https://steamcdn-a.akamaihd.net/steam/apps/${m[1]}/header.jpg` : null;
 }
+
+// ── V2 新增：多尺寸官方美术（不改变上方既有函数行为）──
+const STEAM_CDN = 'https://cdn.cloudflare.steamstatic.com/steam/apps';
+
+/** 从任意 Steam 商店 URL 解析 appid（非 Steam 链接返回 null） */
+export function steamAppIdFromUrl(url) {
+  const m = typeof url === 'string' && url.includes('store.steampowered.com') ? url.match(/\/app\/(\d+)/) : null;
+  return m ? m[1] : null;
+}
+
+/** appid → 各尺寸官方美术 URL；某些尺寸可能 404，由客户端 GameArt 负责回退 */
+export function steamArtById(appid) {
+  if (!appid) return null;
+  const b = `${STEAM_CDN}/${appid}`;
+  return {
+    appid,
+    header: `${b}/header.jpg`,          // 460×215
+    poster: `${b}/library_600x900.jpg`, // 竖版海报
+    hero: `${b}/library_hero.jpg`,      // 1920×620 横幅
+    logo: `${b}/logo.png`,              // 透明 logo
+    capsule: `${b}/capsule_616x353.jpg`,
+  };
+}
+
+/** 游戏 → 多尺寸美术（取第一个 Steam 渠道） */
+export function steamArt(game) {
+  const ch = (game?.channels ?? []).find((c) => c.platform === 'steam' && steamAppIdFromUrl(c.url));
+  return steamArtById(ch ? steamAppIdFromUrl(ch.url) : null);
+}

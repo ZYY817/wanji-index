@@ -1,0 +1,34 @@
+{
+  "id": "steam",
+  "slug": "steam",
+  "name": "Steam",
+  "aliases": [
+    "Steam 商店",
+    "V 社"
+  ],
+  "summary": "Valve 运营的 PC 游戏商店与社区，含创意工坊、库管理与云存档。",
+  "category": "store",
+  "url": "https://store.steampowered.com/",
+  "languages": [
+    "zh",
+    "en"
+  ],
+  "feeNote": "平台免费，游戏单独定价",
+  "purposes": [
+    "购买与下载正版游戏",
+    "创意工坊 MOD",
+    "社区讨论与指南"
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

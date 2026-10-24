@@ -1,0 +1,26 @@
+{
+  "id": "ludusavi",
+  "slug": "ludusavi",
+  "name": "Ludusavi",
+  "type": "save",
+  "summary": "开源的游戏存档备份工具，内置大量游戏的存档路径数据库，可一键备份与还原。",
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "officialUrl": "https://github.com/mtkennerly/ludusavi",
+  "installNotes": "首次运行先执行「预览」确认识别到的存档，再设置备份目录（建议放到网盘同步文件夹）。",
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Ludusavi 官方",
+      "url": "https://github.com/mtkennerly/ludusavi"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "cyberpunk-2077",
+  "slug": "cyberpunk-2077",
+  "name": {
+    "zh": "赛博朋克 2077",
+    "en": "Cyberpunk 2077"
+  },
+  "aliases": [
+    "2077",
+    "CP2077"
+  ],
+  "summary": "CD PROJEKT RED 开发的开放世界动作 RPG，舞台是近未来的夜之城；资料片《往日之影》已推出。",
+  "genres": [
+    "rpg",
+    "action",
+    "open-world"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1091500/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    },
+    {
+      "platform": "gog",
+      "type": "buy",
+      "url": "https://www.gog.com/game/cyberpunk_2077",
+      "priceNote": "无 DRM 版本",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Saved Games\\CD Projekt Red\\Cyberpunk 2077"
+    }
+  ],
+  "relatedGameIds": [
+    "witcher-3",
+    "baldurs-gate-3"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/1091500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=1091500"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

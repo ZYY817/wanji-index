@@ -1,0 +1,24 @@
+{
+  "id": "playnite",
+  "slug": "playnite",
+  "name": "Playnite",
+  "type": "game-manager",
+  "summary": "开源的游戏库管理器，把 Steam、Epic、GOG 等多个平台的游戏汇总在同一个界面。",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://playnite.link/",
+  "installNotes": "通过「库集成」插件连接各平台账号，导入后可统一启动与整理。",
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "sources": [
+    {
+      "name": "Playnite 官方",
+      "url": "https://playnite.link/"
+    }
+  ],
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

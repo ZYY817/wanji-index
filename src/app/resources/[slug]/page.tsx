@@ -2,83 +2,24 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { loadData, buildRelations } from '@/lib/data.mjs';
-import { StatusBadge, Tag } from '@/components/badges';
-import { ExtLink } from '@/components/ext-link';
+import { gameVM, siteVM } from '@/lib/present';
+import { StatusBadge, Tag } from '@/components/ui/badge';
+import { ExtLink } from '@/components/ui/ext-link';
+import { Monogram } from '@/components/ui/monogram';
+import { SectionHeading } from '@/components/ui/section-label';
+import { PageMasthead } from '@/components/layout/page-masthead';
+import { FeedbackLink } from '@/components/layout/feedback';
+import { PosterCard } from '@/components/game/poster-card';
 import { zh } from '@/lib/labels.mjs';
-import site from '../../../../config/site.json';
-
-export function generateStaticParams() {
-  return loadData().sites.map((s) => ({ slug: s.slug }));
+export function generateStaticParams(){return loadData().sites.map(s=>({slug:s.slug}))}
+export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const{slug}=await params;const s=loadData().sites.find(x=>x.slug===slug);return s?{title:s.name,description:s.summary,alternates:{canonical:`/resources/${s.slug}/`}}:{}}
+export default async function SitePage({params}:{params:Promise<{slug:string}>}){
+ const {slug}=await params; const data=loadData();const s=data.sites.find(x=>x.slug===slug);if(!s)notFound();const rel=buildRelations(data);const vm=siteVM(s,rel);const entries=rel.entriesBySite.get(s.id)??[];const games=[...new Map((rel.gamesBySite.get(s.id)??[]).map((g:any)=>[g.id,g])).values()] as any[];
+ return <><PageMasthead no="03" en={vm.domain} title={s.name} description={s.summary} crumbs={[["资源站","/resources/"],[s.name]]}><div className="flex flex-wrap items-center gap-5 pb-8"><Monogram name={s.name} seed={s.id} size={72}/><div className="flex flex-1 flex-wrap gap-2"><Tag>{zh('siteCategory',s.category)}</Tag>{s.aliases?.map((a:string)=><Tag key={a}>{a}</Tag>)}<StatusBadge value={s.linkHealth}/><StatusBadge value={s.reviewStatus}/></div><ExtLink href={s.url} health={s.linkHealth} className="inline-flex min-h-12 items-center border border-border-strong px-5 text-sm hover:border-foreground">访问官网</ExtLink></div></PageMasthead>
+ <div className="container-x grid gap-12 py-12 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-20 lg:py-20"><aside><div className="sticky top-[calc(var(--header-h)+24px)]"><p className="meta mb-5 text-fg-3">SOURCE RECORD</p><dl className="text-sm">{[['主要用途',s.purposes?.join('；')],['语言',s.languages?.join(' / ')],['费用',s.feeNote],['最近核验',s.checkedAt]].filter(([,v])=>v).map(([k,v])=><div key={k} className="border-t border-border py-4"><dt className="meta mb-2 text-fg-3">{k}</dt><dd className="leading-relaxed text-fg-2">{v}</dd></div>)}</dl><FeedbackLink page={`${s.name}（/resources/${s.slug}/）`} className="mt-4 inline-flex min-h-11 items-center text-sm underline underline-offset-4">反馈站点信息</FeedbackLink></div></aside><div className="min-w-0">
+ {!!s.risks?.length&&<div className="mb-10 border-l-2 border-warn bg-warn/5 px-5 py-4 text-sm leading-relaxed"><p className="meta mb-2 text-warn">访问前须知</p>{s.risks.join('；')}</div>}
+ <section><SectionHeading no="01" title="站内入口" count={entries.length}/>{entries.length?entries.map(e=><div key={e.id} className="border-b border-border py-5"><div className="flex flex-wrap items-center gap-3"><ExtLink href={e.url} health={e.linkHealth} className="font-serif text-lg font-bold">{e.name}</ExtLink><Tag>{zh('entryType',e.type)}</Tag><StatusBadge value={e.linkHealth}/></div>{e.note&&<p className="mt-2 text-sm text-fg-2">{e.note}</p>}<div className="mt-3 flex flex-wrap gap-3 text-xs text-fg-3">{(e.gameId?[e.gameId]:[]).map((id:string)=>{const g=data.games.find(g=>g.id===id);return g&&<Link key={id} href={`/games/${g.slug}/`} className="hover:text-primary">{g.name.zh}</Link>})}<span className="font-mono">核验 {e.checkedAt}</span></div></div>):<p className="text-sm text-fg-3">暂未收录独立游戏入口，可通过官网浏览。</p>}</section>
+ {games.length>0&&<section className="mt-16"><SectionHeading no="02" title="关联游戏" count={games.length}/><div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 xl:grid-cols-4">{games.map(g=><PosterCard key={g.id} g={gameVM(g,rel)}/>)}</div></section>}
+ </div></div></>;
 }
-export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const { slug } = await params;
-  const s = loadData().sites.find((x) => x.slug === slug);
-  return s ? { title: s.name, description: s.summary, alternates: { canonical: `/resources/${s.slug}/` } } : {};
-}
 
-export default async function SitePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  const data = loadData();
-  const s = data.sites.find((x) => x.slug === slug);
-  if (!s) notFound();
-  const rel = buildRelations(data);
-  const entries = rel.entriesBySite.get(s.id) ?? [];
-  const games = [...new Map((rel.gamesBySite.get(s.id) ?? []).map((g: any) => [g.id, g])).values()];
-
-  return (
-    <div className="wrap-doc py-10">
-      <nav className="meta mb-4"><Link href="/">首页</Link> / <Link href="/resources/">资源站</Link> / {s.name}</nav>
-      <header className="mb-8">
-        <h1 className="text-3xl font-black tracking-tight">{s.name}</h1>
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          <Tag>{zh('siteCategory', s.category)}</Tag>
-          {s.aliases?.map((a: string) => <span key={a} className="meta">{a}</span>)}
-          <ExtLink href={s.url} label="官网" site={s.name} health={s.linkHealth} />
-        </div>
-        <p className="mt-3 text-[var(--color-txt-2)]">{s.summary}</p>
-        <p className="meta mt-2 flex items-center gap-3">核验 {s.checkedAt}{s.reviewStatus !== 'verified' && <StatusBadge kind="unverified" />}</p>
-      </header>
-
-      {(s.risks?.length ?? 0) > 0 && (
-        <div className="mb-6 rounded-[var(--radius-ctl)] border border-[var(--color-warn)] bg-[rgba(240,160,48,0.08)] px-4 py-3 text-sm">⚠ {s.risks.join('；')}</div>
-      )}
-
-      <section className="mb-8">
-        <div className="sect"><h2>站点信息</h2></div>
-        <dl className="grid gap-x-8 gap-y-3 sm:grid-cols-[8em_1fr]">
-          {s.purposes?.length > 0 && <><dt className="meta">主要用途</dt><dd>{s.purposes.join('；')}</dd></>}
-          {s.languages?.length > 0 && <><dt className="meta">语言</dt><dd>{s.languages.join(' / ')}</dd></>}
-          {s.feeNote && <><dt className="meta">费用</dt><dd>{s.feeNote}</dd></>}
-          {s.restrictions?.length > 0 && <><dt className="meta">使用限制</dt><dd>{s.restrictions.join('；')}</dd></>}
-        </dl>
-      </section>
-
-      {games.length > 0 && (
-        <section className="mb-8">
-          <div className="sect"><h2>关联游戏</h2></div>
-          <div className="flex flex-wrap gap-2">
-            {games.map((g: any) => <Link key={g.id} href={`/games/${g.slug}/`} className="btn-line !h-9">{g.name.zh}</Link>)}
-          </div>
-        </section>
-      )}
-
-      {entries.length > 0 && (
-        <section className="mb-8">
-          <div className="sect"><h2>站内入口</h2></div>
-          {entries.map((e) => (
-            <div key={e.id} className="irow">
-              <ExtLink href={e.url} label={e.name} health={e.linkHealth} className="font-medium" />
-              <Tag>{zh('entryType', e.type)}</Tag>
-              {e.note && <span className="meta hidden flex-1 sm:block">{e.note}</span>}
-              {e.linkHealth !== 'ok' && <StatusBadge kind={e.linkHealth} />}
-            </div>
-          ))}
-        </section>
-      )}
-
-      <footer className="meta border-t border-[var(--color-line-0)] pt-4 text-[13px]">
-        本页核验于 {s.checkedAt} · <Link href="/about/#feedback" className="text-[var(--color-amber-hi)]">反馈</Link>
-      </footer>
-    </div>
-  );
-}

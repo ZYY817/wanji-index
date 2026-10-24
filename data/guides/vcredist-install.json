@@ -1,0 +1,30 @@
+{
+  "id": "vcredist-install",
+  "slug": "vcredist-install",
+  "title": "缺少 VCRUNTIME140.dll / MSVCP140.dll：安装 Visual C++ 运行库",
+  "kind": "troubleshooting",
+  "category": "install-run",
+  "keywords": ["VCRUNTIME140.dll", "MSVCP140.dll", "VCRUNTIME140_1.dll", "运行库", "vc_redist"],
+  "problem": {
+    "description": "启动游戏时弹窗提示找不到某个 DLL 文件，程序无法继续执行。",
+    "errorText": "由于找不到 VCRUNTIME140.dll，无法继续执行代码。重新安装程序可能会解决此问题。",
+    "conditions": "Windows 10 / 11，多见于新装系统或精简系统"
+  },
+  "games": [],
+  "os": ["windows"],
+  "osVersions": ["win10", "win11"],
+  "steps": [
+    { "title": "确认缺失的文件", "action": "记下弹窗中的 DLL 名称。MSVCP140.dll、VCRUNTIME140.dll、VCRUNTIME140_1.dll 都属于 Visual C++ 2015–2022 运行库。", "expected": "确认缺失文件属于 VC++ 2015–2022", "ifFail": "如果是 d3dx9_43.dll、xinput1_3.dll 等，属于旧版 DirectX 运行时，参见对应教程", "verified": "community" },
+    { "title": "从微软官方页面下载", "action": "打开微软 Learn 的「最新受支持的 Visual C++ 可再发行程序包」页面，下载 X64 与 X86 两个安装程序。", "expected": "得到 vc_redist.x64.exe 与 vc_redist.x86.exe", "ifFail": "不要从「DLL 下载站」单独下载 DLL 文件放进系统目录", "verified": "community" },
+    { "title": "安装或修复", "action": "依次运行两个安装程序；如果提示已安装，选择「修复」。完成后重启电脑。", "expected": "两个安装程序均提示成功", "ifFail": "在「设置 → 应用」中卸载现有的 2015–2022 运行库后重新安装", "verified": "community" },
+    { "title": "重新启动游戏", "action": "再次启动游戏。", "expected": "不再出现缺少 DLL 的提示", "ifFail": "在 Steam 中验证游戏文件完整性，或继续按「游戏启动无反应/崩溃排查」逐项检查", "verified": "community" }
+  ],
+  "recovery": ["运行库安装不会影响游戏存档，可放心重装"],
+  "relatedGuides": ["directx-runtime-missing", "launch-crash-check"],
+  "sources": [{ "name": "Microsoft Learn：最新受支持的 Visual C++ 可再发行程序包", "url": "https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist" }],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}

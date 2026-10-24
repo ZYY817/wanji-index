@@ -1,0 +1,54 @@
+{
+  "id": "sekiro",
+  "slug": "sekiro",
+  "name": {
+    "zh": "只狼：影逝二度",
+    "en": "Sekiro: Shadows Die Twice"
+  },
+  "aliases": [
+    "只狼"
+  ],
+  "summary": "FromSoftware 战国题材动作冒险游戏，以「打铁」式的架势弹反战斗闻名。",
+  "genres": [
+    "action",
+    "souls-like"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/814380/",
+      "priceNote": "买断制",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-24"
+    }
+  ],
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Sekiro\\<Steam ID>"
+    }
+  ],
+  "relatedGameIds": [
+    "elden-ring",
+    "black-myth-wukong"
+  ],
+  "sources": [
+    {
+      "name": "Steam",
+      "url": "https://store.steampowered.com/app/814380/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/api/appid.php?appid=814380"
+    }
+  ],
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-24",
+  "createdAt": "2026-10-24",
+  "updatedAt": "2026-10-24",
+  "publishStatus": "published"
+}
