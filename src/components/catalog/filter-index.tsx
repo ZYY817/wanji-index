@@ -34,9 +34,6 @@ function SectionHead({ label, count }: { label: string; count?: number }) {
   );
 }
 
-function Mark({ active }: { active: boolean }) {
-  return <span aria-hidden className={cn('h-px w-3 shrink-0 transition-colors', active ? 'bg-primary' : 'bg-border-strong group-hover:bg-fg-3')} />;
-}
 
 function SearchField({ value, onChange, variant = 'rail' }: { value: string; onChange: (v: string) => void; variant?: 'rail' | 'bar' }) {
   const bar = variant === 'bar';
@@ -89,12 +86,11 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
             aria-pressed={active}
             onClick={() => update({ sort: s.key })}
             className={cn(
-              'group flex w-full items-center gap-2.5 border-b border-border/70 text-left transition-colors last:border-b-0',
-              touch ? 'min-h-11 text-base' : 'min-h-7 text-xs',
-              active ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+              'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+              touch ? 'min-h-11' : 'min-h-9',
+              active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
             )}
           >
-            <Mark active={active} />
             <span className="flex-1">{s.label}</span>
           </button>
         );
@@ -114,14 +110,13 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
       aria-pressed={allActive}
       onClick={() => update({ genre: '' })}
       className={cn(
-        'group flex w-full items-center gap-2 border-b border-border text-left transition-colors',
-        primary ? 'min-h-11 text-base' : 'min-h-7 text-xs',
-        allActive ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+        'group flex w-full items-center gap-2 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+        primary ? 'min-h-11' : 'min-h-9',
+        allActive ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
       )}
     >
-      <Mark active={allActive} />
       <span className="flex-1">全部类型</span>
-      <span className={cn('font-mono text-2xs tabular-nums', allActive ? 'text-primary' : 'text-fg-3')}>{pad2(total)}</span>
+      <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
     </button>
   );
 
@@ -169,13 +164,12 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 aria-pressed={active}
                 onClick={() => update({ genre: active ? '' : key })}
                 className={cn(
-                  'group flex min-h-8 w-full min-w-0 items-center gap-2 text-left text-sm transition-colors',
-                  active ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+                  'group flex min-h-9 w-full min-w-0 items-center gap-2 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+                  active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
                 )}
               >
-                <Mark active={active} />
                 <span className="flex-1 truncate">{genreZh(key)}</span>
-                <span className={cn('shrink-0 text-xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{count}</span>
+                <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
               </button>
             </li>
           );
@@ -204,14 +198,13 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
         aria-pressed={allActive}
         onClick={() => update({ platform: '' })}
         className={cn(
-          'group flex w-full items-center gap-2.5 border-b border-border text-left transition-colors',
-          primary ? 'min-h-11 text-base' : 'min-h-7 text-xs',
-          allActive ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+          'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+          primary ? 'min-h-11' : 'min-h-9',
+          allActive ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
         )}
       >
-        <Mark active={allActive} />
         <span className="flex-1">全部平台</span>
-        <span className={cn('font-mono text-2xs tabular-nums', allActive ? 'text-primary' : 'text-fg-3')}>{pad2(total)}</span>
+        <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
       </button>
       {platforms.map(({ key, count }) => {
         const active = q.platform === key;
@@ -222,14 +215,13 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
             aria-pressed={active}
             onClick={() => update({ platform: active ? '' : key })}
             className={cn(
-              'group flex w-full items-center gap-2.5 border-b border-border/70 text-left transition-colors last:border-b-0',
-              primary ? 'min-h-11 text-base' : 'min-h-7 text-xs',
-              active ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
+              'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+              primary ? 'min-h-11' : 'min-h-9',
+              active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
             )}
           >
-            <Mark active={active} />
             <PlatformMark platform={key} withLabel />
-            <span className={cn('ml-auto font-mono text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
+            <span className="ml-auto font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
           </button>
         );
       })}
@@ -243,11 +235,10 @@ function ResetButton({ active, onReset }: { active: boolean; onReset: () => void
       type="button"
       onClick={onReset}
       disabled={!active}
-      className="group flex min-h-7 w-full items-center gap-2 text-xs text-fg-3 transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-40"
+      className="group flex min-h-8 w-full items-center gap-2 text-sm text-fg-3 transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-40"
     >
       <RotateCcw className="size-3.5" aria-hidden />
       重置筛选
-      <span aria-hidden className="ml-auto h-px w-3 bg-border-strong transition-colors group-hover:bg-fg-3" />
     </button>
   );
 }
@@ -328,7 +319,7 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
       <div
         ref={railRef}
         data-lenis-prevent={nestedScroll ? '' : undefined}
-        className="sticky top-[calc(var(--header-h)+28px)] max-h-[calc(100dvh-var(--header-h)-48px)] overflow-y-auto overscroll-contain pb-4 pr-1"
+        className="sticky top-[calc(var(--sticky-top)+28px)] max-h-[calc(100dvh-var(--sticky-top)-48px)] overflow-y-auto overscroll-contain pb-4 pr-1 transition-[top] duration-300"
       >
         <div className="flex items-baseline justify-between gap-3 border-b border-border-strong pb-3">
           <h2 className="font-serif text-xl font-bold tracking-[-0.02em]">筛选</h2>
@@ -373,7 +364,7 @@ export function MobileFilterBar({
   const activeCount = chips.length;
 
   return (
-    <div className="sticky top-[var(--header-h)] z-30 -mx-[var(--gutter)] border-b border-border bg-background lg:hidden">
+    <div className="sticky top-[var(--sticky-top)] z-30 -mx-[var(--gutter)] border-b border-border bg-background transition-[top] duration-300 lg:hidden">
       <style>{`
 @keyframes catalog-sheet-in { from { transform: translate3d(0, 100%, 0); } to { transform: translate3d(0, 0, 0); } }
 @keyframes catalog-sheet-out { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, 100%, 0); } }

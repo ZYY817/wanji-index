@@ -36,7 +36,7 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
   };
 
   return (
-    <nav aria-label="档案章节" className="sticky top-[var(--header-h)] z-30 border-b border-border bg-background">
+    <nav aria-label="档案章节" className="sticky top-[var(--sticky-top)] z-30 border-b border-border bg-background transition-[top] duration-300">
       <div className="container-x">
         <ul className="no-scrollbar -mx-4 flex overflow-x-auto">
           {sections.map((s) => {

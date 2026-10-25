@@ -61,7 +61,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
 
   return (
     <>
-      <div className="sticky top-[var(--header-h)] z-20 border-b border-border bg-background">
+      <div className="sticky top-[var(--sticky-top)] z-20 border-b border-border bg-background transition-[top] duration-300">
         <div className="container-x flex flex-wrap items-center gap-x-8 gap-y-3 py-3">
           <label className="flex min-w-0 flex-1 items-center gap-3 border-b border-border-strong sm:max-w-80">
             <Search className="size-4 shrink-0 text-fg-3" aria-hidden />

@@ -23,7 +23,7 @@ export function PosterCard({ g, className, priority }: { g: GameVM; className?: 
   return (
     <Link href={`/games/${g.slug}/`} className={cn('group block', className)}>
       <Tilt max={7} className="rounded-sm">
-        <div className="relative aspect-[2/3] overflow-hidden rounded-sm ring-1 ring-white/[0.06] transition-[box-shadow] duration-300 group-hover:ring-foreground/40 group-focus-visible:ring-primary">
+        <div className="edge-light relative aspect-[2/3] overflow-hidden rounded-sm ring-1 ring-white/[0.06] transition-[box-shadow] duration-300 group-hover:ring-foreground/40 group-focus-visible:ring-primary">
           <GameArt src={[g.art?.poster, g.art?.capsule, g.art?.header]} name={g.name} en={g.en} seed={g.id} priority={priority} className="absolute inset-0" imgClassName="transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" />
           {g.hasOffer && (
             <span className="absolute left-2.5 top-2.5 inline-flex h-6 items-center rounded-xs bg-primary px-2 text-xs font-medium text-primary-foreground">免费中</span>

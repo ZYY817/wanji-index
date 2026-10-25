@@ -41,6 +41,22 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
     return () => window.removeEventListener('scroll', onScroll);
   }, [home]);
 
+  // 同步吸顶偏移变量 --sticky-top 到 <html>（顶栏隐藏时为 0px，可见时回落到 var(--header-h)）
+  useEffect(() => {
+    const root = document.documentElement;
+    if (hidden) {
+      root.setAttribute('data-header-hidden', 'true');
+      root.style.setProperty('--sticky-top', '0px');
+    } else {
+      root.removeAttribute('data-header-hidden');
+      root.style.removeProperty('--sticky-top');
+    }
+    return () => {
+      root.removeAttribute('data-header-hidden');
+      root.style.removeProperty('--sticky-top');
+    };
+  }, [hidden]);
+
   // 高度/背景交给 Motion：从元素当前 CSS 高度起步，首帧与 SSR 完全一致，滚动时不产生布局抖动。
   useEffect(() => {
     const el = scope.current;

@@ -19,9 +19,9 @@ export const buttonVariants = cva(
       },
       size: {
         sm: 'h-8 rounded-sm px-3 text-sm',
-        md: 'h-11 rounded-sm px-4 text-sm lg:h-10',
+        md: 'h-11 rounded-sm px-5 text-base',
         lg: 'h-12 rounded-sm px-6 text-base',
-        icon: 'size-11 rounded-sm lg:size-9',
+        icon: 'size-11 rounded-sm',
       },
     },
     compoundVariants: [{ variant: 'link', className: 'h-auto' }],

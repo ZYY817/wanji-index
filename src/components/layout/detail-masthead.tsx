@@ -38,11 +38,11 @@ export function DetailMasthead({
             {mark}
             {kicker && <p className="text-sm text-fg-2">{kicker}</p>}
           </div>
-          <h1 className="mt-4 animate-rise font-serif text-[clamp(44px,6vw,88px)] font-black leading-[1.02] tracking-[-0.045em]" style={rise(2)}>
+          <h1 className="mt-4 animate-rise font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
             {title}
           </h1>
           {summary && (
-            <div className="mt-6 max-w-[44ch] animate-rise text-lg leading-[1.75] text-fg-2 md:text-xl md:leading-[1.7]" style={rise(3)}>
+            <div className="mt-5 max-w-[38em] animate-rise text-lg leading-[1.75] text-fg-2 text-pretty" style={rise(3)}>
               {summary}
             </div>
           )}
@@ -55,7 +55,7 @@ export function DetailMasthead({
               <dl className={cn('border-t border-border-strong', action && 'mt-6')}>
                 {facts.map((f) => (
                   <div key={f.label} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
-                    <dt className="text-fg-3">{f.label}</dt>
+                    <dt className="text-sm text-fg-2">{f.label}</dt>
                     <dd className="leading-[1.7] text-foreground">{f.value}</dd>
                   </div>
                 ))}
