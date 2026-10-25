@@ -1,6 +1,7 @@
 {
   "id": "dota2-free",
   "gameTitle": "Dota 2",
+  "titleZh": "刀塔 2",
   "type": "permanent",
   "platform": "steam",
   "url": "https://store.steampowered.com/app/570/",

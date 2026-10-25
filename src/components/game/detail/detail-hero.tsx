@@ -1,11 +1,11 @@
 'use client';
 import Link from 'next/link';
 import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, useScroll } from 'motion/react';
 import type { Art } from '@/lib/present';
 import { GameArt } from '@/components/game/game-art';
 import { GameLogo } from '@/components/game/game-logo';
-import { useIsDesktop, useMotionOK } from '@/components/fx/hooks';
+import { useIsDesktop, useMotionOK, useLiveTransform } from '@/components/fx/hooks';
 
 /**
  * 游戏档案首屏：全出血官方美术 + 片名。
@@ -21,11 +21,11 @@ export function DetailHero({
   const k = ok ? (desktop ? 1 : 0.5) : 0;
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const artScale = useTransform(scrollYProgress, [0, 1], [1.04, 1.04 + 0.14 * k]);
-  const artY = useTransform(scrollYProgress, [0, 1], ['0%', `${10 * k}%`]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -160 * k]);
-  const textFade = useTransform(scrollYProgress, [0.1, 0.7], [1, ok ? 0 : 1]);
-  const shade = useTransform(scrollYProgress, [0, 0.9], [0, 0.65 * k]);
+  const artScale = useLiveTransform(scrollYProgress, [0, 1], [1.04, 1.04 + 0.14 * k]);
+  const artY = useLiveTransform(scrollYProgress, [0, 1], ['0%', `${10 * k}%`]);
+  const textY = useLiveTransform(scrollYProgress, [0, 1], [0, -160 * k]);
+  const textFade = useLiveTransform(scrollYProgress, [0.1, 0.7], [1, ok ? 0 : 1]);
+  const shade = useLiveTransform(scrollYProgress, [0, 0.9], [0, 0.65 * k]);
 
   const rise = (i: number) => ({ animationDelay: `${0.12 + i * 0.08}s` });
 

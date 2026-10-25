@@ -22,7 +22,7 @@ export function buildSearchIndex(data, rel) {
     });
   for (const s of data.sites)
     items.push({
-      type: 'site', typeLabel: '资源站', title: s.name, sub: zh('siteCategory', s.category),
+      type: 'site', typeLabel: '资源站', title: s.name, sub: zh('siteCategory', s.category), seed: s.id,
       url: `/resources/${s.slug}/`, summary: s.summary,
       keywords: kw(s, (entriesBySite.get(s.id) ?? []).flatMap((e) => [e.name, e.note].filter(Boolean))),
     });

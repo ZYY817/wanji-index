@@ -11,7 +11,7 @@ import { HeaderNav } from './header-nav';
 import { EASE_OUT } from '@/components/fx/tokens';
 
 
-// 全站顶栏：放映机操作台。首页初始 72px 透明压在 Hero 上，滚过 80px 收为 60px 实色；
+// 全站顶栏：向下滚动自动让出画面、向上滚动回来。首页初始 72px 透明压在 Hero 上，滚过 80px 收为 60px 实色；
 // 内页始终实色 60px；移动端固定 56px。
 export function SiteHeader({ counts }: { counts: NavCounts }) {
   const pathname = usePathname() ?? '/';
@@ -22,12 +22,24 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
 
   const solid = !home || scrolled;
 
+  // 向下滚动时让出画面（顶栏上移隐藏），向上滚动立即回来；菜单、搜索弹窗打开时不隐藏
+  const [hidden, setHidden] = useState(false);
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 80);
+    let last = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      // 首页：开场镜头（[data-film]）播放期间顶栏始终透明，镜头结束后才收成实色，避免中途突然出现底色和横线
+      const film = home ? document.querySelector<HTMLElement>('[data-film]') : null;
+      setScrolled(film ? y > film.offsetTop + film.offsetHeight - window.innerHeight : y > 80);
+      if (Math.abs(y - last) > 6) {
+        setHidden(y > last && y > 240 && !document.querySelector('[role="dialog"]'));
+        last = y;
+      }
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [home]);
 
   // 高度/背景交给 Motion：从元素当前 CSS 高度起步，首帧与 SSR 完全一致，滚动时不产生布局抖动。
   useEffect(() => {
@@ -66,6 +78,8 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         'fixed inset-x-0 top-0 z-50 h-14',
         home ? 'bg-transparent lg:h-[72px]' : 'bg-background lg:h-[60px]',
       )}
+      style={{ transform: hidden && !reduced ? 'translateY(-100%)' : 'none', transition: 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)' }}
+      onFocusCapture={() => setHidden(false)}
     >
       {/* 首页透明态压在亮美术上：顶部压暗，保证操作台可读；收为实色后淡出 */}
       <motion.div
@@ -80,7 +94,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         aria-hidden
         className={cn(
           'pointer-events-none absolute inset-x-0 bottom-0 border-b transition-colors duration-500',
-          solid ? 'border-border' : 'border-transparent',
+          solid && !home ? 'border-border' : 'border-transparent',
         )}
       />
 

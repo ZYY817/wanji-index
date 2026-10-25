@@ -14,7 +14,7 @@ export function QuickFacts({ d }: { d: GameDetail }) {
 
   return (
     <section aria-label="速答" className="relative z-10 border-y border-border bg-background">
-      <dl className="container-x grid grid-cols-2 lg:grid-cols-4">
+      <dl className="container-x grid sm:grid-cols-2 lg:grid-cols-4">
         <Fact q="去哪买" href={channel ? '#channels' : undefined}>
           {channel ? (
             <>
@@ -58,7 +58,7 @@ export function QuickFacts({ d }: { d: GameDetail }) {
 
 function Fact({ q, href, children }: { q: string; href?: string; children: React.ReactNode }) {
   return (
-    <div className="border-border py-6 pr-6 [&:nth-child(even)]:pl-6 [&:nth-child(odd)]:border-r lg:border-r lg:pl-6 lg:[&:first-child]:pl-0 lg:[&:last-child]:border-r-0">
+    <div className="border-b border-border py-5 last:border-b-0 sm:border-b-0 sm:py-6 sm:pr-6 sm:[&:nth-child(even)]:pl-6 sm:[&:nth-child(odd)]:border-r lg:border-r lg:pl-6 lg:[&:first-child]:pl-0 lg:[&:last-child]:border-r-0">
       <dt className="flex items-center justify-between gap-3 text-sm text-fg-3">
         {q}
         {href && (

@@ -5,7 +5,7 @@ import { Command } from 'cmdk';
 import { ArrowRight, BookOpen, CornerDownLeft, History, RotateCw, Search, Wrench } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Kbd } from '@/components/ui/kbd';
-import { Monogram } from '@/components/ui/monogram';
+import { SiteLogo } from '@/components/ui/site-logo';
 import { loadSearchIndex, getRecent, pushRecent, type RecentItem } from '@/lib/search-client';
 import { matchItems, groupByType, type SearchItem } from '@/lib/search-match';
 import { NAV } from '@/lib/nav';
@@ -47,7 +47,7 @@ function ItemIcon({ it, size = 32 }: { it: RecentItem; size?: number }) {
         {it.art ? <img src={it.art} alt="" loading="lazy" className="size-full object-cover" onError={(e) => ((e.currentTarget.style.display = 'none'))} /> : null}
       </span>
     );
-  if (it.type === 'site') return <Monogram seed={it.seed ?? it.title} name={it.title} size={size} />;
+  if (it.type === 'site') return <SiteLogo id={it.seed ?? it.title} name={it.title} size={size} />;
   const Icon = it.type === 'tool' ? Wrench : BookOpen;
   return (
     <span className="grid shrink-0 place-items-center rounded-xs border border-border-strong text-fg-2" style={{ width: size, height: size }}>

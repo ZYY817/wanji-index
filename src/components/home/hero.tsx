@@ -2,48 +2,37 @@
 import Link from 'next/link';
 import { Pause, Play } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
-import { motion, useMotionValue, useScroll, useSpring, useTransform } from 'motion/react';
+import { motion, useScroll } from 'motion/react';
 import type { GameVM } from '@/lib/present';
 import { SearchTrigger } from '@/components/layout/search-trigger';
-import { useFinePointer, useIsDesktop, useMotionOK } from '@/components/fx/hooks';
+import { useIsDesktop, useMotionOK, useLiveTransform } from '@/components/fx/hooks';
+import { Magnetic } from '@/components/fx/interact';
 import { cn } from '@/lib/utils';
+import { hang } from '@/components/ui/hang';
 
-// 第 1 章 · 开映：背景美术（慢）→ 官方 logo / 漂浮海报（中）→ 字标（快）三层视差。
-// V3 精简：一屏只留 5 个信息点——美术与 logo、字标、导语、搜索、轮播署名。
-export function Hero({ heroes, floaters, counts }: {
-  heroes: GameVM[]; floaters: GameVM[]; counts: { games: number; sites: number; offers: number }; build?: string;
+const SLIDE_MS = 7000;
+
+/**
+ * 第 1 章 · 开映。一屏只有一个主角：整屏游戏官方美术。
+ *   正中：一行定位 → 一句标题 → 一句说明 → 搜索 → 三个热门入口
+ *   底部：当前美术署名 + 轮播进度 + 暂停（左），向下滚动提示（右）
+ * 镜头：每张美术缓慢推近（CSS，交叉淡入）；滚动时美术继续放大并压暗，文字上移淡出，把画面交给海报墙。
+ */
+export function Hero({ heroes, popular, counts }: {
+  heroes: GameVM[]; popular: GameVM[]; counts: { games: number; sites: number; offers: number };
 }) {
   const ref = useRef<HTMLElement>(null);
   const ok = useMotionOK();
   const desktop = useIsDesktop();
-  const fine = useFinePointer();
-  // 移动端视差幅度 ×0.4；reduced-motion 下全部归零
-  const k = ok ? (desktop ? 1 : 0.4) : 0;
+  const k = ok ? (desktop ? 1 : 0.5) : 0;
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const bgY = useTransform(scrollYProgress, [0, 1], ['0%', `${15 * k}%`]);
-  const bgScale = useTransform(scrollYProgress, [0, 1], [1.06, 1.06 + 0.12 * k]);
-  const midY = useTransform(scrollYProgress, [0, 1], [0, -500 * k]);
-  const fgY = useTransform(scrollYProgress, [0, 1], [0, -220 * k]);
-  const fade = useTransform(scrollYProgress, [0.16, 0.78], [1, ok ? 0 : 1]);
-  const shade = useTransform(scrollYProgress, [0, 0.9], [0, ok ? 0.72 : 0]);
+  const artScale = useLiveTransform(scrollYProgress, [0, 1], [1, 1 + 0.22 * k]);
+  const shade = useLiveTransform(scrollYProgress, [0, 0.85], [0, 0.85 * k]);
+  const textY = useLiveTransform(scrollYProgress, [0, 1], [0, -180 * k]);
+  const textFade = useLiveTransform(scrollYProgress, [0.05, 0.55], [1, ok ? 0 : 1]);
 
-  // 中景鼠标微视差：官方 logo 幅度最小，三张海报依次放大，最大 ±30px
-  const mx = useMotionValue(0), my = useMotionValue(0);
-  const smx = useSpring(mx, { stiffness: 50, damping: 18 }), smy = useSpring(my, { stiffness: 50, damping: 18 });
-  const logoPX = useTransform(smx, (v) => v * 12 * k), logoPY = useTransform(smy, (v) => v * 9 * k);
-  const f0x = useTransform(smx, (v) => v * 22 * k), f0y = useTransform(smy, (v) => v * 16 * k);
-  const f1x = useTransform(smx, (v) => v * 30 * k), f1y = useTransform(smy, (v) => v * 22 * k);
-  const f2x = useTransform(smx, (v) => v * 38 * k), f2y = useTransform(smy, (v) => v * 28 * k);
-  const fx = [[f0x, f0y], [f1x, f1y], [f2x, f2y]];
-
-  // 漂浮海报：三张各自不同的滚动速度
-  const fl0 = useTransform(scrollYProgress, [0, 1], [0, -58 * k]);
-  const fl1 = useTransform(scrollYProgress, [0, 1], [0, -96 * k]);
-  const fl2 = useTransform(scrollYProgress, [0, 1], [0, -134 * k]);
-  const floaterY = [fl0, fl1, fl2];
-
-  // 背景轮播：首张 LCP；其余延迟挂载；reduced-motion / 暂停 / 离屏时不轮播
+  // 轮播：首张是 LCP（eager），其余 1.5 秒后再挂载；暂停 / 离屏 / reduced-motion 时停止
   const [idx, setIdx] = useState(0);
   const [paused, setPaused] = useState(false);
   const [extra, setExtra] = useState(false);
@@ -56,26 +45,20 @@ export function Hero({ heroes, floaters, counts }: {
     io.observe(el);
     return () => io.disconnect();
   }, []);
+  const running = ok && !paused && extra && visible && heroes.length > 1;
   useEffect(() => {
-    if (!ok || paused || !extra || !visible || heroes.length < 2) return;
-    const t = setInterval(() => setIdx((i) => (i + 1) % heroes.length), 7000);
+    if (!running) return;
+    const t = setInterval(() => setIdx((i) => (i + 1) % heroes.length), SLIDE_MS);
     return () => clearInterval(t);
-  }, [ok, paused, extra, visible, heroes.length]);
+  }, [running, heroes.length]);
   const cur = heroes[idx];
+  // 首次访问时开场幕布约 1.2s 后拉开，入场动画整体顺延（--intro-delay 由 layout 的内联脚本设置）
+  const rise = (i: number) => ({ animationDelay: `calc(var(--intro-delay, 0s) + ${0.15 + i * 0.09}s)` });
 
   return (
-    <section
-      ref={ref}
-      aria-label="玩机索引"
-      className="grain relative min-h-[100svh] overflow-hidden bg-background"
-      onPointerMove={(e) => {
-        if (!ok || !fine || !desktop || e.pointerType !== 'mouse') return;
-        mx.set(e.clientX / window.innerWidth - 0.5);
-        my.set(e.clientY / window.innerHeight - 0.5);
-      }}
-    >
-      {/* L0 · 背景美术（慢） */}
-      <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ y: bgY, scale: bgScale }}>
+    <section ref={ref} aria-label="玩机索引" className="grain relative h-[100svh] min-h-[680px] overflow-hidden bg-shell">
+      {/* 美术层：滚动推近（motion）× 每张自身的缓慢推近（CSS） */}
+      <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale }}>
         {heroes.map((h, i) => (i === 0 || extra) && (
           <picture key={h.id}>
             <source media="(max-width: 767px)" srcSet={h.art!.poster} />
@@ -85,139 +68,87 @@ export function Hero({ heroes, floaters, counts }: {
               loading={i === 0 ? 'eager' : 'lazy'}
               fetchPriority={i === 0 ? 'high' : 'low'}
               decoding={i === 0 ? 'sync' : 'async'}
-              className="absolute inset-0 size-full object-cover object-[64%_26%] transition-opacity duration-[1800ms] ease-out md:object-[70%_24%]"
-              style={{ opacity: i === idx ? 1 : 0 }}
+              className={cn(
+                'absolute inset-0 size-full object-cover object-[60%_25%] transition-opacity duration-[1600ms] ease-out',
+                i === idx ? 'opacity-100 motion-safe:animate-[kenburns_9s_ease-out_both]' : 'opacity-0',
+              )}
             />
           </picture>
         ))}
       </motion.div>
-      {/* 压暗：左下为文字区，右上保留美术 */}
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,18,17,0.95)_0%,rgba(19,18,17,0.78)_30%,rgba(19,18,17,0.22)_64%,rgba(19,18,17,0.48)_100%)] max-md:bg-[linear-gradient(180deg,rgba(19,18,17,0.62)_0%,rgba(19,18,17,0.3)_32%,rgba(19,18,17,0.88)_68%,#131211_100%)]" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-[46%] bg-[linear-gradient(0deg,#131211_10%,rgba(19,18,17,0)_100%)]" />
+
+      {/* 压暗：中心留亮、四周与底部收暗，保证标题在任何美术上都可读 */}
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(19,18,17,0.22)_0%,rgba(19,18,17,0.55)_58%,rgba(19,18,17,0.9)_100%)]" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,#131211_0%,transparent_100%)]" />
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
-      {/* L1 · 中景：巨型片目号 + 官方透明 logo */}
-      <motion.div className="pointer-events-none absolute inset-0 z-[2] hidden md:block" style={{ y: midY }}>
-        <motion.div
-          className="pointer-events-auto absolute right-[clamp(24px,7vw,112px)] top-[13vh] w-[clamp(230px,23vw,420px)]"
-          style={{ x: logoPX, y: logoPY }}
-        >
-          <Link href={cur ? `/games/${cur.slug}/` : '/games/'} className="group block" aria-label={cur ? `查看 ${cur.name} 游戏档案` : '浏览游戏库'}>
-            <div className="relative aspect-[16/9]">
-              {heroes.map((h, i) => (i === 0 || extra) && (
-                <img
-                  key={h.id}
-                  src={h.art!.logo}
-                  alt=""
-                  loading={i === 0 ? 'eager' : 'lazy'}
-                  decoding="async"
-                  onError={(e) => { e.currentTarget.style.visibility = 'hidden'; }}
-                  className="absolute inset-0 size-full object-contain object-right drop-shadow-[0_10px_28px_rgba(0,0,0,0.78)] transition-[opacity,transform] duration-[1400ms] ease-out group-hover:brightness-110"
-                  style={{ opacity: i === idx ? 1 : 0, transform: i === idx ? 'none' : 'translateY(14px)' }}
-                />
-              ))}
-            </div>
-          </Link>
-        </motion.div>
+      {/* 正中内容 */}
+      <motion.div className="container-x relative z-10 flex h-full flex-col items-center justify-center pt-[var(--header-h)] text-center" style={{ y: textY, opacity: textFade }}>
+        <p className="animate-rise text-sm tracking-[0.3em] text-primary" style={rise(0)}>PC 游戏资源索引</p>
+        <h1 className="mt-6 font-serif text-[clamp(44px,6.6vw,108px)] font-black leading-[1.04] tracking-[-0.045em]">
+          {['每一款游戏，', '都有一份档案。'].map((line, i) => (
+            <span key={line} className="block overflow-hidden pb-[0.06em]">
+              <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.25 + i * 0.1}s)` }}>{hang(line)}</span>
+            </span>
+          ))}
+        </h1>
+        <p className="mt-7 max-w-[36em] animate-rise text-base leading-[1.8] text-foreground/80 md:text-lg" style={rise(2)}>
+          去哪买、现在免不免费、MOD 与汉化、存档与报错，一次查清。
+          <br className="hidden md:block" />
+          已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报，只指向官方与可信来源。
+        </p>
+        <div className="mt-10 w-full max-w-[640px] animate-rise" style={rise(3)}>
+          <Magnetic strength={6} radius={60}>
+            <SearchTrigger variant="bar" label="搜索游戏、资源站、工具或报错…" />
+          </Magnetic>
+        </div>
+        <p className="mt-5 flex animate-rise flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-fg-2" style={rise(4)}>
+          <span className="text-fg-3">热门</span>
+          {popular.map((g) => (
+            <Link key={g.id} href={`/games/${g.slug}/`} className="underline-offset-4 transition-colors hover:text-foreground hover:underline">{g.name}</Link>
+          ))}
+        </p>
       </motion.div>
 
-      {/* L2 · 前景 */}
-      <motion.div
-        className="container-x relative z-10 flex min-h-[max(740px,100svh)] flex-col pb-5 pt-[calc(var(--header-h)+22px)] md:pb-6"
-        style={{ y: fgY }}
-      >
-        {/* 中景留白：漂浮海报 / 官方 logo 在这一层呼吸 */}
-        <div className="relative min-h-[130px] flex-1 lg:min-h-[180px]">
-          <div className="pointer-events-none absolute left-0 top-[3vh] hidden items-start gap-4 xl:flex">
-            {floaters.slice(0, 2).map((g, i) => (
-              <motion.div key={g.id} style={{ y: floaterY[i], marginTop: [0, -18, 28][i] }} className="will-change-transform">
-                <motion.div style={{ x: fx[i][0], y: fx[i][1] }}>
-                  <motion.div
-                    className="[perspective:900px]"
-                    whileHover={{ rotateY: 9, rotateX: -5, scale: 1.06 }}
-                    transition={{ type: 'spring', stiffness: 280, damping: 24, mass: 0.55 }}
-                  >
-                    <Link
-                      href={`/games/${g.slug}/`}
-                      tabIndex={-1}
-                      className="pointer-events-auto group relative block w-[clamp(124px,9.2vw,176px)] overflow-hidden border border-white/20 bg-surface-2 shadow-[0_24px_50px_-30px_rgba(0,0,0,0.9)] transition-[border-color,box-shadow] duration-500 hover:border-primary/70 hover:shadow-[0_28px_64px_-24px_rgba(216,182,122,0.45)]"
-                      style={{ rotate: ['-4deg', '2.5deg', '-1.5deg'][i] }}
-                    >
-                      <div className="relative aspect-[2/3]">
-                        <img src={g.art!.poster} alt="" loading="lazy" decoding="async" className="size-full object-cover transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.06]" />
-                        <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(19,18,17,0.9)_0%,rgba(19,18,17,0.08)_58%)]" />
-                      </div>
-                    </Link>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* 移动端保留两枚小片格，避免字标之上只剩空暗场 */}
-          <div aria-hidden className="pointer-events-none absolute right-0 top-0 flex items-start gap-3 xl:hidden">
-            {floaters.slice(0, 2).map((g, i) => (
-              <div
-                key={g.id}
-                className="w-[clamp(72px,20vw,104px)] overflow-hidden border border-white/15 bg-surface-2 shadow-[0_18px_38px_-22px_rgba(0,0,0,0.9)]"
-                style={{ rotate: ['-3deg', '2.5deg'][i], marginTop: [0, 16][i] }}
-              >
-                <div className="relative aspect-[2/3]">
-                  <img src={g.art!.poster} alt="" loading="lazy" decoding="async" className="size-full object-cover" />
-                  <span className="absolute inset-0 bg-[linear-gradient(0deg,rgba(19,18,17,0.82),transparent_55%)]" />
-                </div>
-              </div>
-            ))}
-          </div>
-
-        </div>
-
-        {/* 字标与导语 */}
-        <motion.div style={{ opacity: fade }}>
-          <div className="flex flex-col gap-7 xl:flex-row xl:items-end xl:justify-between xl:gap-12">
-            <h1 className="display-hero shrink-0 whitespace-nowrap !text-[clamp(86px,19vw,150px)] xl:!text-[clamp(120px,15.5vw,250px)]">
-              玩机<span className="text-outline [--stroke-w:1.2px] xl:[--stroke-w:2px] 2xl:[--stroke-w:2.5px]">索引</span>
-            </h1>
-            <div className="max-w-[38ch] xl:mb-[0.55em] xl:max-w-[360px] 2xl:max-w-[390px]">
-              <p className="font-serif text-[clamp(19px,1.85vw,27px)] font-bold leading-[1.34] tracking-[-0.02em]">
-                去哪买、免不免费、MOD 在哪、要什么工具、报错怎么办——一份档案答完。
-              </p>
-              <p className="mt-4 text-sm leading-[1.8] text-fg-2">
-                已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报。只指向官方与可信来源，不托管文件，不收录破解。
-              </p>
-              <Link href="/games/" className="mt-6 inline-flex min-h-11 items-center gap-3 border-b border-foreground/30 pb-1 text-sm font-medium text-foreground transition-colors hover:border-primary">
-                直接进入游戏库 <span aria-hidden className="text-primary">→</span>
-              </Link>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* 底栏：搜索是主动作，片目字幕在其下 */}
-        <div className="mt-7 border-t border-foreground/15 pt-4 md:mt-8">
-          <div className="grid items-center gap-4 md:grid-cols-12 md:gap-6">
-            <SearchTrigger variant="bar" className="md:col-span-5" label="搜索游戏、资源站、工具或报错…" />
-            <div className="hidden min-w-0 items-center gap-4 md:col-span-6 md:flex">
-              <div className="flex items-center gap-1">
-                {heroes.map((h, i) => (
-                  <button key={h.id} type="button" onClick={() => { setIdx(i); setExtra(true); setPaused(true); }} aria-label={`放映 ${h.name}`} aria-pressed={i === idx} className="grid min-h-11 w-7 place-items-center">
-                    <span className={cn('h-[2px] w-6 transition-colors duration-300', i === idx ? 'bg-primary' : 'bg-foreground/25 hover:bg-foreground/60')} />
-                  </button>
-                ))}
-              </div>
-              {cur && (
-                <Link href={`/games/${cur.slug}/`} className="min-w-0 truncate text-xs text-fg-2 transition-colors hover:text-foreground">
-                  {cur.name} · 官方美术 <span className="text-fg-3">© {cur.publisher ?? '各自权利人'}</span>
-                </Link>
-              )}
-            </div>
-            <div className="hidden justify-end md:col-span-1 md:flex">
-              <button type="button" onClick={() => setPaused((v) => !v)} aria-label={paused ? '继续背景轮播' : '暂停背景轮播'} aria-pressed={paused} className="grid size-11 place-items-center border border-foreground/20 text-fg-2 transition-colors hover:border-foreground/50 hover:text-foreground">
-                {paused ? <Play className="size-4" aria-hidden /> : <Pause className="size-4" aria-hidden />}
+      {/* 底栏：署名与轮播 / 滚动提示 */}
+      <div className="container-x absolute inset-x-0 bottom-0 z-10 flex items-end justify-between gap-6 pb-7">
+        <div className="flex min-w-0 items-center gap-4">
+          <button
+            type="button"
+            onClick={() => setPaused((v) => !v)}
+            aria-label={paused ? '继续背景轮播' : '暂停背景轮播'}
+            aria-pressed={paused}
+            className="grid size-9 shrink-0 place-items-center rounded-full border border-foreground/25 text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground"
+          >
+            {paused ? <Play className="size-3.5" aria-hidden /> : <Pause className="size-3.5" aria-hidden />}
+          </button>
+          <div className="flex items-center gap-1.5">
+            {heroes.map((h, i) => (
+              <button key={h.id} type="button" onClick={() => { setIdx(i); setExtra(true); }} aria-label={`切换到 ${h.name}`} aria-pressed={i === idx} className="grid h-9 w-8 place-items-center">
+                <span className="relative block h-[2px] w-full overflow-hidden bg-foreground/20">
+                  {i === idx && (
+                    <span
+                      key={`${idx}-${running}`}
+                      className={cn('absolute inset-y-0 left-0 w-full origin-left bg-primary', running && 'animate-[progress_7s_linear_both]')}
+                    />
+                  )}
+                </span>
               </button>
-            </div>
+            ))}
           </div>
+          {cur && (
+            <Link href={`/games/${cur.slug}/`} className="hidden min-w-0 truncate text-sm text-fg-2 transition-colors hover:text-foreground sm:block">
+              {cur.name}<span className="text-fg-3"> · 官方美术</span>
+            </Link>
+          )}
         </div>
-      </motion.div>
+        <span aria-hidden className="hidden items-center gap-3 text-sm text-fg-3 md:flex">
+          向下滚动
+          <span className="relative block h-10 w-px overflow-hidden bg-foreground/20">
+            <span className="absolute inset-x-0 top-0 h-1/2 bg-foreground/80 motion-safe:animate-[scroll-down_2s_cubic-bezier(.65,0,.35,1)_infinite]" />
+          </span>
+        </span>
+      </div>
     </section>
   );
 }

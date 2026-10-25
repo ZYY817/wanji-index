@@ -32,7 +32,7 @@ function NavItem({ href, label, active }: { href: string; label: string; active:
 
 /**
  * 桌面主导航：只有中文标签，一个层级。当前项 = 白字 + 贴底 2px 信号橙线（随路由滑动）。
- * 首页章节进度不再挤在顶栏里，见 ChapterRail。
+ * 首页是一条连续镜头，不再显示章节进度。
  */
 export function HeaderNav({ pathname }: { pathname: string }) {
   return (

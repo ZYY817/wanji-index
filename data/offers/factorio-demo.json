@@ -1,6 +1,7 @@
 {
   "id": "factorio-demo",
   "gameTitle": "Factorio 异星工厂",
+  "titleZh": "异星工厂",
   "type": "trial",
   "platform": "official",
   "url": "https://www.factorio.com/download-demo",
@@ -9,5 +10,6 @@
   "linkHealth": "ok",
   "createdAt": "2026-10-24",
   "updatedAt": "2026-10-24",
-  "publishStatus": "published"
+  "publishStatus": "published",
+  "steamAppId": "427520"
 }

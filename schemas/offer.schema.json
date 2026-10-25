@@ -6,6 +6,7 @@
   "properties": {
     "id": { "type": "string", "minLength": 1 },
     "gameTitle": { "type": "string", "minLength": 1 },
+    "titleZh": { "type": "string", "minLength": 1, "description": "官方中文名（有才填）；首页卡片以它为主标题" },
     "gameId": { "type": "string" },
     "type": { "type": "string", "x-enum": "freeType" },
     "platform": { "type": "string", "x-enum": "platform" },
@@ -16,6 +17,13 @@
     "checkedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
     "linkHealth": { "type": "string", "x-enum": "linkHealth" },
     "note": { "type": "string" },
+    "steamAppId": { "type": "string", "pattern": "^[0-9]+$", "description": "非 Steam 渠道的情报（如 Epic 限免）也在 Steam 上架时，用它取官方多尺寸美术" },
+    "art": {
+      "type": "object",
+      "description": "不在 Steam 上的游戏：官方宣传图地址（wide 横版 / tall 竖版）",
+      "properties": { "wide": { "type": "string", "pattern": "^https://" }, "tall": { "type": "string", "pattern": "^https://" } },
+      "additionalProperties": false
+    },
     "createdAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
     "updatedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
     "publishStatus": { "type": "string", "x-enum": "publishStatus" },

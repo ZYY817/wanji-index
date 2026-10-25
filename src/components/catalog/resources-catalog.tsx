@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import type { SiteVM } from '@/lib/present';
 import { zh } from '@/lib/labels.mjs';
-import { Monogram } from '@/components/ui/monogram';
+import { SiteLogo } from '@/components/ui/site-logo';
 import { StatusBadge } from '@/components/ui/badge';
 import { SectionHeading } from '@/components/ui/section-label';
 import { CategoryRail, EmptyResult } from './category-rail';
@@ -12,7 +12,7 @@ import { useCatalogQuery } from './use-catalog-query';
 function SiteRow({ s }: { s: SiteVM }) {
   return (
     <Link href={`/resources/${s.slug}/`} className="group grid grid-cols-[48px_minmax(0,1fr)_auto] items-start gap-5 border-b border-border py-6 transition-colors hover:bg-card">
-      <Monogram name={s.name} seed={s.id} size={48} />
+      <SiteLogo id={s.id} name={s.name} size={48} />
       <div className="min-w-0">
         <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <h3 className="font-serif text-2xl font-bold leading-tight transition-colors group-hover:text-primary">{s.name}</h3>
@@ -42,7 +42,7 @@ export function ResourcesCatalog({ sites }: { sites: SiteVM[] }) {
 
   return (
     <div className="container-x grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-12">
-      <div className="lg:col-span-3">
+      <div className="min-w-0 lg:col-span-3">
         <CategoryRail
           query={q.q ?? ''}
           onQuery={(v) => update({ q: v })}

@@ -83,6 +83,8 @@
   --ease-inout: cubic-bezier(0.65, 0, 0.35, 1);
   /* 首屏入场：纯 CSS，SSR 首帧即开始，无「先显示后隐藏」闪烁；用 style={{ animationDelay }} 错峰 */
   --animate-rise: rise 0.9s var(--ease-expo) both;
+  /* 逐行遮罩揭示：外层 overflow-hidden，内层整行从遮罩下方升起 */
+  --animate-line-up: line-up 1.1s var(--ease-expo) both;
   --animate-marquee: marquee var(--marquee-dur, 60s) linear infinite;
   --animate-marquee-rev: marquee-rev var(--marquee-dur, 60s) linear infinite;
   --animate-blink: blink 1.1s steps(2, start) infinite;
@@ -121,10 +123,21 @@
 @keyframes scroll-hint { from { transform: translateX(-100%); } to { transform: translateX(200%); } }
 @keyframes radar-pulse { 0%, 100% { opacity: 0.22; } 50% { opacity: 0.68; } }
 @keyframes neon { 0%, 100% { opacity: 1; } 50% { opacity: 0.62; } }
+@keyframes kenburns { from { transform: scale(1); } to { transform: scale(1.08); } }
+@keyframes progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes scroll-down { from { transform: translateY(-100%); } to { transform: translateY(200%); } }
+@keyframes line-up { from { transform: translate3d(0, 105%, 0); } to { transform: none; } }
+@keyframes sweep { 0% { transform: translateX(-120%); } 45%, 100% { transform: translateX(360%); } }
 @keyframes rise { from { opacity: 0; transform: translate3d(0, 28px, 0); } to { opacity: 1; transform: none; } }
 
 @layer base {
   *, ::before, ::after { border-color: var(--color-border); }
+  /* 中文标点挤压：行首 / 行尾的全角标点只占半格，居中标题不再因为句末「，。」视觉偏左 */
+  h1, h2, h3, p { text-spacing-trim: trim-both; }
+  /* 装饰件（裁切线、斜光）偶尔越出视口 1–2px：clip 不会像 hidden 那样破坏 sticky */
+  body { overflow-x: clip; }
+  /* 开场层：访问过或 reduced-motion 时在首帧前就隐藏（类名由 layout 的内联脚本设置） */
+  .intro-seen [data-intro] { display: none; }
   html { color-scheme: dark; -webkit-text-size-adjust: 100%; scroll-padding-top: 112px; background: var(--color-background); }
   body {
     background: var(--color-background);
@@ -310,4 +323,35 @@ html.lenis, html.lenis body { height: auto; }
   opacity: 0.06;
   mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* 全站胶片颗粒：固定在视口上的一层灰度噪点，低透明度、不用混合模式（不触发整页重混合），
+   以 8 帧/秒抖动位置，让大面积暗场和纯色块有「颗粒」而不是数码平涂。reduced-motion 下静止。 */
+.film-grain { position: fixed; inset: 0; z-index: 70; overflow: hidden; pointer-events: none; }
+.film-grain::before {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  opacity: 0.045;
+  will-change: transform;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain-shift 1s steps(8) infinite;
+}
+@keyframes grain-shift {
+  0% { transform: translate(0, 0); } 12% { transform: translate(-40px, 22px); } 25% { transform: translate(30px, -48px); }
+  37% { transform: translate(-62px, -14px); } 50% { transform: translate(48px, 36px); } 62% { transform: translate(-18px, 60px); }
+  75% { transform: translate(66px, -30px); } 87% { transform: translate(-50px, -58px); } 100% { transform: translate(0, 0); }
+}
+@media (prefers-reduced-motion: reduce) { .film-grain::before { animation: none; } }
+
+/* 卡片边缘光：顶边一道细高光 + 极淡的内描边 + 上沿柔光，让图片卡像「有厚度的印刷品」而不是贴在屏幕上的位图 */
+/* 需要元素本身已定位（absolute / relative） */
+.edge-light::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow: inset 0 1px 0 rgba(255, 248, 232, 0.22), inset 0 0 0 1px rgba(255, 248, 232, 0.07);
+  background: linear-gradient(180deg, rgba(255, 248, 232, 0.07) 0%, transparent 28%);
 }

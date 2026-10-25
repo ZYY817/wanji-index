@@ -12,5 +12,9 @@
   "note": "活动信息来自 Epic Games Store 官方新闻；截止为北京时间",
   "createdAt": "2026-10-24",
   "updatedAt": "2026-10-24",
-  "publishStatus": "published"
+  "publishStatus": "published",
+  "art": {
+    "wide": "https://cdn1.epicgames.com/spt-assets/46fc0cdb9f164a848e916249a8f68fc7/home-1f6qi.png",
+    "tall": "https://cdn1.epicgames.com/spt-assets/46fc0cdb9f164a848e916249a8f68fc7/home-14ws1.png"
+  }
 }

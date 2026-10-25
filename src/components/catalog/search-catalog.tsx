@@ -5,7 +5,7 @@ import { ArrowRight, Search, X } from 'lucide-react';
 import { loadSearchIndex, getRecent, pushRecent, type RecentItem } from '@/lib/search-client';
 import { matchItems, groupByType, TYPE_ZH, type SearchItem } from '@/lib/search-match';
 import { GameArt } from '@/components/game/game-art';
-import { Monogram } from '@/components/ui/monogram';
+import { SiteLogo } from '@/components/ui/site-logo';
 import { Button } from '@/components/ui/button';
 import { SectionHeading } from '@/components/ui/section-label';
 import { useCatalogQuery } from './use-catalog-query';
@@ -17,7 +17,7 @@ function ResultRow({ item }: { item: RecentItem }) {
     <Link href={item.url} onClick={() => pushRecent(item)} className="group flex min-h-20 items-center gap-5 border-b border-border py-4 transition-colors hover:bg-card">
       {item.type === 'game'
         ? <GameArt src={item.art} name={item.title} seed={item.title} variant="wide" className="aspect-[460/215] w-24 shrink-0 rounded-xs sm:w-28" />
-        : <Monogram name={item.title} seed={item.seed ?? item.title} size={48} />}
+        : <SiteLogo id={item.seed ?? item.title} name={item.title} size={48} />}
       <span className="min-w-0 flex-1">
         <span className="block font-serif text-xl font-bold transition-colors group-hover:text-primary">{item.title}</span>
         {item.sub && <span className="mt-1 block truncate text-sm text-fg-3">{item.sub}</span>}
@@ -126,7 +126,7 @@ export function SearchCatalog() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder="输入游戏名、工具名或报错…"
           autoComplete="off"
-          className="min-w-0 flex-1 bg-transparent py-2 font-serif text-[clamp(26px,3.6vw,48px)] font-bold tracking-[-0.02em] placeholder:text-fg-3"
+          className="min-w-0 flex-1 bg-transparent py-2 font-serif text-[clamp(20px,3.6vw,48px)] font-bold tracking-[-0.02em] placeholder:text-fg-3"
         />
         {q && <Button size="icon" variant="ghost" onClick={() => setQuery('')} aria-label="清空搜索"><X aria-hidden /></Button>}
       </div>

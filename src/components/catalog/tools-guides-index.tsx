@@ -22,7 +22,7 @@ export function ToolsGuidesIndex({ rows, categories, param, placeholder, grid = 
 
   return (
     <div className="grid gap-10 py-12 md:py-16 lg:grid-cols-12 lg:gap-12">
-      <div className="lg:col-span-3">
+      <div className="min-w-0 lg:col-span-3">
         <CategoryRail
           query={query}
           onQuery={(v) => update({ q: v })}

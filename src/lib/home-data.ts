@@ -16,7 +16,8 @@ export type HomeData = {
   build: string;
   counts: { games: number; sites: number; tools: number; guides: number; offers: number; entries: number; categories: number };
   heroes: GameVM[];
-  floaters: GameVM[];
+  /** 首屏「热门」快捷入口 */
+  popular: GameVM[];
   wall: GameVM[];
   dossier: DossierVM | null;
   offers: OfferVM[];
@@ -24,8 +25,20 @@ export type HomeData = {
   siteGroups: { category: string; label: string; sites: SiteVM[] }[];
 };
 
+/**
+ * 章节强调色：取自该游戏官方美术的主色（人工挑选，保证在暗底上 ≥ 4.5:1）。
+ * 网站本身没有固定品牌色——镜头里是哪款游戏，强调色就来自哪款游戏。
+ */
+export const GAME_ACCENT: Record<string, string> = {
+  'black-myth-wukong': '#D08A4E',
+  'stardew-valley': '#5CC2B2',
+  'elden-ring': '#D9B76A',
+  'cyberpunk-2077': '#F2E94E',
+};
+export const accentOf = (id?: string) => (id && GAME_ACCENT[id]) || '#D8B67A';
+
 const HERO_ORDER = ['black-myth-wukong', 'elden-ring', 'cyberpunk-2077', 'baldurs-gate-3', 'red-dead-redemption-2'];
-const FLOAT_ORDER = ['hades', 'hollow-knight', 'witcher-3'];
+const POPULAR_ORDER = ['stardew-valley', 'elden-ring', 'cyberpunk-2077'];
 const CATEGORY_ORDER = ['store', 'free-platform', 'indie', 'mod', 'localization', 'guide-wiki', 'patch-support', 'other'];
 
 export function homeData(): HomeData {
@@ -36,7 +49,7 @@ export function homeData(): HomeData {
   const pick = (ids: string[]) => ids.map((id) => games.find((g) => g.id === id)).filter((g): g is GameVM => !!g?.art);
   const withArt = games.filter((g) => g.art);
   const heroes = pick(HERO_ORDER).slice(0, 4);
-  const floaters = pick(FLOAT_ORDER);
+  const popular = pick(POPULAR_ORDER);
 
   // 档案章：以星露谷物语为样本（数据最全）；不存在时取资源最丰富的游戏
   const sample = data.games.find((g: any) => g.id === 'stardew-valley') ?? data.games[0];
@@ -60,7 +73,8 @@ export function homeData(): HomeData {
 
   const offers = data.offers.map((o: any) => offerVM(o, data, now)).filter((o: OfferVM) => o.lifecycle !== 'ended').sort(byUrgency);
   const sites = data.sites.map((s: any) => siteVM(s, rel)).sort((a: SiteVM, b: SiteVM) => b.entryCount - a.entryCount || a.name.localeCompare(b.name));
-  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: zh('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
+  // 首页「其他」这组只有比价与数据站（ITAD、SteamDB、小黑盒），直接叫它的名字
+  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: c === 'other' ? '比价与数据' : zh('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
 
   return {
     build: buildStamp(),
@@ -68,6 +82,6 @@ export function homeData(): HomeData {
       games: data.games.length, sites: data.sites.length, tools: data.tools.length, guides: data.guides.length,
       offers: data.offers.length, entries: data.entries.length, categories: siteGroups.length,
     },
-    heroes, floaters, wall: withArt, dossier, offers, sites, siteGroups,
+    heroes, popular, wall: withArt, dossier, offers, sites, siteGroups,
   };
 }

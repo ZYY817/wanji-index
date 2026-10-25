@@ -7,7 +7,7 @@ import { zh } from '@/lib/labels.mjs';
 import { StatusBadge, Tag } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { ExtLink } from '@/components/ui/ext-link';
-import { Monogram } from '@/components/ui/monogram';
+import { SiteLogo } from '@/components/ui/site-logo';
 import { FeedbackLink } from '@/components/layout/feedback';
 import { DetailMasthead, Notice, type DetailFact } from '@/components/layout/detail-masthead';
 import { DetailSection } from '@/components/layout/detail-section';
@@ -55,7 +55,7 @@ export default async function SitePage({ params }: Params) {
     <>
       <DetailMasthead
         crumbs={[['资源站', '/resources/'], [s.name]]}
-        mark={<Monogram name={s.name} seed={s.id} size={44} />}
+        mark={<SiteLogo id={s.id} name={s.name} size={52} />}
         kicker={zh('siteCategory', s.category)}
         title={s.name}
         summary={s.summary}

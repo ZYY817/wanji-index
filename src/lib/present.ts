@@ -26,6 +26,8 @@ export type OfferVM = {
   startDate?: string; endDate?: string; startMs: number | null; endMs: number | null;
   checkedAt: string; linkHealth: string; lifecycle: string | null;
   gameSlug?: string; gameName?: string; art: Art;
+  /** 官方中文名（没有则为空）与去掉中文名后的原名，用于「中文主标题 + 原名副标题」 */
+  titleZh?: string; titleOrig?: string;
 };
 
 export function gameVM(g: any, rel: any): GameVM {
@@ -73,13 +75,17 @@ export function offerMs(str: string | undefined, isEnd: boolean): number | null 
 
 export function offerVM(o: any, data: any, now: number): OfferVM {
   const game = o.gameId ? data.games.find((g: any) => g.id === o.gameId) : null;
-  const art = game ? steamArt(game) : steamArtById(steamAppIdFromUrl(o.url));
+  // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图
+  const art = (game ? steamArt(game) : null)
+    ?? steamArtById(o.steamAppId ?? steamAppIdFromUrl(o.url))
+    ?? (o.art ? { appid: '', header: o.art.wide, poster: o.art.tall ?? o.art.wide, hero: o.art.wide, logo: '', capsule: o.art.wide } : null);
   return {
     id: o.id, title: o.gameTitle, type: o.type, platform: o.platform, url: o.url, claimNote: o.claimNote, note: o.note,
     startDate: o.startDate, endDate: o.endDate, startMs: offerMs(o.startDate, false), endMs: offerMs(o.endDate, true),
     checkedAt: o.checkedAt, linkHealth: o.linkHealth,
     lifecycle: computeLifecycle(o, now, site.review.staleDays.offerTimed),
     gameSlug: game?.slug, gameName: game?.name?.zh, art,
+    titleZh: o.titleZh, titleOrig: o.titleZh ? o.gameTitle.replace(o.titleZh, '').trim() || undefined : undefined,
   };
 }
 

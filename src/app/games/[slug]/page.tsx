@@ -7,6 +7,7 @@ import { StatusBadge } from '@/components/ui/badge';
 import { FeedbackLink } from '@/components/layout/feedback';
 import { PosterCard } from '@/components/game/poster-card';
 import { Reveal } from '@/components/fx/reveal';
+import { ClipReveal } from '@/components/fx/interact';
 import { DetailHero } from '@/components/game/detail/detail-hero';
 import { QuickFacts } from '@/components/game/detail/quick-facts';
 import { SectionNav } from '@/components/game/detail/section-nav';
@@ -88,7 +89,7 @@ export default async function GamePage({ params }: Params) {
               <p className="mt-3 text-base text-fg-2">与{vm.name}相近的游戏档案。</p>
             </Reveal>
             <Reveal delay={0.08} className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4 lg:grid-cols-6">
-              {d.related.map((g) => <PosterCard key={g.id} g={g} />)}
+              {d.related.map((g, i) => <ClipReveal key={g.id} delay={i * 0.06}><PosterCard g={g} /></ClipReveal>)}
             </Reveal>
           </div>
         </section>

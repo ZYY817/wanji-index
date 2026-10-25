@@ -1,6 +1,7 @@
 {
   "id": "wesnoth-free",
   "gameTitle": "Battle for Wesnoth 韦诺之战",
+  "titleZh": "韦诺之战",
   "type": "opensource",
   "platform": "steam",
   "url": "https://store.steampowered.com/app/599390/",
