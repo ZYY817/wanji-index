@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { loadData } from '@/lib/data.mjs';
 import { zh } from '@/lib/labels.mjs';
-import { IndexMasthead } from '@/components/layout/page-masthead';
+import { IndexMasthead, MastNum } from '@/components/layout/page-masthead';
+import { NameBand } from '@/components/layout/masthead-bands';
 import { ToolsGuidesIndex } from '@/components/catalog/tools-guides-index';
 import { StatusBadge } from '@/components/ui/badge';
 export const metadata: Metadata = { title: '工具', description: 'MOD 管理、存档、性能监控等 PC 游戏工具索引', alternates: { canonical: '/tools/' } };
@@ -34,8 +35,8 @@ export default function ToolsPage() {
       <IndexMasthead
         no="04"
         title="工具"
-        description="管理 MOD、备份存档、监控帧数。从一个具体问题出发，找到合适的工具和它的官网。"
-        stats={[{ value: tools.length, label: '个工具' }, { value: types.length, label: '个用途分类' }]}
+        description={<><MastNum>{tools.length}</MastNum> 个工具：管理 MOD、备份存档、看帧数。每一个都只链接它的官网。</>}
+        band={<NameBand items={tools.map((t: any) => ({ id: t.id, name: t.name, note: zh('toolType', t.type), href: `/tools/${t.slug}/` }))} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex

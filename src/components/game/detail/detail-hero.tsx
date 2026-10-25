@@ -30,7 +30,7 @@ export function DetailHero({
   const rise = (i: number) => ({ animationDelay: `${0.12 + i * 0.08}s` });
 
   return (
-    <section ref={ref} aria-label={`${name} 档案首屏`} className="grain relative flex min-h-[88svh] items-end overflow-hidden bg-shell md:min-h-[92svh]">
+    <section ref={ref} aria-label={`${name} 档案首屏`} className="grain relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
       <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale, y: artY }}>
         <GameArt src={art?.hero} name={name} en={enName} seed={id} variant="wide" priority className="absolute inset-0" imgClassName="object-[60%_30%]" />
       </motion.div>
@@ -40,7 +40,7 @@ export function DetailHero({
       <div aria-hidden className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(19,18,17,0.7),transparent)]" />
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
-      <motion.div className="container-x relative z-10 w-full pb-12 pt-[calc(var(--header-h)+48px)] md:pb-16" style={{ y: textY, opacity: textFade }}>
+      <motion.div className="container-x relative z-10 w-full pb-8 pt-[calc(var(--header-h)+28px)] md:pb-10" style={{ y: textY, opacity: textFade }}>
         <nav aria-label="面包屑" className="flex animate-rise items-center gap-2 text-sm text-fg-2" style={rise(0)}>
           <Link href="/" className="transition-colors hover:text-foreground">首页</Link>
           <span aria-hidden className="text-fg-3">/</span>
@@ -49,27 +49,27 @@ export function DetailHero({
           <span aria-current="page" className="text-foreground">{name}</span>
         </nav>
 
-        <div className="mt-6 grid items-end gap-8 md:grid-cols-12">
+        <div className="mt-4 grid items-end gap-6 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-8">
-            <h1 className="animate-rise font-serif text-[clamp(52px,8vw,128px)] font-black leading-[0.98] tracking-[-0.05em]" style={rise(1)}>
+            <h1 className="animate-rise font-serif text-4xl font-black leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl" style={rise(1)}>
               {name}
             </h1>
-            <p className="mt-5 flex animate-rise flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-2" style={rise(2)}>
-              {enName && <span className="text-foreground/85">{enName}</span>}
+            <p className="mt-3 flex animate-rise flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-2" style={rise(2)}>
+              {enName && <span className="font-medium text-foreground">{enName}</span>}
               {tags.map((t) => (
-                <span key={t} className="flex items-center gap-3">
-                  <span aria-hidden className="size-1 bg-fg-3" />
+                <span key={t} className="flex items-center gap-2">
+                  <span aria-hidden className="size-1 rounded-full bg-fg-3" />
                   {t}
                 </span>
               ))}
             </p>
-            <p className="mt-5 max-w-[42ch] animate-rise text-lg leading-[1.75] text-foreground/85 md:text-xl md:leading-[1.7]" style={rise(3)}>
+            <p className="mt-3 max-w-[38em] animate-rise text-lg leading-relaxed text-foreground/90 text-pretty" style={rise(3)}>
               {summary}
             </p>
           </div>
           {art?.logo && (
             <div className="hidden animate-rise justify-end md:col-span-4 md:flex" style={rise(2)}>
-              <GameLogo src={art.logo} className="h-auto max-h-[180px] w-full max-w-[320px] object-contain object-right drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]" />
+              <GameLogo src={art.logo} className="h-auto max-h-[140px] w-full max-w-[280px] object-contain object-right drop-shadow-[0_8px_24px_rgba(0,0,0,0.6)]" />
             </div>
           )}
         </div>

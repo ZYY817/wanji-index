@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { loadData } from '@/lib/data.mjs';
 import { zh } from '@/lib/labels.mjs';
-import { IndexMasthead } from '@/components/layout/page-masthead';
+import { IndexMasthead, MastNum } from '@/components/layout/page-masthead';
+import { ErrorBand } from '@/components/layout/masthead-bands';
 import { ToolsGuidesIndex } from '@/components/catalog/tools-guides-index';
 export const metadata: Metadata = { title: '教程', description: '游戏安装、报错排查、MOD 安装、存档备份教程', alternates: { canonical: '/guides/' } };
 
@@ -28,14 +29,16 @@ export default function GuidesPage() {
   const data = loadData();
   const guides = [...data.guides].sort((a: any, b: any) => a.title.localeCompare(b.title, 'zh'));
   const cats = [...new Set<string>(guides.map((g: any) => g.category))];
+  // 刊头内容带：教程里收录的真实报错原文与缺失文件名
+  const errorLines = [...new Set<string>(guides.flatMap((g: any) => [g.problem?.errorText, ...(g.keywords ?? []).filter((k: string) => /.(dll|exe)$/i.test(k))]).filter(Boolean))];
   const gameNames = (ids: string[] = []) => ids.map((id) => data.games.find((x: any) => x.id === id)?.name.zh).filter(Boolean) as string[];
   return (
     <>
       <IndexMasthead
         no="05"
         title="教程"
-        description="从报错原文开始。每一步写明操作、预期结果和失败后的去向，排查有迹可循。"
-        stats={[{ value: guides.length, label: '篇教程' }, { value: cats.length, label: '个分类' }]}
+        description={<><MastNum>{guides.length}</MastNum> 篇教程，从报错原文开始。每一步写明怎么做、做完应该看到什么、不行再怎么办。</>}
+        band={<ErrorBand lines={errorLines} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex

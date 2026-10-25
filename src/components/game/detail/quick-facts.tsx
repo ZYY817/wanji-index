@@ -2,10 +2,16 @@ import type { GameDetail } from '@/lib/game-detail';
 import { zh } from '@/lib/labels.mjs';
 import { CopyButton } from '@/components/ui/copy-button';
 import { OfferFact } from './offer-fact';
+import { cn } from '@/lib/utils';
 
 /**
- * 速答条：首屏之下第一眼就回答四个最常见的问题。每格结构相同——问题（小）→ 答案（大）→ 补充（小）。
- * 答案都来自档案里真实的第一条记录，并链接到对应章节查看全部。
+ * 速答条：首屏之下第一眼回答四个最常见问题。
+ * V6 规范：
+ * - 4 个格子：去哪买 / 现在免不免费 / MOD 与汉化 / 存档位置；
+ * - 每格结构统一：标题（小）→ 一行答案 → 一个动作；
+ * - 手机端改为 2 列（grid-cols-2），桌面 4 列（lg:grid-cols-4）；
+ * - 紧凑控制首屏高度，与 DetailHero 结合不超过一屏；
+ * - 所有动作按钮点击区 ≥ 44px。
  */
 export function QuickFacts({ d }: { d: GameDetail }) {
   const channel = d.channels[0];
@@ -14,60 +20,96 @@ export function QuickFacts({ d }: { d: GameDetail }) {
 
   return (
     <section aria-label="速答" className="relative z-10 border-y border-border bg-background">
-      <dl className="container-x grid sm:grid-cols-2 lg:grid-cols-4">
-        <Fact q="去哪买" href={channel ? '#channels' : undefined}>
+      <dl className="container-x grid grid-cols-2 lg:grid-cols-4">
+        {/* 1. 去哪买 */}
+        <FactCell title="去哪买" index={0}>
           {channel ? (
             <>
-              <p className="text-lg leading-snug text-foreground">{zh('platform', channel.platform)} · {channel.note}</p>
-              <p className="mt-1 text-sm text-fg-3">共 {d.channels.length} 个正版渠道</p>
+              <p className="truncate text-base font-medium text-foreground">
+                {zh('platform', channel.platform)} · {channel.note}
+              </p>
+              <a
+                href={channel.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary"
+              >
+                前往商店 ↗
+              </a>
             </>
           ) : (
-            <p className="text-lg text-fg-2">暂未收录</p>
+            <>
+              <p className="truncate text-base text-fg-2">暂未收录</p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无渠道</span>
+            </>
           )}
-        </Fact>
+        </FactCell>
 
-        <Fact q="现在免费吗">
+        {/* 2. 现在免不免费 */}
+        <FactCell title="现在免不免费" index={1}>
           <OfferFact offers={d.offers} />
-        </Fact>
+        </FactCell>
 
-        <Fact q="MOD 与汉化" href={entry ? '#entries' : undefined}>
+        {/* 3. MOD 与汉化 */}
+        <FactCell title="MOD 与汉化" index={2}>
           {entry ? (
             <>
-              <p className="text-lg leading-snug text-foreground">{entry.site?.name ?? entry.name}</p>
-              <p className="mt-1 text-sm text-fg-3">共 {d.entries.length} 个社区入口</p>
+              <p className="truncate text-base font-medium text-foreground">
+                {entry.site?.name ?? entry.name}
+              </p>
+              <a
+                href="#entries"
+                className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary"
+              >
+                查看专区 ({d.entries.length}) ↓
+              </a>
             </>
           ) : (
-            <p className="text-lg text-fg-2">暂未收录</p>
+            <>
+              <p className="truncate text-base text-fg-2">暂未收录</p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无资源</span>
+            </>
           )}
-        </Fact>
+        </FactCell>
 
-        <Fact q="存档在哪" href={save ? '#paths' : undefined}>
+        {/* 4. 存档位置 */}
+        <FactCell title="存档位置" index={3}>
           {save ? (
             <>
-              <code title={save.path} className="block truncate font-mono text-base leading-snug text-foreground">{save.path}</code>
-              <CopyButton text={save.path} label="复制路径" className="mt-2" />
+              <code title={save.path} className="block truncate font-mono text-sm leading-snug text-foreground">
+                {save.path}
+              </code>
+              <div className="mt-2 flex min-h-11 items-center">
+                <CopyButton text={save.path} label="复制路径" className="min-h-11 px-3.5 text-sm" />
+              </div>
             </>
           ) : (
-            <p className="text-lg text-fg-2">暂未收录</p>
+            <>
+              <p className="truncate text-base text-fg-2">暂未收录</p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无路径</span>
+            </>
           )}
-        </Fact>
+        </FactCell>
       </dl>
     </section>
   );
 }
 
-function Fact({ q, href, children }: { q: string; href?: string; children: React.ReactNode }) {
+function FactCell({ title, index, children }: { title: string; index: number; children: React.ReactNode }) {
   return (
-    <div className="border-b border-border py-5 last:border-b-0 sm:border-b-0 sm:py-6 sm:pr-6 sm:[&:nth-child(even)]:pl-6 sm:[&:nth-child(odd)]:border-r lg:border-r lg:pl-6 lg:[&:first-child]:pl-0 lg:[&:last-child]:border-r-0">
-      <dt className="flex items-center justify-between gap-3 text-sm text-fg-3">
-        {q}
-        {href && (
-          <a href={href} className="text-xs text-fg-3 underline-offset-4 transition-colors hover:text-foreground hover:underline">
-            查看全部
-          </a>
-        )}
-      </dt>
-      <dd className="mt-3">{children}</dd>
+    <div
+      className={cn(
+        'flex min-w-0 flex-col justify-between py-4 sm:py-5 lg:py-6',
+        // 移动端 2 列内边框：奇数列（0, 2）带右边框；前 2 项带底边框
+        index % 2 === 0 ? 'pr-4 sm:pr-6 border-r border-border' : 'pl-4 sm:pl-6',
+        index < 2 ? 'border-b border-border lg:border-b-0' : '',
+        // 桌面 4 列内边框：前 3 项带右边框，居中内边距
+        'lg:px-6 lg:[&:first-child]:pl-0 lg:[&:last-child]:pr-0',
+        index < 3 ? 'lg:border-r lg:border-border' : 'lg:border-r-0',
+      )}
+    >
+      <dt className="text-sm font-medium text-fg-2">{title}</dt>
+      <dd className="mt-2.5 min-w-0">{children}</dd>
     </div>
   );
 }

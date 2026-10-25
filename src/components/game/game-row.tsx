@@ -12,7 +12,7 @@ const num = (n: number) => (n ? String(n) : '—');
 
 export function GameTableHead() {
   return (
-    <div className={`hidden items-end gap-x-4 border-b border-border-strong pb-3 text-sm text-fg-3 md:grid ${COLS}`}>
+    <div className={`hidden items-end gap-x-4 border-b border-border-strong pb-3 text-sm text-fg-2 md:grid ${COLS}`}>
       <span />
       <span>游戏</span>
       <span>类型</span>
@@ -30,20 +30,22 @@ export function GameTableHead() {
 export function GameRow({ g }: { g: GameVM }) {
   return (
     <Link href={`/games/${g.slug}/`} className={`group grid min-h-[72px] items-center gap-x-4 border-b border-border py-3 transition-colors hover:bg-card ${COLS}`}>
-      <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="aspect-[460/215] w-full rounded-xs" />
+      <div className="edge-light relative aspect-[460/215] w-full overflow-hidden rounded-xs">
+        <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="size-full" />
+      </div>
       <span className="min-w-0">
         <span className="block truncate font-serif text-lg font-bold tracking-[-0.01em] transition-colors group-hover:text-primary">{g.name}</span>
-        <span className="block truncate text-sm text-fg-3">
+        <span className="block truncate text-sm text-fg-2">
           {g.en}
-          {g.hasOffer && <span className="ml-2 text-primary">免费中</span>}
+          {g.hasOffer && <span className="ml-2 font-medium text-primary">免费中</span>}
         </span>
       </span>
       <span className="hidden truncate text-sm text-fg-2 md:block">{g.genres.map(genreZh).join(' · ')}</span>
       <span className="hidden items-center gap-1.5 text-fg-2 md:flex">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
-      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.entries)}</span>
-      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.tools)}</span>
-      <span className="hidden text-right font-mono text-sm tabular-nums text-foreground md:block">{num(g.counts.guides)}</span>
-      <span className="hidden text-right font-mono text-xs tabular-nums text-fg-3 xl:block">{g.checkedAt}</span>
+      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.entries)}</span>
+      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.tools)}</span>
+      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.guides)}</span>
+      <span className="hidden text-right font-mono text-2xs tabular-nums text-fg-3 xl:block">{g.checkedAt}</span>
       <ArrowRight aria-hidden className="size-4 text-fg-3 transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
     </Link>
   );

@@ -35,12 +35,9 @@ const HOLD = 0.62;
 const FLIP: [number, number] = [0.04, 0.55];
 const OUT: [number, number] = [0.88, 1];
 
-/**
- * 首页暗场的统一布光：同一个深色底，游戏美术只作为一团模糊的色光（不出现形状），中心亮、四周压暗。
- * 档案、免费、资源站三章都用它——换章换的是光的颜色，不是整屏背景。
- */
-export const GLOW_IMG = 'absolute inset-0 size-full scale-125 object-cover blur-3xl saturate-[1.4]';
-export const GLOW_VEIL = 'absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(12,11,10,0.38)_0%,rgba(12,11,10,0.94)_78%)]';
+
+import { GLOW_IMG, GLOW_VEIL } from '@/components/fx/glow';
+export { GLOW_IMG, GLOW_VEIL };
 
 /** 首页卡组实际展示的条目（资源站章用同一份数据画出交接帧） */
 export function deckItems(offers: OfferVM[], now: number | null) {

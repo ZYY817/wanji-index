@@ -22,7 +22,7 @@ export function PosterCard({ g, className, priority }: { g: GameVM; className?: 
   const facts = archiveFacts(g);
   return (
     <Link href={`/games/${g.slug}/`} className={cn('group block', className)}>
-      <Tilt max={7} className="rounded-sm">
+      <Tilt max={4} className="rounded-sm">
         <div className="edge-light relative aspect-[2/3] overflow-hidden rounded-sm ring-1 ring-white/[0.06] transition-[box-shadow] duration-300 group-hover:ring-foreground/40 group-focus-visible:ring-primary">
           <GameArt src={[g.art?.poster, g.art?.capsule, g.art?.header]} name={g.name} en={g.en} seed={g.id} priority={priority} className="absolute inset-0" imgClassName="transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" />
           {g.hasOffer && (
@@ -34,8 +34,20 @@ export function PosterCard({ g, className, priority }: { g: GameVM; className?: 
         </div>
       </Tilt>
       <p className="mt-3 truncate font-serif text-lg font-bold leading-snug tracking-[-0.01em] transition-colors group-hover:text-primary">{g.name}</p>
-      <p className="mt-0.5 truncate text-sm text-fg-3">{g.genres.slice(0, 2).map(genreZh).join(' · ') || g.en}</p>
-      {facts.length > 0 && <p className="mt-2 truncate text-xs text-fg-2">{facts.join(' · ')}</p>}
+      <p className="mt-0.5 truncate text-sm text-fg-2">{g.genres.slice(0, 2).map(genreZh).join(' · ') || g.en}</p>
+      {facts.length > 0 && (
+        <p className="mt-1.5 truncate text-sm text-fg-2">
+          {facts.map((f, i) => {
+            const parts = f.split(/(\d+)/);
+            return (
+              <span key={i}>
+                {i > 0 && <span className="text-fg-3"> · </span>}
+                {parts.map((p, j) => (/^\d+$/.test(p) ? <span key={j} className="font-mono">{p}</span> : p))}
+              </span>
+            );
+          })}
+        </p>
+      )}
     </Link>
   );
 }

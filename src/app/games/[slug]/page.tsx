@@ -71,10 +71,10 @@ export default async function GamePage({ params }: Params) {
           </DetailSection>
         ))}
 
-        <Reveal as="aside" className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border-strong py-8 text-sm text-fg-3">
-          <span className="text-foreground">档案信息</span>
+        <Reveal as="aside" className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border py-8 text-sm text-fg-2">
+          <span className="font-medium text-foreground">档案信息</span>
           <StatusBadge value={d.reviewStatus} />
-          <span>核验于 {d.checkedAt}</span>
+          <span className="font-mono text-2xs text-fg-3">核验于 {d.checkedAt}</span>
           <FeedbackLink page={`${vm.name}（/games/${vm.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
             信息有误？反馈给我们
           </FeedbackLink>

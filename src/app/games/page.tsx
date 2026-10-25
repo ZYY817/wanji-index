@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { loadData, buildRelations } from '@/lib/data.mjs';
 import { gameVM } from '@/lib/present';
-import { IndexMasthead } from '@/components/layout/page-masthead';
+import { IndexMasthead, MastNum } from '@/components/layout/page-masthead';
+import { PosterBand } from '@/components/layout/masthead-bands';
 import { GamesCatalog } from '@/components/catalog/games-catalog';
 export const metadata: Metadata = { title: '游戏库', description: '全部已收录 PC 游戏档案', alternates: { canonical: '/games/' } };
 
@@ -13,8 +14,9 @@ export default function GamesPage() {
     <IndexMasthead
       no="01"
       title="游戏库"
-      description="从一款游戏出发：去哪买、MOD 与汉化在哪、需要什么工具、报错怎么办，都在它的档案里。"
-      stats={[{ value: games.length, label: '款游戏' }, { value: resources, label: '条资源线索' }]}
+      description={<><MastNum>{games.length}</MastNum> 款游戏，<MastNum>{resources}</MastNum> 条资源线索。去哪买、MOD 与汉化在哪、要什么工具、报错怎么办，都写在各自的档案里。</>}
+      glow={games.find((g) => g.id === 'black-myth-wukong')?.art?.hero}
+      band={<PosterBand games={games} />}
     />
     <GamesCatalog games={games} />
   </>;

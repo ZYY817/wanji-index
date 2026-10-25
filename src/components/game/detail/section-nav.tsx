@@ -50,7 +50,7 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
                   className={cn('relative flex h-14 items-center gap-2 px-4 text-base transition-colors', on ? 'text-foreground' : 'text-fg-2 hover:text-foreground')}
                 >
                   {s.title}
-                  <span className={cn('font-mono text-xs tabular-nums', on ? 'text-primary' : 'text-fg-3')}>{s.count}</span>
+                  <span className={cn('font-mono text-2xs tabular-nums', on ? 'text-primary' : 'text-fg-3')}>{s.count}</span>
                   {on && (
                     <motion.span
                       layoutId="detail-nav-underline"
