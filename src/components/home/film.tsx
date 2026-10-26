@@ -10,6 +10,7 @@ import { Magnetic, Tilt } from '@/components/fx/interact';
 import { GLOW_VEIL, SCENE_IMG } from './free-deck';
 import { cn } from '@/lib/utils';
 import { hang } from '@/components/ui/hang';
+import { TextLink } from '@/components/ui/button';
 
 /* ───────────────────────────── 时间轴 ─────────────────────────────
  * 整段（首屏 → 海报墙 → 档案）是一个固定舞台上的一条镜头。下面每个区间都是本段滚动进度 p（0–1）。
@@ -341,7 +342,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
             <motion.span className="font-serif text-[clamp(64px,6vw,96px)] font-black leading-none tracking-[-0.05em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{countText}</motion.span>
             <span className="text-xl text-foreground/90">款游戏，每一款都有一份档案</span>
           </p>
-          <Link href="/games/" className="pointer-events-auto mt-4 border-b border-[var(--accent)] pb-1 text-base hover:text-[var(--accent)]">进入游戏库</Link>
+          <TextLink href="/games/" tone="accent" className="pointer-events-auto mt-2">进入游戏库</TextLink>
         </motion.div>
 
         {/* 档案：标题在卡片正上方，入口在正下方——都在中轴上，四组答案在两侧对称展开 */}
@@ -350,7 +351,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
           <motion.h2 style={{ opacity: titleVis, y: titleY }} className="mt-2 font-serif text-[clamp(30px,2.6vw,44px)] font-black leading-tight tracking-[-0.03em]">{hang('一款游戏，四个答案。')}</motion.h2>
         </motion.div>
         <motion.div className="absolute inset-x-0 flex justify-center" style={{ top: `calc(50% + ${card.h / 2 + 28}px)`, opacity: titleVis }}>
-          <Link href={`/games/${sample.slug}/`} className="border-b border-[var(--accent)] pb-1 text-base hover:text-[var(--accent)]">打开{sample.name}完整档案</Link>
+          <TextLink href={`/games/${sample.slug}/`} tone="accent">打开{sample.name}完整档案</TextLink>
         </motion.div>
       </motion.div>
     </section>

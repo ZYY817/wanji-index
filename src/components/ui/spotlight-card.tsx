@@ -65,7 +65,7 @@ export function SpotlightCard({
         }}
         aria-hidden="true"
       />
-      <div className="relative z-[1] h-full w-full">{children}</div>
+      <div className="relative z-[1] flex h-full w-full flex-col">{children}</div>
     </Component>
   );
 }

@@ -20,17 +20,23 @@ export function SectionLabel({
 }
 
 /**
- * 分节标题（内页列表的分组）：宋体标题 + 条数 + 可选一句说明，底部发丝线。
- * 与详情页 DetailSection 同一种读法：先看「这是什么」，再看「有多少」，最后一句「为什么在这里」。
+ * 分节标题——全站唯一的一种：宋体标题 +（条数）+ 可选一句说明。
+ * 列表分组（免费 / 资源站 / 搜索结果）默认带底部发丝线；详情页的章节自带上边线，传 divider={false}。
+ * 改样式只改这里，所有页面同步。
  */
 export function SectionHeading({
-  title, count, description, id, className, children,
-}: { title: string; count?: number | string; description?: React.ReactNode; id?: string; className?: string; children?: React.ReactNode }) {
+  title, count, description, id, headingId, divider = true, className, children,
+}: {
+  title: React.ReactNode; count?: number | string; description?: React.ReactNode; id?: string; headingId?: string;
+  divider?: boolean; className?: string; children?: React.ReactNode;
+}) {
   return (
-    <div id={id} className={cn('mb-8 flex flex-wrap items-end gap-x-4 gap-y-2 border-b border-border pb-4', className)}>
-      <h2 className="font-serif text-3xl font-bold leading-tight tracking-[-0.03em] md:text-4xl">{title}</h2>
-      {count != null && <span className="pb-1 font-mono text-base tabular-nums text-fg-3">{count}</span>}
-      {description && <p className="basis-full text-base text-fg-2 md:ml-auto md:basis-auto md:pb-1.5 md:text-right">{description}</p>}
+    <div id={id} className={cn('mb-6', divider && 'border-b border-border pb-4', className)}>
+      <h2 id={headingId} className="flex items-baseline gap-3 font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+        {title}
+        {count != null && <span className="font-mono text-sm font-normal tabular-nums text-fg-3">({count})</span>}
+      </h2>
+      {description && <p className="mt-1.5 max-w-[56em] text-base leading-relaxed text-fg-2 text-pretty">{description}</p>}
       {children}
     </div>
   );

@@ -78,8 +78,9 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             <p className="mt-1 truncate text-sm text-fg-2">{o.titleOrig}</p>
           )}
 
-          {/* 倒计时：仅限限时领取与即将开始 */}
-          <div className="mt-5 border-t border-border pt-4">
+          <div aria-hidden className="h-5 shrink-0" />
+          {/* 倒计时与按钮一起压到卡片底部：同一行的几张卡，分隔线、倒计时、按钮都在同一高度 */}
+          <div className="mt-auto border-t border-border pt-4">
             {lc === 'active' && o.endMs ? (
               <>
                 <p className="text-xs text-fg-3">剩余时间</p>
@@ -112,7 +113,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
           </div>
 
           {/* 底部来源与操作 */}
-          <div className="mt-auto flex items-end justify-between gap-3 pt-6">
+          <div className="flex items-end justify-between gap-3 pt-6">
             <span className="font-mono text-2xs text-fg-3">
               {o.endMs ? `截止 ${shDateTime(o.endMs)}` : o.startMs ? `开始 ${shDateTime(o.startMs)}` : `核验于 ${o.checkedAt}`}
             </span>

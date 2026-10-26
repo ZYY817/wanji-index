@@ -2,6 +2,7 @@
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Kbd } from '@/components/ui/kbd';
+import { Button } from '@/components/ui/button';
 
 export type RailItem = { value: string; label: string; count: number };
 
@@ -74,13 +75,9 @@ export function EmptyResult({ onClear }: { onClear: () => void }) {
     <div className="border-y border-border py-20 text-center">
       <p className="font-serif text-3xl font-bold text-foreground">没有匹配的条目</p>
       <p className="mt-3 text-base text-fg-2">换一个关键词，或清除筛选重新查看。</p>
-      <button
-        type="button"
-        onClick={onClear}
-        className="mt-6 inline-flex min-h-11 items-center justify-center border border-border-strong px-5 text-base text-foreground transition-colors hover:border-foreground/60"
-      >
+      <Button type="button" variant="outline" onClick={onClear} className="mt-6">
         清除筛选
-      </button>
+      </Button>
     </div>
   );
 }

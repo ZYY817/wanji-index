@@ -9,6 +9,7 @@ import { Magnetic } from '@/components/fx/interact';
 import { useMedia, useMotionOK } from '@/components/fx/hooks';
 import { cn } from '@/lib/utils';
 import { hang } from '@/components/ui/hang';
+import { buttonVariants } from '@/components/ui/button';
 
 /* 时间轴（本章滚动进度 p）：
  *   进场        光从画面中心以圆形扩散，把上一章的暗场照亮（独立计时：章节露头 → 固定）
@@ -111,7 +112,7 @@ export function KitStage() {
           <p className="text-sm text-ink-3">装机工具 · 开发中</p>
           <h2 id="kit-title" className="mt-3 text-balance font-serif text-[clamp(32px,8vw,64px)] font-black leading-[1.15] tracking-[-0.04em]">{hang('缺什么，它比你先知道。')}</h2>
           <p className="mx-auto mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2">检测 VC++、DirectX、.NET 等游戏运行库，缺失的从官方源一键补齐。</p>
-          <Link href="/kit/" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 text-base text-paper">了解装机工具 <ArrowRight aria-hidden className="size-4" /></Link>
+          <Link href="/kit/" className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'mt-8')}>了解装机工具 <ArrowRight aria-hidden /></Link>
         </div>
       </section>
     );
@@ -149,8 +150,8 @@ export function KitStage() {
               <span className="text-ink-3">（演示数据）</span>
             </p>
             <Magnetic strength={8} radius={80}>
-              <Link href="/kit/" className="mt-5 inline-flex h-12 items-center gap-3 rounded-full bg-ink px-7 text-base text-paper shadow-[0_24px_40px_-20px_rgba(20,16,10,0.6)] transition-transform duration-300 hover:scale-[1.03]">
-                了解装机工具 <ArrowRight aria-hidden className="size-4" />
+              <Link href="/kit/" className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'mt-5 shadow-[0_24px_40px_-20px_rgba(20,16,10,0.6)]')}>
+                了解装机工具 <ArrowRight aria-hidden />
               </Link>
             </Magnetic>
           </motion.div>

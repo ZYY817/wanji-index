@@ -37,6 +37,7 @@ const OUT: [number, number] = [0.88, 1];
 
 
 import { GLOW_IMG, GLOW_VEIL } from '@/components/fx/glow';
+import { TextLink } from '@/components/ui/button';
 export { GLOW_IMG, GLOW_VEIL };
 /** 档案章的环境：游戏美术本身，重度压暗（配 GLOW_VEIL 的暗角） */
 export const SCENE_IMG = 'absolute inset-0 size-full object-cover opacity-50';
@@ -72,6 +73,28 @@ function toPos(v: number, n: number) {
   const ease = f < HOLD ? 0 : (f - HOLD) / (1 - HOLD);
   const smooth = ease * ease * (3 - 2 * ease);
   return Math.min(n - 1, i + smooth);
+}
+
+/** 还剩多久：一行小字说明 + 倒计时数字（纯文字，不加底板）。桌面卡组与手机横滑共用 */
+function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null; target: number | null | undefined; now: number | null; size: 'sm' | 'lg' }) {
+  const big = size === 'lg';
+  return (
+    <div className="min-w-0 text-left">
+      <p className={cn('text-fg-2', big ? 'text-sm' : 'text-xs')}>
+        {lc === 'upcoming' ? <span className="text-info">即将免费{target != null && ` · ${shDateTime(target)} 开始`}</span>
+          : target != null ? <>剩余时间<span className="text-fg-3"> · {shDateTime(target)} 截止</span></> : zh('freeType', o.type)}
+      </p>
+      <div className={big ? 'mt-1.5' : 'mt-1'}>
+        {target != null ? (
+          <Countdown target={target} mode={lc === 'upcoming' ? 'start' : 'end'} now={now} variant={big ? 'film' : undefined}
+            className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')}
+            labelClassName="text-fg-3" />
+        ) : (
+          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}>长期免费</span>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export const CARD_CLS = 'edge-light relative size-full overflow-hidden rounded-md shadow-[0_50px_100px_-30px_rgba(0,0,0,0.95)]';
@@ -223,23 +246,16 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
                 <div className={cn(CARD_CLS, 'aspect-[16/10] h-auto')}>
                   <CardFace o={x} />
                 </div>
-                <div className="mt-2 flex items-stretch overflow-hidden rounded-md bg-[rgba(30,28,25,0.88)] ring-1 ring-white/10">
-                  <div className="flex min-w-0 flex-1 flex-col justify-center px-4 py-2.5">
-                    <p className="text-xs text-fg-2">{xlc === 'upcoming' ? <span className="text-info">即将免费</span> : t != null ? '剩余时间' : zh('freeType', x.type)}</p>
-                    {t != null ? (
-                      <Countdown target={t} mode={xlc === 'upcoming' ? 'start' : 'end'} now={now} className={cn('mt-0.5 text-xl font-medium leading-none tracking-[-0.04em]', xlc === 'upcoming' ? 'text-info' : 'text-foreground')} />
-                    ) : (
-                      <span className="mt-0.5 font-serif text-lg font-black leading-none">长期免费</span>
-                    )}
-                  </div>
-                  <AcquireButton href={x.url} health={x.linkHealth} label={xlc === 'upcoming' ? '活动页' : CTA[x.type] ?? '免费获取'} size="md" className="h-auto shrink-0 rounded-none px-5" />
+                <div className="mt-3 flex items-center justify-between gap-4">
+                  <OfferTime o={x} lc={xlc} target={t} now={now} size="sm" />
+                  <AcquireButton href={x.url} health={x.linkHealth} label={xlc === 'upcoming' ? '活动页' : CTA[x.type] ?? '免费获取'} size="md" />
                 </div>
               </article>
             );
           })}
         </div>
         <div className="container-x mt-6 text-center">
-          <Link href="/free/" className="inline-flex min-h-11 items-center border-b border-foreground/25 text-base text-fg-2 transition-colors hover:border-primary hover:text-foreground">全部免费情报</Link>
+          <TextLink href="/free/">全部免费情报</TextLink>
         </div>
       </section>
     );
@@ -269,24 +285,12 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
           {items.map((x, i) => <DeckCard key={x.id} o={x} i={i} n={n} pos={pos} w={w} h={h} gap={gap} enter={sideIn} out={out} first={first} />)}
         </div>
 
-        {/* 当前卡的「票根」：与卡同宽、贴在卡下方——左边是还剩多久，右边是整块的领取按钮。信息和行动都属于这张卡 */}
-        <motion.div className="absolute left-1/2" style={{ top: `calc(50% + ${h / 2 + 14}px)`, width: w, marginLeft: -w / 2, opacity: infoVis }}>
+        {/* 当前卡下方：还剩多久（纯文字）+ 领取按钮，一行居中、垂直对齐——不再给信息再套一层卡片 */}
+        <motion.div className="absolute inset-x-0 flex justify-center" style={{ top: `calc(50% + ${h / 2 + 28}px)`, opacity: infoVis }}>
           {o && (
-            <div className="edge-light relative flex min-h-[88px] items-stretch overflow-hidden rounded-md bg-[rgba(30,28,25,0.88)] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
-              <div className="flex min-w-0 flex-1 flex-col justify-center px-6 py-3">
-                <p className="text-sm text-fg-2">
-                  {lc === 'upcoming' ? <span className="text-info">即将免费 · {target != null && `${shDateTime(target)} 开始`}</span>
-                    : target != null ? <>剩余时间<span className="text-fg-3"> · {shDateTime(target)} 截止</span></> : zh('freeType', o.type)}
-                </p>
-                <div className="mt-1.5">
-                  {target != null ? (
-                    <Countdown target={target} mode={lc === 'upcoming' ? 'start' : 'end'} now={now} variant="film" className={cn('text-[32px] font-medium leading-none tracking-[-0.05em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')} labelClassName="text-fg-3" />
-                  ) : (
-                    <span className="font-serif text-[28px] font-black leading-none">长期免费</span>
-                  )}
-                </div>
-              </div>
-              <AcquireButton href={o.url} health={o.linkHealth} label={lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '免费获取'} size="lg" className="h-auto shrink-0 rounded-none px-9 text-lg font-medium [&_svg]:size-5" />
+            <div className="flex items-center gap-10">
+              <OfferTime o={o} lc={lc} target={target} now={now} size="lg" />
+              <AcquireButton href={o.url} health={o.linkHealth} label={lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '免费获取'} size="lg" />
             </div>
           )}
         </motion.div>

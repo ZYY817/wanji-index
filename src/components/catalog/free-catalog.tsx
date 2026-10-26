@@ -8,6 +8,7 @@ import { liveLifecycle } from '@/components/offer/use-lifecycle';
 import { ExtLink } from '@/components/ui/ext-link';
 import { Button } from '@/components/ui/button';
 import { Reveal } from '@/components/fx/reveal';
+import { SectionHeading } from '@/components/ui/section-label';
 import { NovaTabs } from '@/components/ui/tabs-nova';
 import {
   DropdownMenu, DropdownMenuTrigger, DropdownMenuContent,
@@ -34,19 +35,6 @@ const LC_RANK: Record<string, number> = { active: 0, upcoming: 1 };
 const byUrgency = (a: OfferVM, b: OfferVM) =>
   (LC_RANK[a.lifecycle ?? ''] ?? 2) - (LC_RANK[b.lifecycle ?? ''] ?? 2) || (a.endMs ?? Infinity) - (b.endMs ?? Infinity);
 
-function SectionTitle({ title, count, description }: { title: string; count: number; description?: string }) {
-  return (
-    <div className="mb-6 flex flex-wrap items-baseline justify-between gap-3 border-b border-border pb-4">
-      <div>
-        <h2 className="flex items-baseline gap-3 font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-          {title}
-          <span className="font-mono text-sm font-normal text-fg-3">({count})</span>
-        </h2>
-        {description && <p className="mt-1.5 text-base leading-relaxed text-fg-2">{description}</p>}
-      </div>
-    </div>
-  );
-}
 
 /**
  * 免费游戏目录：
@@ -194,7 +182,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
             {/* 1. 限时领取：进行中与已公布的下一期放在同一组大卡里（预告卡带「预告」标与开始倒计时），一行排满，不再各自留半行空白 */}
             {limitedOffers.length + upcomingOffers.length > 0 && (
               <Reveal as="section" aria-label="限时领取">
-                <SectionTitle
+                <SectionHeading
                   title="限时领取"
                   count={limitedOffers.length + upcomingOffers.length}
                   description={upcomingOffers.length ? '在截止前领取，永久保留在个人库中；标「预告」的是已公布的下一期。' : '在截止日期前领取，永久保留在个人库中。'}
@@ -208,7 +196,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
             {/* 3. 永久免费：紧凑列表行 */}
             {permanentOffers.length > 0 && (
               <Reveal as="section" aria-label="永久免费">
-                <SectionTitle
+                <SectionHeading
                   title="永久免费"
                   count={permanentOffers.length}
                   description="随时可以加入并免费游玩，无需赶末班车。"
@@ -222,7 +210,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
             {/* 4. 免费试玩与周末：紧凑列表行 */}
             {trialWeekendOffers.length > 0 && (
               <Reveal as="section" aria-label="免费试玩与周末">
-                <SectionTitle
+                <SectionHeading
                   title="免费试玩与周末"
                   count={trialWeekendOffers.length}
                   description="先体验部分章节或在限定周末畅玩，再决定是否入手。"
@@ -236,7 +224,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
             {/* 5. 开源游戏：紧凑列表行 */}
             {opensourceOffers.length > 0 && (
               <Reveal as="section" aria-label="开源游戏">
-                <SectionTitle
+                <SectionHeading
                   title="开源游戏"
                   count={opensourceOffers.length}
                   description="完全开放代码与资产，社区驱动的纯粹创作。"

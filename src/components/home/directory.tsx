@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, type MotionValue } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
 import type { OfferVM, SiteVM } from '@/lib/present';
 import { SiteLogo } from '@/components/ui/site-logo';
 import { Reveal } from '@/components/fx/reveal';
@@ -12,6 +11,7 @@ import { useEntry } from '@/components/fx/scene';
 import { useNow } from '@/components/offer/countdown';
 import { CARD_CLS, CardFace, GLOW_IMG, GLOW_VEIL, deckItems, deckSize, useViewport } from './free-deck';
 import { cn } from '@/lib/utils';
+import { TextLink } from '@/components/ui/button';
 
 /* 两条时间轴。
  * 进场窗口 e（见 Scene 的 relay）：
@@ -251,9 +251,7 @@ export function Directory({ offers, sites, groups, counts }: {
 
           {/* 入口：索引定格后出现在底部中轴 */}
           <motion.div className="absolute inset-x-0 bottom-[6vh] flex justify-center" style={{ opacity: ctaO }}>
-            <Link href="/resources/" className="group inline-flex items-center gap-2 border-b border-primary pb-1 text-base">
-              查看全部资源站 <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            <TextLink href="/resources/">查看全部资源站</TextLink>
           </motion.div>
         </div>
       </div>

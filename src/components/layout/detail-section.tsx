@@ -1,5 +1,6 @@
 import { Reveal } from '@/components/fx/reveal';
 import { cn } from '@/lib/utils';
+import { SectionHeading } from '@/components/ui/section-label';
 
 export type DetailSectionMeta = { id: string; title: string; lead?: string; count?: number };
 
@@ -20,13 +21,7 @@ export function DetailSection({
       className={cn('scroll-mt-[calc(var(--sticky-top)+32px)] border-t border-border py-12 first:border-t-0 md:py-16', className)}
     >
       <Reveal>
-        <div className="mb-6">
-          <h2 id={`${meta.id}-title`} className="flex items-baseline gap-3 font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
-            {meta.title}
-            {meta.count != null && <span className="font-mono text-base font-normal text-fg-3">({meta.count})</span>}
-          </h2>
-          {meta.lead && <p className="mt-2 max-w-[38em] text-base leading-relaxed text-fg-2 text-pretty">{meta.lead}</p>}
-        </div>
+        <SectionHeading headingId={`${meta.id}-title`} title={meta.title} count={meta.count} description={meta.lead} divider={false} />
       </Reveal>
 
       {aside ? (

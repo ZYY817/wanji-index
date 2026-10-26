@@ -88,7 +88,7 @@ export function IndexMasthead({
       <div className="container-x relative">
         <Crumbs crumbs={crumbs ?? (label ? [[label]] : undefined)} />
         
-        <div className="mt-3 max-w-2xl">
+        <div className="mt-3 max-w-4xl">
           <div className="flex items-baseline gap-3">
             <h1 className="font-serif text-3xl font-black tracking-[-0.03em] text-foreground sm:text-4xl lg:text-[44px]">
               {title}
@@ -100,7 +100,7 @@ export function IndexMasthead({
             )}
           </div>
           {description && (
-            <p className="mt-3 max-w-[38em] text-base leading-[1.75] text-fg-2 text-pretty">
+            <p className="mt-3 max-w-[56em] text-base leading-[1.75] text-fg-2 text-pretty">
               {description}
             </p>
           )}
