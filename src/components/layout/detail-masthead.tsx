@@ -12,7 +12,7 @@ export type DetailFact = { label: string; value: React.ReactNode };
 export function DetailMasthead({
   crumbs, kicker, mark, title, summary, action, facts, notice, className,
 }: {
-  crumbs: [string, string?][]; kicker?: React.ReactNode; mark?: React.ReactNode; title: string; summary?: React.ReactNode;
+  crumbs: [string, string?][]; kicker?: React.ReactNode; mark?: React.ReactNode; title: React.ReactNode; summary?: React.ReactNode;
   action?: React.ReactNode; facts?: DetailFact[]; notice?: React.ReactNode; className?: string;
 }) {
   const rise = (i: number) => ({ animationDelay: `${0.08 + i * 0.07}s` });

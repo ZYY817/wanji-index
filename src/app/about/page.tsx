@@ -59,7 +59,7 @@ export default function AboutPage() {
       <div className="container-x">
         {SECTIONS.map(([id, title, body], i) => (
           <DetailSection key={id} index={i} meta={{ id, title }}>
-            <div className="prose-doc max-w-[62ch] text-fg-2">{body}</div>
+            <div className="prose-doc max-w-[62ch] text-foreground/90">{body}</div>
           </DetailSection>
         ))}
       </div>

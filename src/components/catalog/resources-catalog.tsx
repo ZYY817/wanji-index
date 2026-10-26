@@ -31,11 +31,15 @@ function SiteRow({ s }: { s: SiteVM }) {
 }
 
 /** 资源站目录：左侧搜索 + 分类，右侧按分类分组的站点列表 */
+const CAT_ORDER = ['store', 'mod', 'indie', 'guide-wiki', 'other'];
+const rankCat = (c: string) => (CAT_ORDER.includes(c) ? CAT_ORDER.indexOf(c) : CAT_ORDER.length);
+
 export function ResourcesCatalog({ sites }: { sites: SiteVM[] }) {
   const { query: q, update } = useCatalogQuery();
   const cat = q.cat ?? '';
   const text = (q.q ?? '').trim().toLowerCase();
-  const categories = [...new Set(sites.map((s) => s.category))];
+  // 分类顺序与首页一致：商店 → MOD 社区 → 独立游戏 → 攻略百科 → 比价与数据（其余按出现顺序排在后面）
+  const categories = [...new Set(sites.map((s) => s.category))].sort((a, b) => rankCat(a) - rankCat(b));
   const filtered = sites.filter((s) =>
     (!cat || s.category === cat) &&
     (!text || [s.name, s.domain, ...s.aliases, ...s.purposes].join(' ').toLowerCase().includes(text)));

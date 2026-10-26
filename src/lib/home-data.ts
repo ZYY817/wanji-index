@@ -73,8 +73,7 @@ export function homeData(): HomeData {
 
   const offers = data.offers.map((o: any) => offerVM(o, data, now)).filter((o: OfferVM) => o.lifecycle !== 'ended').sort(byUrgency);
   const sites = data.sites.map((s: any) => siteVM(s, rel)).sort((a: SiteVM, b: SiteVM) => b.entryCount - a.entryCount || a.name.localeCompare(b.name));
-  // 首页「其他」这组只有比价与数据站（ITAD、SteamDB、小黑盒），直接叫它的名字
-  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: c === 'other' ? '比价与数据' : zh('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
+  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: zh('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
 
   return {
     build: buildStamp(),

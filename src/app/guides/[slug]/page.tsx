@@ -12,6 +12,7 @@ import { FeedbackLink } from '@/components/layout/feedback';
 import { DetailMasthead, type DetailFact } from '@/components/layout/detail-masthead';
 import { JsonLd } from '@/components/seo/json-ld';
 import { Reveal } from '@/components/fx/reveal';
+import { fileTokens } from '@/components/ui/file-tokens';
 
 type Params = { params: Promise<{ slug: string }> };
 type Step = { title?: string; action: string; expected: string; ifFail?: string; verified?: string };
@@ -76,7 +77,7 @@ export default async function GuidePage({ params }: Params) {
       <DetailMasthead
         crumbs={[['教程', '/guides/'], [g.title]]}
         kicker={zh('guideKind', g.kind)}
-        title={g.title}
+        title={fileTokens(g.title)}
         summary={g.problem?.description}
         facts={facts}
       />
@@ -92,7 +93,7 @@ export default async function GuidePage({ params }: Params) {
 
           {g.prerequisites?.length > 0 && (
             <Block title="开始之前">
-              <ul className="space-y-3 text-base leading-[1.8] text-fg-2">
+              <ul className="space-y-3 text-base leading-[1.8] text-foreground/90">
                 {g.prerequisites.map((p: string) => (
                   <li key={p} className="flex gap-3"><span aria-hidden className="mt-[0.75em] size-1 shrink-0 bg-fg-3" />{p}</li>
                 ))}
@@ -113,10 +114,10 @@ export default async function GuidePage({ params }: Params) {
                       <h3 className="font-serif text-2xl font-bold leading-snug">{s.title || `步骤 ${i + 1}`}</h3>
                       {s.verified && s.verified !== 'verified' && <StatusBadge value={s.verified} />}
                     </div>
-                    <p className="mt-4 whitespace-pre-line text-lg leading-[1.85] text-fg-2">{s.action}</p>
+                    <p className="mt-4 whitespace-pre-line text-lg leading-[1.8] text-foreground/90">{s.action}</p>
                     <div className="mt-5 border-l-2 border-ok bg-ok/5 px-4 py-3">
                       <p className="text-sm font-medium text-ok">预期结果</p>
-                      <p className="mt-1 text-base leading-[1.75] text-fg-2">{s.expected}</p>
+                      <p className="mt-1 text-base leading-[1.75] text-foreground/90">{s.expected}</p>
                     </div>
                     {s.ifFail && <p className="mt-4 text-base leading-[1.75] text-fg-2"><span className="text-foreground">如果没有解决：</span>{s.ifFail}</p>}
                   </div>
@@ -135,7 +136,7 @@ export default async function GuidePage({ params }: Params) {
             <Block id="recovery" title="恢复方法">
               <ol className="space-y-4">
                 {g.recovery.map((r: string, i: number) => (
-                  <li key={r} className="flex gap-4 text-base leading-[1.8] text-fg-2">
+                  <li key={r} className="flex gap-4 text-base leading-[1.8] text-foreground/90">
                     <span className="font-mono text-fg-3">{String(i + 1).padStart(2, '0')}</span>
                     <span>{r}</span>
                   </li>
@@ -152,7 +153,7 @@ export default async function GuidePage({ params }: Params) {
           </footer>
         </article>
 
-        <aside className="space-y-10 lg:col-span-4 lg:sticky lg:top-[calc(var(--header-h)+32px)] lg:self-start">
+        <aside className="space-y-10 lg:col-span-4 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:transition-[top] lg:duration-300 lg:self-start">
           <nav aria-label="步骤目录">
             <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">步骤目录</h2>
             <ol>

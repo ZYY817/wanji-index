@@ -1,18 +1,10 @@
 'use client';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Kbd } from '@/components/ui/kbd';
 
 export type RailItem = { value: string; label: string; count: number };
 
-/**
- * 列表页左侧栏（资源站 / 工具 / 教程共用）：搜索框 + 分类列表。
- * V6 规范：
- * - 桌面吸顶 top-[calc(var(--sticky-top)+32px)]，带 0.3s 顶栏避让过渡；
- * - 去掉列表前的短横线；
- * - 选项 text-base，计数 font-mono text-2xs tabular-nums text-fg-3；
- * - 桌面当前项用香槟金左边线（border-l-2 border-primary）+ text-foreground；
- * - 小于 1024px 时收成横向可滚动筛选条，点击目标 ≥ 44px。
- */
 export function CategoryRail({
   query, onQuery, placeholder, items, active, onSelect, allLabel = '全部',
 }: {
@@ -24,19 +16,23 @@ export function CategoryRail({
 
   return (
     <aside className="min-w-0 bg-background transition-[top] duration-300 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:self-start">
-      <label className="flex min-h-12 items-center gap-3 border-b border-border-strong">
-        <Search aria-hidden className="size-4 shrink-0 text-fg-3" />
+      {/* 终端指令风格检索条 */}
+      <label className="flex min-h-10 items-center gap-2 rounded-xs border border-border bg-surface-2/40 px-2.5 py-1 text-sm transition-colors focus-within:border-primary/80 focus-within:bg-card">
+        <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
         <span className="sr-only">{placeholder}</span>
         <input
           type="search"
           value={query}
           onChange={(e) => onQuery(e.target.value)}
           placeholder={placeholder}
-          className="w-full min-w-0 bg-transparent py-3 text-base placeholder:text-fg-3 focus:outline-none"
+          className="w-full min-w-0 bg-transparent py-1 text-base placeholder:text-fg-3 focus:outline-none"
         />
+        <Kbd className="text-fg-3">/</Kbd>
       </label>
 
-      <h2 className="mb-3 mt-8 hidden text-sm font-medium text-fg-2 lg:block">分类</h2>
+      <div className="mb-3 mt-7 hidden items-baseline justify-between border-b border-border/60 pb-2 lg:flex">
+        <h2 className="text-sm font-medium text-fg-2">分类</h2>
+      </div>
 
       {/* 移动端横向滚动条，桌面纵向列表 */}
       <nav

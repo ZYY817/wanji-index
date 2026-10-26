@@ -148,7 +148,7 @@ export function Countdown({
           {i > 0 && <span aria-hidden className="mr-[0.18em] opacity-40">:</span>}
           <span className="flex flex-col items-center">
             <span>{pad2(v)}</span>
-            <span aria-hidden className={cn('mt-1 font-sans text-2xs font-normal tracking-normal opacity-60', labelClassName)}>{u}</span>
+            <span aria-hidden className={cn('mt-1 font-sans text-xs font-normal tracking-normal opacity-60', labelClassName)}>{u}</span>
           </span>
         </span>
       ))}

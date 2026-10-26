@@ -60,7 +60,7 @@ export default async function SitePage({ params }: Params) {
         title={s.name}
         summary={s.summary}
         action={(
-          <ExtLink href={s.url} health={s.linkHealth} className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'w-full justify-between')}>
+          <ExtLink href={s.url} health={s.linkHealth} className={cn(buttonVariants({ variant: 'solid', size: 'lg' }), 'w-full justify-between')}>
             访问 {domainOf(s.url)}
           </ExtLink>
         )}
@@ -71,13 +71,13 @@ export default async function SitePage({ params }: Params) {
       <div className="container-x">
         <DetailSection meta={sections[0]} index={0}>
           {entries.length ? (
-            <ul className="border-t border-border-strong">
+            <ul>
               {entries.map((e: any) => {
                 const g = gameOf(e.gameId);
                 return (
-                  <li key={e.id} className="border-b border-border py-6">
+                  <li key={e.id} className="border-b border-border py-6 first:pt-0 last:border-b-0">
                     <div className="flex flex-wrap items-center gap-3">
-                      <ExtLink href={e.url} health={e.linkHealth} className="font-serif text-2xl font-bold leading-tight transition-colors hover:text-primary">
+                      <ExtLink href={e.url} health={e.linkHealth} className="font-serif text-xl font-bold leading-tight transition-colors hover:text-primary">
                         {e.name}
                       </ExtLink>
                       <Tag>{zh('entryType', e.type)}</Tag>
@@ -101,13 +101,13 @@ export default async function SitePage({ params }: Params) {
               })}
             </ul>
           ) : (
-            <p className="border-t border-border-strong pt-6 text-base text-fg-2">暂未收录具体游戏的入口，可以直接访问官网浏览。</p>
+            <p className="text-base text-fg-2">暂未收录具体游戏的入口，可以直接访问官网浏览。</p>
           )}
         </DetailSection>
 
         {games.length > 0 && (
           <DetailSection meta={sections[1]} index={1}>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3">
+            <div className="grid grid-cols-3 gap-x-5 gap-y-8 sm:grid-cols-4 lg:grid-cols-6">
               {games.map((g) => <PosterCard key={g.id} g={gameVM(g, rel)} />)}
             </div>
           </DetailSection>

@@ -42,7 +42,7 @@ export function KitWindow({ scanned: scannedProp, interactive, className }: { sc
   return (
     <div className={cn('relative', className)}>
       {/* 裁切线放在圆角外壳之外，避免被 overflow-hidden 裁掉 */}
-      <CropMarks size={20} strokeWidth={1.5} inset={-21} className="text-fg-3/70" />
+      <CropMarks size={20} strokeWidth={1.5} inset={-21} className="text-fg-3/70 max-md:hidden" />
       <div className="overflow-hidden rounded-lg border border-border-strong bg-[#0E0E0D] text-left shadow-[0_60px_120px_-30px_rgba(0,0,0,0.9)]" role="group" aria-label="一键装机工具界面示意：运行库检测清单">
       {/* 标题栏：窄屏收起窗口按钮，避免标题与预览标签被挤成竖排 */}
       <div className="flex h-10 items-center gap-3 border-b border-border bg-[#141413] pl-3.5 pr-3.5 text-xs text-fg-2 sm:pr-0">

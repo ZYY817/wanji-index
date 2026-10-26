@@ -6,6 +6,7 @@ import { PlatformMark } from '@/components/ui/platform-mark';
 import { genreZh } from '@/lib/genre';
 import { zh } from '@/lib/labels.mjs';
 import { cn } from '@/lib/utils';
+import { Kbd } from '@/components/ui/kbd';
 
 export type CatalogQuery = Record<string, string>;
 export type CatalogUpdate = (values: Record<string, string>) => void;
@@ -40,8 +41,8 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
   return (
     <div
       className={cn(
-        'flex items-center transition-colors focus-within:border-primary',
-        bar ? 'min-h-11 gap-2 border border-border-strong px-2.5' : 'gap-2 border-b border-border-strong pb-2',
+        'flex items-center rounded-xs border border-border bg-surface-2/40 px-2.5 py-1 text-sm transition-colors focus-within:border-primary/80 focus-within:bg-card',
+        bar ? 'min-h-11 gap-2.5 px-3' : 'gap-2',
       )}
     >
       <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
@@ -56,10 +57,10 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
         enterKeyHint="search"
         className={cn(
           'min-w-0 flex-1 bg-transparent text-foreground outline-none placeholder:text-fg-3 focus-visible:outline-none',
-          bar ? 'text-lg' : 'text-sm',
+          'text-base',
         )}
       />
-      {value && (
+      {value ? (
         <button
           type="button"
           onClick={() => onChange('')}
@@ -68,6 +69,8 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
         >
           <X className="size-3.5" aria-hidden />
         </button>
+      ) : (
+        <Kbd className="text-fg-3">/</Kbd>
       )}
     </div>
   );

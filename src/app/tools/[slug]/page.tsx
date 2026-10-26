@@ -49,10 +49,10 @@ export default async function ToolPage({ params }: Params) {
     ...(games.length ? [{
       id: 'games', title: '适用游戏', count: games.length, lead: '这些游戏的档案里收录了这个工具。',
       body: (
-        <ul className="grid gap-px border border-border bg-border sm:grid-cols-2">
+        <ul className="grid border-t border-border sm:grid-cols-2 sm:gap-x-10">
           {games.map((g: any) => (
-            <li key={g.id} className="bg-background">
-              <Link href={`/games/${g.slug}/`} className="group flex min-h-16 items-center justify-between gap-4 px-5 font-serif text-xl font-bold transition-colors hover:bg-card hover:text-primary">
+            <li key={g.id} className="border-b border-border">
+              <Link href={`/games/${g.slug}/`} className="group flex min-h-16 items-center justify-between gap-4 font-serif text-xl font-bold transition-colors hover:text-primary">
                 {g.name.zh}
                 <ArrowRight aria-hidden className="size-5 text-fg-3 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
               </Link>
