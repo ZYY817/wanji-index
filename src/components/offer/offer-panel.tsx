@@ -180,12 +180,11 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
                 <span className="truncate text-fg-2">{o.claimNote}</span>
               </>
             )}
-            <span className="font-mono text-2xs text-fg-3">· 核验于 {o.checkedAt}</span>
           </div>
         </div>
       </div>
 
-      <div className="shrink-0 self-end sm:self-center">
+      <div className="flex shrink-0 flex-col items-end gap-1.5 self-end sm:self-center">
         {isEnded ? (
           <span className="inline-flex h-11 items-center px-4 font-mono text-sm text-fg-3">已结束</span>
         ) : (
@@ -197,6 +196,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
             className="h-11 px-5"
           />
         )}
+        <span className="font-mono text-2xs text-fg-3">核验于 {o.checkedAt}</span>
       </div>
     </li>
   );

@@ -207,16 +207,39 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
   const target = lc === 'active' ? o?.endMs : lc === 'upcoming' ? o?.startMs : null;
 
   if (!pinned) {
+    // 小屏：横滑卡组。每张卡下面同样挂一张「票根」——还剩多久 + 领取，信息与行动都在卡上，不再只有一个标题
     return (
-      <section ref={ref} aria-labelledby="free-title" className="bg-background py-20">
-        <h2 id="free-title" className="container-x text-center font-serif text-[clamp(36px,8vw,56px)] font-black tracking-[-0.04em]">{hang('此刻，免费的。')}</h2>
-        <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)]">
-          {items.map((x) => (
-            <Link key={x.id} href="/free/" className="relative aspect-[16/10] w-[82vw] max-w-[560px] shrink-0 snap-center overflow-hidden rounded-md">
-              <GameArt src={[x.art?.hero, x.art?.capsule]} name={x.gameName ?? x.title} seed={x.id} variant="wide" className="absolute inset-0" />
-              <span className="absolute inset-x-0 bottom-0 bg-[linear-gradient(0deg,rgba(12,11,10,0.9),transparent)] p-4 font-serif text-xl font-bold">{x.titleZh ?? x.title}</span>
-            </Link>
-          ))}
+      <section ref={ref} aria-labelledby="free-title" className="bg-background py-16">
+        <div className="container-x text-center">
+          <p className="text-sm text-primary">免费游戏 · 精选 {n} 条 / 共 {total} 条</p>
+          <h2 id="free-title" className="mt-2 font-serif text-[clamp(32px,8vw,56px)] font-black tracking-[-0.04em]">{hang('此刻，免费的。')}</h2>
+        </div>
+        <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2">
+          {items.map((x) => {
+            const xlc = liveLifecycle(x, now);
+            const t = xlc === 'active' ? x.endMs : xlc === 'upcoming' ? x.startMs : null;
+            return (
+              <article key={x.id} className="w-[82vw] max-w-[440px] shrink-0 snap-center">
+                <div className={cn(CARD_CLS, 'aspect-[16/10] h-auto')}>
+                  <CardFace o={x} />
+                </div>
+                <div className="mt-2 flex items-stretch overflow-hidden rounded-md bg-[rgba(30,28,25,0.88)] ring-1 ring-white/10">
+                  <div className="flex min-w-0 flex-1 flex-col justify-center px-4 py-2.5">
+                    <p className="text-xs text-fg-2">{xlc === 'upcoming' ? <span className="text-info">即将免费</span> : t != null ? '剩余时间' : zh('freeType', x.type)}</p>
+                    {t != null ? (
+                      <Countdown target={t} mode={xlc === 'upcoming' ? 'start' : 'end'} now={now} className={cn('mt-0.5 text-xl font-medium leading-none tracking-[-0.04em]', xlc === 'upcoming' ? 'text-info' : 'text-foreground')} />
+                    ) : (
+                      <span className="mt-0.5 font-serif text-lg font-black leading-none">长期免费</span>
+                    )}
+                  </div>
+                  <AcquireButton href={x.url} health={x.linkHealth} label={xlc === 'upcoming' ? '活动页' : CTA[x.type] ?? '免费获取'} size="md" className="h-auto shrink-0 rounded-none px-5" />
+                </div>
+              </article>
+            );
+          })}
+        </div>
+        <div className="container-x mt-6 text-center">
+          <Link href="/free/" className="inline-flex min-h-11 items-center border-b border-foreground/25 text-base text-fg-2 transition-colors hover:border-primary hover:text-foreground">全部免费情报</Link>
         </div>
       </section>
     );

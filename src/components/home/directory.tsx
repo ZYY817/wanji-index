@@ -180,7 +180,7 @@ export function Directory({ offers, sites, groups, counts }: {
 
   if (!pinned) {
     return (
-      <section ref={ref} aria-labelledby="dir-title" className="container-x bg-background py-24">
+      <section ref={ref} aria-labelledby="dir-title" className="container-x bg-background pb-24 pt-10">
         <h2 id="dir-title" className="text-center font-serif text-[clamp(64px,16vw,120px)] font-black leading-none tracking-[-0.05em]">
           {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85">个资源站</span>
         </h2>
