@@ -263,7 +263,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
                   )}
                 </div>
               </div>
-              <AcquireButton href={o.url} health={o.linkHealth} label={CTA[o.type] ?? '免费获取'} size="lg" className="h-auto shrink-0 rounded-none px-9 text-lg font-medium [&_svg]:size-5" />
+              <AcquireButton href={o.url} health={o.linkHealth} label={lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '免费获取'} size="lg" className="h-auto shrink-0 rounded-none px-9 text-lg font-medium [&_svg]:size-5" />
             </div>
           )}
         </motion.div>

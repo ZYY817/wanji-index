@@ -38,6 +38,12 @@ function Block({ id, title, children }: { id?: string; title: string; children: 
 }
 
 // 教程详情：刊头 → 阅读区（确认问题 → 开始之前 → 逐步排查 → 补充说明 → 恢复方法）+ 吸顶侧栏（步骤目录 / 工具 / 来源 / 继续排查）
+/** 系统：Windows 有具体版本时写成「Windows 10 / 11」，不显示 win10 这类原始值 */
+function osText(os: string[], versions: string[]) {
+  const win = versions.map((v) => v.match(/^win(\d+)$/i)?.[1]).filter(Boolean);
+  return os.map((o) => (o === 'windows' && win.length ? `Windows ${win.join(' / ')}` : zh('os', o))).join('、');
+}
+
 export default async function GuidePage({ params }: Params) {
   const { slug } = await params;
   const data = loadData();
@@ -57,7 +63,7 @@ export default async function GuidePage({ params }: Params) {
         {games.map((x: any) => <Link key={x.id} href={`/games/${x.slug}/`} className="underline decoration-border-strong underline-offset-4 hover:text-primary">{x.name.zh}</Link>)}
       </span>
     ) : undefined },
-    { label: '系统', value: [...(g.os ?? []).map((o: string) => zh('os', o)), ...(g.osVersions ?? [])].join(' / ') },
+    { label: '系统', value: osText(g.os ?? [], g.osVersions ?? []) },
     { label: '核验', value: <span className="flex flex-wrap items-center gap-2">{g.checkedAt}<StatusBadge value={g.reviewStatus} /></span> },
   ].filter((f) => f.value);
 

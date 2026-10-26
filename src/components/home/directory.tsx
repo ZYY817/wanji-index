@@ -174,7 +174,9 @@ export function Directory({ offers, sites, groups, counts }: {
   // 落地：标题先上移、缩小成页眉，各列随后依次落下
   const titleY = useTransform(p, [LAND0, LAND0 + 0.1], [0, -vp.h * 0.5 + 140]);
   const titleS = useTransform(p, [LAND0, LAND0 + 0.1], [1, 0.5]);
-  const ctaO = useTransform(p, [0.74, 0.8], [0, 1]);
+  const ctaO = useTransform(p, [0.74, 0.8, 0.9, 1], [0, 1, 1, 0]);
+  // 收场：索引压暗，装机章的光从一片安静的暗场里长出来，而不是正面撞上一列列文字
+  const indexO = useTransform(p, [0.9, 1], [1, 0.22]);
 
   if (!pinned) {
     return (
@@ -230,14 +232,14 @@ export function Directory({ offers, sites, groups, counts }: {
           </motion.div>
 
           {/* 分类列标题：每列落定时出现，与该列第一个 Logo 左对齐 */}
-          <div aria-hidden className="absolute left-1/2 top-1/2">
+          <motion.div aria-hidden className="absolute left-1/2 top-1/2" style={{ opacity: indexO }}>
             {heads.map((h) => <GroupHead key={h.key} h={h} p={p} />)}
-          </div>
+          </motion.div>
 
           {/* 卡面 → 星图 → 索引 */}
-          <div className="absolute inset-0">
+          <motion.div className="absolute inset-0" style={{ opacity: indexO }}>
             {sites.map((s, i) => <Node key={s.id} s={s} i={i} n={sites.length} slot={slots.get(s.id) ?? { col: 0, x: 0, y: 0 }} g={geo} p={p} e={e} />)}
-          </div>
+          </motion.div>
 
           {/* 标题：中心 → 页眉 */}
           <motion.div className="pointer-events-none absolute inset-0 z-[200] flex items-center justify-center" style={{ y: titleY, scale: titleS, opacity: titleIn }}>

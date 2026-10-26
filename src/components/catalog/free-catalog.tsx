@@ -191,30 +191,16 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
         ) : (
           /* 默认视图：5 大分组清晰呈现 */
           <div className="space-y-16 md:space-y-20">
-            {/* 1. 限时领取：大卡（最多 3 张） */}
-            {limitedOffers.length > 0 && (
+            {/* 1. 限时领取：进行中与已公布的下一期放在同一组大卡里（预告卡带「预告」标与开始倒计时），一行排满，不再各自留半行空白 */}
+            {limitedOffers.length + upcomingOffers.length > 0 && (
               <Reveal as="section" aria-label="限时领取">
                 <SectionTitle
                   title="限时领取"
-                  count={limitedOffers.length}
-                  description="在截止日期前领取，永久保留在个人库中。"
+                  count={limitedOffers.length + upcomingOffers.length}
+                  description={upcomingOffers.length ? '在截止前领取，永久保留在个人库中；标「预告」的是已公布的下一期。' : '在截止日期前领取，永久保留在个人库中。'}
                 />
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {limitedOffers.map((o) => <OfferHeroCard key={o.id} o={o} now={now} />)}
-                </div>
-              </Reveal>
-            )}
-
-            {/* 2. 即将开始：若有预告则以带倒计时的大卡呈现 */}
-            {upcomingOffers.length > 0 && (
-              <Reveal as="section" aria-label="即将开始">
-                <SectionTitle
-                  title="即将开始"
-                  count={upcomingOffers.length}
-                  description="官方已公布的下一期免费活动预告。"
-                />
-                <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                  {upcomingOffers.map((o) => <OfferHeroCard key={o.id} o={o} now={now} />)}
+                  {[...limitedOffers, ...upcomingOffers.filter((u) => !limitedOffers.some((l) => l.id === u.id))].map((o) => <OfferHeroCard key={o.id} o={o} now={now} />)}
                 </div>
               </Reveal>
             )}

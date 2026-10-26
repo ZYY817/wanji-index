@@ -14,13 +14,10 @@ import { Countdown } from './countdown';
 import { Tilt } from '@/components/fx/interact';
 import { isUrgent, liveLifecycle } from './use-lifecycle';
 
-const CTA: Record<string, string> = {
-  limited: '领取 ↗',
-  weekend: '获取 ↗',
-  trial: '试玩 ↗',
-  permanent: '领取 ↗',
-  opensource: '下载 ↗',
-};
+// 按钮自带「↗」图标，文字里不再重复
+const CTA: Record<string, string> = { limited: '领取', weekend: '获取', trial: '试玩', permanent: '领取', opensource: '下载' };
+/** 即将开始的活动还不能领：按钮改为去活动页看看 */
+const ctaOf = (o: OfferVM, lc: string | null) => (lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '领取');
 
 /** 免费大卡（限时领取 / 即将开始） */
 export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number | null; className?: string }) {
@@ -122,7 +119,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             <AcquireButton
               href={o.url}
               health={o.linkHealth}
-              label={CTA[o.type] ?? '领取 ↗'}
+              label={ctaOf(o, lc)}
               size="md"
               className="h-11 px-5"
             />
@@ -195,7 +192,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
           <AcquireButton
             href={o.url}
             health={o.linkHealth}
-            label={CTA[o.type] ?? '领取 ↗'}
+            label={ctaOf(o, o.lifecycle)}
             size="md"
             className="h-11 px-5"
           />

@@ -109,7 +109,7 @@ export function KitStage() {
       <section ref={ref} aria-labelledby="kit-title" className="bg-paper py-24 text-ink">
         <div className="container-x text-center">
           <p className="text-sm text-ink-3">装机工具 · 开发中</p>
-          <h2 id="kit-title" className="mt-3 font-serif text-[clamp(36px,8vw,64px)] font-black leading-[1.1] tracking-[-0.04em]">{hang('缺什么，它比你先知道。')}</h2>
+          <h2 id="kit-title" className="mt-3 text-balance font-serif text-[clamp(32px,8vw,64px)] font-black leading-[1.15] tracking-[-0.04em]">{hang('缺什么，它比你先知道。')}</h2>
           <p className="mx-auto mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2">检测 VC++、DirectX、.NET 等游戏运行库，缺失的从官方源一键补齐。</p>
           <Link href="/kit/" className="mt-8 inline-flex min-h-12 items-center gap-2 rounded-full bg-ink px-6 text-base text-paper">了解装机工具 <ArrowRight aria-hidden className="size-4" /></Link>
         </div>
