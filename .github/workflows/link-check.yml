@@ -1,0 +1,25 @@
+# 每周一早上（北京时间 10:00）自动巡检全站外链；发现失效链接时任务失败，GitHub 会发邮件提醒。
+# 报告在任务页面的 Artifacts 里下载（link-check-report）。也可以在 Actions 页面手动运行。
+name: 外链巡检
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 检查外链
+        run: node scripts/check-links.mjs
+      - name: 上传报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-check-report
+          path: reports/link-check.md

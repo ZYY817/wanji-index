@@ -2,7 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-import '@fontsource-variable/noto-serif-sc/wght.css';
+// 宋体只加载网站用到的字（scripts/subset-fonts.mjs 生成；新增内容出现新字时运行 npm run fonts）
+import '../fonts/serif.css';
 import './globals.css';
 import { Providers } from '@/components/layout/providers';
 import { CommandProvider } from '@/components/layout/command-palette';
@@ -16,8 +17,14 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: `${SITE.name} — PC 游戏资源与工具索引`, template: `%s · ${SITE.name}` },
   description: '为 PC 玩家收集的游戏资源与情报站：游戏档案、免费游戏情报、MOD 与资源站目录、实用工具与报错排查，全部免费查阅。',
-  icons: { icon: withBase('/favicon.svg') },
-  openGraph: { siteName: SITE.name, locale: 'zh_CN', type: 'website' },
+  icons: {
+    icon: [{ url: withBase('/favicon.svg'), type: 'image/svg+xml' }, { url: withBase('/icon-32.png'), sizes: '32x32', type: 'image/png' }],
+    apple: withBase('/apple-touch-icon.png'),
+  },
+  manifest: withBase('/manifest.webmanifest'),
+  // 分享卡片：各页面不单独设置时都继承这张（scripts/gen-og.mjs 生成）
+  openGraph: { siteName: SITE.name, locale: 'zh_CN', type: 'website', images: [{ url: withBase('/og.jpg'), width: 1200, height: 630, alt: `${SITE.name}——PC 游戏资源，一处收齐` }] },
+  twitter: { card: 'summary_large_image', images: [withBase('/og.jpg')] },
 };
 
 export const viewport: Viewport = { themeColor: '#131211', colorScheme: 'dark' };

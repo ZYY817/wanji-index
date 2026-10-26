@@ -193,6 +193,20 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
               </Reveal>
             )}
 
+            {limitedOffers.length + upcomingOffers.length === 0 && (
+              <Reveal as="section" aria-label="限时领取">
+                <SectionHeading title="限时领取" count={0} />
+                <p className="max-w-[44em] text-base leading-[1.8] text-fg-2">
+                  这一期的限时领取已经结束。Epic 一般在每周四晚上公布下一期，本站会随后更新；在那之前，可以先看看下面的长期免费游戏，或者去这些地方查看最新动态：
+                </p>
+                <p className="mt-3 flex flex-wrap gap-x-6 gap-y-1">
+                  {TRACKERS.map(([label, url]) => (
+                    <ExtLink key={url} href={url} className="inline-flex min-h-11 items-center text-base text-foreground underline decoration-primary underline-offset-4 hover:text-primary">{label}</ExtLink>
+                  ))}
+                </p>
+              </Reveal>
+            )}
+
             {/* 3. 永久免费：紧凑列表行 */}
             {permanentOffers.length > 0 && (
               <Reveal as="section" aria-label="永久免费">

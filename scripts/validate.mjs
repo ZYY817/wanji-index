@@ -9,6 +9,7 @@ import { join } from 'node:path';
 import { loadSiteConfig, loadEnums, loadRedirects, PROJECT_ROOT } from '../src/lib/config.mjs';
 import { loadSchemas, ENTITY_DIRS } from '../src/lib/schema.mjs';
 import { isEligible } from '../src/lib/eligibility.mjs';
+import { computeLifecycle } from '../src/lib/lifecycle.mjs';
 
 const argDir = process.argv[process.argv.indexOf('--data') + 1] || null;
 const useCustomDir = process.argv.includes('--data');
@@ -75,6 +76,19 @@ for (const { rec, file } of collections.games) {
 }
 for (const { rec, file } of collections.offers)
   if (ref(rec.gameId)) warnings.push(`可选关联悬空 ${file}: gameId=${rec.gameId}`);
+
+// 免费情报的时效提醒：已结束超过 7 天的建议清理；没有进行中 / 即将开始的限时领取时提醒更新
+{
+  const now = Date.now();
+  const staleDays = loadSiteConfig().review?.staleDays?.offerTimed ?? 14;
+  const lcOf = (rec) => computeLifecycle(rec, now, staleDays);
+  for (const { rec, file } of collections.offers) {
+    const end = rec.endDate ? Date.parse(/T/.test(rec.endDate) ? rec.endDate : rec.endDate + 'T23:59:59+08:00') : NaN;
+    if (lcOf(rec) === 'ended' && now - end > 7 * 864e5) warnings.push(`免费情报已结束 ${Math.floor((now - end) / 864e5)} 天 ${file}（建议删除或改为下一期）`);
+  }
+  const live = collections.offers.filter(({ rec }) => rec.type === 'limited' && ['active', 'upcoming'].includes(lcOf(rec)));
+  if (!live.length) warnings.push('当前没有进行中或即将开始的限时领取——首页免费章只剩长期免费，记得补上新一期');
+}
 
 // published 未达标 → 警告（页不会生成，但不阻断）
 for (const [coll, list] of Object.entries(collections))

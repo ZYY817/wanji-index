@@ -99,3 +99,14 @@ SEO：canonical、Open Graph、JSON-LD（WebSite / VideoGame / BreadcrumbList / 
 ## 部署
 
 构建产物 `out/` 为纯静态文件，可直接部署到 Cloudflare Pages 等静态托管；`_redirects` 随产物生成。部署域名确定后修改 `config/site.json` 并重新构建。
+
+## 维护命令
+
+| 命令 | 什么时候用 |
+|---|---|
+| `npm run fonts` | 新增内容后，构建提示「宋体子集缺少 N 个字」时运行（需本机 Python：`pip install fonttools brotli`），把生成的 `src/fonts/` 一起提交 |
+| `npm run check:links` | 检查全站外链，报告写到 `reports/link-check.md`；加 `-- --write` 会把结果写回数据里的 `linkHealth`。推到 GitHub 后每周一自动运行（`.github/workflows/link-check.yml`） |
+| `npm run og` | 收录数量变化较大时重新生成分享卡片图 `public/og.jpg` |
+| `npm run icons` | 改了 `public/favicon.svg` 后重新生成各尺寸 PNG 图标 |
+
+免费情报过期：页面会在浏览器里按当前时间自动把已结束的活动移入归档；构建时会提示「已结束超过 7 天」的条目和「当前没有进行中的限时领取」，看到提示后更新 `data/offers/`。
