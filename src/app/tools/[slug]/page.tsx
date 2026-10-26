@@ -11,6 +11,7 @@ import { FeedbackLink } from '@/components/layout/feedback';
 import { DetailMasthead, Notice, type DetailFact } from '@/components/layout/detail-masthead';
 import { DetailSection, type DetailSectionMeta } from '@/components/layout/detail-section';
 import { Reveal } from '@/components/fx/reveal';
+import { ToolLogo } from '@/components/ui/site-logo';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -92,6 +93,7 @@ export default async function ToolPage({ params }: Params) {
     <>
       <DetailMasthead
         crumbs={[['工具', '/tools/'], [t.name]]}
+        mark={<ToolLogo id={t.id} name={t.name} size={52} />}
         kicker={zh('toolType', t.type)}
         title={t.name}
         summary={t.summary}

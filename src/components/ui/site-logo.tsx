@@ -1,19 +1,17 @@
 import { withBase } from '@/lib/base';
 import { cn } from '@/lib/utils';
-import LOGOS from '@/lib/site-logos.json';
+import SITE_LOGOS from '@/lib/site-logos.json';
+import TOOL_LOGOS from '@/lib/tool-logos.json';
 import { Monogram } from './monogram';
 
-const MAP = LOGOS as Record<string, string>;
+type Tone = 'dark' | 'paper';
 
 /**
- * 资源站标识：优先显示站点自己的官方图标（scripts/fetch-logos.mjs 下载到 public/logos，构建时即是本地文件），
- * 没有图标时回退到字母图章。图标放在统一尺寸的底板里，保证不同来源、不同形状的 logo 排在一起也整齐。
+ * 图标底板：不同来源、不同形状的官方图标放进统一尺寸的方形底板，排在一起也整齐；没有图标时回退到字母图章。
+ * 图标都是构建时下载到 public/logos 的本地文件，访客端不请求第三方。
  */
-export function SiteLogo({
-  id, name, size = 40, tone = 'dark', className,
-}: { id: string; name: string; size?: number; tone?: 'dark' | 'paper'; className?: string }) {
-  const src = MAP[id];
-  if (!src) return <Monogram seed={id} name={name} size={size} tone={tone === 'paper' ? 'ink' : 'color'} className={className} />;
+function LogoTile({ src, seed, name, size, tone, className }: { src?: string; seed: string; name: string; size: number; tone: Tone; className?: string }) {
+  if (!src) return <Monogram seed={seed} name={name} size={size} tone={tone === 'paper' ? 'ink' : 'color'} className={className} />;
   return (
     <span
       aria-hidden
@@ -27,4 +25,14 @@ export function SiteLogo({
       <img src={withBase(src)} alt="" loading="lazy" decoding="async" className="size-[68%] object-contain" />
     </span>
   );
+}
+
+/** 资源站图标（scripts/fetch-logos.mjs） */
+export function SiteLogo({ id, name, size = 40, tone = 'dark', className }: { id: string; name: string; size?: number; tone?: Tone; className?: string }) {
+  return <LogoTile src={(SITE_LOGOS as Record<string, string>)[id]} seed={id} name={name} size={size} tone={tone} className={className} />;
+}
+
+/** 工具图标（scripts/fetch-tool-logos.mjs） */
+export function ToolLogo({ id, name, size = 40, tone = 'dark', className }: { id: string; name: string; size?: number; tone?: Tone; className?: string }) {
+  return <LogoTile src={(TOOL_LOGOS as Record<string, string>)[id]} seed={id} name={name} size={size} tone={tone} className={className} />;
 }

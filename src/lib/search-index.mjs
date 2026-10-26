@@ -28,7 +28,7 @@ export function buildSearchIndex(data, rel) {
     });
   for (const t of data.tools)
     items.push({
-      type: 'tool', typeLabel: '工具', title: t.name, sub: zh('toolType', t.type),
+      type: 'tool', typeLabel: '工具', title: t.name, sub: zh('toolType', t.type), seed: t.id,
       url: `/tools/${t.slug}/`, summary: t.summary, keywords: kw(t),
     });
   for (const g of data.guides)

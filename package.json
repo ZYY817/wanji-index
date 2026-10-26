@@ -9,6 +9,7 @@
     "validate": "node scripts/validate.mjs",
     "fonts": "node scripts/subset-fonts.mjs",
     "icons": "node scripts/gen-icons.mjs",
+    "logos": "node scripts/fetch-logos.mjs && node scripts/fetch-tool-logos.mjs",
     "og": "node scripts/gen-og.mjs",
     "check:artifacts": "node scripts/check-artifacts.mjs out",
     "check:contrast": "node scripts/check-contrast.mjs",
