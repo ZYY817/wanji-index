@@ -34,7 +34,7 @@ export function GameRow({ g }: { g: GameVM }) {
         <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="size-full" />
       </div>
       <span className="min-w-0">
-        <span className="block truncate font-serif text-lg font-bold tracking-[-0.01em] transition-colors group-hover:text-primary">{g.name}</span>
+        <span className="block truncate text-lg font-semibold tracking-[-0.01em] transition-colors group-hover:text-primary">{g.name}</span>
         <span className="block truncate text-sm text-fg-2">
           {g.en}
           {g.hasOffer && <span className="ml-2 font-medium text-primary">免费中</span>}

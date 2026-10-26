@@ -92,7 +92,7 @@ export default async function GuidePage({ params }: Params) {
         <article className="min-w-0 lg:col-span-8">
           {g.problem?.errorText && (
             <Block title="确认问题">
-              <pre className="whitespace-pre-wrap break-words border-l-2 border-bad bg-surface-2 p-5 font-mono text-sm leading-[1.8] text-bad-text">{g.problem.errorText}</pre>
+              <pre className="whitespace-pre-wrap break-words rounded-sm bg-bad/[0.07] p-5 ring-1 ring-bad/25 font-mono text-sm leading-[1.8] text-bad-text">{g.problem.errorText}</pre>
               {g.problem.conditions && <p className="mt-5 text-base leading-[1.8] text-fg-2"><span className="text-foreground">出现条件：</span>{g.problem.conditions}</p>}
             </Block>
           )}
@@ -117,11 +117,11 @@ export default async function GuidePage({ params }: Params) {
                   </div>
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-start justify-between gap-3">
-                      <h3 className="font-serif text-2xl font-bold leading-snug">{s.title || `步骤 ${i + 1}`}</h3>
+                      <h3 className="text-xl font-semibold leading-snug md:text-[22px]">{s.title || `步骤 ${i + 1}`}</h3>
                       {s.verified && s.verified !== 'verified' && <StatusBadge value={s.verified} />}
                     </div>
                     <p className="mt-4 whitespace-pre-line text-lg leading-[1.8] text-foreground/90">{s.action}</p>
-                    <div className="mt-5 border-l-2 border-ok bg-ok/5 px-4 py-3">
+                    <div className="mt-5 rounded-sm bg-ok/[0.06] px-4 py-3 ring-1 ring-ok/20">
                       <p className="text-sm font-medium text-ok">预期结果</p>
                       <p className="mt-1 text-base leading-[1.75] text-foreground/90">{s.expected}</p>
                     </div>
@@ -179,7 +179,7 @@ export default async function GuidePage({ params }: Params) {
               <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">用到的工具</h2>
               {tools.map((t: any) => (
                 <Link key={t.id} href={`/tools/${t.slug}/`} className="group block border-b border-border py-4">
-                  <span className="flex items-center justify-between font-serif text-xl font-bold transition-colors group-hover:text-primary">
+                  <span className="flex items-center justify-between text-lg font-semibold transition-colors group-hover:text-primary">
                     {t.name}
                     <ArrowRight aria-hidden className="size-4 text-fg-3 transition-transform group-hover:translate-x-1" />
                   </span>

@@ -7,7 +7,7 @@ import { zh } from '@/lib/labels.mjs';
 
 export type ChannelItem = { platform: string; type: string; typeLabel: string; url: string; note: string; health?: string; checkedAt: string };
 export type PathItem = { kind: '存档' | '配置'; os: string; path: string; note?: string };
-export type EntryItem = { id: string; name: string; typeLabel: string; url: string; note?: string; health?: string; checkedAt: string; site?: { name: string; slug: string } };
+export type EntryItem = { id: string; name: string; typeLabel: string; url: string; note?: string; health?: string; checkedAt: string; site?: { id: string; name: string; slug: string } };
 export type ToolItem = { id: string; slug: string; name: string; summary: string; typeLabel: string };
 export type GuideItem = { id: string; slug: string; title: string; kindLabel: string; steps: number };
 export type FaqItem = { question: string; answer?: string; guide?: { slug: string; title: string } };
@@ -59,6 +59,13 @@ export function gameDetail(slug: string): GameDetail | null {
   const rel = buildRelations(data);
   const now = Date.now();
 
+  // 在这款游戏自己的档案页里，条目标题不再重复游戏名：「星露谷物语 MOD 专区」→「MOD 专区」
+  const gameNames = [g.name?.zh, g.name?.en, ...(g.aliases ?? [])].filter(Boolean).sort((a: string, b: string) => b.length - a.length);
+  const withoutGame = (t: string) => {
+    for (const n of gameNames) if (t.startsWith(n)) { const rest = t.slice(n.length).replace(/^[\s：:·—-]+/, ''); if (rest) return rest; }
+    return t;
+  };
+
   const channels: ChannelItem[] = g.channels.map((c: any) => ({
     platform: c.platform,
     type: c.type,
@@ -77,8 +84,8 @@ export function gameDetail(slug: string): GameDetail | null {
   const entries: EntryItem[] = (rel.entriesByGame.get(g.id) ?? []).map((e: any) => {
     const site = data.sites.find((s: any) => s.id === e.siteId);
     return {
-      id: e.id, name: e.name, typeLabel: zh('entryType', e.type), url: e.url, note: e.note,
-      health: e.linkHealth, checkedAt: e.checkedAt, site: site ? { name: site.name, slug: site.slug } : undefined,
+      id: e.id, name: withoutGame(e.name), typeLabel: zh('entryType', e.type), url: e.url, note: e.note,
+      health: e.linkHealth, checkedAt: e.checkedAt, site: site ? { id: site.id, name: site.name, slug: site.slug } : undefined,
     };
   });
 
@@ -87,7 +94,7 @@ export function gameDetail(slug: string): GameDetail | null {
   }));
 
   const guides: GuideItem[] = (rel.guidesByGame.get(g.id) ?? []).map((x: any) => ({
-    id: x.id, slug: x.slug, title: x.title, kindLabel: zh('guideKind', x.kind), steps: x.steps?.length ?? 0,
+    id: x.id, slug: x.slug, title: withoutGame(x.title), kindLabel: zh('guideKind', x.kind), steps: x.steps?.length ?? 0,
   }));
 
   const faqs: FaqItem[] = (g.faqs ?? []).map((f: any) => {

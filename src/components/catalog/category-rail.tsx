@@ -50,13 +50,9 @@ export function CategoryRail({
               onClick={() => onSelect(c.value)}
               className={cn(
                 'flex min-h-11 shrink-0 items-center gap-3 text-left text-base transition-colors',
-                // 移动端样式：横向卡片式按钮，点击区域 ≥ 44px
-                'rounded-xs px-3.5 lg:w-full lg:rounded-none lg:px-0 lg:py-2.5',
-                // 桌面端样式：2px 左边线，激活为 primary，未激活为 transparent
-                'lg:border-l-2 lg:pl-3',
-                on
-                  ? 'border-b-2 border-primary bg-surface-2 font-medium text-foreground lg:border-b-0 lg:border-l-primary lg:bg-transparent'
-                  : 'text-fg-2 hover:text-foreground lg:border-l-transparent',
+                // 手机：横向一排的按钮；桌面：纵向列表。当前项都是圆角浅底 + 白字（不用左侧竖条）
+                'rounded-sm px-3.5 lg:w-full lg:px-3 lg:py-2.5',
+                on ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
               )}
             >
               <span className="flex-1 whitespace-nowrap">{c.label}</span>

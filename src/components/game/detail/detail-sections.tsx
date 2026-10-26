@@ -1,13 +1,14 @@
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
 import type { ChannelItem, EntryItem, FaqItem, GuideItem, PathItem, ToolItem } from '@/lib/game-detail';
 import { zh } from '@/lib/labels.mjs';
 import { AcquireButton } from '@/components/ui/button';
 import { CopyButton } from '@/components/ui/copy-button';
-import { ExtLink } from '@/components/ui/ext-link';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { StatusBadge, Tag } from '@/components/ui/badge';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ListRow } from '@/components/ui/list-row';
+import { SiteLogo, ToolLogo } from '@/components/ui/site-logo';
+import { fileTokens } from '@/components/ui/file-tokens';
 
 /** 健康状态只在「不正常」时才出现，正常链接不加噪音 */
 function Health({ value }: { value?: string }) {
@@ -26,7 +27,7 @@ export function ChannelList({ items }: { items: ChannelItem[] }) {
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-3">
               <PlatformMark platform={c.platform} />
-              <span className="text-lg font-bold text-foreground">{zh('platform', c.platform)}</span>
+              <span className="text-lg font-semibold text-foreground">{zh('platform', c.platform)}</span>
               <Tag>{c.typeLabel}</Tag>
               <Health value={c.health} />
             </div>
@@ -71,85 +72,51 @@ export function PathList({ items }: { items: PathItem[] }) {
   );
 }
 
-/** MOD 与汉化专区：去除顶部重合粗线，项末无底线 */
+/** MOD 与汉化：来源站点的图标 → 条目名（已去掉游戏名）+ 类型 → 一句说明 → 来自哪个站 · 核验日期；整行是外链 */
 export function EntryList({ items }: { items: EntryItem[] }) {
   return (
-    <ul>
+    <ul className="-mx-4 md:-mx-5">
       {items.map((e) => (
-        <li key={e.id} className="border-b border-border py-6 last:border-b-0">
-          <div className="flex flex-wrap items-center gap-3">
-            <ExtLink
-              href={e.url}
-              health={e.health}
-              className="font-serif text-xl font-bold leading-tight transition-colors hover:text-primary md:text-2xl"
-            >
-              {e.name}
-            </ExtLink>
-            <Tag>{e.typeLabel}</Tag>
-            <Health value={e.health} />
-          </div>
-          {e.note && <p className="mt-2 text-base leading-relaxed text-fg-2 text-pretty">{e.note}</p>}
-          <p className="mt-3 text-sm text-fg-2">
-            {e.site && (
-              <>
-                来自{' '}
-                <Link
-                  href={`/resources/${e.site.slug}/`}
-                  className="text-foreground underline decoration-border-strong underline-offset-4 transition-colors hover:text-primary"
-                >
-                  {e.site.name}
-                </Link>
-                {' · '}
-              </>
-            )}
-            <span className="font-mono text-2xs text-fg-3">核验于 {e.checkedAt}</span>
-          </p>
+        <li key={e.id} className="border-b border-border last:border-b-0">
+          <ListRow
+            href={e.url}
+            external
+            health={e.health}
+            media={e.site ? <SiteLogo id={e.site.id} name={e.site.name} size={44} /> : undefined}
+            title={e.name}
+            badge={<><Tag>{e.typeLabel}</Tag><Health value={e.health === 'dead' ? undefined : e.health} /></>}
+            description={e.note}
+            meta={<>{e.site ? `来自 ${e.site.name}` : '外部链接'} · <span className="font-mono text-2xs">核验于 {e.checkedAt}</span></>}
+          />
         </li>
       ))}
     </ul>
   );
 }
 
-/** 工具推荐列表 */
+/** 用到的工具：工具图标 → 名称 + 用途 → 一句说明 */
 export function ToolList({ items }: { items: ToolItem[] }) {
   return (
-    <ul className="grid gap-px overflow-hidden rounded-xs border border-border bg-border sm:grid-cols-2">
+    <ul className="-mx-4 md:-mx-5">
       {items.map((t) => (
-        <li key={t.id} className="bg-background">
-          <Link href={`/tools/${t.slug}/`} className="group flex h-full flex-col p-6 transition-colors hover:bg-card">
-            <span className="text-sm font-medium text-fg-2">{t.typeLabel}</span>
-            <span className="mt-2 flex items-center justify-between gap-3 font-serif text-xl font-bold leading-tight transition-colors group-hover:text-primary md:text-2xl">
-              {t.name}
-              <ArrowRight aria-hidden className="size-5 shrink-0 text-fg-3 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-            </span>
-            <span className="mt-3 text-base leading-relaxed text-fg-2">{t.summary}</span>
-          </Link>
+        <li key={t.id} className="border-b border-border last:border-b-0">
+          <ListRow href={`/tools/${t.slug}/`} media={<ToolLogo id={t.id} name={t.name} size={44} />} title={t.name} aside={t.typeLabel} description={t.summary} />
         </li>
       ))}
     </ul>
   );
 }
 
-/** 教程列表：步骤编号 + 标题 + 补充信息 */
+/** 相关教程：标题（已去掉游戏名）→ 类型 · 步骤数 */
 export function GuideList({ items }: { items: GuideItem[] }) {
   return (
-    <ol>
-      {items.map((x, i) => (
-        <li key={x.id}>
-          <Link
-            href={`/guides/${x.slug}/`}
-            className="group grid grid-cols-[40px_minmax(0,1fr)_auto] items-baseline gap-4 border-b border-border py-5 transition-colors hover:bg-card/40 last:border-b-0"
-          >
-            <span className="font-mono text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
-            <span>
-              <span className="block font-serif text-xl font-bold leading-snug transition-colors group-hover:text-primary">{x.title}</span>
-              <span className="mt-1 block text-sm text-fg-2">{x.kindLabel} · {x.steps} 步</span>
-            </span>
-            <ArrowRight aria-hidden className="size-5 text-fg-3 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-          </Link>
+    <ul className="-mx-4 md:-mx-5">
+      {items.map((x) => (
+        <li key={x.id} className="border-b border-border last:border-b-0">
+          <ListRow href={`/guides/${x.slug}/`} title={fileTokens(x.title)} meta={`${x.kindLabel} · ${x.steps} 个步骤`} />
         </li>
       ))}
-    </ol>
+    </ul>
   );
 }
 

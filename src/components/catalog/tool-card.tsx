@@ -10,7 +10,7 @@ export function ToolRow({ t }: { t: any }) {
   return (
     <ListRow
       href={`/tools/${t.slug}/`}
-      media={<ToolLogo id={t.id} name={t.name} size={48} />}
+      media={<ToolLogo id={t.id} name={t.name} size={44} />}
       title={t.name}
       aside={zh('toolType', t.type)}
       badge={t.linkHealth !== 'ok' ? <StatusBadge value={t.linkHealth} /> : undefined}

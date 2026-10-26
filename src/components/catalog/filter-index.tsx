@@ -89,9 +89,9 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
             aria-pressed={active}
             onClick={() => update({ sort: s.key })}
             className={cn(
-              'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+              'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
               touch ? 'min-h-11' : 'min-h-9',
-              active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
+              active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
             )}
           >
             <span className="flex-1">{s.label}</span>
@@ -113,9 +113,9 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
       aria-pressed={allActive}
       onClick={() => update({ genre: '' })}
       className={cn(
-        'group flex w-full items-center gap-2 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+        'group flex w-full items-center gap-2 rounded-sm px-3 py-2 text-left text-base transition-colors',
         primary ? 'min-h-11' : 'min-h-9',
-        allActive ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
+        allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
       )}
     >
       <span className="flex-1">全部类型</span>
@@ -167,8 +167,8 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 aria-pressed={active}
                 onClick={() => update({ genre: active ? '' : key })}
                 className={cn(
-                  'group flex min-h-9 w-full min-w-0 items-center gap-2 border-l-2 py-2 pl-3 text-left text-base transition-colors',
-                  active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
+                  'group flex min-h-9 w-full min-w-0 items-center gap-2 rounded-sm px-3 py-2 text-left text-base transition-colors',
+                  active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
                 )}
               >
                 <span className="flex-1 truncate">{genreZh(key)}</span>
@@ -201,9 +201,9 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
         aria-pressed={allActive}
         onClick={() => update({ platform: '' })}
         className={cn(
-          'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+          'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
           primary ? 'min-h-11' : 'min-h-9',
-          allActive ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
+          allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
         )}
       >
         <span className="flex-1">全部平台</span>
@@ -218,9 +218,9 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
             aria-pressed={active}
             onClick={() => update({ platform: active ? '' : key })}
             className={cn(
-              'group flex w-full items-center gap-2.5 border-l-2 py-2 pl-3 text-left text-base transition-colors',
+              'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
               primary ? 'min-h-11' : 'min-h-9',
-              active ? 'border-l-primary font-medium text-foreground' : 'border-l-transparent text-fg-2 hover:text-foreground',
+              active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
             )}
           >
             <PlatformMark platform={key} withLabel />

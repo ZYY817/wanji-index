@@ -1,7 +1,5 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import { ArrowRight } from 'lucide-react';
 import { loadData } from '@/lib/data.mjs';
 import { zh } from '@/lib/labels.mjs';
 import { StatusBadge } from '@/components/ui/badge';
@@ -12,6 +10,8 @@ import { DetailMasthead, Notice, type DetailFact } from '@/components/layout/det
 import { DetailSection, type DetailSectionMeta } from '@/components/layout/detail-section';
 import { Reveal } from '@/components/fx/reveal';
 import { ToolLogo } from '@/components/ui/site-logo';
+import { ListRow } from '@/components/ui/list-row';
+import { fileTokens } from '@/components/ui/file-tokens';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -50,13 +50,10 @@ export default async function ToolPage({ params }: Params) {
     ...(games.length ? [{
       id: 'games', title: '适用游戏', count: games.length, lead: '这些游戏的档案里收录了这个工具。',
       body: (
-        <ul className="grid border-t border-border sm:grid-cols-2 sm:gap-x-10">
+        <ul className="-mx-4 grid sm:grid-cols-2 sm:gap-x-6 md:-mx-5">
           {games.map((g: any) => (
             <li key={g.id} className="border-b border-border">
-              <Link href={`/games/${g.slug}/`} className="group flex min-h-16 items-center justify-between gap-4 font-serif text-xl font-bold transition-colors hover:text-primary">
-                {g.name.zh}
-                <ArrowRight aria-hidden className="size-5 text-fg-3 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-              </Link>
+              <ListRow href={`/games/${g.slug}/`} title={g.name.zh} meta={g.name.en} />
             </li>
           ))}
         </ul>
@@ -65,16 +62,13 @@ export default async function ToolPage({ params }: Params) {
     ...(guides.length ? [{
       id: 'guides', title: '相关教程', count: guides.length,
       body: (
-        <ol className="border-t border-border-strong">
+        <ul className="-mx-4 md:-mx-5">
           {guides.map((g: any) => (
-            <li key={g.id}>
-              <Link href={`/guides/${g.slug}/`} className="group flex items-center justify-between gap-4 border-b border-border py-5 font-serif text-xl font-bold transition-colors hover:text-primary">
-                {g.title}
-                <ArrowRight aria-hidden className="size-5 shrink-0 text-fg-3 transition-transform group-hover:translate-x-1 group-hover:text-primary" />
-              </Link>
+            <li key={g.id} className="border-b border-border last:border-b-0">
+              <ListRow href={`/guides/${g.slug}/`} title={fileTokens(g.title)} meta={`${g.steps?.length ?? 0} 个步骤`} />
             </li>
           ))}
-        </ol>
+        </ul>
       ),
     }] : []),
     ...(t.sources?.length ? [{

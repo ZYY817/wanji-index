@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { loadData, buildRelations } from '@/lib/data.mjs';
@@ -14,6 +13,7 @@ import { DetailSection } from '@/components/layout/detail-section';
 import { PosterCard } from '@/components/game/poster-card';
 import { Reveal } from '@/components/fx/reveal';
 import { cn, domainOf } from '@/lib/utils';
+import { ListRow } from '@/components/ui/list-row';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -71,31 +71,20 @@ export default async function SitePage({ params }: Params) {
       <div className="container-x">
         <DetailSection meta={sections[0]} index={0}>
           {entries.length ? (
-            <ul>
+            <ul className="-mx-4 md:-mx-5">
               {entries.map((e: any) => {
                 const g = gameOf(e.gameId);
                 return (
-                  <li key={e.id} className="border-b border-border py-6 first:pt-0 last:border-b-0">
-                    <div className="flex flex-wrap items-center gap-3">
-                      <ExtLink href={e.url} health={e.linkHealth} className="font-serif text-xl font-bold leading-tight transition-colors hover:text-primary">
-                        {e.name}
-                      </ExtLink>
-                      <Tag>{zh('entryType', e.type)}</Tag>
-                      {e.linkHealth !== 'ok' && <StatusBadge value={e.linkHealth} />}
-                    </div>
-                    {e.note && <p className="mt-2 text-base text-fg-2">{e.note}</p>}
-                    <p className="mt-3 text-sm text-fg-3">
-                      {g && (
-                        <>
-                          游戏档案{' '}
-                          <Link href={`/games/${g.slug}/`} className="text-fg-2 underline decoration-border-strong underline-offset-4 transition-colors hover:text-foreground">
-                            {g.name.zh}
-                          </Link>
-                          {' · '}
-                        </>
-                      )}
-                      核验于 {e.checkedAt}
-                    </p>
+                  <li key={e.id} className="border-b border-border last:border-b-0">
+                    <ListRow
+                      href={e.url}
+                      external
+                      health={e.linkHealth}
+                      title={e.name}
+                      badge={<><Tag>{zh('entryType', e.type)}</Tag>{e.linkHealth !== 'ok' && e.linkHealth !== 'dead' && <StatusBadge value={e.linkHealth} />}</>}
+                      description={e.note}
+                      meta={<>{g ? `游戏：${g.name.zh} · ` : ''}<span className="font-mono text-2xs">核验于 {e.checkedAt}</span></>}
+                    />
                   </li>
                 );
               })}

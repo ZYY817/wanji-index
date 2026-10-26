@@ -20,7 +20,7 @@ function ResultRow({ item }: { item: RecentItem }) {
         : item.type === 'tool' ? <ToolLogo id={item.seed ?? item.title} name={item.title} size={48} />
         : <SiteLogo id={item.seed ?? item.title} name={item.title} size={48} />}
       <span className="min-w-0 flex-1">
-        <span className="block font-serif text-xl font-bold transition-colors group-hover:text-primary">{item.title}</span>
+        <span className="block text-lg font-semibold transition-colors group-hover:text-primary">{item.title}</span>
         {item.sub && <span className="mt-1 block truncate text-sm text-fg-3">{item.sub}</span>}
       </span>
       <span className="hidden text-sm text-fg-3 sm:block">{TYPE_ZH[item.type]}</span>

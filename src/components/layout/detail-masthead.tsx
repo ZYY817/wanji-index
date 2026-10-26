@@ -69,10 +69,10 @@ export function DetailMasthead({
   );
 }
 
-/** 访问前须知 / 使用前须知：警示色左线 + 浅底，用在刊头下方 */
+/** 访问前须知 / 使用前须知：细边框浅底，用在刊头下方 */
 export function Notice({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <div className="border-l-2 border-warn bg-warn/5 px-5 py-4">
+    <div className="rounded-sm bg-warn/[0.06] px-5 py-4 ring-1 ring-warn/25">
       <p className="text-sm font-medium text-warn">{title}</p>
       <div className="mt-2 space-y-2 text-base leading-[1.75] text-fg-2">{children}</div>
     </div>

@@ -65,7 +65,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             )}
           </div>
 
-          <h3 className="mt-2.5 font-serif text-xl font-bold leading-snug tracking-tight text-foreground md:text-2xl">
+          <h3 className="mt-2.5 text-xl font-semibold leading-snug text-foreground">
             {o.gameSlug ? (
               <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-primary">
                 {mainTitle}
@@ -157,7 +157,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
-            <span className="font-serif text-lg font-bold text-foreground">
+            <span className="text-lg font-semibold text-foreground">
               {o.gameSlug ? (
                 <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-primary">
                   {mainTitle}

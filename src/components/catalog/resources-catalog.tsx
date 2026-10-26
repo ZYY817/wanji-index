@@ -13,7 +13,7 @@ function SiteRow({ s }: { s: SiteVM }) {
     <ListRow
       href={`/resources/${s.slug}/`}
       className="border-b border-border"
-      media={<SiteLogo id={s.id} name={s.name} size={48} />}
+      media={<SiteLogo id={s.id} name={s.name} size={44} />}
       title={s.name}
       aside={<span className="font-mono">{s.domain}</span>}
       badge={s.linkHealth !== 'ok' ? <StatusBadge value={s.linkHealth} /> : undefined}

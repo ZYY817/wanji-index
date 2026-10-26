@@ -30,7 +30,7 @@ export default function KitPage() {
           <ul className="grid gap-px border border-border bg-border sm:grid-cols-2">
             {KIT_FEATURES.map((f) => (
               <li key={f.no} className="bg-background p-6 md:p-7">
-                <h3 className="font-serif text-2xl font-bold leading-snug">{f.title}</h3>
+                <h3 className="text-xl font-semibold leading-snug">{f.title}</h3>
                 <p className="mt-3 text-base leading-[1.75] text-fg-2">{f.desc}</p>
               </li>
             ))}
