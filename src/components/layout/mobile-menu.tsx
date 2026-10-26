@@ -127,13 +127,13 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
 
             <div className="mt-8 flex items-center gap-3">
               <span aria-hidden className="h-px w-8 bg-border-strong" />
-              <span className="meta text-2xs leading-none text-fg-3">只指向可信的原始来源</span>
+              <span className="meta text-2xs leading-none text-fg-3">PC 游戏资源，一处收齐</span>
             </div>
           </nav>
 
           <div className="shrink-0 border-t border-border px-[var(--gutter)] pb-[max(1rem,env(safe-area-inset-bottom))] pt-4">
             <p className="meta flex items-center justify-between gap-4 text-2xs leading-none text-fg-3">
-              <span className="truncate">只整理 · 只引导 · 不托管任何文件</span>
+              <span className="truncate">全部免费 · 随时更新</span>
               <span className="inline-flex shrink-0 items-center gap-1.5">
                 <Kbd className="h-[18px] min-w-[18px] px-1 text-2xs">ESC</Kbd>
                 关闭

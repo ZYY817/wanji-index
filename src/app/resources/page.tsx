@@ -4,7 +4,7 @@ import { siteVM } from '@/lib/present';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { ResourcesCatalog } from '@/components/catalog/resources-catalog';
 
-export const metadata: Metadata = { title: '资源站', description: 'MOD、汉化、攻略、补丁等可信游戏资源站索引', alternates: { canonical: '/resources/' } };
+export const metadata: Metadata = { title: '资源站', description: 'MOD、汉化、攻略、补丁等游戏资源站合集', alternates: { canonical: '/resources/' } };
 
 export default function ResourcesPage() {
   const data = loadData();
@@ -17,7 +17,7 @@ export default function ResourcesPage() {
       <IndexMasthead
         title="资源站"
         count={sites.length}
-        description={`收录 ${sites.length} 个官方或公认可信的站点，分 ${categories} 类。直连官网与主流开源社区，如实标注语言、网络与注册门槛。`}
+        description={`收录 ${sites.length} 个玩家常用的资源站，分 ${categories} 类。标注语言、网络与注册门槛，去之前先心里有数。`}
       />
       <ResourcesCatalog sites={sites} />
     </>

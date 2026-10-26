@@ -310,7 +310,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
             ))}
           </h1>
           <p className="mt-6 max-w-[34em] animate-rise text-lg leading-[1.75] text-foreground/85" style={{ animationDelay: 'calc(var(--intro-delay, 0s) + 0.45s)' }}>
-            去哪买、现在免不免费、MOD 与汉化、存档与报错。{total} 款 PC 游戏的档案，只指向官方与可信来源。
+            去哪买、现在免不免费、MOD 与汉化、存档与报错。{total} 款 PC 游戏的资料，一处收齐，全部免费。
           </p>
           <div className="mt-9 w-full max-w-[600px] animate-rise" style={{ animationDelay: 'calc(var(--intro-delay, 0s) + 0.55s)' }}>
             <Magnetic strength={6} radius={60}>

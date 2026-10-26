@@ -5,7 +5,7 @@ import { offerVM, buildStamp } from '@/lib/present';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { FreeCatalog } from '@/components/catalog/free-catalog';
 
-export const metadata: Metadata = { title: '免费游戏', description: '限时领取、永久免费、试玩、免费周末与开源游戏，按官方来源核验。', alternates: { canonical: '/free/' } };
+export const metadata: Metadata = { title: '免费游戏', description: '限时领取、永久免费、试玩、免费周末与开源游戏情报，随时更新。', alternates: { canonical: '/free/' } };
 
 
 export default function FreePage() {

@@ -7,21 +7,20 @@ import { buildStamp } from '@/lib/present';
 import site from '../../../config/site.json';
 import pkg from '../../../package.json';
 
-export const metadata: Metadata = { title: '关于', description: `${site.name} 是什么、收录什么、不收录什么`, alternates: { canonical: '/about/' } };
+export const metadata: Metadata = { title: '关于', description: `${site.name} 是什么、收录什么、怎么核验`, alternates: { canonical: '/about/' } };
 
 const SECTIONS: [string, string, React.ReactNode][] = [
   ['intro', '这是什么', <>
-    <p>{site.name} 是一个面向中文 PC 玩家的<strong>资源与工具索引</strong>：游戏档案、免费情报、MOD/汉化资源站、实用工具、报错排查教程。</p>
-    <p className="mt-3">它只整理<strong>可信来源入口</strong>——每条记录标注来源与核验日期，链接只指向官方或可信原始页面。</p>
+    <p>{site.name} 是一个为 PC 玩家收集游戏资源的<strong>免费资源站</strong>：游戏档案、免费情报、MOD/汉化资源站、实用工具、报错排查教程。</p>
+    <p className="mt-3">它把分散在各处的入口<strong>收集到一起</strong>——每条记录标注来源与核验日期，方便判断是否还能用。全部免费查阅。</p>
   </>],
   ['standard', '收录标准', <ul className="list-disc pl-5 space-y-2">
-    <li>只收录<strong>官方渠道</strong>或社区公认的可信站点</li>
+    <li>收录玩家常用、能长期访问的渠道与站点</li>
     <li>每条记录必须有来源与核验日期；核验状态如实标注</li>
     <li>信息不足的内容保持「待核验」或直接不上线</li>
   </ul>],
-  ['exclude', '不收录什么', <ul className="list-disc pl-5 space-y-2">
+  ['exclude', '不做什么', <ul className="list-disc pl-5 space-y-2">
     <li>不托管、不提供任何游戏文件/安装包下载</li>
-    <li>不收录破解、盗版、私服相关资源</li>
     <li>不做账号、社区、评论功能——这是索引，不是论坛</li>
   </ul>],
   ['check', '核验方式', <p>每条记录带「核验于」日期；超期未复查标注「久未核验」。链接状态分正常/疑似失效/已失效。免费活动状态由系统按日期自动判定。</p>],

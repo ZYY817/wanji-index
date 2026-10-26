@@ -180,7 +180,7 @@ export function Directory({ offers, sites, groups, counts }: {
     return (
       <section ref={ref} aria-labelledby="dir-title" className="container-x bg-background py-24">
         <h2 id="dir-title" className="text-center font-serif text-[clamp(64px,16vw,120px)] font-black leading-none tracking-[-0.05em]">
-          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85">个可信来源</span>
+          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85">个资源站</span>
         </h2>
         <div className="mt-14 space-y-10">
           {groups.map((g, gi) => (
@@ -243,7 +243,7 @@ export function Directory({ offers, sites, groups, counts }: {
           <motion.div className="pointer-events-none absolute inset-0 z-[200] flex items-center justify-center" style={{ y: titleY, scale: titleS, opacity: titleIn }}>
             <h2 id="dir-title" className="flex flex-col items-center text-center">
               <motion.span className="font-serif text-[clamp(96px,11vw,170px)] font-black leading-[0.85] tracking-[-0.05em] tabular-nums" aria-label={String(counts.sites)}>{num}</motion.span>
-              <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]">个可信来源</span>
+              <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]">个资源站</span>
             </h2>
           </motion.div>
 

@@ -12,7 +12,7 @@ import { Intro } from '@/components/home/intro';
 
 export const metadata: Metadata = {
   title: { absolute: `${SITE.name} — PC 游戏资源与工具索引` },
-  description: '以游戏为入口的中文 PC 资源索引：去哪买、现在免不免费、MOD 与汉化在哪、需要什么工具、报错怎么办。只指向官方与可信的原始来源。',
+  description: '以游戏为入口的 PC 游戏资源收集站：去哪买、现在免不免费、MOD 与汉化在哪、需要什么工具、报错怎么办，一处收齐。',
   alternates: { canonical: '/' },
 };
 

@@ -18,7 +18,7 @@ export default function GamesPage() {
       <IndexMasthead
         title="游戏库"
         count={games.length}
-        description={`收录 ${games.length} 款 PC 游戏档案，整理了 ${resources} 条可信资源线索。去哪买、MOD 与汉化在哪、报错排障，一站建档。`}
+        description={`收录 ${games.length} 款 PC 游戏档案，整理了 ${resources} 条资源线索。去哪买、MOD 与汉化在哪、报错排障，一处查到。`}
         glow={featured?.art?.hero}
       />
       <GamesCatalog games={games} />

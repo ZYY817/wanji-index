@@ -43,7 +43,7 @@ export default function ToolsPage() {
       <IndexMasthead
         title="工具"
         count={tools.length}
-        description={`收录 ${tools.length} 款必备环境与实用工具。管理 MOD、备份存档、监控性能，只链接原作者官方页面或源码仓。`}
+        description={`收录 ${tools.length} 款常用工具：管理 MOD、备份存档、监控性能，附下载地址与安装要点。`}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex

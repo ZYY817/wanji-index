@@ -15,7 +15,7 @@ import { withBase } from '@/lib/base';
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: `${SITE.name} — PC 游戏资源与工具索引`, template: `%s · ${SITE.name}` },
-  description: '面向中文 PC 玩家的游戏资源与工具索引：游戏档案、免费情报、MOD 与资源站目录、实用工具与报错排查。只指向官方与可信的原始来源。',
+  description: '为 PC 玩家收集的游戏资源与情报站：游戏档案、免费游戏情报、MOD 与资源站目录、实用工具与报错排查，全部免费查阅。',
   icons: { icon: withBase('/favicon.svg') },
   openGraph: { siteName: SITE.name, locale: 'zh_CN', type: 'website' },
 };

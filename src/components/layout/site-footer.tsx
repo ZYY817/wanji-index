@@ -24,12 +24,12 @@ export function SiteFooter({ stats, build }: { stats: { label: string; value: nu
       {/* 1 · 结语 */}
       <div className="container-x flex flex-col items-center pt-24 text-center md:pt-32">
         <p className="font-serif text-[clamp(34px,4.2vw,60px)] font-black leading-[1.12] tracking-[-0.045em]">
-          {hang('只整理，只引导，')}
+          {hang('PC 游戏资源，一处收齐。')}
           <br />
-          <span className="text-foreground/45">{hang('不托管任何文件。')}</span>
+          <span className="text-foreground/45">{hang('全部免费。')}</span>
         </p>
         <p className="mt-7 max-w-[44ch] text-base leading-[1.85] text-fg-2">
-          玩机索引为中文 PC 玩家整理游戏的获取渠道、免费情报、MOD 社区、实用工具与报错排查。所有外链都指向官方商店、正版平台、公认社区或工具官网，不收录破解与盗版资源。
+          玩机索引为 PC 玩家收集游戏的获取渠道、免费情报、MOD 社区、实用工具与报错排查，全部免费查阅，随时更新。
         </p>
         <div className="mt-10">
           <FooterBackToTop />

@@ -95,7 +95,7 @@ export function Hero({ heroes, popular, counts }: {
         <p className="mt-7 max-w-[36em] animate-rise text-base leading-[1.8] text-foreground/80 md:text-lg" style={rise(2)}>
           去哪买、现在免不免费、MOD 与汉化、存档与报错，一次查清。
           <br className="hidden md:block" />
-          已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报，只指向官方与可信来源。
+          已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报，全部免费查阅。
         </p>
         <div className="mt-10 w-full max-w-[640px] animate-rise" style={rise(3)}>
           <Magnetic strength={6} radius={60}>
