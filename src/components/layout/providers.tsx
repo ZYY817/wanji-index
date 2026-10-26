@@ -18,7 +18,7 @@ function SmoothScroll() {
     const setup = () => {
       destroy();
       if (reduced.matches || !pointer.matches || navigator.maxTouchPoints > 0) return;
-      const instance = new Lenis({ lerp: 0.1, wheelMultiplier: 0.95, anchors: { offset: -96 } });
+      const instance = new Lenis({ lerp: 0.09, wheelMultiplier: 0.95, anchors: { offset: -96 } });
       lenis = instance;
       const raf = (t: number) => { instance.raf(t); id = requestAnimationFrame(raf); };
       id = requestAnimationFrame(raf);

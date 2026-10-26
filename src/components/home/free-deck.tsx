@@ -38,6 +38,8 @@ const OUT: [number, number] = [0.88, 1];
 
 import { GLOW_IMG, GLOW_VEIL } from '@/components/fx/glow';
 export { GLOW_IMG, GLOW_VEIL };
+/** 档案章的环境：游戏美术本身，重度压暗（配 GLOW_VEIL 的暗角） */
+export const SCENE_IMG = 'absolute inset-0 size-full object-cover opacity-50';
 
 /** 首页卡组实际展示的条目（资源站章用同一份数据画出交接帧） */
 export function deckItems(offers: OfferVM[], now: number | null) {
@@ -144,7 +146,7 @@ function Handoff({ from, first, e, vp, w, h }: { from: From; first: OfferVM; e: 
   return (
     <>
       <motion.div aria-hidden className="absolute inset-0 bg-shell" style={{ opacity: bgO }}>
-        <img src={from.hero} alt="" className={cn(GLOW_IMG, 'opacity-35')} />
+        <img src={from.hero} alt="" className={SCENE_IMG} />
         <div className={GLOW_VEIL} />
       </motion.div>
       <motion.div aria-hidden className="absolute left-1/2 top-1/2 z-[150] [perspective:1800px]" style={{ width, height, x: '-50%', y: '-50%', opacity: shown }}>
@@ -244,23 +246,25 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
           {items.map((x, i) => <DeckCard key={x.id} o={x} i={i} n={n} pos={pos} w={w} h={h} gap={gap} enter={sideIn} out={out} first={first} />)}
         </div>
 
-        {/* 当前卡：状态 + 倒计时 + 领取，卡组正下方 */}
-        <motion.div className="absolute inset-x-0 flex flex-col items-center text-center" style={{ top: `calc(50% + ${h / 2 + 28}px)`, opacity: infoVis }}>
+        {/* 当前卡的「票根」：与卡同宽、贴在卡下方——左边是还剩多久，右边是整块的领取按钮。信息和行动都属于这张卡 */}
+        <motion.div className="absolute left-1/2" style={{ top: `calc(50% + ${h / 2 + 14}px)`, width: w, marginLeft: -w / 2, opacity: infoVis }}>
           {o && (
-            <>
-              <p className="text-sm text-fg-3">
-                {lc === 'upcoming' && <span className="mr-2 text-info">即将免费</span>}
-                {target != null ? (lc === 'upcoming' ? `${shDateTime(target)} 开始` : `剩余时间 · ${shDateTime(target)} 截止`) : '没有截止时间'}
-              </p>
-              <div className="mt-3 flex items-center gap-8">
-                {target != null ? (
-                  <Countdown target={target} mode={lc === 'upcoming' ? 'start' : 'end'} now={now} variant="film" className={cn('text-[clamp(30px,2.6vw,44px)] font-medium leading-none tracking-[-0.05em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')} labelClassName="text-fg-3" />
-                ) : (
-                  <span className="font-serif text-3xl font-black">长期免费</span>
-                )}
-                <AcquireButton href={o.url} health={o.linkHealth} label={CTA[o.type] ?? '免费获取'} size="lg" />
+            <div className="edge-light relative flex min-h-[88px] items-stretch overflow-hidden rounded-md bg-[rgba(30,28,25,0.88)] shadow-[0_30px_60px_-30px_rgba(0,0,0,0.9)] ring-1 ring-white/10">
+              <div className="flex min-w-0 flex-1 flex-col justify-center px-6 py-3">
+                <p className="text-sm text-fg-2">
+                  {lc === 'upcoming' ? <span className="text-info">即将免费 · {target != null && `${shDateTime(target)} 开始`}</span>
+                    : target != null ? <>剩余时间<span className="text-fg-3"> · {shDateTime(target)} 截止</span></> : zh('freeType', o.type)}
+                </p>
+                <div className="mt-1.5">
+                  {target != null ? (
+                    <Countdown target={target} mode={lc === 'upcoming' ? 'start' : 'end'} now={now} variant="film" className={cn('text-[32px] font-medium leading-none tracking-[-0.05em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')} labelClassName="text-fg-3" />
+                  ) : (
+                    <span className="font-serif text-[28px] font-black leading-none">长期免费</span>
+                  )}
+                </div>
               </div>
-            </>
+              <AcquireButton href={o.url} health={o.linkHealth} label={CTA[o.type] ?? '免费获取'} size="lg" className="h-auto shrink-0 rounded-none px-9 text-lg font-medium [&_svg]:size-5" />
+            </div>
           )}
         </motion.div>
 

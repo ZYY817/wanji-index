@@ -7,7 +7,7 @@ import type { DossierVM } from '@/lib/home-data';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { SearchTrigger } from '@/components/layout/search-trigger';
 import { Magnetic, Tilt } from '@/components/fx/interact';
-import { GLOW_IMG, GLOW_VEIL } from './free-deck';
+import { GLOW_VEIL, SCENE_IMG } from './free-deck';
 import { cn } from '@/lib/utils';
 import { hang } from '@/components/ui/hang';
 
@@ -33,6 +33,9 @@ const T = {
 
 const COLS = 7;
 const PER_COL = 6;
+const CENTER = Math.floor(COLS / 2);
+
+const smoothStep = (t: number) => t * t * (3 - 2 * t);
 
 function useViewport() {
   const [vp, setVp] = useState({ w: 1440, h: 900 });
@@ -45,13 +48,39 @@ function useViewport() {
   return vp;
 }
 
+const WALL_GAP = 0.011; // 列间距 / 视口宽（gap-[1.1vw]）
+
+/** 墙的几何：列宽、格高（px）。墙宽 140vw、7 列 */
+function wallGeo(vw: number) {
+  const gap = vw * WALL_GAP;
+  const colW = (vw * 1.4 - gap * (COLS - 1)) / COLS;
+  return { gap, colW, cellH: colW * 1.5 };
+}
+
+/** 中央列：静止，正中是空位——中央海报在海报墙阶段就嵌在这个空位里 */
+function SlotColumn({ games, vw }: { games: GameVM[]; vw: number }) {
+  const { gap, cellH } = wallGeo(vw);
+  const ks = [-3, -2, -1, 1, 2, 3];
+  return (
+    <div className="relative">
+      {ks.map((k, i) => (
+        <img key={k} src={games[i % games.length].art!.poster} alt="" loading="eager" decoding="async"
+          className="absolute inset-x-0 aspect-[2/3] w-full rounded-[3px] object-cover brightness-[0.62] saturate-[0.7]"
+          style={{ top: `calc(50% + ${k * (cellH + gap) - cellH / 2}px)` }} />
+      ))}
+      {/* 空位本身（透明）：中央海报对齐的目标 */}
+      <div data-slot aria-hidden className="absolute inset-x-0 aspect-[2/3] w-full" style={{ top: `calc(50% - ${cellH / 2}px)` }} />
+    </div>
+  );
+}
+
 /** 海报墙的一列：奇偶列反向流动 */
 function WallColumn({ games, p, dir, offset }: { games: GameVM[]; p: MotionValue<number>; dir: 1 | -1; offset: boolean }) {
   const y = useTransform(p, [T.wallIn[0], T.wallOut[1]], [dir * 260, dir * -260]);
   return (
     <motion.div className={cn('flex flex-col gap-[1.1vw]', offset && 'pt-[14vw]')} style={{ y }}>
       {games.map((g, i) => (
-        <img key={`${g.id}-${i}`} src={g.art!.poster} alt="" loading="lazy" decoding="async" className="aspect-[2/3] w-full rounded-[3px] object-cover brightness-[0.62] saturate-[0.7]" />
+        <img key={`${g.id}-${i}`} src={g.art!.poster} alt="" loading="eager" decoding="async" className="aspect-[2/3] w-full rounded-[3px] object-cover brightness-[0.62] saturate-[0.7]" />
       ))}
     </motion.div>
   );
@@ -95,7 +124,7 @@ function AnswerBlock({ a, i, p, card, vp, focus }: {
   const start = T.panels + i * 0.05;
   const end = start + 0.08;
   // 整组宽度有上限：宽屏上不再把答案推到屏幕边缘（人眼一次看得完的范围约 1200px）
-  const width = Math.min(300, (vp.w - card.w) / 2 - 120);
+  const width = Math.min(340, (vp.w - card.w) / 2 - 120);
   const gap = Math.min(120, Math.max(48, (vp.w - card.w) / 2 - width - 72));
   const dy = a.row * card.h * 0.24 - card.h * 0.06;
   const x = useTransform(p, [start, end], [-a.side * (gap + width / 2), 0]);
@@ -123,7 +152,7 @@ function AnswerBlock({ a, i, p, card, vp, focus }: {
           <span className="font-mono text-sm text-[var(--accent)]">{a.no}</span>
           <span className="font-serif text-[26px] font-bold leading-tight">{a.title}</span>
         </p>
-        <motion.div className="mt-3 space-y-1.5 border-t border-foreground/15 pt-3 text-[15px] leading-snug text-foreground/90" style={{ clipPath: reveal }}>
+        <motion.div className="mt-3 space-y-2 border-t border-foreground/15 pt-3 text-base leading-snug text-foreground/90" style={{ clipPath: reveal }}>
           {a.lines}
         </motion.div>
       </motion.div>
@@ -171,8 +200,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
   const wallS = useTransform(p, [T.wallIn[0], T.wallIn[1], T.wallOut[1]], [1.35, 1, 0.82]);
   const wallTilt = useTransform(p, [T.wallIn[0], T.wallOut[1]], [34, 14]);
   const count = useTransform(p, [T.countIn[0], T.countIn[1] + 0.04], [0, total]);
-  const [n, setN] = useState(0);
-  useMotionValueEvent(count, 'change', (v) => setN(Math.round(v)));
+  const countText = useTransform(count, (v) => String(Math.round(v)));
   const countO = useTransform(p, [T.countIn[0], T.countIn[1], T.countOut[0], T.countOut[1]], [0, 1, 1, 0]);
   const countY = useTransform(p, [T.countIn[0], T.countIn[1], T.countOut[1]], [40, 0, -30]);
   // ── 翻面 + 换色 ──
@@ -181,9 +209,14 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
   const backO = useTransform(flip, (v) => (v < 90 ? 0 : 1));
   const lift = useTransform(p, [T.flip[0], (T.flip[0] + T.flip[1]) / 2, T.flip[1]], [1, 1.08, 1]);
   const accent = useTransform(p, T.flip, [accentA, accentB]);
-  const cardRotZ = useTransform(p, [T.morph[1], T.wallIn[1], T.flip[0], T.flip[1]], [0, -10, -10, 0]);
-  const cardRotX = useTransform(p, [T.morph[1], T.wallIn[1], T.flip[0], T.flip[1]], [0, 18, 18, 0]);
-  const cardDim = useTransform(p, [T.morph[1], T.wallIn[1], T.flip[0], T.flip[1]], [0, 0.35, 0.35, 0]);
+  // seat：0 = 平放在画面中央，1 = 嵌在墙的空位里（与空位同尺寸、同倾斜、同旋转）
+  const seat = useTransform(p, [T.morph[1], T.wallIn[1], T.flip[0], T.flip[0] + 0.05], [0, 1, 1, 0]);
+  const slotScale = wallGeo(vp.w).colW / card.w;
+  const cardRotZ = useTransform(() => -10 * smoothStep(seat.get()));
+  const cardRotX = useTransform(() => wallTilt.get() * smoothStep(seat.get()));
+  const cardScale = useTransform(() => lift.get() * (1 + (slotScale * wallS.get() - 1) * smoothStep(seat.get())));
+  // 嵌在墙里时与邻居同样压暗（墙图 brightness .62）；被抽出时才亮起来
+  const cardDim = useTransform(() => 0.38 * smoothStep(seat.get()));
   // ── 档案 ──
   const bgO = useTransform(p, T.bgIn, [0, 1]);
   const titleO = useTransform(p, T.titleIn, [0, 1]);
@@ -204,9 +237,9 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
   return (
     <section ref={ref} data-film aria-label="玩机索引" className="relative h-[480vh] bg-shell">
       <motion.div className="sticky top-0 h-[100svh] overflow-hidden" style={{ '--accent': accent } as React.CSSProperties}>
-        {/* ── 档案的环境光：首页统一布光——星露谷的颜色化作一团色光，不出现画面形状 ── */}
+        {/* ── 档案的环境：星露谷的夜景本身（重度压暗 + 暗角）——有地点感，又不抢四组答案 ── */}
         <motion.div aria-hidden className="absolute inset-0" style={{ opacity: bgO }}>
-          {sample.art && <img src={sample.art.hero} alt="" className={cn(GLOW_IMG, 'opacity-35')} />}
+          {sample.art && <img src={sample.art.hero} alt="" className={SCENE_IMG} />}
           <div className={GLOW_VEIL} />
         </motion.div>
 
@@ -214,7 +247,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         <motion.div aria-hidden className="absolute inset-0 [perspective:2200px]" style={{ opacity: wallO }}>
           <motion.div className="absolute left-1/2 top-1/2 w-[140vw]" style={{ x: '-50%', y: '-50%', rotateX: wallTilt, rotateZ: -10, scale: wallS }}>
             <div className="grid gap-[1.1vw]" style={{ gridTemplateColumns: `repeat(${COLS}, minmax(0,1fr))` }}>
-              {cols.map((c, i) => <WallColumn key={i} games={c} p={p} dir={i % 2 ? -1 : 1} offset={i % 2 === 1} />)}
+              {cols.map((c, i) => (i === CENTER ? <SlotColumn key={i} games={c} vw={vp.w} /> : <WallColumn key={i} games={c} p={p} dir={i % 2 ? -1 : 1} offset={i % 2 === 1} />))}
             </div>
           </motion.div>
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_42%_at_50%_50%,rgba(12,11,10,0.78)_0%,rgba(12,11,10,0.5)_55%,rgba(12,11,10,0.38)_100%)]" />
@@ -235,10 +268,10 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         </motion.div>
 
         {/* ── 中央海报：正面 = 首屏游戏，背面 = 样本游戏 ── */}
-        <motion.div className="absolute left-1/2 top-1/2 [perspective:1800px]" style={{ width: card.w, height: card.h, x: '-50%', y: '-50%' }}>
+        <motion.div className="absolute left-1/2 top-1/2 [perspective:2200px]" style={{ width: card.w, height: card.h, x: '-50%', y: '-50%' }}>
           {/* 翻面不依赖 backface-visibility（透明度、滤镜等会让 3D 层被拍平而失效）：过 90° 时直接切换正反面 */}
-          <motion.div className="relative size-full" style={{ opacity: posterIn }}>
-          <motion.div className="relative size-full" style={{ rotateY: flip, rotateX: cardRotX, rotateZ: cardRotZ, scale: lift }}>
+          <motion.div className="relative size-full [perspective:2200px]" style={{ opacity: posterIn }}>
+          <motion.div data-card className="relative size-full" style={{ rotateY: flip, rotateX: cardRotX, rotateZ: cardRotZ, scale: cardScale }}>
             <motion.div className="edge-light absolute inset-0 overflow-hidden rounded-md shadow-[0_50px_100px_-30px_rgba(0,0,0,0.95)]" style={{ opacity: frontO }}>
               {lead.art && <img src={lead.art.poster} alt={`${lead.name} 海报`} className="size-full object-cover" />}
               <motion.div aria-hidden className="absolute inset-0 bg-shell" style={{ opacity: cardDim }} />
@@ -246,7 +279,6 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
             <motion.div className="absolute inset-0" style={{ opacity: backO }}>
             <Link
               href={`/games/${sample.slug}/`}
-              data-cursor="查看"
               className="absolute inset-0 rounded-md shadow-[0_50px_100px_-30px_rgba(0,0,0,0.95)] [transform:rotateY(180deg)]"
             >
               {/* 档案阶段的海报随鼠标微倾，带一道跟随高光 */}
@@ -306,7 +338,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         <motion.div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[42vh] bg-[linear-gradient(0deg,rgba(12,11,10,0.95)_0%,rgba(12,11,10,0.7)_45%,transparent_100%)]" style={{ opacity: countO }} />
         <motion.div className="pointer-events-none absolute inset-x-0 flex flex-col items-center text-center" style={{ top: `calc(50% + ${card.h / 2 + 22}px)`, opacity: countO, y: countY }}>
           <p className="flex items-baseline gap-4">
-            <span className="font-serif text-[clamp(64px,6vw,96px)] font-black leading-none tracking-[-0.05em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{n}</span>
+            <motion.span className="font-serif text-[clamp(64px,6vw,96px)] font-black leading-none tracking-[-0.05em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{countText}</motion.span>
             <span className="text-xl text-foreground/90">款游戏，每一款都有一份档案</span>
           </p>
           <Link href="/games/" className="pointer-events-auto mt-4 border-b border-[var(--accent)] pb-1 text-base hover:text-[var(--accent)]">进入游戏库</Link>

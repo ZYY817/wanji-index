@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
-import { Cursor } from '@/components/layout/cursor';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import '@fontsource-variable/noto-serif-sc/wght.css';
@@ -46,7 +45,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <CommandProvider>
             <SiteHeader counts={counts} />
-            <Cursor />
             <div aria-hidden className="film-grain" />
             <main id="main">{children}</main>
             <SiteFooter
