@@ -7,6 +7,7 @@ export const MIN_STANDARD = {
   entry: (r) => !!(r.name && r.siteId && r.url),
   tool: (r) => !!(r.name && r.summary && r.type && r.officialUrl),
   guide: (r) => !!(r.title && r.kind && r.category && r.steps?.length >= 1),
+  problem: (r) => !!(r.title && r.summary && r.fixes?.length >= 1),
   offer: (r) => !!(r.gameTitle && r.type && r.platform && r.url && r.checkedAt),
 };
 

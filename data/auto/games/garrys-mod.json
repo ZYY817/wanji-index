@@ -51,13 +51,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:48.932Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:55.333Z",
+      "syncedAt": "2026-10-27T16:11:00.298Z",
       "page": "Garry's Mod"
     }
   },
@@ -73,6 +73,28 @@
       "os": "windows",
       "path": "<游戏安装目录>\\garrysmod\\cfg\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Black and purple textures and giant red models",
+      "url": "https://www.pcgamingwiki.com/wiki/Garry's_Mod#Black_and_purple_textures_and_giant_red_models",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes at title screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Garry's_Mod#Game_crashes_at_title_screen",
+      "fixed": true
+    },
+    {
+      "title": "Hosting a listen server",
+      "url": "https://www.pcgamingwiki.com/wiki/Garry's_Mod#Hosting_a_listen_server",
+      "fixed": true
+    },
+    {
+      "title": "Game changes microphone gain at launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Garry's_Mod#Game_changes_microphone_gain_at_launch",
+      "fixed": true
     }
   ]
 }

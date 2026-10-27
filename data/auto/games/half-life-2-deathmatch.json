@@ -47,13 +47,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:35.600Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:06.325Z",
+      "syncedAt": "2026-10-27T16:11:18.458Z",
       "page": "Half-Life 2: Deathmatch"
     }
   },
@@ -62,6 +62,23 @@
       "os": "windows",
       "path": "<游戏安装目录>\\hl2mp\\cfg",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2%3A_Deathmatch#Purple_and_black_broken_textures",
+      "fixed": true
+    },
+    {
+      "title": "SteamVR launches automatically when attempting to enter Options",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2%3A_Deathmatch#SteamVR_launches_automatically_when_attempting_to_enter_Options",
+      "fixed": true
+    },
+    {
+      "title": "Chosen Player model is forgotten after joining a new map",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2%3A_Deathmatch#Chosen_Player_model_is_forgotten_after_joining_a_new_map",
+      "fixed": true
     }
   ]
 }

@@ -1,7 +1,7 @@
 // 站内搜索匹配（命令面板与 /search/ 共用同一算法）
 // 规则：所有空格分词都需命中（AND）；标题前缀 > 标题包含 > 副标题/关键词/摘要
 export type SearchItem = {
-  type: 'game' | 'site' | 'tool' | 'guide';
+  type: 'game' | 'problem' | 'site' | 'tool' | 'guide';
   typeLabel: string;
   title: string;
   sub?: string;
@@ -12,8 +12,8 @@ export type SearchItem = {
   seed?: string;
 };
 
-export const TYPE_ORDER = ['game', 'site', 'tool', 'guide'] as const;
-export const TYPE_ZH: Record<string, string> = { game: '游戏', site: '资源站', tool: '工具', guide: '教程' };
+export const TYPE_ORDER = ['game', 'problem', 'site', 'tool', 'guide'] as const;
+export const TYPE_ZH: Record<string, string> = { game: '游戏', problem: '排障', site: '资源站', tool: '工具', guide: '教程' };
 
 export function tokenize(q: string) {
   return q.toLowerCase().split(/\s+/).filter(Boolean);

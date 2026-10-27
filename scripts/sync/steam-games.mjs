@@ -77,7 +77,8 @@ for (const [appid, spyName] of pool) {
   await sleep(cfg.requestIntervalMs);
   fetched++;
   if (!d || d.type !== 'game' || (d.content_descriptors?.ids ?? []).some((x) => ADULT.has(x))) { skipped++; continue; }
-  let en = spyName ?? existing?.name?.en;
+  // 商店名本身是英文时就用它（SteamSpy 的名字可能是旧名，例如 CS:GO → CS2）
+  let en = /^[ -~]+$/.test(d.name) ? d.name : spyName ?? existing?.name?.en;
   if (!en) { const de = await details(appid, 'english'); en = de?.name ?? d.name; await sleep(cfg.requestIntervalMs); }
   const handGame = handByApp.get(appid);
   // id：人工已有同一款游戏时沿用其 id（合并时按 id / appid 对上）；否则用英文名，冲突时加 appid

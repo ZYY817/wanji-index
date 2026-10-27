@@ -50,13 +50,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:16.418Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:20.728Z",
+      "syncedAt": "2026-10-27T16:13:14.081Z",
       "page": "Risk of Rain 2"
     }
   },

@@ -19,7 +19,7 @@ export function DetailMasthead({
   return (
     <header className={cn('border-b border-border pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
       <div className="container-x grid gap-10 pb-12 md:pb-16 lg:grid-cols-12 lg:gap-12">
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <nav aria-label="面包屑" className="flex animate-rise flex-wrap items-center gap-2 text-sm text-fg-2" style={rise(0)}>
             <Link href="/" className="transition-colors hover:text-foreground">首页</Link>
             {crumbs.map(([label, href]) => (
@@ -38,7 +38,7 @@ export function DetailMasthead({
             {mark}
             {kicker && <p className="text-sm text-fg-2">{kicker}</p>}
           </div>
-          <h1 className="mt-4 animate-rise font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
+          <h1 className="mt-4 animate-rise break-words font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
             {title}
           </h1>
           {summary && (

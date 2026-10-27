@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:40.770Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:50.204Z",
+      "syncedAt": "2026-10-27T16:13:44.789Z",
       "page": "Tom Clancy's Rainbow Six Siege"
     }
   },
@@ -75,6 +75,23 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\Software\\Ubisoft\\Rainbow Six - Siege\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game changes microphone gain at launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Tom_Clancy's_Rainbow_Six_Siege#Game_changes_microphone_gain_at_launch",
+      "fixed": true
+    },
+    {
+      "title": "Attempting to purchase R6 credits leads to infinite loading screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Tom_Clancy's_Rainbow_Six_Siege#Attempting_to_purchase_R6_credits_leads_to_infinite_loading_screen",
+      "fixed": true
+    },
+    {
+      "title": "Mouse Input lag, keyboard and mouse freezes",
+      "url": "https://www.pcgamingwiki.com/wiki/Tom_Clancy's_Rainbow_Six_Siege#Mouse_Input_lag%2C_keyboard_and_mouse_freezes",
+      "fixed": true
     }
   ]
 }

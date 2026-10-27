@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:49.391Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:55.388Z",
+      "syncedAt": "2026-10-27T16:09:40.371Z",
       "page": "Battlefield V"
     }
   },
@@ -70,6 +70,38 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Battlefield V\\settings\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Stuttering issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Stuttering_issues",
+      "fixed": true
+    },
+    {
+      "title": "Stuttering Cinematics",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Stuttering_Cinematics",
+      "fixed": true
+    },
+    {
+      "title": "Crashes on Vega and RX 5700 / XT GPUs",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Crashes_on_Vega_and_RX_5700_%2F_XT_GPUs",
+      "fixed": true
+    },
+    {
+      "title": "Settings are lost after restarting the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Settings_are_lost_after_restarting_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Videos recorded by Nvidia Shadowplay's Instant Replay are in 720p",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Videos_recorded_by_Nvidia_Shadowplay's_Instant_Replay_are_in_720p",
+      "fixed": true
+    },
+    {
+      "title": "Input lag on mouse and keyboard",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_V#Input_lag_on_mouse_and_keyboard",
+      "fixed": true
     }
   ]
 }

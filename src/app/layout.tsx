@@ -31,7 +31,7 @@ export const viewport: Viewport = { themeColor: '#131211', colorScheme: 'dark' }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const data = loadData();
-  const counts = { games: data.games.length, free: data.offers.length, sites: data.sites.length, tools: data.tools.length, guides: data.guides.length };
+  const counts = { games: data.games.length, free: data.offers.length, sites: data.sites.length, tools: data.tools.length, guides: data.problems.length + data.guides.length };
   // suppressHydrationWarning：翻译 / 暗色模式类浏览器插件会改写 <html> 属性，只忽略这一层的差异
   return (
     <html lang="zh-CN" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>

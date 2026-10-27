@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:34.601Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:52.278Z",
+      "syncedAt": "2026-10-27T16:13:47.006Z",
       "page": "Trove"
     }
   },

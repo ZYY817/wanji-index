@@ -2,7 +2,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Command } from 'cmdk';
-import { ArrowRight, BookOpen, CornerDownLeft, History, RotateCw, Search, Wrench } from 'lucide-react';
+import { ArrowRight, BookOpen, CornerDownLeft, History, LifeBuoy, RotateCw, Search, Wrench } from 'lucide-react';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { Kbd } from '@/components/ui/kbd';
 import { SiteLogo, ToolLogo } from '@/components/ui/site-logo';
@@ -49,7 +49,7 @@ function ItemIcon({ it, size = 32 }: { it: RecentItem; size?: number }) {
     );
   if (it.type === 'site') return <SiteLogo id={it.seed ?? it.title} name={it.title} size={size} />;
   if (it.type === 'tool' && it.seed) return <ToolLogo id={it.seed} name={it.title} size={size} />;
-  const Icon = it.type === 'tool' ? Wrench : BookOpen;
+  const Icon = it.type === 'tool' ? Wrench : it.type === 'problem' ? LifeBuoy : BookOpen;
   return (
     <span className="grid shrink-0 place-items-center rounded-xs border border-border-strong text-fg-2" style={{ width: size, height: size }}>
       <Icon className="size-4" aria-hidden />

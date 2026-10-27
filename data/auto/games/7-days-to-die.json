@@ -54,13 +54,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:20.169Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:44.188Z",
+      "syncedAt": "2026-10-27T16:09:24.875Z",
       "page": "7 Days to Die"
     }
   },

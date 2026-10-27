@@ -47,13 +47,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:29.021Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:45.993Z",
+      "syncedAt": "2026-10-27T16:09:27.459Z",
       "page": "Among Us"
     }
   },
@@ -74,6 +74,13 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\Software\\InnerSloth\\Among Us\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Severe stuttering and freezing during menus and gameplay when using mouse and keyboard",
+      "url": "https://www.pcgamingwiki.com/wiki/Among_Us#Severe_stuttering_and_freezing_during_menus_and_gameplay_when_using_mouse_and_keyboard",
+      "fixed": true
     }
   ]
 }

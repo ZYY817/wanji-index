@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:44.654Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:34.926Z",
+      "syncedAt": "2026-10-27T16:12:05.279Z",
       "page": "Left 4 Dead 2"
     }
   },
@@ -70,6 +70,18 @@
       "os": "windows",
       "path": "<游戏安装目录>\\left4dead2\\cfg\\config.cfg",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead_2#Purple_and_black_broken_textures",
+      "fixed": true
+    },
+    {
+      "title": "Improper sniper scope on 1366x768 resolution",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead_2#Improper_sniper_scope_on_1366x768_resolution",
+      "fixed": true
     }
   ]
 }

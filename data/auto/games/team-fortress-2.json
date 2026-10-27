@@ -39,19 +39,70 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/440/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:42.366Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:43.775Z",
+      "syncedAt": "2026-10-27T16:13:38.085Z",
       "page": "Team Fortress 2"
     }
-  }
+  },
+  "issues": [
+    {
+      "title": "Generic fixes for issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Generic_fixes_for_issues",
+      "fixed": true
+    },
+    {
+      "title": "Sprays are not visible",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Sprays_are_not_visible",
+      "fixed": true
+    },
+    {
+      "title": "Game Crashes at Valve logo on startup",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Game_Crashes_at_Valve_logo_on_startup",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes after closing MotD",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Game_crashes_after_closing_MotD",
+      "fixed": true
+    },
+    {
+      "title": "Cosmetic items do not appear on a player",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Cosmetic_items_do_not_appear_on_a_player",
+      "fixed": true
+    },
+    {
+      "title": "Getting disconnected while playing on a LAN with multiple players",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Getting_disconnected_while_playing_on_a_LAN_with_multiple_players",
+      "fixed": true
+    },
+    {
+      "title": "Low FPS fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Low_FPS_fix",
+      "fixed": true
+    },
+    {
+      "title": "Game does not start on ArchLinux",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Game_does_not_start_on_ArchLinux",
+      "fixed": true
+    },
+    {
+      "title": "Audio delay/distortion when using PipeWire",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_2#Audio_delay%2Fdistortion_when_using_PipeWire",
+      "fixed": true
+    }
+  ]
 }

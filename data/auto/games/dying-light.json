@@ -51,13 +51,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:16.213Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:36.614Z",
+      "syncedAt": "2026-10-27T16:10:34.657Z",
       "page": "Dying Light"
     }
   },
@@ -83,6 +83,23 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Dying Light\\out\\settings\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Frame pacing issues with Vsync on in Windows 11",
+      "url": "https://www.pcgamingwiki.com/wiki/Dying_Light#Frame_pacing_issues_with_Vsync_on_in_Windows_11",
+      "fixed": true
+    },
+    {
+      "title": "Major FPS drops on Laptop GPUs",
+      "url": "https://www.pcgamingwiki.com/wiki/Dying_Light#Major_FPS_drops_on_Laptop_GPUs",
+      "fixed": true
+    },
+    {
+      "title": "\"Profile has been changed\" game-breaking bug",
+      "url": "https://www.pcgamingwiki.com/wiki/Dying_Light#%22Profile_has_been_changed%22_game-breaking_bug",
+      "fixed": true
     }
   ]
 }

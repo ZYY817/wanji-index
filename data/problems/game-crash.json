@@ -1,0 +1,96 @@
+{
+  "id": "game-crash",
+  "slug": "game-crash",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "闪退",
+  "category": "crash",
+  "title": "游戏闪退：玩着玩着突然回到桌面",
+  "summary": "最常见的原因是显卡驱动、游戏文件损坏和后台软件冲突。先验证游戏文件、更新显卡驱动，再关掉覆盖层和超频，大部分闪退到这一步就解决了。",
+  "symptoms": [
+    "进游戏后几分钟到几小时内突然退回桌面，没有任何提示",
+    "在固定场景（读图、过场动画、某个地图）必定闪退",
+    "弹出「已停止工作」或游戏自己的崩溃报告窗口"
+  ],
+  "keywords": [
+    "闪退",
+    "崩溃",
+    "crash",
+    "跳出",
+    "退回桌面",
+    "CTD"
+  ],
+  "fixes": [
+    {
+      "title": "验证游戏文件完整性",
+      "when": "闪退发生在更新之后，或在固定位置必定闪退",
+      "detail": "在 Steam 库里右键游戏 → 属性 → 已安装文件 → 验证游戏文件的完整性。启动器会对比官方文件，自动重新下载损坏或缺失的部分，不会动存档。Epic、GOG Galaxy 也有同样的「验证 / 修复」功能。",
+      "sources": [
+        {
+          "name": "Steam 客服：验证游戏文件完整性",
+          "url": "https://help.steampowered.com/zh-cn/faqs/view/0C48-FCBD-DA71-93EB"
+        }
+      ]
+    },
+    {
+      "title": "更新（或回退）显卡驱动",
+      "when": "新游戏刚发售、或刚更新过驱动之后开始闪退",
+      "detail": "到显卡厂商官网下载最新正式版驱动安装。如果是更新驱动之后才开始闪退，反过来回退到上一个版本。笔记本优先用电脑厂商提供的驱动。",
+      "sources": [
+        {
+          "name": "NVIDIA 官方驱动下载",
+          "url": "https://www.nvidia.cn/drivers/lookup/"
+        },
+        {
+          "name": "AMD 官方驱动下载",
+          "url": "https://www.amd.com/zh-cn/support/download/drivers.html"
+        },
+        {
+          "name": "Intel 驱动与支持助手",
+          "url": "https://www.intel.cn/content/www/cn/zh/support/detect.html"
+        }
+      ]
+    },
+    {
+      "title": "关闭覆盖层和后台录制",
+      "detail": "Steam 覆盖层、Discord / NVIDIA / AMD 的游戏内覆盖、MSI Afterburner 的帧数显示、录屏软件都会往游戏里注入代码，是闪退的常见来源。逐个关掉再试，找出是哪一个。"
+    },
+    {
+      "title": "取消超频，检查温度",
+      "when": "高负载场景（大规模战斗、开阔地图）才闪退",
+      "detail": "显卡或内存超频（包括主板默认开启的 XMP / EXPO）在大部分游戏里稳定，但个别游戏会触发崩溃。先恢复默认频率；同时用监控软件看看显卡和 CPU 温度是否过高。"
+    },
+    {
+      "title": "暂时移除 MOD 和第三方补丁",
+      "detail": "装了 MOD、汉化补丁、画质增强（ReShade 等）的游戏，游戏一更新这些东西就可能不兼容。先把它们移出游戏目录，确认原版能稳定运行，再一个个加回来。"
+    },
+    {
+      "title": "查看这款游戏的已知问题",
+      "detail": "有些闪退是游戏本身的问题，只能等官方修复或用社区给的绕过办法。下面列出了在 PCGamingWiki 上记录了相关问题的游戏，可以点进去看具体解法。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：游戏数据位置",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Game_data"
+        }
+      ]
+    }
+  ],
+  "issueMatch": [
+    "crash",
+    "ctd",
+    "closes",
+    "exits to desktop",
+    "freez",
+    "hang",
+    "stops responding",
+    "not responding"
+  ],
+  "relatedProblems": [
+    "game-wont-launch",
+    "missing-dll",
+    "black-screen"
+  ]
+}

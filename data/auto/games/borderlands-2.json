@@ -54,13 +54,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:53.177Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:59.404Z",
+      "syncedAt": "2026-10-27T16:09:46.643Z",
       "page": "Borderlands 2"
     }
   },
@@ -76,6 +76,48 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\My Games\\Borderlands 2\\WillowGame\\Config\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "AMD FX chipset restart after launcher",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#AMD_FX_chipset_restart_after_launcher",
+      "fixed": false
+    },
+    {
+      "title": "Items falling through the world",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Items_falling_through_the_world",
+      "fixed": false
+    },
+    {
+      "title": "Co-op doesn't connect properly",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Co-op_doesn't_connect_properly",
+      "fixed": true
+    },
+    {
+      "title": "Microsoft .NET Framework Client Profile Restarting Install",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Microsoft_.NET_Framework_Client_Profile_Restarting_Install",
+      "fixed": true
+    },
+    {
+      "title": "Engine tweak to fix blurry textures at short distance",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Engine_tweak_to_fix_blurry_textures_at_short_distance",
+      "fixed": true
+    },
+    {
+      "title": "Disable dynamic shadows",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Disable_dynamic_shadows",
+      "fixed": true
+    },
+    {
+      "title": "Disable reflections",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Disable_reflections",
+      "fixed": true
+    },
+    {
+      "title": "Reduced particles",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2#Reduced_particles",
+      "fixed": true
     }
   ]
 }

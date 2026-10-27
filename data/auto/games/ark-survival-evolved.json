@@ -56,13 +56,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:38.787Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:49.733Z",
+      "syncedAt": "2026-10-27T16:09:33.228Z",
       "page": "ARK: Survival Evolved"
     }
   },
@@ -78,6 +78,18 @@
       "os": "windows",
       "path": "<游戏安装目录>\\ShooterGame\\Saved\\Config\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Tweaks to raise the frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/ARK%3A_Survival_Evolved#Tweaks_to_raise_the_frame_rate",
+      "fixed": true
+    },
+    {
+      "title": "Stuck in Server Browser After Selecting \"My Survivors\" Filter",
+      "url": "https://www.pcgamingwiki.com/wiki/ARK%3A_Survival_Evolved#Stuck_in_Server_Browser_After_Selecting_%22My_Survivors%22_Filter",
+      "fixed": false
     }
   ]
 }

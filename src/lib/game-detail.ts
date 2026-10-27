@@ -5,6 +5,7 @@ import { gameVM, offerVM, type GameVM, type OfferVM } from '@/lib/present';
 import { genreZh } from '@/lib/genre';
 import { zh } from '@/lib/labels.mjs';
 import { parseReqs, type Reqs } from '@/lib/hardware';
+import { issuesByProblem } from '@/lib/problems';
 
 export type ChannelItem = { platform: string; type: string; typeLabel: string; url: string; note: string; health?: string; checkedAt: string };
 export type PathItem = { kind: '存档' | '配置'; os: string; path: string; note?: string };
@@ -13,7 +14,8 @@ export type ToolItem = { id: string; slug: string; name: string; summary: string
 export type GuideItem = { id: string; slug: string; title: string; kindLabel: string; steps: number };
 export type FaqItem = { question: string; answer?: string; guide?: { slug: string; title: string } };
 
-export type SectionId = 'channels' | 'paths' | 'entries' | 'tools' | 'guides' | 'specs' | 'faq';
+export type SectionId = 'channels' | 'paths' | 'entries' | 'tools' | 'guides' | 'issues' | 'specs' | 'faq';
+export type IssueGroup = { problem?: { slug: string; short: string }; issues: { title: string; url: string; fixed?: boolean }[] };
 export type SpecRow = [string, string, string]; // 项目 / 最低 / 推荐
 export type SectionMeta = { id: SectionId; title: string; lead: string; count: number };
 
@@ -37,6 +39,8 @@ export type GameDetail = {
   /** 首屏下方的一行事实：开发商 · 发售日期 · 中文支持 */
   byline: string[];
   specs: SpecRow[];
+  /** PCGamingWiki 记录的已知问题，按站内问题类型分组 */
+  issues: IssueGroup[];
   /** 配置要求里识别出的显卡 / 内存门槛（「我的电脑能玩吗」用） */
   reqs?: Reqs;
   /** 自动收录的来源（人工档案为空） */
@@ -49,6 +53,7 @@ const LEADS: Record<SectionId, [string, string]> = {
   paths: ['存档与配置', '重装系统、换电脑或装 MOD 之前，先把这些文件夹备份一份。'],
   entries: ['MOD 与汉化', '只链接到公认社区的游戏专区，本站不转载任何文件。'],
   tools: ['工具', '加载器、管理器与辅助工具，点进去看官网与使用要点。'],
+  issues: ['已知问题', '玩家在 PCGamingWiki 上记录过的问题与解法（英文原文），按类型归到本站的排障页。'],
   guides: ['教程', '安装、排障与 MOD 配置的分步教程，每一步写明预期结果。'],
   specs: ['配置要求', 'Steam 商店公布的 PC 配置要求，实际表现以游戏版本与设置为准。'],
   faq: ['常见问题', '玩家最常问的问题，能用一句话说清的直接写在这里。'],
@@ -137,9 +142,11 @@ export function gameDetail(slug: string): GameDetail | null {
   ].filter(Boolean);
   const autoSources = g._auto ? (g.sources ?? []).filter((s: any) => /steampowered|pcgamingwiki/.test(s.url)) : [];
 
+  const issues = issuesByProblem(g);
+
   const counts: Record<SectionId, number> = {
     channels: channels.length, paths: paths.length, entries: entries.length,
-    tools: tools.length, guides: guides.length, specs: specs.length, faq: faqs.length,
+    tools: tools.length, guides: guides.length, issues: issues.reduce((n, x) => n + x.issues.length, 0), specs: specs.length, faq: faqs.length,
   };
   const sections = (Object.keys(LEADS) as SectionId[])
     .filter((id) => counts[id] > 0)
@@ -154,6 +161,6 @@ export function gameDetail(slug: string): GameDetail | null {
     reviewStatus: g.reviewStatus,
     checkedAt: g.checkedAt,
     channels, paths, entries, tools, guides, faqs, offers, related, sections,
-    byline, specs, reqs: parseReqs(g.requirements), autoSources, syncedAt: g._auto?.syncedAt?.slice(0, 10),
+    byline, specs, issues, reqs: parseReqs(g.requirements), autoSources, syncedAt: g._auto?.syncedAt?.slice(0, 10),
   };
 }

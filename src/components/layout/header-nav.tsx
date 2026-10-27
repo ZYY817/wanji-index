@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'motion/react';
-import { NAV } from '@/lib/nav';
+import { NAV, navActive } from '@/lib/nav';
 import { cn } from '@/lib/utils';
 
 function NavItem({ href, label, active }: { href: string; label: string; active: boolean }) {
@@ -39,7 +39,7 @@ export function HeaderNav({ pathname }: { pathname: string }) {
     <nav aria-label="主导航" className="hidden h-full items-stretch justify-self-center lg:flex">
       <ul className="flex h-full items-stretch">
         {NAV.map((n) => (
-          <NavItem key={n.href} href={n.href} label={n.label} active={pathname.startsWith(n.href)} />
+          <NavItem key={n.href} href={n.href} label={n.label} active={navActive(n, pathname)} />
         ))}
       </ul>
     </nav>

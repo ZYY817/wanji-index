@@ -53,13 +53,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:51.008Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:29.276Z",
+      "syncedAt": "2026-10-27T16:13:23.257Z",
       "page": "Sid Meier's Civilization V"
     }
   },
@@ -90,6 +90,13 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\My Games\\Sid Meier's Civilization 5\\GraphicsSettingsDX11.ini",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Multiplayer",
+      "url": "https://www.pcgamingwiki.com/wiki/Sid_Meier's_Civilization_V#Multiplayer",
+      "fixed": true
     }
   ]
 }

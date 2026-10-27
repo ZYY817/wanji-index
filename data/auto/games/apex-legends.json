@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:43.160Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:47.972Z",
+      "syncedAt": "2026-10-27T16:09:30.618Z",
       "page": "Apex Legends"
     }
   },
@@ -73,6 +73,48 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Saved Games\\Respawn\\Apex\\profile\\profile.cfg",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Shader compilation stutter",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Shader_compilation_stutter",
+      "fixed": false
+    },
+    {
+      "title": "Party Not Ready",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Party_Not_Ready",
+      "fixed": false
+    },
+    {
+      "title": "Crash to desktop",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Crash_to_desktop",
+      "fixed": false
+    },
+    {
+      "title": "Low FPS/stuttering on Nvidia Optimus platforms",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Low_FPS%2Fstuttering_on_Nvidia_Optimus_platforms",
+      "fixed": true
+    },
+    {
+      "title": "Frametime inconsistencies and microstutter at high FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Frametime_inconsistencies_and_microstutter_at_high_FPS",
+      "fixed": true
+    },
+    {
+      "title": "Cannot look around in-game",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Cannot_look_around_in-game",
+      "fixed": true
+    },
+    {
+      "title": "Mouse stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Mouse_stuttering",
+      "fixed": true
+    },
+    {
+      "title": "Geometry pop-in/Low Level-of-Detail(LOD)",
+      "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends#Geometry_pop-in%2FLow_Level-of-Detail(LOD)",
+      "fixed": true
     }
   ]
 }

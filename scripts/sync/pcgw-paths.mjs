@@ -3,12 +3,13 @@
 // 取 Windows 的存档 / 配置路径，把 {{p|appdata}} 这类占位写成 %APPDATA% 等玩家熟悉的写法，写回该游戏的自动记录。
 // 人工已填存档位置的游戏，合并时仍以人工为准（见 src/lib/merge-auto.mjs）。
 //
-// 用法：node scripts/sync/pcgw-paths.mjs [--limit 20]（先运行 steam-games.mjs）
+// 用法：node scripts/sync/pcgw-paths.mjs [--limit 20] [--force]（先运行 steam-games.mjs）
 import { config, getJson, readAuto, writeAuto, sleep, today } from './lib.mjs';
 
 const cfg = config().pcgamingwiki;
 const limitArg = process.argv.indexOf('--limit');
 const MAX = limitArg > 0 ? Number(process.argv[limitArg + 1]) : cfg.maxPerRun;
+const FORCE = process.argv.includes('--force'); // 忽略刷新间隔，全部重新拉取（新增抓取字段时用）
 const API = 'https://www.pcgamingwiki.com/w/api.php';
 
 // PCGamingWiki 的路径占位 → Windows 常见写法
@@ -41,15 +42,33 @@ function extract(wikitext) {
   return out;
 }
 
+/** 「Issues fixed / Issues unresolved」两节下的三级标题 = 这款游戏的已知问题（只取标题，正文不转载，链接到原文锚点） */
+function issuesOf(wikitext, pageUrl) {
+  const out = [];
+  let section = null;
+  for (const line of wikitext.split('\n')) {
+    const h2 = /^==([^=].*?)==\s*$/.exec(line);
+    if (h2) { section = /issues fixed/i.test(h2[1]) ? 'fixed' : /issues unresolved/i.test(h2[1]) ? 'open' : null; continue; }
+    const h3 = section && /^===([^=].*?)===\s*$/.exec(line);
+    if (!h3) continue;
+    const title = h3[1].replace(/\{\{[^}]*\}\}/g, '').replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g, '$1').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+    // 有的页面在问题小节下按平台再分组（=== Windows ===），这类标题不是问题本身；只出现在 Linux / macOS / Steam Deck 上的问题也不收（本站面向 Windows 玩家）
+    if (!title || /^(windows|linux|macos|os x|mac os x|steam deck|general)$/i.test(title) || /\b(linux|macos|os x|steam deck|proton|wine)\b/i.test(title)) continue;
+    out.push({ title, url: `${pageUrl}#${encodeURIComponent(title.replace(/ /g, '_'))}`, fixed: section === 'fixed' });
+  }
+  return out.slice(0, 30);
+}
+
 async function wikitextOf(title) {
   const j = await getJson(`${API}?action=parse&page=${encodeURIComponent(title)}&prop=wikitext&redirects=1&format=json`);
   return j?.parse ? { title: j.parse.title, text: j.parse.wikitext['*'] } : null;
 }
 const appidMatches = (text, appid) => new RegExp(`steam appid\\s*=\\s*[^\\n]*\\b${appid}\\b`, 'i').test(text);
 
-async function findPage(name, appid) {
-  // 1) 英文名直接当页面标题；2) 站内搜索前 3 个结果——都要求页面里的 Steam appid 对得上
-  const titles = [name.replace(/[™®©]/g, '').trim()];
+async function findPage(names, appid) {
+  // 1) 名字直接当页面标题：商店当前名（全英文时）优先，其次英文名——同一 appid 可能换过名（CS:GO → CS2）；
+  // 2) 站内搜索前 3 个结果。都要求页面里的 Steam appid 对得上
+  const titles = [...new Set(names.filter(Boolean).map((n) => n.replace(/[™®©]/g, '').trim()))];
   const s = await getJson(`${API}?action=query&list=search&srsearch=${encodeURIComponent(titles[0])}&srlimit=3&format=json`);
   for (const r of s?.query?.search ?? []) if (!titles.includes(r.title)) titles.push(r.title);
   for (const t of titles) {
@@ -65,9 +84,9 @@ const stale = (g) => !g._auto?.pcgw?.syncedAt || (Date.now() - Date.parse(g._aut
 let done = 0, found = 0, miss = 0;
 for (const g of games) {
   if (done >= MAX) break;
-  if (!g.steamAppId || !stale(g)) continue;
+  if (!g.steamAppId || (!FORCE && !stale(g))) continue;
   done++;
-  const page = await findPage(g.name.en ?? g.name.zh, g.steamAppId);
+  const page = await findPage([/^[ -~]+$/.test(g.name.zh) ? g.name.zh : null, g.name.en, g.name.zh], g.steamAppId);
   const rec = { ...g, _auto: { ...g._auto, pcgw: { syncedAt: new Date().toISOString(), page: page?.title ?? null } } };
   if (page) {
     const { saves, config } = extract(page.text);
@@ -75,7 +94,9 @@ for (const g of games) {
     const note = '来源：PCGamingWiki';
     if (saves.length) rec.savePaths = saves.map((path) => ({ os: 'windows', path, note }));
     if (config.length) rec.configPaths = config.map((path) => ({ os: 'windows', path, note }));
-    if ((saves.length || config.length) && !rec.sources.some((x) => x.url === url)) rec.sources = [...rec.sources, { name: 'PCGamingWiki', url }];
+    const issues = issuesOf(page.text, url);
+    if (issues.length) rec.issues = issues; else delete rec.issues;
+    if ((saves.length || config.length || issues.length) && !rec.sources.some((x) => x.url === url)) rec.sources = [...rec.sources, { name: 'PCGamingWiki', url }];
     if (saves.length || config.length) found++; else miss++;
   } else miss++;
   rec.updatedAt = today();

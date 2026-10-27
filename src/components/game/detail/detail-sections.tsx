@@ -1,5 +1,7 @@
 import Link from 'next/link';
-import type { ChannelItem, EntryItem, FaqItem, GuideItem, PathItem, ToolItem } from '@/lib/game-detail';
+import type { ChannelItem, EntryItem, FaqItem, GuideItem, IssueGroup, PathItem, ToolItem } from '@/lib/game-detail';
+import { ArrowRight, ArrowUpRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 import { zh } from '@/lib/labels.mjs';
 import { AcquireButton } from '@/components/ui/button';
 import { CopyButton } from '@/components/ui/copy-button';
@@ -160,6 +162,39 @@ export function SpecsTable({ rows }: { rows: [string, string, string][] }) {
           </div>
         ))}
       </dl>
+    </div>
+  );
+}
+
+/** 已知问题：按站内问题类型分组 → 每组先给本站排障页入口，再列 PCGamingWiki 的原文条目（英文，外链到锚点） */
+export function IssueList({ groups }: { groups: IssueGroup[] }) {
+  return (
+    <div className="space-y-8">
+      {groups.map((g) => (
+        <section key={g.problem?.slug ?? '_other'}>
+          <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border-strong pb-3">
+            <h3 className="text-lg font-semibold">{g.problem ? g.problem.short : '其他问题'}</h3>
+            {g.problem && (
+              <Link href={`/fixes/${g.problem.slug}/`} className="group inline-flex min-h-11 items-center gap-1.5 text-sm text-fg-2 underline decoration-primary underline-offset-[5px] hover:text-primary">
+                通用排查方法
+                <ArrowRight aria-hidden className="size-3.5 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            )}
+          </div>
+          <ul>
+            {g.issues.map((i) => (
+              <li key={i.url} className="border-b border-border last:border-b-0">
+                <a href={i.url} target="_blank" rel="noopener noreferrer" className="group flex items-start gap-4 py-3.5 transition-colors hover:bg-card md:-mx-3 md:px-3">
+                  <span className={cn('mt-0.5 shrink-0 text-sm', i.fixed === false ? 'text-warn' : 'text-ok')}>{i.fixed === false ? '未解决' : '有解法'}</span>
+                  <span className="min-w-0 flex-1 text-base leading-[1.6] text-foreground/90 group-hover:text-foreground">{i.title}</span>
+                  <ArrowUpRight aria-hidden className="mt-1 size-4 shrink-0 text-fg-3 group-hover:text-foreground" />
+                  <span className="sr-only">（在新窗口打开 PCGamingWiki）</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
     </div>
   );
 }

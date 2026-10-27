@@ -8,6 +8,7 @@ export const ZH = {
   siteCategory: { store: '商店', 'free-platform': '免费平台', indie: '独立游戏', mod: 'MOD 社区', localization: '汉化/本地化', 'guide-wiki': '攻略百科', 'patch-support': '补丁支持', other: '比价与数据' },
   toolType: { 'mod-manager': 'MOD 管理', save: '存档工具', 'perf-monitor': '性能监控', 'game-manager': '游戏管理', 'trainer-channel': '修改器渠道', 'compat-fix': '兼容修复', other: '其他' },
   entryType: { mod: 'MOD', localization: '汉化', patch: '补丁', 'guide-page': '攻略页', save: '存档', 'tool-page': '工具页', other: '资料' },
+  problemCategory: { crash: '闪退崩溃', launch: '无法启动', dll: '缺少文件', display: '画面显示', performance: '卡顿掉帧', save: '存档', input: '手柄键鼠', network: '联机网络' },
   guideKind: { tutorial: '教程', troubleshooting: '问题排查' },
   guideCategory: { 'install-run': '安装运行', 'launch-crash': '启动崩溃', mod: 'MOD 安装', 'save-backup': '存档备份', 'settings-compat': '设置兼容', performance: '性能优化' },
   os: { windows: 'Windows', linux: 'Linux', macos: 'macOS' },

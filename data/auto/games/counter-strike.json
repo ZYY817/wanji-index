@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:23.962Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:24.236Z",
+      "syncedAt": "2026-10-27T16:10:15.318Z",
       "page": "Counter-Strike"
     }
   },
@@ -64,6 +64,73 @@
       "os": "windows",
       "path": "<游戏安装目录>\\Half-Life\\cstrike\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Run the game at screen refresh rate (retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Run_the_game_at_screen_refresh_rate_(retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Input lag in Direct3D (retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Input_lag_in_Direct3D_(retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Main menu issues (retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Main_menu_issues_(retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Your system reported only -0.00K of physical memory, Counter-Strike requires at least 16MB. (retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Your_system_reported_only_-0.00K_of_physical_memory%2C_Counter-Strike_requires_at_least_16MB._(retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on startup (Steam version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Black_screen_on_startup_(Steam_version)",
+      "fixed": true
+    },
+    {
+      "title": "Windows 7/Vista performance issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Windows_7%2FVista_performance_issues",
+      "fixed": true
+    },
+    {
+      "title": "Performance issues with dynamic lights on Intel graphics (OpenGL)",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Performance_issues_with_dynamic_lights_on_Intel_graphics_(OpenGL)",
+      "fixed": true
+    },
+    {
+      "title": "Shooting sound and fire animation not synchronized",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Shooting_sound_and_fire_animation_not_synchronized",
+      "fixed": true
+    },
+    {
+      "title": "Unable to switch from left-handed to right-handed weapon",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Unable_to_switch_from_left-handed_to_right-handed_weapon",
+      "fixed": true
+    },
+    {
+      "title": "Unable to move diagonally",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Unable_to_move_diagonally",
+      "fixed": true
+    },
+    {
+      "title": "Prevent admin slow-hacking",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Prevent_admin_slow-hacking",
+      "fixed": true
+    },
+    {
+      "title": "Low performance on laptops with a Nvidia graphics cards",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Low_performance_on_laptops_with_a_Nvidia_graphics_cards",
+      "fixed": true
+    },
+    {
+      "title": "Low frame rate on old hardware",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike#Low_frame_rate_on_old_hardware",
+      "fixed": true
     }
   ]
 }

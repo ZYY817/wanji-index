@@ -50,13 +50,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-26T17:19:34.600Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:05.799Z",
+      "syncedAt": "2026-10-27T16:09:59.865Z",
       "page": "Cities: Skylines"
     }
   },
@@ -72,6 +72,28 @@
       "os": "windows",
       "path": "%LOCALAPPDATA%\\Colossal Order\\Cities_Skylines\\gameSettings.cgs",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Poor performance on laptops with Nvidia Optimus",
+      "url": "https://www.pcgamingwiki.com/wiki/Cities%3A_Skylines#Poor_performance_on_laptops_with_Nvidia_Optimus",
+      "fixed": true
+    },
+    {
+      "title": "Blurry UI text at resolutions above 1080p",
+      "url": "https://www.pcgamingwiki.com/wiki/Cities%3A_Skylines#Blurry_UI_text_at_resolutions_above_1080p",
+      "fixed": true
+    },
+    {
+      "title": "Steam overlay does not work",
+      "url": "https://www.pcgamingwiki.com/wiki/Cities%3A_Skylines#Steam_overlay_does_not_work",
+      "fixed": true
+    },
+    {
+      "title": "Random crashes",
+      "url": "https://www.pcgamingwiki.com/wiki/Cities%3A_Skylines#Random_crashes",
+      "fixed": true
     }
   ]
 }

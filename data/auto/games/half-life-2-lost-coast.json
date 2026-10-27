@@ -47,13 +47,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:37.926Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:09.809Z",
+      "syncedAt": "2026-10-27T16:11:20.521Z",
       "page": "Half-Life 2: Lost Coast"
     }
   },
@@ -62,6 +62,13 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Source\\lostcoast\\Settings",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2%3A_Lost_Coast#Purple_and_black_broken_textures",
+      "fixed": true
     }
   ]
 }

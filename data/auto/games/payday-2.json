@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:59.391Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:57.853Z",
+      "syncedAt": "2026-10-27T16:12:48.839Z",
       "page": "Payday 2"
     }
   },
@@ -71,6 +71,63 @@
       "os": "windows",
       "path": "%LOCALAPPDATA%\\PAYDAY 2\\renderer_settings.xml",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Infinite Black Loading Screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Infinite_Black_Loading_Screen",
+      "fixed": true
+    },
+    {
+      "title": "Main Menu gets excessively brighter upon launching the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Main_Menu_gets_excessively_brighter_upon_launching_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Not fitting fullscreen despite running at 1080p/Black screen when selecting 1080p",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Not_fitting_fullscreen_despite_running_at_1080p%2FBlack_screen_when_selecting_1080p",
+      "fixed": true
+    },
+    {
+      "title": "Issues with mouse movement near the top of the screen in fullscreen mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Issues_with_mouse_movement_near_the_top_of_the_screen_in_fullscreen_mode",
+      "fixed": true
+    },
+    {
+      "title": "Mouse input delay",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Mouse_input_delay",
+      "fixed": true
+    },
+    {
+      "title": "Play on Intel HD3000 & HD4000",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Play_on_Intel_HD3000_%26_HD4000",
+      "fixed": true
+    },
+    {
+      "title": "Double mouse cursor after Alt+Tab",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Double_mouse_cursor_after_Alt%2BTab",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "MSVCR120.dll was not found",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#MSVCR120.dll_was_not_found",
+      "fixed": true
+    },
+    {
+      "title": "Increased CPU usage when using Special K combined with DXVK",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Increased_CPU_usage_when_using_Special_K_combined_with_DXVK",
+      "fixed": true
+    },
+    {
+      "title": "Low FPS/Utilization",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2#Low_FPS%2FUtilization",
+      "fixed": true
     }
   ]
 }

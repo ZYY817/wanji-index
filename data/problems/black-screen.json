@@ -1,0 +1,88 @@
+{
+  "id": "black-screen",
+  "slug": "black-screen",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "黑屏",
+  "category": "display",
+  "title": "游戏黑屏：有声音没画面 / 启动后一直黑屏",
+  "summary": "黑屏多半和显示模式有关：分辨率或刷新率超出显示器支持范围、全屏模式冲突，或者笔记本用了核显。先用 Alt + Enter 切到窗口模式，再在游戏设置里改成无边框窗口。",
+  "symptoms": [
+    "启动后屏幕全黑，但能听到菜单音乐",
+    "切出游戏（Alt + Tab）再切回来就黑屏",
+    "外接显示器或高刷新率显示器上黑屏"
+  ],
+  "keywords": [
+    "黑屏",
+    "没画面",
+    "有声音没画面",
+    "black screen"
+  ],
+  "fixes": [
+    {
+      "title": "按 Alt + Enter 切到窗口模式",
+      "detail": "多数游戏支持用 Alt + Enter 在全屏和窗口之间切换。出画面后，到游戏的图像设置里把显示模式改成「无边框窗口」，分辨率改成显示器的原生分辨率。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：无边框窗口",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Borderless_fullscreen_windowed"
+        }
+      ]
+    },
+    {
+      "title": "删除配置文件，恢复默认画面设置",
+      "detail": "之前设了显示器不支持的分辨率或刷新率，游戏每次都会按这个设置启动。找到游戏的配置文件（本站的游戏档案里有「配置文件位置」），先备份再删掉，游戏会用默认设置重新生成。"
+    },
+    {
+      "title": "让游戏用独立显卡运行（笔记本）",
+      "detail": "笔记本上游戏跑在核显上时容易黑屏或卡顿。打开 Windows 设置 → 系统 → 屏幕 → 显示卡，把游戏 exe 加进去并选「高性能」；也可以在 NVIDIA 控制面板或 AMD 软件里指定。"
+    },
+    {
+      "title": "更新显卡驱动",
+      "detail": "新游戏在老驱动上黑屏很常见，装最新正式版驱动。",
+      "sources": [
+        {
+          "name": "NVIDIA 官方驱动下载",
+          "url": "https://www.nvidia.cn/drivers/lookup/"
+        },
+        {
+          "name": "AMD 官方驱动下载",
+          "url": "https://www.amd.com/zh-cn/support/download/drivers.html"
+        },
+        {
+          "name": "Intel 驱动与支持助手",
+          "url": "https://www.intel.cn/content/www/cn/zh/support/detect.html"
+        }
+      ]
+    },
+    {
+      "title": "暂时拔掉多余的显示器",
+      "detail": "多显示器、不同刷新率的显示器混用时，游戏可能把画面输出到了另一块屏幕，或者选错了刷新率。只留一块屏幕测试。"
+    }
+  ],
+  "issueMatch": [
+    "black screen",
+    "blank screen",
+    "no video",
+    "screen goes black",
+    "texture",
+    "monitor",
+    "resolution",
+    "blurry",
+    "too dark",
+    "flicker",
+    "stretch",
+    "fullscreen",
+    "refresh rate",
+    "white screen",
+    "graphics hardware",
+    "rendering"
+  ],
+  "relatedProblems": [
+    "game-crash",
+    "stutter-low-fps"
+  ]
+}

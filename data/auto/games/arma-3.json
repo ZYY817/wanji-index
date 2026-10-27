@@ -51,13 +51,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:55.297Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:51.726Z",
+      "syncedAt": "2026-10-27T16:09:35.957Z",
       "page": "Arma 3"
     }
   },
@@ -78,6 +78,18 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Arma 3\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Forcing correct monitor",
+      "url": "https://www.pcgamingwiki.com/wiki/Arma_3#Forcing_correct_monitor",
+      "fixed": true
+    },
+    {
+      "title": "Fix intermittent screen freezing",
+      "url": "https://www.pcgamingwiki.com/wiki/Arma_3#Fix_intermittent_screen_freezing",
+      "fixed": true
     }
   ]
 }

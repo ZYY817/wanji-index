@@ -8,7 +8,7 @@ import { loadEnums, PROJECT_ROOT } from './config.mjs';
 
 export const ENTITY_DIRS = {
   games: 'game', sites: 'site', entries: 'entry',
-  tools: 'tool', guides: 'guide', offers: 'offer',
+  tools: 'tool', guides: 'guide', offers: 'offer', problems: 'problem',
 };
 
 function injectEnums(node, enums) {

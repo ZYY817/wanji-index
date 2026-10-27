@@ -5,8 +5,8 @@ import { DATA_DIR } from './config.mjs';
 import { filterEligible } from './eligibility.mjs';
 import { mergeAuto } from './merge-auto.mjs';
 
-const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers'];
-const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer' };
+const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers', 'problems'];
+const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer', problems: 'problem' };
 
 export function loadData() {
   // import.meta.glob 只接受字面量；data 与 fixtures 两棵候选树，按 DATA_DIR 选择

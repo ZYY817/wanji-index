@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:26.363Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:14.056Z",
+      "syncedAt": "2026-10-27T16:11:24.869Z",
       "page": "Half-Life"
     }
   },
@@ -71,6 +71,43 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\Software\\Valve\\Half-Life\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Retail version",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Retail_version",
+      "fixed": true
+    },
+    {
+      "title": "Steam version",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Steam_version",
+      "fixed": true
+    },
+    {
+      "title": "Missing Blood & Gore (Steam version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Missing_Blood_%26_Gore_(Steam_version)",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on startup",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Black_screen_on_startup",
+      "fixed": true
+    },
+    {
+      "title": "Windows 7/Vista Performance Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Windows_7%2FVista_Performance_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Missing voice and multiplayer tabs under options (legacy build)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Missing_voice_and_multiplayer_tabs_under_options_(legacy_build)",
+      "fixed": true
+    },
+    {
+      "title": "Performance issues with dynamic lights on Intel graphics (OpenGL)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life#Performance_issues_with_dynamic_lights_on_Intel_graphics_(OpenGL)",
+      "fixed": true
     }
   ]
 }

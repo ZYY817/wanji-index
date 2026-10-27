@@ -25,7 +25,7 @@
 
 ## 数据与资格
 
-- 正式数据：`data/{games,sites,entries,tools,guides,offers}/`；`data/_examples/` 不加载。教程正文由同名 `.md` 合并进 `body`。
+- 正式数据：`data/{games,sites,entries,tools,guides,offers,problems}/`；`data/_examples/` 不加载。教程正文由同名 `.md` 合并进 `body`。
 - Schema：`schemas/{entity}.schema.json`（draft-07）；`x-enum` 占位符加载时替换为 `config/enums.json` 值——新增枚举只改 `enums.json`。
 - 发布资格唯一判定：[`eligibility.mjs`](./src/lib/eligibility.mjs)（`published` ∧ 类型最低标准 ∧ 非 `_demo`）；页面生成、索引、关联、Sitemap 共用。
 - 测试 fixture 放 `tests/fixtures-data/`，负向用例放 `tests/bad/{用例}/`，由 `npm test` 验证全部被拦截。
@@ -42,6 +42,7 @@
 | 工具 | `data/tools/<slug>.json` | `supportedGames` 填游戏 id；教程侧 `tools` |
 | 教程 | `data/guides/<slug>.json`，可选同名 `.md` 作为正文 | `games` / `tools` / `relatedGuides` |
 | 免费情报 | `data/offers/<slug>.json` | `gameId` 可选；填写后进入该游戏的关联数据 |
+| 排障问题 | `data/problems/<slug>.json` | `fixes[].guideId` 链到站内教程；`issueMatch` 关键词把各游戏的已知问题（PCGamingWiki）归到这一页；`relatedProblems` |
 
 1. 复制同目录现有条目改写，`id` 与 `slug` 全站唯一。
 2. 按 `schemas/*.schema.json` 的必填项填写；`checkedAt` 是核验日期，不确定的状态标 `unverified`，不写猜测结论。
@@ -66,7 +67,7 @@ SEO：canonical、Open Graph、JSON-LD（WebSite / VideoGame / BreadcrumbList / 
 
 首页 7 章：开映 / 片库 / 档案 / 免费雷达 / 资源站目录（纸面反白）/ 装机 / 片尾。
 
-`/games/`、`/free/`、`/resources/`、`/tools/`、`/guides/`、`/kit/`、`/about/`、`/search/`，以及游戏、资源站、工具、教程详情页。`/search/` 不进索引。静态产物包含 65 个 HTML、61 条 Sitemap URL、53 条站内搜索记录。
+`/games/`、`/free/`、`/resources/`、`/tools/`、`/fixes/`（排障：按症状的问题页 + 分步教程）、`/guides/`、`/check/`（我的电脑能玩吗）、`/kit/`、`/about/`、`/search/`，以及游戏、资源站、工具、问题、教程详情页。`/search/` 不进索引。静态产物包含 65 个 HTML、61 条 Sitemap URL、53 条站内搜索记录。
 
 ## 截图自查
 
@@ -119,7 +120,7 @@ SEO：canonical、Open Graph、JSON-LD（WebSite / VideoGame / BreadcrumbList / 
 | 脚本 | 数据源 | 内容 |
 |---|---|---|
 | `scripts/sync/steam-games.mjs` | SteamSpy 热门榜 + Steam 商店公开接口 | 游戏中文名、简介、类型、开发商、发售日期、中文支持、配置要求 |
-| `scripts/sync/pcgw-paths.mjs` | PCGamingWiki（CC BY-NC-SA，逐条署名） | Windows 存档位置、配置文件位置 |
+| `scripts/sync/pcgw-paths.mjs` | PCGamingWiki（CC BY-NC-SA，逐条署名） | Windows 存档位置、配置文件位置、已知问题标题（只取标题，链接到原文锚点；`--force` 全部重新拉取） |
 | `scripts/sync/epic-free.mjs` | Epic 官方免费游戏接口 | 每周免费（进行中 + 已公布的下一期） |
 | `scripts/sync/free-giveaways.mjs` | Steam 商店特惠 + GamerPower 赠送汇总 | 其他平台限时免费：Steam 免费保留、GOG、itch.io、IndieGala（只收直达官方页面的，链接去掉追踪参数） |
 

@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:33.450Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:21.928Z",
+      "syncedAt": "2026-10-27T16:10:13.086Z",
       "page": "Counter-Strike: Source"
     }
   },
@@ -68,6 +68,13 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Source\\cstrike",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike%3A_Source#Purple_and_black_broken_textures",
+      "fixed": true
     }
   ]
 }

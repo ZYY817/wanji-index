@@ -1,0 +1,85 @@
+{
+  "id": "controller-not-working",
+  "slug": "controller-not-working",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "手柄没反应",
+  "category": "input",
+  "title": "手柄没反应：PS / Switch / 第三方手柄在 PC 游戏里不能用",
+  "summary": "大多数 PC 游戏只原生支持 Xbox 手柄（XInput）。PS、Switch 和第三方手柄在 Steam 游戏里打开「Steam 输入」，由 Steam 转换成游戏能识别的按键；游戏同时识别到两个手柄时会乱，关掉其中一个。",
+  "symptoms": [
+    "手柄连上了，但游戏里完全没反应",
+    "按键错位，或者游戏里显示的是 Xbox 按键图标",
+    "手柄能用，但角色自己乱动或视角一直转"
+  ],
+  "keywords": [
+    "手柄",
+    "没反应",
+    "ps5 手柄",
+    "ps4 手柄",
+    "switch 手柄",
+    "手柄不能用",
+    "xinput"
+  ],
+  "fixes": [
+    {
+      "title": "在 Steam 里打开「Steam 输入」",
+      "when": "PS / Switch / 第三方手柄，游戏是 Steam 版",
+      "detail": "Steam → 设置 → 控制器，打开对应手柄的支持；再在游戏属性 → 控制器里把「Steam 输入」设为启用。Steam 会把手柄转换成游戏能识别的输入。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：手柄支持",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Controller"
+        }
+      ]
+    },
+    {
+      "title": "反过来：Xbox 手柄出问题时关掉 Steam 输入",
+      "detail": "Xbox 手柄游戏本来就支持，叠加 Steam 输入后可能出现按键重复或错位。把这款游戏的 Steam 输入设为禁用试试。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：Xbox 无线手柄",
+          "url": "https://www.pcgamingwiki.com/wiki/Controller:Xbox_Wireless_Controller"
+        }
+      ]
+    },
+    {
+      "title": "只保留一个输入设备",
+      "detail": "同时连着两个手柄，或者装了手柄映射软件又开了 Steam 输入，游戏会收到两份输入，表现为乱动、视角乱转。断开多余的手柄，退出其他映射软件。"
+    },
+    {
+      "title": "换有线连接，更新手柄固件",
+      "detail": "蓝牙连接不稳定时先用数据线测试。Xbox 手柄可以用微软的「Xbox 配件」应用更新固件；PS5 手柄用索尼官方的固件更新工具。"
+    },
+    {
+      "title": "看看这款游戏是否支持手柄",
+      "detail": "部分游戏（尤其是策略、模拟类）完全不支持手柄，或只支持一部分功能。下面列出了在 PCGamingWiki 上记录了手柄相关问题的游戏。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：手柄支持",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Controller"
+        }
+      ]
+    }
+  ],
+  "issueMatch": [
+    "controller",
+    "gamepad",
+    "xinput",
+    "dualshock",
+    "dualsense",
+    "joystick",
+    "mouse",
+    "keyboard",
+    "input lag",
+    "look around",
+    "move diagonally",
+    "left-handed"
+  ],
+  "relatedProblems": [
+    "game-wont-launch"
+  ]
+}

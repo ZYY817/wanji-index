@@ -5,7 +5,7 @@ import { X } from 'lucide-react';
 import { motion, useReducedMotion, type Variants } from 'motion/react';
 import { Dialog, DialogContent, DialogTitle, DialogClose, DialogDescription } from '@/components/ui/dialog';
 import { Kbd } from '@/components/ui/kbd';
-import { NAV, type NavCounts } from '@/lib/nav';
+import { NAV, type NavCounts, navActive } from '@/lib/nav';
 import { cn } from '@/lib/utils';
 import { EASE_OUT } from '@/components/fx/tokens';
 
@@ -119,10 +119,10 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
                   href={n.href}
                   label={n.label}
                   count={counts[n.key]}
-                  active={pathname === n.href || pathname.startsWith(n.href)}
+                  active={navActive(n, pathname)}
                 />
               ))}
-              <Row no="07" href="/about/" label="关于本站" active={pathname.startsWith('/about')} />
+              <Row no="08" href="/about/" label="关于本站" active={pathname.startsWith('/about')} />
             </motion.ul>
 
             <div className="mt-8 flex items-center gap-3">

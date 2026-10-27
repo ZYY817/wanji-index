@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:31.259Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:11.990Z",
+      "syncedAt": "2026-10-27T16:11:22.803Z",
       "page": "Half-Life 2"
     }
   },
@@ -68,6 +68,33 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Source\\hl2\\Settings",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2#Purple_and_black_textures",
+      "fixed": true
+    },
+    {
+      "title": "Wrong valve logo movie plays at startup (20th Anniversary)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2#Wrong_valve_logo_movie_plays_at_startup_(20th_Anniversary)",
+      "fixed": true
+    },
+    {
+      "title": "Half-Life 2 stuck on DirectX v8.0",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2#Half-Life_2_stuck_on_DirectX_v8.0",
+      "fixed": true
+    },
+    {
+      "title": "SteamVR launches automatically when attempting to enter Options",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2#SteamVR_launches_automatically_when_attempting_to_enter_Options",
+      "fixed": true
+    },
+    {
+      "title": "Missing crosshair",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2#Missing_crosshair",
+      "fixed": true
     }
   ]
 }

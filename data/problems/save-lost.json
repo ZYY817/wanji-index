@@ -1,0 +1,79 @@
+{
+  "id": "save-lost",
+  "slug": "save-lost",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "存档丢失",
+  "category": "save",
+  "title": "存档丢失 / 云存档冲突：进度没了怎么办",
+  "summary": "先别急着开新档：存档往往还在，只是云同步冲突、换了账号或换了电脑。先在本站游戏档案里找到存档位置确认文件还在，再处理云同步。以后定期备份存档文件夹。",
+  "symptoms": [
+    "进游戏发现进度回到很早以前",
+    "Steam 弹出「云同步冲突」让你选择本地或云端",
+    "重装系统 / 换电脑后存档不见了"
+  ],
+  "keywords": [
+    "存档丢失",
+    "存档没了",
+    "云存档",
+    "进度丢失",
+    "换电脑存档",
+    "存档位置"
+  ],
+  "fixes": [
+    {
+      "title": "先找到存档文件夹，确认文件还在",
+      "detail": "在本站搜索这款游戏，档案页的「存档与配置」里写着存档位置（多数来自 PCGamingWiki）。打开文件夹，按修改时间看看最新的存档还在不在。动手之前先把整个文件夹复制一份。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：游戏数据位置",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Game_data"
+        }
+      ]
+    },
+    {
+      "title": "云同步冲突时，看清时间再选",
+      "detail": "Steam 弹出冲突提示时会显示本地和云端各自的修改时间，选更新的那一边。选错会用旧进度覆盖新进度，所以不确定时先取消，备份本地存档文件夹后再选。",
+      "sources": [
+        {
+          "name": "Steam 客服：Steam 云",
+          "url": "https://help.steampowered.com/zh-cn/faqs/view/68D2-35AB-09A9-7678"
+        }
+      ]
+    },
+    {
+      "title": "换电脑 / 重装系统：手动搬存档",
+      "detail": "不支持云存档的游戏，把旧电脑上的存档文件夹整个复制到新电脑的同一位置（先启动一次游戏，让它生成文件夹）。注意路径里的用户名可能不同。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：存档云同步",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Save_game_cloud_syncing"
+        }
+      ]
+    },
+    {
+      "title": "检查是不是登录了别的账号",
+      "detail": "很多游戏按平台账号或游戏内账号分别保存进度（例如 Ubisoft、EA 账号）。确认登录的是原来那个账号，以及 Steam 家庭共享时用的是谁的存档。"
+    },
+    {
+      "title": "养成备份习惯",
+      "detail": "大版本更新、装 MOD 之前，把存档文件夹复制一份到别处。重要的存档可以同时放进网盘同步文件夹里。"
+    }
+  ],
+  "issueMatch": [
+    "save",
+    "cloud",
+    "progress lost",
+    "corrupt",
+    "settings are lost",
+    "persistence",
+    "settings reset",
+    "resets after"
+  ],
+  "relatedProblems": [
+    "game-crash"
+  ]
+}

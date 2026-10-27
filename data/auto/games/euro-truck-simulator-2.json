@@ -50,13 +50,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:05.804Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:46.186Z",
+      "syncedAt": "2026-10-27T16:10:44.479Z",
       "page": "Euro Truck Simulator 2"
     }
   },
@@ -72,6 +72,18 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Euro Truck Simulator 2\\config.cfg",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Invisible cars, trucks, stoplights, etc",
+      "url": "https://www.pcgamingwiki.com/wiki/Euro_Truck_Simulator_2#Invisible_cars%2C_trucks%2C_stoplights%2C_etc",
+      "fixed": true
+    },
+    {
+      "title": "Windows: shortcuts to ogg audio files don't work",
+      "url": "https://www.pcgamingwiki.com/wiki/Euro_Truck_Simulator_2#Windows%3A_shortcuts_to_ogg_audio_files_don't_work",
+      "fixed": true
     }
   ]
 }

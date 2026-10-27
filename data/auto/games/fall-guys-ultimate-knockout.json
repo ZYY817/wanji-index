@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:39.124Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:50.322Z",
+      "syncedAt": "2026-10-27T16:10:55.591Z",
       "page": "Fall Guys"
     }
   },
@@ -64,6 +64,18 @@
       "os": "windows",
       "path": "HKEY_CURRENT_USER\\SOFTWARE\\Mediatonic\\FallGuys_client",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "\"Launch error: Easy Anti-Cheat is not installed\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Fall_Guys#%22Launch_error%3A_Easy_Anti-Cheat_is_not_installed%22",
+      "fixed": true
+    },
+    {
+      "title": "\"Your friends list sometime not refreshing on Epic Games Overlays\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Fall_Guys#%22Your_friends_list_sometime_not_refreshing_on_Epic_Games_Overlays%22",
+      "fixed": true
     }
   ]
 }

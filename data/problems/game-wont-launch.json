@@ -1,0 +1,91 @@
+{
+  "id": "game-wont-launch",
+  "slug": "game-wont-launch",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "打不开",
+  "category": "launch",
+  "title": "游戏打不开：点了开始没反应 / 一闪就没了",
+  "summary": "点「开始」后什么都不发生，多半是缺运行库、被杀毒软件拦截，或上一次的进程还卡在后台。按「结束残留进程 → 装运行库 → 检查杀毒拦截 → 验证文件」的顺序排查。",
+  "symptoms": [
+    "点开始后 Steam 显示「运行中」，几秒后又变回「开始」",
+    "鼠标转圈后什么窗口都没出现",
+    "游戏窗口一闪就消失"
+  ],
+  "keywords": [
+    "打不开",
+    "启动不了",
+    "没反应",
+    "无法启动",
+    "点了没反应"
+  ],
+  "fixes": [
+    {
+      "title": "结束后台残留进程，重启电脑",
+      "detail": "打开任务管理器（Ctrl + Shift + Esc），看看有没有同名的游戏进程卡在后台，结束它再启动。实在不行就重启一次电脑，能排除很多临时问题。"
+    },
+    {
+      "title": "安装 Visual C++ 运行库和 DirectX",
+      "when": "没有任何提示就启动失败，尤其是新装的系统",
+      "detail": "大部分 PC 游戏依赖微软的 Visual C++ 运行库和 DirectX 组件。缺少时有的游戏会提示缺少 dll，有的直接没反应。从微软官网装好 x64 和 x86 两个版本的 VC++ 运行库，再装 DirectX 最终用户运行时。",
+      "guideId": "vcredist-install",
+      "sources": [
+        {
+          "name": "Microsoft Learn：最新受支持的 Visual C++ 可再发行程序包",
+          "url": "https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist"
+        },
+        {
+          "name": "Microsoft 下载中心：DirectX 最终用户运行时",
+          "url": "https://www.microsoft.com/zh-cn/download/details.aspx?id=35"
+        }
+      ]
+    },
+    {
+      "title": "检查杀毒软件有没有拦截或隔离文件",
+      "detail": "杀毒软件有时会把游戏的 exe 或 dll 误判后隔离，导致启动失败。到杀毒软件的「隔离区 / 保护历史记录」里看有没有游戏文件；确认是正版游戏后恢复，并把游戏目录加进排除项。",
+      "sources": [
+        {
+          "name": "Microsoft 支持：在 Windows 安全中心添加排除项",
+          "url": "https://support.microsoft.com/zh-cn/windows/811816c0-4dfd-af4a-47e4-c301afe13b26"
+        }
+      ]
+    },
+    {
+      "title": "验证游戏文件完整性",
+      "detail": "文件缺失或损坏同样会导致启动失败。用启动器的验证功能修复，不影响存档。",
+      "sources": [
+        {
+          "name": "Steam 客服：验证游戏文件完整性",
+          "url": "https://help.steampowered.com/zh-cn/faqs/view/0C48-FCBD-DA71-93EB"
+        }
+      ]
+    },
+    {
+      "title": "以管理员身份运行，或把游戏装到非系统盘",
+      "detail": "装在 C:\\Program Files 下的老游戏有时因为没有写入权限而启动失败。右键游戏 exe → 属性 → 兼容性 → 勾选「以管理员身份运行」试试；或者把游戏移到其他盘的普通文件夹。"
+    },
+    {
+      "title": "照着站内的启动排查教程走一遍",
+      "detail": "把上面这些检查整理成了一步一步的流程，每一步写明预期结果和下一步做什么。",
+      "guideId": "launch-crash-check"
+    }
+  ],
+  "issueMatch": [
+    "won't launch",
+    "not launch",
+    "fails to launch",
+    "does not start",
+    "fails to start",
+    "not starting",
+    "startup",
+    "launcher"
+  ],
+  "relatedProblems": [
+    "missing-dll",
+    "error-0xc000007b",
+    "game-crash"
+  ]
+}

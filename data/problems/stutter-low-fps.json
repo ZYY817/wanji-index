@@ -1,0 +1,80 @@
+{
+  "id": "stutter-low-fps",
+  "slug": "stutter-low-fps",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "卡顿掉帧",
+  "category": "performance",
+  "title": "游戏卡顿、掉帧：帧数低或一顿一顿的",
+  "summary": "先分清是「帧数整体偏低」还是「帧数够但一顿一顿」：前者是配置跟不上，降画质、开超分辨率；后者多半是着色器编译、硬盘读取或后台程序，等着色器编译完、把游戏装到固态硬盘、关掉后台软件。",
+  "symptoms": [
+    "帧数整体偏低，画面不流畅",
+    "帧数显示很高，但转视角或进新区域时一卡一卡",
+    "玩一段时间后越来越卡"
+  ],
+  "keywords": [
+    "卡顿",
+    "掉帧",
+    "帧数低",
+    "fps",
+    "一卡一卡",
+    "优化"
+  ],
+  "fixes": [
+    {
+      "title": "先确认电脑够不够配置",
+      "detail": "用本站的「我的电脑能玩吗」对照一下这款游戏的配置要求：只达到最低配置时，中高画质卡顿是正常的。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：帧率",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Frame_rate_(FPS)"
+        }
+      ]
+    },
+    {
+      "title": "降低最吃配置的几项画质，开启超分辨率",
+      "detail": "阴影、体积云 / 雾、光线追踪、抗锯齿通常最吃性能，先把它们调低。游戏支持 DLSS、FSR、XeSS 的话，打开「质量」或「平衡」档，帧数提升明显、画质损失很小。"
+    },
+    {
+      "title": "把游戏装到固态硬盘",
+      "detail": "装在机械硬盘上的开放世界游戏，跑图时读取跟不上就会一顿一顿。Steam 可以在 属性 → 已安装文件 → 移动安装文件夹 里直接搬到固态硬盘。"
+    },
+    {
+      "title": "等着色器编译完成",
+      "detail": "很多新游戏第一次启动或驱动更新后要编译着色器，期间会卡顿。如果游戏在主菜单显示编译进度，等它跑完再玩；之后会流畅很多。"
+    },
+    {
+      "title": "关闭后台占用和录制",
+      "detail": "浏览器、下载软件、录屏和后台直播都会抢占资源。笔记本记得插上电源，并把 Windows 电源模式设为「最佳性能」。"
+    },
+    {
+      "title": "检查垂直同步和帧数上限",
+      "detail": "帧数在显示器刷新率上下来回跳时会有明显卡顿感。开启垂直同步，或者把帧数上限设为一个稳定达得到的值（例如 60）。",
+      "sources": [
+        {
+          "name": "PCGamingWiki：垂直同步",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:Vertical_sync_(Vsync)"
+        }
+      ]
+    }
+  ],
+  "issueMatch": [
+    "stutter",
+    "frame rate",
+    "fps",
+    "performance",
+    "hitch",
+    "low framerate",
+    "shader",
+    "pop-in",
+    "level-of-detail",
+    "lod"
+  ],
+  "relatedProblems": [
+    "black-screen",
+    "game-crash"
+  ]
+}

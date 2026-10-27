@@ -41,19 +41,40 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/990080/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Hogwarts_Legacy"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:31.018Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:22.723Z",
+      "syncedAt": "2026-10-27T16:11:35.834Z",
       "page": "Hogwarts Legacy"
     }
-  }
+  },
+  "issues": [
+    {
+      "title": "Stuttering and low performance",
+      "url": "https://www.pcgamingwiki.com/wiki/Hogwarts_Legacy#Stuttering_and_low_performance",
+      "fixed": false
+    },
+    {
+      "title": "Controller rumble not working",
+      "url": "https://www.pcgamingwiki.com/wiki/Hogwarts_Legacy#Controller_rumble_not_working",
+      "fixed": true
+    },
+    {
+      "title": "Protagonist's voice sounds robotic",
+      "url": "https://www.pcgamingwiki.com/wiki/Hogwarts_Legacy#Protagonist's_voice_sounds_robotic",
+      "fixed": true
+    }
+  ]
 }

@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:24.427Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:32.762Z",
+      "syncedAt": "2026-10-27T16:12:03.259Z",
       "page": "Last Epoch"
     }
   },

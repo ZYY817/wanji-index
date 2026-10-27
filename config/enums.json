@@ -7,6 +7,7 @@
   "siteCategory": ["store", "free-platform", "indie", "mod", "localization", "guide-wiki", "patch-support", "other"],
   "toolType": ["mod-manager", "save", "perf-monitor", "game-manager", "trainer-channel", "compat-fix", "other"],
   "entryType": ["mod", "localization", "patch", "guide-page", "save", "tool-page", "other"],
+  "problemCategory": ["crash", "launch", "dll", "display", "performance", "save", "input", "network"],
   "guideKind": ["tutorial", "troubleshooting"],
   "guideCategory": ["install-run", "launch-crash", "mod", "save-backup", "settings-compat", "performance"],
   "channelType": ["buy", "free", "trial", "subscription"],

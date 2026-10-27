@@ -1,0 +1,68 @@
+{
+  "id": "cant-connect-online",
+  "slug": "cant-connect-online",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "联机连不上",
+  "category": "network",
+  "title": "联机连不上：匹配失败、加入房间超时、频繁掉线",
+  "summary": "先看是不是服务器在维护或者只有你连不上：查一下官方公告。只有你连不上时，多半是网络环境（NAT 类型、端口、防火墙）或加速器线路的问题。",
+  "symptoms": [
+    "一直匹配不到人，或匹配后加载失败",
+    "加入好友房间时超时",
+    "游戏中频繁断开连接"
+  ],
+  "keywords": [
+    "连不上",
+    "联机",
+    "匹配失败",
+    "掉线",
+    "超时",
+    "服务器"
+  ],
+  "fixes": [
+    {
+      "title": "先确认服务器状态",
+      "detail": "到游戏的官方社交账号、Steam 社区公告或官网看看是否在维护、是否有大范围故障。服务器问题只能等官方恢复。"
+    },
+    {
+      "title": "换加速器线路，或暂时关掉加速器",
+      "detail": "海外服务器的游戏通常需要加速器。连接不稳定时换一个节点；已经开着加速器还连不上，关掉直连试试，部分游戏会和加速器的模式冲突。"
+    },
+    {
+      "title": "允许游戏通过防火墙",
+      "detail": "第一次启动时如果拒绝了 Windows 防火墙的提示，游戏的联机流量会被拦截。到 Windows 安全中心 → 防火墙和网络保护 → 允许应用通过防火墙，确认游戏被允许。"
+    },
+    {
+      "title": "检查路由器的 UPnP 和端口",
+      "detail": "P2P 联机的游戏对 NAT 类型敏感。在路由器设置里打开 UPnP；Steam 需要的端口在客服页面有完整列表。",
+      "sources": [
+        {
+          "name": "Steam 客服：Steam 所需端口",
+          "url": "https://help.steampowered.com/zh-cn/faqs/view/2EA8-4D75-DA21-31EB"
+        }
+      ]
+    },
+    {
+      "title": "用有线网络测试",
+      "detail": "Wi-Fi 信号不稳会表现为频繁掉线。换网线直连路由器，排除无线干扰。"
+    }
+  ],
+  "issueMatch": [
+    "multiplayer",
+    "disconnect",
+    "network",
+    "online",
+    "matchmaking",
+    "server",
+    "connect",
+    "co-op",
+    "party"
+  ],
+  "relatedProblems": [
+    "game-crash"
+  ]
+}

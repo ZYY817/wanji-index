@@ -47,13 +47,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-26T17:19:55.413Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:53.124Z",
+      "syncedAt": "2026-10-27T16:10:58.067Z",
       "page": "Fallout 4"
     }
   },
@@ -69,6 +69,103 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\My Games\\Fallout4\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Crash to desktop during Hunter/Hunted",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Crash_to_desktop_during_Hunter%2FHunted",
+      "fixed": false
+    },
+    {
+      "title": "Entering Cambridge Police Station makes the player fall through the ground",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Entering_Cambridge_Police_Station_makes_the_player_fall_through_the_ground",
+      "fixed": false
+    },
+    {
+      "title": "Game's physics run too fast",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Game's_physics_run_too_fast",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on displays with refresh rates above 240 Hz",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Black_screen_on_displays_with_refresh_rates_above_240_Hz",
+      "fixed": true
+    },
+    {
+      "title": "Blocky Textures using Ultra settings",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Blocky_Textures_using_Ultra_settings",
+      "fixed": true
+    },
+    {
+      "title": "Game dialogue skips even at 60 FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Game_dialogue_skips_even_at_60_FPS",
+      "fixed": true
+    },
+    {
+      "title": "Crash to desktop on Nvidia Turing GPUs (RTX, GTX 16 series)",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Crash_to_desktop_on_Nvidia_Turing_GPUs_(RTX%2C_GTX_16_series)",
+      "fixed": true
+    },
+    {
+      "title": "God rays performance fix and no pixelation",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#God_rays_performance_fix_and_no_pixelation",
+      "fixed": true
+    },
+    {
+      "title": "Graphical issues while raining",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Graphical_issues_while_raining",
+      "fixed": true
+    },
+    {
+      "title": "Broken shadows",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Broken_shadows",
+      "fixed": true
+    },
+    {
+      "title": "Console not opening when pressing the tilde key",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Console_not_opening_when_pressing_the_tilde_key",
+      "fixed": true
+    },
+    {
+      "title": "No in-game audio",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#No_in-game_audio",
+      "fixed": true
+    },
+    {
+      "title": "Major screen tearing when Windows Aero is disabled while in a borderless mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Major_screen_tearing_when_Windows_Aero_is_disabled_while_in_a_borderless_mode",
+      "fixed": true
+    },
+    {
+      "title": "Permanent slow-motion",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Permanent_slow-motion",
+      "fixed": true
+    },
+    {
+      "title": "Frame rate locked at 48 FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Frame_rate_locked_at_48_FPS",
+      "fixed": true
+    },
+    {
+      "title": "Mouse cursor not visible in menus",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Mouse_cursor_not_visible_in_menus",
+      "fixed": true
+    },
+    {
+      "title": "Slow loading screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Slow_loading_screen",
+      "fixed": true
+    },
+    {
+      "title": "Duel Bot enemy stuck in ''Restoring Order''",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Duel_Bot_enemy_stuck_in_''Restoring_Order''",
+      "fixed": true
+    },
+    {
+      "title": "Bugged progression in ''Emogene Takes a Lover''",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_4#Bugged_progression_in_''Emogene_Takes_a_Lover''",
+      "fixed": true
     }
   ]
 }

@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:28.378Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:59.655Z",
+      "syncedAt": "2026-10-27T16:11:10.603Z",
       "page": "Grand Theft Auto V"
     }
   },
@@ -75,6 +75,73 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Rockstar Games\\GTA V\\settings.xml",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "In-game stock market malfunctioning when playing offline",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#In-game_stock_market_malfunctioning_when_playing_offline",
+      "fixed": false
+    },
+    {
+      "title": "Game stays in the background processes/fails to close itself while Logitech G Hub is running",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Game_stays_in_the_background_processes%2Ffails_to_close_itself_while_Logitech_G_Hub_is_running",
+      "fixed": false
+    },
+    {
+      "title": "Black bars during cutscenes or squished image",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Black_bars_during_cutscenes_or_squished_image",
+      "fixed": true
+    },
+    {
+      "title": "No sound when using a Bluetooth headphone/ear buds",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#No_sound_when_using_a_Bluetooth_headphone%2Fear_buds",
+      "fixed": true
+    },
+    {
+      "title": "Missing audio after Rockstar intro logos loading screen, using USB sound card",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Missing_audio_after_Rockstar_intro_logos_loading_screen%2C_using_USB_sound_card",
+      "fixed": true
+    },
+    {
+      "title": "Game does not open with \"Grand Theft Auto V has Stopped Working\" generic Windows error",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Game_does_not_open_with_%22Grand_Theft_Auto_V_has_Stopped_Working%22_generic_Windows_error",
+      "fixed": true
+    },
+    {
+      "title": "Unable to play offline",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Unable_to_play_offline",
+      "fixed": true
+    },
+    {
+      "title": "\"Dependency MFREADWRITE.DLL is missing. Please reinstall the game\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#%22Dependency_MFREADWRITE.DLL_is_missing._Please_reinstall_the_game%22_error",
+      "fixed": true
+    },
+    {
+      "title": "Update download issues (retail copies only)",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Update_download_issues_(retail_copies_only)",
+      "fixed": true
+    },
+    {
+      "title": "Keyboard windows key malfunction",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Keyboard_windows_key_malfunction",
+      "fixed": true
+    },
+    {
+      "title": "Story cannot progress with \"The mission has been disrupted\" message",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Story_cannot_progress_with_%22The_mission_has_been_disrupted%22_message",
+      "fixed": true
+    },
+    {
+      "title": "Heavy game stuttering above 140 FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#Heavy_game_stuttering_above_140_FPS",
+      "fixed": true
+    },
+    {
+      "title": "UAC prompt at launch of Epic Games version",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V#UAC_prompt_at_launch_of_Epic_Games_version",
+      "fixed": true
     }
   ]
 }

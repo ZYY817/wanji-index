@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:51.173Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:11:18.468Z",
+      "syncedAt": "2026-10-27T16:14:15.081Z",
       "page": "Z1 Battle Royale"
     }
   },
@@ -64,6 +64,23 @@
       "os": "windows",
       "path": "<游戏安装目录>\\UserOptions.ini",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Cursor randomly disappearing in menu",
+      "url": "https://www.pcgamingwiki.com/wiki/Z1_Battle_Royale#Cursor_randomly_disappearing_in_menu",
+      "fixed": false
+    },
+    {
+      "title": "Game hangs after choosing character",
+      "url": "https://www.pcgamingwiki.com/wiki/Z1_Battle_Royale#Game_hangs_after_choosing_character",
+      "fixed": true
+    },
+    {
+      "title": "Game is very dark",
+      "url": "https://www.pcgamingwiki.com/wiki/Z1_Battle_Royale#Game_is_very_dark",
+      "fixed": true
     }
   ]
 }

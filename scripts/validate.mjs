@@ -91,6 +91,13 @@ for (const { rec, file } of collections.games) {
     if (!faq.answer && !faq.guideId) errors.push(`FAQ[${i}] ${file}: answer 与 guideId 至少其一（docs/04 §2.1）`);
     else if (ref(faq.guideId)) warnings.push(`可选关联悬空 ${file}: faq.guideId=${faq.guideId}`);
 }
+for (const { rec, file } of collections.problems ?? []) {
+  for (const p of rec.relatedProblems ?? []) if (ref(p)) warnings.push(`可选关联悬空 ${file}: relatedProblems→${p}`);
+  for (const [i, f] of (rec.fixes ?? []).entries())
+    if (ref(f.guideId)) warnings.push(`可选关联悬空 ${file}: fixes[${i}].guideId=${f.guideId}`);
+  // 常识性步骤可以是本站自己写的说明；但整个问题至少要引用一个外部来源或站内教程
+  if (!(rec.fixes ?? []).some((f) => f.guideId || f.sources?.length)) errors.push(`问题 ${file}: 解法里至少要有一个来源或站内教程`);
+}
 for (const { rec, file } of collections.offers)
   if (ref(rec.gameId)) warnings.push(`可选关联悬空 ${file}: gameId=${rec.gameId}`);
 

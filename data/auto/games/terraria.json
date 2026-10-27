@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:15.832Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:45.879Z",
+      "syncedAt": "2026-10-27T16:13:40.316Z",
       "page": "Terraria"
     }
   },
@@ -79,6 +79,73 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\My Games\\Terraria\\input profiles.json",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "German version",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#German_version",
+      "fixed": false
+    },
+    {
+      "title": "Game running slowly/low frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Game_running_slowly%2Flow_frame_rate",
+      "fixed": true
+    },
+    {
+      "title": "Game will not start",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Game_will_not_start",
+      "fixed": true
+    },
+    {
+      "title": "Steam Overlay doesn't work",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Steam_Overlay_doesn't_work",
+      "fixed": true
+    },
+    {
+      "title": "XNA/.NET Installation Issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#XNA%2F.NET_Installation_Issues",
+      "fixed": true
+    },
+    {
+      "title": "Teleporting mob lag in multiplayer",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Teleporting_mob_lag_in_multiplayer",
+      "fixed": true
+    },
+    {
+      "title": "Graphics Cards Issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Graphics_Cards_Issues",
+      "fixed": true
+    },
+    {
+      "title": "Control Configuration Issues (non-Steam)",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Control_Configuration_Issues_(non-Steam)",
+      "fixed": true
+    },
+    {
+      "title": "Hosting Issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Hosting_Issues",
+      "fixed": true
+    },
+    {
+      "title": "Game Crashes Immediately / Does Not Start",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Game_Crashes_Immediately_%2F_Does_Not_Start",
+      "fixed": true
+    },
+    {
+      "title": "Game has reverted to an older version (Steam)",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Game_has_reverted_to_an_older_version_(Steam)",
+      "fixed": true
+    },
+    {
+      "title": "Switching to Cloud save and then back makes you lose discovery/map data/explored regions",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Switching_to_Cloud_save_and_then_back_makes_you_lose_discovery%2Fmap_data%2Fexplored_regions",
+      "fixed": true
+    },
+    {
+      "title": "Logitech RGB integration not working",
+      "url": "https://www.pcgamingwiki.com/wiki/Terraria#Logitech_RGB_integration_not_working",
+      "fixed": true
     }
   ]
 }

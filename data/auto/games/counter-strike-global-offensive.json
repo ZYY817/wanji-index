@@ -2,8 +2,7 @@
   "id": "counter-strike-global-offensive",
   "slug": "counter-strike-global-offensive",
   "name": {
-    "zh": "Counter-Strike 2",
-    "en": "Counter-Strike: Global Offensive"
+    "zh": "Counter-Strike 2"
   },
   "summary": "二十多年来，在全球数百万玩家的共同铸就下，Counter-Strike 提供了精湛绝伦的竞技体验。而如今，CS 传奇的下一章即将揭开序幕，那就是 Counter-Strike 2。",
   "genres": [
@@ -40,19 +39,35 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/730/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike_2"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:01:46.897Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:08:19.054Z",
-      "page": "Counter-Strike: Global Offensive"
+      "syncedAt": "2026-10-27T16:17:30.412Z",
+      "page": "Counter-Strike 2"
     }
-  }
+  },
+  "issues": [
+    {
+      "title": "Game freezes when push to talk",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike_2#Game_freezes_when_push_to_talk",
+      "fixed": true
+    },
+    {
+      "title": "Repeated UAC prompt for Steam Client Service",
+      "url": "https://www.pcgamingwiki.com/wiki/Counter-Strike_2#Repeated_UAC_prompt_for_Steam_Client_Service",
+      "fixed": true
+    }
+  ]
 }

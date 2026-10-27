@@ -50,13 +50,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:57.371Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:07:53.541Z",
+      "syncedAt": "2026-10-27T16:09:37.990Z",
       "page": "Battlefield 2042"
     }
   },
@@ -65,6 +65,18 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Battlefield 2042\\settings\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game does not launch on Kepler/TeraScale/early GCN cards",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_2042#Game_does_not_launch_on_Kepler%2FTeraScale%2Fearly_GCN_cards",
+      "fixed": false
+    },
+    {
+      "title": "\"Unable to load persistence data\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/Battlefield_2042#%22Unable_to_load_persistence_data%22_error",
+      "fixed": false
     }
   ]
 }

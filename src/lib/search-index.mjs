@@ -1,5 +1,5 @@
 // 搜索索引构建 —— 与页面共用同一资格集合（docs/06 §8）
-// 规则：Game/Site/Tool/Guide 独立入索引；Entry 不入索引但其关键词并入关联 Game/Site；
+// 规则：Game/Problem/Site/Tool/Guide 独立入索引；Entry 不入索引但其关键词并入关联 Game/Site；
 //       FreeOffer 不入全站索引。仅填有数据支撑的字段。
 import { zh } from './labels.mjs';
 
@@ -36,6 +36,12 @@ export function buildSearchIndex(data, rel) {
       type: 'guide', typeLabel: '教程', title: g.title, sub: `${zh('guideKind', g.kind)}·${zh('guideCategory', g.category)}`,
       url: `/guides/${g.slug}/`, summary: g.problem?.description ?? '',
       keywords: kw(g, [g.problem?.errorText].filter(Boolean)),
+    });
+  for (const p of data.problems ?? [])
+    items.push({
+      type: 'problem', typeLabel: '排障', title: p.title, sub: zh('problemCategory', p.category),
+      url: `/fixes/${p.slug}/`, summary: p.summary,
+      keywords: kw(p, [p.short, ...(p.errorTexts ?? []), ...(p.symptoms ?? [])]),
     });
   return { buildTime: new Date().toISOString(), items };
 }

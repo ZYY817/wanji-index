@@ -47,13 +47,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:51.416Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:16.141Z",
+      "syncedAt": "2026-10-27T16:11:27.964Z",
       "page": "Halo Infinite"
     }
   },
@@ -62,6 +62,33 @@
       "os": "windows",
       "path": "%LOCALAPPDATA%\\HaloInfinite\\Settings\\SpecControlSettings.json",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Save game data corruption",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite#Save_game_data_corruption",
+      "fixed": false
+    },
+    {
+      "title": "Corrupt/stuttering audio",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite#Corrupt%2Fstuttering_audio",
+      "fixed": true
+    },
+    {
+      "title": "Reduce crashing",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite#Reduce_crashing",
+      "fixed": true
+    },
+    {
+      "title": "Heavy input lag when vsync is enabled",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite#Heavy_input_lag_when_vsync_is_enabled",
+      "fixed": true
+    },
+    {
+      "title": "Profile Error: Please sign into your Xbox Live profile",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite#Profile_Error%3A_Please_sign_into_your_Xbox_Live_profile",
+      "fixed": true
     }
   ]
 }

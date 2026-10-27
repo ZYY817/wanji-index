@@ -1,0 +1,161 @@
+{
+  "id": "missing-dll",
+  "slug": "missing-dll",
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "short": "缺少 dll",
+  "category": "dll",
+  "title": "提示缺少 dll 文件：VCRUNTIME140 / MSVCP140 / d3dx9_43 等",
+  "summary": "提示缺少某个 dll，说明对应的运行库没装或损坏。按下面的速查表找到它属于哪个运行库，从微软官网装完整的运行库。不要去 dll 下载站单独下载文件。",
+  "symptoms": [
+    "启动时弹窗：「由于找不到 xxx.dll，无法继续执行代码」",
+    "「计算机中丢失 xxx.dll」",
+    "重新安装程序可能会解决此问题"
+  ],
+  "errorTexts": [
+    "由于找不到 VCRUNTIME140.dll，无法继续执行代码",
+    "计算机中丢失 MSVCP140.dll",
+    "找不到 d3dx9_43.dll",
+    "XINPUT1_3.dll",
+    "D3DCOMPILER_43.dll",
+    "MSVCR100.dll",
+    "MSVCP120.dll",
+    "VCRUNTIME140_1.dll"
+  ],
+  "keywords": [
+    "dll",
+    "缺少",
+    "丢失",
+    "找不到",
+    "运行库"
+  ],
+  "table": {
+    "caption": "缺少哪个文件 → 安装什么",
+    "columns": [
+      "提示缺少的文件",
+      "属于",
+      "怎么装"
+    ],
+    "rows": [
+      [
+        "VCRUNTIME140.dll / VCRUNTIME140_1.dll / MSVCP140.dll",
+        "Visual C++ 2015–2022 运行库",
+        "微软官网下载 x64 与 x86 两个版本都装"
+      ],
+      [
+        "MSVCR120.dll / MSVCP120.dll",
+        "Visual C++ 2013 运行库",
+        "同上页面的「旧版本」区域"
+      ],
+      [
+        "MSVCR110.dll / MSVCP110.dll",
+        "Visual C++ 2012 运行库",
+        "同上"
+      ],
+      [
+        "MSVCR100.dll / MSVCP100.dll",
+        "Visual C++ 2010 运行库",
+        "同上"
+      ],
+      [
+        "d3dx9_43.dll 等 d3dx9_xx、d3dx10_xx、d3dx11_xx",
+        "DirectX 9.0c 组件",
+        "微软「DirectX 最终用户运行时」"
+      ],
+      [
+        "XINPUT1_3.dll / X3DAudio1_7.dll / XAudio2_7.dll",
+        "DirectX 9.0c 组件（手柄与音频）",
+        "微软「DirectX 最终用户运行时」"
+      ],
+      [
+        "D3DCOMPILER_43.dll / D3DCOMPILER_47.dll",
+        "DirectX 着色器编译组件",
+        "_43 装 DirectX 最终用户运行时；_47 随 Windows 更新提供"
+      ],
+      [
+        "mscoree.dll，或提示需要 .NET Framework",
+        ".NET Framework",
+        "微软 .NET Framework 下载页"
+      ],
+      [
+        "steam_api.dll / steam_api64.dll",
+        "游戏自带文件（不是运行库）",
+        "验证游戏文件完整性；检查杀毒软件隔离区"
+      ]
+    ]
+  },
+  "fixes": [
+    {
+      "title": "缺 VCRUNTIME / MSVCP / MSVCR：装 Visual C++ 运行库",
+      "detail": "按提示里的版本号（140、120、110、100）找到对应的 Visual C++ 运行库。64 位系统上 x64 和 x86 两个版本都要装，因为 32 位游戏要用 x86 版。",
+      "guideId": "vcredist-install",
+      "sources": [
+        {
+          "name": "Microsoft Learn：最新受支持的 Visual C++ 可再发行程序包",
+          "url": "https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist"
+        }
+      ]
+    },
+    {
+      "title": "缺 d3dx9 / XINPUT / D3DCOMPILER_43：装 DirectX 最终用户运行时",
+      "detail": "Windows 10 / 11 自带 DirectX 12，但不包含老游戏需要的 DirectX 9 附加组件。用微软的「DirectX 最终用户运行时」安装器补上，它只补缺失的文件，不会降级系统里的 DirectX。",
+      "guideId": "directx-runtime-missing",
+      "sources": [
+        {
+          "name": "Microsoft 下载中心：DirectX 最终用户运行时",
+          "url": "https://www.microsoft.com/zh-cn/download/details.aspx?id=35"
+        },
+        {
+          "name": "PCGamingWiki：DirectX",
+          "url": "https://www.pcgamingwiki.com/wiki/Glossary:DirectX"
+        }
+      ]
+    },
+    {
+      "title": "缺 steam_api64.dll：验证文件、检查杀毒软件",
+      "detail": "这个文件是游戏自带的，不属于任何运行库。正版游戏缺它，通常是被杀毒软件误删或隔离了。先到杀毒软件隔离区恢复，再验证游戏文件完整性。",
+      "sources": [
+        {
+          "name": "Steam 客服：验证游戏文件完整性",
+          "url": "https://help.steampowered.com/zh-cn/faqs/view/0C48-FCBD-DA71-93EB"
+        },
+        {
+          "name": "Microsoft 支持：在 Windows 安全中心添加排除项",
+          "url": "https://support.microsoft.com/zh-cn/windows/811816c0-4dfd-af4a-47e4-c301afe13b26"
+        }
+      ]
+    },
+    {
+      "title": "装了还是报错：修复系统文件",
+      "detail": "运行库装好后仍然报错，可能是系统文件本身损坏。用管理员身份打开命令提示符，运行 sfc /scannow，完成后重启再试。",
+      "sources": [
+        {
+          "name": "Microsoft 支持：使用系统文件检查器修复系统文件",
+          "url": "https://support.microsoft.com/zh-cn/topic/79aa86cb-ca52-166a-92a3-966e85d4094e"
+        }
+      ]
+    }
+  ],
+  "avoid": [
+    "不要从「dll 下载站」单独下载 dll 放进游戏目录：版本经常对不上，还可能捆绑恶意程序。",
+    "不要把 dll 复制进 C:\\Windows\\System32 来「修复」：32 位和 64 位放错位置会引出新的错误。",
+    "运行库安装包只从微软官网下载。"
+  ],
+  "issueMatch": [
+    ".dll",
+    "msvcp",
+    "vcruntime",
+    "d3dx9",
+    "xinput",
+    "missing file",
+    "redistributable",
+    "visual c++"
+  ],
+  "relatedProblems": [
+    "error-0xc000007b",
+    "game-wont-launch"
+  ]
+}

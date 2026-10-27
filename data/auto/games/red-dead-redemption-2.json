@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-26T17:20:14.194Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:14.415Z",
+      "syncedAt": "2026-10-27T16:13:07.431Z",
       "page": "Red Dead Redemption 2"
     }
   },
@@ -70,6 +70,53 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Rockstar Games\\Red Dead Redemption 2\\Settings\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Major stuttering and frame pacing issue with Vulkan (NVIDIA)",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Major_stuttering_and_frame_pacing_issue_with_Vulkan_(NVIDIA)",
+      "fixed": false
+    },
+    {
+      "title": "Vulkan: Video memory leak when ReBAR is enabled",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Vulkan%3A_Video_memory_leak_when_ReBAR_is_enabled",
+      "fixed": true
+    },
+    {
+      "title": "Error: unexpected shutdown due to lack of memory (ERR_GFX_D3D_DEFERRED_MEM)",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Error%3A_unexpected_shutdown_due_to_lack_of_memory_(ERR_GFX_D3D_DEFERRED_MEM)",
+      "fixed": true
+    },
+    {
+      "title": "Freezes in certain missions",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Freezes_in_certain_missions",
+      "fixed": true
+    },
+    {
+      "title": "Incorrect resolution at launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Incorrect_resolution_at_launch",
+      "fixed": true
+    },
+    {
+      "title": "Red Dead Redemption asks for purchase despite owning the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Red_Dead_Redemption_asks_for_purchase_despite_owning_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Incorrect UI scaling at wide resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Incorrect_UI_scaling_at_wide_resolutions",
+      "fixed": true
+    },
+    {
+      "title": "Alt-Tabbing out of fullscreen mode enables borderless window",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#Alt-Tabbing_out_of_fullscreen_mode_enables_borderless_window",
+      "fixed": true
+    },
+    {
+      "title": "ERR_GFX_STATE during Emmet Granger stranger mission",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2#ERR_GFX_STATE_during_Emmet_Granger_stranger_mission",
+      "fixed": true
     }
   ]
 }

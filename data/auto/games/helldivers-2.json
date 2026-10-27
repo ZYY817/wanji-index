@@ -48,13 +48,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:10.453Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:09:18.375Z",
+      "syncedAt": "2026-10-27T16:11:30.550Z",
       "page": "Helldivers 2"
     }
   },
@@ -75,6 +75,13 @@
       "os": "windows",
       "path": "<Steam 安装目录>/userdata/<用户 ID>/553850/remote/input_settings.config",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game and Windows freeze/hard lock",
+      "url": "https://www.pcgamingwiki.com/wiki/Helldivers_2#Game_and_Windows_freeze%2Fhard_lock",
+      "fixed": true
     }
   ]
 }

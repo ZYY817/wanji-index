@@ -49,13 +49,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:03:47.286Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:48.082Z",
+      "syncedAt": "2026-10-27T16:13:42.539Z",
       "page": "The Sims 4"
     }
   },
@@ -71,6 +71,33 @@
       "os": "windows",
       "path": "%USERPROFILE%\\Documents\\Electronic Arts\\The Sims 4\\",
       "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Unresponsive and stuck sim",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4#Unresponsive_and_stuck_sim",
+      "fixed": true
+    },
+    {
+      "title": "RivaTuner OSD does not display",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4#RivaTuner_OSD_does_not_display",
+      "fixed": true
+    },
+    {
+      "title": "Game keeps minimizing on launch",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4#Game_keeps_minimizing_on_launch",
+      "fixed": true
+    },
+    {
+      "title": "Oversensitive/unresponsive camera rotation",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4#Oversensitive%2Funresponsive_camera_rotation",
+      "fixed": true
+    },
+    {
+      "title": "Child Accounts can't see the game in the EA app library",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4#Child_Accounts_can't_see_the_game_in_the_EA_app_library",
+      "fixed": true
     }
   ]
 }

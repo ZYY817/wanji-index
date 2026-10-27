@@ -7,8 +7,8 @@ import { DATA_DIR, PROJECT_ROOT } from './config.mjs';
 import { filterEligible } from './eligibility.mjs';
 import { mergeAuto } from './merge-auto.mjs';
 
-const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers'];
-const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer' };
+const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers', 'problems'];
+const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer', problems: 'problem' };
 
 /** @returns {any} 统一数据集合（TS 侧按 any 使用，结构由 schemas/ 约束） */
 export function loadData() {

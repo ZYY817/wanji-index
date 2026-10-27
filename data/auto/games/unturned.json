@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-27",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-10-27T15:02:36.784Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T15:10:55.125Z",
+      "syncedAt": "2026-10-27T16:13:49.239Z",
       "page": "Unturned"
     }
   },
