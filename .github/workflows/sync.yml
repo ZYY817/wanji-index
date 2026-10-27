@@ -1,4 +1,4 @@
-# 每天自动更新内容（北京时间 06:00）：Steam 游戏信息 → PCGamingWiki 存档位置 → Epic 免费情报 → 字体子集 → 校验 → 提交。
+# 每天自动更新内容（北京时间 06:00）：Steam 游戏信息 → PCGamingWiki 存档位置 → Epic / Steam / GOG / itch.io 免费情报 → 字体子集 → 校验 → 提交。
 # 提交后，连接了本仓库的 Cloudflare Pages 会自动重新构建部署。某个数据源当天不可用时只跳过那一步，不影响其他步骤。
 # 也可以在 Actions 页面手动运行（workflow_dispatch）。收录范围在 config/sync.json 里调整。
 name: 自动更新内容
@@ -39,6 +39,9 @@ jobs:
         continue-on-error: true
       - name: Epic 每周免费
         run: node scripts/sync/epic-free.mjs
+        continue-on-error: true
+      - name: 其他平台限时免费（Steam / GOG / itch.io / IndieGala）
+        run: node scripts/sync/free-giveaways.mjs
         continue-on-error: true
 
       - name: 宋体子集（新内容里出现的新字）

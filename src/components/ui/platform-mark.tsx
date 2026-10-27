@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 import { zh } from '@/lib/labels.mjs';
 
 // 平台标识：同一形制的方形 mono 字标（不使用商店品牌 logo，保持中立与统一）
-const GLYPH: Record<string, string> = { steam: 'ST', epic: 'EP', gog: 'GO', itch: 'IO', official: '官', 'xbox-pc': 'XB', other: '··' };
+const GLYPH: Record<string, string> = { steam: 'ST', epic: 'EP', gog: 'GO', itch: 'IO', indiegala: 'IG', official: '官', 'xbox-pc': 'XB', other: '··' };
 
 export function PlatformMark({ platform, className, withLabel }: { platform: string; className?: string; withLabel?: boolean }) {
   return (

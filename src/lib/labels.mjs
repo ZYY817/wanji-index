@@ -2,7 +2,7 @@
 // 未登记值回退显示原值——保证新增枚举前先登记而非页面裸奔
 
 export const ZH = {
-  platform: { steam: 'Steam', epic: 'Epic', gog: 'GOG', itch: 'itch.io', official: '官方', 'xbox-pc': 'Xbox PC', other: '其他' },
+  platform: { steam: 'Steam', epic: 'Epic', gog: 'GOG', itch: 'itch.io', indiegala: 'IndieGala', official: '官方', 'xbox-pc': 'Xbox PC', other: '其他' },
   freeType: { permanent: '永久免费', limited: '限时领取', trial: '免费试玩', weekend: '免费周末', opensource: '开源' },
   channelType: { buy: '购买', free: '免费', trial: '试玩', subscription: '订阅' },
   siteCategory: { store: '商店', 'free-platform': '免费平台', indie: '独立游戏', mod: 'MOD 社区', localization: '汉化/本地化', 'guide-wiki': '攻略百科', 'patch-support': '补丁支持', other: '比价与数据' },

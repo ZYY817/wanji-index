@@ -55,8 +55,8 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
 
         {/* 主体信息 */}
         <div className="flex flex-1 flex-col p-5 md:p-6">
-          <div className="flex items-center gap-2 text-sm text-fg-2">
-            <span>{zh('freeType', o.type)}</span>
+          <div className="flex min-w-0 items-center gap-2 text-sm text-fg-2">
+            <span className="shrink-0">{zh('freeType', o.type)}</span>
             {o.claimNote && (
               <>
                 <span aria-hidden className="text-fg-3">·</span>

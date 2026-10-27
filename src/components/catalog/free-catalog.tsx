@@ -73,7 +73,10 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
   const ended = live.filter((o) => o.lifecycle === 'ended');
 
   // 未筛选视图的 5 组数据
-  const limitedOffers = current.filter((o) => o.type === 'limited' && o.lifecycle === 'active').slice(0, 3);
+  // 限时领取：有明确截止时间的全部列出（来源多了以后不再只取前 3 条，否则多出来的活动会被藏起来）
+  const limitedOffers = current.filter((o) => o.type === 'limited' && o.lifecycle === 'active');
+  // 截止时间没公布的限时领取（IndieGala、部分 itch.io 赠送）：单列一组紧凑行
+  const openEndedOffers = current.filter((o) => o.type === 'limited' && (o.lifecycle === 'deadline_unknown' || o.lifecycle === 'uncertain'));
   const upcomingOffers = current.filter((o) => o.lifecycle === 'upcoming');
   const permanentOffers = current.filter((o) => o.type === 'permanent');
   const trialWeekendOffers = current.filter((o) => o.type === 'trial' || o.type === 'weekend');
@@ -204,6 +207,20 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
                     <ExtLink key={url} href={url} className="inline-flex min-h-11 items-center text-base text-foreground underline decoration-primary underline-offset-4 hover:text-primary">{label}</ExtLink>
                   ))}
                 </p>
+              </Reveal>
+            )}
+
+            {/* 2. 截止时间未公布的免费领取：紧凑列表行 */}
+            {openEndedOffers.length > 0 && (
+              <Reveal as="section" aria-label="免费领取（截止未公布）">
+                <SectionHeading
+                  title="免费领取 · 截止未公布"
+                  count={openEndedOffers.length}
+                  description="平台没有写明结束时间的赠送，多为独立游戏，随时可能下架，想要就早点领。"
+                />
+                <ul className="divide-y divide-border">
+                  {openEndedOffers.map((o) => <OfferRow key={o.id} o={o} now={now} />)}
+                </ul>
               </Reveal>
             )}
 

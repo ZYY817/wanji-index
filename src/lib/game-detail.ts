@@ -4,6 +4,7 @@ import { loadData, buildRelations } from '@/lib/data.mjs';
 import { gameVM, offerVM, type GameVM, type OfferVM } from '@/lib/present';
 import { genreZh } from '@/lib/genre';
 import { zh } from '@/lib/labels.mjs';
+import { parseReqs, type Reqs } from '@/lib/hardware';
 
 export type ChannelItem = { platform: string; type: string; typeLabel: string; url: string; note: string; health?: string; checkedAt: string };
 export type PathItem = { kind: '存档' | '配置'; os: string; path: string; note?: string };
@@ -36,6 +37,8 @@ export type GameDetail = {
   /** 首屏下方的一行事实：开发商 · 发售日期 · 中文支持 */
   byline: string[];
   specs: SpecRow[];
+  /** 配置要求里识别出的显卡 / 内存门槛（「我的电脑能玩吗」用） */
+  reqs?: Reqs;
   /** 自动收录的来源（人工档案为空） */
   autoSources: { name: string; url: string }[];
   syncedAt?: string;
@@ -151,6 +154,6 @@ export function gameDetail(slug: string): GameDetail | null {
     reviewStatus: g.reviewStatus,
     checkedAt: g.checkedAt,
     channels, paths, entries, tools, guides, faqs, offers, related, sections,
-    byline, specs, autoSources, syncedAt: g._auto?.syncedAt?.slice(0, 10),
+    byline, specs, reqs: parseReqs(g.requirements), autoSources, syncedAt: g._auto?.syncedAt?.slice(0, 10),
   };
 }

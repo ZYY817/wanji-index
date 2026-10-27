@@ -1,5 +1,5 @@
 {
-  "platform": ["steam", "epic", "gog", "itch", "official", "xbox-pc", "other"],
+  "platform": ["steam", "epic", "gog", "itch", "indiegala", "official", "xbox-pc", "other"],
   "freeType": ["permanent", "limited", "trial", "weekend", "opensource"],
   "linkHealth": ["ok", "unchecked", "suspect", "dead"],
   "publishStatus": ["draft", "published", "offline"],

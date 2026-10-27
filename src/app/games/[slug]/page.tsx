@@ -15,6 +15,7 @@ import { DetailSection } from '@/components/layout/detail-section';
 import {
   ChannelList, EntryList, FaqList, SpecsTable, GuideList, PathList, ToolList,
 } from '@/components/game/detail/detail-sections';
+import { RigVerdict } from '@/components/rig/rig';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -36,7 +37,7 @@ function sectionBody(d: GameDetail, id: SectionId) {
     case 'entries': return <EntryList items={d.entries} />;
     case 'tools': return <ToolList items={d.tools} />;
     case 'guides': return <GuideList items={d.guides} />;
-    case 'specs': return <SpecsTable rows={d.specs} />;
+    case 'specs': return <><RigVerdict reqs={d.reqs} /><SpecsTable rows={d.specs} /></>;
     case 'faq': return <FaqList items={d.faqs} />;
   }
 }

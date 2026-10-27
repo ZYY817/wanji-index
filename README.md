@@ -121,5 +121,6 @@ SEO：canonical、Open Graph、JSON-LD（WebSite / VideoGame / BreadcrumbList / 
 | `scripts/sync/steam-games.mjs` | SteamSpy 热门榜 + Steam 商店公开接口 | 游戏中文名、简介、类型、开发商、发售日期、中文支持、配置要求 |
 | `scripts/sync/pcgw-paths.mjs` | PCGamingWiki（CC BY-NC-SA，逐条署名） | Windows 存档位置、配置文件位置 |
 | `scripts/sync/epic-free.mjs` | Epic 官方免费游戏接口 | 每周免费（进行中 + 已公布的下一期） |
+| `scripts/sync/free-giveaways.mjs` | Steam 商店特惠 + GamerPower 赠送汇总 | 其他平台限时免费：Steam 免费保留、GOG、itch.io、IndieGala（只收直达官方页面的，链接去掉追踪参数） |
 
 本机运行：`npm run sync`。推到 GitHub 后 `.github/workflows/sync.yml` 每天自动运行并提交。收录范围（榜单、每次最多新增几款、多久刷新一次）在 `config/sync.json` 调整——把 `steam.allPages` 设为 1、2… 可以按拥有人数扩到上千款。

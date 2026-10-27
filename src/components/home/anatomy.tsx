@@ -195,7 +195,7 @@ export function Anatomy({ d }: { d: DossierVM }) {
           <h2 id="anatomy-title" className="mt-4 font-serif text-[clamp(36px,5vw,64px)] font-black leading-[1.08] tracking-[-0.04em]">一款游戏，四个答案。</h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-[240px_minmax(0,1fr)] md:gap-10">
             {g.art && <img src={g.art.poster} alt="" loading="lazy" className="aspect-[2/3] w-full max-w-[240px] rounded-sm object-cover ring-1 ring-white/10" />}
-            <div className="grid gap-4 sm:grid-cols-2">{list.map((s) => <Card key={s.key} s={s} />)}</div>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">{list.map((s) => <Card key={s.key} s={s} />)}</div>
           </div>
           <Link href={`/games/${g.slug}/`} className="mt-10 inline-flex min-h-11 items-center gap-2 border-b border-foreground/30 text-base font-medium hover:border-primary">
             打开{g.name}完整档案 <ArrowRight aria-hidden className="size-4" />
