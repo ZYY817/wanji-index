@@ -3,6 +3,7 @@
 // _examples 与 pages 段不加载（docs/04 §7/§8.1）
 import { DATA_DIR } from './config.mjs';
 import { filterEligible } from './eligibility.mjs';
+import { mergeAuto } from './merge-auto.mjs';
 
 const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers'];
 const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer' };
@@ -14,12 +15,16 @@ export function loadData() {
   const mods = DATA_DIR === 'data' ? prod : test;
   const prefix = DATA_DIR === 'data' ? '/data/' : '/fixtures-data/';
 
-  const data = { raw: Object.fromEntries(COLLECTIONS.map((c) => [c, []])) };
+  const hand = Object.fromEntries(COLLECTIONS.map((c) => [c, []]));
+  const auto = Object.fromEntries(COLLECTIONS.map((c) => [c, []]));
   for (const [path, mod] of Object.entries(mods)) {
-    const seg = path.split(prefix)[1]?.split('/')[0];
+    const parts = path.split(prefix)[1]?.split('/') ?? [];
+    // data/auto/<集合>/ 是同步脚本生成的自动收录数据（见 merge-auto.mjs）
+    const [bucket, seg] = parts[0] === 'auto' ? [auto, parts[1]] : [hand, parts[0]];
     if (!COLLECTIONS.includes(seg)) continue; // _examples / pages / 其他目录不加载
-    data.raw[seg].push(mod.default ?? mod);
+    bucket[seg].push(mod.default ?? mod);
   }
+  const data = { raw: mergeAuto(hand, auto) };
   for (const [seg, t] of Object.entries(TYPE))
     data[seg] = filterEligible(t, data.raw[seg]);
   return data;

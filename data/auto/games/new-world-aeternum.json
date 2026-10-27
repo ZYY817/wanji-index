@@ -1,0 +1,58 @@
+{
+  "id": "new-world-aeternum",
+  "slug": "new-world-aeternum",
+  "name": {
+    "zh": "New World: Aeternum"
+  },
+  "summary": "踏上不可思议的永恒岛，体验这款激动人心的动作角色扮演游戏。在危险与机遇并存的冒险中亲手铸就你的命运。",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1063730/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1063730,
+  "developers": [
+    "Amazon Game Studios"
+  ],
+  "publishers": [
+    "Amazon Game Studios"
+  ],
+  "releaseDate": "2021 年 9 月 28 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11 64-bit\n处理器: Intel® Core i5-10500 @ 3.10GHz / AMD Ryzen 3 3300X\n内存: 8 GB RAM\n显卡: NVIDIA GTX 1060 3 GB / AMD Radeon RX 590\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间\n附注事项: Additional Notes: Internet connection required to play, offers in-game purchases. PC specifications for New World: Aeternum may continue to evolve over time.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11 64-bit\n处理器: Intel Core i7-10700K @ 3.80Ghz / AMD Ryzen 5 3600X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 2060 / AMD Radeon RX 6600\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间\n附注事项: Additional Notes: Internet connection required to play, offers in-game purchases. System requirements for New World: Aeternum may change over time."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1063730/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:33.030Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:51.273Z",
+      "page": null
+    }
+  }
+}

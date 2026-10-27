@@ -1,0 +1,81 @@
+{
+  "id": "borderlands-2",
+  "slug": "borderlands-2",
+  "name": {
+    "zh": "Borderlands 2"
+  },
+  "summary": "The Ultimate Vault Hunter’s Upgrade lets you get the most out of the Borderlands 2 experience.",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/49520/",
+      "priceNote": "参考价 ¥ 64.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 49520,
+  "developers": [
+    "Gearbox Software",
+    "Aspyr (Mac)",
+    "Aspyr (Linux)"
+  ],
+  "publishers": [
+    "2K",
+    "Aspyr (Mac)",
+    "Aspyr (Linux)"
+  ],
+  "releaseDate": "2012 年 9 月 20 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "Minimum:\nOS *: Windows XP SP3\nProcessor: 2.4 GHz Dual Core Processor\nMemory: 2 GB(XP)/ 2 GB(Vista)\nHard Disk Space: 13 GB free\nVideo Memory: 256 MB\nVideo Card: NVIDIA GeForce 8500 /ATI Radeon HD 2600\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)",
+    "recommended": "Recommended:\nOS *: Windows XP SP3/Vista/Win 7\nProcessor: 2.3 GHz Quad Core processor\nMemory: 2 GB\nHard Disk Space: 20 GB free\nVideo Memory: 512MB\nVideo Card: NVIDIA GeForce GTX 560 / ATI Radeon HD 5850\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/49520/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Borderlands_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:53.177Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:07:59.404Z",
+      "page": "Borderlands 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Borderlands 2\\WillowGame\\SaveData\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Borderlands 2\\WillowGame\\Config\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

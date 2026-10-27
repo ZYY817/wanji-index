@@ -1,0 +1,67 @@
+{
+  "id": "half-life-2-deathmatch",
+  "slug": "half-life-2-deathmatch",
+  "name": {
+    "zh": "Half-Life 2: Deathmatch"
+  },
+  "summary": "《半条命 2》游戏系列中的快节奏多人动作游戏！ HL2 的物理效果将死亡竞赛模式提升到了一个新的高度。直接进入死亡竞赛模式，或加入联合军 VS 反抗军的团队模式。今天就来试试用马桶砸好友的滋味！",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/320/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 320,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2004 年 11 月 1 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：1.2 GHz 处理器，256MB 内存，DirectX 7 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：2.4 GHz 处理器，512MB 内存，DirectX 9 显卡，Windows XP，鼠标，键盘，互联网连接",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/320/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2%3A_Deathmatch"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:35.600Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:06.325Z",
+      "page": "Half-Life 2: Deathmatch"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\hl2mp\\cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

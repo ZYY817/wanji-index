@@ -1,0 +1,79 @@
+{
+  "id": "human-fall-flat",
+  "slug": "human-fall-flat",
+  "name": {
+    "zh": "人类一败涂地 / Human Fall Flat",
+    "en": "Human Fall Flat"
+  },
+  "summary": "《人类一败涂地》是一款轻松搞笑的沙雕游戏，游戏的场景发生在飘渺的梦境之中。玩家既可以单机自闭，也可以最多八人联机一起欢畅。游戏支持的创意工坊，还可以让大家免费玩到不计其数的高质量玩家关卡和皮肤。游戏支持中文。",
+  "genres": [
+    "adventure",
+    "casual",
+    "indie",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/477160/",
+      "priceNote": "参考价 ¥ 58.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 477160,
+  "developers": [
+    "No Brakes Games"
+  ],
+  "publishers": [
+    "Curve Games"
+  ],
+  "releaseDate": "2016 年 7 月 22 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows XP/Vista/7/8/8.1/10 x86 and x64\n处理器: Intel Core2 Duo E6750 (2 * 2660) or equivalent | AMD Athlon 64 X2 Dual Core 6000+ (2 * 3000) or equivalent\n内存: 1024 MB RAM\n显卡: GeForce GT 740 (2048 MB) or equivalent | Radeon HD 5770 (1024 MB)\n存储空间: 需要 500 MB 可用空间",
+    "recommended": "推荐配置:\n操作系统 *: Windows XP/Vista/7/8/8.1/10 x86 and x64\n处理器: Intel Core2 Quad Q9300 (4 * 2500) or equivalent | AMD A10-5800K APU (4*3800) or equivalent\n内存: 2048 MB RAM\n显卡: GeForce GTX 460 (1024 MB) or equivalent | Radeon HD 7770 (1024 MB)\n存储空间: 需要 500 MB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/477160/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Human%3A_Fall_Flat"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:00.119Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:28.467Z",
+      "page": "Human: Fall Flat"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\NoBrakesGames\\Human\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\NoBrakesGames\\Human",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

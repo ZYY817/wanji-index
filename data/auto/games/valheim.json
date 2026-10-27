@@ -1,0 +1,80 @@
+{
+  "id": "valheim",
+  "slug": "valheim",
+  "name": {
+    "zh": "Valheim: 英灵神殿",
+    "en": "Valheim"
+  },
+  "summary": "一款支持1–10名玩家的同时在线合作的探索生存游戏，背景设定在一个受维京文化启发、程序生成的神话世界中。战斗、建造并征服你的旅程，谱写一段足以获得奥丁眷顾的传奇史诗吧！",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/892970/",
+      "priceNote": "参考价 ¥ 89.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 892970,
+  "developers": [
+    "Iron Gate AB"
+  ],
+  "publishers": [
+    "Coffee Stain Publishing"
+  ],
+  "releaseDate": "2026 年 9 月 9 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or later\n处理器: 2.6 GHz Quad Core or similar\n内存: 8 GB RAM\n显卡: GeForce GTX 950 or Radeon HD 7970\nDirectX 版本: 11\n存储空间: 需要 1 GB 可用空间\n附注事项: The following languages have been partially translated by the community: Svenska, Italiano, Romanian, български, македонски, Suomi, Dansk, íslenska, Lietuvių kalba, čeština, Magyar nyelv, Português europeu, 한국어 (불완전한), Norsk, ภาษาไทย, ქართული ენა, Abenaki, Slovenčina",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or later\n处理器: i5 3GHz or Ryzen 5 3GHz\n内存: 16 GB RAM\n显卡: GeForce GTX 1060 or Radeon RX 580\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 1 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/892970/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Valheim"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:18.648Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:57.155Z",
+      "page": "Valheim"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\IronGate\\Valheim\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\IronGate\\Valheim",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

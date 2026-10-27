@@ -12,7 +12,8 @@ export type ToolItem = { id: string; slug: string; name: string; summary: string
 export type GuideItem = { id: string; slug: string; title: string; kindLabel: string; steps: number };
 export type FaqItem = { question: string; answer?: string; guide?: { slug: string; title: string } };
 
-export type SectionId = 'channels' | 'paths' | 'entries' | 'tools' | 'guides' | 'faq';
+export type SectionId = 'channels' | 'paths' | 'entries' | 'tools' | 'guides' | 'specs' | 'faq';
+export type SpecRow = [string, string, string]; // 项目 / 最低 / 推荐
 export type SectionMeta = { id: SectionId; title: string; lead: string; count: number };
 
 export type GameDetail = {
@@ -32,6 +33,12 @@ export type GameDetail = {
   offers: OfferVM[];
   related: GameVM[];
   sections: SectionMeta[];
+  /** 首屏下方的一行事实：开发商 · 发售日期 · 中文支持 */
+  byline: string[];
+  specs: SpecRow[];
+  /** 自动收录的来源（人工档案为空） */
+  autoSources: { name: string; url: string }[];
+  syncedAt?: string;
 };
 
 const LEADS: Record<SectionId, [string, string]> = {
@@ -40,6 +47,7 @@ const LEADS: Record<SectionId, [string, string]> = {
   entries: ['MOD 与汉化', '只链接到公认社区的游戏专区，本站不转载任何文件。'],
   tools: ['工具', '加载器、管理器与辅助工具，点进去看官网与使用要点。'],
   guides: ['教程', '安装、排障与 MOD 配置的分步教程，每一步写明预期结果。'],
+  specs: ['配置要求', 'Steam 商店公布的 PC 配置要求，实际表现以游戏版本与设置为准。'],
   faq: ['常见问题', '玩家最常问的问题，能用一句话说清的直接写在这里。'],
 };
 
@@ -103,14 +111,32 @@ export function gameDetail(slug: string): GameDetail | null {
   });
 
   const offers = (rel.offersByGame.get(g.id) ?? []).map((o: any) => offerVM(o, data, now));
-  const related = (g.relatedGameIds ?? [])
-    .map((id: string) => data.games.find((x: any) => x.id === id))
-    .filter(Boolean)
-    .map((x: any) => gameVM(x, rel));
+  // 相关游戏：人工指定优先；没有指定时按类型重合度自动挑 6 款（游戏库变大后每页都有「继续探索」）
+  const picked = (g.relatedGameIds ?? []).map((id: string) => data.games.find((x: any) => x.id === id)).filter(Boolean);
+  const auto = picked.length ? [] : data.games
+    .filter((x: any) => x.id !== g.id)
+    .map((x: any) => ({ x, score: (x.genres ?? []).filter((t: string) => (g.genres ?? []).includes(t)).length }))
+    .filter((r: any) => r.score > 0)
+    .sort((a: any, b: any) => b.score - a.score)
+    .slice(0, 6).map((r: any) => r.x);
+  const related = [...picked, ...auto].map((x: any) => gameVM(x, rel));
+
+  // 配置要求：Steam 文本「项目: 值」按行对齐成 最低 / 推荐 两列
+  const specLines = (t?: string) => new Map((t ?? '').split('\n').map((l: string) => l.split(/[:：]\s*/)).filter((p: string[]) => p.length > 1 && p[1]).map((p: string[]) => [p[0].trim(), p.slice(1).join('：').trim()] as [string, string]));
+  const lo = specLines(g.requirements?.minimum), hi = specLines(g.requirements?.recommended);
+  const specs: SpecRow[] = [...new Set([...lo.keys(), ...hi.keys()])].filter((k) => !/^(最低|推荐)配置$/.test(k)).map((k) => [k, lo.get(k) ?? '—', hi.get(k) ?? '—']);
+
+  const ZH: Record<string, string> = { 'full-audio': '简体中文（含配音）', text: '简体中文', traditional: '仅繁体中文', none: '暂无官方中文' };
+  const byline = [
+    g.developers?.length ? `开发商 ${g.developers.join('、')}` : '',
+    g.releaseDate ? `发售 ${g.releaseDate}` : '',
+    g.zhSupport ? ZH[g.zhSupport] ?? '' : '',
+  ].filter(Boolean);
+  const autoSources = g._auto ? (g.sources ?? []).filter((s: any) => /steampowered|pcgamingwiki/.test(s.url)) : [];
 
   const counts: Record<SectionId, number> = {
     channels: channels.length, paths: paths.length, entries: entries.length,
-    tools: tools.length, guides: guides.length, faq: faqs.length,
+    tools: tools.length, guides: guides.length, specs: specs.length, faq: faqs.length,
   };
   const sections = (Object.keys(LEADS) as SectionId[])
     .filter((id) => counts[id] > 0)
@@ -125,5 +151,6 @@ export function gameDetail(slug: string): GameDetail | null {
     reviewStatus: g.reviewStatus,
     checkedAt: g.checkedAt,
     channels, paths, entries, tools, guides, faqs, offers, related, sections,
+    byline, specs, autoSources, syncedAt: g._auto?.syncedAt?.slice(0, 10),
   };
 }

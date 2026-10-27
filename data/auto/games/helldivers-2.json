@@ -1,0 +1,80 @@
+{
+  "id": "helldivers-2",
+  "slug": "helldivers-2",
+  "name": {
+    "zh": "HELLDIVERS 绝地潜兵2",
+    "en": "HELLDIVERS 2"
+  },
+  "summary": "银河系最后的进攻力量。投入这款紧张刺激且疯狂的第三人称射击游戏，应征成为绝地潜兵，穿越战火肆虐的星系，为自由而战。",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/553850/",
+      "priceNote": "参考价 ¥ 198.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 553850,
+  "developers": [
+    "Arrowhead Game Studios"
+  ],
+  "publishers": [
+    "PlayStation Publishing LLC"
+  ],
+  "releaseDate": "2024 年 2 月 8 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i7-4790K or AMD Ryzen 5 1500X\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470\n存储空间: 需要 135 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i7-9700K or AMD Ryzen 7 3700X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600XT\n存储空间: 需要 40 GB 可用空间\n附注事项: SSD Recommended"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/553850/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Helldivers_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:10.453Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:18.375Z",
+      "page": "Helldivers 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Arrowhead\\Helldivers2\\saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Arrowhead\\Helldivers2\\user_settings.config",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>/userdata/<用户 ID>/553850/remote/input_settings.config",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

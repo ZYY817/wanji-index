@@ -1,0 +1,78 @@
+{
+  "id": "mount-blade-ii-bannerlord",
+  "slug": "mount-blade-ii-bannerlord",
+  "name": {
+    "zh": "Mount & Blade II: Bannerlord"
+  },
+  "summary": "一个策略/动作类角色扮演游戏。创建一个角色，投身中世纪战场，从事外交、锻造、贸易和征服新的土地。集结你的军团奔赴战场，在大规模实时战斗中体验深奥但又直观的基于技能的战斗系统，与你忠诚的战士们并肩作战、取得胜利。",
+  "genres": [
+    "action",
+    "indie",
+    "rpg",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/261550/",
+      "priceNote": "参考价 ¥ 248.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 261550,
+  "developers": [
+    "TaleWorlds Entertainment"
+  ],
+  "publishers": [
+    "TaleWorlds Entertainment"
+  ],
+  "releaseDate": "2022 年 10 月 25 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 (64-bit only)\n处理器: Intel® Core™ i3-8100 / AMD Ryzen™ 3 1200\n内存: 6 GB RAM\n显卡: Intel® UHD Graphics 630 / NVIDIA® GeForce® GTX 660 2GB / AMD Radeon™ HD 7850 2GB\n存储空间: 需要 60 GB 可用空间\n附注事项: 集成显卡额外需要 2 GB 系统内存。以上仅为估算配置，可能会在游戏正式推出时发生变化。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit only)\n处理器: Intel® Core™ i5-9600K / AMD Ryzen™ 5 3600X\n内存: 8 GB RAM\n显卡: NVIDIA® GeForce® GTX 1060 3GB / AMD Radeon™ RX 580\n存储空间: 需要 60 GB 可用空间\n附注事项: 以上仅为估算配置，可能会在游戏正式推出时发生变化。"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/261550/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Mount_%26_Blade_II%3A_Bannerlord"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:26.370Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:43.300Z",
+      "page": "Mount & Blade II: Bannerlord"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Mount and Blade II Bannerlord\\Game Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Mount and Blade II Bannerlord\\Configs\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

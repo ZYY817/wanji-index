@@ -1,0 +1,77 @@
+{
+  "id": "war-thunder",
+  "slug": "war-thunder",
+  "name": {
+    "zh": "战争雷霆",
+    "en": "War Thunder"
+  },
+  "summary": "War Thunder上最全面的免费、跨平台大型多人在线军事类游戏，专注于二战和冷战时期的航空、装甲车辆和海军舰艇。现在就加入进来参与在地面、天空和海洋进行的主要战事，并和来自全球各地的几百万玩家们在不断变化的环境中战斗。",
+  "genres": [
+    "action",
+    "mmo",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/236390/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 236390,
+  "developers": [
+    "Gaijin Entertainment"
+  ],
+  "publishers": [
+    "Gaijin Network Ltd"
+  ],
+  "releaseDate": "2013 年 8 月 15 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Windows 10 (64bit)\n处理器: Dual-Core 2.2 GHz\n内存: 4 GB RAM\n显卡: DirectX 11 level video card: AMD Radeon 77XX / NVIDIA GeForce GTX 660. The minimum supported resolution for the game is 720p.\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 70 GB 可用空间\n支持 VR: SteamVR. Keyboard or gamepad required",
+    "recommended": "推荐配置:\n操作系统: Windows 10/11 (64bit)\n处理器: Intel Core i5 or Ryzen 5 3600 or better\n内存: 16 GB RAM\n显卡: DirectX 11 level video card or higher and drivers: Nvidia GeForce 1060 and higher, Radeon RX 570 and higher\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 95 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/236390/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/War_Thunder"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:12.156Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:05.637Z",
+      "page": "War Thunder"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\config.blk",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\WarThunder\\Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

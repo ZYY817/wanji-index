@@ -1,0 +1,82 @@
+{
+  "id": "schedule-i",
+  "slug": "schedule-i",
+  "name": {
+    "zh": "Schedule I"
+  },
+  "summary": "From small-time dope pusher to kingpin - manufacture and distribute a range of drugs throughout the grungy city of Hyland Point.",
+  "genres": [
+    "action",
+    "indie",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3164500/",
+      "priceNote": "参考价 ¥ 76.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 3164500,
+  "developers": [
+    "TVGS"
+  ],
+  "publishers": [
+    "TVGS"
+  ],
+  "releaseDate": "2025 年 3 月 24 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit)\n处理器: 3GHz 4-Core or similar\n内存: 8 GB RAM\n显卡: GeForce GTX 1060 6GB or Radeon RX 580\nDirectX 版本: 11\n存储空间: 需要 8 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit)\n处理器: 3.5GHz 6-Core or similar\n内存: 16 GB RAM\n显卡: GeForce RTX 3060 or Radeon RX 6700\nDirectX 版本: 11\n存储空间: 需要 10 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3164500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Schedule_I"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:04:16.850Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:24.912Z",
+      "page": "Schedule I"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\TVGS\\Schedule I\\Saves\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\TVGS\\Schedule I\\Unity\\<用户 ID>\\Analytics\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\TVGS\\Schedule I",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

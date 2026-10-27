@@ -1,0 +1,77 @@
+{
+  "id": "elden-ring",
+  "slug": "elden-ring",
+  "name": {
+    "zh": "艾尔登法环",
+    "en": "ELDEN RING"
+  },
+  "summary": "艾尔登法环是以正统黑暗奇幻世界为舞台的动作RPG游戏。 走进辽阔的场景与地下迷宫探索未知，挑战困难重重的险境，享受克服困境时的成就感吧。 不仅如此，登场角色之间的利害关系谱成的群像剧，更是不容错过。",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1245620/",
+      "priceNote": "参考价 ¥ 298.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1245620,
+  "developers": [
+    "FromSoftware, Inc."
+  ],
+  "publishers": [
+    "FromSoftware, Inc.",
+    "Bandai Namco Entertainment"
+  ],
+  "releaseDate": "2022 年 2 月 24 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: INTEL CORE I5-8400 or AMD RYZEN 3 3300X\n内存: 12 GB RAM\n显卡: NVIDIA GEFORCE GTX 1060 3 GB or AMD RADEON RX 580 4 GB\nDirectX 版本: 12\n存储空间: 需要 60 GB 可用空间\n声卡: Windows Compatible Audio Device\n附注事项: 估计性能：1080p / 稳定 30fps+ / 中等质量设置。 实际性能可能因您的配置和设置而异。 系统要求可能会发生变化。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11\n处理器: INTEL CORE I7-8700K or AMD RYZEN 5 3600X\n内存: 16 GB RAM\n显卡: NVIDIA GEFORCE GTX 1070 8 GB or AMD RADEON RX VEGA 56 8 GB\nDirectX 版本: 12\n存储空间: 需要 60 GB 可用空间\n声卡: Windows Compatible Audio Device\n附注事项: 估计性能：1080p / 60fps / 高等质量设置。 实际性能可能因您的配置和设置而异。 系统要求可能会发生变化。"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1245620/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Elden_Ring"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:19:47.743Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:44.064Z",
+      "page": "Elden Ring"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\EldenRing\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\EldenRing\\GraphicsConfig.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

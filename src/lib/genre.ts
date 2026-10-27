@@ -19,6 +19,11 @@ export const GENRE_ZH: Record<string, string> = {
   colony: '殖民模拟',
   shooter: '射击',
   coop: '合作',
+  racing: '竞速',
+  sports: '体育',
+  casual: '休闲',
+  mmo: '大型多人',
+  indie: '独立',
 };
 
 export const genreZh = (g: string) => GENRE_ZH[g] ?? g;

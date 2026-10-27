@@ -1,0 +1,85 @@
+{
+  "id": "warhammer-40-000-rogue-trader",
+  "slug": "warhammer-40-000-rogue-trader",
+  "name": {
+    "zh": "Warhammer 40,000: 行商浪人",
+    "en": "Warhammer 40,000: Rogue Trader"
+  },
+  "summary": "以黑暗与危险的公元40000年为背景的角色扮演游戏，立刻开始您的旅程吧。 您将扮演一位胆大包天的行商浪人，某个古老私掠者王朝的后裔。这个王朝支配着自己的商业帝国，在神皇本人的祝福之下。",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2186680/",
+      "priceNote": "参考价 ¥ 188.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 2186680,
+  "developers": [
+    "Owlcat Games"
+  ],
+  "publishers": [
+    "Owlcat Games"
+  ],
+  "releaseDate": "2023 年 12 月 7 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Win10\n处理器: Intel(R) Core(TM) i5-4590T CPU @ 2.00GHz\n内存: 8 GB RAM\n显卡: AMD Radeon RX Vega 6 / Intel HD Graphics 630\nDirectX 版本: 11\n存储空间: 需要 40 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统: Win10\n处理器: Intel(R) Core(TM) i5-6400 CPU @ 2.70GHz\n内存: 16 GB RAM\n显卡: AMD Radeon RX 570 / NVIDIA GeForce GTX 1050 Ti\nDirectX 版本: 11\n存储空间: 需要 40 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2186680/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Warhammer_40%2C000%3A_Rogue_Trader"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:04:10.083Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:12.054Z",
+      "page": "Warhammer 40,000: Rogue Trader"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Owlcat Games\\Warhammer 40000 Rogue Trader\\Saved Games\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Owlcat Games\\Warhammer 40000 Rogue Trader",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Owlcat Games\\Warhammer 40000 Rogue Trader\\general_settings.json",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

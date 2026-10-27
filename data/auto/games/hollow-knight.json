@@ -1,0 +1,88 @@
+{
+  "id": "hollow-knight",
+  "slug": "hollow-knight",
+  "name": {
+    "zh": "Hollow Knight"
+  },
+  "summary": "在《空洞骑士》中打造属于自己的冒险之旅！穿越一个庞大却废弃的属于昆虫与英雄的王国，开启史诗般的冒险旅程。探索幽深的洞穴，与被感染的生物战斗，结识友好又奇异的昆虫，整个游戏都是经典的手绘 2D 风格。",
+  "genres": [
+    "action",
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/367520/",
+      "priceNote": "参考价 ¥ 58.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 367520,
+  "developers": [
+    "Team Cherry"
+  ],
+  "publishers": [
+    "Team Cherry"
+  ],
+  "releaseDate": "2017 年 2 月 24 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 21H1 (build 19043) or newer\n处理器: Intel Core i3-3240, AMD FX-4300\n内存: 4 GB RAM\n显卡: GeForce GTX 560 Ti (1GB), Radeon HD 7750 (1GB)\nDirectX 版本: 10\n存储空间: 需要 9 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 21H1 (build 19043) or newer\n处理器: Intel Core i5-3470\n内存: 8 GB RAM\n显卡: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)\nDirectX 版本: 10\n存储空间: 需要 9 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/367520/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Hollow_Knight"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:20:02.852Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:24.795Z",
+      "page": "Hollow Knight"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Team Cherry\\Hollow Knight\\*.dat",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Team Cherry\\Hollow Knight\\*.bak",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Team Cherry\\Hollow Knight\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\hollow_knight_Data\\Config.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

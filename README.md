@@ -111,3 +111,15 @@ SEO：canonical、Open Graph、JSON-LD（WebSite / VideoGame / BreadcrumbList / 
 | `npm run icons` | 改了 `public/favicon.svg` 后重新生成各尺寸 PNG 图标 |
 
 免费情报过期：页面会在浏览器里按当前时间自动把已结束的活动移入归档；构建时会提示「已结束超过 7 天」的条目和「当前没有进行中的限时领取」，看到提示后更新 `data/offers/`。
+
+## 自动收录（data/auto/）
+
+内容由 `scripts/sync/*` 从正规公开数据源自动收集，写入 `data/auto/`（不要手改；人工整理的数据仍放在 `data/`，同一款游戏以人工为准，自动数据只补空缺字段）：
+
+| 脚本 | 数据源 | 内容 |
+|---|---|---|
+| `scripts/sync/steam-games.mjs` | SteamSpy 热门榜 + Steam 商店公开接口 | 游戏中文名、简介、类型、开发商、发售日期、中文支持、配置要求 |
+| `scripts/sync/pcgw-paths.mjs` | PCGamingWiki（CC BY-NC-SA，逐条署名） | Windows 存档位置、配置文件位置 |
+| `scripts/sync/epic-free.mjs` | Epic 官方免费游戏接口 | 每周免费（进行中 + 已公布的下一期） |
+
+本机运行：`npm run sync`。推到 GitHub 后 `.github/workflows/sync.yml` 每天自动运行并提交。收录范围（榜单、每次最多新增几款、多久刷新一次）在 `config/sync.json` 调整——把 `steam.allPages` 设为 1、2… 可以按拥有人数扩到上千款。

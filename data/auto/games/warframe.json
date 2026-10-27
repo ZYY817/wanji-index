@@ -1,0 +1,79 @@
+{
+  "id": "warframe",
+  "slug": "warframe",
+  "name": {
+    "zh": "Warframe 星际战甲",
+    "en": "Warframe"
+  },
+  "summary": "在这个以故事为导向的免费在线动作游戏中，觉醒为一个不可阻挡的战士，并与你的朋友一起战斗。跟随着神秘的 Lotus 的指引，在广阔的星系中直面敌对的派系，提升你的战甲等级，建立一个具有毁灭性火力的军械库；并在这个惊心动魄，且拥有独特第三人称战斗体验的庞大开放世界中发挥你的真正潜力。",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/230410/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 230410,
+  "developers": [
+    "Digital Extremes"
+  ],
+  "publishers": [
+    "Digital Extremes"
+  ],
+  "releaseDate": "2013 年 3 月 25 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\n操作系统: Windows 7 64 位 （不支持 32 位）\n 处理器: Intel Core i7 860, Intel Core i5 750, 或者 AMD FX-4100 (需要支持 SSE 4.2)\n显卡: 支持 DirectX 11+ 的显卡\n内存: 4 GB 内存\n硬盘: 50 GB 可用硬盘空间\n网络: 宽带网络连接\n请注意：目前不支持 Mac 或 Linux 。\n若要启用 DirectX 12，系统至少需要是 Windows 10 20H2（2020年发布）或 Windows 11",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/230410/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Warframe"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:10.146Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:09.915Z",
+      "page": "Warframe"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Warframe\\EE.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Warframe\\Editor.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Warframe\\<用户 ID>\\settings",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

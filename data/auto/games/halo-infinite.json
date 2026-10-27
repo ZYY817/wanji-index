@@ -1,0 +1,67 @@
+{
+  "id": "halo-infinite",
+  "slug": "halo-infinite",
+  "name": {
+    "zh": "Halo Infinite"
+  },
+  "summary": "作为游戏界最具代表性的传奇之一，Halo 如今的规模胜过以往任何时候。该游戏具有宏大的开放世界战役，给予玩家丰富多样的免费多人游戏体验。",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1240440/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1240440,
+  "developers": [
+    "343 Industries"
+  ],
+  "publishers": [
+    "Xbox Game Studios"
+  ],
+  "releaseDate": "2021 年 11 月 15 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 RS5 x64\n处理器: AMD Ryzen 5 1600 or Intel i5-4440\n内存: 8 GB RAM\n显卡: AMD RX 570 or Nvidia GTX 1050 Ti\nDirectX 版本: 12\n存储空间: 需要 50 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 19H2 x64\n处理器: AMD Ryzen 7 3700X or Intel i7-9700k\n内存: 16 GB RAM\n显卡: Radeon RX 5700 XT or Nvidia RTX 2070\nDirectX 版本: 12\n存储空间: 需要 50 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1240440/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo_Infinite"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:51.416Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:16.141Z",
+      "page": "Halo Infinite"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\HaloInfinite\\Settings\\SpecControlSettings.json",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

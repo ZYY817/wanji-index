@@ -1,0 +1,57 @@
+{
+  "id": "team-fortress-2",
+  "slug": "team-fortress-2",
+  "name": {
+    "zh": "Team Fortress 2"
+  },
+  "summary": "九个兵种性格各异，特色鲜明，各自具备独特的战术技能。 不断更新的游戏模式、地图、装备，当然还有最重要的——帽子！",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/440/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 440,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2007 年 10 月 10 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows® 7（32/64 位）/Vista/XP\n处理器: 1.7 GHz 处理器或更高\n内存: 512 MB RAM\nDirectX 版本: 8.1\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统 *: Windows® 7 (32/64-bit)\n处理器: Pentium 4 processor (3.0GHz, or better)\n内存: 1 GB RAM\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/440/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:42.366Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:43.775Z",
+      "page": "Team Fortress 2"
+    }
+  }
+}

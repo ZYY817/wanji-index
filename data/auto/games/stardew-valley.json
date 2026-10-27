@@ -1,0 +1,78 @@
+{
+  "id": "stardew-valley",
+  "slug": "stardew-valley",
+  "name": {
+    "zh": "Stardew Valley"
+  },
+  "summary": "你继承了你爷爷在星露谷留下的老旧农场。带着爷爷留下的残旧工具和几枚硬币开始了你的新生活。你能适应这小镇上的生活并且将这个杂草丛生的老旧农场变成一个繁荣的家吗？",
+  "genres": [
+    "indie",
+    "rpg",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/413150/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 413150,
+  "developers": [
+    "ConcernedApe"
+  ],
+  "publishers": [
+    "ConcernedApe"
+  ],
+  "releaseDate": "2016 年 2 月 26 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows Vista or greater\n处理器: 2 Ghz\n内存: 2 GB RAM\n显卡: 256 mb video memory, shader model 3.0+\nDirectX 版本: 10\n存储空间: 需要 500 MB 可用空间",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/413150/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Stardew_Valley"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:13.555Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:39.363Z",
+      "page": "Stardew Valley"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\StardewValley\\Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\StardewValley\\default_options",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

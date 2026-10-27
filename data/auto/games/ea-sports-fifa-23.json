@@ -1,0 +1,58 @@
+{
+  "id": "ea-sports-fifa-23",
+  "slug": "ea-sports-fifa-23",
+  "name": {
+    "zh": "EA SPORTS《FIFA 23》",
+    "en": "EA SPORTS FIFA 23"
+  },
+  "summary": "《FIFA 23》将这个世界性游戏带回球场，采用 HyperMotion2 技术，更有男子和女子 FIFA World Cup™、女子俱乐部球队、跨平台游戏功能**，以及更多精彩内容。",
+  "genres": [
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1811260/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1811260,
+  "developers": [
+    "EA Canada",
+    "EA Romania"
+  ],
+  "publishers": [
+    "Electronic Arts"
+  ],
+  "releaseDate": "2022 年 9 月 30 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-Bit (Latest Update)\n处理器: Intel Core i5 6600k or AMD Ryzen 5 1600\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-Bit (Latest Update)\n处理器: Intel Core i7 6700 or AMD Ryzen 7 2700X\n内存: 12 GB RAM\n显卡: NVIDIA GeForce GTX 1660 or AMD Radeon RX 5600 XT\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1811260/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:04:03.959Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:38.685Z",
+      "page": null
+    }
+  }
+}

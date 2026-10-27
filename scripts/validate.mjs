@@ -10,6 +10,7 @@ import { loadSiteConfig, loadEnums, loadRedirects, PROJECT_ROOT } from '../src/l
 import { loadSchemas, ENTITY_DIRS } from '../src/lib/schema.mjs';
 import { isEligible } from '../src/lib/eligibility.mjs';
 import { computeLifecycle } from '../src/lib/lifecycle.mjs';
+import { mergeAuto } from '../src/lib/merge-auto.mjs';
 
 const argDir = process.argv[process.argv.indexOf('--data') + 1] || null;
 const useCustomDir = process.argv.includes('--data');
@@ -26,19 +27,35 @@ try { validators = loadSchemas(); }
 catch (e) { errors.push(e.message); }
 
 const collections = Object.fromEntries(Object.keys(ENTITY_DIRS).map((c) => [c, []]));
-for (const coll of Object.keys(ENTITY_DIRS)) {
-  const dir = join(dataDir, coll);
-  if (!existsSync(dir)) continue;
-  for (const f of readdirSync(dir)) {
-    if (!f.endsWith('.json')) continue;
-    let rec;
-    try { rec = JSON.parse(readFileSync(join(dir, f), 'utf8')); }
-    catch (e) { errors.push(`JSON 语法错误 ${coll}/${f}: ${e.message}`); continue; }
-    if (validators[coll] && !validators[coll](rec)) {
-      for (const er of validators[coll].errors)
-        errors.push(`Schema ${coll}/${f}: ${er.instancePath || '/'} ${er.message}`);
+const autoRecs = Object.fromEntries(Object.keys(ENTITY_DIRS).map((c) => [c, []]));
+// 人工数据 data/<集合>/ 与自动收录 data/auto/<集合>/ 都按同一份 schema 校验；之后按 merge-auto 的规则合并
+for (const [base, bucket, label] of [['', collections, ''], ['auto', autoRecs, 'auto/']]) {
+  for (const coll of Object.keys(ENTITY_DIRS)) {
+    const dir = join(dataDir, base, coll);
+    if (!existsSync(dir)) continue;
+    for (const f of readdirSync(dir)) {
+      if (!f.endsWith('.json')) continue;
+      let rec;
+      try { rec = JSON.parse(readFileSync(join(dir, f), 'utf8')); }
+      catch (e) { errors.push(`JSON 语法错误 ${label}${coll}/${f}: ${e.message}`); continue; }
+      if (validators[coll] && !validators[coll](rec)) {
+        for (const er of validators[coll].errors)
+          errors.push(`Schema ${label}${coll}/${f}: ${er.instancePath || '/'} ${er.message}`);
+      }
+      bucket[coll].push({ rec, file: `${label}${coll}/${f}` });
     }
-    collections[coll].push({ rec, file: `${coll}/${f}` });
+  }
+}
+// 合并：与人工记录重复的自动记录不再单独参与后续检查（其补充字段已并入人工记录）
+{
+  const merged = mergeAuto(
+    Object.fromEntries(Object.entries(collections).map(([c, l]) => [c, l.map((x) => x.rec)])),
+    Object.fromEntries(Object.entries(autoRecs).map(([c, l]) => [c, l.map((x) => x.rec)])),
+  );
+  for (const coll of ['games', 'offers']) {
+    const fileOf = new Map([...collections[coll], ...autoRecs[coll]].map((x) => [x.rec, x.file]));
+    const handFile = new Map(collections[coll].map((x) => [x.rec.id, x.file]));
+    collections[coll] = merged[coll].map((rec) => ({ rec, file: fileOf.get(rec) ?? handFile.get(rec.id) ?? `${coll}/${rec.id}.json` }));
   }
 }
 

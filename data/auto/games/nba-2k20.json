@@ -1,0 +1,74 @@
+{
+  "id": "nba-2k20",
+  "slug": "nba-2k20",
+  "name": {
+    "zh": "NBA 2K20"
+  },
+  "summary": "注意：NBA 2K20中的所有多人服务器将于12/31/2021关闭。在此之后，需要访问在线服务器的所有游戏功能都将无法使用。",
+  "genres": [
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1089350/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1089350,
+  "developers": [
+    "Visual Concepts"
+  ],
+  "publishers": [
+    "2K"
+  ],
+  "releaseDate": "2019 年 9 月 6 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 64-bit, Windows 8.1 64-bit or Windows 10 64-bit\n处理器: Intel® Core™ i3-530 @ 2.93 GHz / AMD FX-4100 @ 3.60 GHz or better\n内存: 4 GB RAM\n显卡: NVIDIA® GeForce® GT 450 1GB / AMD® Radeon™ HD 7770 1GB or better\nDirectX 版本: 11\n存储空间: 需要 80 GB 可用空间\n声卡: DirectX 9.0x compatible Dual-Analog Gamepad: Recommended\n附注事项: Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include DirectX and Visual C++ Redistributable 2012.",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7 64-bit, Windows 8.1 64-bit or Windows 10 64-bit\n处理器: Intel® Core™ i5-4430 @ 3 GHz / AMD FX-8370 @ 3.4 GHz or better\n内存: 8 GB RAM\n显卡: NVIDIA® GeForce® GTX 770 2GB / AMD® Radeon™ R9 270 2GB or better\nDirectX 版本: 11\n存储空间: 需要 80 GB 可用空间\n声卡: DirectX 9.0c compatible sound card\n附注事项: Dual-analog gamepad"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1089350/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/NBA_2K20"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:37.053Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:49.223Z",
+      "page": "NBA 2K20"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>\\userdata\\<用户 ID>\\1089350\\remote\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>\\userdata\\<用户 ID>\\1089350\\remote\\ Or %APPDATA%\\2K Sports\\NBA 2K20\\VideoSettings.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

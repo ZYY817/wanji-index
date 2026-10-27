@@ -1,0 +1,81 @@
+{
+  "id": "7-days-to-die",
+  "slug": "7-days-to-die",
+  "name": {
+    "zh": "7 Days to Die"
+  },
+  "summary": "《7 Days》是一款开放世界游戏，独具特色地融合了第一人称射击、生存恐怖、塔防和角色扮演等多种游戏的特征。快来体验这款具有开创性的终极丧尸生存沙盒角色扮演游戏吧。纳维戈恩在等着你！",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/251570/",
+      "priceNote": "参考价 ¥ 83.60",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 251570,
+  "developers": [
+    "The Fun Pimps"
+  ],
+  "publishers": [
+    "The Fun Pimps Entertainment LLC"
+  ],
+  "releaseDate": "2024 年 7 月 25 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or higher (64-bit)\n处理器: 2.8 Ghz Quad Core CPU\n内存: 8 GB RAM\n显卡: 2 GB Dedicated Memory\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间\n声卡: Sound Card: DirectX® Compatible\n附注事项: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or higher (64-bit)\n处理器: 3.2 Ghz Quad Core CPU or faster\n内存: 12 GB RAM\n显卡: 4 GB Dedicated Memory\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间\n声卡: Sound Card: DirectX® Compatible\n附注事项: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/251570/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/7_Days_to_Die"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:20.169Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:07:44.188Z",
+      "page": "7 Days to Die"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\7DaysToDie\\Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\The Fun Pimps\\7 Days To Die\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

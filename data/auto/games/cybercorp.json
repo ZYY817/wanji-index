@@ -1,0 +1,59 @@
+{
+  "id": "cybercorp",
+  "slug": "cybercorp",
+  "name": {
+    "zh": "CyberCorp"
+  },
+  "summary": "Brutal fast-paced top-down Co-op Loot Shooter in Cyberpunk world.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1116170/",
+      "priceNote": "参考价 ¥ 58.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1116170,
+  "developers": [
+    "Megame LLC"
+  ],
+  "publishers": [
+    "Megame LLC"
+  ],
+  "releaseDate": "2025 年 4 月 22 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 (64-bit)\n处理器: Intel Celeron / AMD Phenom\n内存: 4 GB RAM\n显卡: Intel HD 4000 / Radeon R3\n存储空间: 需要 6 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11 (64-bit)\n处理器: Intel Core i3 / AMD Ryzen 3\n内存: 8 GB RAM\n显卡: GeForce GT 1030 / AMD RX 550\n存储空间: 需要 10 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1116170/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:41.167Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:26.122Z",
+      "page": "CyberCorp"
+    }
+  }
+}

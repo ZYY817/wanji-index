@@ -1,0 +1,59 @@
+{
+  "id": "street-warriors-online",
+  "slug": "street-warriors-online",
+  "name": {
+    "zh": "Street Warriors Online"
+  },
+  "summary": "首次，实际的PVP游戏最多8 对 8个玩家在原始，动态战斗系统和快速，圆的战斗。 创建和开发你的角色。为了帮你打败你的对手获得新的技能和物品年。 聚集你的好友并在一个团伙中一起战斗。",
+  "genres": [
+    "action",
+    "mmo",
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/417910/",
+      "priceNote": "参考价 ¥ 11.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 417910,
+  "developers": [
+    "Crazy Rocks Studios"
+  ],
+  "publishers": [
+    "Crazy Rocks Studios"
+  ],
+  "releaseDate": "2016 年 12 月 16 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows® 7 32/64-bit / Vista 32/64 / XP\n处理器: Intel core 2 duo 2.4GHz\n内存: 2 GB RAM\n显卡: NVIDIA® GeForce® GTX 470 @ 1GB / ATI® Radeon™ HD 6970 @ 1GB\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间\n声卡: DirectX Compatible",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/417910/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:46.953Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:41.432Z",
+      "page": "Street Warriors Online"
+    }
+  }
+}

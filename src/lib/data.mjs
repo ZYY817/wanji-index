@@ -5,14 +5,25 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { DATA_DIR, PROJECT_ROOT } from './config.mjs';
 import { filterEligible } from './eligibility.mjs';
+import { mergeAuto } from './merge-auto.mjs';
 
 const COLLECTIONS = ['games', 'sites', 'entries', 'tools', 'guides', 'offers'];
 const TYPE = { games: 'game', sites: 'site', entries: 'entry', tools: 'tool', guides: 'guide', offers: 'offer' };
 
 /** @returns {any} 统一数据集合（TS 侧按 any 使用，结构由 schemas/ 约束） */
 export function loadData() {
-  const raw = Object.fromEntries(COLLECTIONS.map((c) => [c, []]));
   const root = join(PROJECT_ROOT, DATA_DIR);
+  const hand = readTree(root);
+  // data/auto/ 是同步脚本自动收录的数据；人工数据优先，自动数据只补空缺（见 merge-auto.mjs）
+  const raw = mergeAuto(hand, readTree(join(root, 'auto')));
+  const data = { raw };
+  for (const [coll, t] of Object.entries(TYPE))
+    data[coll] = filterEligible(t, raw[coll]);
+  return data;
+}
+
+function readTree(root) {
+  const raw = Object.fromEntries(COLLECTIONS.map((c) => [c, []]));
   for (const coll of COLLECTIONS) {
     const dir = join(root, coll);
     if (!existsSync(dir)) continue;
@@ -29,10 +40,7 @@ export function loadData() {
       }
     }
   }
-  const data = { raw };
-  for (const [coll, t] of Object.entries(TYPE))
-    data[coll] = filterEligible(t, raw[coll]);
-  return data;
+  return raw;
 }
 
 /** @returns {any} 反向关联 Map 集合 */

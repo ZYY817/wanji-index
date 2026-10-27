@@ -1,0 +1,79 @@
+{
+  "id": "world-of-tanks-blitz",
+  "slug": "world-of-tanks-blitz",
+  "name": {
+    "zh": "坦克世界闪电战",
+    "en": "World of Tanks Blitz"
+  },
+  "summary": "在这款免费在线7v7坦克射击游戏，尽情宣泄压力、轰飞敌方炮塔！驾驶数百辆坦克（从博物馆典藏经典到令人疑问\"这真的存在过吗？\"的特殊型号应有尽有），在每场5–7分钟的快节奏混战中感受钢铁狂潮。既可单人作战，也可与好友组队，即使在配置一般的设备上也能畅享流畅爽快的战斗体验！",
+  "genres": [
+    "action",
+    "mmo",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/444200/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 444200,
+  "developers": [
+    "Wargaming Group Limited"
+  ],
+  "publishers": [
+    "Wargaming Group Limited"
+  ],
+  "releaseDate": "2016 年 11 月 9 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7, 8.0, 8.1, 10, 11\n处理器: 2 GHz\n内存: 2 GB RAM\n显卡: DirectX 11 compliant graphics card with 256 MB of VRAM\n存储空间: 需要 8 GB 可用空间",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/444200/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/World_of_Tanks_Blitz"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:58.140Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:14.247Z",
+      "page": "World of Tanks Blitz"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\wotblitz\\DAVAProject",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\wotblitz\\DAVAProject",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "naraka-bladepoint",
+  "slug": "naraka-bladepoint",
+  "name": {
+    "zh": "永劫无间",
+    "en": "NARAKA: BLADEPOINT"
+  },
+  "summary": "风靡全球的中式竞技大作！来这里舞利刃、端火枪，享受远近结合的华丽战斗！驾驭风沙、机甲，化身野兽、大佛，体验风格迥异的英雄能力！",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1203220/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1203220,
+  "developers": [
+    "24 Entertainment"
+  ],
+  "publishers": [
+    "NetEase Games "
+  ],
+  "releaseDate": "2021 年 8 月 11 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 64-bit 或更新版本\n处理器: Intel i5 4代 或 AMD FX 6300\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 750TI、Intel Arc A380或AMD HD 6950及同等型号显卡\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 90 GB 可用空间\n附注事项: a) 可在720p/60fps的情况下进行游戏; b)为了更流畅的游戏体验，我们建议您将游戏安装在SSD硬盘上",
+    "recommended": "推荐配置:\n操作系统: Windows 10 64-bit\n处理器: Intel i7 7代\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060 6G、Intel Arc A750或AMD RX480及同等型号显卡\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 90 GB 可用空间\n附注事项: a) 可在1080p/60fps的情况下进行游戏; b)为了更流畅的游戏体验，我们建议您将游戏安装在SSD硬盘上"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1203220/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Naraka%3A_Bladepoint"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:45.193Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:46.945Z",
+      "page": "Naraka: Bladepoint"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\24Entertainment\\Naraka\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\NarakaBladepoint_Data\\QualitySettingsData.txt",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\24Entertainment\\Naraka",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

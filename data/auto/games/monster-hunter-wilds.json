@@ -1,0 +1,69 @@
+{
+  "id": "monster-hunter-wilds",
+  "slug": "monster-hunter-wilds",
+  "name": {
+    "zh": "Monster Hunter Wilds"
+  },
+  "summary": "狂野凶猛的大自然，袭来。 时刻都在动态变化的原野。 这是个关于生活在具有两面性的世界中的怪物与人们的故事。 进化的狩猎动作，寻求连续不断的沉浸感，究极的狩猎体验正等待你的到来。",
+  "genres": [
+    "action",
+    "adventure",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2246340/",
+      "priceNote": "参考价 ¥ 148.50",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 2246340,
+  "developers": [
+    "CAPCOM Co., Ltd."
+  ],
+  "publishers": [
+    "CAPCOM Co., Ltd."
+  ],
+  "releaseDate": "2025 年 2 月 27 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows®10（必须为64-bit）/Windows®10（必须为64-bit）\n处理器: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\n内存: 16 GB RAM\n显卡: NVIDIA® GeForce® GTX 1660(VRAM 6GB) or AMD Radeon™ RX 5500 XT(VRAM 8GB)\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: 必须使用SSD。可在画面设置为“最低”，1080p（使用超清，原生分辨率为720p的设置）／30fps的情况下进行游戏。支持DirectStorage。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows®10（必须为64-bit）/Windows®10（必须为64-bit）\n处理器: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\n内存: 16 GB RAM\n显卡: NVIDIA® GeForce® RTX 2060 Super(VRAM 8GB) or　AMD Radeon™ RX 6600(VRAM 8GB)\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: 必须使用SSD。可在画面设置为“中”，1080p/60fps（使用帧生成）的情况下进行游戏。支持DirectStorage。"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2246340/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Monster_Hunter_Wilds"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:04:12.755Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:39.132Z",
+      "page": "Monster Hunter Wilds"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\config.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

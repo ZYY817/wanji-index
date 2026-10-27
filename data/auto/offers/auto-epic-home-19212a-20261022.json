@@ -1,0 +1,20 @@
+{
+  "id": "auto-epic-home-19212a-20261022",
+  "gameTitle": "Home - A Unique Horror Adventure",
+  "type": "limited",
+  "platform": "epic",
+  "url": "https://store.epicgames.com/zh-CN/p/home-19212a",
+  "claimNote": "Epic 每周限免，领取后永久保留在库中",
+  "startDate": "2026-10-22T15:00:00.000Z",
+  "endDate": "2026-10-29T15:00:00.000Z",
+  "checkedAt": "2026-10-27",
+  "linkHealth": "ok",
+  "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
+  "art": {
+    "wide": "https://cdn1.epicgames.com/spt-assets/46fc0cdb9f164a848e916249a8f68fc7/home-1f6qi.png",
+    "tall": "https://cdn1.epicgames.com/spt-assets/46fc0cdb9f164a848e916249a8f68fc7/home-14ws1.png"
+  },
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published"
+}

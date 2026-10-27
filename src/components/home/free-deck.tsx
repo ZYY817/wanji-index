@@ -242,7 +242,8 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
             const xlc = liveLifecycle(x, now);
             const t = xlc === 'active' ? x.endMs : xlc === 'upcoming' ? x.startMs : null;
             return (
-              <article key={x.id} className="w-[82vw] max-w-[440px] shrink-0 snap-center">
+              // relative：按钮里 sr-only 的绝对定位文字要以卡片为包含块，否则会逃出横滑容器把手机页面撑宽
+              <article key={x.id} className="relative w-[82vw] max-w-[440px] shrink-0 snap-center">
                 <div className={cn(CARD_CLS, 'aspect-[16/10] h-auto')}>
                   <CardFace o={x} />
                 </div>

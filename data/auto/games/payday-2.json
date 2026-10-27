@@ -1,0 +1,76 @@
+{
+  "id": "payday-2",
+  "slug": "payday-2",
+  "name": {
+    "zh": "PAYDAY 2"
+  },
+  "summary": "PAYDAY 2是一款动作类四人合作射击游戏，各位玩家将再次扮演初代PAYDAY帮成员——达拉斯、霍斯顿、沃尔夫以及钱恩斯——并前往华盛顿特区展开一系列惊险刺激的劫案。",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/218620/",
+      "priceNote": "参考价 ¥ 17.50",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 218620,
+  "developers": [
+    "OVERKILL - a Starbreeze Studio.",
+    "Sidetrack Games"
+  ],
+  "publishers": [
+    "Starbreeze Entertainment"
+  ],
+  "releaseDate": "2013 年 8 月 13 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: 2 GHz Intel Dual Core 64-bit Processor\n内存: 4 GB RAM\n显卡: NVIDIA & AMD (1GB VRAM)\nDirectX 版本: 11\n存储空间: 需要 32 GB 可用空间\n支持 VR: SteamVR. Standing or Room Scale. Requires installing the free VR DLC.\n附注事项: Requires a CPU which supports the SSE4.1 instruction set",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11\n处理器: 2.3 GHz Intel Quad Core 64-bit Processor\n内存: 8 GB RAM\n显卡: NVIDIA & AMD (2GB VRAM)\nDirectX 版本: 11\n存储空间: 需要 32 GB 可用空间\n支持 VR: SteamVR. Standing or Room Scale. Requires installing the free VR DLC."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/218620/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:59.391Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:57.853Z",
+      "page": "Payday 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\PAYDAY 2\\saves\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\PAYDAY 2\\renderer_settings.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

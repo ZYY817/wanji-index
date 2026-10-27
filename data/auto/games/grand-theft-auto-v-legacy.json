@@ -1,0 +1,80 @@
+{
+  "id": "grand-theft-auto-v-legacy",
+  "slug": "grand-theft-auto-v-legacy",
+  "name": {
+    "zh": "Grand Theft Auto V 传承版",
+    "en": "Grand Theft Auto V Legacy"
+  },
+  "summary": "PC 版Grand Theft Auto V 能够以超越 4K 的最高分辨率和 60 帧每秒的帧率，为您呈现屡获殊荣、令人痴迷的游戏世界——洛桑托斯市和布雷恩郡。",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/271590/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 271590,
+  "developers": [
+    "Rockstar North"
+  ],
+  "publishers": [
+    "Rockstar Games"
+  ],
+  "releaseDate": "2015 年 4 月 13 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64 位\n处理器: Intel Core 2 Quad CPU Q6600 @ 2.40GHz (4 个 CPU) / AMD Phenom 9850 Quad-Core 处理器 (4 个 CPU) @ 2.5GHz\n内存: 4 GB RAM\n显卡: NVIDIA 9800 GT 1GB / AMD HD 4870 1GB (DX 10、10.1、11) 声卡：100% DirectX 10 兼容\n存储空间: 需要 125 GB 可用空间\n声卡: 100% DirectX 10 兼容\n附注事项: 系统需求会因为陆续推出之下载内容与提供的程序变更而有所改变。如需最新兼容性信息，请洽硬件制造商和参阅 AGP 显示适配器等可能不兼容。未于上方列出的规格，游戏发行商可能不支持。 其他需求：安装游戏和进行在线游戏时需登入至 Rockstar Games Social Club (需年满十三岁) 网络；启动游戏、进行在线游戏和定期资格验证需有因特网联机；需安装的软件包括 Rockstar Games Social Club 平台、DirectX、Chromium 和 Microsoft Visual C++ 2008 sp1 可转散发套件，以及可辨识资格、数字权利管理、系统和可供其他支持用途使用的验证软件。 需透过因特网使用限单次使用的序码注册；每组序码限一个 ROCKSTAR GAMES SOCIAL CLUB 账户 (需年满十三岁) 注册使用；每个 SOCIAL CLUB 账户仅限使用一组 PC 登入数据；序码一经使用即不可转让；SOCIAL CLUB 账户为不可转让之账户。 合作伙伴需求：购买此软件前，请先查看本网站的服务条款。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64 位\n处理器: Intel Core i5 3470 @ 3.2GHZ (4 个 CPU) / AMD X8 FX-8350 @ 4GHZ (8 个 CPU)\n内存: 8 GB RAM\n显卡: NVIDIA GTX 660 2GB / AMD HD7870 2GB\n存储空间: 需要 125 GB 可用空间\n声卡: 100% DirectX 10 兼容"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/271590/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:28.378Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:59.655Z",
+      "page": "Grand Theft Auto V"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Rockstar Games\\GTA V\\Profiles\\<用户 ID>",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%PROGRAMDATA%\\Socialclub\\Player\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Rockstar Games\\GTA V\\settings.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

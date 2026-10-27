@@ -1,0 +1,76 @@
+{
+  "id": "the-sims-4",
+  "slug": "the-sims-4",
+  "name": {
+    "zh": "The Sims 4"
+  },
+  "summary": "在一个无拘无束的虚拟世界中，享受创造和控制人生的奇妙力量。 得到力量和自由，享受快乐，游戏人生！",
+  "genres": [
+    "adventure",
+    "casual",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1222670/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1222670,
+  "developers": [
+    "Maxis"
+  ],
+  "publishers": [
+    "Electronic Arts"
+  ],
+  "releaseDate": "2020 年 6 月 18 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 需要 64 位。Windows 10\n处理器: 3.3 GHz Intel Core i3-3220（2 核、4 线程）、AMD Ryzen 3 1200 3.1 GHz （4 核）或更高版本\n内存: 4 GB RAM\n显卡: 128 MB 显存且支持 Pixel Shader 3.0。支持的显卡：NVIDIA GeForce 6600 或更高版本，ATI Radeon X1300 或更高版本，Intel GMA X4500 或更高版本\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 26 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64 位 Windows 10\n处理器: Intel core i5（4 核），AMD Ryzen 5 或更高版本\n内存: 8 GB RAM\n显卡: 1 GB 显存、NVIDIA GTX 650、AMD Radeon HD 7750 或更高版本\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 51 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1222670/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Sims_4"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:47.286Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:48.082Z",
+      "page": "The Sims 4"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Electronic Arts\\The Sims 4\\saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Electronic Arts\\The Sims 4\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

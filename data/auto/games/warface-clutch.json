@@ -1,0 +1,56 @@
+{
+  "id": "warface-clutch",
+  "slug": "warface-clutch",
+  "name": {
+    "zh": "Warface: Clutch"
+  },
+  "summary": "《Warface: Clutch 》是一款充满现代元素的大型多人在线第一人称射击游戏，在全球有数百万粉丝。游戏设有紧张刺激的 PvP 模式、扣人心弦的 PvE 任务和突袭，你可以从四种不同的职业和庞大的可定制武器库中进行选择，完成这些挑战。",
+  "genres": [
+    "action",
+    "mmo"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/291480/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 291480,
+  "developers": [
+    "MY.GAMES"
+  ],
+  "publishers": [
+    "MY.GAMES"
+  ],
+  "releaseDate": "2014 年 7 月 1 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7, Windows 8, Windows 10\n处理器: Core i3-530 / AMD Athlon II X3 415e\n内存: 4 GB RAM\n显卡: GeForce GTS 450 / Radeon HD 5750\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 35 GB 可用空间\n声卡: DirectX Compatible Sound Card with latest drivers",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Core i5 3470 / AMD Athlon 240GE\n内存: 6 GB RAM\n显卡: GeForce 1050 Ti / Radeon R9 380\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 35 GB 可用空间\n声卡: DirectX Compatible Sound Card with latest drivers"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/291480/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:30.401Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:07.766Z",
+      "page": null
+    }
+  }
+}

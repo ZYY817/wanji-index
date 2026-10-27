@@ -1,0 +1,58 @@
+{
+  "id": "wallpaper-engine",
+  "slug": "wallpaper-engine",
+  "name": {
+    "zh": "Wallpaper Engine：壁纸引擎",
+    "en": "Wallpaper Engine"
+  },
+  "summary": "您可以在桌面上使用惊艳的动态壁纸。可以将您自己的图片制成动画以创建新壁纸，或导入视频/网站并在 Steam 创意工坊上分享！",
+  "genres": [
+    "casual",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/431960/",
+      "priceNote": "参考价 ¥ 22.90",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 431960,
+  "developers": [
+    "Wallpaper Engine Team"
+  ],
+  "publishers": [
+    "Wallpaper Engine Team"
+  ],
+  "releaseDate": "2018 年 11 月 16 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Windows 10, Windows 11\n处理器: 1.66 GHz Intel i5 or equivalent\n内存: 1024 MB RAM\n显卡: HD Graphics 4000 or above\nDirectX 版本: 11\n存储空间: 需要 512 MB 可用空间\n附注事项: Windows N 版本需要 Microsoft 提供的“Media Feature Pack”。",
+    "recommended": "推荐配置:\n操作系统: Windows 10, Windows 11\n处理器: 2.0 GHz Intel i7 or equivalent\n内存: 2048 MB RAM\n显卡: NVIDIA GeForce GTX 660, AMD HD7870, 2 GB VRAM or above\nDirectX 版本: 11\n存储空间: 需要 1024 MB 可用空间\n附注事项: 移动应用程序需要 Android 10 或更高版本"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/431960/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:48.988Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:01.394Z",
+      "page": null
+    }
+  }
+}

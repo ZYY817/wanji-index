@@ -1,0 +1,75 @@
+{
+  "id": "risk-of-rain-2",
+  "slug": "risk-of-rain-2",
+  "name": {
+    "zh": "雨中冒险 2",
+    "en": "Risk of Rain 2"
+  },
+  "summary": "浴血奋战杀出暴戾的怪物重围，在混乱的外星球上逃过劫难。可孤军奋战，也可与好友并肩作战。 以出人意料的方式合成战利品，同时精通每个角色，直至您自己成为初次迫降时曾颇为惧怕的恐怖威胁。",
+  "genres": [
+    "action",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/632360/",
+      "priceNote": "参考价 ¥ 80.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 632360,
+  "developers": [
+    "Hopoo Games"
+  ],
+  "publishers": [
+    "Gearbox Publishing",
+    "2K"
+  ],
+  "releaseDate": "2020 年 8 月 11 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 or newer, 64-bit\n处理器: Intel Core i3-6100 / AMD FX-8350\n内存: 4 GB RAM\n显卡: GTX 580 / AMD HD 7870\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 or newer, 64-bit\n处理器: Intel Core i5-4670K / AMD Ryzen 5 1500X\n内存: 4 GB RAM\n显卡: GTX 680 / AMD HD 7970\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/632360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Risk_of_Rain_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:16.418Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:20.728Z",
+      "page": "Risk of Rain 2"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Risk of Rain 2_Data\\Config\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Hopoo Games, LLC\\Risk of Rain 2\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "id": "vrchat",
+  "slug": "vrchat",
+  "name": {
+    "zh": "VRChat"
+  },
+  "summary": "Join our growing community as you explore, play, and help craft the future of social VR. Create worlds and custom avatars.",
+  "genres": [
+    "adventure",
+    "casual",
+    "mmo",
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/438100/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 438100,
+  "developers": [
+    "VRChat Inc."
+  ],
+  "publishers": [
+    "VRChat Inc."
+  ],
+  "releaseDate": "2017 年 2 月 1 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11\n处理器: Intel® i5-4590 / AMD FX 8350 equivalent or greater\n内存: 4 GB RAM\n显卡: NVIDIA GeForce® GTX 970 / AMD Radeon™ R9 290 equivalent or greater\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 1 GB 可用空间\n支持 VR: SteamVR",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/438100/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/VRChat"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:53.377Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:59.310Z",
+      "page": "VRChat"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\VRChat\\VRChat\\LocalAvatarData\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\VRChat\\VRChat\\LocalPlayerModerations\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\VRChat\\VRChat",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\VRChat\\VRChat\\config.json",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

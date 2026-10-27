@@ -1,0 +1,69 @@
+{
+  "id": "z1-battle-royale",
+  "slug": "z1-battle-royale",
+  "name": {
+    "zh": "Z1 Battle Royale"
+  },
+  "summary": "《杀戮之王》是一款单败淘汰制多人在线射击游戏，可容纳150名身经百战的玩家角逐于一个强大而复杂的世界。搜寻武器、弹药、盔甲、车辆和补给，在竞争中脱颖而出，并坚持到最后。",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/433850/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 433850,
+  "developers": [
+    "Daybreak Game Company"
+  ],
+  "publishers": [
+    "Daybreak Game Company"
+  ],
+  "releaseDate": "2018 年 2 月 28 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7, 8, 8.1, 10 (64 bit only)\n处理器: Intel i5 Quad-Core\n内存: 6 GB RAM\n显卡: nVidia GeForce GTX 460 series or higher\nDirectX 版本: 10\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间\n声卡: DirectX Compatible Sound Card",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7, 8, 8.1, 10 (64 bit only)\n处理器: Intel Core i5-6600K / AMD Ryzen 5 1600\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 960 2GB / AMD Radeon R7 370 2GB or higher\nDirectX 版本: 10\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间\n声卡: DirectX compatible Sound Card"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/433850/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Z1_Battle_Royale"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:51.173Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:11:18.468Z",
+      "page": "Z1 Battle Royale"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\UserOptions.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

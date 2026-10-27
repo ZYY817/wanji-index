@@ -1,0 +1,62 @@
+{
+  "id": "civilization-6",
+  "slug": "civilization-6",
+  "name": {
+    "zh": "Sid Meier’s Civilization VI"
+  },
+  "summary": "扩张疆域，发展文化，并与历史上最伟大的领袖正面交锋。你的文明是否能经得起时间的考验？",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/289070/",
+      "priceNote": "参考价 ¥ 220.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 289070,
+  "developers": [
+    "Firaxis Games",
+    "Aspyr (Mac)",
+    "Aspyr (Linux)"
+  ],
+  "publishers": [
+    "2K",
+    "Aspyr (Mac)",
+    "Aspyr (Linux)"
+  ],
+  "releaseDate": "2016 年 10 月 20 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7x64 / Windows 8.1x64 / Windows 10x64\n处理器: Intel Core i3 2.5 Ghz or AMD Phenom II 2.6 Ghz or greater\n内存: 4 GB RAM\n显卡: 1 GB & AMD 5570 or nVidia 450 or Intel Integrated Graphics 530\nDirectX 版本: 11\n存储空间: 需要 17 GB 可用空间\n声卡: DirectX Compatible Sound Device\n附注事项: Initial installation requires one-time Internet connection for Steam authentication; software installations required (included with the game) include Steam Client, Microsoft Visual C++ 2012 and 2015 Runtime Libraries, and Microsoft DirectX. Internet connection and acceptance of Steam™ Subscriber Agreement required for activation. See for details.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7x64 / Windows 8.1x64 / Windows 10x64\n处理器: Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater\n内存: 8 GB RAM\n显卡: 2GB & AMD 7970 or nVidia 770 or greater\nDirectX 版本: 11\n存储空间: 需要 23 GB 可用空间\n声卡: DirectX Compatible Sound Device"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/289070/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:19:38.414Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:07.598Z",
+      "page": null
+    }
+  }
+}

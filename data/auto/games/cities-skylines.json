@@ -1,0 +1,77 @@
+{
+  "id": "cities-skylines",
+  "slug": "cities-skylines",
+  "name": {
+    "zh": "Cities: Skylines"
+  },
+  "summary": "《城市：天际线》是对经典城市模拟类游戏的现代演绎。该游戏引入了全新的游戏玩法元素，让玩家切身体会到创造和维持一座真正城市的兴奋和艰辛，同时扩展了城市建设体验中的一些经久不衰的主题。",
+  "genres": [
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/255710/",
+      "priceNote": "参考价 ¥ 138.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 255710,
+  "developers": [
+    "Colossal Order"
+  ],
+  "publishers": [
+    "Paradox Interactive"
+  ],
+  "releaseDate": "2015 年 3 月 10 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 Home 64 Bit\n处理器: Intel® Core™ I7 930 | AMD® FX 6350\n内存: 8 GB RAM\n显卡: Nvidia® GeForce™ GTS 450 (1 GB) | AMD® R7 250 (2 GB) | Intel Iris Xe G7 (Tiger Lake)\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 Home 64 bit\n处理器: Intel® Core™ I7 2700K | AMD® Ryzen 7 2700X\n内存: 16 GB RAM\n显卡: Nvidia® GeForce™ GTX 580 (1.5 GB) | AMD® Radeon™ RX 560 (4 GB)\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/255710/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Cities%3A_Skylines"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:19:34.600Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:05.799Z",
+      "page": "Cities: Skylines"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Colossal Order\\Cities_Skylines\\Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Colossal Order\\Cities_Skylines\\gameSettings.cgs",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

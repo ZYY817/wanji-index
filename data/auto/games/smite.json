@@ -1,0 +1,74 @@
+{
+  "id": "smite",
+  "slug": "smite",
+  "name": {
+    "zh": "SMITE"
+  },
+  "summary": "和三千五百多万名玩家一起在众神的战场中战个痛快！挥舞托尔的雷神之锤；以美杜莎之力石化你的敌人；你也可以从超过100位神话人物中选择你想发挥的神圣之力。化身神明并马上开始免费游戏吧！",
+  "genres": [
+    "action",
+    "adventure",
+    "casual",
+    "indie",
+    "mmo",
+    "rpg",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/386360/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 386360,
+  "developers": [
+    "Titan Forge Games"
+  ],
+  "publishers": [
+    "Hi-Rez Studios"
+  ],
+  "releaseDate": "2015 年 9 月 8 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 64-bit or newer\n处理器: Core 2 Duo 2.4 GHz or Athlon X2 2.7 GHz\n内存: 4 GB RAM\n显卡: Nvidia GeForce 8800 GT\n存储空间: 需要 30 GB 可用空间\n声卡: DirectX compatible sound card",
+    "recommended": "推荐配置:\n操作系统 *: Windows 8/10 64-bit (latest Service Pack)\n处理器: Intel Core i5 or AMD Phenom II X3, 2.8 GHz\n内存: 6 GB RAM\n显卡: Nvidia GeForce GTX 660 or ATI Radeon HD 7950\n网络: 宽带互联网连接\n存储空间: 需要 30 GB 可用空间\n声卡: DirectX compatible sound card"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/386360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Smite"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:44.967Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:37.306Z",
+      "page": "Smite"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Smite\\BattleGame\\Config\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

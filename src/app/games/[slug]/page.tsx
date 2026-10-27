@@ -13,7 +13,7 @@ import { QuickFacts } from '@/components/game/detail/quick-facts';
 import { SectionNav } from '@/components/game/detail/section-nav';
 import { DetailSection } from '@/components/layout/detail-section';
 import {
-  ChannelList, EntryList, FaqList, GuideList, PathList, ToolList,
+  ChannelList, EntryList, FaqList, SpecsTable, GuideList, PathList, ToolList,
 } from '@/components/game/detail/detail-sections';
 
 type Params = { params: Promise<{ slug: string }> };
@@ -36,6 +36,7 @@ function sectionBody(d: GameDetail, id: SectionId) {
     case 'entries': return <EntryList items={d.entries} />;
     case 'tools': return <ToolList items={d.tools} />;
     case 'guides': return <GuideList items={d.guides} />;
+    case 'specs': return <SpecsTable rows={d.specs} />;
     case 'faq': return <FaqList items={d.faqs} />;
   }
 }
@@ -60,7 +61,7 @@ export default async function GamePage({ params }: Params) {
         ]}
       />
 
-      <DetailHero id={vm.id} name={vm.name} enName={d.enName} summary={d.summary} tags={[...d.genres, ...d.os]} art={vm.art} />
+      <DetailHero id={vm.id} name={vm.name} enName={d.enName} summary={d.summary} tags={[...d.genres, ...d.os]} byline={d.byline} art={vm.art} />
       <QuickFacts d={d} />
       {d.sections.length > 1 && <SectionNav sections={d.sections} />}
 
@@ -75,6 +76,15 @@ export default async function GamePage({ params }: Params) {
           <span className="font-medium text-foreground">档案信息</span>
           <StatusBadge value={d.reviewStatus} />
           <span className="font-mono text-2xs text-fg-3">核验于 {d.checkedAt}</span>
+          {d.autoSources.length > 0 && (
+            <span className="basis-full text-sm text-fg-3 md:basis-auto">
+              部分信息自动收录自{' '}
+              {d.autoSources.map((s, i) => (
+                <span key={s.url}>{i > 0 && '、'}<a href={s.url} target="_blank" rel="noopener noreferrer" className="underline decoration-border-strong underline-offset-4 hover:text-foreground">{s.name}</a></span>
+              ))}
+              {d.syncedAt && <>，更新于 <span className="font-mono text-2xs">{d.syncedAt}</span></>}
+            </span>
+          )}
           <FeedbackLink page={`${vm.name}（/games/${vm.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
             信息有误？反馈给我们
           </FeedbackLink>

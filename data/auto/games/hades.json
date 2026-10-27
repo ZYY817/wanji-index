@@ -1,0 +1,77 @@
+{
+  "id": "hades",
+  "slug": "hades",
+  "name": {
+    "zh": "Hades"
+  },
+  "summary": "挑战死神，在地狱中杀出血路。由 Bastion、Transistor 和 Pyre 原班人马打造的全新地下城 类游 戏，为您带来爽 快 的 自 由 砍 杀 体验",
+  "genres": [
+    "action",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1145360/",
+      "priceNote": "参考价 ¥ 92.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1145360,
+  "developers": [
+    "Supergiant Games"
+  ],
+  "publishers": [
+    "Supergiant Games"
+  ],
+  "releaseDate": "2020 年 9 月 17 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 SP1\n处理器: Dual Core 2.4 GHz\n内存: 4 GB RAM\n显卡: 1GB VRAM / DirectX 10+ support\n存储空间: 需要 15 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7 SP1\n处理器: Dual Core 3.0 GHz+\n内存: 8 GB RAM\n显卡: 2GB VRAM / DirectX 10+ support\n存储空间: 需要 20 GB 可用空间"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1145360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Hades"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:19:59.178Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:04.232Z",
+      "page": "Hades"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Saved Games\\Hades\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Saved Games\\Hades\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

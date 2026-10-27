@@ -1,0 +1,77 @@
+{
+  "id": "euro-truck-simulator-2",
+  "slug": "euro-truck-simulator-2",
+  "name": {
+    "zh": "Euro Truck Simulator 2"
+  },
+  "summary": "像公路之王一样在欧洲穿行， 将价值不菲的货物完美送抵远方！往返于英国，比利时，德国，意大利，荷兰，波兰等众多城市；您的耐力，技巧，速度都被您发挥到了极致！",
+  "genres": [
+    "indie",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/227300/",
+      "priceNote": "参考价 ¥ 92.99",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 227300,
+  "developers": [
+    "SCS Software"
+  ],
+  "publishers": [
+    "SCS Software"
+  ],
+  "releaseDate": "2012 年 10 月 12 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-6400 or AMD Ryzen 3 1200 or similar\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 or AMD Radeon RX 460 or Intel HD 630 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)",
+    "recommended": "Recommended:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-9600 or AMD Ryzen 5 3600 or similar\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1660 or AMD Radeon RX 590 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/227300/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Euro_Truck_Simulator_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:05.804Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:46.186Z",
+      "page": "Euro Truck Simulator 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Euro Truck Simulator 2\\profiles\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Euro Truck Simulator 2\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

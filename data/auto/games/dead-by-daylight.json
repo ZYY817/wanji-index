@@ -1,0 +1,57 @@
+{
+  "id": "dead-by-daylight",
+  "slug": "dead-by-daylight",
+  "name": {
+    "zh": "黎明杀机",
+    "en": "Dead by Daylight"
+  },
+  "summary": "10年恐惧相伴。10年的惊吓与刺激体验。10年的残暴献祭与惊险逃脱。 永久困于邪恶的幻境之中，即使死亡也无法逃脱，这是一场需要勇气和智慧的较量，四名意志坚定的逃生者在残忍对局中面对嗜血杀手。选择一方，进入多人非对称竞技游戏世界，获得最佳恐怖游戏体验。",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/381210/",
+      "priceNote": "参考价 ¥ 37.50",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 381210,
+  "developers": [
+    "Behaviour Interactive Inc."
+  ],
+  "publishers": [
+    "Behaviour Interactive Inc."
+  ],
+  "releaseDate": "2016 年 6 月 14 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64位操作系统(Windows 10)\n处理器: Intel Core i3-4170或AMD FX-8120\n内存: 8 GB RAM\n显卡: 可兼容DX11的GeForce GTX 460 1GB或AMD HD 6850 1GB\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间\n声卡: 可兼容DX11\n附注事项: With these requirements, it is recommended that the game is played on Low quality settings.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64位操作系统(Windows 10)\n处理器: Intel Core i3-4170或AMD FX-8300或更高\n内存: 8 GB RAM\n显卡: 可兼容DX11的GeForce 760或AMD HD 8800或拥有4GB RAM的更高款\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间\n声卡: 可兼容DX11"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/381210/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:02:42.984Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:08:30.054Z",
+      "page": "Dead by Daylight"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_说明": "自动收录配置（scripts/sync/*）。改这里即可扩大或缩小收录范围，不需要改代码。",
+  "steam": {
+    "_lists说明": "从 SteamSpy 的哪些榜单选游戏：top100in2weeks 近两周热门、top100forever 历史热门、top100owned 拥有人数最多；all 按拥有人数分页（每页 1000 款，pages 控制页数）",
+    "lists": ["top100in2weeks", "top100forever", "top100owned"],
+    "allPages": 0,
+    "extraAppIds": [],
+    "excludeAppIds": [],
+    "maxNewPerRun": 150,
+    "refreshDays": 7,
+    "requestIntervalMs": 1600
+  },
+  "pcgamingwiki": {
+    "maxPerRun": 150,
+    "refreshDays": 30,
+    "requestIntervalMs": 1200
+  }
+}

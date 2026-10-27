@@ -1,0 +1,75 @@
+{
+  "id": "red-dead-redemption-2",
+  "slug": "red-dead-redemption-2",
+  "name": {
+    "zh": "Red Dead Redemption 2"
+  },
+  "summary": "亚瑟·摩根和范德林德帮众是一群逃亡在外的亡命之徒。联邦侦探和赏金猎人在他们的身后穷追不舍，亚瑟一行人必须在广袤蛮荒的腹地上四处劫掠、挣扎求生。",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1174180/",
+      "priceNote": "参考价 ¥ 279.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 1174180,
+  "developers": [
+    "Rockstar Games"
+  ],
+  "publishers": [
+    "Rockstar Games"
+  ],
+  "releaseDate": "2019 年 12 月 5 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-bit\n处理器: Intel® Core™ i5-2500K / AMD FX-6300\n内存: 8 GB RAM\n显卡: Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB\n网络: 宽带互联网连接\n存储空间: 需要 150 GB 可用空间\n声卡: Direct X Compatible",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-bit\n处理器: Intel® Core™ i7-4770K / AMD Ryzen 5 1500X\n内存: 12 GB RAM\n显卡: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB\n网络: 宽带互联网连接\n存储空间: 需要 150 GB 可用空间\n声卡: Direct X Compatible"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1174180/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Red_Dead_Redemption_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-26T17:20:14.194Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:14.415Z",
+      "page": "Red Dead Redemption 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Rockstar Games\\Red Dead Redemption 2\\Profiles\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Rockstar Games\\Red Dead Redemption 2\\Settings\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

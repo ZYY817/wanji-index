@@ -1,0 +1,59 @@
+# 每天自动更新内容（北京时间 06:00）：Steam 游戏信息 → PCGamingWiki 存档位置 → Epic 免费情报 → 字体子集 → 校验 → 提交。
+# 提交后，连接了本仓库的 Cloudflare Pages 会自动重新构建部署。某个数据源当天不可用时只跳过那一步，不影响其他步骤。
+# 也可以在 Actions 页面手动运行（workflow_dispatch）。收录范围在 config/sync.json 里调整。
+name: 自动更新内容
+
+on:
+  schedule:
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: content-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install fonttools brotli
+
+      - name: Steam 游戏信息
+        run: node scripts/sync/steam-games.mjs
+        continue-on-error: true
+      - name: PCGamingWiki 存档 / 配置位置
+        run: node scripts/sync/pcgw-paths.mjs
+        continue-on-error: true
+      - name: Epic 每周免费
+        run: node scripts/sync/epic-free.mjs
+        continue-on-error: true
+
+      - name: 宋体子集（新内容里出现的新字）
+        run: npm run fonts
+      - name: 数据校验（不通过则不提交）
+        run: node scripts/validate.mjs
+
+      - name: 提交更新
+        run: |
+          git config user.name "wanji-index-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/auto src/fonts
+          if git diff --cached --quiet; then
+            echo "内容没有变化"
+          else
+            git commit -m "自动更新内容 $(date -u +%Y-%m-%d)"
+            git push
+          fi

@@ -13,8 +13,8 @@ import { useIsDesktop, useMotionOK, useLiveTransform } from '@/components/fx/hoo
  * 底部压暗逐渐加深，把视线交给下面的「速答条」。入场用纯 CSS 错峰，首帧即可读。
  */
 export function DetailHero({
-  id, name, enName, summary, tags, art,
-}: { id: string; name: string; enName?: string; summary: string; tags: string[]; art: Art }) {
+  id, name, enName, summary, tags, byline, art,
+}: { id: string; name: string; enName?: string; summary: string; tags: string[]; byline?: string[]; art: Art }) {
   const ref = useRef<HTMLElement>(null);
   const ok = useMotionOK();
   const desktop = useIsDesktop();
@@ -66,6 +66,9 @@ export function DetailHero({
             <p className="mt-3 max-w-[38em] animate-rise text-lg leading-relaxed text-foreground/90 text-pretty" style={rise(3)}>
               {summary}
             </p>
+            {byline && byline.length > 0 && (
+              <p className="mt-3 animate-rise text-sm text-fg-2" style={rise(3)}>{byline.join(' · ')}</p>
+            )}
           </div>
           {art?.logo && (
             <div className="hidden animate-rise justify-end md:col-span-4 md:flex" style={rise(2)}>

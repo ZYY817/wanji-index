@@ -1,0 +1,78 @@
+{
+  "id": "satisfactory",
+  "slug": "satisfactory",
+  "name": {
+    "zh": "幸福工厂",
+    "en": "Satisfactory"
+  },
+  "summary": "是一款第一人称开放世界工厂建造游戏，融入探索和战斗等特色元素。玩家可以独自在游戏中展开异星冒险，也可以与好友共同探索外星星球，建造多层工厂，进入传送带天堂！",
+  "genres": [
+    "adventure",
+    "indie",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/526870/",
+      "priceNote": "参考价 ¥ 136.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 526870,
+  "developers": [
+    "Coffee Stain Studios"
+  ],
+  "publishers": [
+    "Coffee Stain Publishing"
+  ],
+  "releaseDate": "2024 年 9 月 10 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or later (64-Bit)\n处理器: i5-3570 3.4 GHz 4 Core\n内存: 8 GB RAM\n显卡: Nvidia GTX 1650/GTX 1050-ti, or AMD RX 470/RX 570, or equivalent performance & VRAM\n存储空间: 需要 20 GB 可用空间\n附注事项: Internet connection required for multiplayer.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11 or later (64-Bit)\n处理器: Ryzen 5 5600X﻿ or ﻿i5-12400 ﻿or equivalent performance, 6 physical cores minimum\n内存: 16 GB RAM\n显卡: Nvidia RTX 2070﻿ or RX 5700, or equivalent performance & VRAM\n存储空间: 需要 20 GB 可用空间\n附注事项: Internet connection required for multiplayer."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/526870/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Satisfactory"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:03:02.134Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:10:22.812Z",
+      "page": "Satisfactory"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\FactoryGame\\Saved\\SaveGames\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\FactoryGame\\Saved\\Config\\Windows\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

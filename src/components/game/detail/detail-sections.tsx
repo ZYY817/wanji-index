@@ -143,3 +143,23 @@ export function FaqList({ items }: { items: FaqItem[] }) {
     </Accordion>
   );
 }
+
+/** 配置要求：项目 / 最低 / 推荐 三列；小屏改为每项上下两行 */
+export function SpecsTable({ rows }: { rows: [string, string, string][] }) {
+  return (
+    <div className="overflow-hidden rounded-sm ring-1 ring-border">
+      <div className="hidden grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] gap-6 bg-surface-2/60 px-5 py-3 text-sm text-fg-3 md:grid">
+        <span>项目</span><span>最低配置</span><span>推荐配置</span>
+      </div>
+      <dl>
+        {rows.map(([k, lo, hi]) => (
+          <div key={k} className="grid gap-x-6 gap-y-1 border-t border-border px-5 py-3.5 first:border-t-0 md:grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] md:first:border-t">
+            <dt className="text-sm text-fg-3">{k}</dt>
+            <dd className="text-base leading-relaxed text-foreground"><span className="mr-2 text-sm text-fg-3 md:hidden">最低</span>{lo}</dd>
+            <dd className="text-base leading-relaxed text-fg-2"><span className="mr-2 text-sm text-fg-3 md:hidden">推荐</span>{hi}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  );
+}

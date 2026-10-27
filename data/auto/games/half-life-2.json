@@ -1,0 +1,73 @@
+{
+  "id": "half-life-2",
+  "slug": "half-life-2",
+  "name": {
+    "zh": "Half-Life 2"
+  },
+  "summary": "在被占领的 17 号城，戈登·弗里曼从沉睡中苏醒，他在爱莉克斯·凡斯的协助下，领导着人类的殊死抵抗。 赶紧体验这款具有里程碑意义的第一人称射击游戏吧，它所构建的沉浸式世界达到前所未有的高度，所呈现的物理规律更上一层楼，战争场面扣人心弦。",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/220/",
+      "priceNote": "参考价 ¥ 35.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-27"
+    }
+  ],
+  "steamAppId": 220,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2004 年 11 月 16 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7、Vista、XP\n处理器: 1.7 Ghz\n内存: 512 MB RAM\n显卡: DirectX 8.1 级显卡（需要支持 SSE）\n存储空间: 需要 6500 MB 可用空间",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/220/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-27",
+  "createdAt": "2026-10-27",
+  "updatedAt": "2026-10-27",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-27T15:01:31.259Z",
+    "pcgw": {
+      "syncedAt": "2026-10-27T15:09:11.990Z",
+      "page": "Half-Life 2"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Source\\hl2_complete\\Settings",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\Valve\\Source\\hl2\\Settings",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

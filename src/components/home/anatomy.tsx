@@ -193,7 +193,7 @@ export function Anatomy({ d }: { d: DossierVM }) {
         <div className="container-x">
           <p className="text-sm tracking-[0.2em] text-primary">以《{g.name}》为例</p>
           <h2 id="anatomy-title" className="mt-4 font-serif text-[clamp(36px,5vw,64px)] font-black leading-[1.08] tracking-[-0.04em]">一款游戏，四个答案。</h2>
-          <div className="mt-12 grid gap-6 md:grid-cols-[240px_minmax(0,1fr)] md:gap-10">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-[240px_minmax(0,1fr)] md:gap-10">
             {g.art && <img src={g.art.poster} alt="" loading="lazy" className="aspect-[2/3] w-full max-w-[240px] rounded-sm object-cover ring-1 ring-white/10" />}
             <div className="grid gap-4 sm:grid-cols-2">{list.map((s) => <Card key={s.key} s={s} />)}</div>
           </div>
