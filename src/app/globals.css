@@ -123,6 +123,9 @@
 /* 中英切换（src/lib/i18n.tsx）：两份文字都在页面里，按 <html data-lang> 只显示一份 */
 html[data-lang="en"] .l-zh,
 html:not([data-lang="en"]) .l-en { display: none !important; }
+/* 英文里的 ‘ ’ “ ” 在宋体中是全角字形（what’ s 中间会空出半个字）：英文文字里这几个字符改用系统西文衬线字体显示，其余字形不变 */
+@font-face { font-family: "Wanji Latin Quotes"; src: local("Georgia"), local("Times New Roman"), local("DejaVu Serif"), local("Liberation Serif"); unicode-range: U+2018-201F; }
+.font-serif:lang(en), .font-serif :lang(en) { font-family: "Wanji Latin Quotes", var(--font-serif); }
 
 html[data-header-hidden="true"] {
   --sticky-top: 0px;

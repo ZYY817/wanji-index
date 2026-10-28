@@ -25,3 +25,10 @@ export const KIT_CATEGORIES: { key: string; zh: string; en: string; fix?: string
 
 /** 按北京时间显示日期 */
 export const kitDate = (iso: string) => new Date(Date.parse(iso) + 8 * 3600e3).toISOString().slice(0, 10);
+
+// 组件目录里有些简称本身是中文（系统优化项），英文界面用这张表
+export const SHORT_EN: Record<string, string> = {
+  'dx-jun2010': 'DirectX 9.0c (June 2010)', ue4prereq: 'UE4 / UE5 prerequisites', 'power-high': 'High-performance power plan',
+  gamemode: 'Game Mode', hags: 'Hardware-accelerated GPU scheduling', 'game-dvr-off': 'Turn off Game DVR',
+  'fullscreen-opt': 'Fullscreen optimizations', 'visual-performance': 'Visual effects: best performance',
+};

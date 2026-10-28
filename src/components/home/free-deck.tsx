@@ -18,7 +18,7 @@ import { Tilt } from '@/components/fx/interact';
 import { hang } from '@/components/ui/hang';
 
 const LIMIT = 6;
-const CTA: Record<string, [string, string]> = { limited: ['免费领取', 'Claim free'], weekend: ['免费畅玩', 'Play free'], trial: ['免费试玩', 'Try free'], permanent: ['免费获取', 'Play free'], opensource: ['免费下载', 'Download'] };
+const CTA: Record<string, [string, string]> = { limited: ['免费领取', 'Claim free'], weekend: ['免费畅玩', 'Play free'], trial: ['免费试玩', 'Try free'], permanent: ['免费开玩', 'Play free'], opensource: ['免费下载', 'Download'] };
 const cta = (type: string, upcoming: boolean) => { const [zhL, enL] = upcoming ? ['活动页', 'Details'] : CTA[type] ?? ['免费获取', 'Get free']; return <T zh={zhL} en={enL} />; };
 
 /* 两条时间轴。
@@ -46,7 +46,13 @@ export const SCENE_IMG = 'absolute inset-0 size-full object-cover opacity-50';
 
 /** 首页卡组实际展示的条目（资源站章用同一份数据画出交接帧） */
 export function deckItems(offers: OfferVM[], now: number | null) {
-  return offers.filter((o) => liveLifecycle(o, now) !== 'ended' && o.art).slice(0, LIMIT);
+  // 卡组 = 最多 4 张限时领取（按截止时间）+ 热门免费游戏补满：既有「这周送什么」，也有「现在火的免费游戏」
+  const live = offers.filter((o) => liveLifecycle(o, now) !== 'ended' && o.art);
+  const timed = live.filter((o) => o.type === 'limited' || liveLifecycle(o, now) === 'upcoming').slice(0, 4);
+  // 热门免费：Steam 在玩人数前 20 的排前面，其次是人工整理的常青免费游戏
+  const hot = (o: OfferVM) => (/前 20/.test(o.claimNote ?? '') ? 0 : /前 100/.test(o.claimNote ?? '') ? 2 : 1);
+  const f2p = live.filter((o) => o.type === 'permanent').sort((a, b) => hot(a) - hot(b));
+  return [...timed, ...f2p].slice(0, LIMIT);
 }
 
 /** 卡组尺寸：资源站章交接时用同一套尺寸 */
@@ -84,7 +90,9 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
     <div className="min-w-0 text-left">
       <p className={cn('text-fg-2', big ? 'text-sm' : 'text-xs')}>
         {lc === 'upcoming' ? <span className="text-info"><T zh="即将免费" en="Free soon" />{target != null && <> · <T zh={`${shDateTime(target)} 开始`} en={`starts ${shDateTime(target)}`} /></>}</span>
-          : target != null ? <><T zh="剩余时间" en="Time left" /><span className="text-fg-3"> · <T zh={`${shDateTime(target)} 截止`} en={`ends ${shDateTime(target)}`} /></span></> : L('freeType', o.type)}
+          : target != null ? <><T zh="剩余时间" en="Time left" /><span className="text-fg-3"> · <T zh={`${shDateTime(target)} 截止`} en={`ends ${shDateTime(target)}`} /></span></>
+          // 长期免费的游戏：小字说明为什么在这里（「Steam 在玩人数前 20」），没有就写类型
+          : o.claimNote?.includes(' · ') ? <T zh={o.claimNote.split(' · ')[1]} en={o.claimNoteEn?.split(' · ')[1]} /> : L('freeType', o.type)}
       </p>
       <div className={big ? 'mt-1.5' : 'mt-1'}>
         {target != null ? (
@@ -92,7 +100,7 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
             className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')}
             labelClassName="text-fg-3" />
         ) : (
-          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}><T zh="长期免费" en="Always free" /></span>
+          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}>{o.type === 'permanent' ? <T zh="免费开玩" en="Free to play" /> : <T zh="长期免费" en="Always free" />}</span>
         )}
       </div>
     </div>
@@ -109,8 +117,8 @@ export function CardFace({ o, text = 1 }: { o: OfferVM; text?: MotionValue<numbe
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(12,11,10,0.9)_0%,rgba(12,11,10,0.1)_55%)]" />
       <motion.div className="absolute inset-x-0 bottom-0 p-7" style={{ opacity: text }}>
         <p className="flex items-center gap-2 text-sm text-foreground/85"><PlatformMark platform={o.platform} withLabel /><span className="text-fg-3">·</span>{L('freeType', o.type)}</p>
-        <h3 className="mt-2 text-balance font-serif text-[clamp(26px,2.2vw,38px)] font-black leading-tight tracking-[-0.02em]">{o.titleZh ?? o.title}</h3>
-        {o.titleOrig && <p className="mt-1 text-sm text-foreground/70">{o.titleOrig}</p>}
+        <h3 className="mt-2 text-balance font-serif text-[clamp(26px,2.2vw,38px)] font-black leading-tight tracking-[-0.02em]"><T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} /></h3>
+        {o.titleOrig && <p className="mt-1 text-sm text-foreground/70"><T zh={o.titleOrig} en="" /></p>}
       </motion.div>
     </>
   );

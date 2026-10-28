@@ -6,7 +6,7 @@ import { DetailSection } from '@/components/layout/detail-section';
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/ui/accordion';
 import { T } from '@/lib/i18n';
 import { withBase } from '@/lib/base';
-import { KIT, KIT_CATEGORIES, kitDate } from '@/lib/kit-release';
+import { KIT, KIT_CATEGORIES, SHORT_EN, kitDate } from '@/lib/kit-release';
 
 export const metadata: Metadata = {
   title: '装机工具',
@@ -52,12 +52,6 @@ const FAQ: { q: [string, string]; a: [string, string] }[] = [
     a: ['不能。运行库只是启动失败的一类原因；驱动、MOD 冲突、存档与游戏文件问题，请看站内的排障页。', 'No. Missing runtimes are just one cause of launch failures; for drivers, mod conflicts, saves and game files, see the Fixes section.'] },
 ];
 
-// 组件目录里有些简称本身是中文（系统优化项），英文界面用这张表
-const SHORT_EN: Record<string, string> = {
-  'dx-jun2010': 'DirectX 9.0c (June 2010)', ue4prereq: 'UE4 / UE5 prerequisites', 'power-high': 'High-performance power plan',
-  gamemode: 'Game Mode', hags: 'Hardware-accelerated GPU scheduling', 'game-dvr-off': 'Turn off Game DVR',
-  'fullscreen-opt': 'Fullscreen optimizations', 'visual-performance': 'Visual effects: best performance',
-};
 
 // 装机工具：首屏（下载）→ 能做什么 → 界面截图 → 检测清单（来自工具的组件目录）→ 下载与运行 → 常见问题
 export default function KitPage() {

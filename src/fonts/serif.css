@@ -1,4 +1,4 @@
-/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-serif-sc（已裁剪为网站用到的 1713 个字符） */
+/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-serif-sc（已裁剪为网站用到的 1711 个字符） */
 
 @font-face {
   font-family: 'Noto Serif SC Variable';
@@ -86,15 +86,6 @@
   font-style: normal;
   font-display: swap;
   font-weight: 200 900;
-  src: url(./serif/serif-57.woff2) format('woff2-variations');
-  unicode-range: U+7184;
-}
-
-@font-face {
-  font-family: 'Noto Serif SC Variable';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 200 900;
   src: url(./serif/serif-59.woff2) format('woff2-variations');
   unicode-range: U+6e3a;
 }
@@ -124,15 +115,6 @@
   font-weight: 200 900;
   src: url(./serif/serif-82.woff2) format('woff2-variations');
   unicode-range: U+5197;
-}
-
-@font-face {
-  font-family: 'Noto Serif SC Variable';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 200 900;
-  src: url(./serif/serif-87.woff2) format('woff2-variations');
-  unicode-range: U+2713,U+2715;
 }
 
 @font-face {
@@ -249,7 +231,7 @@
   font-display: swap;
   font-weight: 200 900;
   src: url(./serif/serif-108.woff2) format('woff2-variations');
-  unicode-range: U+24,U+51f6,U+51fd,U+52fe,U+53c9,U+53e0,U+5524,U+56ca,U+5782,U+5c38,U+5d29,U+5e15,U+5f2f,U+609f,U+6108,U+61d2,U+6321,U+659c,U+6670,U+6734,U+6851,U+6b96,U+6c1b,U+6c83,U+6dcb,U+6e20-6e21,U+6ee4,U+7262,U+72f1,U+7334,U+77e2,U+7802,U+788d,U+7891,U+7bad,U+7cca,U+7f1d,U+7f69,U+806a,U+838e,U+8650,U+8679,U+8870,U+8d74,U+8f74,U+8fdf,U+94ae,U+9510,U+9614,U+964c,U+98d8,U+9aa4,U+9f7f;
+  unicode-range: U+24,U+51f6,U+51fd,U+52fe,U+53c9,U+53e0,U+5524,U+56ca,U+5782,U+5c38,U+5d29,U+5e15,U+5f2f,U+609f,U+6108,U+61d2,U+6321,U+659c,U+6670,U+6734,U+6851,U+6b96,U+6c1b,U+6c83,U+6dcb,U+6e20-6e21,U+6ee4,U+7262,U+72f1,U+7334,U+77e2,U+7802,U+788d,U+7891,U+7bad,U+7cca,U+7f1d,U+7f69,U+806a,U+838e,U+8650,U+8679,U+886c,U+8870,U+8d74,U+8f74,U+8fdf,U+94ae,U+9510,U+9614,U+964c,U+98d8,U+9aa4,U+9f7f;
 }
 
 @font-face {
