@@ -29,7 +29,7 @@ const asset = (rel.assets ?? []).find((a) => /windows.*\.zip$/i.test(a.name)) ??
 const branch = (await gh(`/repos/${REPO}`))?.default_branch ?? 'master';
 const catalog = await getJson(`${RAW}/${branch}/catalog/runtimes.json`);
 
-// 截图：下载 → 缩到 1600 宽 → webp
+// 截图：下载 → 近无损 webp（原分辨率，最宽 2560）
 const shotDir = join(ROOT, 'public', 'kit');
 mkdirSync(shotDir, { recursive: true });
 const shots = [];
@@ -38,11 +38,11 @@ for (const name of SHOTS) {
     const r = await fetch(`${RAW}/${branch}/docs/screenshots/${name}.png`);
     if (!r.ok) continue;
     const buf = Buffer.from(await r.arrayBuffer());
-    const img = sharp(buf).resize({ width: 1600, withoutEnlargement: true });
-    const meta = await img.metadata();
-    await img.webp({ quality: 82 }).toFile(join(shotDir, `${name}.webp`));
-    const w = Math.min(meta.width ?? 1600, 1600);
-    shots.push({ name, src: `/kit/${name}.webp`, width: w, height: Math.round((meta.height ?? 900) * (w / (meta.width ?? w))) });
+    // 界面截图里有小字：用近无损 webp（有损压缩会把字压糊）；保留原分辨率，仓库里放 2x 截图时上限 2560 宽
+    const meta = await sharp(buf).metadata();
+    const w = Math.min(meta.width ?? 2560, 2560);
+    await sharp(buf).resize({ width: w, withoutEnlargement: true }).webp({ nearLossless: true, quality: 60 }).toFile(join(shotDir, `${name}.webp`));
+    shots.push({ name, src: `/kit/${name}.webp`, width: w, height: Math.round((meta.height ?? 1440) * (w / (meta.width ?? w))) });
   } catch (e) { console.log(`  截图 ${name} 获取失败：${e.message}`); }
 }
 
