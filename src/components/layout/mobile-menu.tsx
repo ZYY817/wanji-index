@@ -8,6 +8,7 @@ import { Kbd } from '@/components/ui/kbd';
 import { NAV, type NavCounts, navActive } from '@/lib/nav';
 import { cn } from '@/lib/utils';
 import { EASE_OUT } from '@/components/fx/tokens';
+import { T } from '@/lib/i18n';
 
 const LIST: Variants = {
   hidden: {},
@@ -21,7 +22,7 @@ const ITEM: Variants = {
 function Row({
   no, href, label, count, active,
 }: {
-  no: string; href: string; label: string; count?: number; active: boolean;
+  no: string; href: string; label: React.ReactNode; count?: number; active: boolean;
 }) {
   return (
     <motion.li variants={ITEM}>
@@ -106,37 +107,37 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
             className="flex min-h-0 flex-1 flex-col overflow-y-auto overscroll-contain px-[var(--gutter)]"
           >
             <div className="meta flex items-center justify-between py-4 text-fg-3">
-              <span>Index / 全站目录</span>
-              <span>08 项</span>
+              <span>Index / <T zh="全站目录" en="All sections" /></span>
+              <span>09 <T zh="项" en="items" /></span>
             </div>
 
             <motion.ul variants={LIST} initial={reduced ? false : 'hidden'} animate={reduced ? false : 'show'}>
-              <Row no="00" href="/" label="首页" active={pathname === '/'} />
+              <Row no="00" href="/" label={<T zh="首页" en="Home" />} active={pathname === '/'} />
               {NAV.map((n) => (
                 <Row
                   key={n.href}
                   no={n.no}
                   href={n.href}
-                  label={n.label}
+                  label={<T zh={n.label} en={n.en} />}
                   count={counts[n.key]}
                   active={navActive(n, pathname)}
                 />
               ))}
-              <Row no="08" href="/about/" label="关于本站" active={pathname.startsWith('/about')} />
+              <Row no="08" href="/about/" label={<T zh="关于本站" en="About" />} active={pathname.startsWith('/about')} />
             </motion.ul>
 
             <div className="mt-8 flex items-center gap-3">
               <span aria-hidden className="h-px w-8 bg-border-strong" />
-              <span className="meta text-2xs leading-none text-fg-3">PC 游戏资源，一处收齐</span>
+              <span className="meta text-2xs leading-none text-fg-3"><T zh="PC 游戏资源，一处收齐" en="PC game resources, all in one place" /></span>
             </div>
           </nav>
 
           <div className="shrink-0 border-t border-border px-[var(--gutter)] pb-[max(1rem,env(safe-area-inset-bottom))] pt-4">
             <p className="meta flex items-center justify-between gap-4 text-2xs leading-none text-fg-3">
-              <span className="truncate">全部免费 · 随时更新</span>
+              <span className="truncate"><T zh="全部免费 · 随时更新" en="Free · Updated daily" /></span>
               <span className="inline-flex shrink-0 items-center gap-1.5">
                 <Kbd className="h-[18px] min-w-[18px] px-1 text-2xs">ESC</Kbd>
-                关闭
+                <T zh="关闭" en="Close" />
               </span>
             </p>
           </div>

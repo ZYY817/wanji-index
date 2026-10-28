@@ -5,6 +5,7 @@
     "zh": "Factorio"
   },
   "summary": "「异星工厂」Factorio 是一款2D生产建设模拟游戏，在这里你需要设计并建设出不同的自动生产流水线，不断生产出愈加复杂的工业品。尽情开动你的想象力，将传送带、机械臂、组装机等简单的设备精密结合，创造出属于你自己的自动化流水生产建筑群。",
+  "summaryEn": "Factorio is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world.",
   "genres": [
     "casual",
     "indie",
@@ -23,7 +24,7 @@
       "url": "https://store.steampowered.com/app/427520/",
       "priceNote": "参考价 ¥ 130.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 427520,
@@ -39,6 +40,10 @@
     "minimum": "最低配置:\n操作系统: Windows 11, 10\n处理器: Quad core 3Ghz+\n内存: 8 GB RAM\n显卡: DirectX 11 capable GPU with 1GB VRAM - GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730\nDirectX 版本: 11\n存储空间: 需要 5 GB 可用空间\n附注事项: Normal sprite resolution, Low quality compression, 1080p resolution",
     "recommended": "推荐配置:\n操作系统: Windows 11, 10\n处理器: Quad core 4Ghz+ from 2020 or newer\n内存: 16 GB RAM\n显卡: DirectX 11 capable GPU with 4 GB VRAM - GeForce GTX 1050 Ti, Radeon RX 570, Intel Arc\nDirectX 版本: 11\n存储空间: 需要 10 GB 可用空间\n附注事项: High sprite resolution, High quality compression"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 11, 10\nProcessor: Quad core 3Ghz+\nMemory: 8 GB RAM\nGraphics: DirectX 11 capable GPU with 1GB VRAM - GeForce GTX 750 Ti, Radeon R7 360 or Intel UHD Graphics 730\nDirectX: Version 11\nStorage: 5 GB available space\nAdditional Notes: Normal sprite resolution, Low quality compression, 1080p resolution",
+    "recommended": "Recommended:\nOS: Windows 11, 10\nProcessor: Quad core 4Ghz+ from 2020 or newer\nMemory: 16 GB RAM\nGraphics: DirectX 11 capable GPU with 4 GB VRAM - GeForce GTX 1050 Ti, Radeon RX 570, Intel Arc\nDirectX: Version 11\nStorage: 10 GB available space\nAdditional Notes: High sprite resolution, High quality compression"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:19:51.604Z",
+    "syncedAt": "2026-10-27T17:22:19.165Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:46.489Z",
       "page": "Factorio"

@@ -6,6 +6,7 @@
     "en": "Tom Clancy's Rainbow Six Siege"
   },
   "summary": "《彩虹六号：围攻》是一款精英团队战术射击游戏，高超的策略和行动力是制胜关键。",
+  "summaryEn": "Tom Clancy's Rainbow Six Siege is an elite, tactical team-based shooter where superior planning and execution triumph.",
   "genres": [
     "action"
   ],
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/359550/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 359550,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n操作系统: Windows 10, Windows 11 (64-bit versions)\n处理器: AMD Ryzen 3 3100 / Intel i3-8100\n内存: 8 GB RAM\n显卡: Nvidia GTX 1650 4GB / AMD RX 5500XT 4GB / Intel ARC A380 6GB\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 65 GB 可用空间\n声卡: DirectX® 9.0c compatible sound card with latest drivers\n附注事项: For an up-to-date list of supported chipsets, please visit the FAQ for this game on our support website. Game contains BattleEye anti-cheat technology.",
     "recommended": "推荐配置:\n操作系统: Windows 11 (64-bit versions)\n处理器: AMD Ryzen5 3600 / Intel i5-10400\n内存: 8 GB RAM\n显卡: NVIDIA RTX 2060 6GB / AMD RX 6600 8GB\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 65 GB 可用空间\n声卡: DirectX® 9.0c compatible sound card 5.1 with latest drivers\n附注事项: For an up-to-date list of supported chipsets, please visit the FAQ for this game on our support website. Game contains BattleEye anti-cheat technology."
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10, Windows 11 (64-bit versions)\nProcessor: AMD Ryzen 3 3100 / Intel i3-8100\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 1650 4GB / AMD RX 5500XT 4GB / Intel ARC A380 6GB\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 65 GB available space\nSound Card: DirectX® 9.0c compatible sound card with latest drivers\nAdditional Notes: For an up-to-date list of supported chipsets, please visit the FAQ for this game on our support website. Game contains BattleEye anti-cheat technology.",
+    "recommended": "Recommended:\nOS: Windows 11 (64-bit versions)\nProcessor: AMD Ryzen5 3600 / Intel i5-10400\nMemory: 8 GB RAM\nGraphics: NVIDIA RTX 2060 6GB / AMD RX 6600 8GB\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 65 GB available space\nSound Card: DirectX® 9.0c compatible sound card 5.1 with latest drivers\nAdditional Notes: For an up-to-date list of supported chipsets, please visit the FAQ for this game on our support website. Game contains BattleEye anti-cheat technology."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:40.770Z",
+    "syncedAt": "2026-10-27T17:26:55.878Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:44.789Z",
       "page": "Tom Clancy's Rainbow Six Siege"

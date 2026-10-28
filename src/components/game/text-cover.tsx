@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
 import { hashHue } from '@/lib/monogram';
 
@@ -45,7 +46,7 @@ export function TextCover({
       ) : (
         <div className="relative flex h-full flex-col justify-between p-[8%]">
           <div className="flex items-start justify-between gap-3">
-            <span className="meta text-2xs text-fg-3">档案 · {String(h).padStart(3, '0')}</span>
+            <span className="meta text-2xs text-fg-3"><T zh="档案" en="File" /> · {String(h).padStart(3, '0')}</span>
             <span aria-hidden className="font-serif text-[clamp(24px,3vw,44px)] font-black leading-none text-outline opacity-40 [--stroke-c:var(--color-fg-2)] [--stroke-w:1px]">
               {String(h).padStart(3, '0')}
             </span>

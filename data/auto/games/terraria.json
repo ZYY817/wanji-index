@@ -5,6 +5,7 @@
     "zh": "Terraria"
   },
   "summary": "挖掘，战斗，探索，建造！在这个动感十足的冒险游戏里没有什么是不可能的。四人包依然可用！",
+  "summaryEn": "Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!",
   "genres": [
     "action",
     "adventure",
@@ -23,7 +24,7 @@
       "url": "https://store.steampowered.com/app/105600/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 105600,
@@ -39,6 +40,10 @@
     "minimum": "操作系统：Windows Xp，Vista，7 \n处理器：1.6 Ghz \n内存：512 MB\n硬盘所需空间：200 MB \n显卡：128 MB 显存，能够运行 Shader Model 1.1 \nDirectX®：9.0c 或更高",
     "recommended": "RECOMMENDED\nOS: Windows 7, 8/8.1, 10 \nProcessor: Dual Core 3.0 Ghz \nMemory: 4GB\nHard Disk Space: 200MB \nVideo Card: 256mb Video Memory, capable of Shader Model 2.0+ \nDirectX®: 9.0c or Greater"
   },
+  "requirementsEn": {
+    "minimum": "REQUIRED\nOS: Windows Xp, Vista, 7, 8/8.1, 10 \nProcessor: 2.0 Ghz \nMemory: 2.5GB\nHard Disk Space: 200MB \nVideo Card: 128mb Video Memory, capable of Shader Model 2.0+ \nDirectX®: 9.0c or Greater",
+    "recommended": "RECOMMENDED\nOS: Windows 7, 8/8.1, 10 \nProcessor: Dual Core 3.0 Ghz \nMemory: 4GB\nHard Disk Space: 200MB \nVideo Card: 256mb Video Memory, capable of Shader Model 2.0+ \nDirectX®: 9.0c or Greater"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:15.832Z",
+    "syncedAt": "2026-10-27T17:23:02.149Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:40.316Z",
       "page": "Terraria"

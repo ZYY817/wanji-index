@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import type { ReactNode } from 'react';
 import { useCatalogQuery } from '@/components/catalog/use-catalog-query';
 import { cn } from '@/lib/utils';
@@ -10,8 +11,8 @@ type Row = { id: string; query: string; category: string; content: ReactNode };
  * 工具 / 教程列表：左侧 CategoryRail（搜索 + 分类），右侧条目。
  * 条目内容由页面在服务端渲染好传入（content），这里只负责筛选与排布；grid = 双列卡片，否则单列行。
  */
-export function ToolsGuidesIndex({ rows, categories, param, placeholder, grid = false }: {
-  rows: Row[]; categories: { value: string; label: string }[]; param: string; placeholder: string; grid?: boolean;
+export function ToolsGuidesIndex({ rows, categories, param, placeholder, placeholderEn, grid = false }: {
+  rows: Row[]; categories: { value: string; label: ReactNode }[]; param: string; placeholder: string; placeholderEn?: string; grid?: boolean;
 }) {
   const { query: params, update } = useCatalogQuery();
   const query = params.q ?? '';
@@ -27,17 +28,18 @@ export function ToolsGuidesIndex({ rows, categories, param, placeholder, grid = 
           query={query}
           onQuery={(v) => update({ q: v })}
           placeholder={placeholder}
+          placeholderEn={placeholderEn}
           items={categories.map((c) => ({ ...c, count: rows.filter((r) => r.category === c.value).length }))}
           active={category}
           onSelect={(v) => update({ [param]: v })}
         />
       </div>
 
-      <section aria-label="列表" className="min-w-0 lg:col-span-9">
+      <section aria-label="List" className="min-w-0 lg:col-span-9">
         <p aria-live="polite" className="mb-4 text-sm text-fg-3">
-          共 <span className="text-foreground">{shown.length}</span> 条
+          <T zh="共" en="" /> <span className="text-foreground">{shown.length}</span> <T zh="条" en="items" />
           {(query || category) && (
-            <button type="button" onClick={clear} className="ml-4 underline-offset-4 transition-colors hover:text-foreground hover:underline">清除筛选</button>
+            <button type="button" onClick={clear} className="ml-4 underline-offset-4 transition-colors hover:text-foreground hover:underline"><T zh="清除筛选" en="Clear filters" /></button>
           )}
         </p>
         {shown.length ? (

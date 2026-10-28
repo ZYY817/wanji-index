@@ -87,5 +87,8 @@
     "missing-dll",
     "error-0xc000007b",
     "game-crash"
-  ]
+  ],
+  "shortEn": "Won't launch",
+  "titleEn": "Game won't start: nothing happens when you click Play",
+  "summaryEn": "Usually missing runtimes, an antivirus block, or a stuck process from last time. Check in order: end leftover processes → install runtimes → check antivirus → verify files."
 }

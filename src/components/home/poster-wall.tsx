@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useRef, useState } from 'react';
 import { motion, useMotionTemplate, useMotionValue, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'motion/react';
@@ -37,9 +38,9 @@ function Column({
             <img src={g.art!.poster} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.07]" />
             <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(19,18,17,0.97)_0%,rgba(19,18,17,0.5)_42%,transparent_72%)] opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
             <span className="absolute inset-0 flex flex-col justify-end p-[8%] opacity-0 transition-opacity duration-400 group-hover:opacity-100">
-              <span className="font-serif text-[clamp(14px,1.15vw,20px)] font-bold leading-tight">{g.name}</span>
+              <span className="font-serif text-[clamp(14px,1.15vw,20px)] font-bold leading-tight"><T zh={g.name} en={g.en || g.name} /></span>
               <span className="mt-1.5 flex items-center gap-2 text-xs text-fg-2">
-                {g.counts.total} 条资源
+                <T zh={`${g.counts.total} 条资源`} en={`${g.counts.total} resources`} />
                 <span className="flex gap-1 text-foreground/80">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
               </span>
             </span>
@@ -148,10 +149,10 @@ export function PosterWall({ games, total }: { games: GameVM[]; total: number })
           {/* 数字单独一行严格居中，单位放在下方：避免「22 款游戏」并排把视觉重心拉偏 */}
           <h2 id="wall-title" className="flex flex-col items-center">
             <span className="font-serif text-[clamp(120px,17vw,260px)] font-black leading-[0.82] tracking-[-0.06em] tabular-nums" aria-label={String(total)}>{count}</span>
-            <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]">款游戏</span>
+            <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]"><T zh="款游戏" en="GAMES" /></span>
           </h2>
           <Link href="/games/" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'pointer-events-auto mt-10 bg-background/60')}>
-            进入游戏库 <ArrowRight aria-hidden />
+            <T zh="进入游戏库" en="Browse games" /> <ArrowRight aria-hidden />
           </Link>
         </motion.div>
       </div>

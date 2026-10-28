@@ -1,4 +1,5 @@
 'use client';
+import { T as Tx } from '@/lib/i18n';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'motion/react';
@@ -87,32 +88,32 @@ function WallColumn({ games, p, dir, offset }: { games: GameVM[]; p: MotionValue
   );
 }
 
-type Answer = { key: string; no: string; title: string; side: -1 | 1; row: -1 | 1; lines: React.ReactNode[] };
+type Answer = { key: string; no: string; title: React.ReactNode; side: -1 | 1; row: -1 | 1; lines: React.ReactNode[] };
 
 function answers(d: DossierVM): Answer[] {
   return [
     {
-      key: 'buy', no: '01', title: '去哪买', side: -1, row: -1,
+      key: 'buy', no: '01', title: <Tx zh="去哪买" en="Where to buy" />, side: -1, row: -1,
       lines: d.channels.slice(0, 3).map((c, i) => (
-        <span key={i} className="flex items-center justify-between gap-4"><PlatformMark platform={c.platform} withLabel /><span className="text-fg-3">{c.priceNote ?? c.type}</span></span>
+        <span key={i} className="flex items-center justify-between gap-4"><PlatformMark platform={c.platform} withLabel /><span className="text-fg-3"><Tx zh={c.priceNote ?? c.type} en={c.priceNoteEn ?? c.typeEn} /></span></span>
       )),
     },
     {
-      key: 'save', no: '02', title: '存档在哪', side: -1, row: 1,
+      key: 'save', no: '02', title: <Tx zh="存档在哪" en="Where saves are" />, side: -1, row: 1,
       lines: d.paths.slice(0, 2).map((p, i) => (
-        <span key={i} className="block truncate"><span className="text-fg-3">{p.label}　</span><code className="font-mono text-[0.92em]">{p.path}</code></span>
+        <span key={i} className="block truncate"><span className="text-fg-3"><Tx zh={p.label} en={p.labelEn} />　</span><code className="font-mono text-[0.92em]">{p.path}</code></span>
       )),
     },
     {
-      key: 'mod', no: '03', title: 'MOD 与汉化', side: 1, row: -1,
+      key: 'mod', no: '03', title: <Tx zh="MOD 与汉化" en="Mods & translations" />, side: 1, row: -1,
       lines: d.mods.slice(0, 2).map((m, i) => (
         <span key={i} className="block truncate">{m.name}<span className="text-fg-3">　{m.site}</span></span>
       )),
     },
     {
-      key: 'fix', no: '04', title: '出了问题', side: 1, row: 1,
+      key: 'fix', no: '04', title: <Tx zh="出了问题" en="When it breaks" />, side: 1, row: 1,
       lines: d.guides.slice(0, 2).map((g, i) => (
-        <span key={i} className="block truncate">{g.title}<span className="text-fg-3">　{g.steps} 步</span></span>
+        <span key={i} className="block truncate">{g.title}<span className="text-fg-3">　<Tx zh={`${g.steps} 步`} en={`${g.steps} steps`} /></span></span>
       )),
     },
   ];
@@ -236,7 +237,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
   const list = answers(d);
 
   return (
-    <section ref={ref} data-film aria-label="玩机索引" className="relative h-[480vh] bg-shell">
+    <section ref={ref} data-film aria-label="Wanji Index" className="relative h-[480vh] bg-shell">
       <motion.div className="sticky top-0 h-[100svh] overflow-hidden" style={{ '--accent': accent } as React.CSSProperties}>
         {/* ── 档案的环境：星露谷的夜景本身（重度压暗 + 暗角）——有地点感，又不抢四组答案 ── */}
         <motion.div aria-hidden className="absolute inset-0" style={{ opacity: bgO }}>
@@ -304,31 +305,31 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(12,11,10,0.62)_0%,rgba(12,11,10,0.4)_45%,rgba(12,11,10,0.7)_100%)]" style={{ opacity: heroTextO }} />
         <motion.div className="container-x absolute inset-0 flex flex-col items-center justify-center pt-[var(--header-h)] text-center" style={{ y: heroTextY, opacity: heroTextO, pointerEvents: heroPE }}>
           <h1 className="font-serif text-[clamp(52px,6.4vw,112px)] font-black leading-[1.04] tracking-[-0.05em]">
-            {['每一款游戏，', '都有一份档案。'].map((line, i) => (
+            {([['每一款游戏，', 'Every game'], ['都有一份档案。', 'gets a file.']] as const).map(([line, lineEn], i) => (
               <span key={line} className="block overflow-hidden pb-[0.04em]">
-                <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.2 + i * 0.1}s)` }}>{hang(line)}</span>
+                <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.2 + i * 0.1}s)` }}><Tx zh={hang(line)} en={lineEn} /></span>
               </span>
             ))}
           </h1>
           <p className="mt-6 max-w-[34em] animate-rise text-lg leading-[1.75] text-foreground/85" style={{ animationDelay: 'calc(var(--intro-delay, 0s) + 0.45s)' }}>
-            去哪买、现在免不免费、MOD 与汉化、存档与报错。{total} 款 PC 游戏的资料，一处收齐，全部免费。
+            <Tx zh={`去哪买、现在免不免费、MOD 与汉化、存档与报错。${total} 款 PC 游戏的资料，一处收齐，全部免费。`} en={`Where to buy, what’s free, mods, saves and fixes — ${total} PC games, all in one place, all free.`} />
           </p>
           <div className="mt-9 w-full max-w-[600px] animate-rise" style={{ animationDelay: 'calc(var(--intro-delay, 0s) + 0.55s)' }}>
             <Magnetic strength={6} radius={60}>
-              <SearchTrigger variant="bar" label="搜索游戏、资源站、工具或报错…" />
+              <SearchTrigger variant="bar" />
             </Magnetic>
             <p className="mt-4 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-fg-2">
-              <span className="text-fg-3">热门</span>
+              <span className="text-fg-3"><Tx zh="热门" en="Popular" /></span>
               {popular.map((g) => (
-                <Link key={g.id} href={`/games/${g.slug}/`} className="underline-offset-4 transition-colors hover:text-foreground hover:underline">{g.name}</Link>
+                <Link key={g.id} href={`/games/${g.slug}/`} className="underline-offset-4 transition-colors hover:text-foreground hover:underline"><Tx zh={g.name} en={g.en || g.name} /></Link>
               ))}
             </p>
           </div>
         </motion.div>
         <motion.div className="container-x pointer-events-none absolute inset-x-0 bottom-[5vh] flex items-center justify-between text-sm text-fg-3" style={{ opacity: heroTextO }}>
-          <span>{lead.name} · 官方美术</span>
+          <span><Tx zh={lead.name} en={lead.en || lead.name} /> · <Tx zh="官方美术" en="Official art" /></span>
           <span className="flex items-center gap-3">
-            向下滚动
+            <Tx zh="向下滚动" en="Scroll" />
             <span aria-hidden className="relative block h-px w-14 overflow-hidden bg-foreground/25">
               <span className="absolute inset-y-0 left-0 w-1/2 bg-foreground/80 motion-safe:animate-[scroll-hint_2.2s_cubic-bezier(.65,0,.35,1)_infinite]" />
             </span>
@@ -340,18 +341,18 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         <motion.div className="pointer-events-none absolute inset-x-0 flex flex-col items-center text-center" style={{ top: `calc(50% + ${card.h / 2 + 22}px)`, opacity: countO, y: countY }}>
           <p className="flex items-baseline gap-4">
             <motion.span className="font-serif text-[clamp(64px,6vw,96px)] font-black leading-none tracking-[-0.05em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{countText}</motion.span>
-            <span className="text-xl text-foreground/90">款游戏，每一款都有一份档案</span>
+            <span className="text-xl text-foreground/90"><Tx zh="款游戏，每一款都有一份档案" en="games, each with its own file" /></span>
           </p>
-          <TextLink href="/games/" tone="accent" className="pointer-events-auto mt-2">进入游戏库</TextLink>
+          <TextLink href="/games/" tone="accent" className="pointer-events-auto mt-2"><Tx zh="进入游戏库" en="Browse games" /></TextLink>
         </motion.div>
 
         {/* 档案：标题在卡片正上方，入口在正下方——都在中轴上，四组答案在两侧对称展开 */}
         <motion.div className="pointer-events-none absolute inset-x-0 flex flex-col items-center text-center" style={{ bottom: `calc(50% + ${card.h / 2 + 26}px)` }}>
-          <motion.p className="text-sm text-[var(--accent)]" style={{ opacity: eyebrowVis }}>以《{sample.name}》为例</motion.p>
-          <motion.h2 style={{ opacity: titleVis, y: titleY }} className="mt-2 font-serif text-[clamp(30px,2.6vw,44px)] font-black leading-tight tracking-[-0.03em]">{hang('一款游戏，四个答案。')}</motion.h2>
+          <motion.p className="text-sm text-[var(--accent)]" style={{ opacity: eyebrowVis }}><Tx zh={`以《${sample.name}》为例`} en={`Take ${sample.en || sample.name}`} /></motion.p>
+          <motion.h2 style={{ opacity: titleVis, y: titleY }} className="mt-2 font-serif text-[clamp(30px,2.6vw,44px)] font-black leading-tight tracking-[-0.03em]"><Tx zh={hang('一款游戏，四个答案。')} en="One game, four answers." /></motion.h2>
         </motion.div>
         <motion.div className="absolute inset-x-0 flex justify-center" style={{ top: `calc(50% + ${card.h / 2 + 28}px)`, opacity: titleVis }}>
-          <TextLink href={`/games/${sample.slug}/`} tone="accent">打开{sample.name}完整档案</TextLink>
+          <TextLink href={`/games/${sample.slug}/`} tone="accent"><Tx zh={`打开${sample.name}完整档案`} en={`Open the full ${sample.en || sample.name} file`} /></TextLink>
         </motion.div>
       </motion.div>
     </section>

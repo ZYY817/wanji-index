@@ -2,9 +2,11 @@
   "id": "grand-theft-auto-iv-complete-edition",
   "slug": "grand-theft-auto-iv-complete-edition",
   "name": {
-    "zh": "Grand Theft Auto IV: Complete Edition"
+    "zh": "侠盗猎车手 4：完整版",
+    "en": "Grand Theft Auto IV: Complete Edition"
   },
   "summary": "PLEASE NOTE: Microsoft no longer supports creating Games for Windows-LIVE accounts within Grand Theft Auto IV.",
+  "summaryEn": "PLEASE NOTE: Microsoft no longer supports creating Games for Windows-LIVE accounts within Grand Theft Auto IV.",
   "genres": [
     "action",
     "adventure"
@@ -18,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/901583/",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 901583,
@@ -35,6 +37,10 @@
     "minimum": "OS *: Windows Vista - Service Pack 1 / Windows XP - Service Pack 3 \nProcessor: Intel Core 2 Duo 1.8GHz, AMD Athlon X2 64 2.4GHz \nMemory: 1.5GB XP / 1.5GB Vista \nGraphics: 256MB Nvidia 7900 / 256MB ATI X1900 \nDirectX Version: DirectX 9.0c Compliant Card \nHard Drive: 32GB of Hard Disc Space \nSound Card: 5.1 Channel Audio Card \nOther Requirements: Initial activation requires internet connection; Online play requires log-in to Games For Windows - Live and Rockstar Games Social Club (13+ to register); software installations required including Adobe Flash, DirectX, Microsoft’s .NET Framework 3.0, Games For Windows - LIVE, and Internet Explorer.",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "OS *: Windows Vista - Service Pack 1 / Windows XP - Service Pack 3 \nProcessor: Intel Core 2 Duo 1.8GHz, AMD Athlon X2 64 2.4GHz \nMemory: 1.5GB XP / 1.5GB Vista \nGraphics: 256MB Nvidia 7900 / 256MB ATI X1900 \nDirectX Version: DirectX 9.0c Compliant Card \nHard Drive: 32GB of Hard Disc Space \nSound Card: 5.1 Channel Audio Card \nOther Requirements: Initial activation requires internet connection; Online play requires log-in to Games For Windows - Live and Rockstar Games Social Club (13+ to register); software installations required including Adobe Flash, DirectX, Microsoft’s .NET Framework 3.0, Games For Windows - LIVE, and Internet Explorer.",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -42,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:27.028Z",
+    "syncedAt": "2026-10-27T17:24:37.953Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:08.510Z",
       "page": null

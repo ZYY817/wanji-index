@@ -1,3 +1,4 @@
+import OFFER_ART from '../../data/auto/offer-art.json';
 // 展示层视图模型（仅服务端调用）：把 loadData()/buildRelations() 的结果整理成可序列化的 props，
 // 供客户端组件使用。只做「整形与计数」，不做资格过滤（资格唯一判定在 eligibility.mjs）。
 import { steamArt, steamArtById, steamAppIdFromUrl } from './data.mjs';
@@ -27,7 +28,7 @@ export type OfferVM = {
   checkedAt: string; linkHealth: string; lifecycle: string | null;
   gameSlug?: string; gameName?: string; art: Art;
   /** 官方中文名（没有则为空）与去掉中文名后的原名，用于「中文主标题 + 原名副标题」 */
-  titleZh?: string; titleOrig?: string;
+  titleZh?: string; titleOrig?: string; claimNoteEn?: string;
 };
 
 export function gameVM(g: any, rel: any): GameVM {
@@ -75,17 +76,21 @@ export function offerMs(str: string | undefined, isEnd: boolean): number | null 
 
 export function offerVM(o: any, data: any, now: number): OfferVM {
   const game = o.gameId ? data.games.find((g: any) => g.id === o.gameId) : null;
-  // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图
+  // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图 → 自动找到的封面
+  const found = (OFFER_ART as Record<string, { steamAppId?: string; wide?: string }>)[o.id];
+  const wideArt = (wide: string, tall?: string) => ({ appid: '', header: wide, poster: tall ?? wide, hero: wide, logo: '', capsule: wide });
   const art = (game ? steamArt(game) : null)
     ?? steamArtById(o.steamAppId ?? steamAppIdFromUrl(o.url))
-    ?? (o.art ? { appid: '', header: o.art.wide, poster: o.art.tall ?? o.art.wide, hero: o.art.wide, logo: '', capsule: o.art.wide } : null);
+    ?? (o.art ? wideArt(o.art.wide, o.art.tall) : null)
+    // 最后一档：同步脚本自动找到的封面（Steam 同名游戏 / 官网分享图，见 scripts/sync/offer-art.mjs）
+    ?? (found?.steamAppId ? steamArtById(found.steamAppId) : found?.wide ? wideArt(found.wide) : null);
   return {
     id: o.id, title: o.gameTitle, type: o.type, platform: o.platform, url: o.url, claimNote: o.claimNote, note: o.note,
     startDate: o.startDate, endDate: o.endDate, startMs: offerMs(o.startDate, false), endMs: offerMs(o.endDate, true),
     checkedAt: o.checkedAt, linkHealth: o.linkHealth,
     lifecycle: computeLifecycle(o, now, site.review.staleDays.offerTimed),
     gameSlug: game?.slug, gameName: game?.name?.zh, art,
-    titleZh: o.titleZh, titleOrig: o.titleZh ? o.gameTitle.replace(o.titleZh, '').trim() || undefined : undefined,
+    claimNoteEn: o.claimNoteEn, titleZh: o.titleZh, titleOrig: o.titleZh ? o.gameTitle.replace(o.titleZh, '').trim() || undefined : undefined,
   };
 }
 

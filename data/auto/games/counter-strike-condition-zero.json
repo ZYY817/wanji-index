@@ -2,9 +2,11 @@
   "id": "counter-strike-condition-zero",
   "slug": "counter-strike-condition-zero",
   "name": {
-    "zh": "Counter-Strike: Condition Zero"
+    "zh": "反恐精英：零点行动",
+    "en": "Counter-Strike: Condition Zero"
   },
   "summary": "除了精心制作的 Tour of Duty 游戏模式，无数大大小小的战斗、变化和新鲜内容让享誉世界的反恐精英多人游戏更加地丰富多彩，更有 12 个额外单人关卡，《反恐精英：零点行动》绝对是单人和多人游戏中的扛鼎之作。",
+  "summaryEn": "With its extensive Tour of Duty campaign, a near-limitless number of skirmish modes, updates and new content for Counter-Strike's award-winn…",
   "genres": [
     "action"
   ],
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/100/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 100,
@@ -36,6 +38,10 @@
     "minimum": "最低配置：500 mhz 处理器，96mb 内存，16mb 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：800 mhz 处理器，128mb 内存，32mb 以上的显卡，Windows XP，鼠标，键盘，互联网连接",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum: 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -43,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:28.586Z",
+    "syncedAt": "2026-10-27T17:23:49.827Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:08.443Z",
       "page": null

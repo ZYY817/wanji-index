@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import type { OfferVM } from '@/lib/present';
 import { useNow } from './countdown';
 import { liveLifecycle } from './use-lifecycle';
@@ -16,5 +17,8 @@ export function LiveFreeSummary({ offers, build }: { offers: OfferVM[]; build: s
   const head = active
     ? `此刻有 ${active} 款正在限时领取${soon ? `，${soon} 款即将开始` : ''}`
     : soon ? `这一期限时领取已结束，下一期 ${soon} 款即将开始` : '这一期限时领取已结束，下一期公布后会第一时间更新';
-  return <>{head}，共 {offers.length} 条免费情报。截止时间按北京时间计算，核验更新于 {build}。</>;
+  const headEn = active
+    ? `${active} free to keep right now${soon ? `, ${soon} coming up` : ''}`
+    : soon ? `This round has ended — ${soon} coming up next` : 'This round has ended — we’ll update as soon as the next is announced';
+  return <T zh={`${head}，共 ${offers.length} 条免费情报。截止时间按北京时间计算，核验更新于 ${build}。`} en={`${headEn}. ${offers.length} free games in total. Times are Beijing time (UTC+8); last checked ${build}.`} />;
 }

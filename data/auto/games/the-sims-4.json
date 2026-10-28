@@ -2,9 +2,11 @@
   "id": "the-sims-4",
   "slug": "the-sims-4",
   "name": {
-    "zh": "The Sims 4"
+    "zh": "模拟人生 4",
+    "en": "The Sims 4"
   },
   "summary": "在一个无拘无束的虚拟世界中，享受创造和控制人生的奇妙力量。 得到力量和自由，享受快乐，游戏人生！",
+  "summaryEn": "Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that’s wholly unique.",
   "genres": [
     "adventure",
     "casual",
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1222670/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1222670,
@@ -36,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 需要 64 位。Windows 10\n处理器: 3.3 GHz Intel Core i3-3220（2 核、4 线程）、AMD Ryzen 3 1200 3.1 GHz （4 核）或更高版本\n内存: 4 GB RAM\n显卡: 128 MB 显存且支持 Pixel Shader 3.0。支持的显卡：NVIDIA GeForce 6600 或更高版本，ATI Radeon X1300 或更高版本，Intel GMA X4500 或更高版本\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 26 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64 位 Windows 10\n处理器: Intel core i5（4 核），AMD Ryzen 5 或更高版本\n内存: 8 GB RAM\n显卡: 1 GB 显存、NVIDIA GTX 650、AMD Radeon HD 7750 或更高版本\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 51 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64 Bit Required. Windows 10\nProcessor: 3.3 GHz Intel Core i3-3220 (2 cores, 4 threads), AMD Ryzen 3 1200 3.1 GHz (4 cores) or better\nMemory: 4 GB RAM\nGraphics: 128 MB of Video RAM and support for Pixel Shader 3.0. Supported Video Cards: NVIDIA GeForce 6600 or better, ATI Radeon X1300 or better, Intel GMA X4500 or better\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 26 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64 Bit Windows 10\nProcessor: Intel core i5 (4 cores), AMD Ryzen 5 or better\nMemory: 8 GB RAM\nGraphics: 1 GB of Video RAM, NVIDIA GTX 650, AMD Radeon HD 7750, or better\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 51 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:47.286Z",
+    "syncedAt": "2026-10-27T17:26:52.117Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:42.539Z",
       "page": "The Sims 4"

@@ -2,10 +2,11 @@
   "id": "ea-sports-fifa-23",
   "slug": "ea-sports-fifa-23",
   "name": {
-    "zh": "EA SPORTS《FIFA 23》",
+    "zh": "FIFA 23",
     "en": "EA SPORTS FIFA 23"
   },
   "summary": "《FIFA 23》将这个世界性游戏带回球场，采用 HyperMotion2 技术，更有男子和女子 FIFA World Cup™、女子俱乐部球队、跨平台游戏功能**，以及更多精彩内容。",
+  "summaryEn": "FIFA 23 brings The World’s Game to the pitch, with HyperMotion2 Technology, men’s and women’s FIFA World Cup™, women’s club teams, cross-pla…",
   "genres": [
     "simulation",
     "sports"
@@ -19,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/1811260/",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1811260,
@@ -36,6 +37,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-Bit (Latest Update)\n处理器: Intel Core i5 6600k or AMD Ryzen 5 1600\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-Bit (Latest Update)\n处理器: Intel Core i7 6700 or AMD Ryzen 7 2700X\n内存: 12 GB RAM\n显卡: NVIDIA GeForce GTX 1660 or AMD Radeon RX 5600 XT\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 - 64-Bit (Latest Update)\nProcessor: Intel Core i5 6600k or AMD Ryzen 5 1600\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 570\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 100 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 - 64-Bit (Latest Update)\nProcessor: Intel Core i7 6700 or AMD Ryzen 7 2700X\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1660 or AMD Radeon RX 5600 XT\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 100 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -43,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:04:03.959Z",
+    "syncedAt": "2026-10-27T17:24:23.060Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:36.674Z",
       "page": null

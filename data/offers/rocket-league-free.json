@@ -1,0 +1,17 @@
+{
+  "id": "rocket-league-free",
+  "gameTitle": "Rocket League 火箭联盟",
+  "titleZh": "火箭联盟",
+  "type": "permanent",
+  "platform": "epic",
+  "url": "https://store.epicgames.com/zh-CN/p/rocket-league",
+  "claimNote": "免费开玩 · Epic 启动器，内购外观与通行证",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：不在 Steam 上的热门免费游戏，链接到官方网站 / 官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "steamAppId": "252950",
+  "claimNoteEn": "Free to play · Epic launcher; cosmetics and pass for sale"
+}

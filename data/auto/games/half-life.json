@@ -2,9 +2,11 @@
   "id": "half-life",
   "slug": "half-life",
   "name": {
-    "zh": "Half-Life"
+    "zh": "半条命",
+    "en": "Half-Life"
   },
   "summary": "超五十家媒体联合推荐的“年度最佳”，Valve 的开山首作运用了荣获大奖的技术，将动作与冒险巧妙融合，营造出令人胆寒的逼真环境，玩家必须利用智慧才能生存到底。 游戏还提供令人兴奋的多人联机模式，让您与世界各地的好友与敌手一较高下。",
+  "summaryEn": "Named Game of the Year by over 50 publications, Valve's debut title blends action and adventure with award-winning technology to create a fr…",
   "genres": [
     "action"
   ],
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/70/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 70,
@@ -36,6 +38,10 @@
     "minimum": "最低配置：500 mhz 处理器，96mb 内存，16mb 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：800 mhz 处理器，128mb 内存，32mb 以上的显卡，Windows XP，鼠标，键盘，互联网连接",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum: 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:26.363Z",
+    "syncedAt": "2026-10-27T17:25:00.133Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:24.869Z",
       "page": "Half-Life"

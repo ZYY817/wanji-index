@@ -1,8 +1,9 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
-import { zh } from '@/lib/labels.mjs';
 import { SITE_BASE } from '@/lib/present';
 import { problemDetail, problemSlugs } from '@/lib/problems';
 import { StatusBadge } from '@/components/ui/badge';
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 /** 阅读区小节：与教程页同一形制 */
-function Block({ id, title, lead, children }: { id?: string; title: string; lead?: string; children: React.ReactNode }) {
+function Block({ id, title, lead, children }: { id?: string; title: React.ReactNode; lead?: React.ReactNode; children: React.ReactNode }) {
   return (
     <Reveal as="section" className="scroll-mt-28 border-t border-border py-12 first:border-t-0 first:pt-0">
       <h2 id={id} className="font-serif text-3xl font-bold tracking-[-0.03em]">{title}</h2>
@@ -45,10 +46,10 @@ export default async function FixPage({ params }: Params) {
   const issueCount = p.games.reduce((n, g) => n + g.issues.length, 0);
 
   const facts: DetailFact[] = [
-    { label: '分类', value: zh('problemCategory', p.category) },
-    { label: '解法', value: `${p.fixes.length} 种，按先试哪个排序` },
-    { label: '相关游戏', value: p.games.length ? `${p.games.length} 款游戏记录过 ${issueCount} 个相关问题` : undefined },
-    { label: '核验', value: <span className="flex flex-wrap items-center gap-2">{p.checkedAt}<StatusBadge value={p.reviewStatus} /></span> },
+    { label: <T zh="分类" en="Category" />, value: L('problemCategory', p.category) },
+    { label: <T zh="解法" en="Fixes" />, value: <T zh={`${p.fixes.length} 种，按先试哪个排序`} en={`${p.fixes.length}, in the order to try them`} /> },
+    { label: <T zh="相关游戏" en="Games" />, value: p.games.length ? <T zh={`${p.games.length} 款游戏记录过 ${issueCount} 个相关问题`} en={`${issueCount} related issues in ${p.games.length} games`} /> : undefined },
+    { label: <T zh="核验" en="Checked" />, value: <span className="flex flex-wrap items-center gap-2">{p.checkedAt}<StatusBadge value={p.reviewStatus} /></span> },
   ].filter((f) => f.value);
 
   return (
@@ -62,17 +63,17 @@ export default async function FixPage({ params }: Params) {
       />
 
       <DetailMasthead
-        crumbs={[['排障', '/fixes/'], [p.short]]}
-        kicker={`问题排查 · ${zh('problemCategory', p.category)}`}
-        title={fileTokens(p.title)}
-        summary={p.summary}
+        crumbs={[[<T key="f" zh="排障" en="Fixes" />, '/fixes/'], [<T key="s" zh={p.short} en={p.shortEn} />]]}
+        kicker={<><T zh="问题排查" en="Troubleshooting" /> · {L('problemCategory', p.category)}</>}
+        title={<T zh={fileTokens(p.title)} en={p.titleEn} />}
+        summary={<T zh={p.summary} en={p.summaryEn ? <>{p.summaryEn}<span className="mt-3 block text-sm text-fg-3">The detailed steps below are in Chinese for now — an English version is on the way.</span></> : undefined} />}
         facts={facts}
       />
 
       <div className="container-x grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-16">
         <article className="min-w-0 lg:col-span-8">
           {(p.symptoms.length > 0 || p.errorTexts.length > 0) && (
-            <Block title="是不是这个问题">
+            <Block title={<T zh="是不是这个问题" en="Is this your problem?" />}>
               {p.symptoms.length > 0 && (
                 <ul className="space-y-3 text-lg leading-[1.8] text-foreground/90">
                   {p.symptoms.map((s) => (
@@ -86,7 +87,7 @@ export default async function FixPage({ params }: Params) {
             </Block>
           )}
 
-          <Block id="fixes" title="解法" lead="从最常见、最省事的开始，一个不行再试下一个。">
+          <Block id="fixes" title={<T zh="解法" en="Fixes" />} lead={<T zh="从最常见、最省事的开始，一个不行再试下一个。" en="Start with the most common, easiest fix; if it doesn’t work, try the next." />}>
             <ol>
               {p.fixes.map((f, i) => (
                 <li key={f.title} id={`fix-${i + 1}`} className="relative grid scroll-mt-28 grid-cols-[48px_minmax(0,1fr)] gap-4 pb-12 last:pb-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6">
@@ -96,14 +97,14 @@ export default async function FixPage({ params }: Params) {
                   </div>
                   <div className="min-w-0">
                     <h3 className="text-xl font-semibold leading-snug md:text-[22px]">{fileTokens(f.title)}</h3>
-                    {f.when && <p className="mt-2 text-sm text-fg-3">适合：{f.when}</p>}
+                    {f.when && <p className="mt-2 text-sm text-fg-3"><T zh="适合：" en="When: " />{f.when}</p>}
                     <p className="mt-4 text-lg leading-[1.8] text-foreground/90">{f.detail}</p>
                     {(f.guide || f.sources.length > 0) && (
                       <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-base">
                         {f.guide && (
                           // 普通行内链接：教程标题里的长文件名要能折行（inline-flex 会把整行撑出屏幕）
                           <Link href={`/guides/${f.guide.slug}/`} className="group py-2.5 font-medium leading-[1.9] text-foreground underline decoration-primary underline-offset-[5px] hover:text-primary">
-                            分步教程：{fileTokens(f.guide.title)}
+                            <T zh="分步教程：" en="Guide: " />{fileTokens(f.guide.title)}
                             <ArrowRight aria-hidden className="ml-1.5 inline size-4 align-[-0.15em] transition-transform group-hover:translate-x-0.5" />
                           </Link>
                         )}
@@ -119,7 +120,7 @@ export default async function FixPage({ params }: Params) {
           </Block>
 
           {p.table && (
-            <Block id="table" title={p.table.caption ?? '速查表'}>
+            <Block id="table" title={p.table.caption ?? <T zh="速查表" en="Quick reference" />}>
               <div className="overflow-x-auto rounded-xs border border-border">
                 <table className="w-full min-w-[560px] border-collapse text-left text-base">
                   <thead className="bg-shell text-sm text-fg-2">
@@ -140,7 +141,7 @@ export default async function FixPage({ params }: Params) {
           )}
 
           {p.avoid.length > 0 && (
-            <Block title="不建议这样做">
+            <Block title={<T zh="不建议这样做" en="Don’t do this" />}>
               <ul className="space-y-3 text-base leading-[1.8] text-foreground/90">
                 {p.avoid.map((a) => (
                   <li key={a} className="flex gap-3"><span aria-hidden className="mt-[0.15em] shrink-0 font-semibold text-bad-text">×</span>{a}</li>
@@ -150,7 +151,7 @@ export default async function FixPage({ params }: Params) {
           )}
 
           {p.games.length > 0 && (
-            <Block id="games" title="这些游戏记录过类似问题" lead="来自 PCGamingWiki 的已知问题记录（英文），点击查看原文里的具体解法。">
+            <Block id="games" title={<T zh="这些游戏记录过类似问题" en="Games with similar known issues" />} lead={<T zh="来自 PCGamingWiki 的已知问题记录（英文），点击查看原文里的具体解法。" en="Known issues recorded on PCGamingWiki — open one to see the fix." />}>
               <ul>
                 {p.games.slice(0, 24).map((g) => (
                   <li key={g.slug} className="grid grid-cols-[88px_minmax(0,1fr)] gap-4 border-b border-border py-4 last:border-b-0 md:grid-cols-[120px_minmax(0,1fr)]">
@@ -163,7 +164,7 @@ export default async function FixPage({ params }: Params) {
                         {g.issues.map((i) => (
                           <li key={i.url}>
                             <ExtLink href={i.url} className="group inline-flex items-start gap-1.5 text-sm leading-[1.7] text-fg-2 hover:text-foreground">
-                              <span className={i.fixed === false ? 'text-warn' : 'text-ok'}>{i.fixed === false ? '未解决' : '有解法'}</span>
+                              <span className={i.fixed === false ? 'text-warn' : 'text-ok'}>{i.fixed === false ? <T zh="未解决" en="Unresolved" /> : <T zh="有解法" en="Fixed" />}</span>
                               <span>{i.title}</span>
                             </ExtLink>
                           </li>
@@ -177,17 +178,17 @@ export default async function FixPage({ params }: Params) {
           )}
 
           <footer className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border-strong pt-6 text-sm text-fg-3">
-            <span>本页核验于 {p.checkedAt}</span>
-            <span>说明为本站整理，来源只做链接，不转载原文</span>
+            <span><T zh="本页核验于" en="Checked" /> {p.checkedAt}</span>
+            <span><T zh="说明为本站整理，来源只做链接，不转载原文" en="Written by us; sources are linked, never copied" /></span>
             <FeedbackLink page={`${p.title}（/fixes/${p.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
-              信息有误？反馈给我们
+              <T zh="信息有误？反馈给我们" en="Spot an error? Tell us" />
             </FeedbackLink>
           </footer>
         </article>
 
         <aside className="space-y-10 lg:col-span-4 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:self-start lg:transition-[top] lg:duration-300">
-          <nav aria-label="解法目录">
-            <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">解法目录</h2>
+          <nav aria-label="Fixes">
+            <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="解法目录" en="Fixes" /></h2>
             <ol>
               {p.fixes.map((f, i) => (
                 <li key={f.title}>
@@ -202,10 +203,10 @@ export default async function FixPage({ params }: Params) {
 
           {p.related.length > 0 && (
             <section>
-              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">也可能是</h2>
+              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="也可能是" en="Could also be" /></h2>
               {p.related.map((r) => (
                 <Link key={r.slug} href={`/fixes/${r.slug}/`} className="group flex items-center justify-between gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-primary">
-                  {fileTokens(r.title)}
+                  <T zh={fileTokens(r.title)} en={r.titleEn} />
                   <ArrowRight aria-hidden className="size-4 shrink-0 text-fg-3 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               ))}
@@ -214,7 +215,7 @@ export default async function FixPage({ params }: Params) {
 
           {p.sources.length > 0 && (
             <section>
-              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">参考来源</h2>
+              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="参考来源" en="Sources" /></h2>
               <ul className="mt-3 space-y-2">
                 {p.sources.map((s) => (
                   <li key={s.url}><ExtLink href={s.url} className="text-sm leading-[1.7] text-fg-2 hover:text-foreground">{s.name}</ExtLink></li>

@@ -6,6 +6,7 @@
     "en": "Last Epoch"
   },
   "summary": "揭示过往，重铸未来。在15个精通职业中选择其一，探索危险的地下城，追寻史诗级战利品，打造传奇武器，掌握百余种变形技能树的力量。请尽情体验由狂热的RPG游戏迷团队开发的《最后纪元》。",
+  "summaryEn": "Uncover the Past, Reforge the Future. Ascend into one of 15 mastery classes and explore dangerous dungeons, hunt epic loot, craft legendary …",
   "genres": [
     "action",
     "adventure",
@@ -22,7 +23,7 @@
       "url": "https://store.steampowered.com/app/899770/",
       "priceNote": "参考价 ¥ 128.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 899770,
@@ -39,6 +40,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5 2500 or AMD FX-4350\n内存: 8 GB RAM\n显卡: nVidia GTX 1060 / AMD RX 580 with 6GB of VRAM\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 22 GB 可用空间\n附注事项: SSD strongly recommended",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5 6500 or AMD Ryzen 3 1200\n内存: 16 GB RAM\n显卡: nVidia RTX 3060 or AMD RX 6600-XT with 6GB+ GB of VRAM\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 22 GB 可用空间\n附注事项: SSD strongly recommended"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5 2500 or AMD FX-4350\nMemory: 8 GB RAM\nGraphics: nVidia GTX 1060 / AMD RX 580 with 6GB of VRAM\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 22 GB available space\nAdditional Notes: SSD strongly recommended",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5 6500 or AMD Ryzen 3 1200\nMemory: 16 GB RAM\nGraphics: nVidia RTX 3060 or AMD RX 6600-XT with 6GB+ GB of VRAM\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 22 GB available space\nAdditional Notes: SSD strongly recommended"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:24.427Z",
+    "syncedAt": "2026-10-27T17:25:26.208Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:03.259Z",
       "page": "Last Epoch"

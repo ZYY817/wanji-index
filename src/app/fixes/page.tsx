@@ -1,8 +1,9 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { ArrowRight } from 'lucide-react';
 import { loadData } from '@/lib/data.mjs';
-import { zh } from '@/lib/labels.mjs';
 import { problemList } from '@/lib/problems';
 import { IndexMasthead, MastNum } from '@/components/layout/page-masthead';
 import { DetailSection } from '@/components/layout/detail-section';
@@ -26,21 +27,21 @@ export default function FixesPage() {
   return (
     <>
       <IndexMasthead
-        title="排障"
+        title={<T zh="排障" en="Fixes" />}
         count={problems.length + guides.length}
-        description={<>游戏出问题了？先按症状选一个。每个问题整理了从易到难的几种解法并注明来源；另有 <MastNum>{withIssues}</MastNum> 款游戏附上了 PCGamingWiki 记录的已知问题。</>}
+        description={<T zh={<>游戏出问题了？先按症状选一个。每个问题整理了从易到难的几种解法并注明来源；另有 <MastNum>{withIssues}</MastNum> 款游戏附上了 PCGamingWiki 记录的已知问题。</>} en={<>Game acting up? Pick the symptom. Each problem lists fixes from easiest to hardest with sources, and <MastNum>{withIssues}</MastNum> games include known issues from PCGamingWiki.</>} />}
       />
       <div className="container-x pb-20">
-        <DetailSection index={0} meta={{ id: 'problems', title: '按症状找', lead: '点进去先确认是不是这个问题，再从第一种解法开始试。', count: problems.length }}>
-          <ul className="grid gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+        <DetailSection index={0} meta={{ id: 'problems', title: <T zh="按症状找" en="By symptom" />, lead: <T zh="点进去先确认是不是这个问题，再从第一种解法开始试。" en="Confirm it’s your problem, then start with the first fix." />, count: problems.length }}>
+          <ul className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {problems.map((p) => (
               <li key={p.id} className="bg-background">
                 <Link href={`/fixes/${p.slug}/`} className="group flex h-full flex-col p-6 transition-colors hover:bg-card md:p-7">
-                  <span className="text-sm text-fg-3">{zh('problemCategory', p.category)}</span>
-                  <span className="mt-2 text-2xl font-semibold tracking-[-0.01em] transition-colors group-hover:text-primary">{fileTokens(p.short)}</span>
-                  <span className="mt-3 line-clamp-3 text-base leading-[1.75] text-fg-2">{p.summary}</span>
+                  <span className="text-sm text-fg-3">{L('problemCategory', p.category)}</span>
+                  <span className="mt-2 text-2xl font-semibold tracking-[-0.01em] transition-colors group-hover:text-primary"><T zh={fileTokens(p.short)} en={p.shortEn} /></span>
+                  <span className="mt-3 line-clamp-3 text-base leading-[1.75] text-fg-2"><T zh={p.summary} en={p.summaryEn} /></span>
                   <span className="mt-auto flex items-center justify-between gap-3 pt-6 text-sm text-fg-3">
-                    <span>{p.fixes.length} 种解法{p.gameCount ? ` · ${p.gameCount} 款游戏有记录` : ''}</span>
+                    <span><T zh={`${p.fixes.length} 种解法${p.gameCount ? ` · ${p.gameCount} 款游戏有记录` : ''}`} en={`${p.fixes.length} fixes${p.gameCount ? ` · ${p.gameCount} games affected` : ''}`} /></span>
                     <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
                   </span>
                 </Link>
@@ -49,7 +50,7 @@ export default function FixesPage() {
           </ul>
         </DetailSection>
 
-        <DetailSection index={1} meta={{ id: 'guides', title: '分步教程', lead: '需要一步步照着做的，写成了教程：每一步写明预期结果，不行再看下一步。', count: guides.length }}>
+        <DetailSection index={1} meta={{ id: 'guides', title: <T zh="分步教程" en="Step-by-step guides" />, lead: <T zh="需要一步步照着做的，写成了教程：每一步写明预期结果，不行再看下一步。" en="Things you follow step by step, with the expected result of each step." />, count: guides.length }}>
           <ul className="-mx-4 md:-mx-5">
             {guides.map((g: any) => <li key={g.id} className="border-b border-border last:border-b-0"><GuideRow g={g} games={gameNames(g.games)} /></li>)}
           </ul>

@@ -6,6 +6,7 @@
     "en": "RimWorld"
   },
   "summary": "由聪明的人工智能故事讲述者驱动的科幻殖民地模拟电脑游戏。通过模拟心理学、生态学、枪战、近战、气候、生物群落、外交、人际关系、艺术、医学、贸易等来生成故事。",
+  "summaryEn": "A sci-fi colony sim driven by an intelligent AI storyteller. Generates stories by simulating psychology, ecology, gunplay, melee combat, cli…",
   "genres": [
     "indie",
     "simulation",
@@ -23,7 +24,7 @@
       "url": "https://store.steampowered.com/app/294100/",
       "priceNote": "参考价 ¥ 102.40",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 294100,
@@ -39,6 +40,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7\n处理器: Core 2 Duo\n内存: 4 GB RAM\n显卡: Intel HD Graphics 4000 or other shader model 4.0\n存储空间: 需要 1 GB 可用空间",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7\nProcessor: Core 2 Duo\nMemory: 4 GB RAM\nGraphics: Intel HD Graphics 4000 or other shader model 4.0\nStorage: 1 GB available space",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:01.929Z",
+    "syncedAt": "2026-10-27T17:22:45.419Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:09.667Z",
       "page": "RimWorld"

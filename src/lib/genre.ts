@@ -27,3 +27,11 @@ export const GENRE_ZH: Record<string, string> = {
 };
 
 export const genreZh = (g: string) => GENRE_ZH[g] ?? g;
+
+export const GENRE_EN: Record<string, string> = {
+  rpg: 'RPG', action: 'Action', adventure: 'Adventure', 'open-world': 'Open world', strategy: 'Strategy', simulation: 'Simulation',
+  sandbox: 'Sandbox', survival: 'Survival', crafting: 'Crafting', roguelike: 'Roguelike', card: 'Card', metroidvania: 'Metroidvania',
+  'souls-like': 'Souls-like', 'turn-based': 'Turn-based', 'city-builder': 'City builder', automation: 'Automation', colony: 'Colony sim',
+  shooter: 'Shooter', coop: 'Co-op', racing: 'Racing', sports: 'Sports', casual: 'Casual', mmo: 'MMO', indie: 'Indie',
+};
+export const genreEn = (g: string) => GENRE_EN[g] ?? g;

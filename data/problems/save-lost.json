@@ -75,5 +75,8 @@
   ],
   "relatedProblems": [
     "game-crash"
-  ]
+  ],
+  "shortEn": "Lost saves",
+  "titleEn": "Lost saves or cloud-save conflicts",
+  "summaryEn": "Don't start a new game yet — the save is usually still there. Find the save folder from the game's page, back it up, then sort out cloud sync."
 }

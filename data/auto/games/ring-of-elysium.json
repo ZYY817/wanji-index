@@ -6,6 +6,7 @@
     "en": "Ring of Elysium"
   },
   "summary": "一款由北极光工作室开发的战术竞技类游戏，在无限法则的世界里，经历一场前所未有的灾难逃脱体验。",
+  "summaryEn": "Escape an astonishing disaster in Ring of Elysium, a battle royale shooter developed by Aurora Studio.",
   "genres": [
     "action",
     "mmo"
@@ -19,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/755790/",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 755790,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7, Windows 8.1, Windows 10\n处理器: Intel i3 8130U(2Cores, 2.3GHz) or equivalent\n内存: 4 GB RAM\n显卡: NVIDIA GeForce GT 730 or equivalent\n网络: 宽带互联网连接\n存储空间: 需要 10 GB 可用空间\n声卡: DirectX-compatible using the latest drivers",
     "recommended": "推荐配置:\n操作系统 *: Windows 7, Windows 8.1, Windows 10 (64-bit version)\n处理器: Intel i5 2500(4 Core, 3.3HGz) or equivalent\n内存: 6 GB RAM\n显卡: NVIDIA GeForce GTX 1050 or equivalent\n网络: 宽带互联网连接\n存储空间: 需要 10 GB 可用空间\n声卡: DirectX-compatible using the latest drivers"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7, Windows 8.1, Windows 10(64-bit version)\nProcessor: Intel i3 8130U(2Cores, 2.3GHz) or equivalent\nMemory: 4 GB RAM\nGraphics: NVIDIA GeForce GT 730 or equivalent\nNetwork: Broadband Internet connection\nStorage: 10 GB available space\nSound Card: DirectX-compatible using the latest drivers",
+    "recommended": "Recommended:\nOS *: Windows 7, Windows 8.1, Windows 10 (64-bit version)\nProcessor: Intel i5 2500(4 Core, 3.3HGz) or equivalent\nMemory: 6 GB RAM\nGraphics: NVIDIA GeForce GTX 1050 or equivalent\nNetwork: Broadband Internet connection\nStorage: 10 GB available space\nSound Card: DirectX-compatible using the latest drivers"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:22.353Z",
+    "syncedAt": "2026-10-27T17:26:22.406Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:11.879Z",
       "page": "Ring of Elysium"

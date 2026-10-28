@@ -84,5 +84,8 @@
   "relatedProblems": [
     "game-crash",
     "stutter-low-fps"
-  ]
+  ],
+  "shortEn": "Black screen",
+  "titleEn": "Black screen: sound but no picture",
+  "summaryEn": "Usually the display mode: a resolution or refresh rate the monitor can't show, a fullscreen conflict, or a laptop using integrated graphics. Press Alt + Enter for windowed mode, then switch to borderless."
 }

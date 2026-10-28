@@ -1,0 +1,15 @@
+{
+  "id": "ddnet-oss",
+  "gameTitle": "DDNet",
+  "type": "opensource",
+  "platform": "steam",
+  "url": "https://store.steampowered.com/app/412220/",
+  "claimNote": "开源多人合作平台跳跃（Teeworlds 衍生），Steam 上免费",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source co-op platformer (Teeworlds-based), free on Steam"
+}

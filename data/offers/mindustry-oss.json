@@ -1,0 +1,17 @@
+{
+  "id": "mindustry-oss",
+  "gameTitle": "Mindustry 像素工厂（Mindustry）",
+  "titleZh": "像素工厂（Mindustry）",
+  "type": "opensource",
+  "platform": "itch",
+  "url": "https://anuke.itch.io/mindustry",
+  "claimNote": "开源塔防 + 自动化工厂；Steam 版付费（支持作者），itch.io 免费下载",
+  "steamAppId": "1127400",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source tower defense + factory automation; paid on Steam (supports the dev), free on itch.io"
+}

@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { Pause, Play } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
@@ -56,7 +57,7 @@ export function Hero({ heroes, popular, counts }: {
   const rise = (i: number) => ({ animationDelay: `calc(var(--intro-delay, 0s) + ${0.15 + i * 0.09}s)` });
 
   return (
-    <section ref={ref} aria-label="玩机索引" className="grain relative h-[100svh] min-h-[680px] overflow-hidden bg-shell">
+    <section ref={ref} aria-label="Wanji Index" className="grain relative h-[100svh] min-h-[680px] overflow-hidden bg-shell">
       {/* 美术层：滚动推近（motion）× 每张自身的缓慢推近（CSS） */}
       <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale }}>
         {heroes.map((h, i) => (i === 0 || extra) && (
@@ -84,28 +85,26 @@ export function Hero({ heroes, popular, counts }: {
 
       {/* 正中内容 */}
       <motion.div className="container-x relative z-10 flex h-full flex-col items-center justify-center pt-[var(--header-h)] text-center" style={{ y: textY, opacity: textFade }}>
-        <p className="animate-rise text-sm tracking-[0.3em] text-primary" style={rise(0)}>PC 游戏资源索引</p>
+        <p className="animate-rise text-sm tracking-[0.3em] text-primary" style={rise(0)}><T zh="PC 游戏资源索引" en="PC GAME RESOURCE INDEX" /></p>
         <h1 className="mt-6 font-serif text-[clamp(44px,6.6vw,108px)] font-black leading-[1.04] tracking-[-0.045em]">
-          {['每一款游戏，', '都有一份档案。'].map((line, i) => (
+          {([['每一款游戏，', 'Every game'], ['都有一份档案。', 'gets a file.']] as const).map(([line, lineEn], i) => (
             <span key={line} className="block overflow-hidden pb-[0.06em]">
-              <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.25 + i * 0.1}s)` }}>{hang(line)}</span>
+              <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.25 + i * 0.1}s)` }}><T zh={hang(line)} en={lineEn} /></span>
             </span>
           ))}
         </h1>
         <p className="mt-7 max-w-[36em] animate-rise text-base leading-[1.8] text-foreground/80 md:text-lg" style={rise(2)}>
-          去哪买、现在免不免费、MOD 与汉化、存档与报错，一次查清。
-          <br className="hidden md:block" />
-          已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报，全部免费查阅。
+          <T zh={<>去哪买、现在免不免费、MOD 与汉化、存档与报错，一次查清。<br className="hidden md:block" />已收录 {counts.games} 款游戏、{counts.sites} 个资源站、{counts.offers} 条免费情报，全部免费查阅。</>} en={<>Where to buy, what’s free right now, mods, saves and fixes — all in one place.<br className="hidden md:block" />{counts.games} games, {counts.sites} sites and {counts.offers} free games, free to browse.</>} />
         </p>
         <div className="mt-10 w-full max-w-[640px] animate-rise" style={rise(3)}>
           <Magnetic strength={6} radius={60}>
-            <SearchTrigger variant="bar" label="搜索游戏、资源站、工具或报错…" />
+            <SearchTrigger variant="bar" />
           </Magnetic>
         </div>
         <p className="mt-5 flex animate-rise flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm text-fg-2" style={rise(4)}>
-          <span className="text-fg-3">热门</span>
+          <span className="text-fg-3"><T zh="热门" en="Popular" /></span>
           {popular.map((g) => (
-            <Link key={g.id} href={`/games/${g.slug}/`} className="underline-offset-4 transition-colors hover:text-foreground hover:underline">{g.name}</Link>
+            <Link key={g.id} href={`/games/${g.slug}/`} className="underline-offset-4 transition-colors hover:text-foreground hover:underline"><T zh={g.name} en={g.en || g.name} /></Link>
           ))}
         </p>
       </motion.div>
@@ -116,7 +115,7 @@ export function Hero({ heroes, popular, counts }: {
           <button
             type="button"
             onClick={() => setPaused((v) => !v)}
-            aria-label={paused ? '继续背景轮播' : '暂停背景轮播'}
+            aria-label={paused ? 'Play' : 'Pause'}
             aria-pressed={paused}
             className="grid size-9 shrink-0 place-items-center rounded-full border border-foreground/25 text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground"
           >
@@ -124,7 +123,7 @@ export function Hero({ heroes, popular, counts }: {
           </button>
           <div className="flex items-center gap-1.5">
             {heroes.map((h, i) => (
-              <button key={h.id} type="button" onClick={() => { setIdx(i); setExtra(true); }} aria-label={`切换到 ${h.name}`} aria-pressed={i === idx} className="grid h-9 w-8 place-items-center">
+              <button key={h.id} type="button" onClick={() => { setIdx(i); setExtra(true); }} aria-label={h.en || h.name} aria-pressed={i === idx} className="grid h-9 w-8 place-items-center">
                 <span className="relative block h-[2px] w-full overflow-hidden bg-foreground/20">
                   {i === idx && (
                     <span
@@ -138,12 +137,12 @@ export function Hero({ heroes, popular, counts }: {
           </div>
           {cur && (
             <Link href={`/games/${cur.slug}/`} className="hidden min-w-0 truncate text-sm text-fg-2 transition-colors hover:text-foreground sm:block">
-              {cur.name}<span className="text-fg-3"> · 官方美术</span>
+              <T zh={cur.name} en={cur.en || cur.name} /><span className="text-fg-3"> · <T zh="官方美术" en="Official art" /></span>
             </Link>
           )}
         </div>
         <span aria-hidden className="hidden items-center gap-3 text-sm text-fg-3 md:flex">
-          向下滚动
+          <T zh="向下滚动" en="Scroll" />
           <span className="relative block h-10 w-px overflow-hidden bg-foreground/20">
             <span className="absolute inset-x-0 top-0 h-1/2 bg-foreground/80 motion-safe:animate-[scroll-down_2s_cubic-bezier(.65,0,.35,1)_infinite]" />
           </span>

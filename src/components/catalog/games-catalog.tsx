@@ -1,12 +1,14 @@
 'use client';
-import type { GameVM } from '@/lib/present';
 import { genreZh } from '@/lib/genre';
+import type { GameVM } from '@/lib/present';
 import { PosterCard } from '@/components/game/poster-card';
 import { GameRow, GameTableHead } from '@/components/game/game-row';
 import { Button } from '@/components/ui/button';
 import { useCatalogQuery } from './use-catalog-query';
+import { T } from '@/lib/i18n';
+import { G, L } from '@/lib/labels-i18n';
 import {
-  ActiveChips, FilterIndex, MobileFilterBar, SORTS, ViewToggle, platformLabel,
+  ActiveChips, FilterIndex, MobileFilterBar, SORTS, ViewToggle,
   type ActiveChip, type Counted,
 } from './filter-index';
 
@@ -39,16 +41,17 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
         ? b.updatedAt.localeCompare(a.updatedAt)
         : b.counts.total - a.counts.total || a.name.localeCompare(b.name, 'zh-CN'));
 
-  const chips: ActiveChip[] = [
-    q.q ? { key: 'q' as const, label: `检索「${q.q}」` } : null,
-    q.genre ? { key: 'genre' as const, label: `类型 · ${genreZh(q.genre)}` } : null,
-    q.platform ? { key: 'platform' as const, label: `平台 · ${platformLabel(q.platform)}` } : null,
-  ].filter((chip): chip is ActiveChip => chip !== null);
+  const chips: ActiveChip[] = ([
+    q.q ? { key: 'q' as const, label: <T zh={`检索「${q.q}」`} en={`“${q.q}”`} /> } : null,
+    q.genre ? { key: 'genre' as const, label: <><T zh="类型" en="Genre" /> · {G(q.genre)}</> } : null,
+    q.platform ? { key: 'platform' as const, label: <><T zh="平台" en="Platform" /> · {L('platform', q.platform)}</> } : null,
+  ] as (ActiveChip | null)[]).filter((chip): chip is ActiveChip => chip !== null);
 
   const removeFilter = (key: ActiveChip['key']) => update({ [key]: '' });
   const resetFilters = () => update({ q: '', genre: '', platform: '' });
   const view = q.view === 'list' ? 'list' : 'poster';
-  const sortLabel = SORTS.find((s) => s.key === (q.sort || 'richness'))?.label ?? SORTS[0].label;
+  const sort = SORTS.find((s) => s.key === (q.sort || 'richness')) ?? SORTS[0];
+  const sortLabel = <T zh={sort.label} en={sort.en} />;
 
   return (
     <div className="container-x pb-24 lg:pb-32">
@@ -70,7 +73,7 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
           {/* 桌面 · 索引册页眉：计数、活动筛选、视图 */}
           <div className="hidden min-h-11 flex-wrap items-center gap-x-3 gap-y-2 border-b border-border pb-3 lg:flex">
             <p aria-live="polite" aria-atomic="true" className="meta shrink-0 text-fg-3">
-              <span className="text-foreground">{filtered.length}</span> / {games.length} 款游戏
+              <span className="text-foreground">{filtered.length}</span> / {games.length} <T zh="款游戏" en="games" />
             </p>
             {chips.length > 0 && <span aria-hidden className="h-4 w-px shrink-0 bg-border" />}
             <ActiveChips chips={chips} onRemove={removeFilter} className="min-w-0 flex-1 flex-wrap gap-1.5" />
@@ -80,9 +83,9 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
           {/* 移动 · 结果计数行（筛选栏自身保持单行） */}
           <div className="flex items-center justify-between gap-4 py-4 lg:hidden">
             <p aria-live="polite" aria-atomic="true" className="meta text-fg-3">
-              <span className="text-foreground">{filtered.length}</span> / {games.length} 款游戏
+              <span className="text-foreground">{filtered.length}</span> / {games.length} <T zh="款游戏" en="games" />
             </p>
-            <p className="meta shrink-0 text-fg-3">按 <span className="text-fg-2">{sortLabel}</span></p>
+            <p className="meta shrink-0 text-fg-3"><T zh="按" en="By" /> <span className="text-fg-2">{sortLabel}</span></p>
           </div>
 
           {filtered.length ? (
@@ -93,9 +96,9 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
             </div>
           ) : (
             <div className="mt-6 border-y border-border py-20 text-center lg:mt-8">
-              <p className="mt-4 font-serif text-3xl">没有找到这份档案</p>
-              <p className="mt-3 text-sm text-fg-3">试试其他名称，或放宽筛选条件。</p>
-              <Button className="mt-6" onClick={resetFilters}>清除筛选</Button>
+              <p className="mt-4 font-serif text-3xl"><T zh="没有找到这份档案" en="No games found" /></p>
+              <p className="mt-3 text-sm text-fg-3"><T zh="试试其他名称，或放宽筛选条件。" en="Try another name or loosen the filters." /></p>
+              <Button className="mt-6" onClick={resetFilters}><T zh="清除筛选" en="Clear filters" /></Button>
             </div>
           )}
         </div>

@@ -2,9 +2,11 @@
   "id": "euro-truck-simulator-2",
   "slug": "euro-truck-simulator-2",
   "name": {
-    "zh": "Euro Truck Simulator 2"
+    "zh": "欧洲卡车模拟 2",
+    "en": "Euro Truck Simulator 2"
   },
   "summary": "像公路之王一样在欧洲穿行， 将价值不菲的货物完美送抵远方！往返于英国，比利时，德国，意大利，荷兰，波兰等众多城市；您的耐力，技巧，速度都被您发挥到了极致！",
+  "summaryEn": "Travel across Europe as king of the road, a trucker who delivers important cargo across impressive distances! With dozens of cities to explo…",
   "genres": [
     "indie",
     "simulation"
@@ -21,7 +23,7 @@
       "url": "https://store.steampowered.com/app/227300/",
       "priceNote": "参考价 ¥ 92.99",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 227300,
@@ -37,6 +39,10 @@
     "minimum": "Minimum:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-6400 or AMD Ryzen 3 1200 or similar\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 or AMD Radeon RX 460 or Intel HD 630 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)",
     "recommended": "Recommended:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-9600 or AMD Ryzen 5 3600 or similar\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1660 or AMD Radeon RX 590 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-6400 or AMD Ryzen 3 1200 or similar\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 or AMD Radeon RX 460 or Intel HD 630 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)",
+    "recommended": "Recommended:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-9600 or AMD Ryzen 5 3600 or similar\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1660 or AMD Radeon RX 590 (2GB VRAM)\nHard Drive: 25 GB available space (Euro Truck Simulator 2 base game)"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:05.804Z",
+    "syncedAt": "2026-10-27T17:24:26.869Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:44.479Z",
       "page": "Euro Truck Simulator 2"

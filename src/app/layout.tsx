@@ -12,6 +12,7 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { loadData } from '@/lib/data.mjs';
 import { buildStamp, SITE } from '@/lib/present';
 import { withBase } from '@/lib/base';
+import { LANG_BOOT, t } from '@/lib/i18n';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -36,6 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
       <head>
+        {/* 语言：首帧前从 localStorage 恢复，避免先闪中文再切英文 */}
+        <Script id="lang-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: LANG_BOOT }} />
         {/* 开场是否播放：在首帧之前决定，避免「先闪开场再消失」。访问过 / reduced-motion → 隐藏开场层；否则首屏入场动画延后到幕布拉开 */}
         <Script
           id="intro-gate"
@@ -47,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="min-h-screen">
         <a href="#main" className="sr-only z-[100] bg-primary px-4 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
-          跳到正文
+          {t('跳到正文', 'Skip to content')}
         </a>
         <Providers>
           <CommandProvider>
@@ -57,11 +60,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <SiteFooter
               build={buildStamp()}
               stats={[
-                { label: '游戏档案', value: counts.games },
-                { label: '资源站', value: counts.sites },
-                { label: '免费情报', value: counts.free },
-                { label: '工具', value: counts.tools },
-                { label: '教程', value: counts.guides },
+                { key: 'games', label: t('游戏档案', 'Games'), value: counts.games },
+                { key: 'sites', label: t('资源站', 'Sites'), value: counts.sites },
+                { key: 'free', label: t('免费情报', 'Free offers'), value: counts.free },
+                { key: 'tools', label: t('工具', 'Tools'), value: counts.tools },
+                { key: 'fixes', label: t('排障与教程', 'Fixes & guides'), value: counts.guides },
               ]}
             />
           </CommandProvider>

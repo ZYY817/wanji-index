@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { loadData, buildRelations } from '@/lib/data.mjs';
 import { siteVM } from '@/lib/present';
@@ -15,9 +16,9 @@ export default function ResourcesPage() {
   return (
     <>
       <IndexMasthead
-        title="资源站"
+        title={<T zh="资源站" en="Sites" />}
         count={sites.length}
-        description={`收录 ${sites.length} 个玩家常用的资源站，分 ${categories} 类。标注语言、网络与注册门槛，去之前先心里有数。`}
+        description={<T zh={`收录 ${sites.length} 个玩家常用的资源站，分 ${categories} 类。标注语言、网络与注册门槛，去之前先心里有数。`} en={`${sites.length} sites players use, in ${categories} categories — with language, network and sign-up notes so you know what to expect.`} />}
       />
       <ResourcesCatalog sites={sites} />
     </>

@@ -1,6 +1,7 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { loadData } from '@/lib/data.mjs';
-import { zh } from '@/lib/labels.mjs';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { ToolsGuidesIndex } from '@/components/catalog/tools-guides-index';
 import { GuideRow } from '@/components/catalog/guide-row';
@@ -15,15 +16,16 @@ export default function GuidesPage() {
   return (
     <>
       <IndexMasthead
-        title="教程"
+        title={<T zh="教程" en="Guides" />}
         count={guides.length}
-        description={`收录 ${guides.length} 篇实测排障与安装指南。从真实报错原文开始，分步验证，写明每一步的预期系统反馈。`}
+        description={<T zh={`收录 ${guides.length} 篇实测排障与安装指南。从真实报错原文开始，分步验证，写明每一步的预期系统反馈。`} en={`${guides.length} step-by-step install and troubleshooting guides, starting from the real error message, with the expected result of every step.`} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex
           param="cat"
           placeholder="标题或报错原文"
-          categories={cats.map((c) => ({ value: c, label: zh('guideCategory', c) }))}
+          placeholderEn="Title or error text"
+          categories={cats.map((c) => ({ value: c, label: L('guideCategory', c) }))}
           rows={guides.map((g: any) => ({
             id: g.id,
             query: [g.title, g.problem?.description, g.problem?.errorText, ...(g.keywords ?? [])].join(' '),

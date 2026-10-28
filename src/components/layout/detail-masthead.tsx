@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { T } from '@/lib/i18n';
 
-export type DetailFact = { label: string; value: React.ReactNode };
+export type DetailFact = { label: React.ReactNode; value: React.ReactNode };
 
 /**
  * 详情页刊头（资源站 / 工具 / 教程）：左边回答「这是什么」，右边回答「怎么去 + 关键事实」。
@@ -12,7 +13,7 @@ export type DetailFact = { label: string; value: React.ReactNode };
 export function DetailMasthead({
   crumbs, kicker, mark, title, summary, action, facts, notice, className,
 }: {
-  crumbs: [string, string?][]; kicker?: React.ReactNode; mark?: React.ReactNode; title: React.ReactNode; summary?: React.ReactNode;
+  crumbs: [React.ReactNode, string?][]; kicker?: React.ReactNode; mark?: React.ReactNode; title: React.ReactNode; summary?: React.ReactNode;
   action?: React.ReactNode; facts?: DetailFact[]; notice?: React.ReactNode; className?: string;
 }) {
   const rise = (i: number) => ({ animationDelay: `${0.08 + i * 0.07}s` });
@@ -20,10 +21,10 @@ export function DetailMasthead({
     <header className={cn('border-b border-border pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
       <div className="container-x grid gap-10 pb-12 md:pb-16 lg:grid-cols-12 lg:gap-12">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="面包屑" className="flex animate-rise flex-wrap items-center gap-2 text-sm text-fg-2" style={rise(0)}>
-            <Link href="/" className="transition-colors hover:text-foreground">首页</Link>
-            {crumbs.map(([label, href]) => (
-              <span key={label} className="flex items-center gap-2">
+          <nav aria-label="Breadcrumb" className="flex animate-rise flex-wrap items-center gap-2 text-sm text-fg-2" style={rise(0)}>
+            <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
+            {crumbs.map(([label, href], i) => (
+              <span key={i} className="flex items-center gap-2">
                 <span aria-hidden className="text-fg-3">/</span>
                 {href ? (
                   <Link href={href} className="transition-colors hover:text-foreground">{label}</Link>
@@ -53,8 +54,8 @@ export function DetailMasthead({
             {action}
             {facts?.length ? (
               <dl className={cn('border-t border-border-strong', action && 'mt-6')}>
-                {facts.map((f) => (
-                  <div key={f.label} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
+                {facts.map((f, i) => (
+                  <div key={i} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
                     <dt className="text-sm text-fg-2">{f.label}</dt>
                     <dd className="leading-[1.7] text-foreground">{f.value}</dd>
                   </div>
@@ -70,7 +71,7 @@ export function DetailMasthead({
 }
 
 /** 访问前须知 / 使用前须知：细边框浅底，用在刊头下方 */
-export function Notice({ title, children }: { title: string; children: React.ReactNode }) {
+export function Notice({ title, children }: { title: React.ReactNode; children: React.ReactNode }) {
   return (
     <div className="rounded-sm bg-warn/[0.06] px-5 py-4 ring-1 ring-warn/25">
       <p className="text-sm font-medium text-warn">{title}</p>

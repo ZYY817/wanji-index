@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import { T } from '@/lib/i18n';
 
 /**
  * 顶栏字标 lockup：宋体「玩机索引」+ 一个纯 CSS 的光圈/片盘标记（不再叠英文副标，顶栏只留一个声音）。
@@ -7,7 +8,7 @@ import { cn } from '@/lib/utils';
  */
 export function HeaderLockup({ solid }: { solid: boolean }) {
   return (
-    <Link href="/" aria-label="玩机索引，返回首页" className="group flex min-h-11 shrink-0 items-center gap-3 lg:justify-self-start">
+    <Link href="/" aria-label="玩机索引 Wanji Index" className="group flex min-h-11 shrink-0 items-center gap-3 lg:justify-self-start">
       <span
         aria-hidden
         className={cn(
@@ -32,7 +33,7 @@ export function HeaderLockup({ solid }: { solid: boolean }) {
           solid ? 'text-lg' : 'text-xl',
         )}
       >
-        玩机索引
+        <T zh="玩机索引" en="Wanji Index" />
       </span>
     </Link>
   );

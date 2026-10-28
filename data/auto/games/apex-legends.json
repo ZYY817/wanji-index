@@ -2,9 +2,11 @@
   "id": "apex-legends",
   "slug": "apex-legends",
   "name": {
-    "zh": "Apex Legends"
+    "zh": "Apex 英雄",
+    "en": "Apex Legends"
   },
   "summary": "由Respawn Entertainment开发制作，屡获殊荣的《Apex Legends》，是一款免费大逃杀英雄射击游戏。在这款革命性的新一代大逃杀英雄射击游戏中，掌控日益丰富且拥有强大技能的传奇角色，深度体验战术小队玩法及创新游戏元素。",
+  "summaryEn": "Apex Legends is the award-winning, free-to-play Hero Shooter from Respawn Entertainment.",
   "genres": [
     "action",
     "adventure"
@@ -19,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1172470/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1172470,
@@ -35,6 +37,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: AMD FX 4350 or Equivalent, Intel Core i3 6300 or Equivalent\n内存: 6 GB RAM\n显卡: AMD Radeon™ HD 7790 (2 GB), NVIDIA GeForce® GTX 950\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: ~3.8GB for 1 localized language",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: Ryzen 5 CPU or Equivalent\n内存: 8 GB RAM\n显卡: AMD Radeon™ R9 290, NVIDIA GeForce® GTX 970\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: ~3.8GB for 1 localized language"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: AMD FX 4350 or Equivalent, Intel Core i3 6300 or Equivalent\nMemory: 6 GB RAM\nGraphics: AMD Radeon™ HD 7790 (2 GB), NVIDIA GeForce® GTX 950\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 75 GB available space\nAdditional Notes: ~3.8GB for 1 localized language",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: Ryzen 5 CPU or Equivalent\nMemory: 8 GB RAM\nGraphics: AMD Radeon™ R9 290, NVIDIA GeForce® GTX 970\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 75 GB available space\nAdditional Notes: ~3.8GB for 1 localized language"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:43.160Z",
+    "syncedAt": "2026-10-27T17:23:18.975Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:30.618Z",
       "page": "Apex Legends"

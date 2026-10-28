@@ -3,20 +3,22 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, LayoutGrid, List, RotateCcw, Search, SlidersHorizontal, X } from 'lucide-react';
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { PlatformMark } from '@/components/ui/platform-mark';
-import { genreZh } from '@/lib/genre';
 import { zh } from '@/lib/labels.mjs';
 import { cn } from '@/lib/utils';
 import { Kbd } from '@/components/ui/kbd';
+import { T } from '@/lib/i18n';
+import { G } from '@/lib/labels-i18n';
+import { useL } from '@/components/layout/lang-toggle';
 
 export type CatalogQuery = Record<string, string>;
 export type CatalogUpdate = (values: Record<string, string>) => void;
 export type Counted = { key: string; count: number };
-export type ActiveChip = { key: 'q' | 'genre' | 'platform'; label: string };
+export type ActiveChip = { key: 'q' | 'genre' | 'platform'; label: React.ReactNode };
 
 export const SORTS = [
-  { key: 'richness', label: '资源最多' },
-  { key: 'updated', label: '最近更新' },
-  { key: 'name', label: '名称顺序' },
+  { key: 'richness', label: '资源最多', en: 'Most resources' },
+  { key: 'updated', label: '最近更新', en: 'Recently updated' },
+  { key: 'name', label: '名称顺序', en: 'By name' },
 ] as const;
 
 const pad2 = (n: number) => String(n).padStart(2, '0');
@@ -24,7 +26,7 @@ const pad3 = (n: number) => String(n).padStart(3, '0');
 
 /* ── 共用的索引标签 ───────────────────────────────────────── */
 
-function SectionHead({ label, count }: { label: string; count?: number }) {
+function SectionHead({ label, count }: { label: React.ReactNode; count?: number }) {
   return (
     <div className="mb-2 flex items-baseline justify-between gap-3 border-b border-border pb-2">
       <h3 className="text-xs font-medium tracking-[0.08em] text-foreground">
@@ -37,6 +39,7 @@ function SectionHead({ label, count }: { label: string; count?: number }) {
 
 
 function SearchField({ value, onChange, variant = 'rail' }: { value: string; onChange: (v: string) => void; variant?: 'rail' | 'bar' }) {
+  const l = useL();
   const bar = variant === 'bar';
   return (
     <div
@@ -47,11 +50,11 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
     >
       <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
       <input
-        aria-label="搜索游戏"
+        aria-label={l('搜索游戏', 'Search games')}
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        placeholder={bar ? '搜索名称或别名' : '名称 / 英文 / 别名'}
+        placeholder={bar ? l('搜索名称或别名', 'Search by name') : l('名称 / 英文 / 别名', 'Name / alias')}
         autoComplete="off"
         spellCheck={false}
         enterKeyHint="search"
@@ -64,7 +67,7 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
         <button
           type="button"
           onClick={() => onChange('')}
-          aria-label="清除搜索"
+          aria-label={l('清除搜索', 'Clear search')}
           className={cn('inline-flex shrink-0 items-center justify-center text-fg-3 transition-colors hover:text-foreground', bar ? '-mr-1 size-9' : '-my-1 size-6')}
         >
           <X className="size-3.5" aria-hidden />
@@ -79,7 +82,7 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
 function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate; touch?: boolean }) {
   const activeSort = q.sort || 'richness';
   return (
-    <div role="group" aria-label="排序方式" className="flex flex-col">
+    <div role="group" aria-label="Sort" className="flex flex-col">
       {SORTS.map((s) => {
         const active = activeSort === s.key;
         return (
@@ -94,7 +97,7 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
               active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
             )}
           >
-            <span className="flex-1">{s.label}</span>
+            <span className="flex-1"><T zh={s.label} en={s.en} /></span>
           </button>
         );
       })}
@@ -118,7 +121,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
         allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
       )}
     >
-      <span className="flex-1">全部类型</span>
+      <span className="flex-1"><T zh="全部类型" en="All genres" /></span>
       <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
     </button>
   );
@@ -142,7 +145,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 )}
               >
                 <span aria-hidden className={cn('size-1 shrink-0', active ? 'bg-primary' : 'bg-border-strong')} />
-                <span className="truncate">{genreZh(key)}</span>
+                <span className="truncate">{G(key)}</span>
                 <span className={cn('ml-auto shrink-0 font-mono text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
               </button>
             );
@@ -171,7 +174,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                   active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
                 )}
               >
-                <span className="flex-1 truncate">{genreZh(key)}</span>
+                <span className="flex-1 truncate">{G(key)}</span>
                 <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
               </button>
             </li>
@@ -185,7 +188,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
           onClick={() => setExpanded((v) => !v)}
           className="mt-1 min-h-8 text-sm text-fg-3 underline-offset-4 transition-colors hover:text-foreground hover:underline"
         >
-          {expanded ? '收起' : `展开全部 ${genres.length} 个类型`}
+          {expanded ? <T zh="收起" en="Show less" /> : <T zh={`展开全部 ${genres.length} 个类型`} en={`Show all ${genres.length} genres`} />}
         </button>
       )}
     </>
@@ -206,7 +209,7 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
           allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
         )}
       >
-        <span className="flex-1">全部平台</span>
+        <span className="flex-1"><T zh="全部平台" en="All platforms" /></span>
         <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
       </button>
       {platforms.map(({ key, count }) => {
@@ -241,7 +244,7 @@ function ResetButton({ active, onReset }: { active: boolean; onReset: () => void
       className="group flex min-h-8 w-full items-center gap-2 text-sm text-fg-3 transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-40"
     >
       <RotateCcw className="size-3.5" aria-hidden />
-      重置筛选
+      <T zh="重置筛选" en="Reset filters" />
     </button>
   );
 }
@@ -258,7 +261,7 @@ export function ActiveChips({ chips, onRemove, className }: { chips: ActiveChip[
           <button
             type="button"
             onClick={() => onRemove(chip.key)}
-            aria-label={`移除筛选：${chip.label}`}
+            aria-label="Remove filter"
             className="inline-flex size-9 shrink-0 items-center justify-center text-fg-3 transition-colors hover:text-primary lg:size-7"
           >
             <X className="size-3" aria-hidden />
@@ -270,10 +273,12 @@ export function ActiveChips({ chips, onRemove, className }: { chips: ActiveChip[
 }
 
 export function ViewToggle({ view, update, className }: { view: string; update: CatalogUpdate; className?: string }) {
+  const l = useL();
   const current = view || 'poster';
   return (
-    <div role="group" aria-label="展示方式" className={cn('flex shrink-0 border border-border', className)}>
-      {([['poster', LayoutGrid, '海报视图'], ['list', List, '列表视图']] as const).map(([value, Icon, label], i) => {
+    <div role="group" aria-label="View" className={cn('flex shrink-0 border border-border', className)}>
+      {([['poster', LayoutGrid, '海报视图', 'Poster view'], ['list', List, '列表视图', 'List view']] as const).map(([value, Icon, zhLabel, enLabel], i) => {
+        const label = l(zhLabel, enLabel);
         const active = current === value;
         return (
           <button
@@ -318,14 +323,14 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
   }, []);
 
   return (
-    <aside aria-label="筛选游戏档案" className="hidden lg:block">
+    <aside aria-label="Filters" className="hidden lg:block">
       <div
         ref={railRef}
         data-lenis-prevent={nestedScroll ? '' : undefined}
         className="sticky top-[calc(var(--sticky-top)+28px)] max-h-[calc(100dvh-var(--sticky-top)-48px)] overflow-y-auto overscroll-contain pb-4 pr-1 transition-[top] duration-300"
       >
         <div className="flex items-baseline justify-between gap-3 border-b border-border-strong pb-3">
-          <h2 className="font-serif text-xl font-bold tracking-[-0.02em]">筛选</h2>
+          <h2 className="font-serif text-xl font-bold tracking-[-0.02em]"><T zh="筛选" en="Filters" /></h2>
         </div>
 
         <div className="mt-4">
@@ -333,17 +338,17 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="排序" count={3} />
+          <SectionHead label={<T zh="排序" en="Sort" />} count={3} />
           <SortRows q={q} update={update} />
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="类型" count={genres.length} />
+          <SectionHead label={<T zh="类型" en="Genre" />} count={genres.length} />
           <GenreButtons q={q} update={update} genres={genres} total={total} />
         </div>
 
         <div className="mt-[18px]">
-          <SectionHead label="平台" count={platforms.length} />
+          <SectionHead label={<T zh="平台" en="Platform" />} count={platforms.length} />
           <PlatformButtons q={q} update={update} platforms={platforms} total={total} />
         </div>
 
@@ -362,6 +367,7 @@ export function MobileFilterBar({
 }: {
   q: CatalogQuery; update: CatalogUpdate; genres: Counted[]; platforms: Counted[]; total: number; resultCount: number; chips: ActiveChip[]; onRemove: (key: ActiveChip['key']) => void;
 }) {
+  const l = useL();
   const [open, setOpen] = useState(false);
   const active = !!(q.q || q.genre || q.platform);
   const activeCount = chips.length;
@@ -381,7 +387,7 @@ export function MobileFilterBar({
           <DialogTrigger asChild>
             <button
               type="button"
-              aria-label={`筛选档案${activeCount ? `，${activeCount} 项已启用` : ''}`}
+              aria-label={`${l('筛选档案', 'Filters')}${activeCount ? ` (${activeCount})` : ''}`}
               className={cn(
                 'relative grid size-11 shrink-0 place-items-center border transition-colors focus-visible:outline-1 focus-visible:outline-offset-0',
                 activeCount ? 'border-primary/70 text-primary' : 'border-border-strong text-fg-2 hover:text-foreground',
@@ -403,14 +409,14 @@ export function MobileFilterBar({
             }}
             className="inset-x-0 bottom-0 top-auto flex max-h-[88dvh] w-full flex-col border-t border-border-strong bg-background p-0 data-[state=open]:animate-[catalog-sheet-in_320ms_var(--ease-expo)] data-[state=closed]:animate-[catalog-sheet-out_180ms_ease-in]"
           >
-            <DialogDescription className="sr-only">按排序、类型和平台筛选游戏档案，查看结果数量后关闭。</DialogDescription>
+            <DialogDescription className="sr-only"><T zh="按排序、类型和平台筛选游戏档案，查看结果数量后关闭。" en="Sort and filter games by genre and platform." /></DialogDescription>
 
             <div className="flex shrink-0 items-start justify-between gap-4 border-b border-border px-[var(--gutter)] pb-3 pt-4">
               <div>
-                <p className="meta text-fg-3">筛选结果 {resultCount} 款</p>
+                <p className="meta text-fg-3"><T zh={`筛选结果 ${resultCount} 款`} en={`${resultCount} results`} /></p>
                 <div className="mt-1 flex items-baseline gap-2.5">
                   <span aria-hidden className="h-px w-5 bg-primary" />
-                  <DialogTitle className="font-serif text-2xl font-bold leading-none tracking-[-0.02em]">筛选</DialogTitle>
+                  <DialogTitle className="font-serif text-2xl font-bold leading-none tracking-[-0.02em]"><T zh="筛选" en="Filters" /></DialogTitle>
                 </div>
               </div>
               <div className="flex items-center gap-1">
@@ -421,11 +427,11 @@ export function MobileFilterBar({
                   className="inline-flex min-h-11 items-center gap-1.5 px-2 text-xs text-fg-3 transition-colors hover:text-foreground disabled:pointer-events-none disabled:opacity-35"
                 >
                   <RotateCcw className="size-3.5" aria-hidden />
-                  重置
+                  <T zh="重置" en="Reset" />
                 </button>
                 <DialogClose
                   className="-mr-1 grid size-11 place-items-center text-fg-2 transition-colors hover:text-foreground"
-                  aria-label="关闭筛选"
+                  aria-label={l('关闭筛选', 'Close filters')}
                 >
                   <X className="size-5" aria-hidden />
                 </DialogClose>
@@ -435,21 +441,21 @@ export function MobileFilterBar({
             <div data-lenis-prevent className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-[var(--gutter)] pb-8 pt-5">
               <section aria-labelledby="sheet-sort">
                 <h3 id="sheet-sort" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
-                  排序
+                  <T zh="排序" en="Sort" />
                 </h3>
                 <SortRows q={q} update={update} touch />
               </section>
 
               <section aria-labelledby="sheet-genre" className="mt-7">
                 <h3 id="sheet-genre" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
-                  类型 <span className="font-mono text-2xs text-fg-3">{pad2(genres.length)}</span>
+                  <T zh="类型" en="Genre" /> <span className="font-mono text-2xs text-fg-3">{pad2(genres.length)}</span>
                 </h3>
                 <GenreButtons q={q} update={update} genres={genres} total={total} primary />
               </section>
 
               <section aria-labelledby="sheet-platform" className="mt-7">
                 <h3 id="sheet-platform" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
-                  平台 <span className="font-mono text-2xs text-fg-3">{pad2(platforms.length)}</span>
+                  <T zh="平台" en="Platform" /> <span className="font-mono text-2xs text-fg-3">{pad2(platforms.length)}</span>
                 </h3>
                 <PlatformButtons q={q} update={update} platforms={platforms} total={total} primary />
               </section>
@@ -461,7 +467,7 @@ export function MobileFilterBar({
                   type="button"
                   className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 bg-foreground px-4 text-base font-medium text-background transition-colors hover:bg-fg-2"
                 >
-                  查看 <span className="font-mono text-sm tabular-nums">{pad3(resultCount)}</span> 个档案
+                  <T zh="查看" en="Show" /> <span className="font-mono text-sm tabular-nums">{pad3(resultCount)}</span> <T zh="个档案" en="games" />
                   <ArrowRight className="size-4" aria-hidden />
                 </button>
               </DialogClose>

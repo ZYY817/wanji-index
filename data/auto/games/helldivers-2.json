@@ -6,6 +6,7 @@
     "en": "HELLDIVERS 2"
   },
   "summary": "银河系最后的进攻力量。投入这款紧张刺激且疯狂的第三人称射击游戏，应征成为绝地潜兵，穿越战火肆虐的星系，为自由而战。",
+  "summaryEn": "The Galaxy’s Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and f…",
   "genres": [
     "action"
   ],
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/553850/",
       "priceNote": "参考价 ¥ 198.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 553850,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i7-4790K or AMD Ryzen 5 1500X\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470\n存储空间: 需要 135 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i7-9700K or AMD Ryzen 7 3700X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600XT\n存储空间: 需要 40 GB 可用空间\n附注事项: SSD Recommended"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i7-4790K or AMD Ryzen 5 1500X\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 1050 Ti or AMD Radeon RX 470\nStorage: 135 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i7-9700K or AMD Ryzen 7 3700X\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 2060 or AMD Radeon RX 6600XT\nStorage: 40 GB available space\nAdditional Notes: SSD Recommended"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:10.453Z",
+    "syncedAt": "2026-10-27T17:25:07.513Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:30.550Z",
       "page": "Helldivers 2"

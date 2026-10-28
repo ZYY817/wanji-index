@@ -1,4 +1,6 @@
 'use client';
+import { useL } from '@/components/layout/lang-toggle';
+import { T } from '@/lib/i18n';
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Command } from 'cmdk';
@@ -75,6 +77,7 @@ function Row({ it, onPick, value }: { it: RecentItem; onPick: () => void; value:
 }
 
 function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean) => void }) {
+  const l = useL();
   const router = useRouter();
   const [q, setQ] = useState('');
   const [items, setItems] = useState<SearchItem[] | null>(null);
@@ -108,12 +111,12 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
         className="inset-0 flex flex-col bg-popover sm:inset-auto sm:left-1/2 sm:top-[12vh] sm:max-h-[72vh] sm:w-[min(720px,calc(100vw-32px))] sm:-translate-x-1/2 sm:rounded-sm sm:border sm:border-border-strong sm:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.85)]"
         aria-describedby="cmdk-desc"
       >
-        <DialogTitle className="sr-only">搜索玩机索引</DialogTitle>
-        <DialogDescription id="cmdk-desc" className="sr-only">输入游戏、资源站、工具或报错关键词，上下键选择，回车打开</DialogDescription>
-        <Command shouldFilter={false} loop label="站内搜索" className="flex min-h-0 flex-1 flex-col">
+        <DialogTitle className="sr-only"><T zh="搜索玩机索引" en="Search Wanji Index" /></DialogTitle>
+        <DialogDescription id="cmdk-desc" className="sr-only"><T zh="输入游戏、资源站、工具或报错关键词，上下键选择，回车打开" en="Type a game, site, tool or error; use arrow keys and Enter" /></DialogDescription>
+        <Command shouldFilter={false} loop label="Search" className="flex min-h-0 flex-1 flex-col">
           <div className="meta flex items-center justify-between border-b border-border px-4 py-2.5 text-fg-3">
-            <span>玩机索引 / 检索</span>
-            <span>{items ? `${String(items.length).padStart(3, '0')} 条索引` : error ? '索引未加载' : '载入中…'}</span>
+            <span><T zh="玩机索引 / 检索" en="Wanji Index / Search" /></span>
+            <span>{items ? <T zh={`${String(items.length).padStart(3, '0')} 条索引`} en={`${items.length} entries`} /> : error ? <T zh="索引未加载" en="Index not loaded" /> : <T zh="载入中…" en="Loading…" />}</span>
           </div>
           <div className="flex items-center gap-3 border-b border-border px-4">
             <Search aria-hidden className="size-[18px] shrink-0 text-fg-3" />
@@ -121,10 +124,10 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
               value={q}
               onValueChange={setQ}
               autoFocus
-              placeholder="游戏名、资源站、工具、报错原文…"
+              placeholder={l('游戏名、资源站、工具、报错原文…', 'Game, site, tool or error text…')}
               className="h-14 min-w-0 flex-1 bg-transparent font-serif text-xl font-semibold tracking-[-0.01em] text-foreground outline-none placeholder:font-sans placeholder:text-base placeholder:font-normal placeholder:text-fg-3"
             />
-            <button type="button" onClick={() => setOpen(false)} className="touch-target -mr-1 inline-flex items-center px-1" aria-label="关闭">
+            <button type="button" onClick={() => setOpen(false)} className="touch-target -mr-1 inline-flex items-center px-1" aria-label={l('关闭', 'Close')}>
               <Kbd>ESC</Kbd>
             </button>
           </div>
@@ -132,9 +135,9 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
           <Command.List data-lenis-prevent className="min-h-0 flex-1 overflow-y-auto overscroll-contain p-2 sm:max-h-[52vh]">
             {error && (
               <div className="flex flex-col items-start gap-3 px-3 py-6">
-                <p className="text-base text-fg-2">搜索索引加载失败，可能是网络中断。</p>
+                <p className="text-base text-fg-2"><T zh="搜索索引加载失败，可能是网络中断。" en="Couldn’t load the search index — check your connection." /></p>
                 <button type="button" onClick={() => load(true)} className="inline-flex h-10 items-center gap-2 rounded-sm border border-border-strong px-3 text-sm hover:border-foreground/60">
-                  <RotateCw className="size-3.5" aria-hidden /> 重试
+                  <RotateCw className="size-3.5" aria-hidden /> <T zh="重试" en="Retry" />
                 </button>
               </div>
             )}
@@ -142,11 +145,11 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
             {!q.trim() && !error && (
               <>
                 {recent.length > 0 && (
-                  <Command.Group heading={<GroupHead icon={<History className="size-3" aria-hidden />} label="最近访问" />}>
+                  <Command.Group heading={<GroupHead icon={<History className="size-3" aria-hidden />} label={<T zh="最近访问" en="Recent" />} />}>
                     {recent.map((it) => <Row key={`r-${it.url}`} value={`r-${it.url}`} it={it} onPick={() => go(it)} />)}
                   </Command.Group>
                 )}
-                <Command.Group heading={<GroupHead label="索引目录" />}>
+                <Command.Group heading={<GroupHead label={<T zh="索引目录" en="Sections" />} />}>
                   {NAV.map((n) => (
                     <Command.Item
                       key={n.href}
@@ -165,8 +168,8 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
 
             {q.trim() && items && results.length === 0 && (
               <div className="px-3 py-8">
-                <p className="font-serif text-xl font-semibold">没有找到「{q}」</p>
-                <p className="mt-2 text-sm text-fg-2">试试游戏英文名、别名（如「老头环」），或报错里的关键词。</p>
+                <p className="font-serif text-xl font-semibold"><T zh={`没有找到「${q}」`} en={`No results for “${q}”`} /></p>
+                <p className="mt-2 text-sm text-fg-2"><T zh="试试游戏英文名、别名（如「老头环」），或报错里的关键词。" en="Try the English name, a nickname, or words from the error." /></p>
               </div>
             )}
 
@@ -182,17 +185,17 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
                 onSelect={() => { setOpen(false); router.push(`/search/?q=${encodeURIComponent(q.trim())}`); }}
                 className="mt-1 flex min-h-11 cursor-pointer items-center gap-2 rounded-xs px-3 text-sm text-fg-2 data-[selected=true]:bg-surface-2 data-[selected=true]:text-foreground"
               >
-                在搜索页查看全部 {results.length} 条结果 <ArrowRight className="size-3.5" aria-hidden />
+                <T zh={`在搜索页查看全部 ${results.length} 条结果`} en={`See all ${results.length} results`} /> <ArrowRight className="size-3.5" aria-hidden />
               </Command.Item>
             )}
           </Command.List>
 
           <div className="meta hidden items-center gap-4 border-t border-border px-4 py-2.5 text-fg-3 sm:flex">
-            <span className="inline-flex items-center gap-1.5"><Kbd>↑</Kbd><Kbd>↓</Kbd> 选择</span>
-            <span className="inline-flex items-center gap-1.5"><Kbd>↵</Kbd> 打开</span>
-            <span className="inline-flex items-center gap-1.5"><Kbd>ESC</Kbd> 关闭</span>
+            <span className="inline-flex items-center gap-1.5"><Kbd>↑</Kbd><Kbd>↓</Kbd> <T zh="选择" en="Select" /></span>
+            <span className="inline-flex items-center gap-1.5"><Kbd>↵</Kbd> <T zh="打开" en="Open" /></span>
+            <span className="inline-flex items-center gap-1.5"><Kbd>ESC</Kbd> <T zh="关闭" en="Close" /></span>
             <span className="flex-1" />
-            <span>游戏 · 资源站 · 工具 · 教程</span>
+            <span><T zh="游戏 · 排障 · 资源站 · 工具 · 教程" en="Games · Fixes · Sites · Tools · Guides" /></span>
           </div>
         </Command>
       </DialogContent>
@@ -200,7 +203,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
   );
 }
 
-function GroupHead({ label, count, icon }: { label: string; count?: number; icon?: React.ReactNode }) {
+function GroupHead({ label, count, icon }: { label: React.ReactNode; count?: number; icon?: React.ReactNode }) {
   return (
     <span className={cn('meta flex items-center gap-2 px-3 pb-1.5 pt-3 text-fg-3')}>
       {icon}

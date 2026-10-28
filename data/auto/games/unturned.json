@@ -2,9 +2,11 @@
   "id": "unturned",
   "slug": "unturned",
   "name": {
-    "zh": "Unturned"
+    "zh": "未转变者",
+    "en": "Unturned"
   },
   "summary": "Unturned is an open-world zombie survival sandbox game. As one of the few not yet turned, you must fight to remain among the living.",
+  "summaryEn": "Unturned is an open-world zombie survival sandbox game. As one of the few not yet turned, you must fight to remain among the living.",
   "genres": [
     "action",
     "adventure",
@@ -23,7 +25,7 @@
       "url": "https://store.steampowered.com/app/304930/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 304930,
@@ -39,6 +41,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7 SP1+\n处理器: 3 GHz\n内存: 8 GB RAM\nDirectX 版本: 10\n存储空间: 需要 4 GB 可用空间",
     "recommended": "推荐配置:\n操作系统: Windows 10 64-bit\n处理器: 4 GHz\n内存: 16 GB RAM\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 6 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 SP1+\nProcessor: 3 GHz\nMemory: 8 GB RAM\nDirectX: Version 10\nStorage: 4 GB available space",
+    "recommended": "Recommended:\nOS: Windows 10 64-bit\nProcessor: 4 GHz\nMemory: 16 GB RAM\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 6 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +56,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:36.784Z",
+    "syncedAt": "2026-10-27T17:27:03.345Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:49.239Z",
       "page": "Unturned"

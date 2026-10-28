@@ -5,6 +5,7 @@
     "zh": "Red Dead Redemption 2"
   },
   "summary": "亚瑟·摩根和范德林德帮众是一群逃亡在外的亡命之徒。联邦侦探和赏金猎人在他们的身后穷追不舍，亚瑟一行人必须在广袤蛮荒的腹地上四处劫掠、挣扎求生。",
+  "summaryEn": "Arthur Morgan and the Van der Linde Gang are outlaws on the run.",
   "genres": [
     "action",
     "adventure"
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/1174180/",
       "priceNote": "参考价 ¥ 279.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1174180,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-bit\n处理器: Intel® Core™ i5-2500K / AMD FX-6300\n内存: 8 GB RAM\n显卡: Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB\n网络: 宽带互联网连接\n存储空间: 需要 150 GB 可用空间\n声卡: Direct X Compatible",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 - 64-bit\n处理器: Intel® Core™ i7-4770K / AMD Ryzen 5 1500X\n内存: 12 GB RAM\n显卡: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB\n网络: 宽带互联网连接\n存储空间: 需要 150 GB 可用空间\n声卡: Direct X Compatible"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 - 64-bit\nProcessor: Intel® Core™ i5-2500K / AMD FX-6300\nMemory: 8 GB RAM\nGraphics: Nvidia GeForce GTX 770 2GB / AMD Radeon R9 280 3GB\nNetwork: Broadband Internet connection\nStorage: 150 GB available space\nSound Card: Direct X Compatible",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 - 64-bit\nProcessor: Intel® Core™ i7-4770K / AMD Ryzen 5 1500X\nMemory: 12 GB RAM\nGraphics: Nvidia GeForce GTX 1060 6GB / AMD Radeon RX 480 4GB\nNetwork: Broadband Internet connection\nStorage: 150 GB available space\nSound Card: Direct X Compatible"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:20:14.194Z",
+    "syncedAt": "2026-10-27T17:22:41.619Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:07.431Z",
       "page": "Red Dead Redemption 2"

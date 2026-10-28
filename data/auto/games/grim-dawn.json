@@ -2,9 +2,11 @@
   "id": "grim-dawn",
   "slug": "grim-dawn",
   "name": {
-    "zh": "Grim Dawn"
+    "zh": "恐怖黎明",
+    "en": "Grim Dawn"
   },
   "summary": "Enter an apocalyptic fantasy world where humanity is on the brink of extinction, iron is valued above gold and trust is hard earned.",
+  "summaryEn": "Enter an apocalyptic fantasy world where humanity is on the brink of extinction, iron is valued above gold and trust is hard earned.",
   "genres": [
     "action",
     "adventure",
@@ -21,7 +23,7 @@
       "url": "https://store.steampowered.com/app/219990/",
       "priceNote": "参考价 ¥ 93.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 219990,
@@ -37,6 +39,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows XP / Windows Vista / Windows 7 / Windows 8 / Windows 10\n处理器: x86 compatible 2.3GHz or faster processor (Intel 2nd generation core i-series or equivalent)\n内存: 2 GB RAM\n显卡: 512MB NVIDIA GeForce 6800 series or ATI Radeon X800 series or better\nDirectX 版本: 9.0c\n存储空间: 需要 5 GB 可用空间\n声卡: DirectX 9.0c compatible 16-bit sound card\n附注事项: 4GB of memory is required to host multiplayer games",
     "recommended": "推荐配置:\n操作系统 *: Windows 7 / Windows 10\n处理器: x86 compatible 3.2GHz or faster processor (Intel 4th generation core i-series or better)\n内存: 6 GB RAM\n显卡: 1.5GB NVIDIA GeForce 500 series or ATI Radeon 6000 series or better\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 5 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP / Windows Vista / Windows 7 / Windows 8 / Windows 10\nProcessor: x86 compatible 2.3GHz or faster processor (Intel 2nd generation core i-series or equivalent)\nMemory: 2 GB RAM\nGraphics: 512MB NVIDIA GeForce 6800 series or ATI Radeon X800 series or better\nDirectX: Version 9.0c\nStorage: 5 GB available space\nSound Card: DirectX 9.0c compatible 16-bit sound card\nAdditional Notes: 4GB of memory is required to host multiplayer games",
+    "recommended": "Recommended:\nOS *: Windows 7 / Windows 10\nProcessor: x86 compatible 3.2GHz or faster processor (Intel 4th generation core i-series or better)\nMemory: 6 GB RAM\nGraphics: 1.5GB NVIDIA GeForce 500 series or ATI Radeon 6000 series or better\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 5 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:01.753Z",
+    "syncedAt": "2026-10-27T17:24:45.271Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:12.684Z",
       "page": "Grim Dawn"

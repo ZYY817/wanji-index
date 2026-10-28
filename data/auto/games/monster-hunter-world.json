@@ -5,6 +5,7 @@
     "zh": "Monster Hunter: World"
   },
   "summary": "新的生命之地。狩猎, 就是本能! 「Monster Hunter: World」中,玩家可以体验终极的狩猎生活,活用新建构的世界中各种各样的地形与生态环境享受狩猎的惊喜与兴奋。",
+  "summaryEn": "Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using…",
   "genres": [
     "action"
   ],
@@ -18,7 +19,7 @@
       "url": "https://store.steampowered.com/app/582010/",
       "priceNote": "参考价 ¥ 148.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 582010,
@@ -34,6 +35,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit)\n处理器: Intel Core i5-4460 / Intel Core i3-9100F / AMD FX-6300 / AMD Ryzen 3 3200G\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 760 / NVIDIA GeForce GTX 1050 / AMD Radeon R7 260x / AMD Radeon RX 560\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 52 GB 可用空间\n声卡: DirectSound\n附注事项: ・可在画面设置为“低”、1080p/30fps的情况下进行游戏。 ・必须使用64位处理器与操作系统。",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit) / Windows 11\n处理器: Intel Core i7-3770 / Intel Core i3-8350 / Intel Core i3-9350F / AMD Ryzen 5 1500X / AMD Ryzen 5 3400G\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 1060 (VRAM 3GB) / NVIDIA GeForce GTX 1650 / AMD Radeon RX 480 / AMD Radeon RX 570\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 52 GB 可用空间\n声卡: DirectSound\n附注事项: 在图形设置为“高”的情况下，可实现1080p／30fps的游戏体验。需要 64 位处理器及操作系统。如需启用DirectX 12 API，至少需要使用Windows 10（Version 1809或更高版本），并配备显存容量不少于4GB的显卡（GPU）。 ※使用 Windows 11 时，请检查系统是否满足Windows 11的系统要求。"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (64-bit)\nProcessor: Intel Core i5-4460 / Intel Core i3-9100F / AMD FX-6300 / AMD Ryzen 3 3200G\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 760 / NVIDIA GeForce GTX 1050 / AMD Radeon R7 260x / AMD Radeon RX 560\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 52 GB available space\nSound Card: DirectSound\nAdditional Notes: - These specs allow for the game to be played in 1080p/30fps with graphics settings at \"Low\". - 64-bit processor and operating system are required.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (64-bit) / Windows 11\nProcessor: Intel Core i7-3770 / Intel Core i3-8350 / Intel Core i3-9350F / AMD Ryzen 5 1500X / AMD Ryzen 5 3400G\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 (VRAM 3GB) / NVIDIA GeForce GTX 1650 / AMD Radeon RX 480 / AMD Radeon RX 570\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 52 GB available space\nSound Card: DirectSound\nAdditional Notes: - These specs allow for the game to be played in 1080p/30fps with graphics settings at \"High\". - 64-bit processor and operating system are required. - Windows 10 (Version 1809 or later) and a 4GB VRAM GPU (graphics board or video card) are required for DirectX 12 API. ※ If you are using Windows 11, please ensure that your system meets the Windows 11 system requirements."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -45,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:20:06.659Z",
+    "syncedAt": "2026-10-27T17:22:34.306Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:11.115Z",
       "page": "Monster Hunter: World"

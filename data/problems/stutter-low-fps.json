@@ -76,5 +76,8 @@
   "relatedProblems": [
     "black-screen",
     "game-crash"
-  ]
+  ],
+  "shortEn": "Stutter & low FPS",
+  "titleEn": "Stuttering and low frame rate",
+  "summaryEn": "Low FPS overall means your PC is under spec — lower settings and turn on upscaling. Hitching with high FPS is usually shader compilation, disk loading or background apps."
 }

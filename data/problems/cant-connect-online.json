@@ -64,5 +64,8 @@
   ],
   "relatedProblems": [
     "game-crash"
-  ]
+  ],
+  "shortEn": "Can't connect",
+  "titleEn": "Can't connect online: matchmaking fails, timeouts, disconnects",
+  "summaryEn": "First check whether the servers are down. If it's only you, it's usually your network (NAT, ports, firewall) or the VPN/accelerator route."
 }

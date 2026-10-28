@@ -2,9 +2,11 @@
   "id": "left-4-dead-2",
   "slug": "left-4-dead-2",
   "name": {
-    "zh": "Left 4 Dead 2"
+    "zh": "求生之路 2",
+    "en": "Left 4 Dead 2"
   },
   "summary": "Set in the zombie apocalypse, Left 4 Dead 2 is a co-operative action horror FPS takes you and your friends through the cities, swamps and ce…",
+  "summaryEn": "Set in the zombie apocalypse, Left 4 Dead 2 is a co-operative action horror FPS takes you and your friends through the cities, swamps and ce…",
   "genres": [
     "action"
   ],
@@ -19,7 +21,7 @@
       "url": "https://store.steampowered.com/app/550/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 550,
@@ -35,6 +37,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows® 7 32/64-bit / Vista 32/64 / XP\n处理器: Pentium 4 3.0GHz\n内存: 2 GB RAM\n显卡: Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better\nDirectX 版本: 9.0c\n存储空间: 需要 13 GB 可用空间\n声卡: DirectX 9.0c compatible sound card",
     "recommended": "推荐配置:\n操作系统 *: Windows® 7 32/64-bit / Vista 32/64 / XP\n处理器: Intel core 2 duo 2.4GHz\n内存: 2 GB RAM\n显卡: Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better\nDirectX 版本: 9.0c\n存储空间: 需要 13 GB 可用空间\n声卡: DirectX 9.0c compatible sound card"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows® 7 32/64-bit / Vista 32/64 / XP\nProcessor: Pentium 4 3.0GHz\nMemory: 2 GB RAM\nGraphics: Video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better\nDirectX: Version 9.0c\nStorage: 13 GB available space\nSound Card: DirectX 9.0c compatible sound card",
+    "recommended": "Recommended:\nOS *: Windows® 7 32/64-bit / Vista 32/64 / XP\nProcessor: Intel core 2 duo 2.4GHz\nMemory: 2 GB RAM\nGraphics: Video Card Shader model 3.0. NVidia 7600, ATI X1600 or better\nDirectX: Version 9.0c\nStorage: 13 GB available space\nSound Card: DirectX 9.0c compatible sound card"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:44.654Z",
+    "syncedAt": "2026-10-27T17:25:29.874Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:05.279Z",
       "page": "Left 4 Dead 2"

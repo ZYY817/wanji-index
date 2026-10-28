@@ -1,0 +1,22 @@
+{
+  "cdda-oss": {
+    "steamAppId": "2330750",
+    "source": "steam-search"
+  },
+  "crossfire-free": {
+    "steamAppId": "4687500",
+    "source": "steam-search"
+  },
+  "openra-oss": {
+    "wide": "https://www.openra.net/images/social.jpg?t=2026-10-26-10-54",
+    "source": "og:image"
+  },
+  "supertuxkart-free": {
+    "wide": "https://supertuxkart.net/generated/assets/blog/Blog_darkcandle_thumb-800-0b394e9d7.jpg",
+    "source": "og:image"
+  },
+  "wuthering-waves-free": {
+    "steamAppId": "3513350",
+    "source": "steam-search"
+  }
+}

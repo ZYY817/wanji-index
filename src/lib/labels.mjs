@@ -15,3 +15,18 @@ export const ZH = {
 };
 
 export const zh = (group, key) => ZH[group]?.[key] ?? key;
+
+// 英文展示名（中英切换用；缺的回退到中文映射 → 原值）
+export const EN = {
+  platform: { steam: 'Steam', epic: 'Epic', gog: 'GOG', itch: 'itch.io', indiegala: 'IndieGala', official: 'Official', 'xbox-pc': 'Xbox PC', other: 'Other' },
+  freeType: { permanent: 'Free to play', limited: 'Free to keep', trial: 'Free trial', weekend: 'Free weekend', opensource: 'Open source' },
+  channelType: { buy: 'Buy', free: 'Free', trial: 'Trial', subscription: 'Subscription' },
+  siteCategory: { store: 'Store', 'free-platform': 'Free platform', indie: 'Indie', mod: 'Mod community', localization: 'Localization', 'guide-wiki': 'Wiki & guides', 'patch-support': 'Patches', other: 'Deals & data' },
+  toolType: { 'mod-manager': 'Mod manager', save: 'Saves', 'perf-monitor': 'Performance', 'game-manager': 'Game manager', 'trainer-channel': 'Trainers', 'compat-fix': 'Compatibility', other: 'Other' },
+  entryType: { mod: 'Mod', localization: 'Chinese patch', patch: 'Patch', 'guide-page': 'Guide', save: 'Save', 'tool-page': 'Tool', other: 'Resource' },
+  problemCategory: { crash: 'Crashes', launch: "Won't launch", dll: 'Missing files', display: 'Display', performance: 'Performance', save: 'Saves', input: 'Controller & input', network: 'Online' },
+  guideKind: { tutorial: 'Tutorial', troubleshooting: 'Troubleshooting' },
+  guideCategory: { 'install-run': 'Install & run', 'launch-crash': 'Launch & crashes', mod: 'Mods', 'save-backup': 'Save backup', 'settings-compat': 'Settings', performance: 'Performance' },
+  os: { windows: 'Windows', linux: 'Linux', macos: 'macOS' },
+};
+export const en = (group, key) => EN[group]?.[key] ?? ZH[group]?.[key] ?? key;

@@ -1,0 +1,16 @@
+{
+  "id": "luanti-oss",
+  "gameTitle": "Luanti Luanti（原 Minetest）",
+  "titleZh": "Luanti（原 Minetest）",
+  "type": "opensource",
+  "platform": "official",
+  "url": "https://www.luanti.org/",
+  "claimNote": "开源沙盒建造，玩法类似我的世界，社区模组极多",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source sandbox builder like Minecraft, with tons of mods"
+}

@@ -1,0 +1,334 @@
+{
+  "repo": "https://github.com/ZYY817/wanji-kit",
+  "version": "0.3",
+  "title": "wanji_kit v0.3 · 玩机装机工具",
+  "publishedAt": "2026-10-27T17:08:28Z",
+  "releaseUrl": "https://github.com/ZYY817/wanji-kit/releases/tag/v0.3",
+  "asset": {
+    "name": "wanji-kit-v0.3-windows-x64.zip",
+    "url": "https://github.com/ZYY817/wanji-kit/releases/download/v0.3/wanji-kit-v0.3-windows-x64.zip",
+    "sizeMb": 11.5,
+    "downloads": 0
+  },
+  "catalog": {
+    "version": 2,
+    "updatedAt": "2026-10-24",
+    "components": [
+      {
+        "id": "vc2022-x64",
+        "name": "Visual C++ 2015–2022 运行库（64位）",
+        "short": "VC++ 2022 x64",
+        "category": "vcredist",
+        "importance": "essential",
+        "why": "绝大多数现代游戏与工具的基础依赖",
+        "sizeMb": 25
+      },
+      {
+        "id": "vc2022-x86",
+        "name": "Visual C++ 2015–2022 运行库（32位）",
+        "short": "VC++ 2022 x86",
+        "category": "vcredist",
+        "importance": "essential",
+        "why": "32位游戏与启动器必需，64位系统也要装",
+        "sizeMb": 20
+      },
+      {
+        "id": "vc2013-x64",
+        "name": "Visual C++ 2013 运行库（64位）",
+        "short": "VC++ 2013 x64",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "2014–2017 年间大量游戏依赖（老滚5、GTA5 时期）",
+        "sizeMb": 8
+      },
+      {
+        "id": "vc2013-x86",
+        "name": "Visual C++ 2013 运行库（32位）",
+        "short": "VC++ 2013 x86",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "32位老游戏必需",
+        "sizeMb": 8
+      },
+      {
+        "id": "vc2012-x64",
+        "name": "Visual C++ 2012 运行库（64位）",
+        "short": "VC++ 2012 x64",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "2012–2014 年游戏常用",
+        "sizeMb": 8
+      },
+      {
+        "id": "vc2012-x86",
+        "name": "Visual C++ 2012 运行库（32位）",
+        "short": "VC++ 2012 x86",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "32位老游戏必需",
+        "sizeMb": 8
+      },
+      {
+        "id": "vc2010-x64",
+        "name": "Visual C++ 2010 运行库（64位）",
+        "short": "VC++ 2010 x64",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "2010–2012 年游戏常用（巫师2、传送门2 时代）",
+        "sizeMb": 6
+      },
+      {
+        "id": "vc2010-x86",
+        "name": "Visual C++ 2010 运行库（32位）",
+        "short": "VC++ 2010 x86",
+        "category": "vcredist",
+        "importance": "common",
+        "why": "32位老游戏必需",
+        "sizeMb": 6
+      },
+      {
+        "id": "vc2008-x64",
+        "name": "Visual C++ 2008 运行库（64位）",
+        "short": "VC++ 2008 x64",
+        "category": "vcredist",
+        "importance": "optional",
+        "why": "更早年代游戏（2008–2010）",
+        "sizeMb": 5
+      },
+      {
+        "id": "vc2008-x86",
+        "name": "Visual C++ 2008 运行库（32位）",
+        "short": "VC++ 2008 x86",
+        "category": "vcredist",
+        "importance": "optional",
+        "why": "更早年代 32 位游戏",
+        "sizeMb": 5
+      },
+      {
+        "id": "vc2005-x64",
+        "name": "Visual C++ 2005 SP1 运行库（64位）",
+        "short": "VC++ 2005 x64",
+        "category": "vcredist",
+        "importance": "optional",
+        "why": "2005–2008 年骨灰级老游戏（无 msvcr80.dll 打不开）",
+        "sizeMb": 4
+      },
+      {
+        "id": "vc2005-x86",
+        "name": "Visual C++ 2005 SP1 运行库（32位）",
+        "short": "VC++ 2005 x86",
+        "category": "vcredist",
+        "importance": "optional",
+        "why": "2005–2008 年 32 位老游戏必需",
+        "sizeMb": 4
+      },
+      {
+        "id": "netfx48",
+        "name": ".NET Framework 4.8",
+        "short": ".NET 4.8",
+        "category": "dotnet",
+        "importance": "essential",
+        "why": "大量游戏工具与启动器（MOD 管理器、汉化补丁工具）依赖",
+        "sizeMb": 60
+      },
+      {
+        "id": "netfx35",
+        "name": ".NET Framework 3.5 SP1",
+        "short": ".NET 3.5 SP1",
+        "category": "dotnet",
+        "importance": "common",
+        "why": "老游戏与老工具（2010 前后）点名要它；属 Windows 可选功能，需联网/系统源启用",
+        "sizeMb": 120
+      },
+      {
+        "id": "netdesktop9",
+        "name": ".NET 桌面运行时 9",
+        "short": ".NET 9 Desktop",
+        "category": "dotnet",
+        "importance": "common",
+        "why": "最新一代工具/启动器逐步迁移到 .NET 9",
+        "sizeMb": 55
+      },
+      {
+        "id": "netdesktop8",
+        "name": ".NET 桌面运行时 8",
+        "short": ".NET 8 Desktop",
+        "category": "dotnet",
+        "importance": "common",
+        "why": "新式工具与启动器（部分 MOD 管理器、游戏工具箱）依赖",
+        "sizeMb": 60
+      },
+      {
+        "id": "netdesktop6",
+        "name": ".NET 桌面运行时 6",
+        "short": ".NET 6 Desktop",
+        "category": "dotnet",
+        "importance": "optional",
+        "why": "2021–2023 年间的工具只认 .NET 6（运行时不向下兼容）",
+        "sizeMb": 55
+      },
+      {
+        "id": "webview2",
+        "name": "WebView2 运行时",
+        "short": "WebView2",
+        "category": "runtime",
+        "importance": "common",
+        "why": "新版启动器内嵌网页全靠它（EA App、Xbox、新登录器打不开多半缺它）",
+        "sizeMb": 180
+      },
+      {
+        "id": "dx-jun2010",
+        "name": "DirectX 旧组件（June 2010）",
+        "short": "DirectX 9.0c 补件",
+        "category": "directx",
+        "importance": "essential",
+        "why": "DX9/老游戏缺 D3DX9、XAudio、XInput1_3、XACT 报的错全是它",
+        "sizeMb": 95
+      },
+      {
+        "id": "directplay",
+        "name": "DirectPlay（旧版组件）",
+        "short": "DirectPlay",
+        "category": "windows",
+        "importance": "optional",
+        "why": "2000 年代老游戏联机组件（帝国时代、红警2 等），Windows 可选功能",
+        "sizeMb": 1
+      },
+      {
+        "id": "mediafeaturepack",
+        "name": "Media Feature Pack",
+        "short": "Media Feature Pack",
+        "category": "windows",
+        "importance": "optional",
+        "why": "仅 N 版 Windows 会缺（mfplat.dll），缺失时视频解码/游戏过场黑屏",
+        "sizeMb": 70
+      },
+      {
+        "id": "java21",
+        "name": "Java 21 运行时（Adoptium Temurin）",
+        "short": "Java 21",
+        "category": "middleware",
+        "importance": "optional",
+        "why": "部分整合包/启动器/工具需要系统级 Java（Minecraft 官方启动器自带可忽略）",
+        "sizeMb": 45
+      },
+      {
+        "id": "xna4",
+        "name": "XNA Framework 4.0",
+        "short": "XNA 4.0",
+        "category": "middleware",
+        "importance": "common",
+        "why": "星露谷物语、泰拉瑞亚、FEZ 等独立游戏必需",
+        "sizeMb": 7
+      },
+      {
+        "id": "openal",
+        "name": "OpenAL 音频库",
+        "short": "OpenAL",
+        "category": "middleware",
+        "importance": "optional",
+        "why": "Minecraft、部分独立游戏与模拟器需要",
+        "sizeMb": 1
+      },
+      {
+        "id": "physx",
+        "name": "NVIDIA PhysX 系统软件",
+        "short": "PhysX",
+        "category": "middleware",
+        "importance": "optional",
+        "why": "部分老 3A（蝙蝠侠、无主之地、镜之边缘）需要独立 PhysX",
+        "sizeMb": 30
+      },
+      {
+        "id": "ue4prereq",
+        "name": "UE4/UE5 前置组件包",
+        "short": "UE 前置组件",
+        "category": "middleware",
+        "importance": "optional",
+        "why": "虚幻引擎游戏首发弹“UE4 Prerequisites 缺失”就是它；正常随游戏 Redist 目录自带",
+        "sizeMb": 30
+      },
+      {
+        "id": "power-high",
+        "name": "高性能电源计划",
+        "short": "高性能电源",
+        "category": "setting",
+        "importance": "low",
+        "why": "避免节能策略限制 CPU/GPU 睿频，帧率与加载更稳",
+        "sizeMb": 0
+      },
+      {
+        "id": "gamemode",
+        "name": "游戏模式 Game Mode",
+        "short": "游戏模式",
+        "category": "setting",
+        "importance": "low",
+        "why": "游戏时优先分配 CPU/GPU 资源并压制后台更新",
+        "sizeMb": 0
+      },
+      {
+        "id": "hags",
+        "name": "GPU 硬件加速调度 HAGS",
+        "short": "硬件加速调度",
+        "category": "setting",
+        "importance": "low",
+        "why": "显卡直接管理显存调度，降低延迟；开启后需重启生效（不支持的硬件会保持未开启）",
+        "sizeMb": 0
+      },
+      {
+        "id": "game-dvr-off",
+        "name": "关闭 Game DVR 后台录制",
+        "short": "关后台录制",
+        "category": "setting",
+        "importance": "low",
+        "why": "后台录制持续占用磁盘与编码资源，关闭可明显减少帧率波动",
+        "sizeMb": 0
+      },
+      {
+        "id": "fullscreen-opt",
+        "name": "全屏优化模式",
+        "short": "全屏优化",
+        "category": "setting",
+        "importance": "low",
+        "why": "让全屏游戏走优化呈现路径，无边框全屏也能拿满帧率",
+        "sizeMb": 0
+      },
+      {
+        "id": "visual-performance",
+        "name": "视觉效果调为性能优先",
+        "short": "视觉性能优先",
+        "category": "setting",
+        "importance": "low",
+        "why": "关掉动画/阴影等桌面特效换帧率；界面会变朴素，随时可在系统性能选项里改回",
+        "sizeMb": 0
+      }
+    ]
+  },
+  "shots": [
+    {
+      "name": "result",
+      "src": "/kit/result.webp",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "components",
+      "src": "/kit/components.webp",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "install",
+      "src": "/kit/install.webp",
+      "width": 1280,
+      "height": 720
+    },
+    {
+      "name": "idle",
+      "src": "/kit/idle.webp",
+      "width": 1360,
+      "height": 816
+    }
+  ],
+  "checkedAt": "2026-10-28"
+}

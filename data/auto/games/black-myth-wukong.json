@@ -6,6 +6,7 @@
     "en": "Black Myth: Wukong"
   },
   "summary": "《黑神话：悟空》是一款以中国神话为背景的动作角色扮演游戏。你将扮演一位“天命人”，为了探寻昔日传说的真相，踏上一条充满危险与惊奇的西游之路。",
+  "summaryEn": "Black Myth: Wukong is an action RPG rooted in Chinese mythology.",
   "genres": [
     "action",
     "adventure",
@@ -21,7 +22,7 @@
       "url": "https://store.steampowered.com/app/2358720/",
       "priceNote": "参考价 ¥ 268.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 2358720,
@@ -37,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel Core i5-8400 / AMD Ryzen 5 1600\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580 8GB\nDirectX 版本: 11\n存储空间: 需要 130 GB 可用空间\n声卡: 兼容 Windows 的音频设备\n附注事项: 支持机械硬盘（HDD），推荐使用固态硬盘（SSD）。以上配置均在启用DLSS/FSR/Xess技术的情况下进行测试。",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel Core i7-9700 / AMD Ryzen 5 5500\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT / INTEL Arc A750\nDirectX 版本: 12\n存储空间: 需要 130 GB 可用空间\n声卡: 兼容 Windows 的音频设备\n附注事项: 需要使用固态硬盘（SSD）。以上配置均在启用DLSS/FSR/Xess技术的情况下进行测试。"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-8400 / AMD Ryzen 5 1600\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 6GB / AMD Radeon RX 580 8GB\nDirectX: Version 11\nStorage: 130 GB available space\nSound Card: Windows Compatible Audio Device\nAdditional Notes: HDD Supported, SSD Recommended. The above specifications were tested with DLSS/FSR/XeSS enabled.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel Core i7-9700 / AMD Ryzen 5 5500\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 2060 / AMD Radeon RX 5700 XT / INTEL Arc A750\nDirectX: Version 12\nStorage: 130 GB available space\nSound Card: Windows Compatible Audio Device\nAdditional Notes: SSD Required. The above specifications were tested with DLSS/FSR/XeSS enabled."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:19:30.762Z",
+    "syncedAt": "2026-10-27T17:21:58.036Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:43.056Z",
       "page": "Black Myth: Wukong"

@@ -1,6 +1,7 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { loadData } from '@/lib/data.mjs';
-import { zh } from '@/lib/labels.mjs';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { ToolsGuidesIndex } from '@/components/catalog/tools-guides-index';
 import { ToolRow } from '@/components/catalog/tool-card';
@@ -13,15 +14,16 @@ export default function ToolsPage() {
   return (
     <>
       <IndexMasthead
-        title="工具"
+        title={<T zh="工具" en="Tools" />}
         count={tools.length}
-        description={`收录 ${tools.length} 款常用工具：管理 MOD、备份存档、监控性能，附下载地址与安装要点。`}
+        description={<T zh={`收录 ${tools.length} 款常用工具：管理 MOD、备份存档、监控性能，附下载地址与安装要点。`} en={`${tools.length} handy tools for managing mods, backing up saves and monitoring performance, with download links and setup notes.`} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex
           param="type"
           placeholder="工具名或用途"
-          categories={types.map((t) => ({ value: t, label: zh('toolType', t) }))}
+          placeholderEn="Tool name or use"
+          categories={types.map((t) => ({ value: t, label: L('toolType', t) }))}
           rows={tools.map((t: any) => ({
             id: t.id,
             query: [t.name, t.summary, ...(t.aliases ?? [])].join(' '),

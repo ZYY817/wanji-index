@@ -6,6 +6,7 @@
     "en": "Trove"
   },
   "summary": "快快呼朋唤友、秣兵历马，勇闯这款超棒的动作MMO《宝藏世界》吧！",
+  "summaryEn": "Grab your friends, hone your blades, and set off for an epic procedurally generated adventure in Trove! Battle the Shadow in realms filled w…",
   "genres": [
     "action",
     "adventure",
@@ -23,7 +24,7 @@
       "url": "https://store.steampowered.com/app/304050/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 304050,
@@ -39,6 +40,10 @@
     "minimum": "最低配置:\n操作系统: Vista 32位“服务包2”\n处理器: 英特尔酷睿i5-2XXX @ 2.0GHz / AMD Phenom II X4 @ 2.6GHz\n内存: 4 GB RAM\n显卡: 英特尔高清显卡3000或更高\nDirectX 版本: 10\n网络: 宽带互联网连接\n存储空间: 需要 2 GB 可用空间\n附注事项: 图形驱动:OpenGL 3.2或DirectX 10.0",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 64-bit SP1\nProcessor: Intel Core i5-2XXX @ 2.0GHz / AMD Phenom II X4 @ 2.6GHz\nMemory: 4 GB RAM\nGraphics: Intel HD Graphics 3000 or better\nDirectX: Version 10\nNetwork: Broadband Internet connection\nStorage: 2 GB available space\nAdditional Notes: Graphics driver: OpenGL 3.2 or DirectX 10.0",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:34.601Z",
+    "syncedAt": "2026-10-27T17:26:59.553Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:47.006Z",
       "page": "Trove"

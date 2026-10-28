@@ -12,6 +12,7 @@
     "platform": { "type": "string", "x-enum": "platform" },
     "url": { "type": "string", "pattern": "^https?://" },
     "claimNote": { "type": "string" },
+    "claimNoteEn": { "type": "string", "description": "英文领取说明（中英切换用）" },
     "startDate": { "type": "string" },
     "endDate": { "type": "string" },
     "checkedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },

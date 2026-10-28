@@ -3,8 +3,9 @@ import Link from 'next/link';
 import { motion, useReducedMotion } from 'motion/react';
 import { NAV, navActive } from '@/lib/nav';
 import { cn } from '@/lib/utils';
+import { T } from '@/lib/i18n';
 
-function NavItem({ href, label, active }: { href: string; label: string; active: boolean }) {
+function NavItem({ href, label, active }: { href: string; label: React.ReactNode; active: boolean }) {
   const reduced = useReducedMotion();
   return (
     <li className="h-full">
@@ -31,7 +32,7 @@ function NavItem({ href, label, active }: { href: string; label: string; active:
 }
 
 /**
- * 桌面主导航：只有中文标签，一个层级。当前项 = 白字 + 贴底 2px 信号橙线（随路由滑动）。
+ * 桌面主导航：中英双语标签（随语言切换），一个层级。当前项 = 白字 + 贴底 2px 信号橙线（随路由滑动）。
  * 首页是一条连续镜头，不再显示章节进度。
  */
 export function HeaderNav({ pathname }: { pathname: string }) {
@@ -39,7 +40,7 @@ export function HeaderNav({ pathname }: { pathname: string }) {
     <nav aria-label="主导航" className="hidden h-full items-stretch justify-self-center lg:flex">
       <ul className="flex h-full items-stretch">
         {NAV.map((n) => (
-          <NavItem key={n.href} href={n.href} label={n.label} active={navActive(n, pathname)} />
+          <NavItem key={n.href} href={n.href} label={<T zh={n.label} en={n.en} />} active={navActive(n, pathname)} />
         ))}
       </ul>
     </nav>

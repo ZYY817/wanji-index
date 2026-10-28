@@ -5,6 +5,7 @@
     "zh": "Hollow Knight"
   },
   "summary": "在《空洞骑士》中打造属于自己的冒险之旅！穿越一个庞大却废弃的属于昆虫与英雄的王国，开启史诗般的冒险旅程。探索幽深的洞穴，与被感染的生物战斗，结识友好又奇异的昆虫，整个游戏都是经典的手绘 2D 风格。",
+  "summaryEn": "Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes.",
   "genres": [
     "action",
     "adventure",
@@ -22,7 +23,7 @@
       "url": "https://store.steampowered.com/app/367520/",
       "priceNote": "参考价 ¥ 58.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 367520,
@@ -38,6 +39,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 21H1 (build 19043) or newer\n处理器: Intel Core i3-3240, AMD FX-4300\n内存: 4 GB RAM\n显卡: GeForce GTX 560 Ti (1GB), Radeon HD 7750 (1GB)\nDirectX 版本: 10\n存储空间: 需要 9 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 21H1 (build 19043) or newer\n处理器: Intel Core i5-3470\n内存: 8 GB RAM\n显卡: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)\nDirectX 版本: 10\n存储空间: 需要 9 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 version 21H1 (build 19043) or newer\nProcessor: Intel Core i3-3240, AMD FX-4300\nMemory: 4 GB RAM\nGraphics: GeForce GTX 560 Ti (1GB), Radeon HD 7750 (1GB)\nDirectX: Version 10\nStorage: 9 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 version 21H1 (build 19043) or newer\nProcessor: Intel Core i5-3470\nMemory: 8 GB RAM\nGraphics: GeForce GTX 1050 (2GB), Radeon R9 380 (2GB)\nDirectX: Version 10\nStorage: 9 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -49,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:20:02.852Z",
+    "syncedAt": "2026-10-27T17:22:30.467Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:56.172Z",
       "page": "Hollow Knight"

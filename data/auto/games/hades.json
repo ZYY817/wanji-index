@@ -5,6 +5,7 @@
     "zh": "Hades"
   },
   "summary": "挑战死神，在地狱中杀出血路。由 Bastion、Transistor 和 Pyre 原班人马打造的全新地下城 类游 戏，为您带来爽 快 的 自 由 砍 杀 体验",
+  "summaryEn": "Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transi…",
   "genres": [
     "action",
     "indie",
@@ -21,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1145360/",
       "priceNote": "参考价 ¥ 92.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1145360,
@@ -37,6 +38,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7 SP1\n处理器: Dual Core 2.4 GHz\n内存: 4 GB RAM\n显卡: 1GB VRAM / DirectX 10+ support\n存储空间: 需要 15 GB 可用空间",
     "recommended": "推荐配置:\n操作系统 *: Windows 7 SP1\n处理器: Dual Core 3.0 GHz+\n内存: 8 GB RAM\n显卡: 2GB VRAM / DirectX 10+ support\n存储空间: 需要 20 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 SP1\nProcessor: Dual Core 2.4 GHz\nMemory: 4 GB RAM\nGraphics: 1GB VRAM / DirectX 10+ support\nStorage: 15 GB available space",
+    "recommended": "Recommended:\nOS *: Windows 7 SP1\nProcessor: Dual Core 3.0 GHz+\nMemory: 8 GB RAM\nGraphics: 2GB VRAM / DirectX 10+ support\nStorage: 20 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:19:59.178Z",
+    "syncedAt": "2026-10-27T17:22:26.676Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:14.758Z",
       "page": "Hades"

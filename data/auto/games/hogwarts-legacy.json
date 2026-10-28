@@ -6,6 +6,7 @@
     "en": "Hogwarts Legacy"
   },
   "summary": "《霍格沃茨之遗》是一款沉浸式开放世界动作角色扮演游戏。这回，你将在魔法世界中扮演“你自己”，亲手书写属于自己的传奇。",
+  "summaryEn": "Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in…",
   "genres": [
     "action",
     "adventure",
@@ -21,7 +22,7 @@
       "url": "https://store.steampowered.com/app/990080/",
       "priceNote": "参考价 ¥ 384.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 990080,
@@ -37,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: Intel Core i5-6600 (3.3Ghz) or AMD Ryzen 5 1400 (3.2Ghz)\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 960 4GB or AMD Radeon RX 470 4GB\nDirectX 版本: 12\n存储空间: 需要 85 GB 可用空间\n附注事项: SSD (Preferred), HDD (Supported), 720p/30 fps, Low Quality Settings",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: Intel Core i7-8700 (3.2Ghz) or AMD Ryzen 5 3600 (3.6 Ghz)\n内存: 16 GB RAM\n显卡: NVIDIA GeForce 1080 Ti or AMD Radeon RX 5700 XT or INTEL Arc A770\nDirectX 版本: 12\n存储空间: 需要 85 GB 可用空间\n附注事项: SSD, 1080p/60 fps, High Quality Settings"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: Intel Core i5-6600 (3.3Ghz) or AMD Ryzen 5 1400 (3.2Ghz)\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 960 4GB or AMD Radeon RX 470 4GB\nDirectX: Version 12\nStorage: 85 GB available space\nAdditional Notes: SSD (Preferred), HDD (Supported), 720p/30 fps, Low Quality Settings",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: Intel Core i7-8700 (3.2Ghz) or AMD Ryzen 5 3600 (3.6 Ghz)\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce 1080 Ti or AMD Radeon RX 5700 XT or INTEL Arc A770\nDirectX: Version 12\nStorage: 85 GB available space\nAdditional Notes: SSD, 1080p/60 fps, High Quality Settings"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:31.018Z",
+    "syncedAt": "2026-10-27T17:25:14.923Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:35.834Z",
       "page": "Hogwarts Legacy"

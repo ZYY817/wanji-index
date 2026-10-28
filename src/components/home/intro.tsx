@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import { useEffect, useState } from 'react';
 import { animate, motion } from 'motion/react';
 import { EASE_INOUT, EASE_OUT } from '@/components/fx/tokens';
@@ -46,7 +47,7 @@ export function Intro({ total }: { total: number }) {
           <span className="font-serif text-5xl font-black tabular-nums">{n}</span>
         </div>
         <motion.p className="mt-6 text-sm tracking-[0.5em] text-fg-2 [margin-right:-0.5em]" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.5, ease: EASE_OUT }}>
-          玩机索引
+          <T zh="玩机索引" en="WANJI INDEX" />
         </motion.p>
       </motion.div>
     </div>

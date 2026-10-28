@@ -1,87 +1,77 @@
-'use client';
-import Link from 'next/link';
-import { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { ArrowDown } from 'lucide-react';
-import { KIT_ITEMS } from '@/lib/kit';
-import { ArchiveRing } from '@/components/fx/archive-ring';
-import { Magnetic } from '@/components/fx/interact';
-
-const GROUPS = ['VC++', 'DirectX', '.NET', '其他'] as const;
+import { ArrowDown, Download } from 'lucide-react';
+import { T } from '@/lib/i18n';
+import { KIT, kitDate } from '@/lib/kit-release';
+import { GithubMark } from './github-mark';
+import { withBase } from '@/lib/base';
 
 /**
- * 装机页首屏：与首页第 6 章同一套亮色展台语言（暖白空间 + 左上斜光 + 中央物件 + 四角标签）。
- * 滚动时物件缓慢转正、整屏轻微上移淡出，把画面交给下面的交互预览。
+ * 装机页首屏：与首页装机章同一套亮色展台（暖白空间 + 左上斜光）。
+ * 左边回答「这是什么、去哪下」，右边是工具的真实界面截图（scripts/sync/kit-release.mjs 从 GitHub 同步）。
  */
 export function KitHero() {
-  const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ['start start', 'end start'] });
-  const rotate = useTransform(p, [0, 1], [-10, 30]);
-  const tilt = useTransform(p, [0, 1], [56, 24]);
-  const y = useTransform(p, [0, 1], [0, -120]);
-  const fade = useTransform(p, [0.2, 0.8], [1, 0]);
-  const counts = GROUPS.map((g) => KIT_ITEMS.filter((k) => k.group === g).length);
   const rise = (i: number) => ({ animationDelay: `${0.1 + i * 0.08}s` });
+  const shot = KIT.shots.find((s) => s.name === 'idle') ?? KIT.shots[0];
+  const count = KIT.catalog?.components.length ?? 0;
 
   return (
-    <section ref={ref} aria-labelledby="kit-page-title" className="relative h-[100svh] min-h-[720px] overflow-hidden bg-paper text-ink">
+    <section aria-labelledby="kit-page-title" className="relative overflow-hidden bg-paper text-ink">
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(118deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_38%),linear-gradient(0deg,rgba(201,192,176,0.45)_0%,transparent_35%)]" />
       <div aria-hidden className="absolute -left-[10%] top-[-20%] h-[140%] w-[38%] rotate-[28deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.55),transparent)]" />
 
-      <motion.div className="relative h-full" style={{ y, opacity: fade }}>
-        {/* 顶部：标题 + 状态 */}
-        <div className="container-x flex items-start justify-between pt-[calc(var(--header-h)+6vh)]">
-          <div>
-            <p className="animate-rise text-sm tracking-[0.4em] text-ink-3" style={rise(0)}>运 行 库 体 检</p>
-            <h1 id="kit-page-title" className="mt-4 animate-rise font-serif text-[clamp(40px,4.6vw,72px)] font-black leading-[1.08] tracking-[-0.04em]" style={rise(1)}>
-              开机之后，
-              <br />
-              开玩之前。
-            </h1>
-            <p className="mt-5 max-w-[30ch] animate-rise text-base leading-[1.8] text-ink-2" style={rise(2)}>
-              一个专注运行库检测与修复的 Windows 小工具：缺什么一屏看清，只从官方源补齐。
-            </p>
+      <div className="container-x relative grid items-center gap-12 pb-16 pt-[calc(var(--header-h)+48px)] md:pb-24 lg:min-h-[92svh] lg:grid-cols-12 lg:gap-10 lg:pt-[calc(var(--header-h)+32px)]">
+        <div className="lg:col-span-5">
+          <p className="flex animate-rise flex-wrap items-center gap-3 text-sm text-ink-3" style={rise(0)}>
+            <span className="inline-flex h-7 items-center gap-2 rounded-full border border-ink/20 px-3 text-ink">
+              <span aria-hidden className="size-1.5 rounded-full bg-[#2F8F5B]" />
+              <T zh={`v${KIT.version} 已发布`} en={`v${KIT.version} released`} />
+            </span>
+            <span><T zh="玩机装机工具" en="Wanji Kit" /> · wanji-kit</span>
+          </p>
+          <h1 id="kit-page-title" className="mt-6 animate-rise font-serif text-[clamp(40px,4.6vw,72px)] font-black leading-[1.08] tracking-[-0.04em]" style={rise(1)}>
+            <T zh={<>开机之后，<br />开玩之前。</>} en={<>After boot,<br />before play.</>} />
+          </h1>
+          <p className="mt-5 max-w-[34ch] animate-rise text-lg leading-[1.8] text-ink-2" style={rise(2)}>
+            <T
+              zh={`游戏打不开？多半是缺运行库。扫一遍就知道缺什么，点一下从微软和官方渠道自动装齐。${count} 项检测，免安装。`}
+              en={`Game won’t start? It’s usually a missing runtime. Scan to see what’s missing, then install it all from Microsoft and official sources in one click. ${count} checks, no install needed.`}
+            />
+          </p>
+
+          <div className="mt-8 flex animate-rise flex-wrap items-center gap-3" style={rise(3)}>
+            {KIT.asset && (
+              <a href={KIT.asset.url} className="inline-flex h-12 items-center gap-2.5 rounded-sm bg-ink px-6 text-base font-medium text-paper shadow-[0_24px_40px_-20px_rgba(20,16,10,0.6)] transition-colors hover:bg-ink/85">
+                <Download aria-hidden className="size-4" />
+                <T zh={`下载 v${KIT.version}`} en={`Download v${KIT.version}`} />
+                <span className="font-mono text-sm text-paper/60">{KIT.asset.sizeMb} MB</span>
+              </a>
+            )}
+            <a href={KIT.repo} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center gap-2 rounded-sm border border-ink/25 px-5 text-base text-ink transition-colors hover:border-ink hover:bg-ink/[0.04]">
+              <GithubMark className="size-4" />
+              <T zh="源码" en="Source" />
+              <span className="sr-only"><T zh="（在新窗口打开）" en="(opens in a new window)" /></span>
+            </a>
           </div>
-          <div className="hidden animate-rise flex-col items-end gap-3 pt-2 sm:flex" style={rise(1)}>
-            <span className="inline-flex h-7 items-center gap-2 rounded-full border border-ink/20 px-3 text-sm text-ink"><span aria-hidden className="size-1.5 rounded-full bg-primary" />开发中</span>
-            <p className="text-right font-mono text-xs leading-[1.8] text-ink-3">Windows 10 / 11 · x64<br />v0.1</p>
+          <p className="mt-4 animate-rise font-mono text-xs leading-[1.9] text-ink-3" style={rise(4)}>
+            Windows 10 / 11 · x64 · <T zh="免安装 zip" en="portable zip" /> · <T zh="发布于" en="released" /> {kitDate(KIT.publishedAt)}
+          </p>
+        </div>
+
+        {shot && (
+          <div className="animate-rise lg:col-span-7" style={rise(2)}>
+            <figure className="relative">
+              <div className="overflow-hidden rounded-md bg-[#EFEAE1] shadow-[0_50px_90px_-40px_rgba(50,40,25,0.55),0_0_0_1px_rgba(20,16,10,0.08)]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={withBase(shot.src)} width={shot.width} height={shot.height} alt="" className="block h-auto w-full" fetchPriority="high" />
+              </div>
+              <figcaption className="mt-3 text-right text-xs text-ink-3"><T zh="工具真实界面 · 待机" en="Actual app screen · idle" /></figcaption>
+            </figure>
           </div>
-        </div>
+        )}
 
-        {/* 中央物件 */}
-        <div className="absolute left-1/2 top-[56%] size-[min(46vh,80vw,420px)] -translate-x-1/2 -translate-y-1/2">
-          <ArchiveRing rotate={rotate} tilt={tilt} tone="light" className="size-full" />
-          <span aria-hidden className="absolute left-1/2 top-1/2 size-[34%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle_at_35%_30%,#FFFFFF_0%,#E4DED2_40%,#A39B8C_75%,#5E584D_100%)] shadow-[0_40px_60px_-30px_rgba(60,52,40,0.55)]" />
-        </div>
-
-        {/* 四组检测项：底部横排，节点 + 细线 */}
-        <div className="container-x absolute inset-x-0 bottom-[6vh]">
-          <ol className="grid grid-cols-2 gap-6 border-t border-ink/15 pt-5 md:grid-cols-4">
-            {GROUPS.map((g, i) => (
-              <li key={g} className="animate-rise" style={rise(3 + i)}>
-                <p className="flex items-center gap-2 font-mono text-xs text-ink-3">
-                  <span aria-hidden className="size-[6px] rounded-full bg-ink" />
-                  {String(i + 1).padStart(2, '0')}
-                </p>
-                <p className="mt-2 text-xl font-medium text-ink">{g === '其他' ? 'XNA · OpenAL' : g}</p>
-                <p className="mt-1 text-sm text-ink-3">{counts[i]} 项检测</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        {/* 向下：去看交互预览 */}
-        <div className="absolute right-[var(--gutter)] top-[56%] hidden -translate-y-1/2 md:block">
-          <Magnetic strength={10} radius={90}>
-            <Link href="#preview" className="group flex flex-col items-center gap-3">
-              <span className="grid size-20 place-items-center rounded-full bg-ink text-paper shadow-[0_30px_50px_-20px_rgba(20,16,10,0.6)] ring-8 ring-ink/5 transition-transform duration-300 group-hover:scale-105">
-                <ArrowDown aria-hidden className="size-5" />
-              </span>
-              <span className="text-sm tracking-[0.3em] [margin-right:-0.3em]">看演示</span>
-            </Link>
-          </Magnetic>
-        </div>
-      </motion.div>
+        <a href="#features" className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs tracking-[0.3em] text-ink-3 transition-colors hover:text-ink lg:flex">
+          <ArrowDown aria-hidden className="size-4" />
+        </a>
+      </div>
     </section>
   );
 }

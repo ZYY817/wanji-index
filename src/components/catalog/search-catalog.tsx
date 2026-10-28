@@ -1,4 +1,6 @@
 'use client';
+import { useL, useLang } from '@/components/layout/lang-toggle';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { ArrowRight, Search, X } from 'lucide-react';
@@ -11,6 +13,7 @@ import { SectionHeading } from '@/components/ui/section-label';
 import { useCatalogQuery } from './use-catalog-query';
 
 const SUGGESTIONS = ['星露谷', 'MOD', 'DirectX', '存档', '汉化'];
+const SUGGESTIONS_EN = ['Stardew', 'Elden Ring', 'DirectX', 'MOD', 'dll'];
 
 function ResultRow({ item }: { item: RecentItem }) {
   return (
@@ -29,7 +32,7 @@ function ResultRow({ item }: { item: RecentItem }) {
   );
 }
 
-function Message({ title, children, role = 'status' }: { title: string; children?: React.ReactNode; role?: 'status' | 'alert' }) {
+function Message({ title, children, role = 'status' }: { title: React.ReactNode; children?: React.ReactNode; role?: 'status' | 'alert' }) {
   return (
     <section role={role} className="py-16">
       <h2 className="font-serif text-3xl font-bold">{title}</h2>
@@ -43,6 +46,8 @@ function Message({ title, children, role = 'status' }: { title: string; children
  * 空查询时给出示例关键词与最近访问；索引加载失败可重试，关键词保留。
  */
 export function SearchCatalog() {
+  const l = useL();
+  const lang = useLang();
   const { query, update } = useCatalogQuery();
   const q = query.q ?? '';
   const [items, setItems] = useState<SearchItem[] | null>(null);
@@ -67,42 +72,42 @@ export function SearchCatalog() {
   let body: React.ReactNode;
   if (error) {
     body = (
-      <Message title="搜索索引暂时没能加载" role="alert">
-        <p className="mt-3 text-base text-fg-2">请检查网络后重试，你输入的关键词会保留。</p>
-        <Button className="mt-6" onClick={() => setAttempt((n) => n + 1)}>重新加载</Button>
+      <Message title={<T zh="搜索索引暂时没能加载" en="Couldn’t load the search index" />} role="alert">
+        <p className="mt-3 text-base text-fg-2"><T zh="请检查网络后重试，你输入的关键词会保留。" en="Check your connection and try again — your search is kept." /></p>
+        <Button className="mt-6" onClick={() => setAttempt((n) => n + 1)}><T zh="重新加载" en="Reload" /></Button>
       </Message>
     );
   } else if (!q.trim()) {
     body = (
       <div className="grid gap-12 py-14 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <h2 className="font-serif text-3xl font-bold leading-snug">想玩什么，<br />或遇到了什么问题？</h2>
-          <p className="mt-4 text-base text-fg-2">可以试试这些关键词：</p>
+          <h2 className="font-serif text-3xl font-bold leading-snug"><T zh={<>想玩什么，<br />或遇到了什么问题？</>} en={<>What do you want to play,<br />or what went wrong?</>} /></h2>
+          <p className="mt-4 text-base text-fg-2"><T zh="可以试试这些关键词：" en="Try one of these:" /></p>
           <div className="mt-4 flex flex-wrap gap-2">
-            {SUGGESTIONS.map((term) => <Button key={term} onClick={() => setQuery(term)}>{term}</Button>)}
+            {(lang === 'en' ? SUGGESTIONS_EN : SUGGESTIONS).map((term) => <Button key={term} onClick={() => setQuery(term)}>{term}</Button>)}
           </div>
         </div>
         <section className="lg:col-span-7 lg:col-start-6">
-          <SectionHeading title="最近访问" count={recent.length || undefined} />
+          <SectionHeading title={<T zh="最近访问" en="Recently viewed" />} count={recent.length || undefined} />
           {recent.length
             ? recent.map((item) => <ResultRow key={item.url} item={item} />)
-            : <p className="text-base text-fg-3">从搜索结果打开的页面会留在这里，方便下次回来。</p>}
+            : <p className="text-base text-fg-3"><T zh="从搜索结果打开的页面会留在这里，方便下次回来。" en="Pages you open from search show up here." /></p>}
         </section>
       </div>
     );
   } else if (!items) {
-    body = <p className="py-16 text-base text-fg-2" role="status">正在加载搜索索引…</p>;
+    body = <p className="py-16 text-base text-fg-2" role="status"><T zh="正在加载搜索索引…" en="Loading search index…" /></p>;
   } else if (!results.length) {
     body = (
-      <Message title={`没有找到「${q}」`}>
-        <p className="mt-3 text-base text-fg-2">试试游戏的中文名、英文名，或缩短报错里的关键词。</p>
-        <Button className="mt-6" onClick={() => setQuery('')}>清空重新查找</Button>
+      <Message title={<T zh={`没有找到「${q}」`} en={`No results for “${q}”`} />}>
+        <p className="mt-3 text-base text-fg-2"><T zh="试试游戏的中文名、英文名，或缩短报错里的关键词。" en="Try the game’s Chinese or English name, or fewer words from the error." /></p>
+        <Button className="mt-6" onClick={() => setQuery('')}><T zh="清空重新查找" en="Clear and search again" /></Button>
       </Message>
     );
   } else {
     body = (
       <div className="py-12">
-        <p className="mb-10 text-base text-fg-2" role="status">找到 <span className="text-foreground">{results.length}</span> 条结果</p>
+        <p className="mb-10 text-base text-fg-2" role="status"><T zh="找到" en="" /> <span className="text-foreground">{results.length}</span> <T zh="条结果" en="results" /></p>
         <div className="space-y-14">
           {groupByType(results).map((group) => (
             <section key={group.type}>
@@ -119,17 +124,17 @@ export function SearchCatalog() {
     <div className="container-x pb-24">
       <div role="search" className="flex items-center gap-4 border-b border-foreground/30 py-8 md:py-10">
         <Search aria-hidden className="size-6 shrink-0 text-fg-3" />
-        <label htmlFor="full-search" className="sr-only">搜索游戏、资源站、工具或教程</label>
+        <label htmlFor="full-search" className="sr-only"><T zh="搜索游戏、资源站、工具或教程" en="Search games, sites, tools or guides" /></label>
         <input
           id="full-search"
           type="search"
           value={q}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="输入游戏名、工具名或报错…"
+          placeholder={l('输入游戏名、工具名或报错…', 'Type a game, a tool or an error…')}
           autoComplete="off"
           className="min-w-0 flex-1 bg-transparent py-2 font-serif text-[clamp(20px,3.6vw,48px)] font-bold tracking-[-0.02em] placeholder:text-fg-3"
         />
-        {q && <Button size="icon" variant="ghost" onClick={() => setQuery('')} aria-label="清空搜索"><X aria-hidden /></Button>}
+        {q && <Button size="icon" variant="ghost" onClick={() => setQuery('')} aria-label={l('清空搜索', 'Clear search')}><X aria-hidden /></Button>}
       </div>
       {body}
     </div>

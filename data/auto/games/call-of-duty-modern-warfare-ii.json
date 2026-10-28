@@ -3,9 +3,10 @@
   "slug": "call-of-duty-modern-warfare-ii",
   "name": {
     "zh": "使命召唤",
-    "en": "Call of Duty: Modern Warfare II"
+    "en": "Call of Duty"
   },
   "summary": "使命召唤®体验支持《现代战争® 4》、《黑色行动 7》和《使命召唤®：战争地带™》。",
+  "summaryEn": "The Call of Duty® experience supports Modern Warfare® 4, Black Ops 7 and Call of Duty®: Warzone™.",
   "genres": [
     "action"
   ],
@@ -18,7 +19,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/1938090/",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1938090,
@@ -41,6 +42,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 64位（最新更新）*\n处理器: AMD 锐龙™ 5 1400或英特尔® 酷睿™ i5-6600\n内存: 8 GB RAM\n显卡: AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 970 / 1060或Intel® Arc™ A580\n网络: 宽带互联网连接\n存储空间: 需要 115 GB 可用空间\n声卡: 兼容DirectX\n附注事项: *可能不支持兼容Windows®操作系统的试用版、Beta版或Insider预览版。固态硬盘在发布时需要有115GB的可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 11 64位（最新更新）*\n处理器: AMD 锐龙™ 5 3600或英特尔® 酷睿™ i7-8700K\n内存: 16 GB RAM\n显卡: AMD Radeon™ RX 6600XT或NVIDIA® GeForce® RTX 3060或Intel® Arc™ B580\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 115 GB 可用空间\n声卡: 兼容DirectX\n附注事项: *可能不支持兼容Windows®操作系统的试用版、Beta版或Insider预览版。固态硬盘在发布时需要有115GB的可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64 Bit (latest update)*\nProcessor: AMD Ryzen™ 5 1400 or Intel® Core™ i5-6600\nMemory: 8 GB RAM\nGraphics: AMD Radeon™ RX 470, NVIDIA® GeForce® GTX 970 / 1060 or Intel® Arc™ A580\nNetwork: Broadband Internet connection\nStorage: 115 GB available space\nSound Card: DirectX compatible\nAdditional Notes: *Trial, Beta or Insider versions of compatible Windows® operating systems may not be supported. SSD with 115 GB available space at launch.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows® 11 64 Bit (latest update)*\nProcessor: AMD Ryzen™ 5 3600 or Intel® Core™ i7-8700K\nMemory: 16 GB RAM\nGraphics: AMD Radeon™ RX 6600XT, NVIDIA® GeForce® RTX 3060 or Intel® Arc™ B580\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 115 GB available space\nSound Card: DirectX compatible\nAdditional Notes: *Trial, Beta or Insider versions of compatible Windows® operating systems may not be supported. SSD with 115 GB available space at launch."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:04:05.998Z",
+    "syncedAt": "2026-10-27T17:23:45.277Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:57.624Z",
       "page": null

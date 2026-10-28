@@ -1,14 +1,17 @@
 'use client';
+import { useL } from '@/components/layout/lang-toggle';
 import { useEffect, useRef, useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-export function CopyButton({ text, className, label = '复制' }: { text: string; className?: string; label?: string }) {
+export function CopyButton({ text, className, label: zhLabel = '复制', labelEn = 'Copy' }: { text: string; className?: string; label?: string; labelEn?: string }) {
+  const l = useL();
+  const label = l(zhLabel, labelEn);
   const [state, setState] = useState<'idle' | 'done' | 'failed'>('idle');
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const mounted = useRef(false);
   const done = state === 'done';
-  const caption = done ? '已复制' : state === 'failed' ? '复制失败，请手动选择' : label;
+  const caption = done ? l('已复制', 'Copied') : state === 'failed' ? l('复制失败，请手动选择', 'Copy failed — select it manually') : label;
   useEffect(() => {
     mounted.current = true;
     return () => { mounted.current = false; if (timer.current) clearTimeout(timer.current); };

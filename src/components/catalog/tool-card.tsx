@@ -1,4 +1,4 @@
-import { zh } from '@/lib/labels.mjs';
+import { L } from '@/lib/labels-i18n';
 import { StatusBadge } from '@/components/ui/badge';
 import { ListRow } from '@/components/ui/list-row';
 import { ToolLogo } from '@/components/ui/site-logo';
@@ -12,7 +12,7 @@ export function ToolRow({ t }: { t: any }) {
       href={`/tools/${t.slug}/`}
       media={<ToolLogo id={t.id} name={t.name} size={44} />}
       title={t.name}
-      aside={zh('toolType', t.type)}
+      aside={L('toolType', t.type)}
       badge={t.linkHealth !== 'ok' ? <StatusBadge value={t.linkHealth} /> : undefined}
       description={t.summary}
       meta={(t.os ?? ['windows']).map((o: string) => OS[o] ?? o).join(' / ')}

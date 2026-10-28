@@ -5,6 +5,7 @@
     "zh": "Stardew Valley"
   },
   "summary": "你继承了你爷爷在星露谷留下的老旧农场。带着爷爷留下的残旧工具和几枚硬币开始了你的新生活。你能适应这小镇上的生活并且将这个杂草丛生的老旧农场变成一个繁荣的家吗？",
+  "summaryEn": "You've inherited your grandfather's old farm plot in Stardew Valley.",
   "genres": [
     "indie",
     "rpg",
@@ -22,7 +23,7 @@
       "url": "https://store.steampowered.com/app/413150/",
       "priceNote": "参考价 ¥ 48.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 413150,
@@ -38,6 +39,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows Vista or greater\n处理器: 2 Ghz\n内存: 2 GB RAM\n显卡: 256 mb video memory, shader model 3.0+\nDirectX 版本: 10\n存储空间: 需要 500 MB 可用空间",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows Vista or greater\nProcessor: 2 Ghz\nMemory: 2 GB RAM\nGraphics: 256 mb video memory, shader model 3.0+\nDirectX: Version 10\nStorage: 500 MB available space",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -49,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:13.555Z",
+    "syncedAt": "2026-10-27T17:22:58.459Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:33.627Z",
       "page": "Stardew Valley"

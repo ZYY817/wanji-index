@@ -1,0 +1,19 @@
+{
+  "id": "zzz-free",
+  "gameTitle": "Zenless Zone Zero 绝区零",
+  "titleZh": "绝区零",
+  "type": "permanent",
+  "platform": "official",
+  "url": "https://zzz.mihoyo.com/",
+  "claimNote": "免费开玩 · 米哈游官网或 Epic 下载，内购抽卡",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：不在 Steam 上的热门免费游戏，链接到官方网站 / 官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "art": {
+    "wide": "https://fastcdn.mihoyo.com/mi18n/nap_cn/m20261008hy2hoy3400/upload/e57fa73fe5aedc3c87fe9f5e64e68ebc_4300783048063653816.png"
+  },
+  "claimNoteEn": "Free to play · from HoYoverse or Epic; gacha purchases"
+}

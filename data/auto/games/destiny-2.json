@@ -6,6 +6,7 @@
     "en": "Destiny 2"
   },
   "summary": "在《命运2》中探索太阳系的奥秘，体验精彩刺激的第一人称射击战斗。在剧情任务、合作和PvP模式中解锁强大能力并收集独特装备。",
+  "summaryEn": "Explore the mysteries of Sol and experience exhilirating first-person shooter combat in Destiny 2.",
   "genres": [
     "action",
     "adventure"
@@ -20,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1085660/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1085660,
@@ -36,6 +37,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows® 7 / Windows® 8.1 / Windows® 10 64-bit (latest Service Pack)\n处理器: Intel® Core™ i3 3250 3.5 GHz or Intel Pentium G4560 3.5 GHz / AMD FX-4350 4.2 GHz\n内存: 6 GB RAM\n显卡: NVIDIA® GeForce® GTX 660 2GB or GTX 1050 2GB / AMD Radeon HD 7850 2GB\n网络: 宽带互联网连接\n存储空间: 需要 105 GB 可用空间\n附注事项: 在特定区域使用网络加速器或许能带来更好的游戏体验",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统 *: System Windows® 7 / Windows® 8.1 / Windows® 10 64-bit (latest Service Pack)\n处理器: Processor Intel® Core™ i5 2400 3.4 GHz or i5 7400 3.5 GHz / AMD Ryzen R5 1600X 3.6 GHz\n内存: 8 GB RAM\n显卡: Video NVIDIA® GeForce® GTX 970 4GB or GTX 1060 6GB / AMD R9 390 8GB Memory 8 GB RAM\n网络: 宽带互联网连接\n存储空间: 需要 105 GB 可用空间\n附注事项: 在特定区域使用网络加速器或许能带来更好的游戏体验"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64-bit (latest Service Pack)\nProcessor: Intel® Core™ i3 3250 3.5 GHz or Intel Pentium G4560 3.5 GHz / AMD FX-4350 4.2 GHz\nMemory: 6 GB RAM\nGraphics: NVIDIA® GeForce® GTX 660 2GB or GTX 1050 2GB / AMD Radeon HD 7850 2GB\nNetwork: Broadband Internet connection\nStorage: 105 GB available space\nAdditional Notes: Beginning on June 4, 2024, Destiny 2 is ending support for Windows 7, Windows 8, and Windows 8.1 operating systems.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64-bit (latest Service Pack)\nProcessor: Processor Intel® Core™ i5 2400 3.4 GHz or i5 7400 3.5 GHz / AMD Ryzen R5 1600X 3.6 GHz\nMemory: 8 GB RAM\nGraphics: NVIDIA® GeForce® GTX 970 4GB or GTX 1060 6GB / AMD R9 390 8GB Memory 8 GB RAM\nNetwork: Broadband Internet connection\nStorage: 105 GB available space\nAdditional Notes: Beginning on June 4, 2024, Destiny 2 is ending support for Windows 7, Windows 8, and Windows 8.1 operating systems."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:35.071Z",
+    "syncedAt": "2026-10-27T17:24:15.708Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:30.547Z",
       "page": "Destiny 2"

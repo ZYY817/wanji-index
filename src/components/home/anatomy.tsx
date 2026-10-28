@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useCallback, useRef, useState } from 'react';
 import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'motion/react';
@@ -18,43 +19,43 @@ const GAP = 76;
 const CX = POSTER_W / 2 + GAP + CARD_W / 2; // 卡片中心到舞台中心的水平距离
 const CY = 132;                              // 卡片中心到舞台中心的垂直距离
 
-type Slot = { key: string; icon: LucideIcon; title: string; count: number; x: -1 | 1; y: -1 | 1; body: React.ReactNode };
+type Slot = { key: string; icon: LucideIcon; title: React.ReactNode; count: number; x: -1 | 1; y: -1 | 1; body: React.ReactNode };
 
 function slots(d: DossierVM): Slot[] {
   return [
     {
-      key: 'buy', icon: ShoppingBag, title: '去哪买', count: d.channels.length, x: -1, y: -1,
+      key: 'buy', icon: ShoppingBag, title: <T zh="去哪买" en="Where to buy" />, count: d.channels.length, x: -1, y: -1,
       body: (
         <ul className="space-y-2">
           {d.channels.slice(0, 3).map((c, i) => (
             <li key={i} className="flex items-center justify-between gap-3 text-sm">
               <PlatformMark platform={c.platform} withLabel className="text-foreground" />
-              <span className="text-fg-3">{c.priceNote ?? c.type}</span>
+              <span className="text-fg-3"><T zh={c.priceNote ?? c.type} en={c.priceNoteEn ?? c.typeEn} /></span>
             </li>
           ))}
         </ul>
       ),
     },
     {
-      key: 'mod', icon: Puzzle, title: 'MOD 与汉化', count: d.mods.length, x: 1, y: -1,
+      key: 'mod', icon: Puzzle, title: <T zh="MOD 与汉化" en="Mods & translations" />, count: d.mods.length, x: 1, y: -1,
       body: (
         <ul className="space-y-2">
           {d.mods.slice(0, 2).map((m, i) => (
             <li key={i} className="text-sm">
               <span className="block truncate text-foreground">{m.name}</span>
-              <span className="text-xs text-fg-3">来自 {m.site}</span>
+              <span className="text-xs text-fg-3"><T zh={`来自 ${m.site}`} en={`From ${m.site}`} /></span>
             </li>
           ))}
         </ul>
       ),
     },
     {
-      key: 'save', icon: FolderOpen, title: '存档在哪', count: d.paths.length, x: -1, y: 1,
+      key: 'save', icon: FolderOpen, title: <T zh="存档在哪" en="Where saves are" />, count: d.paths.length, x: -1, y: 1,
       body: (
         <ul className="space-y-2">
           {d.paths.slice(0, 2).map((p, i) => (
             <li key={i}>
-              <span className="text-xs text-fg-3">{p.label}</span>
+              <span className="text-xs text-fg-3"><T zh={p.label} en={p.labelEn} /></span>
               <code className="mt-0.5 block truncate font-mono text-xs text-foreground">{p.path}</code>
             </li>
           ))}
@@ -62,13 +63,13 @@ function slots(d: DossierVM): Slot[] {
       ),
     },
     {
-      key: 'fix', icon: BookOpen, title: '出了问题', count: d.guides.length + d.tools.length, x: 1, y: 1,
+      key: 'fix', icon: BookOpen, title: <T zh="出了问题" en="When it breaks" />, count: d.guides.length + d.tools.length, x: 1, y: 1,
       body: (
         <ul className="space-y-2">
           {d.guides.slice(0, 2).map((g, i) => (
             <li key={i} className="flex items-baseline justify-between gap-3 text-sm">
               <span className="truncate text-foreground">{g.title}</span>
-              <span className="shrink-0 text-xs text-fg-3">{g.steps} 步</span>
+              <span className="shrink-0 text-xs text-fg-3"><T zh={`${g.steps} 步`} en={`${g.steps} steps`} /></span>
             </li>
           ))}
         </ul>
@@ -191,14 +192,14 @@ export function Anatomy({ d }: { d: DossierVM }) {
     return (
       <section ref={ref} aria-labelledby="anatomy-title" className="border-t border-border bg-background py-20 md:py-28">
         <div className="container-x">
-          <p className="text-sm tracking-[0.2em] text-primary">以《{g.name}》为例</p>
-          <h2 id="anatomy-title" className="mt-4 font-serif text-[clamp(36px,5vw,64px)] font-black leading-[1.08] tracking-[-0.04em]">一款游戏，四个答案。</h2>
+          <p className="text-sm tracking-[0.2em] text-primary"><T zh={`以《${g.name}》为例`} en={`Take ${g.en || g.name}`} /></p>
+          <h2 id="anatomy-title" className="mt-4 font-serif text-[clamp(36px,5vw,64px)] font-black leading-[1.08] tracking-[-0.04em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-[240px_minmax(0,1fr)] md:gap-10">
             {g.art && <img src={g.art.poster} alt="" loading="lazy" className="aspect-[2/3] w-full max-w-[240px] rounded-sm object-cover ring-1 ring-white/10" />}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">{list.map((s) => <Card key={s.key} s={s} />)}</div>
           </div>
           <Link href={`/games/${g.slug}/`} className="mt-10 inline-flex min-h-11 items-center gap-2 border-b border-foreground/30 text-base font-medium hover:border-primary">
-            打开{g.name}完整档案 <ArrowRight aria-hidden className="size-4" />
+            <T zh={`打开${g.name}完整档案`} en={`Open the full ${g.en || g.name} file`} /> <ArrowRight aria-hidden className="size-4" />
           </Link>
         </div>
       </section>
@@ -221,12 +222,12 @@ export function Anatomy({ d }: { d: DossierVM }) {
         {/* 第一幕：Logo + 引子 */}
         <motion.div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center" style={{ opacity: introOpacity, y: introY }}>
           {g.art?.logo && <GameLogo src={g.art.logo} className="w-[min(520px,46vw)] drop-shadow-[0_12px_40px_rgba(0,0,0,0.6)]" />}
-          <p className="mt-8 text-lg text-foreground/85">以《{g.name}》为例，看一份档案里有什么</p>
+          <p className="mt-8 text-lg text-foreground/85"><T zh={`以《${g.name}》为例，看一份档案里有什么`} en={`Here’s what’s in a file, using ${g.en || g.name}`} /></p>
         </motion.div>
 
         {/* 第四幕：标题 */}
         <motion.div className="absolute inset-x-0 top-[calc(var(--header-h)+5vh)] z-10 text-center" style={{ opacity: headOpacity, y: headY }}>
-          <h2 id="anatomy-title" className="font-serif text-[clamp(40px,4vw,64px)] font-black leading-[1.08] tracking-[-0.04em]">一款游戏，四个答案。</h2>
+          <h2 id="anatomy-title" className="font-serif text-[clamp(40px,4vw,64px)] font-black leading-[1.08] tracking-[-0.04em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
         </motion.div>
 
         {/* 第二、三幕：档案之环 + 海报 + 四张信息卡 */}
@@ -252,7 +253,7 @@ export function Anatomy({ d }: { d: DossierVM }) {
         {/* 第四幕：入口 */}
         <motion.div className="absolute inset-x-0 bottom-[6vh] z-10 flex justify-center" style={{ opacity: headOpacity }}>
           <Link href={`/games/${g.slug}/`} className="inline-flex min-h-11 items-center gap-2 border-b border-foreground/30 text-base font-medium transition-colors hover:border-primary">
-            打开{g.name}完整档案 <ArrowRight aria-hidden className="size-4" />
+            <T zh={`打开${g.name}完整档案`} en={`Open the full ${g.en || g.name} file`} /> <ArrowRight aria-hidden className="size-4" />
           </Link>
         </motion.div>
       </div>

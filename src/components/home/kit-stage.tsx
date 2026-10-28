@@ -1,4 +1,6 @@
 'use client';
+import { KIT } from '@/lib/kit-release';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { motion, useMotionTemplate, useScroll, useTransform, type MotionValue } from 'motion/react';
@@ -23,7 +25,7 @@ const GROUPS = [
   { group: 'VC++', title: 'VC++', x: -1, y: -1 },
   { group: 'DirectX', title: 'DirectX', x: 1, y: -1 },
   { group: '.NET', title: '.NET', x: -1, y: 1 },
-  { group: '其他', title: 'XNA 与 OpenAL', x: 1, y: 1 },
+  { group: '其他', title: 'XNA · OpenAL', x: 1, y: 1 },
 ] as const;
 const DX = 380;
 const DY = 135;
@@ -66,7 +68,7 @@ function Module({ g, i, p }: { g: (typeof GROUPS)[number]; i: number; p: MotionV
           <motion.ul className="mt-2.5 space-y-1.5 text-[15px] text-ink-2" style={{ opacity: result }}>
             {items.map((it) => (
               <li key={it.name + (it.arch ?? '')} className={cn('flex items-center gap-2', left && 'justify-end')}>
-                <span className="truncate">{it.name.replace(' 运行库', '').replace(/（.*?）/, '')}{it.arch ? ` ${it.arch}` : ''}</span>
+                <span className="truncate"><T zh={it.name.replace(' 运行库', '').replace(/（.*?）/, '')} en={it.name.replace(' 运行库', ' runtime').replace(/（.*?）/, '').replace('最终用户运行时', 'End-User Runtime')} />{it.arch ? ` ${it.arch}` : ''}</span>
                 <span className={cn('shrink-0 font-semibold', MARK[it.status].cls)}>{MARK[it.status].glyph}</span>
               </li>
             ))}
@@ -109,10 +111,10 @@ export function KitStage() {
     return (
       <section ref={ref} aria-labelledby="kit-title" className="bg-paper py-24 text-ink">
         <div className="container-x text-center">
-          <p className="text-sm text-ink-3">装机工具 · 开发中</p>
-          <h2 id="kit-title" className="mt-3 text-balance font-serif text-[clamp(32px,8vw,64px)] font-black leading-[1.15] tracking-[-0.04em]">{hang('缺什么，它比你先知道。')}</h2>
-          <p className="mx-auto mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2">检测 VC++、DirectX、.NET 等游戏运行库，缺失的从官方源一键补齐。</p>
-          <Link href="/kit/" className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'mt-8')}>了解装机工具 <ArrowRight aria-hidden /></Link>
+          <p className="text-sm text-ink-3"><T zh={`装机工具 · v${KIT.version} 已发布`} en={`Wanji Kit · v${KIT.version} released`} /></p>
+          <h2 id="kit-title" className="mt-3 text-balance font-serif text-[clamp(32px,8vw,64px)] font-black leading-[1.15] tracking-[-0.04em]"><T zh={hang('缺什么，它比你先知道。')} en="Knows what’s missing before you do." /></h2>
+          <p className="mx-auto mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2"><T zh={`检测 VC++、DirectX、.NET 等 ${KIT.catalog?.components.length ?? 32} 项游戏运行库，缺失的从官方源一键补齐。`} en={`Checks ${KIT.catalog?.components.length ?? 32} game runtimes — VC++, DirectX, .NET and more — and installs what’s missing from official sources.`} /></p>
+          <Link href="/kit/" className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'mt-8')}><T zh="下载装机工具" en="Get Wanji Kit" /> <ArrowRight aria-hidden /></Link>
         </div>
       </section>
     );
@@ -129,8 +131,8 @@ export function KitStage() {
 
           {/* 标题：物件正上方 */}
           <motion.div className="absolute inset-x-0 top-[calc(var(--header-h)+4vh)] flex flex-col items-center text-center" style={{ opacity: titleO, y: titleY }}>
-            <p className="text-sm text-ink-3">装机工具 · Windows 10 / 11 · 开发中</p>
-            <h2 id="kit-title" className="mt-3 font-serif text-[clamp(38px,3.6vw,60px)] font-black leading-[1.08] tracking-[-0.04em]">{hang('缺什么，它比你先知道。')}</h2>
+            <p className="text-sm text-ink-3"><T zh={`装机工具 · Windows 10 / 11 · v${KIT.version}`} en={`Wanji Kit · Windows 10 / 11 · v${KIT.version}`} /></p>
+            <h2 id="kit-title" className="mt-3 font-serif text-[clamp(38px,3.6vw,60px)] font-black leading-[1.08] tracking-[-0.04em]"><T zh={hang('缺什么，它比你先知道。')} en="Knows what’s missing before you do." /></h2>
           </motion.div>
 
           {/* 物件 + 拆解 + 扫描 */}
@@ -146,12 +148,11 @@ export function KitStage() {
           {/* 汇总 + 入口：物件正下方 */}
           <motion.div className="absolute inset-x-0 bottom-[6vh] flex flex-col items-center text-center" style={{ opacity: sumO, y: sumY }}>
             <p className="text-base text-ink-2">
-              共 {KIT_ITEMS.length} 项检测 · <span className="text-[#C0423F]">{missing} 项缺失</span> · <span className="text-[#B07A12]">{outdated} 项过旧</span>
-              <span className="text-ink-3">（演示数据）</span>
+              <T zh={<>共 {KIT_ITEMS.length} 项检测 · <span className="text-[#C0423F]">{missing} 项缺失</span> · <span className="text-[#B07A12]">{outdated} 项过旧</span><span className="text-ink-3">（演示数据）</span></>} en={<>{KIT_ITEMS.length} checks · <span className="text-[#C0423F]">{missing} missing</span> · <span className="text-[#B07A12]">{outdated} outdated</span><span className="text-ink-3"> (demo data)</span></>} />
             </p>
             <Magnetic strength={8} radius={80}>
               <Link href="/kit/" className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'mt-5 shadow-[0_24px_40px_-20px_rgba(20,16,10,0.6)]')}>
-                了解装机工具 <ArrowRight aria-hidden />
+                <T zh="下载装机工具" en="Get Wanji Kit" /> <ArrowRight aria-hidden />
               </Link>
             </Magnetic>
           </motion.div>

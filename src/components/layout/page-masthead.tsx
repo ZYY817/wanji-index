@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { GLOW_IMG, GLOW_VEIL } from '@/components/fx/glow';
+import { T } from '@/lib/i18n';
 
-type Crumb = [string, string?];
+type Crumb = [React.ReactNode, string?];
 
 function Crumbs({ crumbs }: { crumbs?: Crumb[] }) {
   return (
-    <nav aria-label="面包屑" className="flex max-w-full flex-wrap items-center gap-2 text-sm text-fg-3">
-      <Link href="/" className="transition-colors hover:text-foreground">首页</Link>
-      {(crumbs ?? [['索引']]).map(([label, href], i, all) => {
+    <nav aria-label="Breadcrumb" className="flex max-w-full flex-wrap items-center gap-2 text-sm text-fg-3">
+      <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
+      {(crumbs ?? ([[<T key="i" zh="索引" en="Index" />]] as Crumb[])).map(([label, href], i, all) => {
         const current = !href;
         return (
           <span key={i} className={cn('items-center gap-2', current && i === all.length - 1 ? 'hidden sm:flex' : 'flex')}>
@@ -39,7 +40,7 @@ export function PageMastheadFrame({
   );
 }
 
-export type MastheadStat = { value: number | string; label: string };
+export type MastheadStat = { value: number | string; label: React.ReactNode };
 
 /** 写在句子里的数字：香槟金、等宽 */
 export function MastNum({ children }: { children: React.ReactNode }) {
@@ -69,7 +70,6 @@ export function IndexMasthead({
   telemetry?: React.ReactNode;
   band?: React.ReactNode;
 }) {
-  const label = typeof title === 'string' ? title : undefined;
   return (
     <header className={cn('relative overflow-hidden border-b border-border/50 pt-[calc(var(--header-h)+20px)] pb-6 md:pt-[calc(var(--header-h)+26px)] md:pb-7', className)}>
       {/* 极简环境微光：若有游戏美术则渲染极其柔和的背景氛围，无则留白自然 */}
@@ -86,7 +86,7 @@ export function IndexMasthead({
       </div>
 
       <div className="container-x relative">
-        <Crumbs crumbs={crumbs ?? (label ? [[label]] : undefined)} />
+        <Crumbs crumbs={crumbs ?? [[title]]} />
         
         <div className="mt-3 max-w-4xl">
           <div className="flex items-baseline gap-3">
@@ -111,7 +111,7 @@ export function IndexMasthead({
         {stats?.length ? (
           <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 border-t border-border/40 pt-3">
             {stats.map((s, i) => (
-              <div key={s.label} className="flex items-baseline gap-2">
+              <div key={i} className="flex items-baseline gap-2">
                 <dt className="text-xs text-fg-3">{s.label}</dt>
                 <dd className={cn('font-mono text-base font-bold tabular-nums', i === 0 ? 'text-primary' : 'text-foreground')}>{s.value}</dd>
               </div>

@@ -1,5 +1,6 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import type { GameDetail } from '@/lib/game-detail';
-import { zh } from '@/lib/labels.mjs';
 import { CopyButton } from '@/components/ui/copy-button';
 import { OfferFact } from './offer-fact';
 import { cn } from '@/lib/utils';
@@ -19,14 +20,14 @@ export function QuickFacts({ d }: { d: GameDetail }) {
   const save = d.paths.find((p) => p.kind === '存档') ?? d.paths[0];
 
   return (
-    <section aria-label="速答" className="relative z-10 border-y border-border bg-background">
+    <section aria-label="Quick facts" className="relative z-10 border-y border-border bg-background">
       <dl className="container-x grid grid-cols-2 lg:grid-cols-4">
         {/* 1. 去哪买 */}
-        <FactCell title="去哪买" index={0}>
+        <FactCell title={<T zh="去哪买" en="Where to get it" />} index={0}>
           {channel ? (
             <>
               <p className="truncate text-base font-medium text-foreground">
-                {zh('platform', channel.platform)} · {channel.note}
+                {L('platform', channel.platform)} · <T zh={channel.note} en={channel.noteEn} />
               </p>
               <a
                 href={channel.url}
@@ -34,24 +35,24 @@ export function QuickFacts({ d }: { d: GameDetail }) {
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary"
               >
-                前往商店 ↗
+                <T zh="前往商店" en="Go to store" /> ↗
               </a>
             </>
           ) : (
             <>
-              <p className="truncate text-base text-fg-2">暂未收录</p>
-              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无渠道</span>
+              <p className="truncate text-base text-fg-2"><T zh="暂未收录" en="Not listed yet" /></p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3"><T zh="暂无渠道" en="No stores" /></span>
             </>
           )}
         </FactCell>
 
         {/* 2. 现在免不免费 */}
-        <FactCell title="现在免不免费" index={1}>
+        <FactCell title={<T zh="现在免不免费" en="Free right now?" />} index={1}>
           <OfferFact offers={d.offers} />
         </FactCell>
 
         {/* 3. MOD 与汉化 */}
-        <FactCell title="MOD 与汉化" index={2}>
+        <FactCell title={<T zh="MOD 与汉化" en="Mods & translations" />} index={2}>
           {entry ? (
             <>
               <p className="truncate text-base font-medium text-foreground">
@@ -61,32 +62,32 @@ export function QuickFacts({ d }: { d: GameDetail }) {
                 href="#entries"
                 className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-foreground underline decoration-primary underline-offset-4 hover:text-primary"
               >
-                查看专区 ({d.entries.length}) ↓
+                <T zh="查看专区" en="See all" /> ({d.entries.length}) ↓
               </a>
             </>
           ) : (
             <>
-              <p className="truncate text-base text-fg-2">暂未收录</p>
-              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无资源</span>
+              <p className="truncate text-base text-fg-2"><T zh="暂未收录" en="Not listed yet" /></p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3"><T zh="暂无资源" en="No resources" /></span>
             </>
           )}
         </FactCell>
 
         {/* 4. 存档位置 */}
-        <FactCell title="存档位置" index={3}>
+        <FactCell title={<T zh="存档位置" en="Save location" />} index={3}>
           {save ? (
             <>
               <code title={save.path} className="block truncate font-mono text-sm leading-snug text-foreground">
                 {save.path}
               </code>
               <div className="mt-2 flex min-h-11 items-center">
-                <CopyButton text={save.path} label="复制路径" className="min-h-11 px-3.5 text-sm" />
+                <CopyButton text={save.path} label="复制路径" labelEn="Copy path" className="min-h-11 px-3.5 text-sm" />
               </div>
             </>
           ) : (
             <>
-              <p className="truncate text-base text-fg-2">暂未收录</p>
-              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3">暂无路径</span>
+              <p className="truncate text-base text-fg-2"><T zh="暂未收录" en="Not listed yet" /></p>
+              <span className="mt-2 inline-flex min-h-11 items-center text-sm text-fg-3"><T zh="暂无路径" en="No paths" /></span>
             </>
           )}
         </FactCell>
@@ -95,7 +96,7 @@ export function QuickFacts({ d }: { d: GameDetail }) {
   );
 }
 
-function FactCell({ title, index, children }: { title: string; index: number; children: React.ReactNode }) {
+function FactCell({ title, index, children }: { title: React.ReactNode; index: number; children: React.ReactNode }) {
   return (
     <div
       className={cn(

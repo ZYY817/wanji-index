@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { loadData } from '@/lib/data.mjs';
@@ -21,12 +22,12 @@ export default function FreePage() {
   return (
     <>
       <IndexMasthead
-        title="免费游戏"
+        title={<T zh="免费游戏" en="Free games" />}
         count={offers.length}
         description={<LiveFreeSummary offers={offers} build={build} />}
         glow={top?.art?.hero}
       />
-      <Suspense fallback={<p className="container-x py-16 text-fg-2">正在准备免费情报…</p>}>
+      <Suspense fallback={<p className="container-x py-16 text-fg-2"><T zh="正在准备免费情报…" en="Loading free games…" /></p>}>
         <FreeCatalog offers={offers} />
       </Suspense>
     </>

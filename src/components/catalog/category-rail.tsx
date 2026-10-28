@@ -1,17 +1,21 @@
 'use client';
+import { useL } from '@/components/layout/lang-toggle';
+import { T } from '@/lib/i18n';
 import { Search } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Kbd } from '@/components/ui/kbd';
 import { Button } from '@/components/ui/button';
 
-export type RailItem = { value: string; label: string; count: number };
+export type RailItem = { value: string; label: React.ReactNode; count: number };
 
 export function CategoryRail({
-  query, onQuery, placeholder, items, active, onSelect, allLabel = '全部',
+  query, onQuery, placeholder: zhPh, placeholderEn, items, active, onSelect, allLabel = <T zh="全部" en="All" />,
 }: {
-  query: string; onQuery: (v: string) => void; placeholder: string;
-  items: RailItem[]; active: string; onSelect: (v: string) => void; allLabel?: string;
+  query: string; onQuery: (v: string) => void; placeholder: string; placeholderEn?: string;
+  items: RailItem[]; active: string; onSelect: (v: string) => void; allLabel?: React.ReactNode;
 }) {
+  const l = useL();
+  const placeholder = l(zhPh, placeholderEn);
   const total = items.reduce((n, i) => n + i.count, 0);
   const all: RailItem[] = [{ value: '', label: allLabel, count: total }, ...items];
 
@@ -32,12 +36,12 @@ export function CategoryRail({
       </label>
 
       <div className="mb-3 mt-7 hidden items-baseline justify-between border-b border-border/60 pb-2 lg:flex">
-        <h2 className="text-sm font-medium text-fg-2">分类</h2>
+        <h2 className="text-sm font-medium text-fg-2"><T zh="分类" en="Categories" /></h2>
       </div>
 
       {/* 移动端横向滚动条，桌面纵向列表 */}
       <nav
-        aria-label="分类筛选"
+        aria-label="Categories"
         className="no-scrollbar -mx-[var(--gutter)] flex gap-2 overflow-x-auto border-b border-border bg-background px-[var(--gutter)] py-2 lg:mx-0 lg:block lg:border-none lg:p-0"
       >
         {all.map((c) => {
@@ -69,10 +73,10 @@ export function CategoryRail({
 export function EmptyResult({ onClear }: { onClear: () => void }) {
   return (
     <div className="border-y border-border py-20 text-center">
-      <p className="font-serif text-3xl font-bold text-foreground">没有匹配的条目</p>
-      <p className="mt-3 text-base text-fg-2">换一个关键词，或清除筛选重新查看。</p>
+      <p className="font-serif text-3xl font-bold text-foreground"><T zh="没有匹配的条目" en="Nothing matches" /></p>
+      <p className="mt-3 text-base text-fg-2"><T zh="换一个关键词，或清除筛选重新查看。" en="Try another keyword or clear the filters." /></p>
       <Button type="button" variant="outline" onClick={onClear} className="mt-6">
-        清除筛选
+        <T zh="清除筛选" en="Clear filters" />
       </Button>
     </div>
   );

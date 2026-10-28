@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, type MotionValue } from 'motion/react';
@@ -37,14 +38,14 @@ const COLS = 3;
 
 /** 一个站点在索引里的落点（相对舞台中心的像素坐标）与所在列 */
 type Slot = { col: number; x: number; y: number };
-type Head = { key: string; label: string; count: number; col: number; x: number; y: number; w: number };
+type Head = { key: string; label: string; labelEn: string; count: number; col: number; x: number; y: number; w: number };
 type Geo = { rx: number; ry: number; cw: number; ch: number };
 
 /**
  * 分组排进三列，让整体轮廓左右对称：最多的一组放中间，其余按大小依次放进左右两列中较矮的那一列。
  * 返回每个站点的落点与每个分组标题的位置。
  */
-function layout(groups: { category: string; label: string; sites: SiteVM[] }[], vp: { w: number; h: number }) {
+function layout(groups: { category: string; label: string; labelEn: string; sites: SiteVM[] }[], vp: { w: number; h: number }) {
   const colW = Math.min(340, (vp.w - 200) / COLS);
   const maxN = Math.max(...groups.map((g) => g.sites.length));
   const row = Math.max(44, Math.min(56, (vp.h - 440) / maxN));
@@ -64,7 +65,7 @@ function layout(groups: { category: string; label: string; sites: SiteVM[] }[], 
     const left = (c - 1) * colW - colW / 2 + 16;
     let y = top;
     list.forEach((g) => {
-      heads.push({ key: g.category, label: g.label, count: g.sites.length, col: c, x: left, y, w: colW - 40 });
+      heads.push({ key: g.category, label: g.label, labelEn: g.labelEn, count: g.sites.length, col: c, x: left, y, w: colW - 40 });
       g.sites.forEach((site, r) => slots.set(site.id, { col: c, x: left + LOGO / 2, y: y + HEAD + LOGO / 2 + r * row }));
       y += height(g.sites.length) + GROUP_GAP;
     });
@@ -133,7 +134,7 @@ function GroupHead({ h, p }: { h: Head; p: MotionValue<number> }) {
   const y = useTransform(p, [s0, s0 + 0.04], [8, 0]);
   return (
     <motion.div className="absolute border-b border-foreground/15 pb-2" style={{ left: h.x, top: h.y, width: h.w, opacity, y }}>
-      <span className="font-serif text-lg font-bold">{h.label}</span>
+      <span className="font-serif text-lg font-bold"><T zh={h.label} en={h.labelEn} /></span>
       <span className="ml-2 text-sm text-fg-3">{h.count}</span>
     </motion.div>
   );
@@ -144,7 +145,7 @@ function GroupHead({ h, p }: { h: Head; p: MotionValue<number> }) {
  * 小屏 / reduced-motion：直接显示分类索引。
  */
 export function Directory({ offers, sites, groups, counts }: {
-  offers: OfferVM[]; sites: SiteVM[]; groups: { category: string; label: string; sites: SiteVM[] }[]; counts: { sites: number; categories: number; entries: number };
+  offers: OfferVM[]; sites: SiteVM[]; groups: { category: string; label: string; labelEn: string; sites: SiteVM[] }[]; counts: { sites: number; categories: number; entries: number };
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const ok = useMotionOK();
@@ -182,12 +183,12 @@ export function Directory({ offers, sites, groups, counts }: {
     return (
       <section ref={ref} aria-labelledby="dir-title" className="container-x bg-background pb-24 pt-10">
         <h2 id="dir-title" className="text-center font-serif text-[clamp(64px,16vw,120px)] font-black leading-none tracking-[-0.05em]">
-          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85">个资源站</span>
+          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85"><T zh="个资源站" en="SITES" /></span>
         </h2>
         <div className="mt-14 space-y-10">
           {groups.map((g, gi) => (
             <Reveal as="section" key={g.category} delay={gi * STAGGER} aria-label={g.label}>
-              <h3 className="border-b border-foreground/15 pb-2 font-serif text-xl font-bold">{g.label}<span className="ml-2 font-sans text-sm font-normal text-fg-3">{g.sites.length}</span></h3>
+              <h3 className="border-b border-foreground/15 pb-2 font-serif text-xl font-bold"><T zh={g.label} en={g.labelEn} /><span className="ml-2 font-sans text-sm font-normal text-fg-3">{g.sites.length}</span></h3>
               <ul className="mt-3 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                 {g.sites.map((s) => (
                   <li key={s.id}>
@@ -245,13 +246,13 @@ export function Directory({ offers, sites, groups, counts }: {
           <motion.div className="pointer-events-none absolute inset-0 z-[200] flex items-center justify-center" style={{ y: titleY, scale: titleS, opacity: titleIn }}>
             <h2 id="dir-title" className="flex flex-col items-center text-center">
               <motion.span className="font-serif text-[clamp(96px,11vw,170px)] font-black leading-[0.85] tracking-[-0.05em] tabular-nums" aria-label={String(counts.sites)}>{num}</motion.span>
-              <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]">个资源站</span>
+              <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]"><T zh="个资源站" en="SITES" /></span>
             </h2>
           </motion.div>
 
           {/* 入口：索引定格后出现在底部中轴 */}
           <motion.div className="absolute inset-x-0 bottom-[6vh] flex justify-center" style={{ opacity: ctaO }}>
-            <TextLink href="/resources/">查看全部资源站</TextLink>
+            <TextLink href="/resources/"><T zh="查看全部资源站" en="See all sites" /></TextLink>
           </motion.div>
         </div>
       </div>

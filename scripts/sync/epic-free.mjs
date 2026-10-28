@@ -36,6 +36,7 @@ for (const e of elements) {
     platform: 'epic',
     url: `https://store.epicgames.com/zh-CN/p/${slug}`,
     claimNote: now ? 'Epic 每周限免，领取后永久保留在库中' : 'Epic 下一期每周限免（已公布）',
+    claimNoteEn: now ? 'Epic weekly freebie — yours to keep once claimed' : 'Next Epic weekly freebie (announced)',
     startDate: offer.startDate,
     endDate: offer.endDate,
     checkedAt: today(),

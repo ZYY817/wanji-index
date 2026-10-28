@@ -2,9 +2,11 @@
   "id": "counter-strike-global-offensive",
   "slug": "counter-strike-global-offensive",
   "name": {
-    "zh": "Counter-Strike 2"
+    "zh": "反恐精英 2",
+    "en": "Counter-Strike 2"
   },
   "summary": "二十多年来，在全球数百万玩家的共同铸就下，Counter-Strike 提供了精湛绝伦的竞技体验。而如今，CS 传奇的下一章即将揭开序幕，那就是 Counter-Strike 2。",
+  "summaryEn": "For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe.",
   "genres": [
     "action"
   ],
@@ -19,7 +21,7 @@
       "url": "https://store.steampowered.com/app/730/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 730,
@@ -35,6 +37,10 @@
     "minimum": "最低配置:\n操作系统: Windows® 10\n处理器: 4 硬件线程 CPU——英特尔® 酷睿™ i5 750 或以上\n内存: 8 GB RAM\n显卡: 显卡须为 1 GB 或以上，且应兼容 DirectX 11 并支持 Shader Model 5.0\nDirectX 版本: 11\n存储空间: 需要 85 GB 可用空间",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows® 10\nProcessor: 4 hardware CPU threads - Intel® Core™ i5 750 or higher\nMemory: 8 GB RAM\nGraphics: Video card must be 1 GB or more and should be a DirectX 11-compatible with support for Shader Model 5.0\nDirectX: Version 11\nStorage: 85 GB available space",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:46.897Z",
+    "syncedAt": "2026-10-27T17:23:53.542Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:17:30.412Z",
       "page": "Counter-Strike 2"

@@ -2,9 +2,11 @@
   "id": "smite",
   "slug": "smite",
   "name": {
-    "zh": "SMITE"
+    "zh": "神之浩劫",
+    "en": "SMITE"
   },
   "summary": "和三千五百多万名玩家一起在众神的战场中战个痛快！挥舞托尔的雷神之锤；以美杜莎之力石化你的敌人；你也可以从超过100位神话人物中选择你想发挥的神圣之力。化身神明并马上开始免费游戏吧！",
+  "summaryEn": "Join 40+ million players in SMITE, the Battleground of the Gods! Wield Thor’s hammer, turn your foes to stone as Medusa, or flex your divine…",
   "genres": [
     "action",
     "adventure",
@@ -25,7 +27,7 @@
       "url": "https://store.steampowered.com/app/386360/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 386360,
@@ -41,6 +43,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7 64-bit or newer\n处理器: Core 2 Duo 2.4 GHz or Athlon X2 2.7 GHz\n内存: 4 GB RAM\n显卡: Nvidia GeForce 8800 GT\n存储空间: 需要 30 GB 可用空间\n声卡: DirectX compatible sound card",
     "recommended": "推荐配置:\n操作系统 *: Windows 8/10 64-bit (latest Service Pack)\n处理器: Intel Core i5 or AMD Phenom II X3, 2.8 GHz\n内存: 6 GB RAM\n显卡: Nvidia GeForce GTX 660 or ATI Radeon HD 7950\n网络: 宽带互联网连接\n存储空间: 需要 30 GB 可用空间\n声卡: DirectX compatible sound card"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 64-bit or newer\nProcessor: Core 2 Duo 2.4 GHz or Athlon X2 2.7 GHz\nMemory: 4 GB RAM\nGraphics: Nvidia GeForce 8800 GT\nStorage: 30 GB available space\nSound Card: DirectX compatible sound card",
+    "recommended": "Recommended:\nOS *: Windows 8/10 64-bit (latest Service Pack)\nProcessor: Intel Core i5 or AMD Phenom II X3, 2.8 GHz\nMemory: 6 GB RAM\nGraphics: Nvidia GeForce GTX 660 or ATI Radeon HD 7950\nNetwork: Broadband Internet connection\nStorage: 30 GB available space\nSound Card: DirectX compatible sound card"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -52,13 +58,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:44.967Z",
+    "syncedAt": "2026-10-27T17:26:41.044Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:31.199Z",
       "page": "Smite"

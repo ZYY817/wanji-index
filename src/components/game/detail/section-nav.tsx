@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import type { SectionMeta } from '@/lib/game-detail';
@@ -36,7 +37,7 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
   };
 
   return (
-    <nav aria-label="档案章节" className="sticky top-[var(--sticky-top)] z-30 border-b border-border bg-background transition-[top] duration-300">
+    <nav aria-label="Sections" className="sticky top-[var(--sticky-top)] z-30 border-b border-border bg-background transition-[top] duration-300">
       <div className="container-x">
         <ul className="no-scrollbar -mx-4 flex overflow-x-auto">
           {sections.map((s) => {
@@ -49,7 +50,7 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
                   aria-current={on ? 'location' : undefined}
                   className={cn('relative flex h-14 items-center gap-2 px-4 text-base transition-colors', on ? 'text-foreground' : 'text-fg-2 hover:text-foreground')}
                 >
-                  {s.title}
+                  <T zh={s.title} en={s.titleEn} />
                   <span className={cn('font-mono text-2xs tabular-nums', on ? 'text-primary' : 'text-fg-3')}>{s.count}</span>
                   {on && (
                     <motion.span

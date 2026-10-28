@@ -120,6 +120,10 @@
   }
 }
 
+/* 中英切换（src/lib/i18n.tsx）：两份文字都在页面里，按 <html data-lang> 只显示一份 */
+html[data-lang="en"] .l-zh,
+html:not([data-lang="en"]) .l-en { display: none !important; }
+
 html[data-header-hidden="true"] {
   --sticky-top: 0px;
 }

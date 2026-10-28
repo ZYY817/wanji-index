@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import type { OfferVM } from '@/lib/present';
 import { Countdown, useNow } from '@/components/offer/countdown';
@@ -12,12 +13,12 @@ export function OfferFact({ offers }: { offers: OfferVM[] }) {
   if (!live) {
     return (
       <>
-        <p className="truncate text-base font-medium text-fg-2">暂无免费活动</p>
+        <p className="truncate text-base font-medium text-fg-2"><T zh="暂无免费活动" en="Not free right now" /></p>
         <Link
           href="/free/"
           className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm text-fg-2 underline decoration-border-strong underline-offset-4 hover:text-foreground"
         >
-          查看免费雷达 ↗
+          <T zh="查看免费雷达" en="See free games" /> ↗
         </Link>
       </>
     );
@@ -31,7 +32,7 @@ export function OfferFact({ offers }: { offers: OfferVM[] }) {
     <>
       <p className="flex items-center gap-2 truncate text-base font-medium text-foreground">
         <span className={isUpcoming ? 'text-info' : 'text-primary'}>
-          {isUpcoming ? '即将免费' : '限时免费中'}
+          {isUpcoming ? <T zh="即将免费" en="Free soon" /> : <T zh="限时免费中" en="Free now" />}
         </span>
         {target != null && (
           <span className="font-mono text-sm text-fg-2">
@@ -45,7 +46,7 @@ export function OfferFact({ offers }: { offers: OfferVM[] }) {
         rel="noopener noreferrer"
         className="mt-2 inline-flex min-h-11 items-center gap-1 text-sm font-medium text-primary underline underline-offset-4 hover:text-primary-hover"
       >
-        {isUpcoming ? '查看活动 ↗' : '立即领取 ↗'}
+        {isUpcoming ? <T zh="查看活动 ↗" en="Details ↗" /> : <T zh="立即领取 ↗" en="Claim now ↗" />}
       </a>
     </>
   );

@@ -6,6 +6,7 @@
     "en": "Battlefield V"
   },
   "summary": "这就是终极《战地风云 5》体验。用完整的武器、载具和配备武器库以及第 1 年和第 2 年最棒的自定义内容体验人类历史上规模最大的冲突。",
+  "summaryEn": "This is the ultimate Battlefield V experience. Enter mankind’s greatest conflict with the complete arsenal of weapons, vehicles, and gadgets…",
   "genres": [
     "action"
   ],
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/1238810/",
       "priceNote": "参考价 ¥ 228.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1238810,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: AMD FX-8350/ Core i5 6600K\n内存: 8 GB RAM\n显卡: NVIDIA GeForce® GTX 1050 / NVIDIA GeForce® GTX 660 2GB or AMD Radeon™ RX 560 / HD 7850 2GB\nDirectX 版本: 11\n存储空间: 需要 50 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10 or later\n处理器: AMD Ryzen 3 1300X/Intel Core i7 4790\n内存: 12 GB RAM\n显卡: NVIDIA GeForce® GTX 1060 6GB/AMD Radeon™ RX 580 8GB\nDirectX 版本: 11\n存储空间: 需要 50 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: AMD FX-8350/ Core i5 6600K\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce® GTX 1050 / NVIDIA GeForce® GTX 660 2GB or AMD Radeon™ RX 560 / HD 7850 2GB\nDirectX: Version 11\nStorage: 50 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10 or later\nProcessor: AMD Ryzen 3 1300X/Intel Core i7 4790\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce® GTX 1060 6GB/AMD Radeon™ RX 580 8GB\nDirectX: Version 11\nStorage: 50 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:49.391Z",
+    "syncedAt": "2026-10-27T17:23:33.775Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:40.371Z",
       "page": "Battlefield V"

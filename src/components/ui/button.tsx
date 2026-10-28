@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import * as React from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import { cva, type VariantProps } from 'class-variance-authority';
@@ -49,18 +50,18 @@ export function Button({ className, variant, size, asChild, ...props }: ButtonPr
 
 /** 获取类主按钮（外链）：dead → 不可点禁用态 +「已失效」 */
 export function AcquireButton({
-  href, health, label = '获取', size = 'md', className,
-}: { href: string; health?: string; label?: string; size?: 'sm' | 'md' | 'lg'; className?: string }) {
+  href, health, label = <T zh="获取" en="Get" />, size = 'md', className,
+}: { href: string; health?: string; label?: React.ReactNode; size?: 'sm' | 'md' | 'lg'; className?: string }) {
   if (health === 'dead')
     return (
       <span aria-disabled="true" className={cn(buttonVariants({ variant: 'disabled', size }), 'cursor-not-allowed', className)}>
-        <Ban aria-hidden /> 已失效
+        <Ban aria-hidden /> <T zh="已失效" en="Broken" />
       </span>
     );
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={cn(buttonVariants({ variant: 'solid', size }), className)}>
       {label} <ArrowUpRight aria-hidden />
-      <span className="sr-only">（在新窗口打开）</span>
+      <span className="sr-only"><T zh="（在新窗口打开）" en="(opens in a new window)" /></span>
     </a>
   );
 }

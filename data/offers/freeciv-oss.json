@@ -1,0 +1,16 @@
+{
+  "id": "freeciv-oss",
+  "gameTitle": "Freeciv 自由文明（Freeciv）",
+  "titleZh": "自由文明（Freeciv）",
+  "type": "opensource",
+  "platform": "official",
+  "url": "https://freeciv.org/",
+  "claimNote": "开源回合制策略，经典《文明》系列玩法",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source turn-based strategy in the classic Civilization style"
+}

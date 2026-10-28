@@ -5,6 +5,7 @@
     "zh": "Fallout 4"
   },
   "summary": "《Fallout 4》由屡获殊荣的《Starfield》与《The Elder Scrolls V: Skyrim》创作团队Bethesda Game Studios倾力打造。",
+  "summaryEn": "From Bethesda Game Studios, the award-winning creators of Starfield and The Elder Scrolls V: Skyrim, comes Fallout 4.",
   "genres": [
     "rpg"
   ],
@@ -18,7 +19,7 @@
       "url": "https://store.steampowered.com/app/377160/",
       "priceNote": "参考价 ¥ 83.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 377160,
@@ -34,6 +35,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7/8/10 (64-bit OS required)\n处理器: Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent\n内存: 8 GB RAM\n显卡: NVIDIA GTX 550 Ti 2GB/AMD Radeon HD 7870 2GB or equivalent\n存储空间: 需要 30 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7/8/10 (64-bit OS required)\n处理器: Intel Core i7 4790 3.6 GHz/AMD FX-9590 4.7 GHz or equivalent\n内存: 8 GB RAM\n显卡: NVIDIA GTX 780 3GB/AMD Radeon R9 290X 4GB or equivalent\n存储空间: 需要 30 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7/8/10 (64-bit OS required)\nProcessor: Intel Core i5-2300 2.8 GHz/AMD Phenom II X4 945 3.0 GHz or equivalent\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 550 Ti 2GB/AMD Radeon HD 7870 2GB or equivalent\nStorage: 30 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS *: Windows 7/8/10 (64-bit OS required)\nProcessor: Intel Core i7 4790 3.6 GHz/AMD FX-9590 4.7 GHz or equivalent\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 780 3GB/AMD Radeon R9 290X 4GB or equivalent\nStorage: 30 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -45,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:19:55.413Z",
+    "syncedAt": "2026-10-27T17:22:22.937Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:58.067Z",
       "page": "Fallout 4"

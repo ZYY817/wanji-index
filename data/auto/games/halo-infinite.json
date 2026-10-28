@@ -2,9 +2,11 @@
   "id": "halo-infinite",
   "slug": "halo-infinite",
   "name": {
-    "zh": "Halo Infinite"
+    "zh": "光环：无限",
+    "en": "Halo Infinite"
   },
   "summary": "作为游戏界最具代表性的传奇之一，Halo 如今的规模胜过以往任何时候。该游戏具有宏大的开放世界战役，给予玩家丰富多样的免费多人游戏体验。",
+  "summaryEn": "From one of gaming's most iconic sagas, Halo is bigger than ever.",
   "genres": [
     "action"
   ],
@@ -18,7 +20,7 @@
       "url": "https://store.steampowered.com/app/1240440/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1240440,
@@ -34,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 RS5 x64\n处理器: AMD Ryzen 5 1600 or Intel i5-4440\n内存: 8 GB RAM\n显卡: AMD RX 570 or Nvidia GTX 1050 Ti\nDirectX 版本: 12\n存储空间: 需要 50 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 19H2 x64\n处理器: AMD Ryzen 7 3700X or Intel i7-9700k\n内存: 16 GB RAM\n显卡: Radeon RX 5700 XT or Nvidia RTX 2070\nDirectX 版本: 12\n存储空间: 需要 50 GB 可用空间"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 RS5 x64\nProcessor: AMD Ryzen 5 1600 or Intel i5-4440\nMemory: 8 GB RAM\nGraphics: AMD RX 570 or Nvidia GTX 1050 Ti\nDirectX: Version 12\nStorage: 50 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 19H2 x64\nProcessor: AMD Ryzen 7 3700X or Intel i7-9700k\nMemory: 16 GB RAM\nGraphics: Radeon RX 5700 XT or Nvidia RTX 2070\nDirectX: Version 12\nStorage: 50 GB available space"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -45,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:51.416Z",
+    "syncedAt": "2026-10-27T17:25:03.849Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:27.964Z",
       "page": "Halo Infinite"

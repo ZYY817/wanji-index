@@ -2,9 +2,11 @@
   "id": "ark-survival-evolved",
   "slug": "ark-survival-evolved",
   "name": {
-    "zh": "ARK: Survival Evolved"
+    "zh": "方舟：生存进化",
+    "en": "ARK: Survival Evolved"
   },
   "summary": "由虚幻4引擎打造的一款多人在线生存竞技网游，在一个超高自由度的开放世界里，可以体验采集、制造、打猎、收获、建造、研究以及驯服恐龙等超多自由内容，感受酷热白昼、冰冷夜晚的动态天气系统以及饥饿口渴等现实中的生存挑战，还要面对其它生存者的威胁，合作生存还是竞技厮杀，由你决定！",
+  "summaryEn": "Stranded on the shores of a mysterious island, you must learn to survive.",
   "genres": [
     "action",
     "adventure",
@@ -23,7 +25,7 @@
       "url": "https://store.steampowered.com/app/346110/",
       "priceNote": "参考价 ¥ 38.28",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 346110,
@@ -43,6 +45,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7/8.1/10 (64-bit versions)\n处理器: Intel Core i5-2400/AMD FX-8320 or better\n内存: 8 GB RAM\n显卡: NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better\nDirectX 版本: 10\n存储空间: 需要 60 GB 可用空间\n附注事项: Requires broadband internet connection for multiplayer",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7/8.1/10 (64-bit versions)\nProcessor: Intel Core i5-2400/AMD FX-8320 or better\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 670 2GB/AMD Radeon HD 7870 2GB or better\nDirectX: Version 10\nStorage: 60 GB available space\nAdditional Notes: Requires broadband internet connection for multiplayer",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -54,13 +60,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:38.787Z",
+    "syncedAt": "2026-10-27T17:23:22.692Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:33.228Z",
       "page": "ARK: Survival Evolved"

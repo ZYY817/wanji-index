@@ -1,0 +1,16 @@
+{
+  "id": "lol-free",
+  "gameTitle": "League of Legends 英雄联盟",
+  "titleZh": "英雄联盟",
+  "type": "permanent",
+  "platform": "official",
+  "url": "https://lol.qq.com/",
+  "claimNote": "免费开玩 · 国服由腾讯运营，内购皮肤与英雄",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：不在 Steam 上的热门免费游戏，链接到官方网站 / 官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Free to play · China server run by Tencent; skins and champions for sale"
+}

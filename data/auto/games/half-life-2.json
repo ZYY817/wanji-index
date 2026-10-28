@@ -2,9 +2,11 @@
   "id": "half-life-2",
   "slug": "half-life-2",
   "name": {
-    "zh": "Half-Life 2"
+    "zh": "半条命 2",
+    "en": "Half-Life 2"
   },
   "summary": "在被占领的 17 号城，戈登·弗里曼从沉睡中苏醒，他在爱莉克斯·凡斯的协助下，领导着人类的殊死抵抗。 赶紧体验这款具有里程碑意义的第一人称射击游戏吧，它所构建的沉浸式世界达到前所未有的高度，所呈现的物理规律更上一层楼，战争场面扣人心弦。",
+  "summaryEn": "Reawakened from stasis in the occupied metropolis of City 17, Gordon Freeman is joined by Alyx Vance as he leads a desperate human resistanc…",
   "genres": [
     "action"
   ],
@@ -19,7 +21,7 @@
       "url": "https://store.steampowered.com/app/220/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 220,
@@ -35,6 +37,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7、Vista、XP\n处理器: 1.7 Ghz\n内存: 512 MB RAM\n显卡: DirectX 8.1 级显卡（需要支持 SSE）\n存储空间: 需要 6500 MB 可用空间",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7, Vista, XP\nProcessor: 1.7 Ghz\nMemory: 512 MB RAM\nGraphics: DirectX 8.1 level Graphics Card (requires support for SSE)\nStorage: 6500 MB available space",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:31.259Z",
+    "syncedAt": "2026-10-27T17:24:56.388Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:22.803Z",
       "page": "Half-Life 2"

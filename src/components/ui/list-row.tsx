@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { ArrowRight, ArrowUpRight } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -29,13 +30,13 @@ export function ListRow({
           <h3 className={cn('text-lg font-semibold leading-snug transition-colors duration-200 md:text-xl', dead ? 'text-fg-3 line-through' : 'group-hover:text-primary')}>{title}</h3>
           {aside && <span className="text-sm text-fg-3">{aside}</span>}
           {badge}
-          {dead && <span className="font-mono text-2xs text-bad">已失效</span>}
+          {dead && <span className="font-mono text-2xs text-bad"><T zh="已失效" en="Broken" /></span>}
         </div>
         {description && <p className="mt-1.5 max-w-[62ch] text-base leading-[1.7] text-fg-2 text-pretty">{description}</p>}
         {meta && <p className="mt-2.5 text-sm text-fg-3">{meta}</p>}
       </div>
       <Arrow aria-hidden className={cn('mt-1 size-5 text-fg-3 transition-[transform,color] duration-200', !dead && (external ? 'group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary' : 'group-hover:translate-x-1 group-hover:text-primary'))} />
-      {external && !dead && <span className="sr-only">（在新窗口打开）</span>}
+      {external && !dead && <span className="sr-only"><T zh="（在新窗口打开）" en="(opens in a new window)" /></span>}
     </>
   );
   const cls = cn(

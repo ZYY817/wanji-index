@@ -6,6 +6,7 @@
     "en": "Don't Starve Together"
   },
   "summary": "在绝不妥协的荒野生存游戏《饥荒》的多人联机版中一起战斗、耕种、建设和探索吧。",
+  "summaryEn": "Fight, Farm, Build and Explore Together in the standalone multiplayer expansion to the uncompromising wilderness survival game, Don't Starve…",
   "genres": [
     "action",
     "adventure",
@@ -26,7 +27,7 @@
       "url": "https://store.steampowered.com/app/322330/",
       "priceNote": "参考价 ¥ 12.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 322330,
@@ -42,6 +43,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows Vista/Windows 7/Windows 8\n处理器: 1.7+ GHz or better\n内存: 1 GB RAM\n显卡: Radeon HD5450 or better; 256 MB or higher\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 3 GB 可用空间\n声卡: 100% DirectX9.0c compatible sound card and drivers",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows Vista/Windows 7/Windows 8\nProcessor: 1.7+ GHz or better\nMemory: 1 GB RAM\nGraphics: Radeon HD5450 or better; 256 MB or higher\nDirectX: Version 9.0c\nNetwork: Broadband Internet connection\nStorage: 3 GB available space\nSound Card: 100% DirectX9.0c compatible sound card and drivers",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -53,13 +58,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-26T17:19:44.001Z",
+    "syncedAt": "2026-10-27T17:22:11.243Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:32.603Z",
       "page": "Don't Starve Together"

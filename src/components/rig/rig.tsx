@@ -1,9 +1,11 @@
 'use client';
+import { useL } from '@/components/layout/lang-toggle';
+import { T } from '@/lib/i18n';
 // 「我的电脑」：本机显卡 + 内存，存在浏览器本地（不上传）。游戏档案页的判定与 /check/ 列表共用。
 import { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { Cpu, MemoryStick, ScanSearch } from 'lucide-react';
-import { GPUS, gpuFromRenderer, judge, VERDICT_LABEL, type Gpu, type Reqs, type Rig, type Verdict } from '@/lib/hardware';
+import { GPUS, gpuFromRenderer, judge, VERDICT_LABEL, VERDICT_EN, type Gpu, type Reqs, type Rig, type Verdict } from '@/lib/hardware';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -48,9 +50,10 @@ const RAMS = [4, 8, 16, 32, 64];
 
 /** 设置面板：自动识别显卡（可改）+ 选内存 */
 export function RigPicker({ className, onDone }: { className?: string; onDone?: () => void }) {
+  const l = useL();
   const rig = useRig();
   const [query, setQuery] = useState('');
-  const [note, setNote] = useState<string | null>(null);
+  const [note, setNote] = useState<React.ReactNode>(null);
   const [gpu, setGpu] = useState<Gpu | undefined>(undefined);
   const [ram, setRam] = useState<number | undefined>(undefined);
 
@@ -59,8 +62,8 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
     if (rig) { setGpu(rig.gpu); setRam(rig.ramGb); return; }
     const r = detectRenderer();
     const g = r ? gpuFromRenderer(r) : null;
-    if (g) { setGpu(g); setNote(`已从浏览器识别到显卡：${g.name}。不对的话在下面改。`); }
-    else setNote(r ? `浏览器只报告了「${r.slice(0, 60)}」，没认出具体型号，请在下面选择。` : '浏览器没有提供显卡信息，请在下面选择。');
+    if (g) { setGpu(g); setNote(<T zh={`已从浏览器识别到显卡：${g.name}。不对的话在下面改。`} en={`Detected your GPU from the browser: ${g.name}. Change it below if that’s wrong.`} />); }
+    else setNote(r ? <T zh={`浏览器只报告了「${r.slice(0, 60)}」，没认出具体型号，请在下面选择。`} en={`The browser only reported “${r.slice(0, 60)}” — pick your GPU below.`} /> : <T zh="浏览器没有提供显卡信息，请在下面选择。" en="The browser didn’t share GPU info — pick yours below." />);
     const mem = (navigator as Navigator & { deviceMemory?: number }).deviceMemory;
     if (mem && mem < 8) setRam(mem >= 4 ? 4 : undefined); // deviceMemory 最高只报 8，≥8 时不猜
     // 只在首次挂载时识别
@@ -84,14 +87,14 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <p className="flex items-center gap-2 text-sm font-medium text-foreground"><Cpu aria-hidden className="size-4 text-fg-3" />显卡</p>
-          <p className="mt-2 text-lg font-semibold">{gpu?.name ?? <span className="text-fg-3">未选择</span>}</p>
+          <p className="flex items-center gap-2 text-sm font-medium text-foreground"><Cpu aria-hidden className="size-4 text-fg-3" /><T zh="显卡" en="Graphics card" /></p>
+          <p className="mt-2 text-lg font-semibold">{gpu?.name ?? <span className="text-fg-3"><T zh="未选择" en="Not set" /></span>}</p>
           <div className="relative mt-3">
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="搜索型号，如 1660、RX 580、Iris Xe"
-              aria-label="搜索显卡型号"
+              placeholder={l('搜索型号，如 1660、RX 580、Iris Xe', 'Search a model, e.g. 1660, RX 580, Iris Xe')}
+              aria-label={l('搜索显卡型号', 'Search GPU model')}
               className="h-11 w-full rounded-sm border border-input bg-background px-3 text-base text-foreground placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-ring"
             />
             {matches.length > 0 && (
@@ -113,8 +116,8 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
         </div>
 
         <div>
-          <p className="flex items-center gap-2 text-sm font-medium text-foreground"><MemoryStick aria-hidden className="size-4 text-fg-3" />内存</p>
-          <div role="radiogroup" aria-label="内存大小" className="mt-3 flex flex-wrap gap-2">
+          <p className="flex items-center gap-2 text-sm font-medium text-foreground"><MemoryStick aria-hidden className="size-4 text-fg-3" /><T zh="内存" en="RAM" /></p>
+          <div role="radiogroup" aria-label="RAM" className="mt-3 flex flex-wrap gap-2">
             {RAMS.map((r) => (
               <button
                 key={r}
@@ -131,14 +134,14 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
               </button>
             ))}
           </div>
-          <p className="mt-2 text-xs text-fg-3">不确定？任务管理器 → 性能 → 内存，右上角就是总大小。</p>
+          <p className="mt-2 text-xs text-fg-3"><T zh="不确定？任务管理器 → 性能 → 内存，右上角就是总大小。" en="Not sure? Task Manager → Performance → Memory shows the total in the top right." /></p>
         </div>
       </div>
 
       <div className="mt-6 flex flex-wrap items-center gap-3">
-        <Button variant="solid" onClick={save} disabled={!gpu && !ram}>保存我的配置</Button>
-        {rig && <Button variant="ghost" onClick={() => { saveRig(null); setGpu(undefined); setRam(undefined); }}>清除</Button>}
-        <span className="text-xs text-fg-3">只保存在这台设备的浏览器里，不会上传。</span>
+        <Button variant="solid" onClick={save} disabled={!gpu && !ram}><T zh="保存我的配置" en="Save my PC" /></Button>
+        {rig && <Button variant="ghost" onClick={() => { saveRig(null); setGpu(undefined); setRam(undefined); }}><T zh="清除" en="Clear" /></Button>}
+        <span className="text-xs text-fg-3"><T zh="只保存在这台设备的浏览器里，不会上传。" en="Saved only in this browser — never uploaded." /></span>
       </div>
     </div>
   );
@@ -152,7 +155,7 @@ export function VerdictMark({ verdict, className }: { verdict: Verdict; classNam
   return (
     <span className={cn('inline-flex items-center gap-1.5 text-sm font-semibold', className)} style={{ color: VERDICT_TONE[verdict] }}>
       <span aria-hidden className="size-2 rounded-full" style={{ background: VERDICT_TONE[verdict] }} />
-      {VERDICT_LABEL[verdict]}
+      <T zh={VERDICT_LABEL[verdict]} en={VERDICT_EN[verdict]} />
     </span>
   );
 }
@@ -168,7 +171,7 @@ export function RigVerdict({ reqs }: { reqs?: Reqs }) {
       <div className="mb-6">
         {!rig && (
           <p className="mb-3 text-base text-fg-2">
-            <span className="font-semibold text-foreground">我的电脑能玩吗？</span>设置一次显卡和内存，之后每款游戏都会直接告诉你。
+            <T zh={<><span className="font-semibold text-foreground">我的电脑能玩吗？</span>设置一次显卡和内存，之后每款游戏都会直接告诉你。</>} en={<><span className="font-semibold text-foreground">Can my PC run it? </span>Set your GPU and RAM once and every game page will tell you.</>} />
           </p>
         )}
         <RigPicker onDone={() => setEditing(false)} />
@@ -176,24 +179,24 @@ export function RigVerdict({ reqs }: { reqs?: Reqs }) {
     );
   }
 
-  const { verdict, reason } = judge(rig, reqs);
+  const { verdict, reason, reasonEn } = judge(rig, reqs);
   const need = (verdict === 'smooth' ? reqs.rec : reqs.min ?? reqs.rec)?.gpu?.names;
   return (
     <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-xs border border-border bg-shell p-5 md:p-6">
       <div className="min-w-0">
         <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-          <span className="text-sm text-fg-3">你的电脑</span>
+          <span className="text-sm text-fg-3"><T zh="你的电脑" en="Your PC" /></span>
           <VerdictMark verdict={verdict} className="text-lg" />
-          <span className="text-base text-foreground">{reason}</span>
+          <span className="text-base text-foreground"><T zh={reason} en={reasonEn} /></span>
         </p>
         <p className="mt-1.5 text-sm text-fg-2">
-          {[rig.gpu?.name, rig.ramGb && `${rig.ramGb} GB 内存`].filter(Boolean).join(' · ')}
-          {need && need.length > 0 && <span className="text-fg-3"> ｜ 要求显卡：{need.slice(0, 3).join(' / ')} 或同级</span>}
+          {rig.gpu?.name}{rig.gpu && rig.ramGb ? ' · ' : ''}{rig.ramGb ? <T zh={`${rig.ramGb} GB 内存`} en={`${rig.ramGb} GB RAM`} /> : null}
+          {need && need.length > 0 && <span className="text-fg-3"> ｜ <T zh={`要求显卡：${need.slice(0, 3).join(' / ')} 或同级`} en={`Needs: ${need.slice(0, 3).join(' / ')} or similar`} /></span>}
         </p>
       </div>
       <div className="flex items-center gap-2">
-        <Button variant="ghost" size="sm" onClick={() => setEditing(true)}>改配置</Button>
-        <Button variant="outline" size="sm" asChild><Link href="/check/">我能玩哪些游戏</Link></Button>
+        <Button variant="ghost" size="sm" onClick={() => setEditing(true)}><T zh="改配置" en="Edit" /></Button>
+        <Button variant="outline" size="sm" asChild><Link href="/check/"><T zh="我能玩哪些游戏" en="What can I play?" /></Link></Button>
       </div>
     </div>
   );

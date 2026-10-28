@@ -1,3 +1,5 @@
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
@@ -28,7 +30,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 }
 
 /** 阅读区里的小节标题：比详情页章节轻一级，保证步骤本身是视觉重心 */
-function Block({ id, title, children }: { id?: string; title: string; children: React.ReactNode }) {
+function Block({ id, title, children }: { id?: string; title: React.ReactNode; children: React.ReactNode }) {
   return (
     <Reveal as="section" className="scroll-mt-28 border-t border-border py-12 first:border-t-0 first:pt-0">
       <h2 id={id} className="font-serif text-3xl font-bold tracking-[-0.03em]">{title}</h2>
@@ -56,15 +58,15 @@ export default async function GuidePage({ params }: Params) {
   const html = g.body ? await marked.parse(g.body) : null;
 
   const facts: DetailFact[] = [
-    { label: '分类', value: zh('guideCategory', g.category) },
-    { label: '步骤', value: `${steps.length} 步` },
-    { label: '适用游戏', value: games.length ? (
+    { label: <T zh="分类" en="Category" />, value: L('guideCategory', g.category) },
+    { label: <T zh="步骤" en="Steps" />, value: <T zh={`${steps.length} 步`} en={`${steps.length} steps`} /> },
+    { label: <T zh="适用游戏" en="Games" />, value: games.length ? (
       <span className="flex flex-wrap gap-x-3">
         {games.map((x: any) => <Link key={x.id} href={`/games/${x.slug}/`} className="underline decoration-border-strong underline-offset-4 hover:text-primary">{x.name.zh}</Link>)}
       </span>
     ) : undefined },
-    { label: '系统', value: osText(g.os ?? [], g.osVersions ?? []) },
-    { label: '核验', value: <span className="flex flex-wrap items-center gap-2">{g.checkedAt}<StatusBadge value={g.reviewStatus} /></span> },
+    { label: <T zh="系统" en="OS" />, value: osText(g.os ?? [], g.osVersions ?? []) },
+    { label: <T zh="核验" en="Checked" />, value: <span className="flex flex-wrap items-center gap-2">{g.checkedAt}<StatusBadge value={g.reviewStatus} /></span> },
   ].filter((f) => f.value);
 
   return (
@@ -81,8 +83,8 @@ export default async function GuidePage({ params }: Params) {
       />
 
       <DetailMasthead
-        crumbs={[['教程', '/guides/'], [g.title]]}
-        kicker={zh('guideKind', g.kind)}
+        crumbs={[[<T key="g" zh="教程" en="Guides" />, '/guides/'], [g.title]]}
+        kicker={L('guideKind', g.kind)}
         title={fileTokens(g.title)}
         summary={g.problem?.description}
         facts={facts}
@@ -91,14 +93,14 @@ export default async function GuidePage({ params }: Params) {
       <div className="container-x grid gap-12 py-14 md:py-20 lg:grid-cols-12 lg:gap-16">
         <article className="min-w-0 lg:col-span-8">
           {g.problem?.errorText && (
-            <Block title="确认问题">
+            <Block title={<T zh="确认问题" en="Confirm the problem" />}>
               <pre className="whitespace-pre-wrap break-words rounded-sm bg-bad/[0.07] p-5 ring-1 ring-bad/25 font-mono text-sm leading-[1.8] text-bad-text">{g.problem.errorText}</pre>
-              {g.problem.conditions && <p className="mt-5 text-base leading-[1.8] text-fg-2"><span className="text-foreground">出现条件：</span>{g.problem.conditions}</p>}
+              {g.problem.conditions && <p className="mt-5 text-base leading-[1.8] text-fg-2"><span className="text-foreground"><T zh="出现条件：" en="When it happens: " /></span>{g.problem.conditions}</p>}
             </Block>
           )}
 
           {g.prerequisites?.length > 0 && (
-            <Block title="开始之前">
+            <Block title={<T zh="开始之前" en="Before you start" />}>
               <ul className="space-y-3 text-base leading-[1.8] text-foreground/90">
                 {g.prerequisites.map((p: string) => (
                   <li key={p} className="flex gap-3"><span aria-hidden className="mt-[0.75em] size-1 shrink-0 bg-fg-3" />{p}</li>
@@ -107,7 +109,7 @@ export default async function GuidePage({ params }: Params) {
             </Block>
           )}
 
-          <Block id="steps" title="逐步排查">
+          <Block id="steps" title={<T zh="逐步排查" en="Steps" />}>
             <ol>
               {steps.map((s, i) => (
                 <li key={i} id={`step-${i + 1}`} className="relative grid scroll-mt-28 grid-cols-[48px_minmax(0,1fr)] gap-4 pb-12 last:pb-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6">
@@ -117,15 +119,15 @@ export default async function GuidePage({ params }: Params) {
                   </div>
                   <div className="min-w-0">
                     <div className="flex flex-wrap items-start justify-between gap-3">
-                      <h3 className="text-xl font-semibold leading-snug md:text-[22px]">{s.title || `步骤 ${i + 1}`}</h3>
+                      <h3 className="text-xl font-semibold leading-snug md:text-[22px]">{s.title || <T zh={`步骤 ${i + 1}`} en={`Step ${i + 1}`} />}</h3>
                       {s.verified && s.verified !== 'verified' && <StatusBadge value={s.verified} />}
                     </div>
                     <p className="mt-4 whitespace-pre-line text-lg leading-[1.8] text-foreground/90">{s.action}</p>
                     <div className="mt-5 rounded-sm bg-ok/[0.06] px-4 py-3 ring-1 ring-ok/20">
-                      <p className="text-sm font-medium text-ok">预期结果</p>
+                      <p className="text-sm font-medium text-ok"><T zh="预期结果" en="Expected result" /></p>
                       <p className="mt-1 text-base leading-[1.75] text-foreground/90">{s.expected}</p>
                     </div>
-                    {s.ifFail && <p className="mt-4 text-base leading-[1.75] text-fg-2"><span className="text-foreground">如果没有解决：</span>{s.ifFail}</p>}
+                    {s.ifFail && <p className="mt-4 text-base leading-[1.75] text-fg-2"><span className="text-foreground"><T zh="如果没有解决：" en="If that didn’t work: " /></span>{s.ifFail}</p>}
                   </div>
                 </li>
               ))}
@@ -133,13 +135,13 @@ export default async function GuidePage({ params }: Params) {
           </Block>
 
           {html && (
-            <Block title="补充说明">
+            <Block title={<T zh="补充说明" en="Notes" />}>
               <div className="prose-doc" dangerouslySetInnerHTML={{ __html: html }} />
             </Block>
           )}
 
           {g.recovery?.length > 0 && (
-            <Block id="recovery" title="恢复方法">
+            <Block id="recovery" title={<T zh="恢复方法" en="How to undo" />}>
               <ol className="space-y-4">
                 {g.recovery.map((r: string, i: number) => (
                   <li key={r} className="flex gap-4 text-base leading-[1.8] text-foreground/90">
@@ -152,22 +154,22 @@ export default async function GuidePage({ params }: Params) {
           )}
 
           <footer className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border-strong pt-6 text-sm text-fg-3">
-            <span>本页核验于 {g.checkedAt}</span>
+            <span><T zh="本页核验于" en="Checked" /> {g.checkedAt}</span>
             <FeedbackLink page={`${g.title}（/guides/${g.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
-              信息有误？反馈给我们
+              <T zh="信息有误？反馈给我们" en="Spot an error? Tell us" />
             </FeedbackLink>
           </footer>
         </article>
 
         <aside className="space-y-10 lg:col-span-4 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:transition-[top] lg:duration-300 lg:self-start">
-          <nav aria-label="步骤目录">
-            <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">步骤目录</h2>
+          <nav aria-label="Steps">
+            <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="步骤目录" en="Steps" /></h2>
             <ol>
               {steps.map((s, i) => (
                 <li key={i}>
                   <a href={`#step-${i + 1}`} className="flex gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-foreground">
                     <span className="font-mono text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
-                    {s.title || `步骤 ${i + 1}`}
+                    {s.title || <T zh={`步骤 ${i + 1}`} en={`Step ${i + 1}`} />}
                   </a>
                 </li>
               ))}
@@ -176,7 +178,7 @@ export default async function GuidePage({ params }: Params) {
 
           {tools.length > 0 && (
             <section>
-              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">用到的工具</h2>
+              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="用到的工具" en="Tools used" /></h2>
               {tools.map((t: any) => (
                 <Link key={t.id} href={`/tools/${t.slug}/`} className="group block border-b border-border py-4">
                   <span className="flex items-center justify-between text-lg font-semibold transition-colors group-hover:text-primary">
@@ -191,7 +193,7 @@ export default async function GuidePage({ params }: Params) {
 
           {g.sources?.length > 0 && (
             <section>
-              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">参考来源</h2>
+              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="参考来源" en="Sources" /></h2>
               <ul className="mt-3 space-y-2">
                 {g.sources.map((s: any) => (
                   <li key={s.url}><ExtLink href={s.url} className="text-sm leading-[1.7] text-fg-2 hover:text-foreground">{s.name}</ExtLink></li>
@@ -202,7 +204,7 @@ export default async function GuidePage({ params }: Params) {
 
           {related.length > 0 && (
             <section>
-              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3">继续排查</h2>
+              <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="继续排查" en="Keep troubleshooting" /></h2>
               {related.map((r: any) => (
                 <Link key={r.id} href={`/guides/${r.slug}/`} className="block border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-primary">{r.title}</Link>
               ))}

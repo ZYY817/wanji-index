@@ -1,7 +1,8 @@
 'use client';
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import type { OfferVM } from '@/lib/present';
-import { zh } from '@/lib/labels.mjs';
 import { LifecycleBadge, StatusBadge } from '@/components/ui/badge';
 import { SpotlightCard } from '@/components/ui/spotlight-card';
 import { AcquireButton } from '@/components/ui/button';
@@ -15,16 +16,16 @@ import { Tilt } from '@/components/fx/interact';
 import { isUrgent, liveLifecycle } from './use-lifecycle';
 
 // 按钮自带「↗」图标，文字里不再重复
-const CTA: Record<string, string> = { limited: '领取', weekend: '获取', trial: '试玩', permanent: '领取', opensource: '下载' };
+const CTA: Record<string, [string, string]> = { limited: ['领取', 'Claim'], weekend: ['获取', 'Get'], trial: ['试玩', 'Try'], permanent: ['开玩', 'Play'], opensource: ['下载', 'Download'] };
 /** 即将开始的活动还不能领：按钮改为去活动页看看 */
-const ctaOf = (o: OfferVM, lc: string | null) => (lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '领取');
+const ctaOf = (o: OfferVM, lc: string | null) => { const [zhL, enL] = lc === 'upcoming' ? ['活动页', 'Details'] : CTA[o.type] ?? ['领取', 'Claim']; return <T zh={zhL} en={enL} />; };
 
 /** 免费大卡（限时领取 / 即将开始） */
 export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number | null; className?: string }) {
   const lc = liveLifecycle(o, now);
   const urgent = isUrgent(o, lc, now);
   const isUpcoming = lc === 'upcoming';
-  const mainTitle = o.titleZh ?? o.title;
+  const mainTitle = <T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} />;
   const health = healthStatus(o.linkHealth);
 
   return (
@@ -56,11 +57,11 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
         {/* 主体信息 */}
         <div className="flex flex-1 flex-col p-5 md:p-6">
           <div className="flex min-w-0 items-center gap-2 text-sm text-fg-2">
-            <span className="shrink-0">{zh('freeType', o.type)}</span>
+            <span className="shrink-0">{L('freeType', o.type)}</span>
             {o.claimNote && (
               <>
                 <span aria-hidden className="text-fg-3">·</span>
-                <span className="truncate">{o.claimNote}</span>
+                <span className="truncate"><T zh={o.claimNote} en={o.claimNoteEn} /></span>
               </>
             )}
           </div>
@@ -75,7 +76,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             )}
           </h3>
           {o.titleOrig && (
-            <p className="mt-1 truncate text-sm text-fg-2">{o.titleOrig}</p>
+            <p className="mt-1 truncate text-sm text-fg-2"><T zh={o.titleOrig} en="" /></p>
           )}
 
           <div aria-hidden className="h-5 shrink-0" />
@@ -83,7 +84,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
           <div className="mt-auto border-t border-border pt-4">
             {lc === 'active' && o.endMs ? (
               <>
-                <p className="text-xs text-fg-3">剩余时间</p>
+                <p className="text-xs text-fg-3"><T zh="剩余时间" en="Time left" /></p>
                 <div className="mt-1.5 flex items-baseline">
                   <Countdown
                     target={o.endMs}
@@ -97,7 +98,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
               </>
             ) : isUpcoming && o.startMs ? (
               <>
-                <p className="text-xs font-medium text-info">即将免费</p>
+                <p className="text-xs font-medium text-info"><T zh="即将免费" en="Free soon" /></p>
                 <div className="mt-1.5 flex items-baseline">
                   <Countdown
                     target={o.startMs}
@@ -108,14 +109,14 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
                 </div>
               </>
             ) : (
-              <p className="font-mono text-2xs text-fg-3">活动进行中</p>
+              <p className="font-mono text-2xs text-fg-3"><T zh="活动进行中" en="Ongoing" /></p>
             )}
           </div>
 
           {/* 底部来源与操作 */}
           <div className="flex items-end justify-between gap-3 pt-6">
             <span className="font-mono text-2xs text-fg-3">
-              {o.endMs ? `截止 ${shDateTime(o.endMs)}` : o.startMs ? `开始 ${shDateTime(o.startMs)}` : `核验于 ${o.checkedAt}`}
+              {o.endMs ? <><T zh="截止" en="Ends" /> {shDateTime(o.endMs)}</> : o.startMs ? <><T zh="开始" en="Starts" /> {shDateTime(o.startMs)}</> : <><T zh="核验于" en="Checked" /> {o.checkedAt}</>}
             </span>
             <AcquireButton
               href={o.url}
@@ -136,7 +137,7 @@ export const OfferPanel = OfferHeroCard;
 
 /** 紧凑列表行（永久免费 / 试玩与周末 / 开源游戏 / 已结束归档） */
 export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) {
-  const mainTitle = o.titleZh ?? o.title;
+  const mainTitle = <T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} />;
   const isEnded = o.lifecycle === 'ended';
 
   return (
@@ -167,18 +168,18 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
               )}
             </span>
             {o.titleOrig && (
-              <span className="text-sm text-fg-2 truncate">{o.titleOrig}</span>
+              <span className="text-sm text-fg-2 truncate"><T zh={o.titleOrig} en="" /></span>
             )}
           </div>
 
           <div className="mt-1 flex flex-wrap items-center gap-2 text-sm text-fg-2">
             <PlatformMark platform={o.platform} withLabel />
             <span aria-hidden className="text-fg-3">·</span>
-            <span>{zh('freeType', o.type)}</span>
+            <span>{L('freeType', o.type)}</span>
             {o.claimNote && (
               <>
                 <span aria-hidden className="text-fg-3">·</span>
-                <span className="truncate text-fg-2">{o.claimNote}</span>
+                <span className="truncate text-fg-2"><T zh={o.claimNote} en={o.claimNoteEn} /></span>
               </>
             )}
           </div>
@@ -187,7 +188,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
 
       <div className="flex shrink-0 flex-col items-end gap-1.5 self-end sm:self-center">
         {isEnded ? (
-          <span className="inline-flex h-11 items-center px-4 font-mono text-sm text-fg-3">已结束</span>
+          <span className="inline-flex h-11 items-center px-4 font-mono text-sm text-fg-3"><T zh="已结束" en="Ended" /></span>
         ) : (
           <AcquireButton
             href={o.url}
@@ -197,7 +198,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
             className="h-11 px-5"
           />
         )}
-        <span className="font-mono text-2xs text-fg-3">核验于 {o.checkedAt}</span>
+        <span className="font-mono text-2xs text-fg-3"><T zh="核验于" en="Checked" /> {o.checkedAt}</span>
       </div>
     </li>
   );

@@ -1,4 +1,6 @@
 'use client';
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import type { SiteVM } from '@/lib/present';
 import { zh } from '@/lib/labels.mjs';
 import { SiteLogo } from '@/components/ui/site-logo';
@@ -18,7 +20,7 @@ function SiteRow({ s }: { s: SiteVM }) {
       aside={<span className="font-mono">{s.domain}</span>}
       badge={s.linkHealth !== 'ok' ? <StatusBadge value={s.linkHealth} /> : undefined}
       description={s.summary}
-      meta={<>{s.purposes.join(' · ')}{s.entryCount > 0 && <span> · 收录 {s.entryCount} 个游戏入口</span>}</>}
+      meta={<>{s.purposes.join(' · ')}{s.entryCount > 0 && <span> · <T zh={`收录 ${s.entryCount} 个游戏入口`} en={`${s.entryCount} game pages`} /></span>}</>}
     />
   );
 }
@@ -44,10 +46,11 @@ export function ResourcesCatalog({ sites }: { sites: SiteVM[] }) {
           query={q.q ?? ''}
           onQuery={(v) => update({ q: v })}
           placeholder="站名、域名或用途"
-          items={categories.map((c) => ({ value: c, label: zh('siteCategory', c), count: sites.filter((s) => s.category === c).length }))}
+          placeholderEn="Name, domain or use"
+          items={categories.map((c) => ({ value: c, label: L('siteCategory', c), count: sites.filter((s) => s.category === c).length }))}
           active={cat}
           onSelect={(v) => update({ cat: v })}
-          allLabel="全部站点"
+          allLabel={<T zh="全部站点" en="All sites" />}
         />
       </div>
 
@@ -57,7 +60,7 @@ export function ResourcesCatalog({ sites }: { sites: SiteVM[] }) {
           if (!group.length) return null;
           return (
             <section key={c} aria-label={zh('siteCategory', c)}>
-              <SectionHeading title={zh('siteCategory', c)} count={group.length} className="mb-0" />
+              <SectionHeading title={L('siteCategory', c)} count={group.length} className="mb-0" />
               {group.map((s) => <SiteRow key={s.id} s={s} />)}
             </section>
           );

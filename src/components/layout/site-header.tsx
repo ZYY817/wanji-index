@@ -8,6 +8,7 @@ import { SearchTrigger } from './search-trigger';
 import { MobileMenu } from './mobile-menu';
 import { HeaderLockup } from './header-lockup';
 import { HeaderNav } from './header-nav';
+import { LangToggle } from './lang-toggle';
 import { EASE_OUT } from '@/components/fx/tokens';
 
 
@@ -119,6 +120,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         <HeaderNav pathname={pathname} />
         <div className="ml-auto flex shrink-0 items-center gap-1 lg:ml-0 lg:justify-self-end">
           <SearchTrigger className="hidden lg:inline-flex" />
+          <LangToggle className="ml-1 lg:ml-2" />
           <SearchTrigger variant="icon" className="lg:hidden" />
           <MobileMenu counts={counts} pathname={pathname} />
         </div>

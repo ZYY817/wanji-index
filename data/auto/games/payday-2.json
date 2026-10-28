@@ -2,9 +2,11 @@
   "id": "payday-2",
   "slug": "payday-2",
   "name": {
-    "zh": "PAYDAY 2"
+    "zh": "收获日 2",
+    "en": "PAYDAY 2"
   },
   "summary": "PAYDAY 2是一款动作类四人合作射击游戏，各位玩家将再次扮演初代PAYDAY帮成员——达拉斯、霍斯顿、沃尔夫以及钱恩斯——并前往华盛顿特区展开一系列惊险刺激的劫案。",
+  "summaryEn": "PAYDAY 2 is an action-packed, four-player co-op shooter that once again lets gamers don the masks of the original PAYDAY crew - Dallas, Hoxt…",
   "genres": [
     "action",
     "rpg"
@@ -17,9 +19,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/218620/",
-      "priceNote": "参考价 ¥ 17.50",
+      "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 218620,
@@ -36,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: 2 GHz Intel Dual Core 64-bit Processor\n内存: 4 GB RAM\n显卡: NVIDIA & AMD (1GB VRAM)\nDirectX 版本: 11\n存储空间: 需要 32 GB 可用空间\n支持 VR: SteamVR. Standing or Room Scale. Requires installing the free VR DLC.\n附注事项: Requires a CPU which supports the SSE4.1 instruction set",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11\n处理器: 2.3 GHz Intel Quad Core 64-bit Processor\n内存: 8 GB RAM\n显卡: NVIDIA & AMD (2GB VRAM)\nDirectX 版本: 11\n存储空间: 需要 32 GB 可用空间\n支持 VR: SteamVR. Standing or Room Scale. Requires installing the free VR DLC."
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: 2 GHz Intel Dual Core 64-bit Processor\nMemory: 4 GB RAM\nGraphics: NVIDIA & AMD (1GB VRAM)\nDirectX: Version 11\nStorage: 32 GB available space\nVR Support: SteamVR. Standing or Room Scale. Requires installing the free VR DLC.\nAdditional Notes: Requires a CPU which supports the SSE4.1 instruction set",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 11\nProcessor: 2.3 GHz Intel Quad Core 64-bit Processor\nMemory: 8 GB RAM\nGraphics: NVIDIA & AMD (2GB VRAM)\nDirectX: Version 11\nStorage: 32 GB available space\nVR Support: SteamVR. Standing or Room Scale. Requires installing the free VR DLC."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:59.391Z",
+    "syncedAt": "2026-10-27T17:25:56.220Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:48.839Z",
       "page": "Payday 2"

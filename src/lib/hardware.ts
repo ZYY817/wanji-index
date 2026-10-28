@@ -142,6 +142,7 @@ export function parseReqs(r?: { minimum?: string; recommended?: string }): Reqs 
 export type Rig = { gpu?: Gpu; ramGb?: number };
 export type Verdict = 'smooth' | 'playable' | 'weak' | 'unknown';
 export const VERDICT_LABEL: Record<Verdict, string> = { smooth: '流畅', playable: '能玩', weak: '吃力', unknown: '无法判断' };
+export const VERDICT_EN: Record<Verdict, string> = { smooth: 'Smooth', playable: 'Playable', weak: 'Struggles', unknown: 'Unknown' };
 
 // 跑分表本身是估算，留 5% 余量，免得「差一点点」被判成不行
 const meets = (rig: Rig, req?: Req) => {
@@ -153,15 +154,20 @@ const meets = (rig: Rig, req?: Req) => {
 };
 
 /** 判定：达到推荐 → 流畅；达到最低 → 能玩；连最低都不够 → 吃力（并说明差在哪） */
-export function judge(rig: Rig, reqs?: Reqs): { verdict: Verdict; reason: string } {
-  if (!reqs || !rig.gpu && !rig.ramGb) return { verdict: 'unknown', reason: '这款游戏的配置要求里没有能识别的显卡或内存' };
+const UNKNOWN = { verdict: 'unknown' as const, reason: '这款游戏的配置要求里没有能识别的显卡或内存', reasonEn: 'No recognizable GPU or RAM in the requirements' };
+
+export function judge(rig: Rig, reqs?: Reqs): { verdict: Verdict; reason: string; reasonEn: string } {
+  if (!reqs || !rig.gpu && !rig.ramGb) return UNKNOWN;
   const rec = meets(rig, reqs.rec), min = meets(rig, reqs.min);
-  if (rec?.ok) return { verdict: 'smooth', reason: '达到推荐配置' };
-  if (min?.ok) return { verdict: 'playable', reason: rec ? '达到最低配置，画质需要调低一些' : '达到最低配置' };
+  if (rec?.ok) return { verdict: 'smooth', reason: '达到推荐配置', reasonEn: 'Meets recommended specs' };
+  if (min?.ok) return rec
+    ? { verdict: 'playable', reason: '达到最低配置，画质需要调低一些', reasonEn: 'Meets minimum specs — lower the settings' }
+    : { verdict: 'playable', reason: '达到最低配置', reasonEn: 'Meets minimum specs' };
   if (min || rec) {
     const r = min ?? rec!;
     const short = [r.gpuOk === false && '显卡', r.ramOk === false && '内存'].filter(Boolean).join('和');
-    return { verdict: 'weak', reason: `${short}低于${min ? '最低' : '推荐'}配置` };
+    const shortEn = [r.gpuOk === false && 'GPU', r.ramOk === false && 'RAM'].filter(Boolean).join(' and ');
+    return { verdict: 'weak', reason: `${short}低于${min ? '最低' : '推荐'}配置`, reasonEn: `${shortEn} below ${min ? 'minimum' : 'recommended'} specs` };
   }
-  return { verdict: 'unknown', reason: '这款游戏的配置要求里没有能识别的显卡或内存' };
+  return UNKNOWN;
 }

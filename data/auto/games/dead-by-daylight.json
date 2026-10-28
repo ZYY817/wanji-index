@@ -6,6 +6,7 @@
     "en": "Dead by Daylight"
   },
   "summary": "10年恐惧相伴。10年的惊吓与刺激体验。10年的残暴献祭与惊险逃脱。 永久困于邪恶的幻境之中，即使死亡也无法逃脱，这是一场需要勇气和智慧的较量，四名意志坚定的逃生者在残忍对局中面对嗜血杀手。选择一方，进入多人非对称竞技游戏世界，获得最佳恐怖游戏体验。",
+  "summaryEn": "10 years of horror. 10 years of jump scares and close calls. 10 years of brutal sacrifices and thrilling escapes.",
   "genres": [
     "action"
   ],
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/381210/",
       "priceNote": "参考价 ¥ 37.50",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 381210,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64位操作系统(Windows 10)\n处理器: Intel Core i3-4170或AMD FX-8120\n内存: 8 GB RAM\n显卡: 可兼容DX11的GeForce GTX 460 1GB或AMD HD 6850 1GB\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间\n声卡: 可兼容DX11\n附注事项: With these requirements, it is recommended that the game is played on Low quality settings.",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64位操作系统(Windows 10)\n处理器: Intel Core i3-4170或AMD FX-8300或更高\n内存: 8 GB RAM\n显卡: 可兼容DX11的GeForce 760或AMD HD 8800或拥有4GB RAM的更高款\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间\n声卡: 可兼容DX11"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit Operating System\nProcessor: Intel Core i3-4170 or AMD FX-8120\nMemory: 8 GB RAM\nGraphics: DX11 Compatible GeForce GTX 460 1GB or AMD HD 6850 1GB\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 50 GB available space\nSound Card: DX11 compatible\nAdditional Notes: With these requirements, it is recommended that the game is played on Low quality settings.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit Operating System\nProcessor: Intel Core i3-4170 or AMD FX-8300 or higher\nMemory: 8 GB RAM\nGraphics: DX11 Compatible GeForce 760 or AMD HD 8800 or higher with 4GB of RAM\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 50 GB available space\nSound Card: DX11 compatible"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:42.984Z",
+    "syncedAt": "2026-10-27T17:24:12.057Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:22.037Z",
       "page": "Dead by Daylight"

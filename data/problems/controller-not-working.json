@@ -81,5 +81,8 @@
   ],
   "relatedProblems": [
     "game-wont-launch"
-  ]
+  ],
+  "shortEn": "Controller",
+  "titleEn": "Controller not working in PC games",
+  "summaryEn": "Most PC games only support Xbox controllers natively. For PlayStation, Switch and third-party pads, turn on Steam Input; if the game sees two controllers, disconnect one."
 }

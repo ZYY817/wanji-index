@@ -1,15 +1,15 @@
 // 首页叙事数据（仅服务端）：一次 loadData() 整理出七章所需的可序列化 props
 import { loadData, buildRelations } from './data.mjs';
-import { zh } from './labels.mjs';
+import { zh, en } from './labels.mjs';
 import { gameVM, siteVM, offerVM, byRichness, byUrgency, buildStamp, type GameVM, type SiteVM, type OfferVM } from './present';
 
 export type DossierVM = {
   game: GameVM;
-  channels: { platform: string; type: string; priceNote?: string }[];
+  channels: { platform: string; type: string; typeEn: string; priceNote?: string; priceNoteEn?: string }[];
   mods: { name: string; site: string }[];
   tools: { name: string; type: string; summary: string }[];
   guides: { title: string; steps: number; kind: string }[];
-  paths: { label: string; path: string }[];
+  paths: { label: string; labelEn: string; path: string }[];
 };
 
 export type HomeData = {
@@ -22,7 +22,7 @@ export type HomeData = {
   dossier: DossierVM | null;
   offers: OfferVM[];
   sites: SiteVM[];
-  siteGroups: { category: string; label: string; sites: SiteVM[] }[];
+  siteGroups: { category: string; label: string; labelEn: string; sites: SiteVM[] }[];
 };
 
 /**
@@ -60,20 +60,20 @@ export function homeData(): HomeData {
     const guides = [...(rel.guidesByGame.get(sample.id) ?? []), ...data.guides.filter((g: any) => !(g.games ?? []).length && g.kind === 'troubleshooting')];
     dossier = {
       game: gameVM(sample, rel),
-      channels: sample.channels.map((c: any) => ({ platform: c.platform, type: zh('channelType', c.type), priceNote: c.priceNote })),
+      channels: sample.channels.map((c: any) => ({ platform: c.platform, type: zh('channelType', c.type), typeEn: en('channelType', c.type), priceNote: c.priceNote, priceNoteEn: c.priceNote === '买断制' ? 'One-time purchase' : c.priceNote === '免费开玩' ? 'Free to play' : undefined })),
       mods: entries.filter((e: any) => e.type === 'mod' || e.type === 'localization').map((e: any) => ({ name: e.name, site: (sites.get(e.siteId) as any)?.name ?? '' })),
       tools: (rel.toolsByGame.get(sample.id) ?? []).map((t: any) => ({ name: t.name, type: zh('toolType', t.type), summary: t.summary })),
       guides: guides.slice(0, 2).map((g: any) => ({ title: g.title, steps: g.steps.length, kind: zh('guideKind', g.kind) })),
       paths: [
-        ...(sample.savePaths ?? []).map((p: any) => ({ label: '存档', path: p.path })),
-        ...(sample.configPaths ?? []).map((p: any) => ({ label: '配置', path: p.path })),
+        ...(sample.savePaths ?? []).map((p: any) => ({ label: '存档', labelEn: 'Saves', path: p.path })),
+        ...(sample.configPaths ?? []).map((p: any) => ({ label: '配置', labelEn: 'Config', path: p.path })),
       ],
     };
   }
 
   const offers = data.offers.map((o: any) => offerVM(o, data, now)).filter((o: OfferVM) => o.lifecycle !== 'ended').sort(byUrgency);
   const sites = data.sites.map((s: any) => siteVM(s, rel)).sort((a: SiteVM, b: SiteVM) => b.entryCount - a.entryCount || a.name.localeCompare(b.name));
-  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: zh('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
+  const siteGroups = CATEGORY_ORDER.map((c) => ({ category: c, label: zh('siteCategory', c), labelEn: en('siteCategory', c), sites: sites.filter((s: SiteVM) => s.category === c) })).filter((g) => g.sites.length);
 
   return {
     build: buildStamp(),

@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import { useEffect, useState } from 'react';
 import { shDateTime, splitDuration, pad2 } from '@/lib/time';
 import { cn } from '@/lib/utils';
@@ -37,20 +38,20 @@ export function Countdown({
 }) {
   const internalNow = useNow(1000, nowProp === undefined);
   const now = nowProp === undefined ? internalNow : nowProp;
-  const label = mode === 'end' ? '截止' : '开始';
+  const label = mode === 'end' ? <T zh="截止" en="Ends" /> : <T zh="开始" en="Starts" />;
   if (now == null)
     return <span className={cn('font-mono tabular-nums', fallbackClassName ?? className)}>{label} {shDateTime(target)}</span>;
   const left = target - now;
-  if (left <= 0) return <span className={cn('font-mono tabular-nums', className)}>{mode === 'end' ? '已截止' : '已开始'}</span>;
+  if (left <= 0) return <span className={cn('font-mono tabular-nums', className)}>{mode === 'end' ? <T zh="已截止" en="Ended" /> : <T zh="已开始" en="Started" />}</span>;
   const t = splitDuration(left);
   if (size === 'sm')
     return (
       <span className={cn('font-mono tabular-nums', className)}>
-        {mode === 'end' ? '剩' : '距开始'} {t.d > 0 && `${t.d}天 `}{pad2(t.h)}:{pad2(t.m)}:{pad2(t.s)}
+        {mode === 'end' ? <T zh="剩" en="" /> : <T zh="距开始" en="Starts in" />} {t.d > 0 && <T zh={`${t.d}天 `} en={`${t.d}d `} />}{pad2(t.h)}:{pad2(t.m)}:{pad2(t.s)}
       </span>
     );
 
-  const groups: [string, number][] = [['天', t.d], ['时', t.h], ['分', t.m], ['秒', t.s]];
+  const groups: [string, string, number][] = [['天', 'd', t.d], ['时', 'h', t.h], ['分', 'm', t.m], ['秒', 's', t.s]];
   const readyLabel = `${mode === 'end' ? '剩余' : '距开始'} ${t.d} 天 ${t.h} 小时 ${t.m} 分 ${t.s} 秒`;
 
   if (variant === 'film')
@@ -60,7 +61,7 @@ export function Countdown({
         aria-label={readyLabel}
         className={cn('inline-flex items-start font-mono tabular-nums leading-none', className)}
       >
-        {groups.map(([u, v], i) => (
+        {groups.map(([u, ue, v], i) => (
           <span key={u} className="inline-flex items-start">
             {i > 0 && (
               <span aria-hidden className="mx-[0.16em] mt-[0.34em] h-[0.56em] w-px shrink-0 bg-current opacity-20" />
@@ -71,7 +72,7 @@ export function Countdown({
                 aria-hidden
                 className={cn('mt-2 font-sans text-2xs font-normal leading-none tracking-[0.18em] opacity-60', labelClassName)}
               >
-                {u}
+                <T zh={u} en={ue} />
               </span>
             </span>
           </span>
@@ -86,7 +87,7 @@ export function Countdown({
         aria-label={readyLabel}
         className={cn('inline-flex items-start font-mono tabular-nums leading-none', className)}
       >
-        {groups.map(([u, v], i) => (
+        {groups.map(([u, ue, v], i) => (
           <span key={u} className="inline-flex items-start">
             {i > 0 && (
               <span aria-hidden className="mx-[0.13em] mt-[0.12em] flex h-[0.84em] flex-col justify-center gap-[0.16em]">
@@ -100,7 +101,7 @@ export function Countdown({
                 aria-hidden
                 className={cn('mt-2 font-sans text-2xs font-normal leading-none tracking-[0.2em] opacity-55', labelClassName)}
               >
-                {u}
+                <T zh={u} en={ue} />
               </span>
             </span>
           </span>
@@ -111,14 +112,14 @@ export function Countdown({
   // 雷达盘心：只放三组，字号可以放大到 80–90px 而不溢出盘面。
   // 超过 1 天读「天:时:分」，不足 1 天读「时:分:秒」——和胶片卡同一读法，不再把天数藏成小字。
   if (variant === 'dial') {
-    const dial: [string, number][] = t.d > 0 ? [['天', Math.min(t.d, 99)], ['时', t.h], ['分', t.m]] : [['时', t.h], ['分', t.m], ['秒', t.s]];
+    const dial: [string, string, number][] = t.d > 0 ? [['天', 'd', Math.min(t.d, 99)], ['时', 'h', t.h], ['分', 'm', t.m]] : [['时', 'h', t.h], ['分', 'm', t.m], ['秒', 's', t.s]];
     return (
       <span
         role="timer"
         aria-label={readyLabel}
         className={cn('inline-flex items-start font-mono tabular-nums leading-none', className)}
       >
-        {dial.map(([u, v], i) => (
+        {dial.map(([u, ue, v], i) => (
           <span key={u} className="inline-flex items-start">
             {i > 0 && (
               <span aria-hidden className="mx-[0.1em] mt-[0.1em] flex h-[0.82em] flex-col justify-center gap-[0.16em]">
@@ -132,7 +133,7 @@ export function Countdown({
                 aria-hidden
                 className={cn('mt-2 font-sans text-xs font-normal leading-none tracking-[0.2em] opacity-60', labelClassName)}
               >
-                {u}
+                <T zh={u} en={ue} />
               </span>
             </span>
           </span>
@@ -143,12 +144,12 @@ export function Countdown({
 
   return (
     <span className={cn('inline-flex items-start gap-[0.18em] font-mono tabular-nums', className)} role="timer" aria-label={readyLabel}>
-      {groups.map(([u, v], i) => (
+      {groups.map(([u, ue, v], i) => (
         <span key={u} className="inline-flex items-start">
           {i > 0 && <span aria-hidden className="mr-[0.18em] opacity-40">:</span>}
           <span className="flex flex-col items-center">
             <span>{pad2(v)}</span>
-            <span aria-hidden className={cn('mt-1 font-sans text-xs font-normal tracking-normal opacity-60', labelClassName)}>{u}</span>
+            <span aria-hidden className={cn('mt-1 font-sans text-xs font-normal tracking-normal opacity-60', labelClassName)}><T zh={u} en={ue} /></span>
           </span>
         </span>
       ))}

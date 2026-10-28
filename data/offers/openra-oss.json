@@ -1,0 +1,15 @@
+{
+  "id": "openra-oss",
+  "gameTitle": "OpenRA",
+  "type": "opensource",
+  "platform": "official",
+  "url": "https://www.openra.net/",
+  "claimNote": "开源即时战略引擎，重制《红色警戒》《沙丘 2000》等经典",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source RTS engine remaking Red Alert, Dune 2000 and more"
+}

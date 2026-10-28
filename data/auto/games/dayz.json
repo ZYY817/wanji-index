@@ -5,6 +5,7 @@
     "zh": "DayZ"
   },
   "summary": "你能在后末日世界中幸存吗？在这个被感染的“丧尸”遍布之地，你将与其他幸存者展开角逐，争夺有限的资源。你会和陌生人同舟共济吗？还是会为避免被出卖而选择孤身奋战？这就是《DayZ》，这是属于你的故事。",
+  "summaryEn": "How long can you survive a post-apocalyptic world? A land overrun with an infected \"zombie\" population, where you compete with other survivo…",
   "genres": [
     "action",
     "adventure",
@@ -20,7 +21,7 @@
       "url": "https://store.steampowered.com/app/221100/",
       "priceNote": "参考价 ¥ 119.50",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 221100,
@@ -36,6 +37,10 @@
     "minimum": "最低配置:\n操作系统: Windows 10 64-bit\n处理器: Intel Core i5-4430 or AMD Ryzen 5 2600 Six-Core\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 760 or AMD R9 270X\nDirectX 版本: 11\n存储空间: 需要 25 GB 可用空间\n声卡: DirectX®-compatible\n附注事项: Internet connection",
     "recommended": "推荐配置:\n操作系统: Windows 10 / 11 64-bit\n处理器: Intel Core i5-6600K or AMD R5 1600X\n内存: 12 GB RAM\n显卡: NVIDIA GeForce GTX 1060 or AMD RX 580\nDirectX 版本: 11\n存储空间: 需要 30 GB 可用空间\n声卡: DirectX®-compatible\n附注事项: Internet connection"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-4430 or AMD Ryzen 5 2600 Six-Core\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 760 or AMD R9 270X\nDirectX: Version 11\nStorage: 25 GB available space\nSound Card: DirectX®-compatible\nAdditional Notes: Internet connection",
+    "recommended": "Recommended:\nOS: Windows 10 / 11 64-bit\nProcessor: Intel Core i5-6600K or AMD R5 1600X\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 or AMD RX 580\nDirectX: Version 11\nStorage: 30 GB available space\nSound Card: DirectX®-compatible\nAdditional Notes: Internet connection"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:03.824Z",
+    "syncedAt": "2026-10-27T17:24:08.354Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:19.809Z",
       "page": "DayZ"

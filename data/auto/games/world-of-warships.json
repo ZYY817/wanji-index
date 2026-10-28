@@ -2,9 +2,11 @@
   "id": "world-of-warships",
   "slug": "world-of-warships",
   "name": {
-    "zh": "World of Warships"
+    "zh": "战舰世界",
+    "en": "World of Warships"
   },
   "summary": "投身惊心动魄的海战，在超过800艘来自20世纪上半叶的战舰中组建您的舰队——从隐蔽的驱逐舰到巨型战列舰。变换您的战舰外观并选择适合您游戏风格的升级品，与其他玩家在战斗中并肩作战！",
+  "summaryEn": "Immerse yourself in thrilling naval battles and assemble an armada of over 800 ships from the first half of the 20th century — from stealthy…",
   "genres": [
     "action",
     "mmo",
@@ -21,7 +23,7 @@
       "url": "https://store.steampowered.com/app/552990/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 552990,
@@ -37,6 +39,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 x64 SP1 / 8.1 / 10 / 11\n处理器: Intel® Core™ i3-3210 @ 3.2GHz, AMD Athlon™ II X2 245 @ 2.9 GHz\n内存: 6 GB RAM\n显卡: 1280×720; NVIDIA® GeForce® GT 640, AMD Radeon™ R7 240, Intel® HD 4000\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 67.2 GB 可用空间\n声卡: DirectX 11\n附注事项: 由于技术原因，只支持使用Steam版本创建的游戏账号。",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 / 11\n处理器: Intel® Core™ i5-4460 @ 3.2 GHz, AMD FX-8320 @ 3.5 GHz\n内存: 8 GB RAM\n显卡: 1920×1080; NVIDIA® GeForce® GTX 770, AMD Radeon™ R9 270X 4Gb\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 67.2 GB 可用空间\n声卡: DirectX 11.1\n附注事项: 由于技术原因，只支持使用Steam版本创建的游戏账号。"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7 x64\nProcessor: Intel® Core™ i3-3210 3,2 GHz AMD Athlon™ X4 970 Quad Core 3,8 GHz\nMemory: 6 GB RAM\nGraphics: 1280x720; Nvidia®Geforce® GT 640 Intel UHD 630 AMD Radeon™ R7 240\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 67.2 GB available space\nSound Card: DirectX 11\nAdditional Notes:",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS *: Windows 7 x64 / 8.1 / 10 / 11\nProcessor: Intel® Core™ i5-10400 2,9 GHz AMD Ryzen 5 3600 3,6 GHz\nMemory: 8 GB RAM\nGraphics: 1920×1080; Intel UHD 630 AMD Radeon™ R7 240 Nvidia®Geforce® GTX 770 AMD Radeon RX 570\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 67.2 GB available space\nSound Card: DirectX 11\nAdditional Notes:"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -48,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:08.413Z",
+    "syncedAt": "2026-10-27T17:27:36.902Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:14:12.847Z",
       "page": "World of Warships"

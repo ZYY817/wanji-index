@@ -8,6 +8,7 @@
 import { rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { AUTO, getJson, readAuto, writeAuto, today, sleep } from './lib.mjs';
+import { applyOfferName } from './zh-names.mjs';
 
 const UA = { 'user-agent': 'Mozilla/5.0 (compatible; wanji-index-sync/1.0)' };
 const norm = (s) => String(s ?? '').toLowerCase().replace(/[^\p{L}\p{N}]/gu, '');
@@ -23,6 +24,7 @@ function save(rec) {
   const keys = [`${rec.platform}:${norm(rec.gameTitle)}`, rec.platform === 'epic' && `epic-page:${epicPage(rec.url)}`].filter(Boolean);
   if (keys.some((k) => seen.has(k))) return; // 同一活动已由别的来源收录（Epic 官方接口优先）
   keys.forEach((k) => seen.add(k));
+  applyOfferName(rec);
   if (writeAuto('offers', rec)) written++;
 }
 
@@ -65,6 +67,7 @@ async function steam() {
     save(base(`auto-steam-${appid}-${today().replace(/-/g, '')}`, title, 'steam', `https://store.steampowered.com/app/${appid}/`, {
       ...(/[一-鿿]/.test(title) ? { titleZh: title } : {}),
       claimNote: 'Steam 限时免费，截止前加入库中即可永久保留',
+      claimNoteEn: 'Free on Steam for a limited time — add it before the deadline to keep it',
       ...(steamDeadline(keep[1]) ? { endDate: steamDeadline(keep[1]) } : {}),
       steamAppId: String(appid),
       note: '来自 Steam 商店特惠，自动更新；截止时间以 Steam 页面为准',
@@ -89,6 +92,14 @@ const CLAIM = {
   gog: 'GOG 限时赠送，领取后永久保留，无 DRM',
   itch: 'itch.io 限时免费，领取后加入你的 itch.io 库',
   indiegala: 'IndieGala 免费领取，需要 IndieGala 账号，无 DRM 下载',
+};
+
+const CLAIM_EN = {
+  epic: 'Free on Epic for a limited time — yours to keep',
+  steam: 'Free on Steam for a limited time — add it before the deadline to keep it',
+  gog: 'GOG giveaway — yours to keep, DRM-free',
+  itch: 'Free on itch.io for a limited time — add it to your library',
+  indiegala: 'Free on IndieGala (account needed), DRM-free download',
 };
 
 async function finalUrl(u) {
@@ -119,6 +130,7 @@ async function gamerpower() {
     const clean = new URL(url.replace(/^http:/, 'https:')); clean.search = ''; clean.hash = '';
     save(base(`auto-gp-${g.id}`, title, platform, clean.toString(), {
       claimNote: CLAIM[platform],
+      claimNoteEn: CLAIM_EN[platform],
       ...(end ? { endDate: end } : {}),
       ...(steamId ? { steamAppId: steamId } : {}),
       ...(g.image?.startsWith('https://') ? { art: { wide: g.image } } : {}),

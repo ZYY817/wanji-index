@@ -6,6 +6,7 @@
     "en": "Arma 3"
   },
   "summary": "置身大型军事沙盒，畅享逼真战斗体验。这款出色的军事游戏提供丰富多彩的单人和多人游戏内容、海量的现代武器与载具以及近乎无限的内容创作机会。逼真、多元、开放——《Arma 3》带给您身临其境的战争体验。",
+  "summaryEn": "Experience true combat gameplay in a massive military sandbox.",
   "genres": [
     "action",
     "simulation",
@@ -22,7 +23,7 @@
       "url": "https://store.steampowered.com/app/107410/",
       "priceNote": "参考价 ¥ 139.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 107410,
@@ -38,6 +39,10 @@
     "minimum": "最低要求：\n操作系统：Windows 10（64 位）\n处理器：Intel Core quad-core 或 AMD Athlon quad-core\n内存：8 GB RAM\n图形卡：NVIDIA GeForce GTX 660 / AMD Radeon HD 7850 / Intel HD 图形卡 4000（VRAM 为 1 GB）\nDirectX®：10\n硬盘驱动器：50 GB 可用空间\n声卡：与 DirectX® 兼容的板载声卡",
     "recommended": "推荐：\n操作系统：Windows 10 / 11（64 位）\n处理器：Intel Core i7-7700K 或 AMD Ryzen 3 3300X 或更好的处理器\n内存：16 GB RAM\n图形卡：NVIDIA GeForce GTX 1060 / AMD Radeon RX 580 系列（VRAM 为 6 GB）\nDirectX®：11\n硬盘驱动器：80 GB 可用空间，SSD\n声卡：与 DirectX® 兼容的声卡"
   },
+  "requirementsEn": {
+    "minimum": "Minimum: \nOS: Windows 10 (64-bit)\nProcessor: Intel Core quad-core or AMD Athlon quad-core\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 or AMD Radeon HD 7850 or Intel HD Graphics 4000, with 1 GB video memory\nDirectX®: 10\nStorage: 50 GB available space\nAudio: DirectX® compatible\nOther: Internet connection and free Steam account to activate \nDual Layer compatible when installing from DVD",
+    "recommended": "Recommended:\nOS: Windows 10 / 11 (64-bit)\nProcessor: Intel Core i7-7700K or AMD Ryzen 3 3300X or better\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 or AMD Radeon RX 580, with 6 GB VRAM, or better\nDirectX®: 11\nStorage: 80 GB available space (SSD)\nSound: DirectX® compatible\nOther: Internet connection and free Steam account to activate\nDual Layer compatible when installing from DVD"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -49,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:55.297Z",
+    "syncedAt": "2026-10-27T17:23:26.365Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:35.957Z",
       "page": "Arma 3"

@@ -157,5 +157,8 @@
   "relatedProblems": [
     "error-0xc000007b",
     "game-wont-launch"
-  ]
+  ],
+  "shortEn": "Missing DLL",
+  "titleEn": "Missing .dll file: VCRUNTIME140 / MSVCP140 / d3dx9_43 and more",
+  "summaryEn": "A missing DLL means its runtime isn't installed or is damaged. Use the table to find which runtime it belongs to and install the full package from Microsoft. Don't download single DLLs from DLL sites."
 }

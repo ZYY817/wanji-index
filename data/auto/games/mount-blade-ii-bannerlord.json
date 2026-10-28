@@ -2,9 +2,11 @@
   "id": "mount-blade-ii-bannerlord",
   "slug": "mount-blade-ii-bannerlord",
   "name": {
-    "zh": "Mount & Blade II: Bannerlord"
+    "zh": "骑马与砍杀 2：霸主",
+    "en": "Mount & Blade II: Bannerlord"
   },
   "summary": "一个策略/动作类角色扮演游戏。创建一个角色，投身中世纪战场，从事外交、锻造、贸易和征服新的土地。集结你的军团奔赴战场，在大规模实时战斗中体验深奥但又直观的基于技能的战斗系统，与你忠诚的战士们并肩作战、取得胜利。",
+  "summaryEn": "A strategy/action RPG. Create a character, engage in diplomacy, craft, trade and conquer new lands in a vast medieval sandbox.",
   "genres": [
     "action",
     "indie",
@@ -22,7 +24,7 @@
       "url": "https://store.steampowered.com/app/261550/",
       "priceNote": "参考价 ¥ 248.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 261550,
@@ -38,6 +40,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 (64-bit only)\n处理器: Intel® Core™ i3-8100 / AMD Ryzen™ 3 1200\n内存: 6 GB RAM\n显卡: Intel® UHD Graphics 630 / NVIDIA® GeForce® GTX 660 2GB / AMD Radeon™ HD 7850 2GB\n存储空间: 需要 60 GB 可用空间\n附注事项: 集成显卡额外需要 2 GB 系统内存。以上仅为估算配置，可能会在游戏正式推出时发生变化。",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (64-bit only)\n处理器: Intel® Core™ i5-9600K / AMD Ryzen™ 5 3600X\n内存: 8 GB RAM\n显卡: NVIDIA® GeForce® GTX 1060 3GB / AMD Radeon™ RX 580\n存储空间: 需要 60 GB 可用空间\n附注事项: 以上仅为估算配置，可能会在游戏正式推出时发生变化。"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7 (64-bit only)\nProcessor: Intel® Core™ i3-8100 / AMD Ryzen™ 3 1200 / Snapdragon X Elite\nMemory: 6 GB RAM\nGraphics: Intel® UHD Graphics 630 / NVIDIA® GeForce® GTX 660 2GB / AMD Radeon™ HD 7850 2GB\nStorage: 60 GB available space\nAdditional Notes: Integrated GPUs require additional 2GB of system RAM.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (64-bit only)\nProcessor: Intel® Core™ i5-9600K / AMD Ryzen™ 5 3600X\nMemory: 8 GB RAM\nGraphics: NVIDIA® GeForce® GTX 1060 3GB / AMD Radeon™ RX 580\nStorage: 60 GB available space\nAdditional Notes:"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -49,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:26.370Z",
+    "syncedAt": "2026-10-27T17:25:41.266Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:13.495Z",
       "page": "Mount & Blade II: Bannerlord"

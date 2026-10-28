@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { IndexMasthead, MastNum } from '@/components/layout/page-masthead';
 import { DetailSection } from '@/components/layout/detail-section';
@@ -20,21 +21,21 @@ export default function CheckPage() {
   return (
     <>
       <IndexMasthead
-        title="我的电脑能玩吗"
-        crumbs={[['能玩吗']]}
-        description={<>设置一次显卡和内存，<MastNum>{games.length}</MastNum> 款游戏按 Steam 公布的配置要求逐一对照：流畅、能玩，还是吃力。</>}
+        title={<T zh="我的电脑能玩吗" en="Can my PC run it?" />}
+        crumbs={[[<T key="c" zh="能玩吗" en="Can I run" />]]}
+        description={<T zh={<>设置一次显卡和内存，<MastNum>{games.length}</MastNum> 款游戏按 Steam 公布的配置要求逐一对照：流畅、能玩，还是吃力。</>} en={<>Set your GPU and RAM once and <MastNum>{games.length}</MastNum> games are checked against their Steam requirements: smooth, playable, or struggles.</>} />}
       />
       <div className="container-x">
-        <DetailSection index={0} meta={{ id: 'list', title: '对照结果', lead: '点进任意一款，可以看到完整的最低 / 推荐配置。' }}>
+        <DetailSection index={0} meta={{ id: 'list', title: <T zh="对照结果" en="Results" />, lead: <T zh="点进任意一款，可以看到完整的最低 / 推荐配置。" en="Open any game to see its full minimum / recommended specs." /> }}>
           <CheckList games={games} />
         </DetailSection>
-        <DetailSection index={1} meta={{ id: 'how', title: '怎么判断的' }}>
+        <DetailSection index={1} meta={{ id: 'how', title: <T zh="怎么判断的" en="How it works" /> }}>
           <div className="prose-doc max-w-[62ch] text-foreground/90">
             <ul className="list-disc space-y-2 pl-5">
-              <li><strong>流畅</strong>：显卡和内存都达到推荐配置；<strong>能玩</strong>：达到最低配置，画质需要调低；<strong>吃力</strong>：低于最低配置。</li>
-              <li>显卡按公开跑分换算成相对性能分（GTX 1060 = 100），要求里列了几块显卡时，达到其中最弱那块即可；留 5% 余量。</li>
-              <li>处理器、硬盘空间和系统版本暂不参与判断。结果是估算，以游戏实际表现为准。</li>
-              <li>显卡型号来自浏览器报告的信息；识别不准时可以手动选择。配置只保存在你的浏览器里。</li>
+              <li><T zh={<><strong>流畅</strong>：显卡和内存都达到推荐配置；<strong>能玩</strong>：达到最低配置，画质需要调低；<strong>吃力</strong>：低于最低配置。</>} en={<><strong>Smooth</strong>: GPU and RAM meet the recommended specs. <strong>Playable</strong>: meets the minimum — lower the settings. <strong>Struggles</strong>: below the minimum.</>} /></li>
+              <li><T zh="显卡按公开跑分换算成相对性能分（GTX 1060 = 100），要求里列了几块显卡时，达到其中最弱那块即可；留 5% 余量。" en="GPUs are scored from public benchmarks (GTX 1060 = 100). When several cards are listed, matching the weakest is enough, with a 5% margin." /></li>
+              <li><T zh="处理器、硬盘空间和系统版本暂不参与判断。结果是估算，以游戏实际表现为准。" en="CPU, disk space and OS version aren’t checked yet. Results are estimates." /></li>
+              <li><T zh="显卡型号来自浏览器报告的信息；识别不准时可以手动选择。配置只保存在你的浏览器里。" en="The GPU comes from what your browser reports; pick it manually if it’s wrong. Your setup stays in your browser." /></li>
             </ul>
           </div>
         </DetailSection>

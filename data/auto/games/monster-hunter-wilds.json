@@ -2,9 +2,11 @@
   "id": "monster-hunter-wilds",
   "slug": "monster-hunter-wilds",
   "name": {
-    "zh": "Monster Hunter Wilds"
+    "zh": "怪物猎人 荒野",
+    "en": "Monster Hunter Wilds"
   },
   "summary": "狂野凶猛的大自然，袭来。 时刻都在动态变化的原野。 这是个关于生活在具有两面性的世界中的怪物与人们的故事。 进化的狩猎动作，寻求连续不断的沉浸感，究极的狩猎体验正等待你的到来。",
+  "summaryEn": "The unbridled force of nature runs wild and relentless, with environments transforming drastically from one moment to the next.",
   "genres": [
     "action",
     "adventure",
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/2246340/",
       "priceNote": "参考价 ¥ 148.50",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 2246340,
@@ -36,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows®10（必须为64-bit）/Windows®10（必须为64-bit）\n处理器: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\n内存: 16 GB RAM\n显卡: NVIDIA® GeForce® GTX 1660(VRAM 6GB) or AMD Radeon™ RX 5500 XT(VRAM 8GB)\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: 必须使用SSD。可在画面设置为“最低”，1080p（使用超清，原生分辨率为720p的设置）／30fps的情况下进行游戏。支持DirectStorage。",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows®10（必须为64-bit）/Windows®10（必须为64-bit）\n处理器: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\n内存: 16 GB RAM\n显卡: NVIDIA® GeForce® RTX 2060 Super(VRAM 8GB) or　AMD Radeon™ RX 6600(VRAM 8GB)\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 75 GB 可用空间\n附注事项: 必须使用SSD。可在画面设置为“中”，1080p/60fps（使用帧生成）的情况下进行游戏。支持DirectStorage。"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows®10 (64-bit Required)/Windows®11 (64-bit Required)\nProcessor: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\nMemory: 16 GB RAM\nGraphics: NVIDIA® GeForce® GTX 1660(VRAM 6GB) or AMD Radeon™ RX 5500 XT(VRAM 8GB)\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 75 GB available space\nAdditional Notes: SSD required. This game is expected to run at 1080p (upscaled from 720 native resolution) / 30 fps under the \"Lowest\" graphics setting. DirectStorage supported.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows®10 (64-bit Required)/Windows®11 (64-bit Required)\nProcessor: Intel® Core™ i5-10400 or Intel® Core™ i3-12100 or AMD Ryzen™ 5 3600\nMemory: 16 GB RAM\nGraphics: NVIDIA® GeForce® RTX 2060 Super(VRAM 8GB) or　AMD Radeon™ RX 6600(VRAM 8GB)\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 75 GB available space\nAdditional Notes: SSD required. This game is expected to run at 1080p / 60 fps (with Frame Generation enabled) under the \"Medium\" graphics setting. DirectStorage supported."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:04:12.755Z",
+    "syncedAt": "2026-10-27T17:25:37.569Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:09.227Z",
       "page": "Monster Hunter Wilds"

@@ -6,6 +6,7 @@
     "en": "World of Tanks Blitz"
   },
   "summary": "在这款免费在线7v7坦克射击游戏，尽情宣泄压力、轰飞敌方炮塔！驾驶数百辆坦克（从博物馆典藏经典到令人疑问\"这真的存在过吗？\"的特殊型号应有尽有），在每场5–7分钟的快节奏混战中感受钢铁狂潮。既可单人作战，也可与好友组队，即使在配置一般的设备上也能畅享流畅爽快的战斗体验！",
+  "summaryEn": "Blow off steam and tank turrets in a free-to-play online 7v7 tank shooter! Drive hundreds of tanks, from museum classics to \"did-that-ever-e…",
   "genres": [
     "action",
     "mmo",
@@ -23,7 +24,7 @@
       "url": "https://store.steampowered.com/app/444200/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 444200,
@@ -39,6 +40,10 @@
     "minimum": "最低配置:\n操作系统 *: Windows 7, 8.0, 8.1, 10, 11\n处理器: 2 GHz\n内存: 2 GB RAM\n显卡: DirectX 11 compliant graphics card with 256 MB of VRAM\n存储空间: 需要 8 GB 可用空间",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7, 8.0, 8.1, 10, 11\nProcessor: 2 GHz\nMemory: 2 GB RAM\nGraphics: DirectX 11 compliant graphics card with 256 MB of VRAM\nStorage: 8 GB available space",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -50,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:58.140Z",
+    "syncedAt": "2026-10-27T17:27:33.128Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:14:09.560Z",
       "page": "World of Tanks Blitz"

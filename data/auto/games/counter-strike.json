@@ -2,9 +2,11 @@
   "id": "counter-strike",
   "slug": "counter-strike",
   "name": {
-    "zh": "Counter-Strike"
+    "zh": "反恐精英",
+    "en": "Counter-Strike"
   },
   "summary": "感受世界上至酷超炫的联机对战游戏。 投入紧张刺激的反恐战争，与臭名昭著的恐怖分子展开生死对决。 团结合作，与队友一同完成不可能的任务。 冲锋陷阵，攻城拔塞。 营救人质。 团队成功离不开你的功绩。 团队成功将见证你的功绩。",
+  "summaryEn": "Play the world's number 1 online action game. Engage in an incredibly realistic brand of terrorist warfare in this wildly popular team-based…",
   "genres": [
     "action"
   ],
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/10/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 10,
@@ -36,6 +38,10 @@
     "minimum": "最低配置：500 mhz 处理器，96mb 内存，16mb 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：800 mhz 处理器，128mb 内存，32mb 以上的显卡，Windows XP，鼠标，键盘，互联网连接",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum: 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:23.962Z",
+    "syncedAt": "2026-10-27T17:24:00.867Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:15.318Z",
       "page": "Counter-Strike"

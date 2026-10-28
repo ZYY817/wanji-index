@@ -7,7 +7,7 @@
 //   · 其余集合（资源站、条目、工具、教程）暂不自动收录。
 
 /** 补空用的字段：人工记录里缺失（或为空数组）时才用自动数据填 */
-const FILLABLE = ['savePaths', 'configPaths', 'os', 'genres', 'steamAppId', 'developers', 'publishers', 'releaseDate', 'zhSupport', 'requirements', 'aliases', 'issues'];
+const FILLABLE = ['savePaths', 'configPaths', 'os', 'genres', 'steamAppId', 'developers', 'publishers', 'releaseDate', 'zhSupport', 'requirements', 'aliases', 'issues', 'summaryEn', 'requirementsEn'];
 
 /** 从商店链接里取 Steam appid */
 export function steamAppIdOf(game) {

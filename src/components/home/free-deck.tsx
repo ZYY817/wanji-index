@@ -1,9 +1,10 @@
 'use client';
+import { L } from '@/lib/labels-i18n';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { motion, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'motion/react';
 import type { OfferVM } from '@/lib/present';
-import { zh } from '@/lib/labels.mjs';
 import { shDateTime } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { AcquireButton } from '@/components/ui/button';
@@ -17,7 +18,8 @@ import { Tilt } from '@/components/fx/interact';
 import { hang } from '@/components/ui/hang';
 
 const LIMIT = 6;
-const CTA: Record<string, string> = { limited: '免费领取', weekend: '免费畅玩', trial: '免费试玩', permanent: '免费获取', opensource: '免费下载' };
+const CTA: Record<string, [string, string]> = { limited: ['免费领取', 'Claim free'], weekend: ['免费畅玩', 'Play free'], trial: ['免费试玩', 'Try free'], permanent: ['免费获取', 'Play free'], opensource: ['免费下载', 'Download'] };
+const cta = (type: string, upcoming: boolean) => { const [zhL, enL] = upcoming ? ['活动页', 'Details'] : CTA[type] ?? ['免费获取', 'Get free']; return <T zh={zhL} en={enL} />; };
 
 /* 两条时间轴。
  * 进场窗口 e（本章从露头到固定，见 Scene 的 relay）：
@@ -81,8 +83,8 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
   return (
     <div className="min-w-0 text-left">
       <p className={cn('text-fg-2', big ? 'text-sm' : 'text-xs')}>
-        {lc === 'upcoming' ? <span className="text-info">即将免费{target != null && ` · ${shDateTime(target)} 开始`}</span>
-          : target != null ? <>剩余时间<span className="text-fg-3"> · {shDateTime(target)} 截止</span></> : zh('freeType', o.type)}
+        {lc === 'upcoming' ? <span className="text-info"><T zh="即将免费" en="Free soon" />{target != null && <> · <T zh={`${shDateTime(target)} 开始`} en={`starts ${shDateTime(target)}`} /></>}</span>
+          : target != null ? <><T zh="剩余时间" en="Time left" /><span className="text-fg-3"> · <T zh={`${shDateTime(target)} 截止`} en={`ends ${shDateTime(target)}`} /></span></> : L('freeType', o.type)}
       </p>
       <div className={big ? 'mt-1.5' : 'mt-1'}>
         {target != null ? (
@@ -90,7 +92,7 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
             className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')}
             labelClassName="text-fg-3" />
         ) : (
-          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}>长期免费</span>
+          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}><T zh="长期免费" en="Always free" /></span>
         )}
       </div>
     </div>
@@ -106,7 +108,7 @@ export function CardFace({ o, text = 1 }: { o: OfferVM; text?: MotionValue<numbe
       <GameArt src={[o.art?.hero, o.art?.capsule, o.art?.header]} name={o.gameName ?? o.title} seed={o.id} variant="wide" loading="eager" className="absolute inset-0" />
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(12,11,10,0.9)_0%,rgba(12,11,10,0.1)_55%)]" />
       <motion.div className="absolute inset-x-0 bottom-0 p-7" style={{ opacity: text }}>
-        <p className="flex items-center gap-2 text-sm text-foreground/85"><PlatformMark platform={o.platform} withLabel /><span className="text-fg-3">·</span>{zh('freeType', o.type)}</p>
+        <p className="flex items-center gap-2 text-sm text-foreground/85"><PlatformMark platform={o.platform} withLabel /><span className="text-fg-3">·</span>{L('freeType', o.type)}</p>
         <h3 className="mt-2 text-balance font-serif text-[clamp(26px,2.2vw,38px)] font-black leading-tight tracking-[-0.02em]">{o.titleZh ?? o.title}</h3>
         {o.titleOrig && <p className="mt-1 text-sm text-foreground/70">{o.titleOrig}</p>}
       </motion.div>
@@ -234,8 +236,8 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
     return (
       <section ref={ref} aria-labelledby="free-title" className="bg-background py-16">
         <div className="container-x text-center">
-          <p className="text-sm text-primary">免费游戏 · 精选 {n} 条 / 共 {total} 条</p>
-          <h2 id="free-title" className="mt-2 font-serif text-[clamp(32px,8vw,56px)] font-black tracking-[-0.04em]">{hang('此刻，免费的。')}</h2>
+          <p className="text-sm text-primary"><T zh={`免费游戏 · 精选 ${n} 条 / 共 ${total} 条`} en={`Free games · ${n} picks of ${total}`} /></p>
+          <h2 id="free-title" className="mt-2 font-serif text-[clamp(32px,8vw,56px)] font-black tracking-[-0.04em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
         </div>
         <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2">
           {items.map((x) => {
@@ -249,14 +251,14 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
                 </div>
                 <div className="mt-3 flex items-center justify-between gap-4">
                   <OfferTime o={x} lc={xlc} target={t} now={now} size="sm" />
-                  <AcquireButton href={x.url} health={x.linkHealth} label={xlc === 'upcoming' ? '活动页' : CTA[x.type] ?? '免费获取'} size="md" />
+                  <AcquireButton href={x.url} health={x.linkHealth} label={cta(x.type, xlc === 'upcoming')} size="md" />
                 </div>
               </article>
             );
           })}
         </div>
         <div className="container-x mt-6 text-center">
-          <TextLink href="/free/">全部免费情报</TextLink>
+          <TextLink href="/free/"><T zh="全部免费情报" en="All free games" /></TextLink>
         </div>
       </section>
     );
@@ -277,8 +279,8 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
 
         {/* 标题：卡组正上方 */}
         <motion.div className="absolute inset-x-0 flex flex-col items-center text-center" style={{ bottom: `calc(50% + ${h / 2 + 32}px)`, opacity: headVis, y: headY }}>
-          <p className="text-sm text-primary">免费游戏 · 精选 {n} 条 / 共 {total} 条</p>
-          <h2 id="free-title" className="mt-2 font-serif text-[clamp(40px,3.8vw,64px)] font-black leading-tight tracking-[-0.04em]">{hang('此刻，免费的。')}</h2>
+          <p className="text-sm text-primary"><T zh={`免费游戏 · 精选 ${n} 条 / 共 ${total} 条`} en={`Free games · ${n} picks of ${total}`} /></p>
+          <h2 id="free-title" className="mt-2 font-serif text-[clamp(40px,3.8vw,64px)] font-black leading-tight tracking-[-0.04em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
         </motion.div>
 
         {/* 卡组 */}
@@ -291,7 +293,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
           {o && (
             <div className="flex items-center gap-10">
               <OfferTime o={o} lc={lc} target={target} now={now} size="lg" />
-              <AcquireButton href={o.url} health={o.linkHealth} label={lc === 'upcoming' ? '活动页' : CTA[o.type] ?? '免费获取'} size="lg" />
+              <AcquireButton href={o.url} health={o.linkHealth} label={cta(o.type, lc === 'upcoming')} size="lg" />
             </div>
           )}
         </motion.div>
@@ -300,7 +302,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
         <motion.div className="container-x absolute inset-x-0 bottom-[4vh] flex items-center gap-6 text-sm text-fg-3" style={{ opacity: barVis }}>
           <span className="font-mono tabular-nums"><span className="text-foreground">{String(cur + 1).padStart(2, '0')}</span> / {String(n).padStart(2, '0')}</span>
           <span className="relative h-px flex-1 bg-border-strong"><motion.span className="absolute inset-0 origin-left bg-primary" style={{ scaleX: progress }} /></span>
-          <Link href="/free/" className="border-b border-foreground/25 pb-0.5 text-fg-2 transition-colors hover:border-primary hover:text-foreground">全部免费情报</Link>
+          <Link href="/free/" className="border-b border-foreground/25 pb-0.5 text-fg-2 transition-colors hover:border-primary hover:text-foreground"><T zh="全部免费情报" en="All free games" /></Link>
         </motion.div>
       </div>
     </section>

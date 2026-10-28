@@ -2,9 +2,11 @@
   "id": "borderlands-2",
   "slug": "borderlands-2",
   "name": {
-    "zh": "Borderlands 2"
+    "zh": "无主之地 2",
+    "en": "Borderlands 2"
   },
   "summary": "The Ultimate Vault Hunter’s Upgrade lets you get the most out of the Borderlands 2 experience.",
+  "summaryEn": "The Ultimate Vault Hunter’s Upgrade lets you get the most out of the Borderlands 2 experience.",
   "genres": [
     "action",
     "rpg"
@@ -21,7 +23,7 @@
       "url": "https://store.steampowered.com/app/49520/",
       "priceNote": "参考价 ¥ 64.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 49520,
@@ -41,6 +43,10 @@
     "minimum": "Minimum:\nOS *: Windows XP SP3\nProcessor: 2.4 GHz Dual Core Processor\nMemory: 2 GB(XP)/ 2 GB(Vista)\nHard Disk Space: 13 GB free\nVideo Memory: 256 MB\nVideo Card: NVIDIA GeForce 8500 /ATI Radeon HD 2600\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)",
     "recommended": "Recommended:\nOS *: Windows XP SP3/Vista/Win 7\nProcessor: 2.3 GHz Quad Core processor\nMemory: 2 GB\nHard Disk Space: 20 GB free\nVideo Memory: 512MB\nVideo Card: NVIDIA GeForce GTX 560 / ATI Radeon HD 5850\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP SP3\nProcessor: 2.4 GHz Dual Core Processor\nMemory: 2 GB(XP)/ 2 GB(Vista)\nHard Disk Space: 13 GB free\nVideo Memory: 256 MB\nVideo Card: NVIDIA GeForce 8500 /ATI Radeon HD 2600\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)",
+    "recommended": "Recommended:\nOS *: Windows XP SP3/Vista/Win 7\nProcessor: 2.3 GHz Quad Core processor\nMemory: 2 GB\nHard Disk Space: 20 GB free\nVideo Memory: 512MB\nVideo Card: NVIDIA GeForce GTX 560 / ATI Radeon HD 5850\nSound: DirectX 9.0c Compatible\nOther Requirements:Initial installation requires one-time internet connection for Steam authentication; software installations required (included with the game) include Steam Client, DirectX 9, Microsoft .NET 4 Framework, Visual C++ Redistributable 2005, Visual C++ Redistributable 2008, Visual C++ Redistributable 2010, and AMD CPU Drivers (XP Only/AMD Only)"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -52,13 +58,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:53.177Z",
+    "syncedAt": "2026-10-27T17:23:37.689Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:46.643Z",
       "page": "Borderlands 2"

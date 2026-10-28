@@ -2,9 +2,11 @@
   "id": "half-life-2-lost-coast",
   "slug": "half-life-2-lost-coast",
   "name": {
-    "zh": "Half-Life 2: Lost Coast"
+    "zh": "半条命 2：失落的海岸线",
+    "en": "Half-Life 2: Lost Coast"
   },
   "summary": "《半条命 2：失落的海岸线》最初计划作为《半条命 2》中“17 号高速公路”章节中的一个部分，它展示了 Source 引擎所加入的高动态范围光映射技术。",
+  "summaryEn": "Originally planned as a section of the Highway 17 chapter of Half-Life 2, Lost Coast is a playable technology showcase that introduces High …",
   "genres": [
     "action"
   ],
@@ -18,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/340/",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 340,
@@ -34,6 +36,10 @@
     "minimum": "最低配置： Pentium 4 2.4GHz 或 AMD 2800+ 处理器，1GB 内存，DirectX 9 显卡，Windows XP，鼠标，键盘，互联网连接",
     "recommended": ""
   },
+  "requirementsEn": {
+    "minimum": "Minimum: Pentium 4 2.4GHz or AMD 2800+ Processor, 1GB RAM, DirectX 9 level graphics card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -45,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:01:37.926Z",
+    "syncedAt": "2026-10-27T17:24:52.630Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:20.521Z",
       "page": "Half-Life 2: Lost Coast"

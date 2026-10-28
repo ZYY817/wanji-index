@@ -16,6 +16,8 @@
     "keywords": { "type": "array", "items": { "type": "string" } },
     "summary": { "type": "string", "minLength": 1 },
     "description": { "type": "string" },
+    "summaryEn": { "type": "string", "description": "英文简介（Steam 英文商店页，中英切换用）" },
+    "requirementsEn": { "type": "object", "properties": { "minimum": { "type": "string" }, "recommended": { "type": "string" } } },
     "genres": { "type": "array", "items": { "type": "string" } },
     "os": { "type": "array", "items": { "type": "string", "x-enum": "os" } },
     "channels": {

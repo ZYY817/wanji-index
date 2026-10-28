@@ -1,0 +1,17 @@
+{
+  "id": "shattered-pd-oss",
+  "gameTitle": "Shattered Pixel Dungeon 破碎的像素地牢",
+  "titleZh": "破碎的像素地牢",
+  "type": "opensource",
+  "platform": "official",
+  "url": "https://shatteredpixel.com/",
+  "claimNote": "开源 Roguelike 地牢；Steam 版付费，官网 / GitHub 免费下载",
+  "steamAppId": "1769170",
+  "checkedAt": "2026-10-28",
+  "linkHealth": "ok",
+  "note": "人工整理：开源免费游戏，链接到官方网站或官方商店页",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "claimNoteEn": "Open-source dungeon roguelike; paid on Steam, free from the official site / GitHub"
+}

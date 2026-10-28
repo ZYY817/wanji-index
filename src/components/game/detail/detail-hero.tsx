@@ -1,4 +1,5 @@
 'use client';
+import { T } from '@/lib/i18n';
 import Link from 'next/link';
 import { useRef } from 'react';
 import { motion, useScroll } from 'motion/react';
@@ -13,8 +14,8 @@ import { useIsDesktop, useMotionOK, useLiveTransform } from '@/components/fx/hoo
  * 底部压暗逐渐加深，把视线交给下面的「速答条」。入场用纯 CSS 错峰，首帧即可读。
  */
 export function DetailHero({
-  id, name, enName, summary, tags, byline, art,
-}: { id: string; name: string; enName?: string; summary: string; tags: string[]; byline?: string[]; art: Art }) {
+  id, name, enName, summary, summaryEn, tags, byline, bylineEn, art,
+}: { id: string; name: string; enName?: string; summary: string; summaryEn?: string; tags: React.ReactNode[]; byline?: string[]; bylineEn?: string[]; art: Art }) {
   const ref = useRef<HTMLElement>(null);
   const ok = useMotionOK();
   const desktop = useIsDesktop();
@@ -30,7 +31,7 @@ export function DetailHero({
   const rise = (i: number) => ({ animationDelay: `${0.12 + i * 0.08}s` });
 
   return (
-    <section ref={ref} aria-label={`${name} 档案首屏`} className="grain relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
+    <section ref={ref} aria-label={name} className="grain relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
       <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale, y: artY }}>
         <GameArt src={art?.hero} name={name} en={enName} seed={id} variant="wide" priority className="absolute inset-0" imgClassName="object-[60%_30%]" />
       </motion.div>
@@ -41,33 +42,33 @@ export function DetailHero({
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
       <motion.div className="container-x relative z-10 w-full pb-8 pt-[calc(var(--header-h)+28px)] md:pb-10" style={{ y: textY, opacity: textFade }}>
-        <nav aria-label="面包屑" className="flex animate-rise items-center gap-2 text-sm text-fg-2" style={rise(0)}>
-          <Link href="/" className="transition-colors hover:text-foreground">首页</Link>
+        <nav aria-label="Breadcrumb" className="flex animate-rise items-center gap-2 text-sm text-fg-2" style={rise(0)}>
+          <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
           <span aria-hidden className="text-fg-3">/</span>
-          <Link href="/games/" className="transition-colors hover:text-foreground">游戏库</Link>
+          <Link href="/games/" className="transition-colors hover:text-foreground"><T zh="游戏库" en="Games" /></Link>
           <span aria-hidden className="text-fg-3">/</span>
-          <span aria-current="page" className="text-foreground">{name}</span>
+          <span aria-current="page" className="text-foreground"><T zh={name} en={enName || name} /></span>
         </nav>
 
         <div className="mt-4 grid items-end gap-6 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-8">
             <h1 className="animate-rise font-serif text-4xl font-black leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl" style={rise(1)}>
-              {name}
+              <T zh={name} en={enName || name} />
             </h1>
             <p className="mt-3 flex animate-rise flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-2" style={rise(2)}>
-              {enName && <span className="font-medium text-foreground">{enName}</span>}
-              {tags.map((t) => (
-                <span key={t} className="flex items-center gap-2">
+              {enName && enName !== name && <span className="font-medium text-foreground"><T zh={enName} en={name} /></span>}
+              {tags.map((t, i) => (
+                <span key={i} className="flex items-center gap-2">
                   <span aria-hidden className="size-1 rounded-full bg-fg-3" />
                   {t}
                 </span>
               ))}
             </p>
             <p className="mt-3 max-w-[38em] animate-rise text-lg leading-relaxed text-foreground/90 text-pretty" style={rise(3)}>
-              {summary}
+              <T zh={summary} en={summaryEn} />
             </p>
             {byline && byline.length > 0 && (
-              <p className="mt-3 animate-rise text-sm text-fg-2" style={rise(3)}>{byline.join(' · ')}</p>
+              <p className="mt-3 animate-rise text-sm text-fg-2" style={rise(3)}><T zh={byline.join(' · ')} en={bylineEn?.length ? bylineEn.join(' · ') : undefined} /></p>
             )}
           </div>
           {art?.logo && (

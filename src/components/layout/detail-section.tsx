@@ -2,7 +2,7 @@ import { Reveal } from '@/components/fx/reveal';
 import { cn } from '@/lib/utils';
 import { SectionHeading } from '@/components/ui/section-label';
 
-export type DetailSectionMeta = { id: string; title: string; lead?: string; count?: number };
+export type DetailSectionMeta = { id: string; title: React.ReactNode; lead?: React.ReactNode; count?: number };
 
 /**
  * 详情页章节（游戏 / 资源站 / 工具 / 教程共用）：

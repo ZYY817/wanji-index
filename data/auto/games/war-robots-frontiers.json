@@ -5,6 +5,7 @@
     "zh": "War Robots: Frontiers"
   },
   "summary": "全副武装，在免费多人机甲射击游戏《War Robots: Frontiers》中迎接战术机甲大对决。打造并自定义机甲，与其他机师在线组队，在浩瀚的星际战场上发动引擎，火力全开。",
+  "summaryEn": "Gear up for tactical mech action in War Robots: Frontiers, a free-to-play multiplayer mech shooter.",
   "genres": [
     "action",
     "simulation"
@@ -19,7 +20,7 @@
       "url": "https://store.steampowered.com/app/1491000/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1491000,
@@ -35,6 +36,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel Core i5-3470 @ 3.20GHz\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 660 3GB VRAM\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 10 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel Core i5-9600K @ 3.70GHz\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 2070 8GB VRAM\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 10 GB 可用空间\n附注事项: SSD is recommended"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-3470 @ 3.20GHz\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 3GB VRAM\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 10 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-9600K @ 3.70GHz\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 2070 8GB VRAM\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 10 GB available space\nAdditional Notes: SSD is recommended"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -46,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:03:55.349Z",
+    "syncedAt": "2026-10-27T17:27:14.490Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:58.420Z",
       "page": "War Robots: Frontiers"

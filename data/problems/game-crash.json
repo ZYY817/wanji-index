@@ -92,5 +92,8 @@
     "game-wont-launch",
     "missing-dll",
     "black-screen"
-  ]
+  ],
+  "shortEn": "Crashes",
+  "titleEn": "Game crashes to desktop mid-play",
+  "summaryEn": "Usually a GPU driver, damaged game files or a background app. Verify the game files and update your GPU driver first, then turn off overlays and overclocks — that fixes most crashes."
 }

@@ -2,9 +2,11 @@
   "id": "lethal-company",
   "slug": "lethal-company",
   "name": {
-    "zh": "Lethal Company"
+    "zh": "致命公司",
+    "en": "Lethal Company"
   },
   "summary": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
+  "summaryEn": "A co-op horror about scavenging at abandoned moons to sell scrap to the Company.",
   "genres": [
     "action",
     "adventure",
@@ -20,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1966720/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 1966720,
@@ -36,6 +38,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5-7400 CPU @ 3.00GHz ; Shader Model 5\n显卡: NVIDIA GForce GTX 1050\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5-7400 CPU @ 3.00GHz ; Shader Model 5\nGraphics: NVIDIA GForce GTX 1050\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 4 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -47,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:04:07.974Z",
+    "syncedAt": "2026-10-27T17:25:33.522Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:07.232Z",
       "page": "Lethal Company"

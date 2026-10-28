@@ -5,7 +5,7 @@ import { cn } from '@/lib/utils';
 
 export interface TabItem {
   id: string;
-  label: string;
+  label: React.ReactNode;
   count?: number;
   icon?: React.ReactNode;
 }
@@ -26,7 +26,7 @@ export function NovaTabs({
   return (
     <nav
       role="tablist"
-      aria-label="分类选项"
+      aria-label="Categories"
       className={cn(
         'inline-flex h-9 items-center gap-1 overflow-x-auto rounded-sm border border-border bg-surface-2/60 p-1 no-scrollbar',
         className,

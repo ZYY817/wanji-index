@@ -1,3 +1,4 @@
+import { T } from '@/lib/i18n';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { loadData } from '@/lib/data.mjs';
@@ -35,20 +36,20 @@ export default async function ToolPage({ params }: Params) {
   const guides = data.guides.filter((g: any) => (g.tools ?? []).includes(t.id));
 
   const facts: DetailFact[] = [
-    { label: '适用系统', value: (t.os ?? []).map((o: string) => zh('os', o)).join(' / ') },
-    { label: '最新版本', value: t.version?.latest ? <code className="font-mono">{t.version.latest}</code> : <StatusBadge value="unchecked" /> },
-    { label: '兼容性', value: t.compatibility },
-    { label: '系统版本', value: t.osVersions?.join(' / ') },
-    { label: '核验', value: <span className="flex flex-wrap items-center gap-2">{t.checkedAt}<StatusBadge value={t.reviewStatus} /></span> },
+    { label: <T zh="适用系统" en="OS" />, value: (t.os ?? []).map((o: string) => zh('os', o)).join(' / ') },
+    { label: <T zh="最新版本" en="Latest version" />, value: t.version?.latest ? <code className="font-mono">{t.version.latest}</code> : <StatusBadge value="unchecked" /> },
+    { label: <T zh="兼容性" en="Compatibility" />, value: t.compatibility },
+    { label: <T zh="系统版本" en="Windows versions" />, value: t.osVersions?.join(' / ') },
+    { label: <T zh="核验" en="Checked" />, value: <span className="flex flex-wrap items-center gap-2">{t.checkedAt}<StatusBadge value={t.reviewStatus} /></span> },
   ].filter((f) => f.value);
 
   const risks: string[] = [...(t.risks ?? []), ...(t.limitations ?? [])];
   const sections: (DetailSectionMeta & { body: React.ReactNode })[] = [
     // 只有详细描述与一句话简介不同才单独成章，避免与刊头重复
-    ...(t.description && t.description !== t.summary ? [{ id: 'feature', title: '功能与用途', body: <p className="max-w-[62ch] text-lg leading-[1.85] text-fg-2">{t.description}</p> }] : []),
-    ...(t.installNotes ? [{ id: 'install', title: '安装与使用', body: <p className="max-w-[62ch] whitespace-pre-line text-lg leading-[1.85] text-fg-2">{t.installNotes}</p> }] : []),
+    ...(t.description && t.description !== t.summary ? [{ id: 'feature', title: <T zh="功能与用途" en="What it does" />, body: <p className="max-w-[62ch] text-lg leading-[1.85] text-fg-2">{t.description}</p> }] : []),
+    ...(t.installNotes ? [{ id: 'install', title: <T zh="安装与使用" en="Install & use" />, body: <p className="max-w-[62ch] whitespace-pre-line text-lg leading-[1.85] text-fg-2">{t.installNotes}</p> }] : []),
     ...(games.length ? [{
-      id: 'games', title: '适用游戏', count: games.length, lead: '这些游戏的档案里收录了这个工具。',
+      id: 'games', title: <T zh="适用游戏" en="Works with" />, count: games.length, lead: <T zh="这些游戏的档案里收录了这个工具。" en="Games in our index that list this tool." />,
       body: (
         <ul className="-mx-4 grid sm:grid-cols-2 sm:gap-x-6 md:-mx-5">
           {games.map((g: any) => (
@@ -60,19 +61,19 @@ export default async function ToolPage({ params }: Params) {
       ),
     }] : []),
     ...(guides.length ? [{
-      id: 'guides', title: '相关教程', count: guides.length,
+      id: 'guides', title: <T zh="相关教程" en="Guides" />, count: guides.length,
       body: (
         <ul className="-mx-4 md:-mx-5">
           {guides.map((g: any) => (
             <li key={g.id} className="border-b border-border last:border-b-0">
-              <ListRow href={`/guides/${g.slug}/`} title={fileTokens(g.title)} meta={`${g.steps?.length ?? 0} 个步骤`} />
+              <ListRow href={`/guides/${g.slug}/`} title={fileTokens(g.title)} meta={<T zh={`${g.steps?.length ?? 0} 个步骤`} en={`${g.steps?.length ?? 0} steps`} />} />
             </li>
           ))}
         </ul>
       ),
     }] : []),
     ...(t.sources?.length ? [{
-      id: 'sources', title: '参考来源', count: t.sources.length,
+      id: 'sources', title: <T zh="参考来源" en="Sources" />, count: t.sources.length,
       body: (
         <ul className="space-y-3">
           {t.sources.map((s: any) => (
@@ -86,17 +87,17 @@ export default async function ToolPage({ params }: Params) {
   return (
     <>
       <DetailMasthead
-        crumbs={[['工具', '/tools/'], [t.name]]}
+        crumbs={[[<T key="t" zh="工具" en="Tools" />, '/tools/'], [t.name]]}
         mark={<ToolLogo id={t.id} name={t.name} size={52} />}
         kicker={zh('toolType', t.type)}
         title={t.name}
         summary={t.summary}
-        action={<AcquireButton href={t.officialUrl} health={t.linkHealth} label="从官网获取" size="lg" className="w-full justify-between" />}
+        action={<AcquireButton href={t.officialUrl} health={t.linkHealth} label={<T zh="从官网获取" en="Get it from the official site" />} size="lg" className="w-full justify-between" />}
         facts={facts}
         notice={risks.length || t.uninstallNote ? (
-          <Notice title="使用前须知">
+          <Notice title={<T zh="使用前须知" en="Before you use it" />}>
             {risks.map((r) => <p key={r}>{r}</p>)}
-            {t.uninstallNote && <p><span className="text-foreground">恢复 / 卸载：</span>{t.uninstallNote}</p>}
+            {t.uninstallNote && <p><span className="text-foreground"><T zh="恢复 / 卸载：" en="Undo / uninstall: " /></span>{t.uninstallNote}</p>}
           </Notice>
         ) : undefined}
       />
@@ -107,10 +108,10 @@ export default async function ToolPage({ params }: Params) {
         ))}
 
         <Reveal as="aside" className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border-strong py-8 text-sm text-fg-3">
-          <span className="text-foreground">工具信息</span>
-          <span>核验于 {t.checkedAt}</span>
+          <span className="text-foreground"><T zh="工具信息" en="About this tool" /></span>
+          <span><T zh="核验于" en="Checked" /> {t.checkedAt}</span>
           <FeedbackLink page={`${t.name}（/tools/${t.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
-            信息有误？反馈给我们
+            <T zh="信息有误？反馈给我们" en="Spot an error? Tell us" />
           </FeedbackLink>
         </Reveal>
       </div>

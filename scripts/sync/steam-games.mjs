@@ -5,10 +5,12 @@
 // 范围与频率在 config/sync.json 的 steam 段配置：每次最多新增 maxNewPerRun 款；已收录的超过 refreshDays 天才重新拉取。
 import { config, getJson, readAuto, readHand, writeAuto, sleep, today, text, slugify } from './lib.mjs';
 import { steamAppIdOf } from '../../src/lib/merge-auto.mjs';
+import { applyGameName } from './zh-names.mjs';
 
 const cfg = config().steam;
 const limitArg = process.argv.indexOf('--limit');
 const MAX_NEW = limitArg > 0 ? Number(process.argv[limitArg + 1]) : cfg.maxNewPerRun;
+const FORCE = process.argv.includes('--force'); // 忽略刷新间隔，全部重新拉取（新增字段时用）
 
 // Steam 类型编号 → 站内类型（src/lib/genre.ts）
 const GENRE = { 1: 'action', 2: 'strategy', 3: 'rpg', 25: 'adventure', 28: 'simulation', 9: 'racing', 18: 'sports', 4: 'casual', 29: 'mmo', 23: 'indie' };
@@ -71,15 +73,17 @@ const stale = (r) => !r?._auto?.syncedAt || (Date.now() - Date.parse(r._auto.syn
 let added = 0, updated = 0, skipped = 0, fetched = 0;
 for (const [appid, spyName] of pool) {
   const existing = autoByApp.get(appid);
-  if (existing && !stale(existing)) continue;
+  if (existing && !FORCE && !stale(existing)) continue;
   if (!existing && added >= MAX_NEW) continue;
   const d = await details(appid, 'schinese');
   await sleep(cfg.requestIntervalMs);
   fetched++;
   if (!d || d.type !== 'game' || (d.content_descriptors?.ids ?? []).some((x) => ADULT.has(x))) { skipped++; continue; }
   // 商店名本身是英文时就用它（SteamSpy 的名字可能是旧名，例如 CS:GO → CS2）
-  let en = /^[ -~]+$/.test(d.name) ? d.name : spyName ?? existing?.name?.en;
-  if (!en) { const de = await details(appid, 'english'); en = de?.name ?? d.name; await sleep(cfg.requestIntervalMs); }
+  // 英文版商店信息：英文名、英文简介、英文配置要求（中英切换用，官方原文，不做机器翻译）
+  const de = await details(appid, 'english');
+  await sleep(cfg.requestIntervalMs);
+  let en = /^[ -~]+$/.test(d.name) ? d.name : de?.name ?? spyName ?? existing?.name?.en ?? d.name;
   const handGame = handByApp.get(appid);
   // id：人工已有同一款游戏时沿用其 id（合并时按 id / appid 对上）；否则用英文名，冲突时加 appid
   let id = handGame?.id ?? existing?.id ?? (slugify(en) || `steam-${appid}`);
@@ -92,6 +96,7 @@ for (const [appid, spyName] of pool) {
     id, slug: id,
     name: { zh: cleanName(d.name), ...(en && cleanName(en) !== cleanName(d.name) ? { en: cleanName(en) } : {}) },
     summary,
+    ...(de ? { summaryEn: summaryOf(de) } : {}),
     genres: [...new Set((d.genres ?? []).map((g) => GENRE[g.id]).filter(Boolean))],
     os: [d.platforms?.windows && 'windows', d.platforms?.mac && 'macos', d.platforms?.linux && 'linux'].filter(Boolean),
     channels: [{
@@ -105,15 +110,17 @@ for (const [appid, spyName] of pool) {
     releaseDate: d.release_date?.coming_soon ? `即将推出（${d.release_date.date}）` : d.release_date?.date ?? '',
     zhSupport: zhSupportOf(d.supported_languages),
     requirements: { minimum: text(d.pc_requirements?.minimum ?? ''), recommended: text(d.pc_requirements?.recommended ?? '') },
+    ...(de ? { requirementsEn: { minimum: text(de.pc_requirements?.minimum ?? ''), recommended: text(de.pc_requirements?.recommended ?? '') } } : {}),
     sources: [{ name: 'Steam 商店', url }],
     reviewStatus: 'unverified',
     checkedAt: today(), createdAt: today(), updatedAt: today(),
     publishStatus: 'published',
     _auto: { source: 'steam', syncedAt: new Date().toISOString(), ...(existing?._auto?.pcgw ? { pcgw: existing._auto.pcgw } : {}) },
   };
-  // 已由 PCGamingWiki 同步补上的存档 / 配置位置保留
-  for (const k of ['savePaths', 'configPaths']) if (existing?.[k]) rec[k] = existing[k];
+  // PCGamingWiki 同步写入的字段（存档 / 配置位置、已知问题）原样保留，Steam 同步只更新自己负责的字段
+  for (const k of ['savePaths', 'configPaths', 'issues']) if (existing?.[k]) rec[k] = existing[k];
   if (existing?.sources) for (const s of existing.sources) if (!rec.sources.some((x) => x.url === s.url)) rec.sources.push(s);
+  applyGameName(rec);
   if (writeAuto('games', rec)) existing ? updated++ : added++;
   if (fetched % 25 === 0) console.log(`  已请求 ${fetched}：新增 ${added}，更新 ${updated}，跳过 ${skipped}`);
 }

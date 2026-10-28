@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { cn } from '@/lib/utils';
 import { LIFECYCLE, STATUS, type LifecycleKey, type StatusKey } from '@/lib/status';
+import { T } from '@/lib/i18n';
 
 // 两套徽标形制严格分离：生命周期 = 实心色块（方角）；状态 = 描边（待核验为虚线描边）
 
@@ -14,7 +15,7 @@ export function LifecycleBadge({ value, className, pulse }: { value: string | nu
       style={{ background: def.tone }}
     >
       {pulse && value === 'active' && <span aria-hidden className="size-1.5 animate-blink rounded-full bg-on-solid" />}
-      {def.label}
+      <T zh={def.label} en={def.en} />
     </span>
   );
 }
@@ -28,7 +29,7 @@ export function StatusBadge({ value, className }: { value: string | null | undef
       className={cn('meta inline-flex h-[22px] items-center rounded-xs border px-2 !tracking-[0.04em]', def.dashed && 'border-dashed', className)}
       style={{ color: def.tone, borderColor: def.tone }}
     >
-      {def.label}
+      <T zh={def.label} en={def.en} />
     </span>
   );
 }

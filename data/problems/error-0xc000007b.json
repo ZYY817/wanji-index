@@ -77,5 +77,8 @@
   "relatedProblems": [
     "missing-dll",
     "game-wont-launch"
-  ]
+  ],
+  "shortEn": "0xc000007b",
+  "titleEn": "The application was unable to start correctly (0xc000007b)",
+  "summaryEn": "0xc000007b usually means 32-bit and 64-bit runtimes got mixed up, or a runtime is missing. Reinstall both the x64 and x86 Visual C++ runtimes, then the DirectX runtime."
 }

@@ -2,9 +2,11 @@
   "id": "7-days-to-die",
   "slug": "7-days-to-die",
   "name": {
-    "zh": "7 Days to Die"
+    "zh": "七日杀",
+    "en": "7 Days to Die"
   },
   "summary": "《7 Days》是一款开放世界游戏，独具特色地融合了第一人称射击、生存恐怖、塔防和角色扮演等多种游戏的特征。快来体验这款具有开创性的终极丧尸生存沙盒角色扮演游戏吧。纳维戈恩在等着你！",
+  "summaryEn": "7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing g…",
   "genres": [
     "action",
     "adventure",
@@ -25,7 +27,7 @@
       "url": "https://store.steampowered.com/app/251570/",
       "priceNote": "参考价 ¥ 83.60",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-27"
+      "checkedAt": "2026-10-28"
     }
   ],
   "steamAppId": 251570,
@@ -41,6 +43,10 @@
     "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or higher (64-bit)\n处理器: 2.8 Ghz Quad Core CPU\n内存: 8 GB RAM\n显卡: 2 GB Dedicated Memory\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间\n声卡: Sound Card: DirectX® Compatible\n附注事项: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space.",
     "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or higher (64-bit)\n处理器: 3.2 Ghz Quad Core CPU or faster\n内存: 12 GB RAM\n显卡: 4 GB Dedicated Memory\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 15 GB 可用空间\n声卡: Sound Card: DirectX® Compatible\n附注事项: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space."
   },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 or higher (64-bit)\nProcessor: 2.8 Ghz Quad Core CPU\nMemory: 8 GB RAM\nGraphics: 2 GB Dedicated Memory\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 15 GB available space\nSound Card: Sound Card: DirectX® Compatible\nAdditional Notes: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 or higher (64-bit)\nProcessor: 3.2 Ghz Quad Core CPU or faster\nMemory: 12 GB RAM\nGraphics: 4 GB Dedicated Memory\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 15 GB available space\nSound Card: Sound Card: DirectX® Compatible\nAdditional Notes: Running a Dedicated Server and Client on the same computer will double ram requirements. Also future releases may require more hard drive space."
+  },
   "sources": [
     {
       "name": "Steam 商店",
@@ -52,13 +58,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-28",
   "createdAt": "2026-10-27",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T15:02:20.169Z",
+    "syncedAt": "2026-10-27T17:23:11.557Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:24.875Z",
       "page": "7 Days to Die"
