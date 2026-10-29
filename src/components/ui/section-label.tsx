@@ -20,7 +20,7 @@ export function SectionLabel({
 }
 
 /**
- * 分节标题——全站唯一的一种：宋体标题 +（条数）+ 可选一句说明。
+ * 分节标题——全站唯一的一种：黑体标题 +（条数）+ 可选一句说明。
  * 列表分组（免费 / 资源站 / 搜索结果）默认带底部发丝线；详情页的章节自带上边线，传 divider={false}。
  * 改样式只改这里，所有页面同步。
  */
@@ -31,12 +31,12 @@ export function SectionHeading({
   divider?: boolean; className?: string; children?: React.ReactNode;
 }) {
   return (
-    <div id={id} className={cn('mb-6 mt-10 first:mt-0', divider && 'border-b border-border pb-4', className)}>
-      <h2 id={headingId} className="flex items-baseline gap-3 font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
+    <div id={id} className={cn('mb-8 mt-12 first:mt-0 md:mb-10', divider && 'border-b border-white/[0.08] pb-5', className)}>
+      <h2 id={headingId} className="flex items-baseline gap-3 font-display text-[28px] font-semibold leading-tight tracking-[-0.02em] text-foreground md:text-[40px]">
         {title}
-        {count != null && <span className="tabular text-lg md:text-xl font-normal tabular-nums text-fg-3">{count}</span>}
+        {count != null && <span className="tabular text-lg font-normal tabular-nums text-fg-3 md:text-2xl">{count}</span>}
       </h2>
-      {description && <p className="mt-1.5 max-w-[56em] text-base leading-relaxed text-fg-2 text-pretty">{description}</p>}
+      {description && <p className="mt-3 max-w-[44em] text-[17px] leading-[1.7] text-fg-2 text-pretty">{description}</p>}
       {children}
     </div>
   );

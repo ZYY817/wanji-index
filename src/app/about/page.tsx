@@ -2,7 +2,6 @@ import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { FeedbackChannels } from '@/components/layout/feedback';
-import { DetailSection } from '@/components/layout/detail-section';
 import { loadData } from '@/lib/data.mjs';
 import { buildStamp } from '@/lib/present';
 import site from '../../../config/site.json';
@@ -56,21 +55,23 @@ export default function AboutPage() {
         title={<T zh="关于" en="About" />}
         description={<T zh="把分散在各处的游戏实用信息整理成档案：来源交代清楚，状态明明白白，发现疏漏随时纠正。" en="Scattered PC gaming essentials organized into transparent files: verified sources, visible health, open to community corrections." />}
         aside={(
-          <dl className="border-t border-border-strong">
+          <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {facts.map(([k, v], i) => (
-              <div key={i} className="grid grid-cols-[72px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
-                <dt className="text-fg-3">{k}</dt>
-                <dd className="leading-[1.7] text-foreground">{v}</dd>
+              <div key={i} className="lift rounded-lg p-5">
+                <dt className="text-sm text-fg-3">{k}</dt>
+                <dd className="mt-2 text-[15px] leading-[1.6] text-foreground">{v}</dd>
               </div>
             ))}
           </dl>
         )}
       />
       <div className="container-x">
-        {SECTIONS.map(([id, title, body], i) => (
-          <DetailSection key={id} index={i} meta={{ id, title }}>
-            <div className="prose-doc max-w-[62ch] text-foreground/90">{body}</div>
-          </DetailSection>
+        {/* 两栏：标题在左（宽屏吸顶），正文在右——长文不再贴着左边、右侧大片留空 */}
+        {SECTIONS.map(([id, title, body]) => (
+          <section key={id} id={id} aria-labelledby={`${id}-title`} className="grid scroll-mt-[calc(var(--sticky-top)+32px)] gap-5 border-t border-white/[0.08] py-12 md:py-16 lg:grid-cols-12 lg:gap-10">
+            <h2 id={`${id}-title`} className="font-display text-[26px] font-semibold leading-tight tracking-[-0.02em] lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:col-span-4 lg:self-start md:text-[32px]">{title}</h2>
+            <div className="prose-doc max-w-[62ch] text-foreground/90 lg:col-span-8">{body}</div>
+          </section>
         ))}
       </div>
     </>

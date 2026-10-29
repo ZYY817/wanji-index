@@ -71,38 +71,44 @@ export function IndexMasthead({
   band?: React.ReactNode;
 }) {
   return (
-    <header className={cn('relative pt-[calc(var(--header-h)+28px)] pb-6 md:pt-[calc(var(--header-h)+48px)] md:pb-10', className)}>
-      {/* 美术环境光：有游戏美术时，页面顶部被这款游戏的颜色照亮，向下渐隐；没有时留纯黑 */}
-      <AmbientArt src={glow} height="h-[80vh]" opacity={0.5} />
+    <header className={cn('relative pt-[calc(var(--header-h)+32px)] pb-8 md:pt-[calc(var(--header-h)+64px)] md:pb-14', className)}>
+      {/* 美术环境光：有游戏美术时，页面顶部被这款游戏的颜色照亮；没有时只留一层很淡的顶光，避免纯黑平涂 */}
+      {glow ? (
+        <AmbientArt src={glow} height="h-[80vh]" opacity={0.5} />
+      ) : (
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[70vh] bg-[radial-gradient(60%_70%_at_30%_0%,rgba(255,255,255,0.07),transparent_70%)]" />
+      )}
+
       <div className="container-x relative">
         <Crumbs crumbs={crumbs ?? [[title]]} />
-        
-        <div className="mt-3 max-w-4xl">
-          <div className="flex items-baseline gap-3">
-            <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] text-foreground sm:text-5xl lg:text-[56px]">
+
+        {/* 宽屏：标题在左，说明在右并与标题底部对齐——占满整行，不再左上角一小块、右边一大片空 */}
+        <div className="mt-4 grid gap-5 lg:grid-cols-12 lg:items-end lg:gap-10">
+          <div className="flex items-baseline gap-3 lg:col-span-6">
+            <h1 className="font-display text-[clamp(40px,5.2vw,72px)] font-semibold leading-[1.02] tracking-[-0.025em] text-foreground">
               {title}
             </h1>
             {count != null && (
-              <span className="tabular text-lg sm:text-xl font-normal text-fg-3 tabular-nums">
+              <span className="tabular text-xl font-normal text-fg-3 tabular-nums sm:text-2xl">
                 {count}
               </span>
             )}
           </div>
           {description && (
-            <p className="mt-3 max-w-[56em] text-base leading-[1.75] text-fg-2 text-pretty">
+            <p className="max-w-[40em] text-[17px] leading-[1.7] text-fg-2 text-pretty lg:col-span-6 lg:pb-2">
               {description}
             </p>
           )}
         </div>
 
         {/* 仅在特定页面（如关于页）作为补充插槽渲染 */}
-        {aside && <div className="mt-4">{aside}</div>}
+        {aside && <div className="mt-8">{aside}</div>}
         {stats?.length ? (
-          <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 border-t border-border/40 pt-3">
+          <dl className="mt-8 flex flex-wrap gap-x-10 gap-y-3">
             {stats.map((s, i) => (
               <div key={i} className="flex items-baseline gap-2">
-                <dt className="text-xs text-fg-3">{s.label}</dt>
-                <dd className={cn('tabular text-base font-bold tabular-nums', 'text-foreground')}>{s.value}</dd>
+                <dt className="text-sm text-fg-3">{s.label}</dt>
+                <dd className="tabular text-lg font-semibold tabular-nums text-foreground">{s.value}</dd>
               </div>
             ))}
           </dl>

@@ -4,15 +4,15 @@
   "type": "limited",
   "platform": "indiegala",
   "url": "https://freebies.indiegala.com/last-room",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-29",
   "linkHealth": "ok",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "claimNote": "IndieGala 免费领取，需要 IndieGala 账号，无 DRM 下载",
+  "claimNoteEn": "Free on IndieGala (account needed), DRM-free download",
   "art": {
     "wide": "https://www.gamerpower.com/offers/1b/68f91bd81c328.jpg"
   },
-  "note": "由 GamerPower 赠送汇总发现，链接直达 IndieGala官方页面；截止时间仅供参考，以活动页为准",
-  "claimNoteEn": "Free on IndieGala (account needed), DRM-free download"
+  "note": "由 GamerPower 赠送汇总发现，链接直达 IndieGala官方页面；截止时间仅供参考，以活动页为准"
 }

@@ -253,9 +253,9 @@ function KitFilm() {
     // 外层透明：光斑以外仍能看到上一章的定格画面，光从画面中「长出来」
     <section ref={ref} aria-labelledby="kit-title" className="relative">
       <div className="relative h-[520vh]">
-        <motion.div className="sticky top-0 h-[100svh] overflow-hidden bg-paper text-ink" style={{ clipPath: clip }}>
+        <motion.div data-header-tone="light" className="sticky top-0 h-[100svh] overflow-hidden bg-paper text-ink" style={{ clipPath: clip }}>
           {/* 展台光：左上窗光斜射 + 地面反光 + 中心柔光 */}
-          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_58%,rgba(255,255,255,0.7),transparent_70%),linear-gradient(118deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_38%),linear-gradient(0deg,rgba(201,192,176,0.5)_0%,transparent_32%)]" />
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_58%,rgba(255,255,255,0.7),transparent_70%),linear-gradient(118deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_38%),linear-gradient(0deg,rgba(190,190,198,0.45)_0%,transparent_32%)]" />
           <div aria-hidden className="absolute -left-[10%] top-[-20%] h-[140%] w-[38%] rotate-[28deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.55),transparent)]" />
 
           {/* 幕 0：标语 */}
@@ -337,7 +337,7 @@ function KitFilm() {
 function KitStatic({ eyebrow }: { eyebrow: React.ReactNode }) {
   const idle = shot('idle');
   return (
-    <section aria-labelledby="kit-title" className="bg-paper py-24 text-ink">
+    <section data-header-tone="light" aria-labelledby="kit-title" className="bg-paper py-24 text-ink">
       <div className="container-x">
         <p className="text-sm tracking-[0.15em] text-ink-3">{eyebrow}</p>
         <h2 id="kit-title" className="mt-3 text-balance font-display text-[clamp(36px,9vw,72px)] font-semibold leading-[1.08] tracking-[-0.02em]">

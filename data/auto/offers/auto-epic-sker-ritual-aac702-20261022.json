@@ -5,17 +5,17 @@
   "platform": "epic",
   "url": "https://store.epicgames.com/zh-CN/p/sker-ritual-aac702",
   "claimNote": "Epic 每周限免，领取后永久保留在库中",
+  "claimNoteEn": "Epic weekly freebie — yours to keep once claimed",
   "startDate": "2026-10-22T15:00:00.000Z",
   "endDate": "2026-10-29T15:00:00.000Z",
-  "checkedAt": "2026-10-27",
+  "checkedAt": "2026-10-29",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
-    "wide": "https://cdn1.epicgames.com/spt-assets/43d96f4437e34c87b7eff08831d1b1de/sker-ritual-1tuka.png",
-    "tall": "https://cdn1.epicgames.com/spt-assets/43d96f4437e34c87b7eff08831d1b1de/sker-ritual-1cyza.png"
+    "wide": "https://cdn1.epicgames.com/spt-assets/43d96f4437e34c87b7eff08831d1b1de/sker-ritual-14x61.jpg",
+    "tall": "https://cdn1.epicgames.com/spt-assets/43d96f4437e34c87b7eff08831d1b1de/sker-ritual-4dco7.jpg"
   },
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-27",
-  "publishStatus": "published",
-  "claimNoteEn": "Epic weekly freebie — yours to keep once claimed"
+  "updatedAt": "2026-10-29",
+  "publishStatus": "published"
 }

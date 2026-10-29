@@ -18,7 +18,7 @@ export function DetailSection({
     <section
       id={meta.id}
       aria-labelledby={`${meta.id}-title`}
-      className={cn('scroll-mt-[calc(var(--sticky-top)+32px)] border-t border-border py-12 first:border-t-0 md:py-16', className)}
+      className={cn('scroll-mt-[calc(var(--sticky-top)+32px)] py-12 md:py-20', className)}
     >
       <Reveal>
         <SectionHeading headingId={`${meta.id}-title`} title={meta.title} count={meta.count} description={meta.lead} divider={false} />

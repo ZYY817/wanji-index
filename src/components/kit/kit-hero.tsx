@@ -14,7 +14,7 @@ export function KitHero() {
   const count = KIT.catalog?.components.length ?? 0;
 
   return (
-    <section aria-labelledby="kit-page-title" className="relative overflow-hidden bg-paper text-ink">
+    <section data-header-tone="light" aria-labelledby="kit-page-title" className="relative overflow-hidden bg-paper text-ink">
       <div aria-hidden className="absolute inset-0 bg-[linear-gradient(118deg,rgba(255,255,255,0.75)_0%,rgba(255,255,255,0)_38%),linear-gradient(0deg,rgba(201,192,176,0.45)_0%,transparent_35%)]" />
       <div aria-hidden className="absolute -left-[10%] top-[-20%] h-[140%] w-[38%] rotate-[28deg] bg-[linear-gradient(90deg,transparent,rgba(255,255,255,0.55),transparent)]" />
 
@@ -39,13 +39,13 @@ export function KitHero() {
 
           <div className="mt-8 flex animate-rise flex-wrap items-center gap-3" style={rise(3)}>
             {KIT.asset && (
-              <a href={KIT.asset.url} className="inline-flex h-12 items-center gap-2.5 rounded-sm bg-ink px-6 text-base font-medium text-paper shadow-[0_24px_40px_-20px_rgba(0,0,0,0.6)] transition-colors hover:bg-ink/85">
+              <a href={KIT.asset.url} className="inline-flex h-12 items-center gap-2.5 rounded-full bg-ink px-7 text-[17px] font-medium text-paper shadow-[0_20px_40px_-20px_rgba(0,0,0,0.5)] transition-[background-color,transform] hover:bg-ink/85 active:scale-[0.97]">
                 <Download aria-hidden className="size-4" />
                 <T zh={`下载 v${KIT.version}`} en={`Download v${KIT.version}`} />
                 <span className="tabular text-sm text-paper/60">{KIT.asset.sizeMb} MB</span>
               </a>
             )}
-            <a href={KIT.repo} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center gap-2 rounded-sm border border-ink/25 px-5 text-base text-ink transition-colors hover:border-ink hover:bg-ink/[0.04]">
+            <a href={KIT.repo} target="_blank" rel="noopener noreferrer" className="inline-flex h-12 items-center gap-2 rounded-full bg-ink/[0.06] px-6 text-[17px] text-ink transition-[background-color,transform] hover:bg-ink/[0.1] active:scale-[0.97]">
               <GithubMark className="size-4" />
               <T zh="源码" en="Source" />
               <span className="sr-only"><T zh="（在新窗口打开）" en="(opens in a new window)" /></span>

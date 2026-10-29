@@ -25,10 +25,14 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
 
   // 向下滚动时让出画面（顶栏上移隐藏），向上滚动立即回来；菜单、搜索弹窗打开时不隐藏
   const [hidden, setHidden] = useState(false);
+  // 顶栏正压在浅色章节（data-header-tone="light"）上时，整条顶栏切成浅色毛玻璃 + 深色字
+  const [light, setLight] = useState(false);
   useEffect(() => {
     let last = window.scrollY;
     const onScroll = () => {
       const y = window.scrollY;
+      const probe = document.elementsFromPoint(window.innerWidth / 2, 40).find((el) => !el.closest('header'));
+      setLight(Boolean(probe?.closest('[data-header-tone="light"]')));
       // 首页：开场镜头（[data-film]）播放期间顶栏始终透明，镜头结束后才收成实色，避免中途突然出现底色和横线
       const film = home ? document.querySelector<HTMLElement>('[data-film]') : null;
       setScrolled(film ? y > film.offsetTop + film.offsetHeight - window.innerHeight : y > 80);
@@ -40,7 +44,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, [home]);
+  }, [home, pathname]);
 
   // 同步吸顶偏移变量 --sticky-top 到 <html>（顶栏隐藏时为 0px，可见时回落到 var(--header-h)）
   useEffect(() => {
@@ -67,7 +71,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
     const apply = (instant = false) => {
       const desktop = window.matchMedia('(min-width: 1024px)').matches;
       const height = desktop ? (home && !scrolled ? 64 : 52) : 52;
-      const backgroundColor = solid ? 'rgba(22,22,24,0.72)' : 'rgba(22,22,24,0)';
+      const backgroundColor = light ? 'rgba(250,250,252,0.72)' : solid ? 'rgba(22,22,24,0.72)' : 'rgba(22,22,24,0)';
       ctrl?.stop();
       if (reduced) {
         el.style.height = `${height}px`;
@@ -84,7 +88,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
       ctrl?.stop();
       window.removeEventListener('resize', onResize);
     };
-  }, [scope, animate, home, scrolled, solid, reduced]);
+  }, [scope, animate, home, scrolled, solid, reduced, light]);
 
 
   return (
@@ -92,9 +96,11 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
       ref={scope}
       className={cn(
         // CSS 兜底高度保证 SSR / 首帧不跳；Motion 从同一高度接管
-        'fixed inset-x-0 top-0 z-50 h-[52px] transition-[backdrop-filter] duration-500',
+        'fixed inset-x-0 top-0 z-50 h-[52px] text-foreground transition-[backdrop-filter] duration-500',
         home ? 'bg-transparent lg:h-16' : 'bg-[rgba(22,22,24,0.72)]',
-        solid && '[backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)]',
+        (solid || light) && '[backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)]',
+        // 浅色模式：把顶栏内部的文字色 token 换成墨色，子组件不用改
+        light && '[--color-foreground:#1D1D1F] [--color-fg-2:#424245] [--color-fg-3:#6E6E73]',
       )}
       style={{ transform: hidden && !reduced ? 'translateY(-100%)' : 'none', transition: 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)' }}
       onFocusCapture={() => setHidden(false)}
@@ -103,7 +109,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
       <motion.div
         aria-hidden
         initial={false}
-        animate={{ opacity: solid ? 0 : 1 }}
+        animate={{ opacity: solid || light ? 0 : 1 }}
         transition={{ duration: reduced ? 0 : 0.4 }}
         className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-[linear-gradient(180deg,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.34)_46%,transparent_100%)]"
       />
@@ -112,7 +118,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         aria-hidden
         className={cn(
           'pointer-events-none absolute inset-x-0 bottom-0 border-b transition-colors duration-500',
-          solid ? 'border-white/[0.08]' : 'border-transparent',
+          light ? 'border-black/[0.08]' : solid ? 'border-white/[0.08]' : 'border-transparent',
         )}
       />
 

@@ -18,7 +18,8 @@ export function DetailMasthead({
 }) {
   const rise = (i: number) => ({ animationDelay: `${0.08 + i * 0.07}s` });
   return (
-    <header className={cn('pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
+    <header className={cn('relative pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[70vh] bg-[radial-gradient(60%_70%_at_30%_0%,rgba(255,255,255,0.07),transparent_70%)]" />
       <div className="container-x grid gap-10 pb-12 md:pb-16 lg:grid-cols-12 lg:gap-12">
         <div className="min-w-0 lg:col-span-7">
           <nav aria-label="Breadcrumb" className="flex animate-rise flex-wrap items-center gap-2 text-xs text-fg-3" style={rise(0)}>
@@ -39,7 +40,7 @@ export function DetailMasthead({
             {mark}
             {kicker && <p className="text-sm text-fg-2">{kicker}</p>}
           </div>
-          <h1 className="mt-4 animate-rise break-words font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
+          <h1 className="mt-4 animate-rise break-words font-display text-[clamp(34px,4.4vw,60px)] font-semibold leading-[1.08] tracking-[-0.025em] text-foreground" style={rise(2)}>
             {title}
           </h1>
           {summary && (
@@ -50,12 +51,12 @@ export function DetailMasthead({
         </div>
 
         {(action || facts?.length) && (
-          <aside className="animate-rise lg:col-span-5 lg:col-start-8 lg:self-end" style={rise(3)}>
+          <aside className="lift animate-rise rounded-lg p-6 lg:col-span-5 lg:col-start-8 lg:self-end" style={rise(3)}>
             {action}
             {facts?.length ? (
-              <dl className={cn('border-t border-border-strong', action && 'mt-6')}>
+              <dl className={cn(action && 'mt-5')}>
                 {facts.map((f, i) => (
-                  <div key={i} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-border py-3.5 text-sm">
+                  <div key={i} className="grid grid-cols-[96px_minmax(0,1fr)] gap-4 border-b border-white/[0.06] py-3 text-sm last:border-b-0 last:pb-0">
                     <dt className="text-sm text-fg-2">{f.label}</dt>
                     <dd className="leading-[1.7] text-foreground">{f.value}</dd>
                   </div>
@@ -73,8 +74,8 @@ export function DetailMasthead({
 /** 访问前须知 / 使用前须知：细边框浅底，用在刊头下方 */
 export function Notice({ title, children }: { title: React.ReactNode; children: React.ReactNode }) {
   return (
-    <div className="rounded-sm bg-warn/[0.06] px-5 py-4 ring-1 ring-warn/25">
-      <p className="text-sm font-medium text-warn">{title}</p>
+    <div className="rounded-lg bg-warn/[0.06] px-6 py-5 ring-1 ring-inset ring-warn/20">
+      <p className="flex items-center gap-2 text-sm font-medium text-warn"><span aria-hidden className="size-1.5 rounded-full bg-warn" />{title}</p>
       <div className="mt-2 space-y-2 text-base leading-[1.75] text-fg-2">{children}</div>
     </div>
   );

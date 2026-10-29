@@ -33,14 +33,14 @@ export default function FixesPage() {
       />
       <div className="container-x pb-20">
         <DetailSection index={0} meta={{ id: 'problems', title: <T zh="按症状找" en="By symptom" />, lead: <T zh="点进去先对一对症状，确认符合再按步骤往下试。" en="Match your symptom first, then work through the fixes step by step." />, count: problems.length }}>
-          <ul className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {problems.map((p) => (
-              <li key={p.id} className="bg-background">
-                <Link href={`/fixes/${p.slug}/`} className="group flex h-full flex-col p-6 transition-colors hover:bg-card md:p-7">
+              <li key={p.id}>
+                <Link href={`/fixes/${p.slug}/`} className="lift group flex h-full flex-col rounded-lg p-6 transition-[transform,background-color] duration-300 hover:-translate-y-0.5 hover:bg-[#161618] md:p-7">
                   <span className="text-sm text-fg-3">{L('problemCategory', p.category)}</span>
-                  <span className="mt-2 text-2xl font-semibold tracking-[-0.01em] transition-colors group-hover:text-foreground/80"><T zh={fileTokens(p.short)} en={p.shortEn} /></span>
-                  <span className="mt-3 line-clamp-3 text-base leading-[1.75] text-fg-2"><T zh={p.summary} en={p.summaryEn} /></span>
-                  <span className="mt-auto flex items-center justify-between gap-3 pt-6 text-sm text-fg-3">
+                  <span className="mt-2 font-display text-2xl font-semibold tracking-[-0.015em]"><T zh={fileTokens(p.short)} en={p.shortEn} /></span>
+                  <span className="mb-6 mt-3 line-clamp-3 text-base leading-[1.75] text-fg-2"><T zh={p.summary} en={p.summaryEn} /></span>
+                  <span className="mt-auto flex items-center justify-between gap-3 border-t border-white/[0.06] pt-4 text-sm text-fg-3">
                     <span><T zh={`${p.fixes.length} 种解法${p.gameCount ? ` · ${p.gameCount} 款游戏有记录` : ''}`} en={`${p.fixes.length} fixes${p.gameCount ? ` · ${p.gameCount} games affected` : ''}`} /></span>
                     <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
                   </span>

@@ -1,0 +1,21 @@
+{
+  "id": "auto-epic-idle-champions-of-the-forgotten-realms-20261105",
+  "gameTitle": "Idle Champions of the Forgotten Realms",
+  "type": "limited",
+  "platform": "epic",
+  "url": "https://store.epicgames.com/zh-CN/p/idle-champions-of-the-forgotten-realms",
+  "claimNote": "Epic 下一期每周限免（已公布）",
+  "claimNoteEn": "Next Epic weekly freebie (announced)",
+  "startDate": "2026-11-05T16:00:00.000Z",
+  "endDate": "2026-11-12T16:00:00.000Z",
+  "checkedAt": "2026-10-29",
+  "linkHealth": "ok",
+  "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
+  "art": {
+    "wide": "https://cdn1.epicgames.com/spt-assets/a53f91e55c6840018cb5de0b204f1ad9/idle-champions-of-the-forgotten-realms-1xbn9.jpg",
+    "tall": "https://cdn1.epicgames.com/spt-assets/a53f91e55c6840018cb5de0b204f1ad9/idle-champions-of-the-forgotten-realms-1vyl7.jpg"
+  },
+  "createdAt": "2026-10-29",
+  "updatedAt": "2026-10-29",
+  "publishStatus": "published"
+}
