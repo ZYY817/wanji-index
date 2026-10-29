@@ -32,8 +32,8 @@ export function KitHero() {
           </h1>
           <p className="mt-5 max-w-[34ch] animate-rise text-lg leading-[1.8] text-ink-2" style={rise(2)}>
             <T
-              zh={`游戏打不开？多半是缺运行库。扫一遍就知道缺什么，点一下从微软和官方渠道自动装齐。${count} 项检测，免安装。`}
-              en={`Game won’t start? It’s usually a missing runtime. Scan to see what’s missing, then install it all from Microsoft and official sources in one click. ${count} checks, no install needed.`}
+              zh={`新电脑或者重装系统后游戏闪退？多数时候只是缺了关键运行库。用它花十几秒体检，缺的项一键自动从微软和官方渠道补齐。${count} 项检测，解压即用。`}
+              en={`Game crashing after a fresh install? Chances are a key runtime is missing. Take 10 seconds to scan your system and install missing pieces directly from official sources. ${count} checks, portable zip.`}
             />
           </p>
 

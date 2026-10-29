@@ -18,7 +18,7 @@ export default function ResourcesPage() {
       <IndexMasthead
         title={<T zh="资源站" en="Sites" />}
         count={sites.length}
-        description={<T zh={`收录 ${sites.length} 个玩家常用的资源站，分 ${categories} 类。标注语言、网络与注册门槛，去之前先心里有数。`} en={`${sites.length} sites players use, in ${categories} categories — with language, network and sign-up notes so you know what to expect.`} />}
+        description={<T zh={`整理了 ${sites.length} 个广大玩家经常打交道的知名资源站。支持的语言、国内网络访问情况以及是否需要注册，全都标得明明白白，出发前先心里有数。`} en={`A curated index of ${sites.length} trusted community sites. We note supported languages, network accessibility, and sign-up requirements so you always know what to expect.`} />}
       />
       <ResourcesCatalog sites={sites} />
     </>

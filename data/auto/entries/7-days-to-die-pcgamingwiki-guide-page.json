@@ -1,0 +1,15 @@
+{
+  "id": "7-days-to-die-pcgamingwiki-guide-page",
+  "name": "七日杀 技术资料页",
+  "nameEn": "7 Days to Die on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "7-days-to-die",
+  "url": "https://www.pcgamingwiki.com/wiki/7_Days_to_Die",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

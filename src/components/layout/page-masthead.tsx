@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
-import { GLOW_IMG, GLOW_VEIL } from '@/components/fx/glow';
+import { AmbientArt } from '@/components/fx/ambient-art';
 import { T } from '@/lib/i18n';
 
 type Crumb = [React.ReactNode, string?];
 
 function Crumbs({ crumbs }: { crumbs?: Crumb[] }) {
   return (
-    <nav aria-label="Breadcrumb" className="flex max-w-full flex-wrap items-center gap-2 text-sm text-fg-3">
+    <nav aria-label="Breadcrumb" className="flex max-w-full flex-wrap items-center gap-2 text-xs text-fg-3">
       <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
       {(crumbs ?? ([[<T key="i" zh="索引" en="Index" />]] as Crumb[])).map(([label, href], i, all) => {
         const current = !href;
         return (
           <span key={i} className={cn('items-center gap-2', current && i === all.length - 1 ? 'hidden sm:flex' : 'flex')}>
-            <span aria-hidden>/</span>
+            <span aria-hidden className="text-fg-3/60">›</span>
             {href ? <Link href={href} className="transition-colors hover:text-foreground">{label}</Link> : <span className="text-fg-2" aria-current={current ? 'page' : undefined}>{label}</span>}
           </span>
         );
@@ -29,7 +29,7 @@ export function PageMastheadFrame({
   no?: string; crumbs?: Crumb[]; children: React.ReactNode; className?: string;
 }) {
   return (
-    <header className={cn('relative border-b border-border/50 pt-[calc(var(--header-h)+20px)] md:pt-[calc(var(--header-h)+28px)]', className)}>
+    <header className={cn('relative pt-[calc(var(--header-h)+20px)] md:pt-[calc(var(--header-h)+28px)]', className)}>
       <div className="container-x">
         <div className="relative">
           <Crumbs crumbs={crumbs} />
@@ -42,9 +42,9 @@ export function PageMastheadFrame({
 
 export type MastheadStat = { value: number | string; label: React.ReactNode };
 
-/** 写在句子里的数字：香槟金、等宽 */
+/** 写在句子里的数字：白、等宽数字 */
 export function MastNum({ children }: { children: React.ReactNode }) {
-  return <span className="tabular font-medium tabular-nums text-primary">{children}</span>;
+  return <span className="tabular font-medium tabular-nums text-foreground">{children}</span>;
 }
 
 /**
@@ -71,31 +71,20 @@ export function IndexMasthead({
   band?: React.ReactNode;
 }) {
   return (
-    <header className={cn('relative overflow-hidden border-b border-border/50 pt-[calc(var(--header-h)+20px)] pb-6 md:pt-[calc(var(--header-h)+26px)] md:pb-7', className)}>
-      {/* 极简环境微光：若有游戏美术则渲染极其柔和的背景氛围，无则留白自然 */}
-      <div aria-hidden className="pointer-events-none absolute inset-0">
-        {glow ? (
-          <>
-            <img src={glow} alt="" className={cn(GLOW_IMG, 'opacity-15')} />
-            <div className={GLOW_VEIL} />
-          </>
-        ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_20%_0%,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
-        )}
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent" />
-      </div>
-
+    <header className={cn('relative pt-[calc(var(--header-h)+28px)] pb-6 md:pt-[calc(var(--header-h)+48px)] md:pb-10', className)}>
+      {/* 美术环境光：有游戏美术时，页面顶部被这款游戏的颜色照亮，向下渐隐；没有时留纯黑 */}
+      <AmbientArt src={glow} height="h-[80vh]" opacity={0.5} />
       <div className="container-x relative">
         <Crumbs crumbs={crumbs ?? [[title]]} />
         
         <div className="mt-3 max-w-4xl">
           <div className="flex items-baseline gap-3">
-            <h1 className="font-display text-3xl font-semibold tracking-[-0.013em] text-foreground sm:text-4xl lg:text-[44px]">
+            <h1 className="font-display text-4xl font-semibold tracking-[-0.02em] text-foreground sm:text-5xl lg:text-[56px]">
               {title}
             </h1>
             {count != null && (
-              <span className="tabular text-xs sm:text-sm text-fg-3 tabular-nums">
-                ({count})
+              <span className="tabular text-lg sm:text-xl font-normal text-fg-3 tabular-nums">
+                {count}
               </span>
             )}
           </div>
@@ -113,7 +102,7 @@ export function IndexMasthead({
             {stats.map((s, i) => (
               <div key={i} className="flex items-baseline gap-2">
                 <dt className="text-xs text-fg-3">{s.label}</dt>
-                <dd className={cn('tabular text-base font-bold tabular-nums', i === 0 ? 'text-primary' : 'text-foreground')}>{s.value}</dd>
+                <dd className={cn('tabular text-base font-bold tabular-nums', 'text-foreground')}>{s.value}</dd>
               </div>
             ))}
           </dl>

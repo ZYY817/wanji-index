@@ -1,0 +1,15 @@
+{
+  "id": "schedule-i-nexus-mods-mod",
+  "name": "Schedule I Nexus Mods 专区",
+  "nameEn": "Schedule I on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "schedule-i",
+  "url": "https://www.nexusmods.com/schedule1",
+  "note": "Nexus 上的 MOD 专区，共 1,462 个 MOD",
+  "noteEn": "Nexus Mods hub with 1,462 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "warhammer-40-000-rogue-trader-steam-mod",
+  "name": "Warhammer 40,000: 行商浪人 创意工坊",
+  "nameEn": "Warhammer 40,000: Rogue Trader Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "warhammer-40-000-rogue-trader",
+  "url": "https://steamcommunity.com/app/2186680/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

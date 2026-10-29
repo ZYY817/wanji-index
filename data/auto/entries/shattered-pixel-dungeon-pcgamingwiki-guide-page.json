@@ -1,0 +1,15 @@
+{
+  "id": "shattered-pixel-dungeon-pcgamingwiki-guide-page",
+  "name": "Shattered Pixel Dungeon 技术资料页",
+  "nameEn": "Shattered Pixel Dungeon on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "shattered-pixel-dungeon",
+  "url": "https://www.pcgamingwiki.com/wiki/Shattered_Pixel_Dungeon",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

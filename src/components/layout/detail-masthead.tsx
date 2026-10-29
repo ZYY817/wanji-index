@@ -18,14 +18,14 @@ export function DetailMasthead({
 }) {
   const rise = (i: number) => ({ animationDelay: `${0.08 + i * 0.07}s` });
   return (
-    <header className={cn('border-b border-border pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
+    <header className={cn('pt-[calc(var(--header-h)+40px)] md:pt-[calc(var(--header-h)+64px)]', className)}>
       <div className="container-x grid gap-10 pb-12 md:pb-16 lg:grid-cols-12 lg:gap-12">
         <div className="min-w-0 lg:col-span-7">
-          <nav aria-label="Breadcrumb" className="flex animate-rise flex-wrap items-center gap-2 text-sm text-fg-2" style={rise(0)}>
+          <nav aria-label="Breadcrumb" className="flex animate-rise flex-wrap items-center gap-2 text-xs text-fg-3" style={rise(0)}>
             <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
             {crumbs.map(([label, href], i) => (
               <span key={i} className="flex items-center gap-2">
-                <span aria-hidden className="text-fg-3">/</span>
+                <span aria-hidden className="text-fg-3/60">›</span>
                 {href ? (
                   <Link href={href} className="transition-colors hover:text-foreground">{label}</Link>
                 ) : (

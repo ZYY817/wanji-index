@@ -11,7 +11,7 @@ import { AcquireButton } from '@/components/ui/button';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { GameArt } from '@/components/game/game-art';
 import { Countdown, useNow } from '@/components/offer/countdown';
-import { isUrgent, liveLifecycle } from '@/components/offer/use-lifecycle';
+import { liveLifecycle } from '@/components/offer/use-lifecycle';
 import { useMotionOK, useMedia } from '@/components/fx/hooks';
 import { useEntry } from '@/components/fx/scene';
 import { Tilt } from '@/components/fx/interact';
@@ -89,7 +89,7 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
   return (
     <div className="min-w-0 text-left">
       <p className={cn('text-fg-2', big ? 'text-sm' : 'text-xs')}>
-        {lc === 'upcoming' ? <span className="text-info"><T zh="即将免费" en="Free soon" />{target != null && <> · <T zh={`${shDateTime(target)} 开始`} en={`starts ${shDateTime(target)}`} /></>}</span>
+        {lc === 'upcoming' ? <span className="text-foreground/80"><T zh="即将免费" en="Free soon" />{target != null && <> · <T zh={`${shDateTime(target)} 开始`} en={`starts ${shDateTime(target)}`} /></>}</span>
           : target != null ? <><T zh="剩余时间" en="Time left" /><span className="text-fg-3"> · <T zh={`${shDateTime(target)} 截止`} en={`ends ${shDateTime(target)}`} /></span></>
           // 长期免费的游戏：小字说明为什么在这里（「Steam 在玩人数前 20」），没有就写类型
           : o.claimNote?.includes(' · ') ? <T zh={o.claimNote.split(' · ')[1]} en={o.claimNoteEn?.split(' · ')[1]} /> : L('freeType', o.type)}
@@ -97,7 +97,7 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
       <div className={big ? 'mt-1.5' : 'mt-1'}>
         {target != null ? (
           <Countdown target={target} mode={lc === 'upcoming' ? 'start' : 'end'} now={now} variant={big ? 'film' : undefined}
-            className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')}
+            className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', 'text-foreground')}
             labelClassName="text-fg-3" />
         ) : (
           <span className={cn('font-display font-semibold leading-none', big ? 'text-[28px]' : 'text-lg')}>{o.type === 'permanent' ? <T zh="免费开玩" en="Free to play" /> : <T zh="长期免费" en="Always free" />}</span>
@@ -278,9 +278,9 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
         {/* 环境光：当前卡美术的高斯模糊色场——只留颜色，不留形状 */}
         <div aria-hidden className="absolute inset-0">
           {items.map((x, i) => (
-            <img key={x.id} src={x.art?.hero ?? x.art?.capsule ?? ''} alt="" className={cn(GLOW_IMG, 'transition-opacity duration-700', i === cur ? 'opacity-35' : 'opacity-0')} />
+            <img key={x.id} src={x.art?.hero ?? x.art?.capsule ?? ''} alt="" className={cn(GLOW_IMG, 'transition-opacity duration-700', i === cur ? 'opacity-60' : 'opacity-0')} />
           ))}
-          <div className={GLOW_VEIL} />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(0,0,0,0.2)_0%,rgba(0,0,0,0.6)_60%,rgba(0,0,0,0.92)_100%)]" />
         </div>
 
         {from && items[0] && <Handoff from={from} first={items[0]} e={e} vp={vp} w={w} h={h} />}

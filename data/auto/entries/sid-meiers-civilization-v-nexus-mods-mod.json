@@ -1,0 +1,15 @@
+{
+  "id": "sid-meiers-civilization-v-nexus-mods-mod",
+  "name": "文明 5 Nexus Mods 专区",
+  "nameEn": "Sid Meier's Civilization V on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "sid-meiers-civilization-v",
+  "url": "https://www.nexusmods.com/civilisationv",
+  "note": "Nexus 上的 MOD 专区，共 26 个 MOD",
+  "noteEn": "Nexus Mods hub with 26 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

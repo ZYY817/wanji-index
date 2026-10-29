@@ -1,0 +1,15 @@
+{
+  "id": "grand-theft-auto-v-legacy-pcgamingwiki-guide-page",
+  "name": "Grand Theft Auto V 传承版 技术资料页",
+  "nameEn": "Grand Theft Auto V Legacy on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "grand-theft-auto-v-legacy",
+  "url": "https://www.pcgamingwiki.com/wiki/Grand_Theft_Auto_V",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

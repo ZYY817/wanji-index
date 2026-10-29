@@ -22,7 +22,7 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
             <stop offset="0" stopColor={c.hi} stopOpacity={c.glassHi} />
             <stop offset="0.35" stopColor={c.mid} stopOpacity={c.glassMid} />
             <stop offset="0.65" stopColor={c.mid} stopOpacity={c.glassMid / 2} />
-            <stop offset="1" stopColor="#2997FF" stopOpacity="0.35" />
+            <stop offset="1" stopColor="#F5F5F7" stopOpacity="0.35" />
           </linearGradient>
           <linearGradient id={`${id}-edge`} x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stopColor={c.edge} stopOpacity="0.7" />
@@ -30,9 +30,9 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
             <stop offset="1" stopColor={c.edge} stopOpacity="0.5" />
           </linearGradient>
           <radialGradient id={`${id}-orb`} cx="0.35" cy="0.35" r="0.7">
-            <stop offset="0" stopColor="#E6F2FF" />
-            <stop offset="0.45" stopColor="#2997FF" />
-            <stop offset="1" stopColor="#0A3D7A" />
+            <stop offset="0" stopColor="#FFFFFF" />
+            <stop offset="0.45" stopColor="#F5F5F7" />
+            <stop offset="1" stopColor="#3A3A3C" />
           </radialGradient>
         </defs>
         {/* 玻璃环：粗描边 + 内外高光 */}
@@ -40,8 +40,8 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
         <circle cx="300" cy="300" r="233" fill="none" stroke={`url(#${id}-edge)`} strokeWidth="1.2" />
         <circle cx="300" cy="300" r="187" fill="none" stroke={`url(#${id}-edge)`} strokeWidth="1" opacity="0.7" />
         {/* 香槟金轨道 + 金球 */}
-        <ellipse cx="300" cy="300" rx="285" ry="120" fill="none" stroke="#2997FF" strokeOpacity="0.75" strokeWidth="1.2" transform="rotate(-24 300 300)" />
-        <ellipse cx="300" cy="300" rx="262" ry="262" fill="none" stroke="#2997FF" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="2 7" />
+        <ellipse cx="300" cy="300" rx="285" ry="120" fill="none" stroke="#F5F5F7" strokeOpacity="0.75" strokeWidth="1.2" transform="rotate(-24 300 300)" />
+        <ellipse cx="300" cy="300" rx="262" ry="262" fill="none" stroke="#F5F5F7" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="2 7" />
         <circle cx="548" cy="186" r="9" fill={`url(#${id}-orb)`} />
       </motion.svg>
     </motion.div>

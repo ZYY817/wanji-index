@@ -17,6 +17,7 @@ export type ActiveChip = { key: 'q' | 'genre' | 'platform'; label: React.ReactNo
 
 export const SORTS = [
   { key: 'richness', label: '资源最多', en: 'Most resources' },
+  { key: 'newest', label: '最新发售', en: 'Newest' },
   { key: 'updated', label: '最近更新', en: 'Recently updated' },
   { key: 'name', label: '名称顺序', en: 'By name' },
 ] as const;
@@ -94,7 +95,7 @@ function SortRows({ q, update, touch }: { q: CatalogQuery; update: CatalogUpdate
             className={cn(
               'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
               touch ? 'min-h-11' : 'min-h-9',
-              active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+              active ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
             )}
           >
             <span className="flex-1"><T zh={s.label} en={s.en} /></span>
@@ -118,7 +119,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
       className={cn(
         'group flex w-full items-center gap-2 rounded-sm px-3 py-2 text-left text-base transition-colors',
         primary ? 'min-h-11' : 'min-h-9',
-        allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+        allActive ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
       )}
     >
       <span className="flex-1"><T zh="全部类型" en="All genres" /></span>
@@ -141,10 +142,9 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 onClick={() => update({ genre: active ? '' : key })}
                 className={cn(
                   'flex min-h-11 min-w-0 items-center gap-2 border px-3 text-left text-sm transition-colors',
-                  active ? 'border-primary/70 bg-surface-2 text-foreground' : 'border-border text-fg-2 hover:border-border-strong hover:text-foreground',
+                  active ? 'border-primary/70 bg-white/[0.1] text-foreground' : 'border-border text-fg-2 hover:border-border-strong hover:text-foreground',
                 )}
               >
-                <span aria-hidden className={cn('size-1 shrink-0', active ? 'bg-primary' : 'bg-border-strong')} />
                 <span className="truncate">{G(key)}</span>
                 <span className={cn('ml-auto shrink-0 tabular text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
               </button>
@@ -171,7 +171,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 onClick={() => update({ genre: active ? '' : key })}
                 className={cn(
                   'group flex min-h-9 w-full min-w-0 items-center gap-2 rounded-sm px-3 py-2 text-left text-base transition-colors',
-                  active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+                  active ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
                 )}
               >
                 <span className="flex-1 truncate">{G(key)}</span>
@@ -206,7 +206,7 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
         className={cn(
           'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
           primary ? 'min-h-11' : 'min-h-9',
-          allActive ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+          allActive ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
         )}
       >
         <span className="flex-1"><T zh="全部平台" en="All platforms" /></span>
@@ -223,7 +223,7 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
             className={cn(
               'group flex w-full items-center gap-2.5 rounded-sm px-3 py-2 text-left text-base transition-colors',
               primary ? 'min-h-11' : 'min-h-9',
-              active ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+              active ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
             )}
           >
             <PlatformMark platform={key} withLabel />
@@ -373,7 +373,7 @@ export function MobileFilterBar({
   const activeCount = chips.length;
 
   return (
-    <div className="sticky top-[var(--sticky-top)] z-30 -mx-[var(--gutter)] border-b border-border bg-background transition-[top] duration-300 lg:hidden">
+    <div className="glass sticky top-[var(--sticky-top)] z-30 -mx-[var(--gutter)] border-b border-white/[0.06] transition-[top] duration-300 lg:hidden">
       <style>{`
 @keyframes catalog-sheet-in { from { transform: translate3d(0, 100%, 0); } to { transform: translate3d(0, 0, 0); } }
 @keyframes catalog-sheet-out { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, 100%, 0); } }

@@ -39,6 +39,8 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
       ? a.name.localeCompare(b.name, 'zh-CN')
       : q.sort === 'updated'
         ? b.updatedAt.localeCompare(a.updatedAt)
+        : q.sort === 'newest'
+          ? (b.releasedAt ?? 0) - (a.releasedAt ?? 0) || b.counts.total - a.counts.total
         : b.counts.total - a.counts.total || a.name.localeCompare(b.name, 'zh-CN'));
 
   const chips: ActiveChip[] = ([

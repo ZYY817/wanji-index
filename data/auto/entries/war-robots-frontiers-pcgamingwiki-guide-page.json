@@ -1,0 +1,15 @@
+{
+  "id": "war-robots-frontiers-pcgamingwiki-guide-page",
+  "name": "War Robots: Frontiers 技术资料页",
+  "nameEn": "War Robots: Frontiers on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "war-robots-frontiers",
+  "url": "https://www.pcgamingwiki.com/wiki/War_Robots%3A_Frontiers",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

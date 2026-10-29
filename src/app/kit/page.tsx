@@ -15,18 +15,18 @@ export const metadata: Metadata = {
 };
 
 const FEATURES: { zh: [string, string]; en: [string, string] }[] = [
-  { zh: ['一次体检，全部列出', 'VC++ 2005–2022、.NET Framework 与 .NET 桌面运行时、DirectX 旧组件、XNA、OpenAL、PhysX、WebView2、UE 前置组件等运行库，外加游戏模式、硬件加速调度等系统优化项。缺什么一屏看清。'],
-    en: ['One scan, everything listed', 'VC++ 2005–2022, .NET Framework and .NET Desktop, legacy DirectX, XNA, OpenAL, PhysX, WebView2, UE prerequisites and more — plus system tweaks like Game Mode and HAGS. See what’s missing at a glance.'] },
-  { zh: ['一键装齐，装完再验', '缺失项自动排队，只弹一次管理员授权；装完逐项重新检测——扫到才算装好，不以安装程序的返回值为准。'],
-    en: ['Install it all, then verify', 'Missing items are queued with a single admin prompt; afterwards each one is re-scanned — it only counts once it’s actually detected.'] },
-  { zh: ['只走官方渠道', '优先用微软的 winget，没有 winget 时用微软 / 原始发布方的官方直链兜底。不碰任何第三方打包站，不捆绑软件。'],
-    en: ['Official sources only', 'winget first, with direct official links from Microsoft or the original publisher as a fallback. No repack sites, no bundled software.'] },
-  { zh: ['修复模式', '已经装了、但怀疑损坏的运行库，勾上即可强制重装。'],
-    en: ['Repair mode', 'Tick a runtime that’s installed but seems broken to force a reinstall.'] },
-  { zh: ['装不了的也给路', '没有自动安装渠道的组件标为「需手动」，点开直达官方指引；安装失败的项在完成页给出官方下载链接。'],
-    en: ['A way forward for everything', 'Components without an automatic installer are marked “manual” and link to the official instructions; anything that fails gets an official download link.'] },
-  { zh: ['中英双语、免安装', '界面中文 / English 一键切换；解压即用的绿色软件，不写注册表、不留后台服务。'],
-    en: ['Bilingual and portable', 'Switch between Chinese and English in one click; unzip and run — no installer, no background services.'] },
+  { zh: ['一次体检，缺什么一屏全看清', '把 VC++ 2005–2022、.NET、DirectX 旧组件、PhysX、OpenAL 到系统游戏设置统统过一遍。十几秒把底子摸透，缺了哪个一目了然，不用凭感觉瞎猜。'],
+    en: ['One scan, see what’s missing upfront', 'Scans VC++ 2005–2022, .NET, legacy DirectX, PhysX, OpenAL, and Windows gaming tweaks in about 10 seconds. You see exactly what is missing instead of guessing.'] },
+  { zh: ['一键排队装齐，装完重新复检', '缺的组件自动排成队列，只弹一次管理员授权；装好后还会逐项重新扫描系统，真正测到了才算装好，绝不只听安装程序的一句返回。'],
+    en: ['Install in queue, then double-check', 'Missing items queue up with a single admin prompt. Once finished, each component is re-scanned in your system to confirm it actually installed.'] },
+  { zh: ['只走官方源，干干净净绝无捆绑', '优先走微软官方 winget 渠道，没有就直连微软或原厂直链。绝不碰第三方打包站，更不塞任何乱七八糟的捆绑推广。'],
+    en: ['Official sources only, zero bloat', 'Pulls packages via Microsoft winget first, falling back to official vendor links. No repack sites, no third-party installers, no unwanted extras.'] },
+  { zh: ['怀疑组件损坏？随时强制重装', '很多时候游戏闪退不是没装运行库，而是某些 dll 文件损毁了。打开修复模式直接勾选对应项，一键强制重新安装覆盖。'],
+    en: ['Repair mode for corrupted files', 'Crashes often happen when an existing runtime gets damaged. Turn on repair mode, check the suspect runtime, and reinstall it cleanly.'] },
+  { zh: ['遇到特殊组件，也绝不丢下你不管', '某些由于授权无法静默安装的组件会明确标为「需手动」，点一下直达官方下载指引；万一哪个包装失败了，完成页也会直接给到离线直链。'],
+    en: ['Clear manual guidance when automation stops', 'Components that require manual agreement link straight to official download pages. If anything fails, you get direct offline links right away.'] },
+  { zh: ['纯便携绿色工具，不写注册表不留后台', '解压就能直接跑，用完随时删掉。不在你的电脑里常驻任何后台服务，也不改你的注册表。中英双语，一键随心切换。'],
+    en: ['Truly portable, leaves nothing behind', 'A portable tool that leaves no background services and doesn’t touch your registry. Bilingual and ready whenever you need it.'] },
 ];
 
 const SHOT_CAPTION: Record<string, [string, string]> = {
@@ -63,7 +63,7 @@ export default function KitPage() {
       <KitHero />
 
       <div className="container-x">
-        <DetailSection index={0} meta={{ id: 'features', title: <T zh="它能做什么" en="What it does" /> }}>
+        <DetailSection index={0} meta={{ id: 'features', title: <T zh="平时能帮上什么忙" en="What it takes care of" />, lead: <T zh="重装系统或者老游戏突然打不开？不用再到处盲搜各种合集包，这里把排查和安装理得清清楚楚。" en="No more hunting through random forum packs when a game fails to start — diagnose and fix missing runtimes cleanly." /> }}>
           <ul className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((f, i) => (
               <li key={i} className="bg-background p-6 md:p-7">

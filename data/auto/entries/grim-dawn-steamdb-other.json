@@ -1,0 +1,15 @@
+{
+  "id": "grim-dawn-steamdb-other",
+  "name": "恐怖黎明 价格与版本史",
+  "nameEn": "Grim Dawn on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "grim-dawn",
+  "url": "https://steamdb.info/app/219990/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

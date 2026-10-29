@@ -1,0 +1,15 @@
+{
+  "id": "dead-by-daylight-nexus-mods-mod",
+  "name": "黎明杀机 Nexus Mods 专区",
+  "nameEn": "Dead by Daylight on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "dead-by-daylight",
+  "url": "https://www.nexusmods.com/deadbydaylight",
+  "note": "Nexus 上的 MOD 专区，共 27 个 MOD",
+  "noteEn": "Nexus Mods hub with 27 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

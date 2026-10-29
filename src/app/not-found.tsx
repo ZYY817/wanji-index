@@ -30,14 +30,14 @@ export default function NotFound() {
           <p className="mb-3 text-sm text-fg-3"><T zh="从这里重新进入" en="Start again from" /></p>
           <ul className="border-t border-border">
             <li>
-              <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
+              <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-foreground/80">
                 <span className="flex-1 font-display font-semibold"><T zh="首页" en="Home" /></span>
                 <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
               </Link>
             </li>
             {NAV.map((n) => (
               <li key={n.href}>
-                <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
+                <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-foreground/80">
                   <span className="flex-1 font-display font-semibold"><T zh={n.label} en={n.en} /></span>
                   <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
                 </Link>

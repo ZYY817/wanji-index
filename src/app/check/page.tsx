@@ -23,10 +23,10 @@ export default function CheckPage() {
       <IndexMasthead
         title={<T zh="我的电脑能玩吗" en="Can my PC run it?" />}
         crumbs={[[<T key="c" zh="能玩吗" en="Can I run" />]]}
-        description={<T zh={<>设置一次显卡和内存，<MastNum>{games.length}</MastNum> 款游戏按 Steam 公布的配置要求逐一对照：流畅、能玩，还是吃力。</>} en={<>Set your GPU and RAM once and <MastNum>{games.length}</MastNum> games are checked against their Steam requirements: smooth, playable, or struggles.</>} />}
+        description={<T zh={<>选好你的显卡和内存配置，<MastNum>{games.length}</MastNum> 款游戏就会自动按官方要求逐一对照：到底能高画质流畅跑、需要降特效，还是会比较吃力，心里有数再入手。</>} en={<>Pick your GPU and RAM once to see how <MastNum>{games.length}</MastNum> games measure up against official specs: smooth, playable with lowered settings, or struggling.</>} />}
       />
       <div className="container-x">
-        <DetailSection index={0} meta={{ id: 'list', title: <T zh="对照结果" en="Results" />, lead: <T zh="点进任意一款，可以看到完整的最低 / 推荐配置。" en="Open any game to see its full minimum / recommended specs." /> }}>
+        <DetailSection index={0} meta={{ id: 'list', title: <T zh="对照结果" en="Results" />, lead: <T zh="点击卡片可以展开查看官方公布的完整最低与推荐配置清单。" en="Click any game to inspect its full minimum and recommended hardware specs." /> }}>
           <CheckList games={games} />
         </DetailSection>
         <DetailSection index={1} meta={{ id: 'how', title: <T zh="怎么判断的" en="How it works" /> }}>

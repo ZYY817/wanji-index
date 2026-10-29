@@ -1,0 +1,15 @@
+{
+  "id": "war-thunder-pcgamingwiki-guide-page",
+  "name": "战争雷霆 技术资料页",
+  "nameEn": "War Thunder on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "war-thunder",
+  "url": "https://www.pcgamingwiki.com/wiki/War_Thunder",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

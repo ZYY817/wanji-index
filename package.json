@@ -8,7 +8,7 @@
     "build:test": "node scripts/build-test.mjs",
     "validate": "node scripts/validate.mjs",
     "fonts": "node scripts/subset-fonts.mjs",
-    "sync": "node scripts/sync/steam-games.mjs && node scripts/sync/pcgw-paths.mjs && node scripts/sync/epic-free.mjs && node scripts/sync/free-giveaways.mjs && node scripts/sync/free-to-play.mjs && node scripts/sync/offer-art.mjs && node scripts/sync/kit-release.mjs",
+    "sync": "node scripts/sync/steam-games.mjs && node scripts/sync/pcgw-paths.mjs && node scripts/sync/epic-free.mjs && node scripts/sync/free-giveaways.mjs && node scripts/sync/free-to-play.mjs && node scripts/sync/offer-art.mjs && node scripts/sync/steam-art.mjs && node scripts/sync/game-entries.mjs && node scripts/sync/kit-release.mjs",
     "icons": "node scripts/gen-icons.mjs",
     "logos": "node scripts/fetch-logos.mjs && node scripts/fetch-tool-logos.mjs",
     "og": "node scripts/gen-og.mjs",

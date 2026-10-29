@@ -1,0 +1,15 @@
+{
+  "id": "delta-force-steamdb-other",
+  "name": "三角洲行动 价格与版本史",
+  "nameEn": "Delta Force on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "delta-force",
+  "url": "https://steamdb.info/app/2507950/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

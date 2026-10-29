@@ -1,0 +1,15 @@
+{
+  "id": "team-fortress-2-nexus-mods-mod",
+  "name": "军团要塞 2 Nexus Mods 专区",
+  "nameEn": "Team Fortress 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "team-fortress-2",
+  "url": "https://www.nexusmods.com/teamfortress2",
+  "note": "Nexus 上的 MOD 专区，共 76 个 MOD",
+  "noteEn": "Nexus Mods hub with 76 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

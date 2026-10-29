@@ -18,6 +18,7 @@ import {
   ChannelList, EntryList, FaqList, IssueList, SpecsTable, GuideList, PathList, ToolList,
 } from '@/components/game/detail/detail-sections';
 import { RigVerdict } from '@/components/rig/rig';
+import { AmbientArt } from '@/components/fx/ambient-art';
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -65,6 +66,8 @@ export default async function GamePage({ params }: Params) {
         ]}
       />
 
+      <div className="relative isolate">
+      <AmbientArt src={vm.art?.header ?? vm.art?.hero} height="h-[170vh]" />
       <DetailHero id={vm.id} name={vm.name} enName={d.enName} summary={d.summary} summaryEn={d.summaryEn} tags={[...d.genreKeys.map((k) => <span key={k}>{G(k)}</span>), ...d.os.map((o) => <span key={o}>{o}</span>)]} byline={d.byline} bylineEn={d.bylineEn} art={vm.art} />
       <QuickFacts d={d} />
       {d.sections.length > 1 && <SectionNav sections={d.sections} />}
@@ -108,6 +111,7 @@ export default async function GamePage({ params }: Params) {
           </div>
         </section>
       )}
+      </div>
     </>
   );
 }

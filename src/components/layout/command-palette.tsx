@@ -53,7 +53,7 @@ function ItemIcon({ it, size = 32 }: { it: RecentItem; size?: number }) {
   if (it.type === 'tool' && it.seed) return <ToolLogo id={it.seed} name={it.title} size={size} />;
   const Icon = it.type === 'tool' ? Wrench : it.type === 'problem' ? LifeBuoy : BookOpen;
   return (
-    <span className="grid shrink-0 place-items-center rounded-xs border border-border-strong text-fg-2" style={{ width: size, height: size }}>
+    <span className="grid shrink-0 place-items-center rounded-sm bg-white/[0.04] text-fg-2" style={{ width: size, height: size }}>
       <Icon className="size-4" aria-hidden />
     </span>
   );
@@ -108,7 +108,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
   return (
     <Dialog open={open} onOpenChange={(v) => { setOpen(v); if (!v) setQ(''); }}>
       <DialogContent
-        className="inset-0 flex flex-col bg-popover sm:inset-auto sm:left-1/2 sm:top-[12vh] sm:max-h-[72vh] sm:w-[min(720px,calc(100vw-32px))] sm:-translate-x-1/2 sm:rounded-sm sm:border sm:border-border-strong sm:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.85)]"
+        className="inset-0 flex flex-col bg-popover sm:inset-auto sm:left-1/2 sm:top-[12vh] sm:max-h-[72vh] sm:w-[min(720px,calc(100vw-32px))] sm:-translate-x-1/2 sm:rounded-lg sm:ring-1 sm:ring-white/[0.08] sm:shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]"
         aria-describedby="cmdk-desc"
       >
         <DialogTitle className="sr-only"><T zh="搜索玩机索引" en="Search Wanji Index" /></DialogTitle>
@@ -136,7 +136,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
             {error && (
               <div className="flex flex-col items-start gap-3 px-3 py-6">
                 <p className="text-base text-fg-2"><T zh="搜索索引加载失败，可能是网络中断。" en="Couldn’t load the search index — check your connection." /></p>
-                <button type="button" onClick={() => load(true)} className="inline-flex h-10 items-center gap-2 rounded-sm border border-border-strong px-3 text-sm hover:border-foreground/60">
+                <button type="button" onClick={() => load(true)} className="inline-flex h-9 items-center gap-2 rounded-full bg-white/[0.08] px-4 text-sm font-medium hover:bg-white/[0.14]">
                   <RotateCw className="size-3.5" aria-hidden /> <T zh="重试" en="Retry" />
                 </button>
               </div>

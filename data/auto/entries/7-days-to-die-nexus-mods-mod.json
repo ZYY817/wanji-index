@@ -1,0 +1,15 @@
+{
+  "id": "7-days-to-die-nexus-mods-mod",
+  "name": "七日杀 Nexus Mods 专区",
+  "nameEn": "7 Days to Die on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "7-days-to-die",
+  "url": "https://www.nexusmods.com/7daystodie",
+  "note": "Nexus 上的 MOD 专区，共 9,532 个 MOD",
+  "noteEn": "Nexus Mods hub with 9,532 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

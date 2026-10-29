@@ -1,0 +1,15 @@
+{
+  "id": "r-e-p-o-thunderstore-mod",
+  "name": "R.E.P.O. Thunderstore 社区 MOD",
+  "nameEn": "R.E.P.O. on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "r-e-p-o",
+  "url": "https://thunderstore.io/c/repo/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

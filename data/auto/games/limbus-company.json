@@ -42,15 +42,37 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/1973530/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Limbus_Company"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:10.576Z"
-  }
+    "syncedAt": "2026-10-28T13:17:10.576Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:24.494Z",
+      "page": "Limbus Company"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\ProjectMoon\\LimbusCompany",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\ProjectMoon\\LimbusCompany",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

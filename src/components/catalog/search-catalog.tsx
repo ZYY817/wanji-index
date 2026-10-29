@@ -19,11 +19,11 @@ function ResultRow({ item }: { item: RecentItem }) {
   return (
     <Link href={item.url} onClick={() => pushRecent(item)} className="group flex min-h-20 items-center gap-5 border-b border-border py-4 transition-colors hover:bg-card">
       {item.type === 'game'
-        ? <GameArt src={item.art} name={item.title} seed={item.title} variant="wide" className="aspect-[460/215] w-24 shrink-0 rounded-xs sm:w-28" />
+        ? <GameArt src={item.art} name={item.title} seed={item.title} variant="wide" className="aspect-[460/215] w-24 shrink-0 rounded-sm sm:w-28" />
         : item.type === 'tool' ? <ToolLogo id={item.seed ?? item.title} name={item.title} size={48} />
         : <SiteLogo id={item.seed ?? item.title} name={item.title} size={48} />}
       <span className="min-w-0 flex-1">
-        <span className="block text-lg font-semibold transition-colors group-hover:text-primary">{item.title}</span>
+        <span className="block text-lg font-semibold transition-colors group-hover:text-foreground/80">{item.title}</span>
         {item.sub && <span className="mt-1 block truncate text-sm text-fg-3">{item.sub}</span>}
       </span>
       <span className="hidden text-sm text-fg-3 sm:block">{TYPE_ZH[item.type]}</span>

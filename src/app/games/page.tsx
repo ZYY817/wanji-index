@@ -20,7 +20,7 @@ export default function GamesPage() {
         title={<T zh="游戏库" en="Games" />}
         count={games.length}
         description={<T zh={`收录 ${games.length} 款 PC 游戏档案，整理了 ${resources} 条资源线索。去哪买、MOD 与汉化在哪、报错排障，一处查到。`} en={`${games.length} PC games with ${resources} leads: where to buy, mods and Chinese patches, and fixes for common errors — all in one place.`} />}
-        glow={featured?.art?.hero}
+        glow={featured?.art?.header ?? featured?.art?.hero}
       />
       <GamesCatalog games={games} />
     </>

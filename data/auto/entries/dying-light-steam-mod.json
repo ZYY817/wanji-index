@@ -1,0 +1,15 @@
+{
+  "id": "dying-light-steam-mod",
+  "name": "消逝的光芒 创意工坊",
+  "nameEn": "Dying Light Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "dying-light",
+  "url": "https://steamcommunity.com/app/239140/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

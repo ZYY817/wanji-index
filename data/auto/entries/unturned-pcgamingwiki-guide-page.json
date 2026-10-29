@@ -1,0 +1,15 @@
+{
+  "id": "unturned-pcgamingwiki-guide-page",
+  "name": "未转变者 技术资料页",
+  "nameEn": "Unturned on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "unturned",
+  "url": "https://www.pcgamingwiki.com/wiki/Unturned",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

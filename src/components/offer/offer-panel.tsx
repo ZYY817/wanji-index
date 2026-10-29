@@ -32,11 +32,18 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
     <Tilt max={4} className={cn('h-full', className)}>
       <SpotlightCard
         as="article"
-        className="group relative flex h-full flex-col overflow-hidden rounded-xs border border-border bg-card transition-colors hover:border-border-strong"
+        className="group relative isolate flex h-full flex-col overflow-hidden rounded-lg bg-[#0B0B0D] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_24px_60px_-28px_rgba(0,0,0,0.9)] ring-1 ring-inset ring-white/[0.07] transition-shadow duration-500 hover:ring-white/[0.14]"
       >
+        {/* 卡片底色取自这款游戏的美术：模糊放大后压暗，每张卡带着自己的颜色 */}
+        {(o.art?.header ?? o.art?.capsule) && (
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <img src={o.art?.header ?? o.art?.capsule} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full scale-150 object-cover opacity-60" style={{ filter: 'blur(48px) saturate(1.5)' }} />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(11,11,13,0.35)_0%,rgba(11,11,13,0.82)_55%,rgba(11,11,13,0.9)_100%)]" />
+          </div>
+        )}
 
         {/* 横幅图 */}
-        <div className="edge-light relative aspect-[16/9] w-full overflow-hidden bg-shell">
+        <div className="relative aspect-[16/9] w-full overflow-hidden bg-shell [mask-image:linear-gradient(180deg,#000_70%,transparent_100%)]">
           <GameArt
             src={[o.art?.header, o.art?.capsule, o.art?.hero]}
             name={o.gameName ?? o.title}
@@ -49,14 +56,14 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             <LifecycleBadge value={lc} pulse />
             {health && <StatusBadge value={health} className="bg-background/80" />}
           </div>
-          <div className="absolute bottom-3 right-3 rounded-xs bg-background/80 px-2 py-0.5 backdrop-blur-xs">
-            <PlatformMark platform={o.platform} withLabel className="text-xs" />
-          </div>
+
         </div>
 
         {/* 主体信息 */}
         <div className="flex flex-1 flex-col p-5 md:p-6">
-          <div className="flex min-w-0 items-center gap-2 text-sm text-fg-2">
+          <div className="flex min-w-0 items-center gap-2 text-sm text-foreground/60">
+            <PlatformMark platform={o.platform} withLabel className="shrink-0 text-foreground/85" />
+            <span aria-hidden>·</span>
             <span className="shrink-0">{L('freeType', o.type)}</span>
             {o.claimNote && (
               <>
@@ -66,9 +73,9 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
             )}
           </div>
 
-          <h3 className="mt-2.5 text-xl font-semibold leading-snug text-foreground">
+          <h3 className="mt-2 font-display text-[22px] font-semibold leading-snug tracking-[-0.01em] text-foreground">
             {o.gameSlug ? (
-              <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-primary">
+              <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-foreground/80">
                 {mainTitle}
               </Link>
             ) : (
@@ -81,30 +88,30 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
 
           <div aria-hidden className="h-5 shrink-0" />
           {/* 倒计时与按钮一起压到卡片底部：同一行的几张卡，分隔线、倒计时、按钮都在同一高度 */}
-          <div className="mt-auto border-t border-border pt-4">
+          <div className="mt-auto border-t border-white/[0.08] pt-4">
             {lc === 'active' && o.endMs ? (
               <>
-                <p className="text-xs text-fg-3"><T zh="剩余时间" en="Time left" /></p>
+                <p className="flex items-center gap-2 text-xs text-fg-3"><T zh="剩余时间" en="Time left" />{urgent && <span className="inline-flex items-center gap-1.5 text-warn"><span aria-hidden className="size-1.5 rounded-full bg-warn" /><T zh="即将截止" en="Ending soon" /></span>}</p>
                 <div className="mt-1.5 flex items-baseline">
                   <Countdown
                     target={o.endMs}
                     now={now}
                     className={cn(
-                      'text-3xl tabular font-bold leading-none tabular-nums',
-                      urgent ? 'text-primary' : 'text-foreground',
+                      'text-[32px] tabular font-semibold leading-none tracking-[-0.02em] tabular-nums',
+                      'text-foreground',
                     )}
                   />
                 </div>
               </>
             ) : isUpcoming && o.startMs ? (
               <>
-                <p className="text-xs font-medium text-info"><T zh="即将免费" en="Free soon" /></p>
+                <p className="flex items-center gap-1.5 text-xs text-fg-3"><span aria-hidden className="size-1.5 rounded-full bg-info" /><T zh="距离免费开始" en="Free in" /></p>
                 <div className="mt-1.5 flex items-baseline">
                   <Countdown
                     target={o.startMs}
                     mode="start"
                     now={now}
-                    className="text-3xl tabular font-bold leading-none tabular-nums text-info"
+                    className="text-[32px] tabular font-semibold leading-none tracking-[-0.02em] tabular-nums text-foreground"
                   />
                 </div>
               </>
@@ -160,7 +167,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
           <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
             <span className="text-[17px] font-semibold tracking-[-0.01em] text-foreground">
               {o.gameSlug ? (
-                <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-primary">
+                <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-foreground/80">
                   {mainTitle}
                 </Link>
               ) : (

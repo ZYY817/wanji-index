@@ -52,10 +52,14 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:33.545Z"
+    "syncedAt": "2026-10-28T13:17:33.545Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:55.546Z",
+      "page": "TBH: Task Bar Hero"
+    }
   }
 }

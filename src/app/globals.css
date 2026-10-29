@@ -32,14 +32,15 @@
   --color-fg-2: #A1A1A6;
   --color-fg-3: #86868B;
 
-  /* 强调色：一种蓝。primary = 文字链接、当前态、焦点、细指示线；cta = 实心主按钮（白字） */
-  --color-primary: #2997FF;
-  --color-primary-hover: #5AB0FF;
-  --color-primary-foreground: #FFFFFF;
-  --color-ring: #2997FF;
-  --color-cta: #0071E3;
-  --color-cta-hover: #0062CC;
-  --color-cta-foreground: #FFFFFF;
+  /* 强调（V10）：界面本身不带彩色——颜色只来自游戏美术与状态点。
+     primary = 当前态、焦点、细指示线、文字链接（亮白）；cta = 实心主按钮（白底黑字，苹果深色页的做法） */
+  --color-primary: #F5F5F7;
+  --color-primary-hover: #FFFFFF;
+  --color-primary-foreground: #000000;
+  --color-ring: #F5F5F7;
+  --color-cta: #F5F5F7;
+  --color-cta-hover: #FFFFFF;
+  --color-cta-foreground: #000000;
 
   /* 语义：生命周期实心底 / 状态描边色（系统色，深色模式） */
   --color-ok: #30D158;
@@ -156,8 +157,8 @@ html[data-header-hidden="true"] {
   /* 开场层：访问过或 reduced-motion 时在首帧前就隐藏（类名由 layout 的内联脚本设置） */
   .intro-seen [data-intro] { display: none; }
   html { color-scheme: dark; -webkit-text-size-adjust: 100%; scroll-padding-top: 112px; background: var(--color-background); }
+  /* 底色只画在 html 上：body 不再铺背景，否则会盖住 -z-10 的美术环境光（AmbientArt） */
   body {
-    background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
     font-size: 15px;
@@ -308,9 +309,9 @@ html.lenis, html.lenis body { height: auto; }
   .prose-doc pre code { padding: 0; border: 0; background: none; }
   .prose-doc blockquote { border-left: 2px solid var(--color-primary); padding: 0.2em 0 0.2em 1.2em; font-size: 1.08em; color: var(--color-foreground); }
   .prose-doc hr { border: 0; border-top: 1px solid var(--color-border); margin: 2.4em 0; }
-  .prose-doc table { width: 100%; border-collapse: collapse; font-size: 14px; }
-  .prose-doc th, .prose-doc td { border-bottom: 1px solid var(--color-border); padding: 10px 12px; text-align: left; }
-  .prose-doc th { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--color-fg-3); font-weight: 500; }
+  .prose-doc table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 14px; border-radius: var(--radius-md); overflow: hidden; background: var(--color-card); }
+  .prose-doc th, .prose-doc td { border-bottom: 1px solid var(--color-border); padding: 10px 14px; text-align: left; }
+  .prose-doc th { background: rgba(255, 255, 255, 0.04); font-size: 13px; color: var(--color-fg-3); font-weight: 500; }
 }
 
 /* 跑马灯：reduced-motion 下静止 */

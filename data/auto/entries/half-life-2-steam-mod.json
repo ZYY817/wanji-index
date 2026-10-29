@@ -1,0 +1,15 @@
+{
+  "id": "half-life-2-steam-mod",
+  "name": "半条命 2 创意工坊",
+  "nameEn": "Half-Life 2 Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "half-life-2",
+  "url": "https://steamcommunity.com/app/220/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

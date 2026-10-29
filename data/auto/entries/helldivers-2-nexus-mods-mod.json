@@ -1,0 +1,15 @@
+{
+  "id": "helldivers-2-nexus-mods-mod",
+  "name": "HELLDIVERS 绝地潜兵2 Nexus Mods 专区",
+  "nameEn": "HELLDIVERS 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "helldivers-2",
+  "url": "https://www.nexusmods.com/helldivers2",
+  "note": "Nexus 上的 MOD 专区，共 13,078 个 MOD",
+  "noteEn": "Nexus Mods hub with 13,078 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

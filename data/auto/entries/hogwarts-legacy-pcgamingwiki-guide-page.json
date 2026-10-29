@@ -1,0 +1,15 @@
+{
+  "id": "hogwarts-legacy-pcgamingwiki-guide-page",
+  "name": "霍格沃茨之遗 技术资料页",
+  "nameEn": "Hogwarts Legacy on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "hogwarts-legacy",
+  "url": "https://www.pcgamingwiki.com/wiki/Hogwarts_Legacy",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

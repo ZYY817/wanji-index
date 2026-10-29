@@ -1,0 +1,15 @@
+{
+  "id": "limbus-company-nexus-mods-mod",
+  "name": "边狱公司 Nexus Mods 专区",
+  "nameEn": "Limbus Company on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "limbus-company",
+  "url": "https://www.nexusmods.com/limbuscompany",
+  "note": "Nexus 上的 MOD 专区，共 162 个 MOD",
+  "noteEn": "Nexus Mods hub with 162 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

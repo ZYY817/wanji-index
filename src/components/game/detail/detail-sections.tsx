@@ -57,7 +57,7 @@ export function PathList({ items }: { items: PathItem[] }) {
   return (
     <ul className="space-y-3">
       {items.map((p) => (
-        <li key={p.path} className="rounded-xs border border-border bg-shell p-5 md:p-6">
+        <li key={p.path} className="lift rounded-md p-5 md:p-6">
           <div className="flex items-center justify-between gap-4">
             <p className="text-sm font-medium text-fg-2">
               <span className="text-foreground">{p.kind === '存档' ? <T zh="存档" en="Saves" /> : <T zh="配置" en="Config" />}</span>
@@ -86,9 +86,9 @@ export function EntryList({ items }: { items: EntryItem[] }) {
             external
             health={e.health}
             media={e.site ? <SiteLogo id={e.site.id} name={e.site.name} size={44} /> : undefined}
-            title={e.name}
+            title={e.nameEn ? <T zh={e.name} en={e.nameEn} /> : e.name}
             badge={<><Tag><T zh={e.typeLabel} en={e.typeLabelEn} /></Tag><Health value={e.health === 'dead' ? undefined : e.health} /></>}
-            description={e.note}
+            description={e.note ? <T zh={e.note} en={e.noteEn ?? e.note} /> : undefined}
             meta={<>{e.site ? <T zh={`来自 ${e.site.name}`} en={`From ${e.site.name}`} /> : <T zh="外部链接" en="External link" />} · <span className="tabular text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
           />
         </li>
@@ -152,8 +152,8 @@ export function SpecsTable({ rows }: { rows: [string, string, string][] }) {
   // 中文表的项目名（操作系统 / 处理器……）在英文界面里换成英文；英文表（Steam 英文页原文）由页面直接传入
   const KEY_EN: Record<string, string> = { 操作系统: 'OS', 处理器: 'Processor', 内存: 'Memory', 显卡: 'Graphics', 图形: 'Graphics', 'DirectX 版本': 'DirectX', 存储空间: 'Storage', 声卡: 'Sound card', 网络: 'Network', 附注事项: 'Notes', 'VR 支持': 'VR support' };
   return (
-    <div className="overflow-hidden rounded-sm ring-1 ring-border">
-      <div className="hidden grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] gap-6 bg-surface-2/60 px-5 py-3 text-sm text-fg-3 md:grid">
+    <div className="overflow-hidden rounded-md bg-card">
+      <div className="hidden grid-cols-[140px_minmax(0,1fr)_minmax(0,1fr)] gap-6 bg-white/[0.04] px-5 py-3 text-sm text-fg-3 md:grid">
         <span><T zh="项目" en="Item" /></span><span><T zh="最低配置" en="Minimum" /></span><span><T zh="推荐配置" en="Recommended" /></span>
       </div>
       <dl>

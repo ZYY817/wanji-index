@@ -228,7 +228,7 @@ export function Directory({ offers, sites, groups, counts }: {
           {/* 轨道线：随 Logo 上轨画出，落地开始后淡出 */}
           <motion.div aria-hidden className="absolute left-1/2 top-1/2" style={{ width: geo.rx * 2, height: geo.ry * 2, x: '-50%', y: '-50%', rotate: -8, opacity: lineO }}>
             <svg className="size-full overflow-visible" viewBox={`0 0 ${geo.rx * 2} ${geo.ry * 2}`}>
-              <motion.ellipse cx={geo.rx} cy={geo.ry} rx={geo.rx} ry={geo.ry} fill="none" stroke="#2997FF" strokeOpacity="0.35" strokeWidth="1" style={{ pathLength: draw }} />
+              <motion.ellipse cx={geo.rx} cy={geo.ry} rx={geo.rx} ry={geo.ry} fill="none" stroke="#F5F5F7" strokeOpacity="0.35" strokeWidth="1" style={{ pathLength: draw }} />
             </svg>
           </motion.div>
 

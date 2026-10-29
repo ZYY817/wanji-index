@@ -1,0 +1,15 @@
+{
+  "id": "half-life-2-nexus-mods-mod",
+  "name": "半条命 2 Nexus Mods 专区",
+  "nameEn": "Half-Life 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "half-life-2",
+  "url": "https://www.nexusmods.com/halflife2",
+  "note": "Nexus 上的 MOD 专区，共 96 个 MOD",
+  "noteEn": "Nexus Mods hub with 96 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

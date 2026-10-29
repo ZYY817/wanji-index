@@ -26,15 +26,22 @@ export function PosterCard({ g, className, priority }: { g: GameVM; className?: 
       <Tilt max={4} className="rounded-sm">
         <div className="edge-light relative aspect-[2/3] overflow-hidden rounded-sm ring-1 ring-white/[0.06] transition-[box-shadow] duration-300 group-hover:ring-foreground/40 group-focus-visible:ring-primary">
           <GameArt src={[g.art?.poster, g.art?.capsule, g.art?.header]} name={g.name} en={g.en} seed={g.id} priority={priority} className="absolute inset-0" imgClassName="transition-transform duration-700 ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.04]" />
-          {g.hasOffer && (
-            <span className="absolute left-2.5 top-2.5 glass inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium text-foreground"><T zh="免费中" en="Free now" /></span>
+          {(g.hasOffer || g.isNew) && (
+            <div className="absolute left-2.5 top-2.5 flex flex-col items-start gap-1">
+              {g.hasOffer && (
+                <span className="glass inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium text-foreground"><T zh="免费中" en="Free now" /></span>
+              )}
+              {g.isNew && (
+                <span className="glass inline-flex h-6 items-center rounded-full px-2.5 text-xs font-medium text-foreground"><T zh="新游戏" en="New" /></span>
+              )}
+            </div>
           )}
           <div className="absolute inset-x-0 bottom-0 flex items-center gap-1.5 bg-[linear-gradient(0deg,rgba(0,0,0,0.9),transparent)] px-3 pb-3 pt-10 text-foreground/85 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100">
             {g.platforms.map((p) => <PlatformMark key={p} platform={p} withLabel={g.platforms.length < 3} className="text-xs" />)}
           </div>
         </div>
       </Tilt>
-      <p className="mt-3 truncate font-display text-lg font-semibold leading-snug tracking-[-0.005em] transition-colors group-hover:text-primary"><T zh={g.name} en={g.en || g.name} /></p>
+      <p className="mt-3 truncate font-display text-lg font-semibold leading-snug tracking-[-0.005em] text-foreground transition-colors group-hover:text-foreground/80"><T zh={g.name} en={g.en || g.name} /></p>
       <p className="mt-0.5 truncate text-sm text-fg-2">{g.genres.length ? g.genres.slice(0, 2).map((x, i) => <span key={x}>{i > 0 && ' · '}{G(x)}</span>) : g.en}</p>
       {facts.length > 0 && (
         <p className="mt-1.5 truncate text-sm text-fg-2">

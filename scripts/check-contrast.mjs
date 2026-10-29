@@ -29,11 +29,11 @@ const CASES = [
   ['fg-2', 'popover', 4.5, '次要/浮层'],
   ['foreground', 'shell', 4.5, '正文/终端块'],
   // 主按钮与强调
-  ['cta-foreground', 'cta', 4.5, '主按钮字/蓝'],
+  ['cta-foreground', 'cta', 4.5, '主按钮字/白底'],
   ['cta-foreground', 'cta-hover', 4.5, '主按钮字/悬停'],
-  ['primary', 'background', 4.5, '强调蓝字/画布（链接、当前态）'],
-  ['primary', 'card', 4.5, '强调蓝字/card'],
-  ['primary', 'surface-2', 4.5, '强调蓝字/surface-2'],
+  ['primary', 'background', 4.5, '强调字/画布（链接、当前态）'],
+  ['primary', 'card', 4.5, '强调字/card'],
+  ['primary', 'surface-2', 4.5, '强调字/surface-2'],
   ['bad-text', 'background', 4.5, '报错原文红/画布'],
   ['bad-text', 'shell', 4.5, '报错原文红/终端块'],
   // 生命周期徽标（实心）

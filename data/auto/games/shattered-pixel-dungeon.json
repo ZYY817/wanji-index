@@ -52,10 +52,14 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:51.527Z"
+    "syncedAt": "2026-10-28T13:16:51.527Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:48.598Z",
+      "page": "Shattered Pixel Dungeon"
+    }
   }
 }

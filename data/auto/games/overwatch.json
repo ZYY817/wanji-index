@@ -44,15 +44,42 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/2357570/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Overwatch_2"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:22.050Z"
-  }
+    "syncedAt": "2026-10-28T13:17:22.050Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:45.803Z",
+      "page": "Overwatch 2"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Overwatch\\Settings\\Settings_v0.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Reduce Buffering Bug",
+      "url": "https://www.pcgamingwiki.com/wiki/Overwatch_2#Reduce_Buffering_Bug",
+      "fixed": true
+    },
+    {
+      "title": "Make mouse tracking better by fixing pixel skipping",
+      "url": "https://www.pcgamingwiki.com/wiki/Overwatch_2#Make_mouse_tracking_better_by_fixing_pixel_skipping",
+      "fixed": true
+    }
+  ]
 }

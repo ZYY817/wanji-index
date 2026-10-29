@@ -14,6 +14,7 @@ export type GameVM = {
   genres: string[]; os: string[]; platforms: string[]; art: Art;
   counts: { channels: number; entries: number; tools: number; guides: number; faqs: number; paths: number; total: number };
   updatedAt: string; checkedAt: string; hasOffer: boolean;
+  releasedAt: number | null; isNew: boolean;
 };
 
 export type SiteVM = {
@@ -30,6 +31,44 @@ export type OfferVM = {
   /** 官方中文名（没有则为空）与去掉中文名后的原名，用于「中文主标题 + 原名副标题」 */
   titleZh?: string; titleOrig?: string; claimNoteEn?: string;
 };
+
+/** 从 releaseDate 解析出时间戳（毫秒）或 null，兼容中英文与即将推出 */
+export function parseReleaseDate(str: string | undefined): number | null {
+  if (!str) return null;
+  const s = str.trim();
+  if (!s) return null;
+
+  if (/即将|coming soon|tba|tbd/i.test(s)) {
+    const y = /(\d{4})/.exec(s);
+    if (y) return Date.parse(`${y[1]}-12-31T00:00:00+08:00`);
+    return Date.now() + 365 * 864e5;
+  }
+
+  const zhFull = /(\d{4})\s*年\s*(\d{1,2})\s*月\s*(\d{1,2})\s*日/.exec(s);
+  if (zhFull) {
+    const t = Date.parse(`${zhFull[1]}-${zhFull[2].padStart(2, '0')}-${zhFull[3].padStart(2, '0')}T00:00:00+08:00`);
+    if (!Number.isNaN(t)) return t;
+  }
+
+  const zhYm = /(\d{4})\s*年\s*(\d{1,2})\s*月/.exec(s);
+  if (zhYm) {
+    const t = Date.parse(`${zhYm[1]}-${zhYm[2].padStart(2, '0')}-01T00:00:00+08:00`);
+    if (!Number.isNaN(t)) return t;
+  }
+
+  const parsed = Date.parse(s);
+  if (!Number.isNaN(parsed)) return parsed;
+
+  return null;
+}
+
+/** 发售 ≤ 180 天，或"即将推出" */
+export function isNewGame(releaseDate: string | undefined, releasedAt: number | null, now = Date.now()): boolean {
+  if (releaseDate && /即将|coming soon|tba|tbd/i.test(releaseDate)) return true;
+  if (releasedAt == null) return false;
+  const diffDays = (now - releasedAt) / 864e5;
+  return diffDays <= 180;
+}
 
 export function gameVM(g: any, rel: any): GameVM {
   const entries = rel.entriesByGame.get(g.id) ?? [];
@@ -53,6 +92,8 @@ export function gameVM(g: any, rel: any): GameVM {
     platforms: [...new Set<string>(g.channels.map((c: any) => c.platform))],
     art: steamArt(g), counts, updatedAt: g.updatedAt, checkedAt: g.checkedAt,
     hasOffer: offers.length > 0,
+    releasedAt: parseReleaseDate(g.releaseDate),
+    isNew: isNewGame(g.releaseDate, parseReleaseDate(g.releaseDate)),
   };
 }
 
@@ -78,7 +119,9 @@ export function offerVM(o: any, data: any, now: number): OfferVM {
   const game = o.gameId ? data.games.find((g: any) => g.id === o.gameId) : null;
   // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图 → 自动找到的封面
   const found = (OFFER_ART as Record<string, { steamAppId?: string; wide?: string }>)[o.id];
-  const wideArt = (wide: string, tall?: string) => ({ appid: '', header: wide, poster: tall ?? wide, hero: wide, logo: '', capsule: wide });
+  // Epic 的活动图是 2560 宽、几 MB 的 PNG：它的图床支持按需缩放，卡片只要 960 宽（大图位用 1920）
+  const sized = (u: string, w: number) => (/^https:\/\/cdn\d*\.epicgames\.com\//.test(u) && !u.includes('?') ? `${u}?resize=1&w=${w}&quality=medium` : u);
+  const wideArt = (wide: string, tall?: string) => ({ appid: '', header: sized(wide, 960), poster: sized(tall ?? wide, 600), hero: sized(wide, 1920), logo: '', capsule: sized(wide, 960) });
   const art = (game ? steamArt(game) : null)
     ?? steamArtById(o.steamAppId ?? steamAppIdFromUrl(o.url))
     ?? (o.art ? wideArt(o.art.wide, o.art.tall) : null)

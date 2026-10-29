@@ -1,0 +1,15 @@
+{
+  "id": "yu-gi-oh-master-duel-pcgamingwiki-guide-page",
+  "name": "游戏王 大师决斗 技术资料页",
+  "nameEn": "Yu-Gi-Oh! Master Duel on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "yu-gi-oh-master-duel",
+  "url": "https://www.pcgamingwiki.com/wiki/Yu-Gi-Oh!_Master_Duel",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

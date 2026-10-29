@@ -1,0 +1,15 @@
+{
+  "id": "human-fall-flat-thunderstore-mod",
+  "name": "人类一败涂地 / Human Fall Flat Thunderstore 社区 MOD",
+  "nameEn": "Human Fall Flat on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "human-fall-flat",
+  "url": "https://thunderstore.io/c/human-fall-flat/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

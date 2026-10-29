@@ -1,0 +1,15 @@
+{
+  "id": "payday-2-nexus-mods-mod",
+  "name": "收获日 2 Nexus Mods 专区",
+  "nameEn": "PAYDAY 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "payday-2",
+  "url": "https://www.nexusmods.com/payday2",
+  "note": "Nexus 上的 MOD 专区，共 642 个 MOD",
+  "noteEn": "Nexus Mods hub with 642 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

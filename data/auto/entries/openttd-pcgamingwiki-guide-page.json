@@ -1,0 +1,15 @@
+{
+  "id": "openttd-pcgamingwiki-guide-page",
+  "name": "OpenTTD 技术资料页",
+  "nameEn": "OpenTTD on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "openttd",
+  "url": "https://www.pcgamingwiki.com/wiki/OpenTTD",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

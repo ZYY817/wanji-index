@@ -1,0 +1,15 @@
+{
+  "id": "arma-3-steam-mod",
+  "name": "武装突袭3 创意工坊",
+  "nameEn": "Arma 3 Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "arma-3",
+  "url": "https://steamcommunity.com/app/107410/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

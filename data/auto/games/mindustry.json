@@ -45,15 +45,42 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/1127400/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Mindustry"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:43.855Z"
-  }
+    "syncedAt": "2026-10-28T13:16:43.855Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:33.654Z",
+      "page": "Mindustry"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Mindustry\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Mindustry\\settings.bin",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Mindustry\\settings_backup.bin",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

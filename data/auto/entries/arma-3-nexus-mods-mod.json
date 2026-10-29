@@ -1,0 +1,15 @@
+{
+  "id": "arma-3-nexus-mods-mod",
+  "name": "武装突袭3 Nexus Mods 专区",
+  "nameEn": "Arma 3 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "arma-3",
+  "url": "https://www.nexusmods.com/arma3",
+  "note": "Nexus 上的 MOD 专区，共 88 个 MOD",
+  "noteEn": "Nexus Mods hub with 88 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

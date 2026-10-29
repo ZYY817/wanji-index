@@ -1,0 +1,15 @@
+{
+  "id": "r-e-p-o-nexus-mods-mod",
+  "name": "R.E.P.O. Nexus Mods 专区",
+  "nameEn": "R.E.P.O. on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "r-e-p-o",
+  "url": "https://www.nexusmods.com/repo",
+  "note": "Nexus 上的 MOD 专区，共 148 个 MOD",
+  "noteEn": "Nexus Mods hub with 148 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

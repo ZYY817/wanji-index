@@ -80,7 +80,7 @@ export function TextLink({
       href={href}
       className={cn(
         'group inline-flex min-h-11 items-center gap-1 text-base transition-colors',
-        tone === 'ink' ? 'text-[#0066CC] hover:underline' : tone === 'accent' ? 'text-foreground hover:text-[var(--accent)]' : 'text-primary hover:underline',
+        tone === 'ink' ? 'text-ink underline-offset-4 hover:underline' : tone === 'accent' ? 'text-foreground hover:text-[var(--accent)]' : 'text-primary hover:underline',
         'underline-offset-4',
         className,
       )}

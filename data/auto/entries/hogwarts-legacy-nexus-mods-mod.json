@@ -1,0 +1,15 @@
+{
+  "id": "hogwarts-legacy-nexus-mods-mod",
+  "name": "霍格沃茨之遗 Nexus Mods 专区",
+  "nameEn": "Hogwarts Legacy on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "hogwarts-legacy",
+  "url": "https://www.nexusmods.com/hogwartslegacy",
+  "note": "Nexus 上的 MOD 专区，共 1,518 个 MOD",
+  "noteEn": "Nexus Mods hub with 1,518 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

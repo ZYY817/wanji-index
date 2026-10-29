@@ -1,0 +1,15 @@
+{
+  "id": "project-zomboid-nexus-mods-mod",
+  "name": "僵尸毁灭工程 Nexus Mods 专区",
+  "nameEn": "Project Zomboid on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "project-zomboid",
+  "url": "https://www.nexusmods.com/projectzomboid",
+  "note": "Nexus 上的 MOD 专区，共 320 个 MOD",
+  "noteEn": "Nexus Mods hub with 320 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

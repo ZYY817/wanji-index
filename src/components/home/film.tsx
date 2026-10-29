@@ -67,7 +67,7 @@ function SlotColumn({ games, vw }: { games: GameVM[]; vw: number }) {
     <div className="relative">
       {ks.map((k, i) => (
         <img key={k} src={games[i % games.length].art!.poster} alt="" loading="eager" decoding="async"
-          className="absolute inset-x-0 aspect-[2/3] w-full rounded-[3px] object-cover brightness-[0.62] saturate-[0.7]"
+          className="absolute inset-x-0 aspect-[2/3] w-full rounded-[5px] object-cover brightness-[0.62] saturate-[0.7]"
           style={{ top: `calc(50% + ${k * (cellH + gap) - cellH / 2}px)` }} />
       ))}
       {/* 空位本身（透明）：中央海报对齐的目标 */}
@@ -82,7 +82,7 @@ function WallColumn({ games, p, dir, offset }: { games: GameVM[]; p: MotionValue
   return (
     <motion.div className={cn('flex flex-col gap-[1.1vw]', offset && 'pt-[14vw]')} style={{ y }}>
       {games.map((g, i) => (
-        <img key={`${g.id}-${i}`} src={g.art!.poster} alt="" loading="eager" decoding="async" className="aspect-[2/3] w-full rounded-[3px] object-cover brightness-[0.62] saturate-[0.7]" />
+        <img key={`${g.id}-${i}`} src={g.art!.poster} alt="" loading="eager" decoding="async" className="aspect-[2/3] w-full rounded-[5px] object-cover brightness-[0.62] saturate-[0.7]" />
       ))}
     </motion.div>
   );

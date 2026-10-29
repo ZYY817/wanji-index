@@ -1,0 +1,15 @@
+{
+  "id": "trove-steam-mod",
+  "name": "宝藏世界 创意工坊",
+  "nameEn": "Trove Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "trove",
+  "url": "https://steamcommunity.com/app/304050/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

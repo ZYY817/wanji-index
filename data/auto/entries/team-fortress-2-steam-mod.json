@@ -1,0 +1,15 @@
+{
+  "id": "team-fortress-2-steam-mod",
+  "name": "军团要塞 2 创意工坊",
+  "nameEn": "Team Fortress 2 Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "team-fortress-2",
+  "url": "https://steamcommunity.com/app/440/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

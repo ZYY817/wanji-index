@@ -1,0 +1,15 @@
+{
+  "id": "wallpaper-engine-steam-mod",
+  "name": "Wallpaper Engine：壁纸引擎 创意工坊",
+  "nameEn": "Wallpaper Engine Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "wallpaper-engine",
+  "url": "https://steamcommunity.com/app/431960/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

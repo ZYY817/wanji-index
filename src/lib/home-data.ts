@@ -35,7 +35,7 @@ export const GAME_ACCENT: Record<string, string> = {
   'elden-ring': '#D9B76A',
   'cyberpunk-2077': '#F2E94E',
 };
-export const accentOf = (id?: string) => (id && GAME_ACCENT[id]) || '#2997FF';
+export const accentOf = (id?: string) => (id && GAME_ACCENT[id]) || '#F5F5F7';
 
 const HERO_ORDER = ['black-myth-wukong', 'elden-ring', 'cyberpunk-2077', 'baldurs-gate-3', 'red-dead-redemption-2'];
 const POPULAR_ORDER = ['stardew-valley', 'elden-ring', 'cyberpunk-2077'];

@@ -1,0 +1,15 @@
+{
+  "id": "raft-nexus-mods-mod",
+  "name": "木筏求生 Nexus Mods 专区",
+  "nameEn": "Raft on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "raft",
+  "url": "https://www.nexusmods.com/raft",
+  "note": "Nexus 上的 MOD 专区，共 133 个 MOD",
+  "noteEn": "Nexus Mods hub with 133 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

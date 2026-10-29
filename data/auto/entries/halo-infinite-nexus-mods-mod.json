@@ -1,0 +1,15 @@
+{
+  "id": "halo-infinite-nexus-mods-mod",
+  "name": "光环：无限 Nexus Mods 专区",
+  "nameEn": "Halo Infinite on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "halo-infinite",
+  "url": "https://www.nexusmods.com/haloinfinite",
+  "note": "Nexus 上的 MOD 专区，共 65 个 MOD",
+  "noteEn": "Nexus Mods hub with 65 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

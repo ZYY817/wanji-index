@@ -1,0 +1,15 @@
+{
+  "id": "r-e-p-o-steamdb-other",
+  "name": "R.E.P.O. 价格与版本史",
+  "nameEn": "R.E.P.O. on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "r-e-p-o",
+  "url": "https://steamdb.info/app/3241660/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

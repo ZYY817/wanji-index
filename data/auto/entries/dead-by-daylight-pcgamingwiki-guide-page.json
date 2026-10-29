@@ -1,0 +1,15 @@
+{
+  "id": "dead-by-daylight-pcgamingwiki-guide-page",
+  "name": "黎明杀机 技术资料页",
+  "nameEn": "Dead by Daylight on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "dead-by-daylight",
+  "url": "https://www.pcgamingwiki.com/wiki/Dead_by_Daylight",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

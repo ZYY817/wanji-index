@@ -59,11 +59,11 @@ const PHASE_AT = [0.2, 0.42, 0.64, 0.84]; // 字幕切换点
 const FIX_STEP = (TL.install[1] - TL.install[0] - 0.04) / Math.max(1, DEMO_MISSING.length);
 
 const CAPTIONS: { zh: [string, string]; en: [string, string] }[] = [
-  { zh: ['开机之后，开玩之前。', '游戏打不开？多半是缺运行库。玩机装机工具扫一遍就知道缺什么。'], en: ['After boot, before play.', 'Game won’t start? It’s usually a missing runtime. Wanji Kit tells you which.'] },
-  { zh: ['一键体检', '只读检测，约 10 秒，不改动系统。缺什么、多大、能不能自动装，一屏看清。'], en: ['One-click scan', 'Read-only, about 10 seconds, no system changes. What’s missing, how big, and whether it auto-installs.'] },
-  { zh: [`${TOTAL} 项组件，一张表看全`, 'VC++ 2005–2022、.NET、DirectX 旧组件、游戏中间件和系统优化项，按公开的组件目录逐项检测。'], en: [`${TOTAL} components, one table`, 'VC++ 2005–2022, .NET, legacy DirectX, game middleware and system tweaks, checked against a public catalog.'] },
-  { zh: ['一键装齐，装完再验', '微软 winget 优先，官方直链兜底；只弹一次管理员授权，装完逐项重扫，扫到才算装好。'], en: ['Install it all, then verify', 'winget first, official links as a fallback; one admin prompt, then every item is re-scanned.'] },
-  { zh: ['免安装，下载即用', '解压就能运行，不写注册表、不留后台服务。源码公开在 GitHub。'], en: ['Portable — just run it', 'Unzip and run; no registry entries, no background services. Open source on GitHub.'] },
+  { zh: ['开机之后，开玩之前。', '新机装好准备开玩却频频闪退？先别急着卸载游戏，八成只是缺了底层的运行库。'], en: ['After boot, before play.', 'Crashing on launch after a fresh setup? Before reinstalling the game, check for missing runtimes first.'] },
+  { zh: ['十几秒快速体检', '只读检测，不碰系统任何配置。到底缺了什么、占多大空间、能不能自动装，全列给你看。'], en: ['A quick 10-second check', 'Read-only and safe. See exactly what is missing, how much space it takes, and whether it can auto-install.'] },
+  { zh: [`${TOTAL} 项关键组件，一张表理顺`, '从老牌 DirectX、VC++ 全家桶到 .NET 和常用中间件，全按公开透明的规则逐一排查。'], en: [`${TOTAL} components, laid out clearly`, 'From classic DirectX and the full VC++ suite to .NET and middleware, verified by transparent rules.'] },
+  { zh: ['一键排队装齐，装完重新复测', '优先走微软官方 winget 渠道，只弹一次管理员授权；装完还会实机复查一遍，确保真正生效。'], en: ['Install once, verify again', 'Pulls from official sources with a single UAC prompt, then re-checks each runtime to confirm it works.'] },
+  { zh: ['纯便携绿色工具，用完即走', '解压即用，不改注册表也不常驻后台服务。源码完全公开，干净放心。'], en: ['Truly portable, zero leftovers', 'Unzip and run. No registry edits, no background services, and fully open-source.'] },
 ];
 
 /* ───────── 周期表的一格 ───────── */
@@ -82,7 +82,7 @@ function TileFace({ c, i }: { c: KitComponent; i: number }) {
   );
 }
 
-const TILE_CLS = 'relative flex aspect-[1/1.12] flex-col justify-between overflow-hidden rounded-[6px] p-[0.55em] text-ink shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_10px_20px_-14px_rgba(0,0,0,0.5)]';
+const TILE_CLS = 'relative flex aspect-[1/1.12] flex-col justify-between overflow-hidden rounded-[10px] p-[0.55em] text-ink shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_10px_20px_-14px_rgba(0,0,0,0.5)]';
 
 /** 动画版：从窗口方向（左侧）依次落位；缺失项在装齐阶段依次点亮 */
 function LiveTile({ c, i, p }: { c: KitComponent; i: number; p: MotionValue<number> }) {
@@ -100,7 +100,7 @@ function LiveTile({ c, i, p }: { c: KitComponent; i: number; p: MotionValue<numb
       {k >= 0 && (
         <>
           {/* 缺失：虚线外框 + 红点；装好后淡出，换成墨色实点 */}
-          <motion.span aria-hidden className="pointer-events-none absolute inset-0 rounded-[6px] border border-dashed border-[#FF3B30]/70 bg-paper/45" style={{ opacity: ringO }} />
+          <motion.span aria-hidden className="pointer-events-none absolute inset-0 rounded-[10px] border border-dashed border-[#FF3B30]/70 bg-paper/45" style={{ opacity: ringO }} />
           <motion.span aria-hidden className="absolute right-[0.55em] top-[1.7em] size-[0.45em] rounded-full bg-[#FF3B30]" style={{ opacity: ringO }} />
           <motion.span aria-hidden className="absolute right-[0.55em] top-[1.7em] size-[0.45em] rounded-full bg-ink" style={{ opacity: fixed }} />
         </>
@@ -120,7 +120,7 @@ function Legend({ className }: { className?: string }) {
     <ul className={cn('flex flex-wrap gap-x-5 gap-y-1.5 text-[0.8em] text-ink-2', className)}>
       {CATS.map((k) => (
         <li key={k.key} className="flex items-center gap-1.5">
-          <span aria-hidden className="size-[0.8em] rounded-[2px]" style={{ background: k.tone, boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.12)' }} />
+          <span aria-hidden className="size-[0.8em] rounded-[5px]" style={{ background: k.tone, boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.12)' }} />
           <T zh={k.zh} en={k.en} />
           <span className="font-mono text-ink-3">{COMPS.filter((c) => k.cats.includes(c.category)).length}</span>
         </li>
@@ -262,7 +262,7 @@ function KitFilm() {
           <motion.div className="absolute inset-x-0 top-[calc(var(--header-h)+5vh)] z-10 flex flex-col items-center text-center" style={{ y: headY, opacity: headO, scale: headS }}>
             <p className="text-sm tracking-[0.2em] text-ink-3">{eyebrow}</p>
             <h2 id="kit-title" className="mt-4 font-display text-[clamp(48px,6.2vw,112px)] font-semibold leading-[1] tracking-[-0.023em]">
-              <T zh="缺什么，它比你先知道。" en={<>Knows what’s missing<br />before you do.</>} />
+              <T zh="缺了哪样运行库，扫一遍就清楚。" en={<>Find what’s missing<br />in a single scan.</>} />
             </h2>
           </motion.div>
 
@@ -279,7 +279,7 @@ function KitFilm() {
               )}
               {/* 扫描光带 */}
               <motion.span aria-hidden className="pointer-events-none absolute inset-x-0 h-16 -translate-y-1/2" style={{ top: beamTop, opacity: beamO }}>
-                <span className="absolute inset-x-0 top-1/2 h-px bg-[#0071E3]" />
+                <span className="absolute inset-x-0 top-1/2 h-px bg-ink/40" />
                 <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(41,151,255,0.28)_50%,transparent)]" />
               </motion.span>
               {shot('components') && <motion.img src={withBase(shot('components')!)} alt="" decoding="async" className="absolute inset-0 size-full object-cover object-top" style={{ opacity: compsO }} />}
@@ -341,7 +341,7 @@ function KitStatic({ eyebrow }: { eyebrow: React.ReactNode }) {
       <div className="container-x">
         <p className="text-sm tracking-[0.15em] text-ink-3">{eyebrow}</p>
         <h2 id="kit-title" className="mt-3 text-balance font-display text-[clamp(36px,9vw,72px)] font-semibold leading-[1.08] tracking-[-0.02em]">
-          <T zh={<>缺什么，<br />它比你先知道。</>} en={<>Knows what’s missing<br />before you do.</>} />
+          <T zh={<>缺了哪样运行库，<br />扫一遍就清楚。</>} en={<>Find what’s missing<br />in a single scan.</>} />
         </h2>
         <p className="mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2"><T zh={CAPTIONS[0].zh[1]} en={CAPTIONS[0].en[1]} /></p>
         {idle && (

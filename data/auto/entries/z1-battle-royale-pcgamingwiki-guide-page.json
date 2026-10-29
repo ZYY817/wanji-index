@@ -1,0 +1,15 @@
+{
+  "id": "z1-battle-royale-pcgamingwiki-guide-page",
+  "name": "Z1 Battle Royale 技术资料页",
+  "nameEn": "Z1 Battle Royale on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "z1-battle-royale",
+  "url": "https://www.pcgamingwiki.com/wiki/Z1_Battle_Royale",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

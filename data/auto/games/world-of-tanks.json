@@ -45,15 +45,30 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/1407200/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/World_of_Tanks"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:59.137Z"
-  }
+    "syncedAt": "2026-10-28T13:16:59.137Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:57:16.470Z",
+      "page": "World of Tanks"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\wargaming.net\\WorldOfTanks",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

@@ -1,0 +1,15 @@
+{
+  "id": "last-epoch-steamdb-other",
+  "name": "最后纪元 价格与版本史",
+  "nameEn": "Last Epoch on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "last-epoch",
+  "url": "https://steamdb.info/app/899770/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

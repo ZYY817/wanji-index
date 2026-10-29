@@ -1,0 +1,15 @@
+{
+  "id": "factorio-nexus-mods-mod",
+  "name": "异星工厂 Nexus Mods 专区",
+  "nameEn": "Factorio on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "factorio",
+  "url": "https://www.nexusmods.com/factorio",
+  "note": "Nexus 上的 MOD 专区，共 25 个 MOD",
+  "noteEn": "Nexus Mods hub with 25 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "grim-dawn-nexus-mods-mod",
+  "name": "恐怖黎明 Nexus Mods 专区",
+  "nameEn": "Grim Dawn on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "grim-dawn",
+  "url": "https://www.nexusmods.com/grimdawn",
+  "note": "Nexus 上的 MOD 专区，共 226 个 MOD",
+  "noteEn": "Nexus Mods hub with 226 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

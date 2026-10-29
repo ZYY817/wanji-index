@@ -1,0 +1,15 @@
+{
+  "id": "pubg-battlegrounds-steamdb-other",
+  "name": "绝地求生 价格与版本史",
+  "nameEn": "PUBG: BATTLEGROUNDS on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "pubg-battlegrounds",
+  "url": "https://steamdb.info/app/578080/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

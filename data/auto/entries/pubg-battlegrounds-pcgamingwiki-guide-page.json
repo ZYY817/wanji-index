@@ -1,0 +1,15 @@
+{
+  "id": "pubg-battlegrounds-pcgamingwiki-guide-page",
+  "name": "绝地求生 技术资料页",
+  "nameEn": "PUBG: BATTLEGROUNDS on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "pubg-battlegrounds",
+  "url": "https://www.pcgamingwiki.com/wiki/PUBG%3A_Battlegrounds",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

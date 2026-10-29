@@ -1,0 +1,15 @@
+{
+  "id": "lethal-company-nexus-mods-mod",
+  "name": "致命公司 Nexus Mods 专区",
+  "nameEn": "Lethal Company on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "lethal-company",
+  "url": "https://www.nexusmods.com/lethalcompany",
+  "note": "Nexus 上的 MOD 专区，共 189 个 MOD",
+  "noteEn": "Nexus Mods hub with 189 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

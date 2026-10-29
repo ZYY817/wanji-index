@@ -1,0 +1,15 @@
+{
+  "id": "r-e-p-o-pcgamingwiki-guide-page",
+  "name": "R.E.P.O. 技术资料页",
+  "nameEn": "R.E.P.O. on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "r-e-p-o",
+  "url": "https://www.pcgamingwiki.com/wiki/R.E.P.O.",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

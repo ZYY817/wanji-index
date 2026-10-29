@@ -25,7 +25,7 @@ export default function FreePage() {
         title={<T zh="免费游戏" en="Free games" />}
         count={offers.length}
         description={<LiveFreeSummary offers={offers} build={build} />}
-        glow={top?.art?.hero}
+        glow={top?.art?.header ?? top?.art?.hero}
       />
       <Suspense fallback={<p className="container-x py-16 text-fg-2"><T zh="正在准备免费情报…" en="Loading free games…" /></p>}>
         <FreeCatalog offers={offers} />

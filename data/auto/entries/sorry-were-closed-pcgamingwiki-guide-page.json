@@ -1,0 +1,15 @@
+{
+  "id": "sorry-were-closed-pcgamingwiki-guide-page",
+  "name": "Sorry We're Closed 技术资料页",
+  "nameEn": "Sorry We're Closed on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "sorry-were-closed",
+  "url": "https://www.pcgamingwiki.com/wiki/Sorry_We're_Closed",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

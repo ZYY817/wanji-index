@@ -1,0 +1,15 @@
+{
+  "id": "sorry-were-closed-steamdb-other",
+  "name": "Sorry We're Closed 价格与版本史",
+  "nameEn": "Sorry We're Closed on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "sorry-were-closed",
+  "url": "https://steamdb.info/app/1796580/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

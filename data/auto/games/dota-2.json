@@ -46,15 +46,60 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/570/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:24.575Z"
-  }
+    "syncedAt": "2026-10-28T13:16:24.575Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:19.591Z",
+      "page": "Dota 2"
+    }
+  },
+  "issues": [
+    {
+      "title": "Blurry graphics",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Blurry_graphics",
+      "fixed": true
+    },
+    {
+      "title": "Missing health and mana bar",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Missing_health_and_mana_bar",
+      "fixed": true
+    },
+    {
+      "title": "2D sprites and effects displaying over geometry [AMD 7000 series)",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#2D_sprites_and_effects_displaying_over_geometry_%5BAMD_7000_series)",
+      "fixed": true
+    },
+    {
+      "title": "Pixelated shadows",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Pixelated_shadows",
+      "fixed": true
+    },
+    {
+      "title": "Permanent constant snow in-game regardless of equipped weather/terrain",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Permanent_constant_snow_in-game_regardless_of_equipped_weather%2Fterrain",
+      "fixed": true
+    },
+    {
+      "title": "Game changes microphone gain at launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Game_changes_microphone_gain_at_launch",
+      "fixed": true
+    },
+    {
+      "title": "Rebind number keys to quick cast items",
+      "url": "https://www.pcgamingwiki.com/wiki/Dota_2#Rebind_number_keys_to_quick_cast_items",
+      "fixed": true
+    }
+  ]
 }

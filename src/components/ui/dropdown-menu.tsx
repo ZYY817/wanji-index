@@ -14,7 +14,7 @@ export function DropdownMenuContent({ className, sideOffset = 6, ...props }: Rea
       <D.Content
         sideOffset={sideOffset}
         className={cn(
-          'z-50 min-w-44 rounded-sm border border-border-strong bg-popover p-1 text-popover-foreground shadow-[0_24px_48px_-12px_rgba(0,0,0,0.7)]',
+          'z-50 min-w-44 rounded-lg bg-popover p-1 text-popover-foreground ring-1 ring-white/[0.08] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]',
           className,
         )}
         {...props}
@@ -31,7 +31,7 @@ export function DropdownMenuRadioItem({ className, children, ...props }: React.C
   return (
     <D.RadioItem
       className={cn(
-        'relative flex h-10 cursor-pointer select-none items-center gap-2 rounded-xs pl-8 pr-3 text-sm text-fg-2 outline-none data-[highlighted]:bg-surface-2 data-[highlighted]:text-foreground data-[state=checked]:text-foreground lg:h-9',
+        'relative flex h-10 cursor-pointer select-none items-center gap-2 rounded-sm pl-8 pr-3 text-sm text-fg-2 outline-none data-[highlighted]:bg-surface-2 data-[highlighted]:text-foreground data-[state=checked]:text-foreground lg:h-9',
         className,
       )}
       {...props}

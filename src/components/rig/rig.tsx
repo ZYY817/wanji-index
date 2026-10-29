@@ -82,7 +82,7 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
   };
 
   return (
-    <div className={cn('rounded-xs border border-border bg-shell p-5 md:p-6', className)}>
+    <div className={cn('lift rounded-md p-5 md:p-6', className)}>
       {note && <p className="mb-4 flex items-start gap-2 text-sm text-fg-2"><ScanSearch aria-hidden className="mt-0.5 size-4 shrink-0 text-primary" />{note}</p>}
 
       <div className="grid gap-6 md:grid-cols-2">
@@ -98,7 +98,7 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
               className="h-11 w-full rounded-full bg-white/[0.07] px-4 text-base text-foreground placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-ring"
             />
             {matches.length > 0 && (
-              <ul className="absolute inset-x-0 top-full z-10 mt-1 max-h-72 overflow-auto rounded-sm border border-border-strong bg-popover py-1 shadow-lg">
+              <ul className="absolute inset-x-0 top-full z-10 mt-1 max-h-72 overflow-auto rounded-lg bg-popover py-1 ring-1 ring-white/[0.08] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.8)]">
                 {matches.map((g) => (
                   <li key={g.id}>
                     <button
@@ -182,7 +182,7 @@ export function RigVerdict({ reqs }: { reqs?: Reqs }) {
   const { verdict, reason, reasonEn } = judge(rig, reqs);
   const need = (verdict === 'smooth' ? reqs.rec : reqs.min ?? reqs.rec)?.gpu?.names;
   return (
-    <div className="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-xs border border-border bg-shell p-5 md:p-6">
+    <div className="mb-6 flex flex-wrap items-center justify-between gap-4 lift rounded-md p-5 md:p-6">
       <div className="min-w-0">
         <p className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
           <span className="text-sm text-fg-3"><T zh="你的电脑" en="Your PC" /></span>

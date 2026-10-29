@@ -1,0 +1,15 @@
+{
+  "id": "monster-hunter-wilds-nexus-mods-mod",
+  "name": "怪物猎人 荒野 Nexus Mods 专区",
+  "nameEn": "Monster Hunter Wilds on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "monster-hunter-wilds",
+  "url": "https://www.nexusmods.com/monsterhunterwilds",
+  "note": "Nexus 上的 MOD 专区，共 3,966 个 MOD",
+  "noteEn": "Nexus Mods hub with 3,966 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

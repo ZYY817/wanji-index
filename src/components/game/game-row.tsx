@@ -31,11 +31,11 @@ export function GameTableHead() {
 export function GameRow({ g }: { g: GameVM }) {
   return (
     <Link href={`/games/${g.slug}/`} className={`group grid min-h-[72px] items-center gap-x-4 border-b border-border py-3 transition-colors hover:bg-card ${COLS}`}>
-      <div className="edge-light relative aspect-[460/215] w-full overflow-hidden rounded-xs">
+      <div className="edge-light relative aspect-[460/215] w-full overflow-hidden rounded-sm">
         <GameArt src={g.art?.header} name={g.name} seed={g.id} variant="wide" className="size-full" />
       </div>
       <span className="min-w-0">
-        <span className="block truncate text-lg font-semibold tracking-[-0.01em] transition-colors group-hover:text-primary"><T zh={g.name} en={g.en || g.name} /></span>
+        <span className="block truncate text-lg font-semibold tracking-[-0.01em] transition-colors group-hover:text-foreground/80"><T zh={g.name} en={g.en || g.name} /></span>
         <span className="block truncate text-sm text-fg-2">
           <T zh={g.en} en={g.en && g.en !== g.name ? g.name : ''} />
           {g.hasOffer && <span className="ml-2 font-medium text-primary"><T zh="免费中" en="Free now" /></span>}

@@ -92,7 +92,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
   return (
     <>
       {/* 吸顶筛选条：shadcn/ui Nova 紧凑设计 + 贴顶避让 */}
-      <div className="sticky top-[var(--sticky-top)] z-20 border-b border-border bg-background transition-[top] duration-300">
+      <div className="glass sticky top-[var(--sticky-top)] z-20 border-b border-white/[0.06] transition-[top] duration-300">
         <div className="container-x flex flex-wrap items-center gap-x-4 gap-y-2.5 py-2.5">
           {/* Nova 紧凑搜索框 */}
           <label className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white/[0.07] px-3.5 py-1 text-sm ring-1 ring-transparent transition-[box-shadow,background-color] focus-within:bg-white/[0.1] focus-within:ring-primary/70 sm:max-w-72">

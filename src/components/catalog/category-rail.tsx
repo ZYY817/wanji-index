@@ -20,7 +20,7 @@ export function CategoryRail({
   const all: RailItem[] = [{ value: '', label: allLabel, count: total }, ...items];
 
   return (
-    <aside className="min-w-0 bg-background transition-[top] duration-300 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:self-start">
+    <aside className="min-w-0 transition-[top] duration-300 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:self-start">
       {/* 终端指令风格检索条 */}
       <label className="flex min-h-10 items-center gap-2 rounded-full bg-white/[0.07] px-3.5 py-1 text-sm ring-1 ring-transparent transition-[box-shadow,background-color] focus-within:bg-white/[0.1] focus-within:ring-primary/70">
         <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
@@ -56,7 +56,7 @@ export function CategoryRail({
                 'flex min-h-11 shrink-0 items-center gap-3 text-left text-base transition-colors',
                 // 手机：横向一排的按钮；桌面：纵向列表。当前项都是圆角浅底 + 白字（不用左侧竖条）
                 'rounded-sm px-3.5 lg:w-full lg:px-3 lg:py-2.5',
-                on ? 'bg-surface-2 font-medium text-foreground' : 'text-fg-2 hover:bg-surface-2/50 hover:text-foreground',
+                on ? 'bg-white/[0.1] font-medium text-foreground' : 'text-fg-2 hover:bg-white/[0.05] hover:text-foreground',
               )}
             >
               <span className="flex-1 whitespace-nowrap">{c.label}</span>

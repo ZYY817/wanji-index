@@ -1,0 +1,15 @@
+{
+  "id": "counter-strike-source-nexus-mods-mod",
+  "name": "反恐精英：起源 Nexus Mods 专区",
+  "nameEn": "Counter-Strike: Source on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "counter-strike-source",
+  "url": "https://www.nexusmods.com/counterstrikesource",
+  "note": "Nexus 上的 MOD 专区，共 37 个 MOD",
+  "noteEn": "Nexus Mods hub with 37 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

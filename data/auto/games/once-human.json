@@ -52,15 +52,30 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/2139460/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Once_Human"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:18.236Z"
-  }
+    "syncedAt": "2026-10-28T13:17:18.236Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:36.128Z",
+      "page": "Once Human"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Content\\Documents\\GraphicConfig.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

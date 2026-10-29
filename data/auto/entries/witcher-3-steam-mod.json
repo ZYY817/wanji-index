@@ -1,0 +1,15 @@
+{
+  "id": "witcher-3-steam-mod",
+  "name": "巫师 3：狂猎 创意工坊",
+  "nameEn": "The Witcher 3: Wild Hunt Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "witcher-3",
+  "url": "https://steamcommunity.com/app/292030/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

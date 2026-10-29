@@ -16,7 +16,7 @@ export default function ToolsPage() {
       <IndexMasthead
         title={<T zh="工具" en="Tools" />}
         count={tools.length}
-        description={<T zh={`收录 ${tools.length} 款常用工具：管理 MOD、备份存档、监控性能，附下载地址与安装要点。`} en={`${tools.length} handy tools for managing mods, backing up saves and monitoring performance, with download links and setup notes.`} />}
+        description={<T zh={`玩 PC 游戏少不了的实用工具：从 MOD 管理、自动备份存档到帧率与显卡监控，附带官方正规下载和避坑要点。`} en={`Essential PC gaming utilities: mod managers, save back-ups, and hardware overlays, paired with official downloads and setup tips.`} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex

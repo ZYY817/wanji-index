@@ -1,4 +1,5 @@
 'use client';
+import { Fragment } from 'react';
 // 顶栏的「中 / EN」切换。语言状态挂在 <html data-lang> 上，客户端组件需要按语言取属性值（placeholder、aria-label）时用 useLang()。
 import { useSyncExternalStore } from 'react';
 import { LANG_EVENT, LANG_KEY, type Lang } from '@/lib/i18n';
@@ -31,20 +32,22 @@ export function setLang(lang: Lang) {
 export function LangToggle({ className }: { className?: string }) {
   const lang = useLang();
   return (
-    <div role="group" aria-label="语言 / Language" className={cn('flex h-8 items-center rounded-full bg-white/[0.08] p-0.5 text-xs', className)}>
-      {(['zh', 'en'] as const).map((l) => (
+    <div role="group" aria-label="语言 / Language" className={cn('flex h-8 items-center text-xs', className)}>
+      {(['zh', 'en'] as const).map((l, i) => (
+        <Fragment key={l}>
+        {i > 0 && <span aria-hidden className="text-foreground/25">/</span>}
         <button
-          key={l}
           type="button"
           aria-pressed={lang === l}
           onClick={() => setLang(l)}
           className={cn(
-            'h-full min-w-8 rounded-full px-2 font-medium transition-colors',
-            lang === l ? 'bg-white/[0.16] text-foreground shadow-[0_1px_2px_rgba(0,0,0,0.3)]' : 'text-fg-2 hover:text-foreground',
+            'h-full px-1.5 font-medium transition-colors',
+            lang === l ? 'text-foreground' : 'text-foreground/45 hover:text-foreground',
           )}
         >
           {l === 'zh' ? '中' : 'EN'}
         </button>
+        </Fragment>
       ))}
     </div>
   );

@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { loadData, buildRelations } from '@/lib/data.mjs';
 import { gameVM } from '@/lib/present';
-import { zh } from '@/lib/labels.mjs';
+import { zh, en } from '@/lib/labels.mjs';
 import { StatusBadge, Tag } from '@/components/ui/badge';
 import { buttonVariants } from '@/components/ui/button';
 import { ExtLink } from '@/components/ui/ext-link';
@@ -81,9 +81,9 @@ export default async function SitePage({ params }: Params) {
                       href={e.url}
                       external
                       health={e.linkHealth}
-                      title={e.name}
-                      badge={<><Tag>{zh('entryType', e.type)}</Tag>{e.linkHealth !== 'ok' && e.linkHealth !== 'dead' && <StatusBadge value={e.linkHealth} />}</>}
-                      description={e.note}
+                      title={e.nameEn ? <T zh={e.name} en={e.nameEn} /> : e.name}
+                      badge={<><Tag><T zh={zh('entryType', e.type)} en={en('entryType', e.type)} /></Tag>{e.linkHealth !== 'ok' && e.linkHealth !== 'dead' && <StatusBadge value={e.linkHealth} />}</>}
+                      description={e.note ? <T zh={e.note} en={e.noteEn ?? e.note} /> : undefined}
                       meta={<>{g ? <><T zh="游戏：" en="Game: " /><T zh={g.name.zh} en={g.name.en || g.name.zh} /> · </> : ''}<span className="tabular text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
                     />
                   </li>

@@ -1,0 +1,15 @@
+{
+  "id": "z1-battle-royale-steamdb-other",
+  "name": "Z1 Battle Royale 价格与版本史",
+  "nameEn": "Z1 Battle Royale on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "z1-battle-royale",
+  "url": "https://steamdb.info/app/433850/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

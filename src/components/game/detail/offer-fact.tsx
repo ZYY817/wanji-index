@@ -31,7 +31,7 @@ export function OfferFact({ offers }: { offers: OfferVM[] }) {
   return (
     <>
       <p className="flex items-center gap-2 truncate text-base font-medium text-foreground">
-        <span className={isUpcoming ? 'text-info' : 'text-primary'}>
+        <span className="text-foreground">
           {isUpcoming ? <T zh="即将免费" en="Free soon" /> : <T zh="限时免费中" en="Free now" />}
         </span>
         {target != null && (

@@ -1,0 +1,15 @@
+{
+  "id": "warframe-pcgamingwiki-guide-page",
+  "name": "Warframe 星际战甲 技术资料页",
+  "nameEn": "Warframe on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "warframe",
+  "url": "https://www.pcgamingwiki.com/wiki/Warframe",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

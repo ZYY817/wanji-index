@@ -1,0 +1,15 @@
+{
+  "id": "last-epoch-nexus-mods-mod",
+  "name": "最后纪元 Nexus Mods 专区",
+  "nameEn": "Last Epoch on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "last-epoch",
+  "url": "https://www.nexusmods.com/lastepoch",
+  "note": "Nexus 上的 MOD 专区，共 33 个 MOD",
+  "noteEn": "Nexus Mods hub with 33 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

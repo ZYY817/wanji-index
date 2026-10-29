@@ -20,7 +20,7 @@ export function QuickFacts({ d }: { d: GameDetail }) {
   const save = d.paths.find((p) => p.kind === '存档') ?? d.paths[0];
 
   return (
-    <section aria-label="Quick facts" className="relative z-10 border-y border-border bg-background">
+    <section aria-label="Quick facts" className="relative z-10 border-b border-white/[0.08]">
       <dl className="container-x grid grid-cols-2 lg:grid-cols-4">
         {/* 1. 去哪买 */}
         <FactCell title={<T zh="去哪买" en="Where to get it" />} index={0}>

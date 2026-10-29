@@ -45,15 +45,47 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/1796580/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Sorry_We're_Closed"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:36.172Z"
-  }
+    "syncedAt": "2026-10-28T13:16:36.172Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:52.908Z",
+      "page": "Sorry We're Closed"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\a la mode games\\Sorry We're Closed\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\a la mode games\\Sorry We're Closed\\Settings.es3",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\a la mode games\\Sorry We're Closed\\SystemData.es3",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\a la mode games\\Sorry We're Closed\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

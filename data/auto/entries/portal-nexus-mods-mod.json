@@ -1,0 +1,15 @@
+{
+  "id": "portal-nexus-mods-mod",
+  "name": "传送门 Nexus Mods 专区",
+  "nameEn": "Portal on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "portal",
+  "url": "https://www.nexusmods.com/portal",
+  "note": "Nexus 上的 MOD 专区，共 25 个 MOD",
+  "noteEn": "Nexus Mods hub with 25 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

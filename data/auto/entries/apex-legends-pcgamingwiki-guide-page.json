@@ -1,0 +1,15 @@
+{
+  "id": "apex-legends-pcgamingwiki-guide-page",
+  "name": "Apex 英雄 技术资料页",
+  "nameEn": "Apex Legends on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "apex-legends",
+  "url": "https://www.pcgamingwiki.com/wiki/Apex_Legends",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

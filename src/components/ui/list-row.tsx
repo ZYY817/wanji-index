@@ -27,7 +27,7 @@ export function ListRow({
       <div className="min-w-0">
         {eyebrow && <p className="mb-1 text-sm text-fg-3">{eyebrow}</p>}
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-          <h3 className={cn('text-lg font-semibold leading-snug transition-colors duration-200 md:text-xl', dead ? 'text-fg-3 line-through' : 'group-hover:text-primary')}>{title}</h3>
+          <h3 className={cn('text-lg font-semibold leading-snug transition-colors duration-200 md:text-xl', dead && 'text-fg-3 line-through')}>{title}</h3>
           {aside && <span className="text-sm text-fg-3">{aside}</span>}
           {badge}
           {dead && <span className="tabular text-2xs text-bad"><T zh="已失效" en="Broken" /></span>}
@@ -35,7 +35,7 @@ export function ListRow({
         {description && <p className="mt-1.5 max-w-[62ch] text-base leading-[1.7] text-fg-2 text-pretty">{description}</p>}
         {meta && <p className="mt-2.5 text-sm text-fg-3">{meta}</p>}
       </div>
-      <Arrow aria-hidden className={cn('mt-1 size-5 text-fg-3 transition-[transform,color] duration-200', !dead && (external ? 'group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-primary' : 'group-hover:translate-x-1 group-hover:text-primary'))} />
+      <Arrow aria-hidden className={cn('mt-1 size-5 text-fg-3 transition-[transform,color] duration-200', !dead && (external ? 'group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-foreground' : 'group-hover:translate-x-1 group-hover:text-foreground'))} />
       {external && !dead && <span className="sr-only"><T zh="（在新窗口打开）" en="(opens in a new window)" /></span>}
     </>
   );

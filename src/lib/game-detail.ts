@@ -9,7 +9,7 @@ import { issuesByProblem } from '@/lib/problems';
 
 export type ChannelItem = { platform: string; type: string; typeLabel: string; typeLabelEn: string; url: string; note: string; noteEn?: string; health?: string; checkedAt: string };
 export type PathItem = { kind: '存档' | '配置'; os: string; path: string; note?: string };
-export type EntryItem = { id: string; name: string; typeLabel: string; typeLabelEn: string; url: string; note?: string; health?: string; checkedAt: string; site?: { id: string; name: string; slug: string } };
+export type EntryItem = { id: string; name: string; nameEn?: string; typeLabel: string; typeLabelEn: string; url: string; note?: string; noteEn?: string; health?: string; checkedAt: string; site?: { id: string; name: string; slug: string } };
 export type ToolItem = { id: string; slug: string; name: string; summary: string; typeLabel: string; typeLabelEn: string };
 export type GuideItem = { id: string; slug: string; title: string; kindLabel: string; kindLabelEn: string; steps: number };
 export type FaqItem = { question: string; answer?: string; guide?: { slug: string; title: string } };
@@ -54,14 +54,14 @@ export type GameDetail = {
 };
 
 const LEADS: Record<SectionId, [string, string, string, string]> = {
-  channels: ['获取渠道', '能买到、能领到这款游戏的平台。按钮直达商店页面，价格以商店为准。', 'Where to get it', 'Stores where you can buy or claim this game. Prices are set by the store.'],
-  paths: ['存档与配置', '重装系统、换电脑或装 MOD 之前，先把这些文件夹备份一份。', 'Saves & config', 'Back these folders up before reinstalling Windows, moving PCs or installing mods.'],
-  entries: ['MOD 与汉化', '只链接到公认社区的游戏专区，本站不转载任何文件。', 'Mods & translations', 'Links to the game’s pages on trusted communities — we never rehost files.'],
-  tools: ['工具', '加载器、管理器与辅助工具，点进去看官网与使用要点。', 'Tools', 'Loaders, managers and helpers — open one for the official site and setup notes.'],
-  issues: ['已知问题', '玩家在 PCGamingWiki 上记录过的问题与解法（英文原文），按类型归到本站的排障页。', 'Known issues', 'Issues and fixes recorded on PCGamingWiki, grouped by type and linked to our fix pages.'],
-  guides: ['教程', '安装、排障与 MOD 配置的分步教程，每一步写明预期结果。', 'Guides', 'Step-by-step install, troubleshooting and mod guides with the expected result of each step.'],
-  specs: ['配置要求', 'Steam 商店公布的 PC 配置要求，实际表现以游戏版本与设置为准。', 'System requirements', 'PC requirements as listed on Steam; real performance depends on version and settings.'],
-  faq: ['常见问题', '玩家最常问的问题，能用一句话说清的直接写在这里。', 'FAQ', 'The questions players ask most, answered in a line where possible.'],
+  channels: ['正规获取渠道', '能够购买或免费领取的正规平台。点击直达对应商店页面，具体价格以商店实时为准。', 'Where to get it', 'Official platforms where you can buy or claim this game. Store prices apply.'],
+  paths: ['存档与配置路径', '重装系统、迁移新电脑或者给游戏打 MOD 之前，强烈建议先顺手把这几个文件夹备份一份。', 'Saves & config paths', 'Back these folders up before reinstalling Windows, switching PCs, or installing mods.'],
+  entries: ['MOD 与汉化专区', '整理了各大知名社区的专属版块与下载入口，找模组和汉化看这里就够了。', 'Mods & translations', 'Curated mod hubs and community resources for this game — we never rehost files.'],
+  tools: ['必备配套工具', '模组管理器、前置加载器与实用配套工具，点进去可以直接查看官网与配置要点。', 'Essential tools', 'Mod managers, loaders, and companion utilities with official sites and setup notes.'],
+  issues: ['已知问题与排障', '汇总了社区玩家实测遇到的常见 Bug 与解法，遇到奇怪报错先来这里对照一下。', 'Known issues & fixes', 'Common bugs and community fixes reported by players, grouped by symptom.'],
+  guides: ['手把手分步教程', '包含安装、报错排查与模组配置的详细指引，每一步都写清了预期的正确反馈。', 'Step-by-step guides', 'Step-by-step walkthroughs for installation, troubleshooting, and modding.'],
+  specs: ['硬件配置要求', '来自官方公布的 PC 配置标准；实际运行帧率和流畅度还取决于你的画质设置与驱动版本。', 'System requirements', 'Official PC requirements; actual performance depends on in-game settings and drivers.'],
+  faq: ['常见疑问速答', '汇总玩家平时问得最多的几个关键问题，省去到处搜帖翻讨论区的时间。', 'Quick answers', 'The questions players ask most, answered directly without the fluff.'],
 };
 
 /** 价格说明的英文：同步脚本写的「参考价 ¥ 25.00」「免费开玩」有固定格式，其余人工文字不硬译 */
@@ -125,7 +125,7 @@ export function gameDetail(slug: string): GameDetail | null {
   const entries: EntryItem[] = (rel.entriesByGame.get(g.id) ?? []).map((e: any) => {
     const site = data.sites.find((s: any) => s.id === e.siteId);
     return {
-      id: e.id, name: withoutGame(e.name), typeLabel: zh('entryType', e.type), typeLabelEn: en('entryType', e.type), url: e.url, note: e.note,
+      id: e.id, name: withoutGame(e.name), nameEn: e.nameEn ? withoutGame(e.nameEn) : undefined, typeLabel: zh('entryType', e.type), typeLabelEn: en('entryType', e.type), url: e.url, note: e.note, noteEn: e.noteEn,
       health: e.linkHealth, checkedAt: e.checkedAt, site: site ? { id: site.id, name: site.name, slug: site.slug } : undefined,
     };
   });

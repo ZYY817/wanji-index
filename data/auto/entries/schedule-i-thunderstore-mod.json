@@ -1,0 +1,15 @@
+{
+  "id": "schedule-i-thunderstore-mod",
+  "name": "Schedule I Thunderstore 社区 MOD",
+  "nameEn": "Schedule I on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "schedule-i",
+  "url": "https://thunderstore.io/c/schedule-i/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

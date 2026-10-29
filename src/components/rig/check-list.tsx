@@ -28,7 +28,7 @@ export function CheckList({ games }: { games: CheckGame[] }) {
       {!rig || editing ? (
         <RigPicker onDone={() => setEditing(false)} />
       ) : (
-        <div className="flex flex-wrap items-center justify-between gap-4 rounded-xs border border-border bg-shell p-5 md:p-6">
+        <div className="flex flex-wrap items-center justify-between gap-4 lift rounded-md p-5 md:p-6">
           <p className="text-base">
             <span className="text-fg-3"><T zh="我的配置" en="My PC" /> </span>
             <span className="font-semibold text-foreground">{rig.gpu?.name}{rig.gpu && rig.ramGb ? ' · ' : ''}{rig.ramGb ? <T zh={`${rig.ramGb} GB 内存`} en={`${rig.ramGb} GB RAM`} /> : null}</span>
@@ -64,11 +64,11 @@ export function CheckList({ games }: { games: CheckGame[] }) {
                   href={`/games/${g.slug}/#specs`}
                   className="group grid grid-cols-[88px_minmax(0,1fr)_auto] items-center gap-x-4 border-b border-border py-3 transition-colors hover:bg-card md:grid-cols-[104px_minmax(0,1fr)_96px_minmax(0,1fr)_20px]"
                 >
-                  <div className="edge-light relative aspect-[460/215] w-full overflow-hidden rounded-xs">
+                  <div className="edge-light relative aspect-[460/215] w-full overflow-hidden rounded-sm">
                     <GameArt src={g.art} name={g.name} seed={g.id} variant="wide" className="size-full" />
                   </div>
                   <span className="min-w-0">
-                    <span className="block truncate text-lg font-semibold transition-colors group-hover:text-primary"><T zh={g.name} en={g.en || g.name} /></span>
+                    <span className="block truncate text-lg font-semibold"><T zh={g.name} en={g.en || g.name} /></span>
                     <span className="block truncate text-sm text-fg-2 md:hidden"><T zh={reason} en={reasonEn} /></span>
                     {g.en && <span className="hidden truncate text-sm text-fg-2 md:block"><T zh={g.en} en={g.en !== g.name ? g.name : ''} /></span>}
                   </span>

@@ -1,0 +1,15 @@
+{
+  "id": "portal-steamdb-other",
+  "name": "传送门 价格与版本史",
+  "nameEn": "Portal on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "portal",
+  "url": "https://steamdb.info/app/400/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

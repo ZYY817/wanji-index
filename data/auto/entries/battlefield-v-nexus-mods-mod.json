@@ -1,0 +1,15 @@
+{
+  "id": "battlefield-v-nexus-mods-mod",
+  "name": "战地风云 5 Nexus Mods 专区",
+  "nameEn": "Battlefield V on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "battlefield-v",
+  "url": "https://www.nexusmods.com/battlefieldv",
+  "note": "Nexus 上的 MOD 专区，共 52 个 MOD",
+  "noteEn": "Nexus Mods hub with 52 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

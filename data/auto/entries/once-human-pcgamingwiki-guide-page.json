@@ -1,0 +1,15 @@
+{
+  "id": "once-human-pcgamingwiki-guide-page",
+  "name": "七日世界 技术资料页",
+  "nameEn": "Once Human on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "once-human",
+  "url": "https://www.pcgamingwiki.com/wiki/Once_Human",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

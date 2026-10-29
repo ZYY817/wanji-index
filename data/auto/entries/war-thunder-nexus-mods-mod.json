@@ -1,0 +1,15 @@
+{
+  "id": "war-thunder-nexus-mods-mod",
+  "name": "战争雷霆 Nexus Mods 专区",
+  "nameEn": "War Thunder on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "war-thunder",
+  "url": "https://www.nexusmods.com/warthunder",
+  "note": "Nexus 上的 MOD 专区，共 1,754 个 MOD",
+  "noteEn": "Nexus Mods hub with 1,754 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

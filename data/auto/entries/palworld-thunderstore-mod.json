@@ -1,0 +1,15 @@
+{
+  "id": "palworld-thunderstore-mod",
+  "name": "幻兽帕鲁 Thunderstore 社区 MOD",
+  "nameEn": "Palworld on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "palworld",
+  "url": "https://thunderstore.io/c/palworld/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

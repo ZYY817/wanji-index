@@ -1,0 +1,15 @@
+{
+  "id": "warframe-steam-mod",
+  "name": "Warframe 星际战甲 创意工坊",
+  "nameEn": "Warframe Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "warframe",
+  "url": "https://steamcommunity.com/app/230410/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

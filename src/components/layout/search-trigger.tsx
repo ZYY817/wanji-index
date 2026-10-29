@@ -56,13 +56,13 @@ export function SearchTrigger({ variant = 'compact', className, label }: { varia
       onClick={() => setOpen(true)}
       aria-label={`${l('打开搜索', 'Open search')}（${mod} K）`}
       className={cn(
-        'group relative inline-flex h-8 items-center rounded-full bg-white/[0.08] pl-3 pr-1.5 text-xs text-fg-2',
+        'group relative inline-flex h-8 items-center rounded-full px-2.5 text-xs text-foreground/55',
         'transition-[color,background-color] duration-300',
-        'hover:bg-white/[0.14] hover:text-foreground',
+        'hover:bg-white/[0.08] hover:text-foreground',
         className,
       )}
     >
-      <Search aria-hidden className="mr-1.5 size-[14px] text-fg-2 transition-colors group-hover:text-foreground" />
+      <Search aria-hidden className="mr-1.5 size-[14px] transition-colors" />
       <span className="flex items-center whitespace-nowrap">
         <T zh="搜索" en="Search" />
         <span
@@ -70,7 +70,7 @@ export function SearchTrigger({ variant = 'compact', className, label }: { varia
           className="ml-1.5 inline-block h-[13px] w-px shrink-0 bg-foreground opacity-0 transition-opacity group-hover:animate-blink group-hover:opacity-100 group-focus-visible:animate-blink group-focus-visible:bg-primary group-focus-visible:opacity-100 motion-reduce:animate-none"
         />
       </span>
-      <span className="ml-6 flex items-center gap-0.5">
+      <span className="ml-3 flex items-center gap-0.5 opacity-70">
         <Kbd className="h-5 min-w-5 rounded-full border-0 bg-white/[0.08] px-1.5 text-2xs">{mod}</Kbd>
         <Kbd className="h-5 min-w-5 rounded-full border-0 bg-white/[0.08] px-1.5 text-2xs">K</Kbd>
       </span>

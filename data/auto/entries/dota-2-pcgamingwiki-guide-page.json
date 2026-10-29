@@ -1,0 +1,15 @@
+{
+  "id": "dota-2-pcgamingwiki-guide-page",
+  "name": "Dota 2 技术资料页",
+  "nameEn": "Dota 2 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "dota-2",
+  "url": "https://www.pcgamingwiki.com/wiki/Dota_2",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

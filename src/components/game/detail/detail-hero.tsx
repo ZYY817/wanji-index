@@ -31,22 +31,22 @@ export function DetailHero({
   const rise = (i: number) => ({ animationDelay: `${0.12 + i * 0.08}s` });
 
   return (
-    <section ref={ref} aria-label={name} className="relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
-      <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale, y: artY }}>
+    <section ref={ref} aria-label={name} className="relative flex min-h-[56svh] max-h-[620px] items-end overflow-hidden md:min-h-[62svh]">
+      <motion.div aria-hidden className="absolute inset-0 will-change-transform [mask-image:linear-gradient(180deg,#000_35%,transparent_94%)]" style={{ scale: artScale, y: artY }}>
         <GameArt src={art?.hero} name={name} en={enName} seed={id} variant="wide" priority className="absolute inset-0" imgClassName="object-[60%_30%]" />
       </motion.div>
       {/* 压暗：左下给文字，右上留给美术 */}
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.1)_75%)]" />
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0.72)_26%,rgba(0,0,0,0)_62%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.78)_0%,rgba(0,0,0,0.4)_45%,rgba(0,0,0,0)_75%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.2)_30%,rgba(0,0,0,0)_60%)]" />
       <div aria-hidden className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(0,0,0,0.7),transparent)]" />
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
       <motion.div className="container-x relative z-10 w-full pb-8 pt-[calc(var(--header-h)+28px)] md:pb-10" style={{ y: textY, opacity: textFade }}>
         <nav aria-label="Breadcrumb" className="flex animate-rise items-center gap-2 text-sm text-fg-2" style={rise(0)}>
           <Link href="/" className="transition-colors hover:text-foreground"><T zh="首页" en="Home" /></Link>
-          <span aria-hidden className="text-fg-3">/</span>
+          <span aria-hidden className="text-fg-3">›</span>
           <Link href="/games/" className="transition-colors hover:text-foreground"><T zh="游戏库" en="Games" /></Link>
-          <span aria-hidden className="text-fg-3">/</span>
+          <span aria-hidden className="text-fg-3">›</span>
           <span aria-current="page" className="text-foreground"><T zh={name} en={enName || name} /></span>
         </nav>
 

@@ -1,0 +1,15 @@
+{
+  "id": "among-us-thunderstore-mod",
+  "name": "太空狼人杀（Among Us） Thunderstore 社区 MOD",
+  "nameEn": "Among Us on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "among-us",
+  "url": "https://thunderstore.io/c/among-us/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

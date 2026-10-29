@@ -1,0 +1,15 @@
+{
+  "id": "schedule-i-pcgamingwiki-guide-page",
+  "name": "Schedule I 技术资料页",
+  "nameEn": "Schedule I on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "schedule-i",
+  "url": "https://www.pcgamingwiki.com/wiki/Schedule_I",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

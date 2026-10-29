@@ -121,9 +121,9 @@ export default async function FixPage({ params }: Params) {
 
           {p.table && (
             <Block id="table" title={p.table.caption ?? <T zh="速查表" en="Quick reference" />}>
-              <div className="overflow-x-auto rounded-xs border border-border">
+              <div className="overflow-x-auto rounded-md overflow-hidden bg-card">
                 <table className="w-full min-w-[560px] border-collapse text-left text-base">
-                  <thead className="bg-shell text-sm text-fg-2">
+                  <thead className="bg-white/[0.04] text-sm text-fg-2">
                     <tr>{p.table.columns.map((c) => <th key={c} scope="col" className="border-b border-border px-4 py-3 font-medium">{c}</th>)}</tr>
                   </thead>
                   <tbody>
@@ -155,11 +155,11 @@ export default async function FixPage({ params }: Params) {
               <ul>
                 {p.games.slice(0, 24).map((g) => (
                   <li key={g.slug} className="grid grid-cols-[88px_minmax(0,1fr)] gap-4 border-b border-border py-4 last:border-b-0 md:grid-cols-[120px_minmax(0,1fr)]">
-                    <Link href={`/games/${g.slug}/`} className="edge-light relative block aspect-[460/215] w-full self-start overflow-hidden rounded-xs">
+                    <Link href={`/games/${g.slug}/`} className="edge-light relative block aspect-[460/215] w-full self-start overflow-hidden rounded-sm">
                       <GameArt src={g.art} name={g.name} seed={g.slug} variant="wide" className="size-full" />
                     </Link>
                     <div className="min-w-0">
-                      <Link href={`/games/${g.slug}/`} className="text-lg font-semibold transition-colors hover:text-primary">{g.name}</Link>
+                      <Link href={`/games/${g.slug}/`} className="text-lg font-semibold transition-colors hover:text-foreground/80">{g.name}</Link>
                       <ul className="mt-1.5 space-y-1">
                         {g.issues.map((i) => (
                           <li key={i.url}>
@@ -205,7 +205,7 @@ export default async function FixPage({ params }: Params) {
             <section>
               <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="也可能是" en="Could also be" /></h2>
               {p.related.map((r) => (
-                <Link key={r.slug} href={`/fixes/${r.slug}/`} className="group flex items-center justify-between gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-primary">
+                <Link key={r.slug} href={`/fixes/${r.slug}/`} className="group flex items-center justify-between gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-foreground/80">
                   <T zh={fileTokens(r.title)} en={r.titleEn} />
                   <ArrowRight aria-hidden className="size-4 shrink-0 text-fg-3 transition-transform group-hover:translate-x-0.5" />
                 </Link>

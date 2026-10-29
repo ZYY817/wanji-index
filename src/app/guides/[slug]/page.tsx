@@ -181,7 +181,7 @@ export default async function GuidePage({ params }: Params) {
               <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="用到的工具" en="Tools used" /></h2>
               {tools.map((t: any) => (
                 <Link key={t.id} href={`/tools/${t.slug}/`} className="group block border-b border-border py-4">
-                  <span className="flex items-center justify-between text-lg font-semibold transition-colors group-hover:text-primary">
+                  <span className="flex items-center justify-between text-lg font-semibold transition-colors group-hover:text-foreground/80">
                     {t.name}
                     <ArrowRight aria-hidden className="size-4 text-fg-3 transition-transform group-hover:translate-x-1" />
                   </span>
@@ -206,7 +206,7 @@ export default async function GuidePage({ params }: Params) {
             <section>
               <h2 className="border-b border-border-strong pb-3 text-sm text-fg-3"><T zh="继续排查" en="Keep troubleshooting" /></h2>
               {related.map((r: any) => (
-                <Link key={r.id} href={`/guides/${r.slug}/`} className="block border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-primary">{r.title}</Link>
+                <Link key={r.id} href={`/guides/${r.slug}/`} className="block border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-foreground/80">{r.title}</Link>
               ))}
             </section>
           )}

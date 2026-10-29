@@ -49,15 +49,30 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/404410/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Endless_Sky"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-10-28",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-10-29",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:28.446Z"
-  }
+    "syncedAt": "2026-10-28T13:16:28.446Z",
+    "pcgw": {
+      "syncedAt": "2026-10-29T13:56:21.813Z",
+      "page": "Endless Sky"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\endless-sky\\saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
 }

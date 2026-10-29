@@ -37,7 +37,7 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
   };
 
   return (
-    <nav aria-label="Sections" className="sticky top-[var(--sticky-top)] z-30 border-b border-border bg-background transition-[top] duration-300">
+    <nav aria-label="Sections" className="glass sticky top-[var(--sticky-top)] z-30 border-b border-white/[0.08] transition-[top] duration-300">
       <div className="container-x">
         <ul className="no-scrollbar -mx-4 flex overflow-x-auto">
           {sections.map((s) => {
@@ -51,12 +51,12 @@ export function SectionNav({ sections }: { sections: SectionMeta[] }) {
                   className={cn('relative flex h-14 items-center gap-2 px-4 text-base transition-colors', on ? 'text-foreground' : 'text-fg-2 hover:text-foreground')}
                 >
                   <T zh={s.title} en={s.titleEn} />
-                  <span className={cn('tabular text-2xs tabular-nums', on ? 'text-primary' : 'text-fg-3')}>{s.count}</span>
+                  <span className={cn('tabular text-2xs tabular-nums', 'text-fg-3')}>{s.count}</span>
                   {on && (
                     <motion.span
                       layoutId="detail-nav-underline"
                       aria-hidden
-                      className="absolute inset-x-4 bottom-0 h-[2px] bg-primary"
+                      className="absolute inset-x-4 bottom-0 h-[2px] rounded-full bg-foreground"
                       transition={reduced ? { duration: 0 } : { type: 'spring', stiffness: 420, damping: 42, mass: 0.7 }}
                     />
                   )}

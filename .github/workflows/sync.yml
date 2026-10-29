@@ -49,6 +49,12 @@ jobs:
       - name: 免费情报封面（Steam 同名游戏 / 官网分享图）
         run: node scripts/sync/offer-art.mjs
         continue-on-error: true
+      - name: Steam 美术真实地址（官方 IStoreBrowseService）
+        run: node scripts/sync/steam-art.mjs
+        continue-on-error: true
+      - name: 自动资源入口（Nexus / Thunderstore / 创意工坊 / PCGW / SteamDB）
+        run: node scripts/sync/game-entries.mjs
+        continue-on-error: true
       - name: 装机工具最新版本（github.com/ZYY817/wanji-kit）
         run: node scripts/sync/kit-release.mjs
         env:

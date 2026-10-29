@@ -1,0 +1,15 @@
+{
+  "id": "payday-2-steamdb-other",
+  "name": "收获日 2 价格与版本史",
+  "nameEn": "PAYDAY 2 on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "payday-2",
+  "url": "https://steamdb.info/app/218620/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

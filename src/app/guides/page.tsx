@@ -18,7 +18,7 @@ export default function GuidesPage() {
       <IndexMasthead
         title={<T zh="教程" en="Guides" />}
         count={guides.length}
-        description={<T zh={`收录 ${guides.length} 篇实测排障与安装指南。从真实报错原文开始，分步验证，写明每一步的预期系统反馈。`} en={`${guides.length} step-by-step install and troubleshooting guides, starting from the real error message, with the expected result of every step.`} />}
+        description={<T zh={`手把手实机测试过的排障与配置指南。直接对准具体的报错弹窗和常见痛点，拆解成清晰的分步操作，每一步该出现什么反应都给你写清楚。`} en={`Hands-on troubleshooting and setup guides tested on real PCs. Target specific error popups with step-by-step instructions and clear expected outcomes.`} />}
       />
       <div className="container-x pb-20">
         <ToolsGuidesIndex

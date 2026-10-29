@@ -1,0 +1,15 @@
+{
+  "id": "unturned-steam-mod",
+  "name": "未转变者 创意工坊",
+  "nameEn": "Unturned Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "unturned",
+  "url": "https://steamcommunity.com/app/304930/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "risk-of-rain-2-thunderstore-mod",
+  "name": "雨中冒险 2 Thunderstore 社区 MOD",
+  "nameEn": "Risk of Rain 2 on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "risk-of-rain-2",
+  "url": "https://thunderstore.io/c/riskofrain2/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-29",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}
