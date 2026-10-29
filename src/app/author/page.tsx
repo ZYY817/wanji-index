@@ -1,6 +1,7 @@
 import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
-import { ArrowUpRight, Coffee } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowUpRight, ChevronRight, Coffee } from 'lucide-react';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { GithubMark } from '@/components/kit/github-mark';
 import { PLATFORM_PATHS } from '@/components/ui/platform-icons';
@@ -44,7 +45,7 @@ function Section({ id, title, children }: { id: string; title: React.ReactNode; 
   );
 }
 
-// 作者页：联系方式 → 想收录更多游戏 → 请作者喝杯咖啡
+// 作者页：联系方式 → 项目状态（Demo 声明）→ 想收录更多游戏 → 请作者喝杯咖啡
 export default function AuthorPage() {
   const games = loadData().games.length;
   return (
@@ -76,6 +77,48 @@ export default function AuthorPage() {
       />
 
       <div className="container-x pb-8">
+        {/* 项目状态声明：这是作品展示（Demo），不是完整产品；但免费游戏领取这一块已经完整可用 */}
+        <Section id="status" title={<T zh="项目状态" en="Project status" />}>
+          <p className="inline-flex items-center gap-2 rounded-full bg-white/[0.08] px-3 py-1 text-sm font-medium text-foreground">
+            <span aria-hidden className="size-1.5 rounded-full bg-warn" />
+            <T zh="作品展示 · Demo" en="Showcase · Demo" />
+          </p>
+          <p className="mt-5 max-w-[62ch] text-[17px] leading-[1.75] text-foreground/90">
+            <T
+              zh="玩机索引目前是一个作品展示，用来呈现我在产品设计和前端开发上的想法，还不是一个完整的产品：部分游戏档案的内容还不全，英文版的长文也还没有全部翻译。"
+              en="Wanji Index is currently a showcase of my product design and front-end work, not a finished product: some game pages are still thin, and not every long article has been translated into English yet."
+            />
+          </p>
+          <p className="mt-4 max-w-[62ch] text-[17px] leading-[1.75] text-foreground/90">
+            <T
+              zh="不过，如果你只是想找个地方领免费游戏，这一部分已经完整可用了。"
+              en="That said, if you just want a place to grab free games, that part already works end to end."
+            />
+          </p>
+          <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="lift rounded-lg p-6">
+              <p className="flex items-center gap-2 text-sm font-medium text-ok"><span aria-hidden className="size-1.5 rounded-full bg-ok" /><T zh="已经可以用" en="Ready to use" /></p>
+              <ul className="mt-4 space-y-2.5 text-[15px] leading-[1.6] text-foreground/90">
+                <li><T zh="每天自动收集 Epic、Steam、GOG、itch.io、IndieGala 的限时免费" en="Daily collection of time-limited giveaways from Epic, Steam, GOG, itch.io and IndieGala" /></li>
+                <li><T zh="按北京时间显示截止倒计时，到期自动下架" en="Countdowns in Beijing time; ended offers are removed automatically" /></li>
+                <li><T zh="热门免费游戏与开源游戏，直达官方领取页" en="Popular free-to-play and open-source games, linked straight to official pages" /></li>
+              </ul>
+            </div>
+            <div className="lift rounded-lg p-6">
+              <p className="flex items-center gap-2 text-sm font-medium text-fg-2"><span aria-hidden className="size-1.5 rounded-full bg-fg-3" /><T zh="还在完善" en="Still in progress" /></p>
+              <ul className="mt-4 space-y-2.5 text-[15px] leading-[1.6] text-fg-2">
+                <li><T zh="收录更多游戏，补全存档、MOD 与排障信息" en="More games, with fuller save, mod and fix details" /></li>
+                <li><T zh="排障与教程长文的英文版" en="English versions of the long fix and guide articles" /></li>
+                <li><T zh="试玩与免费周末的自动收集（目前为手工整理）" en="Automatic tracking of demos and free weekends (currently curated by hand)" /></li>
+              </ul>
+            </div>
+          </div>
+          <Link href="/free/" className="mt-8 inline-flex h-11 items-center gap-1.5 rounded-full bg-cta px-6 text-[15px] font-medium text-cta-foreground transition-[background-color,transform] hover:bg-cta-hover active:scale-[0.97]">
+            <T zh="去领免费游戏" en="Get free games" />
+            <ChevronRight aria-hidden className="size-4" />
+          </Link>
+        </Section>
+
         <Section id="more-games" title={<T zh="想收录更多游戏？" en="Want more games?" />}>
           <div className="prose-doc max-w-[62ch] text-foreground/90 [&_p+p]:mt-4">
             <T
