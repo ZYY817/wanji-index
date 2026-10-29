@@ -1,0 +1,60 @@
+{
+  "id": "openttd",
+  "slug": "openttd",
+  "name": {
+    "zh": "OpenTTD"
+  },
+  "summary": "OpenTTD 是一款商业模拟游戏，玩家通过公路、铁路、水路和航空运输乘客和货物以营利。它是1995年克里斯索耶电子游戏运输大亨豪华版(Transport Tycoon Deluxe)的一个开源重制和扩展。",
+  "summaryEn": "OpenTTD is a business simulation game in which players earn money by transporting passengers and cargo via road, rail, water, and air.",
+  "genres": [
+    "casual",
+    "indie",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1536610/",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 1536610,
+  "developers": [
+    "OpenTTD"
+  ],
+  "publishers": [
+    "OpenTTD"
+  ],
+  "releaseDate": "2021 年 4 月 1 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 11, 10, 8, 7 (32 Bit and 64 Bit)\n处理器: Yes\n内存: 256 MB RAM",
+    "recommended": "推荐配置:\n操作系统: Windows 10 (64 Bit)\n处理器: 2+ GHz\n内存: 512 MB RAM"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 11, 10, 8, 7 (32 Bit and 64 Bit)\nProcessor: Yes\nMemory: 256 MB RAM",
+    "recommended": "Recommended:\nOS: Windows 10 (64 Bit)\nProcessor: 2+ GHz\nMemory: 512 MB RAM"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1536610/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:47.668Z"
+  }
+}

@@ -84,7 +84,7 @@ export default async function SitePage({ params }: Params) {
                       title={e.name}
                       badge={<><Tag>{zh('entryType', e.type)}</Tag>{e.linkHealth !== 'ok' && e.linkHealth !== 'dead' && <StatusBadge value={e.linkHealth} />}</>}
                       description={e.note}
-                      meta={<>{g ? <><T zh="游戏：" en="Game: " /><T zh={g.name.zh} en={g.name.en || g.name.zh} /> · </> : ''}<span className="font-mono text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
+                      meta={<>{g ? <><T zh="游戏：" en="Game: " /><T zh={g.name.zh} en={g.name.en || g.name.zh} /> · </> : ''}<span className="tabular text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
                     />
                   </li>
                 );

@@ -33,12 +33,12 @@ function Column({
             href={`/games/${g.slug}/`}
             tabIndex={-1}
             aria-hidden
-            className="group relative block aspect-[2/3] overflow-hidden rounded-sm bg-surface-2 ring-1 ring-white/[0.06] transition-[box-shadow,ring-color] duration-500 hover:ring-primary/50 hover:shadow-[0_30px_70px_-26px_rgba(216,182,122,0.55)]"
+            className="group relative block aspect-[2/3] overflow-hidden rounded-sm bg-surface-2 ring-1 ring-white/[0.06] transition-[box-shadow,ring-color] duration-500 hover:ring-primary/50 hover:shadow-[0_30px_70px_-26px_rgba(0,0,0,0.7)]"
           >
             <img src={g.art!.poster} alt="" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover transition-transform duration-[900ms] ease-[cubic-bezier(.16,1,.3,1)] group-hover:scale-[1.07]" />
-            <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(19,18,17,0.97)_0%,rgba(19,18,17,0.5)_42%,transparent_72%)] opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
+            <span aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.97)_0%,rgba(0,0,0,0.5)_42%,transparent_72%)] opacity-0 transition-opacity duration-400 group-hover:opacity-100" />
             <span className="absolute inset-0 flex flex-col justify-end p-[8%] opacity-0 transition-opacity duration-400 group-hover:opacity-100">
-              <span className="font-serif text-[clamp(14px,1.15vw,20px)] font-bold leading-tight"><T zh={g.name} en={g.en || g.name} /></span>
+              <span className="font-display text-[clamp(14px,1.15vw,20px)] font-semibold leading-tight"><T zh={g.name} en={g.en || g.name} /></span>
               <span className="mt-1.5 flex items-center gap-2 text-xs text-fg-2">
                 <T zh={`${g.counts.total} 条资源`} en={`${g.counts.total} resources`} />
                 <span className="flex gap-1 text-foreground/80">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
@@ -96,7 +96,7 @@ export function PosterWall({ games, total }: { games: GameVM[]; total: number })
   const fine = useFinePointer();
   const mx = useMotionValue(50);
   const my = useMotionValue(50);
-  const spot = useMotionTemplate`radial-gradient(circle 320px at ${mx}% ${my}%, transparent 0%, rgba(19,18,17,0.55) 100%)`;
+  const spot = useMotionTemplate`radial-gradient(circle 320px at ${mx}% ${my}%, transparent 0%, rgba(0,0,0,0.55) 100%)`;
 
   const cols = desktop ? 8 : 5;
   const perCol = 7;
@@ -141,15 +141,15 @@ export function PosterWall({ games, total }: { games: GameVM[]; total: number })
         {fine && ok && <motion.div aria-hidden className="pointer-events-none absolute inset-0" style={{ backgroundImage: spot }} />}
 
         {/* 只压上下边缘与正中一小块，海报铺满整屏 */}
-        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(19,18,17,0.88)_0%,rgba(19,18,17,0.5)_36%,transparent_68%)]" />
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,#131211,transparent)]" />
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(0deg,#131211,transparent)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_55%,rgba(0,0,0,0.88)_0%,rgba(0,0,0,0.5)_36%,transparent_68%)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,#000000,transparent)]" />
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-[linear-gradient(0deg,#000000,transparent)]" />
 
         <motion.div className="pointer-events-none relative z-10 flex h-full flex-col items-center justify-center text-center" style={{ opacity: numOpacity, scale: numScale }}>
           {/* 数字单独一行严格居中，单位放在下方：避免「22 款游戏」并排把视觉重心拉偏 */}
           <h2 id="wall-title" className="flex flex-col items-center">
-            <span className="font-serif text-[clamp(120px,17vw,260px)] font-black leading-[0.82] tracking-[-0.06em] tabular-nums" aria-label={String(total)}>{count}</span>
-            <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]"><T zh="款游戏" en="GAMES" /></span>
+            <span className="font-display text-[clamp(120px,17vw,260px)] font-semibold leading-[0.82] tracking-[-0.027em] tabular-nums" aria-label={String(total)}>{count}</span>
+            <span className="mt-4 text-lg tracking-[0.04em] text-foreground/85 [margin-right:-0.5em]"><T zh="款游戏" en="GAMES" /></span>
           </h2>
           <Link href="/games/" className={cn(buttonVariants({ variant: 'outline', size: 'lg' }), 'pointer-events-auto mt-10 bg-background/60')}>
             <T zh="进入游戏库" en="Browse games" /> <ArrowRight aria-hidden />

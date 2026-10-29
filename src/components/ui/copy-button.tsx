@@ -38,8 +38,8 @@ export function CopyButton({ text, className, label: zhLabel = '复制', labelEn
         timer.current = setTimeout(() => setState('idle'), copied ? 1600 : 4000);
       }}
       className={cn(
-        'touch-target inline-flex h-8 shrink-0 items-center gap-1.5 rounded-sm border border-border-strong px-2.5 font-mono text-2xs tracking-[0.04em] text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground',
-        done && 'border-ok text-ok hover:border-ok hover:text-ok',
+        'touch-target inline-flex h-8 shrink-0 items-center gap-1.5 rounded-full bg-white/[0.08] px-3 text-xs font-medium text-fg-2 transition-colors hover:bg-white/[0.14] hover:text-foreground',
+        done && 'bg-ok/15 text-ok hover:bg-ok/15 hover:text-ok',
         className,
       )}
       aria-label={state === 'idle' ? `${label}：${text}` : caption}

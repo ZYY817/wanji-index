@@ -44,7 +44,7 @@ export type MastheadStat = { value: number | string; label: React.ReactNode };
 
 /** 写在句子里的数字：香槟金、等宽 */
 export function MastNum({ children }: { children: React.ReactNode }) {
-  return <span className="font-mono font-medium tabular-nums text-primary">{children}</span>;
+  return <span className="tabular font-medium tabular-nums text-primary">{children}</span>;
 }
 
 /**
@@ -80,7 +80,7 @@ export function IndexMasthead({
             <div className={GLOW_VEIL} />
           </>
         ) : (
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_20%_0%,rgba(216,182,122,0.04)_0%,transparent_70%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_50%_60%_at_20%_0%,rgba(255,255,255,0.04)_0%,transparent_70%)]" />
         )}
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-background to-transparent" />
       </div>
@@ -90,11 +90,11 @@ export function IndexMasthead({
         
         <div className="mt-3 max-w-4xl">
           <div className="flex items-baseline gap-3">
-            <h1 className="font-serif text-3xl font-black tracking-[-0.03em] text-foreground sm:text-4xl lg:text-[44px]">
+            <h1 className="font-display text-3xl font-semibold tracking-[-0.013em] text-foreground sm:text-4xl lg:text-[44px]">
               {title}
             </h1>
             {count != null && (
-              <span className="font-mono text-xs sm:text-sm text-fg-3 tabular-nums">
+              <span className="tabular text-xs sm:text-sm text-fg-3 tabular-nums">
                 ({count})
               </span>
             )}
@@ -113,7 +113,7 @@ export function IndexMasthead({
             {stats.map((s, i) => (
               <div key={i} className="flex items-baseline gap-2">
                 <dt className="text-xs text-fg-3">{s.label}</dt>
-                <dd className={cn('font-mono text-base font-bold tabular-nums', i === 0 ? 'text-primary' : 'text-foreground')}>{s.value}</dd>
+                <dd className={cn('tabular text-base font-bold tabular-nums', i === 0 ? 'text-primary' : 'text-foreground')}>{s.value}</dd>
               </div>
             ))}
           </dl>

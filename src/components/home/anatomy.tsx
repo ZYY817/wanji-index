@@ -83,7 +83,7 @@ function Card({ s, className, focus, reveal }: { s: Slot; className?: string; fo
   return (
     <article
       className={cn(
-        'relative border bg-card bg-[linear-gradient(160deg,rgba(216,182,122,0.08)_0%,transparent_45%)] p-5 transition-[border-color,opacity] duration-500',
+        'relative border bg-card bg-[linear-gradient(160deg,rgba(255,255,255,0.08)_0%,transparent_45%)] p-5 transition-[border-color,opacity] duration-500',
         focus ? 'border-primary/60' : 'border-border-strong',
         focus === false && 'opacity-55',
         className,
@@ -94,8 +94,8 @@ function Card({ s, className, focus, reveal }: { s: Slot; className?: string; fo
         <span className="grid size-8 place-items-center rounded-full border border-primary/30 text-primary">
           <Icon className="size-4" aria-hidden />
         </span>
-        <h3 className="flex-1 font-serif text-lg font-bold">{s.title}</h3>
-        <span className="font-mono text-sm text-fg-3">{s.count}</span>
+        <h3 className="flex-1 font-display text-lg font-semibold">{s.title}</h3>
+        <span className="tabular text-sm text-fg-3">{s.count}</span>
       </header>
       <motion.div style={reveal ? { clipPath: reveal } : undefined}>{s.body}</motion.div>
     </article>
@@ -192,8 +192,8 @@ export function Anatomy({ d }: { d: DossierVM }) {
     return (
       <section ref={ref} aria-labelledby="anatomy-title" className="border-t border-border bg-background py-20 md:py-28">
         <div className="container-x">
-          <p className="text-sm tracking-[0.2em] text-primary"><T zh={`以《${g.name}》为例`} en={`Take ${g.en || g.name}`} /></p>
-          <h2 id="anatomy-title" className="mt-4 font-serif text-[clamp(36px,5vw,64px)] font-black leading-[1.08] tracking-[-0.04em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
+          <p className="text-sm tracking-[0.04em] text-primary"><T zh={`以《${g.name}》为例`} en={`Take ${g.en || g.name}`} /></p>
+          <h2 id="anatomy-title" className="mt-4 font-display text-[clamp(36px,5vw,64px)] font-semibold leading-[1.08] tracking-[-0.018em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
           <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-[240px_minmax(0,1fr)] md:gap-10">
             {g.art && <img src={g.art.poster} alt="" loading="lazy" className="aspect-[2/3] w-full max-w-[240px] rounded-sm object-cover ring-1 ring-white/10" />}
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">{list.map((s) => <Card key={s.key} s={s} />)}</div>
@@ -217,7 +217,7 @@ export function Anatomy({ d }: { d: DossierVM }) {
           {g.art && <img src={g.art.hero} alt="" loading="eager" fetchPriority="low" decoding="async" className="size-full object-cover" />}
         </motion.div>
         <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: bgDim }} />
-        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_30%,rgba(19,18,17,0.8)_100%)]" />
+        <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_30%,rgba(0,0,0,0.8)_100%)]" />
 
         {/* 第一幕：Logo + 引子 */}
         <motion.div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center" style={{ opacity: introOpacity, y: introY }}>
@@ -227,7 +227,7 @@ export function Anatomy({ d }: { d: DossierVM }) {
 
         {/* 第四幕：标题 */}
         <motion.div className="absolute inset-x-0 top-[calc(var(--header-h)+5vh)] z-10 text-center" style={{ opacity: headOpacity, y: headY }}>
-          <h2 id="anatomy-title" className="font-serif text-[clamp(40px,4vw,64px)] font-black leading-[1.08] tracking-[-0.04em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
+          <h2 id="anatomy-title" className="font-display text-[clamp(40px,4vw,64px)] font-semibold leading-[1.08] tracking-[-0.018em]"><T zh="一款游戏，四个答案。" en="One game, four answers." /></h2>
         </motion.div>
 
         {/* 第二、三幕：档案之环 + 海报 + 四张信息卡 */}

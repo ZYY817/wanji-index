@@ -30,7 +30,7 @@ export function ListRow({
           <h3 className={cn('text-lg font-semibold leading-snug transition-colors duration-200 md:text-xl', dead ? 'text-fg-3 line-through' : 'group-hover:text-primary')}>{title}</h3>
           {aside && <span className="text-sm text-fg-3">{aside}</span>}
           {badge}
-          {dead && <span className="font-mono text-2xs text-bad"><T zh="已失效" en="Broken" /></span>}
+          {dead && <span className="tabular text-2xs text-bad"><T zh="已失效" en="Broken" /></span>}
         </div>
         {description && <p className="mt-1.5 max-w-[62ch] text-base leading-[1.7] text-fg-2 text-pretty">{description}</p>}
         {meta && <p className="mt-2.5 text-sm text-fg-3">{meta}</p>}

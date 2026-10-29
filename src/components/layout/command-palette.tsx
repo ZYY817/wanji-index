@@ -69,7 +69,7 @@ function Row({ it, onPick, value }: { it: RecentItem; onPick: () => void; value:
       <ItemIcon it={it} />
       <span className="min-w-0 flex-1">
         <span className="block truncate text-base text-foreground">{it.title}</span>
-        {it.sub && <span className="block truncate font-mono text-2xs tracking-[0.06em] text-fg-3">{it.sub}</span>}
+        {it.sub && <span className="block truncate tabular text-2xs tracking-[0.06em] text-fg-3">{it.sub}</span>}
       </span>
       <CornerDownLeft aria-hidden className="size-3.5 text-fg-3 opacity-0 group-data-[selected=true]:opacity-100" />
     </Command.Item>
@@ -125,7 +125,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
               onValueChange={setQ}
               autoFocus
               placeholder={l('游戏名、资源站、工具、报错原文…', 'Game, site, tool or error text…')}
-              className="h-14 min-w-0 flex-1 bg-transparent font-serif text-xl font-semibold tracking-[-0.01em] text-foreground outline-none placeholder:font-sans placeholder:text-base placeholder:font-normal placeholder:text-fg-3"
+              className="h-14 min-w-0 flex-1 bg-transparent font-display text-xl font-semibold tracking-[-0.005em] text-foreground outline-none placeholder:font-sans placeholder:text-base placeholder:font-normal placeholder:text-fg-3"
             />
             <button type="button" onClick={() => setOpen(false)} className="touch-target -mr-1 inline-flex items-center px-1" aria-label={l('关闭', 'Close')}>
               <Kbd>ESC</Kbd>
@@ -158,7 +158,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
                       className="group flex min-h-12 cursor-pointer items-center gap-4 rounded-xs px-3 text-fg-2 data-[selected=true]:bg-surface-2 data-[selected=true]:text-foreground"
                     >
                       <span className="meta w-6 text-fg-3">{n.no}</span>
-                      <span className="flex-1 font-serif text-lg font-semibold text-foreground">{n.label}</span>
+                      <span className="flex-1 font-display text-lg font-semibold text-foreground">{n.label}</span>
                       <ArrowRight aria-hidden className="size-3.5 text-fg-3 opacity-0 group-data-[selected=true]:opacity-100" />
                     </Command.Item>
                   ))}
@@ -168,7 +168,7 @@ function CommandPalette({ open, setOpen }: { open: boolean; setOpen: (v: boolean
 
             {q.trim() && items && results.length === 0 && (
               <div className="px-3 py-8">
-                <p className="font-serif text-xl font-semibold"><T zh={`没有找到「${q}」`} en={`No results for “${q}”`} /></p>
+                <p className="font-display text-xl font-semibold"><T zh={`没有找到「${q}」`} en={`No results for “${q}”`} /></p>
                 <p className="mt-2 text-sm text-fg-2"><T zh="试试游戏英文名、别名（如「老头环」），或报错里的关键词。" en="Try the English name, a nickname, or words from the error." /></p>
               </div>
             )}

@@ -17,7 +17,7 @@ function SiteRow({ s }: { s: SiteVM }) {
       className="border-b border-border"
       media={<SiteLogo id={s.id} name={s.name} size={44} />}
       title={s.name}
-      aside={<span className="font-mono">{s.domain}</span>}
+      aside={<span className="tabular">{s.domain}</span>}
       badge={s.linkHealth !== 'ok' ? <StatusBadge value={s.linkHealth} /> : undefined}
       description={s.summary}
       meta={<>{s.purposes.join(' · ')}{s.entryCount > 0 && <span> · <T zh={`收录 ${s.entryCount} 个游戏入口`} en={`${s.entryCount} game pages`} /></span>}</>}

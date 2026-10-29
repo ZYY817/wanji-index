@@ -35,7 +35,7 @@ export function OfferFact({ offers }: { offers: OfferVM[] }) {
           {isUpcoming ? <T zh="即将免费" en="Free soon" /> : <T zh="限时免费中" en="Free now" />}
         </span>
         {target != null && (
-          <span className="font-mono text-sm text-fg-2">
+          <span className="tabular text-sm text-fg-2">
             <Countdown target={target} mode={isUpcoming ? 'start' : 'end'} size="sm" />
           </span>
         )}

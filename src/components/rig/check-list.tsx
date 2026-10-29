@@ -52,7 +52,7 @@ export function CheckList({ games }: { games: CheckGame[] }) {
                 )}
               >
                 {v === 'all' ? <T zh="全部" en="All" /> : <T zh={VERDICT_LABEL[v]} en={VERDICT_EN[v]} />}
-                <span className="ml-2 font-mono text-sm tabular-nums text-fg-3">{v === 'all' ? rows.length : counts[v]}</span>
+                <span className="ml-2 tabular text-sm tabular-nums text-fg-3">{v === 'all' ? rows.length : counts[v]}</span>
               </button>
             ))}
           </div>

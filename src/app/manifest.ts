@@ -12,8 +12,8 @@ export default function manifest(): MetadataRoute.Manifest {
     description: 'PC 游戏资源，一处收齐。全部免费。',
     start_url: withBase('/'),
     display: 'standalone',
-    background_color: '#131211',
-    theme_color: '#131211',
+    background_color: '#000000',
+    theme_color: '#000000',
     lang: 'zh-CN',
     icons: [
       { src: withBase('/icon-192.png'), sizes: '192x192', type: 'image/png' },

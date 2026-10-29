@@ -15,7 +15,7 @@ const lum = (hex) => {
 };
 const ratio = (a, b) => (Math.max(lum(a), lum(b)) + 0.05) / (Math.min(lum(a), lum(b)) + 0.05);
 
-// V2「放映厅 × 索引册」token（src/app/globals.css @theme）
+// V9「中性玻璃」token（src/app/globals.css @theme）
 const CASES = [
   // 文字三级 × 画布与抬升层
   ['foreground', 'background', 4.5, '正文/画布'],
@@ -29,9 +29,11 @@ const CASES = [
   ['fg-2', 'popover', 4.5, '次要/浮层'],
   ['foreground', 'shell', 4.5, '正文/终端块'],
   // 主按钮与强调
-  ['primary-foreground', 'primary', 4.5, '主按钮字/信号橙'],
-  ['primary-foreground', 'primary-hover', 4.5, '主按钮字/悬停'],
-  ['primary', 'background', 4.5, '信号橙字/画布（当前态）'],
+  ['cta-foreground', 'cta', 4.5, '主按钮字/蓝'],
+  ['cta-foreground', 'cta-hover', 4.5, '主按钮字/悬停'],
+  ['primary', 'background', 4.5, '强调蓝字/画布（链接、当前态）'],
+  ['primary', 'card', 4.5, '强调蓝字/card'],
+  ['primary', 'surface-2', 4.5, '强调蓝字/surface-2'],
   ['bad-text', 'background', 4.5, '报错原文红/画布'],
   ['bad-text', 'shell', 4.5, '报错原文红/终端块'],
   // 生命周期徽标（实心）

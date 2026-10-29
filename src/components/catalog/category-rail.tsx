@@ -22,7 +22,7 @@ export function CategoryRail({
   return (
     <aside className="min-w-0 bg-background transition-[top] duration-300 lg:sticky lg:top-[calc(var(--sticky-top)+32px)] lg:self-start">
       {/* 终端指令风格检索条 */}
-      <label className="flex min-h-10 items-center gap-2 rounded-xs border border-border bg-surface-2/40 px-2.5 py-1 text-sm transition-colors focus-within:border-primary/80 focus-within:bg-card">
+      <label className="flex min-h-10 items-center gap-2 rounded-full bg-white/[0.07] px-3.5 py-1 text-sm ring-1 ring-transparent transition-[box-shadow,background-color] focus-within:bg-white/[0.1] focus-within:ring-primary/70">
         <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
         <span className="sr-only">{placeholder}</span>
         <input
@@ -60,7 +60,7 @@ export function CategoryRail({
               )}
             >
               <span className="flex-1 whitespace-nowrap">{c.label}</span>
-              <span className="font-mono text-2xs tabular-nums text-fg-3">{c.count}</span>
+              <span className="tabular text-2xs tabular-nums text-fg-3">{c.count}</span>
             </button>
           );
         })}
@@ -73,7 +73,7 @@ export function CategoryRail({
 export function EmptyResult({ onClear }: { onClear: () => void }) {
   return (
     <div className="border-y border-border py-20 text-center">
-      <p className="font-serif text-3xl font-bold text-foreground"><T zh="没有匹配的条目" en="Nothing matches" /></p>
+      <p className="font-display text-3xl font-semibold text-foreground"><T zh="没有匹配的条目" en="Nothing matches" /></p>
       <p className="mt-3 text-base text-fg-2"><T zh="换一个关键词，或清除筛选重新查看。" en="Try another keyword or clear the filters." /></p>
       <Button type="button" variant="outline" onClick={onClear} className="mt-6">
         <T zh="清除筛选" en="Clear filters" />

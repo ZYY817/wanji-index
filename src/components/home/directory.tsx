@@ -119,7 +119,7 @@ function Node({ s, i, n, slot, g, p, e }: { s: SiteVM; i: number; n: number; slo
           <SiteLogo id={s.id} name={s.name} size={LOGO} tone="paper" className="rounded-lg transition-transform duration-300 group-hover:scale-110" />
           <motion.span className="whitespace-nowrap leading-tight" style={{ opacity: label }}>
             <span className="block text-[15px] text-foreground transition-colors group-hover:text-primary">{s.name}</span>
-            <span className="block font-mono text-xs text-fg-3">{s.domain}</span>
+            <span className="block tabular text-xs text-fg-3">{s.domain}</span>
           </motion.span>
         </Link>
       </motion.div>
@@ -134,7 +134,7 @@ function GroupHead({ h, p }: { h: Head; p: MotionValue<number> }) {
   const y = useTransform(p, [s0, s0 + 0.04], [8, 0]);
   return (
     <motion.div className="absolute border-b border-foreground/15 pb-2" style={{ left: h.x, top: h.y, width: h.w, opacity, y }}>
-      <span className="font-serif text-lg font-bold"><T zh={h.label} en={h.labelEn} /></span>
+      <span className="font-display text-lg font-semibold"><T zh={h.label} en={h.labelEn} /></span>
       <span className="ml-2 text-sm text-fg-3">{h.count}</span>
     </motion.div>
   );
@@ -182,19 +182,19 @@ export function Directory({ offers, sites, groups, counts }: {
   if (!pinned) {
     return (
       <section ref={ref} aria-labelledby="dir-title" className="container-x bg-background pb-24 pt-10">
-        <h2 id="dir-title" className="text-center font-serif text-[clamp(64px,16vw,120px)] font-black leading-none tracking-[-0.05em]">
-          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.4em] text-foreground/85"><T zh="个资源站" en="SITES" /></span>
+        <h2 id="dir-title" className="text-center font-display text-[clamp(64px,16vw,120px)] font-semibold leading-none tracking-[-0.023em]">
+          {counts.sites}<span className="mt-3 block font-sans text-base font-normal tracking-[0.04em] text-foreground/85"><T zh="个资源站" en="SITES" /></span>
         </h2>
         <div className="mt-14 space-y-10">
           {groups.map((g, gi) => (
             <Reveal as="section" key={g.category} delay={gi * STAGGER} aria-label={g.label}>
-              <h3 className="border-b border-foreground/15 pb-2 font-serif text-xl font-bold"><T zh={g.label} en={g.labelEn} /><span className="ml-2 font-sans text-sm font-normal text-fg-3">{g.sites.length}</span></h3>
+              <h3 className="border-b border-foreground/15 pb-2 font-display text-xl font-semibold"><T zh={g.label} en={g.labelEn} /><span className="ml-2 font-sans text-sm font-normal text-fg-3">{g.sites.length}</span></h3>
               <ul className="mt-3 grid gap-x-6 gap-y-3 sm:grid-cols-2">
                 {g.sites.map((s) => (
                   <li key={s.id}>
                     <Link href={`/resources/${s.slug}/`} className="flex items-center gap-3">
                       <SiteLogo id={s.id} name={s.name} size={36} tone="paper" className="rounded-lg" />
-                      <span className="leading-tight"><span className="block text-[15px]">{s.name}</span><span className="block font-mono text-xs text-fg-3">{s.domain}</span></span>
+                      <span className="leading-tight"><span className="block text-[15px]">{s.name}</span><span className="block tabular text-xs text-fg-3">{s.domain}</span></span>
                     </Link>
                   </li>
                 ))}
@@ -210,7 +210,7 @@ export function Directory({ offers, sites, groups, counts }: {
     <section aria-labelledby="dir-title" className="relative bg-background">
       <div ref={ref} className="relative h-[240vh]">
         <div className="sticky top-0 h-[100svh] overflow-hidden">
-          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(216,182,122,0.1)_0%,transparent_62%)]" />
+          <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(255,255,255,0.1)_0%,transparent_62%)]" />
 
           {/* 交接帧：上一章的色场 + 最后一张卡（无文字），随后碎开淡去 */}
           {last && (
@@ -228,7 +228,7 @@ export function Directory({ offers, sites, groups, counts }: {
           {/* 轨道线：随 Logo 上轨画出，落地开始后淡出 */}
           <motion.div aria-hidden className="absolute left-1/2 top-1/2" style={{ width: geo.rx * 2, height: geo.ry * 2, x: '-50%', y: '-50%', rotate: -8, opacity: lineO }}>
             <svg className="size-full overflow-visible" viewBox={`0 0 ${geo.rx * 2} ${geo.ry * 2}`}>
-              <motion.ellipse cx={geo.rx} cy={geo.ry} rx={geo.rx} ry={geo.ry} fill="none" stroke="#D8B67A" strokeOpacity="0.35" strokeWidth="1" style={{ pathLength: draw }} />
+              <motion.ellipse cx={geo.rx} cy={geo.ry} rx={geo.rx} ry={geo.ry} fill="none" stroke="#2997FF" strokeOpacity="0.35" strokeWidth="1" style={{ pathLength: draw }} />
             </svg>
           </motion.div>
 
@@ -245,8 +245,8 @@ export function Directory({ offers, sites, groups, counts }: {
           {/* 标题：中心 → 页眉 */}
           <motion.div className="pointer-events-none absolute inset-0 z-[200] flex items-center justify-center" style={{ y: titleY, scale: titleS, opacity: titleIn }}>
             <h2 id="dir-title" className="flex flex-col items-center text-center">
-              <motion.span className="font-serif text-[clamp(96px,11vw,170px)] font-black leading-[0.85] tracking-[-0.05em] tabular-nums" aria-label={String(counts.sites)}>{num}</motion.span>
-              <span className="mt-4 text-lg tracking-[0.5em] text-foreground/85 [margin-right:-0.5em]"><T zh="个资源站" en="SITES" /></span>
+              <motion.span className="font-display text-[clamp(96px,11vw,170px)] font-semibold leading-[0.85] tracking-[-0.023em] tabular-nums" aria-label={String(counts.sites)}>{num}</motion.span>
+              <span className="mt-4 text-lg tracking-[0.04em] text-foreground/85 [margin-right:-0.5em]"><T zh="个资源站" en="SITES" /></span>
             </h2>
           </motion.div>
 

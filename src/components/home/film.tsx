@@ -151,8 +151,8 @@ function AnswerBlock({ a, i, p, card, vp, focus }: {
       >
         {/* 标题行的中线压在引线上；左侧两组右对齐，与右侧镜像 */}
         <p className={cn('flex h-[34px] items-center gap-3', left && 'justify-end')}>
-          <span className="font-mono text-sm text-[var(--accent)]">{a.no}</span>
-          <span className="font-serif text-[26px] font-bold leading-tight">{a.title}</span>
+          <span className="tabular text-sm text-[var(--accent)]">{a.no}</span>
+          <span className="font-display text-[26px] font-semibold leading-tight">{a.title}</span>
         </p>
         <motion.div className="mt-3 space-y-2 border-t border-foreground/15 pt-3 text-base leading-snug text-foreground/90" style={{ clipPath: reveal }}>
           {a.lines}
@@ -184,8 +184,11 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
   // ── 收场 ──
   const exitO = useTransform(p, T.exit, [1, 0]);
   // ── 首屏 ──
-  const heroTextY = useTransform(p, T.heroTextOut, [0, -80]);
-  const heroTextO = useTransform(p, T.heroTextOut, [1, 0]);
+  // 首屏文字直接按页面滚动距离淡出：scrollYProgress 在顶部偶尔读出 0.03 左右（测量误差），会让标题一进页就半透明
+  const { scrollY } = useScroll();
+  const heroSpan = (r: number) => r * Math.max(vp.h * 3.8, 1); // 480vh 镜头可滚动距离 = 3.8 屏
+  const heroTextO = useTransform(scrollY, (y) => Math.min(1, Math.max(0, 1 - (y - heroSpan(T.heroTextOut[0])) / heroSpan(T.heroTextOut[1] - T.heroTextOut[0]))));
+  const heroTextY = useTransform(heroTextO, (o) => (1 - o) * -80);
   const heroPE = useTransform(heroTextO, (o) => (o > 0.5 ? 'auto' : 'none'));
   // ── 收缩：裁切框从整屏收到海报尺寸 ──
   const m = useTransform(p, T.morph, [0, 1]);
@@ -252,8 +255,8 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
               {cols.map((c, i) => (i === CENTER ? <SlotColumn key={i} games={c} vw={vp.w} /> : <WallColumn key={i} games={c} p={p} dir={i % 2 ? -1 : 1} offset={i % 2 === 1} />))}
             </div>
           </motion.div>
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_42%_at_50%_50%,rgba(12,11,10,0.78)_0%,rgba(12,11,10,0.5)_55%,rgba(12,11,10,0.38)_100%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_40%,rgba(12,11,10,0.92)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_30%_42%_at_50%_50%,rgba(0,0,0,0.78)_0%,rgba(0,0,0,0.5)_55%,rgba(0,0,0,0.38)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,transparent_40%,rgba(0,0,0,0.92)_100%)]" />
         </motion.div>
 
         {/* ── 环境光：首屏美术的暗化副本，只在收缩过程中出现，填满裁切框四周 ── */}
@@ -265,7 +268,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         {/* ── 首屏美术：整屏 → 裁切成中央海报 ── */}
         <motion.div aria-hidden className="absolute inset-0" style={{ clipPath: clip, opacity: morphGone }}>
           {lead.art && <motion.img src={lead.art.hero} alt="" fetchPriority="high" className="size-full object-cover object-[64%_30%] motion-safe:animate-[kenburns_12s_ease-out_both]" style={{ scale: artScale }} />}
-          <motion.div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(12,11,10,0.6)_0%,transparent_30%,rgba(12,11,10,0.3)_100%)]" style={{ opacity: heroGrad }} />
+          <motion.div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.6)_0%,transparent_30%,rgba(0,0,0,0.3)_100%)]" style={{ opacity: heroGrad }} />
           <motion.div className="absolute inset-0 bg-shell" style={{ opacity: shade }} />
         </motion.div>
 
@@ -302,11 +305,11 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
 
         {/* ── 文字层 ── */}
         {/* 首屏：一句话的画面——居中。标题、说明、搜索、热门都在中轴上；署名与滚动提示贴在左右下角 */}
-        <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(12,11,10,0.62)_0%,rgba(12,11,10,0.4)_45%,rgba(12,11,10,0.7)_100%)]" style={{ opacity: heroTextO }} />
+        <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,0,0,0.5)_0%,rgba(0,0,0,0.32)_45%,rgba(0,0,0,0.62)_100%)]" style={{ opacity: heroTextO }} />
         <motion.div className="container-x absolute inset-0 flex flex-col items-center justify-center pt-[var(--header-h)] text-center" style={{ y: heroTextY, opacity: heroTextO, pointerEvents: heroPE }}>
-          <h1 className="font-serif text-[clamp(52px,6.4vw,112px)] font-black leading-[1.04] tracking-[-0.05em]">
+          <h1 className="font-display text-[clamp(52px,6.4vw,112px)] font-semibold leading-[1.04] tracking-[-0.023em]">
             {([['每一款游戏，', 'Every game'], ['都有一份档案。', 'gets a file.']] as const).map(([line, lineEn], i) => (
-              <span key={line} className="block overflow-hidden pb-[0.04em]">
+              <span key={line} className="-mx-[0.6em] block overflow-hidden px-[0.6em] pb-[0.04em]">
                 <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.2 + i * 0.1}s)` }}><Tx zh={hang(line)} en={lineEn} /></span>
               </span>
             ))}
@@ -337,10 +340,10 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         </motion.div>
 
         {/* 海报墙：数字在卡片正下方、中轴上（卡片是主角，数字是它的注脚）；底部压暗保证可读 */}
-        <motion.div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[42vh] bg-[linear-gradient(0deg,rgba(12,11,10,0.95)_0%,rgba(12,11,10,0.7)_45%,transparent_100%)]" style={{ opacity: countO }} />
+        <motion.div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[42vh] bg-[linear-gradient(0deg,rgba(0,0,0,0.95)_0%,rgba(0,0,0,0.7)_45%,transparent_100%)]" style={{ opacity: countO }} />
         <motion.div className="pointer-events-none absolute inset-x-0 flex flex-col items-center text-center" style={{ top: `calc(50% + ${card.h / 2 + 22}px)`, opacity: countO, y: countY }}>
           <p className="flex items-baseline gap-4">
-            <motion.span className="font-serif text-[clamp(64px,6vw,96px)] font-black leading-none tracking-[-0.05em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{countText}</motion.span>
+            <motion.span className="font-display text-[clamp(64px,6vw,96px)] font-semibold leading-none tracking-[-0.023em] text-[var(--accent)] tabular-nums" aria-label={String(total)}>{countText}</motion.span>
             <span className="text-xl text-foreground/90"><Tx zh="款游戏，每一款都有一份档案" en="games, each with its own file" /></span>
           </p>
           <TextLink href="/games/" tone="accent" className="pointer-events-auto mt-2"><Tx zh="进入游戏库" en="Browse games" /></TextLink>
@@ -349,7 +352,7 @@ export function Film({ lead, popular, wall, total, d }: { lead: GameVM; popular:
         {/* 档案：标题在卡片正上方，入口在正下方——都在中轴上，四组答案在两侧对称展开 */}
         <motion.div className="pointer-events-none absolute inset-x-0 flex flex-col items-center text-center" style={{ bottom: `calc(50% + ${card.h / 2 + 26}px)` }}>
           <motion.p className="text-sm text-[var(--accent)]" style={{ opacity: eyebrowVis }}><Tx zh={`以《${sample.name}》为例`} en={`Take ${sample.en || sample.name}`} /></motion.p>
-          <motion.h2 style={{ opacity: titleVis, y: titleY }} className="mt-2 font-serif text-[clamp(30px,2.6vw,44px)] font-black leading-tight tracking-[-0.03em]"><Tx zh={hang('一款游戏，四个答案。')} en="One game, four answers." /></motion.h2>
+          <motion.h2 style={{ opacity: titleVis, y: titleY }} className="mt-2 font-display text-[clamp(30px,2.6vw,44px)] font-semibold leading-tight tracking-[-0.013em]"><Tx zh={hang('一款游戏，四个答案。')} en="One game, four answers." /></motion.h2>
         </motion.div>
         <motion.div className="absolute inset-x-0 flex justify-center" style={{ top: `calc(50% + ${card.h / 2 + 28}px)`, opacity: titleVis }}>
           <TextLink href={`/games/${sample.slug}/`} tone="accent"><Tx zh={`打开${sample.name}完整档案`} en={`Open the full ${sample.en || sample.name} file`} /></TextLink>

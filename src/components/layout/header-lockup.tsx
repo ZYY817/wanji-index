@@ -29,7 +29,7 @@ export function HeaderLockup({ solid }: { solid: boolean }) {
 
       <span
         className={cn(
-          'font-serif font-black leading-none tracking-[-0.04em] transition-[font-size] duration-500 ease-out',
+          'font-display font-semibold leading-none tracking-[-0.018em] transition-[font-size] duration-500 ease-out',
           solid ? 'text-lg' : 'text-xl',
         )}
       >

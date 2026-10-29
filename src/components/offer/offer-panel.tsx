@@ -90,7 +90,7 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
                     target={o.endMs}
                     now={now}
                     className={cn(
-                      'text-3xl font-mono font-bold leading-none tabular-nums',
+                      'text-3xl tabular font-bold leading-none tabular-nums',
                       urgent ? 'text-primary' : 'text-foreground',
                     )}
                   />
@@ -104,18 +104,18 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
                     target={o.startMs}
                     mode="start"
                     now={now}
-                    className="text-3xl font-mono font-bold leading-none tabular-nums text-info"
+                    className="text-3xl tabular font-bold leading-none tabular-nums text-info"
                   />
                 </div>
               </>
             ) : (
-              <p className="font-mono text-2xs text-fg-3"><T zh="活动进行中" en="Ongoing" /></p>
+              <p className="tabular text-2xs text-fg-3"><T zh="活动进行中" en="Ongoing" /></p>
             )}
           </div>
 
           {/* 底部来源与操作 */}
           <div className="flex items-end justify-between gap-3 pt-6">
-            <span className="font-mono text-2xs text-fg-3">
+            <span className="tabular text-2xs text-fg-3">
               {o.endMs ? <><T zh="截止" en="Ends" /> {shDateTime(o.endMs)}</> : o.startMs ? <><T zh="开始" en="Starts" /> {shDateTime(o.startMs)}</> : <><T zh="核验于" en="Checked" /> {o.checkedAt}</>}
             </span>
             <AcquireButton
@@ -142,11 +142,11 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
 
   return (
     <li className={cn(
-      'flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-4 border-b border-border last:border-b-0 transition-colors hover:bg-card/40 px-2 rounded-xs',
+      'flex flex-col sm:flex-row sm:items-center justify-between gap-4 py-3.5 px-3 -mx-3 rounded-md transition-colors hover:bg-white/[0.04]',
       isEnded && 'opacity-60',
     )}>
       <div className="flex items-center gap-4 min-w-0">
-        <div className="edge-light relative aspect-[16/9] w-20 sm:w-28 shrink-0 overflow-hidden rounded-xs bg-shell">
+        <div className="edge-light relative aspect-[16/9] w-24 sm:w-32 shrink-0 overflow-hidden rounded-sm bg-shell">
           <GameArt
             src={[o.art?.header, o.art?.capsule, o.art?.hero]}
             name={o.gameName ?? o.title}
@@ -158,7 +158,7 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
 
         <div className="min-w-0 flex-1">
           <div className="flex flex-wrap items-baseline gap-x-2.5 gap-y-0.5">
-            <span className="text-lg font-semibold text-foreground">
+            <span className="text-[17px] font-semibold tracking-[-0.01em] text-foreground">
               {o.gameSlug ? (
                 <Link href={`/games/${o.gameSlug}/`} className="transition-colors hover:text-primary">
                   {mainTitle}
@@ -186,19 +186,20 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
         </div>
       </div>
 
-      <div className="flex shrink-0 flex-col items-end gap-1.5 self-end sm:self-center">
+      <div className="flex shrink-0 flex-col items-center gap-1 self-end sm:self-center">
         {isEnded ? (
-          <span className="inline-flex h-11 items-center px-4 font-mono text-sm text-fg-3"><T zh="已结束" en="Ended" /></span>
+          <span className="inline-flex h-8 items-center px-4 text-sm text-fg-3"><T zh="已结束" en="Ended" /></span>
         ) : (
           <AcquireButton
             href={o.url}
             health={o.linkHealth}
             label={ctaOf(o, o.lifecycle)}
-            size="md"
-            className="h-11 px-5"
+            size="sm"
+            variant="get"
+            className="min-w-[76px]"
           />
         )}
-        <span className="font-mono text-2xs text-fg-3"><T zh="核验于" en="Checked" /> {o.checkedAt}</span>
+        <span className="tabular text-2xs text-fg-3"><T zh="核验于" en="Checked" /> {o.checkedAt}</span>
       </div>
     </li>
   );

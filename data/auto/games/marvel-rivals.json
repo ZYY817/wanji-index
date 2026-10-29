@@ -1,0 +1,64 @@
+{
+  "id": "marvel-rivals",
+  "slug": "marvel-rivals",
+  "name": {
+    "zh": "漫威争锋",
+    "en": "Marvel Rivals"
+  },
+  "summary": "《漫威争锋》是一款由漫威IP正版授权、网易自研的超级英雄PVP团队射击游戏。玩家可以从丰富多样的超级英雄阵容中挑选心仪角色，组成全明星队伍，在漫威多元宇宙中各种可破坏的地图上，利用独特的超能力进行精彩激战。成为超级英雄，集结你的小队，一起战斗吧！",
+  "summaryEn": "Marvel Rivals is a Super Hero Team-Based PVP Shooter! Assemble an all-star Marvel squad, devise countless strategies by combining powers to …",
+  "genres": [
+    "action",
+    "adventure",
+    "casual",
+    "mmo",
+    "racing",
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/2767030/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 2767030,
+  "developers": [
+    "NetEase Games"
+  ],
+  "publishers": [
+    "NetEase Games"
+  ],
+  "releaseDate": "2024 年 12 月 5 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Windows 10 64 位（1909 或更新）\n处理器: Intel Core i5-6600K or AMD Ryzen 5 1600X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060 / AMD RX 580 / Intel Arc A380\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 70 GB 可用空间\n附注事项: 为了更流畅的游戏体验，我们建议您将游戏安装在SSD硬盘上",
+    "recommended": "推荐配置:\n操作系统: Windows 10 64 位（1909 或更新）\n处理器: Intel Core i5-10400 or AMD Ryzen 5 5600X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 2060 (Super) / AMD RX 5700-XT / Intel Arc A750\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 70 GB 可用空间\n附注事项: 为了更流畅的游戏体验，我们建议您将游戏安装在SSD硬盘上"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10 64-bit (1909 or newer)\nProcessor: Intel Core i5-6600K or AMD Ryzen 5 1600X\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 / AMD RX 580 / Intel Arc A380\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 70 GB available space\nAdditional Notes: We recommend you install the game on SSD drive for better experience.",
+    "recommended": "Recommended:\nOS: Windows 10 64-bit (1909 or newer)\nProcessor: Intel Core i5-10400 or AMD Ryzen 5 5600X\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 2060 (Super) / AMD RX 5700-XT / Intel Arc A750\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 70 GB available space\nAdditional Notes: We recommend you install the game on SSD drive for better experience."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2767030/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:39.990Z"
+  }
+}

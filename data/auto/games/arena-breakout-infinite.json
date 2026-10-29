@@ -1,0 +1,66 @@
+{
+  "id": "arena-breakout-infinite",
+  "slug": "arena-breakout-infinite",
+  "name": {
+    "zh": "暗区突围：无限",
+    "en": "Arena Breakout: Infinite"
+  },
+  "summary": "《暗区突围：无限》是一款高风险的战术撤离射击游戏，每一次决策都至关重要。​​ 在激烈交火中生存，搜寻珍贵物资并活着逃脱——否则将失去一切。凭借令人惊叹的真实画面、贴近真实的音效设计，以及残酷的PvPvE战斗，每一次突袭都是一场关乎荣耀或毁灭的豪赌。",
+  "summaryEn": "Arena Breakout: Infinite is a high-stakes tactical extraction shooter where every decision matters. Fight, loot, and extract—or lose it all.",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo",
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/2073620/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 2073620,
+  "developers": [
+    "Morefun Studios"
+  ],
+  "publishers": [
+    "Morefun Studios"
+  ],
+  "releaseDate": "2025 年 9 月 15 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10 or above\n处理器: Intel Core i5-7500 or AMD Ryzen 5 1400\n内存: 12 GB RAM\n显卡: NVIDIA GTX 960 2G or AMD Radeon RX 5500 or Intel Arc A380\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 70 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10 or above\n处理器: Intel Core i7-9700 or AMD Ryzen 5 3600X\n内存: 16 GB RAM\n显卡: NVIDIA RT X2060 or AMD Radeon Rx 6600\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 70 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10 or above\nProcessor: Intel Core i5-7500 or AMD Ryzen 5 1400\nMemory: 12 GB RAM\nGraphics: NVIDIA GTX 960 2G or AMD Radeon RX 5500 or Intel Arc A380\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 70 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10 or above\nProcessor: Intel Core i7-9700 or AMD Ryzen 5 3600X\nMemory: 16 GB RAM\nGraphics: NVIDIA RT X2060 or AMD Radeon Rx 6600\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 70 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2073620/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:14.409Z",
+    "pcgw": {
+      "syncedAt": "2026-10-28T13:18:00.670Z",
+      "page": "Arena Breakout: Infinite"
+    }
+  }
+}

@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 function Block({ id, title, lead, children }: { id?: string; title: React.ReactNode; lead?: React.ReactNode; children: React.ReactNode }) {
   return (
     <Reveal as="section" className="scroll-mt-28 border-t border-border py-12 first:border-t-0 first:pt-0">
-      <h2 id={id} className="font-serif text-3xl font-bold tracking-[-0.03em]">{title}</h2>
+      <h2 id={id} className="font-display text-3xl font-semibold tracking-[-0.013em]">{title}</h2>
       {lead && <p className="mt-2 text-base text-fg-2">{lead}</p>}
       <div className="mt-6">{children}</div>
     </Reveal>
@@ -92,7 +92,7 @@ export default async function FixPage({ params }: Params) {
               {p.fixes.map((f, i) => (
                 <li key={f.title} id={`fix-${i + 1}`} className="relative grid scroll-mt-28 grid-cols-[48px_minmax(0,1fr)] gap-4 pb-12 last:pb-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6">
                   <div className="relative">
-                    <span className="font-mono text-3xl leading-none tabular-nums text-primary">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="tabular text-3xl leading-none tabular-nums text-primary">{String(i + 1).padStart(2, '0')}</span>
                     {i < p.fixes.length - 1 && <span aria-hidden className="absolute bottom-[-8px] left-[0.6em] top-12 w-px bg-border" />}
                   </div>
                   <div className="min-w-0">
@@ -130,7 +130,7 @@ export default async function FixPage({ params }: Params) {
                     {p.table.rows.map((r) => (
                       <tr key={r[0]} className="border-b border-border last:border-b-0">
                         {r.map((c, j) => (
-                          <td key={j} className={j === 0 ? 'px-4 py-3.5 align-top font-mono text-sm leading-[1.7] text-foreground' : 'px-4 py-3.5 align-top leading-[1.7] text-foreground/90'}>{c}</td>
+                          <td key={j} className={j === 0 ? 'px-4 py-3.5 align-top tabular text-sm leading-[1.7] text-foreground' : 'px-4 py-3.5 align-top leading-[1.7] text-foreground/90'}>{c}</td>
                         ))}
                       </tr>
                     ))}
@@ -193,7 +193,7 @@ export default async function FixPage({ params }: Params) {
               {p.fixes.map((f, i) => (
                 <li key={f.title}>
                   <a href={`#fix-${i + 1}`} className="flex gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-foreground">
-                    <span className="font-mono text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="tabular text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
                     <span className="min-w-0">{fileTokens(f.title)}</span>
                   </a>
                 </li>

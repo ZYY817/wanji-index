@@ -17,7 +17,7 @@ export default function NotFound() {
             <span aria-hidden className="display-xl block">
               4<span className="text-outline [--stroke-w:1.5px]">0</span>4
             </span>
-            <span className="mt-6 block font-serif text-[clamp(28px,3.4vw,52px)] font-black leading-tight tracking-[-0.035em]"><T zh="这份档案还没建立。" en="This page doesn’t exist yet." /></span>
+            <span className="mt-6 block font-display text-[clamp(28px,3.4vw,52px)] font-semibold leading-tight tracking-[-0.016em]"><T zh="这份档案还没建立。" en="This page doesn’t exist yet." /></span>
           </h1>
           <p className="mt-5 max-w-[46ch] text-base leading-[1.8] text-fg-2">
             <T zh="链接可能已更改，或者这款游戏、这个站点还没被收录。试试搜索，或从目录重新进入。" en="The link may have changed, or this game or site isn’t in the index yet. Try searching, or start again from a section below." />
@@ -31,14 +31,14 @@ export default function NotFound() {
           <ul className="border-t border-border">
             <li>
               <Link href="/" className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
-                <span className="flex-1 font-serif font-bold"><T zh="首页" en="Home" /></span>
+                <span className="flex-1 font-display font-semibold"><T zh="首页" en="Home" /></span>
                 <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
               </Link>
             </li>
             {NAV.map((n) => (
               <li key={n.href}>
                 <Link href={n.href} className="group flex min-h-12 items-center gap-4 border-b border-border text-lg transition-colors hover:text-primary">
-                  <span className="flex-1 font-serif font-bold"><T zh={n.label} en={n.en} /></span>
+                  <span className="flex-1 font-display font-semibold"><T zh={n.label} en={n.en} /></span>
                   <ArrowRight aria-hidden className="size-4 text-fg-3 group-hover:text-foreground" />
                 </Link>
               </li>

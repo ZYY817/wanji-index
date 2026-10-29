@@ -1,0 +1,61 @@
+{
+  "id": "tbh-task-bar-hero",
+  "slug": "tbh-task-bar-hero",
+  "name": {
+    "zh": "TBH: 塔斯克巴·英雄",
+    "en": "TBH: Task Bar Hero"
+  },
+  "summary": "终极迷你放置RPG！ 可爱的像素勇者们正等待着与你一同踏上冒险——就在你的任务栏旁。 用多样的职业、技能、道具和配装，击退工作和日常生活的无聊吧！",
+  "summaryEn": "The ultimate tiny idle RPG! Adorable pixel heroes are waiting to join your adventure — from your taskbar.",
+  "genres": [
+    "casual",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/3678970/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 3678970,
+  "developers": [
+    "Nugem Studio",
+    "Tesseract Studio"
+  ],
+  "publishers": [
+    "Nugem Studio"
+  ],
+  "releaseDate": "2026 年 5 月 27 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Windows 10 / 11 (64-bit)\n处理器: Intel Core i3-6100 / AMD Ryzen 3 1200\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 750 Ti (2GB) / AMD Radeon RX 460 (2GB)\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 2 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统: Windows 10 / 11 (64-bit)\n处理器: Intel Core i5-8400 / AMD Ryzen 5 2600\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060 (6GB) / AMD Radeon RX 580 (4GB)\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 3 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10 / 11 (64-bit)\nProcessor: Intel Core i3-6100 / AMD Ryzen 3 1200\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 750 Ti (2GB) / AMD Radeon RX 460 (2GB)\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 2 GB available space",
+    "recommended": "Recommended:\nOS: Windows 10 / 11 (64-bit)\nProcessor: Intel Core i5-8400 / AMD Ryzen 5 2600\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 (6GB) / AMD Radeon RX 580 (4GB)\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 3 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3678970/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:33.545Z"
+  }
+}

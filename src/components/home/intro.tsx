@@ -42,11 +42,11 @@ export function Intro({ total }: { total: number }) {
       <motion.div className="absolute inset-0 flex flex-col items-center justify-center" animate={{ opacity: open ? 0 : 1 }} transition={{ duration: 0.25 }}>
         <div className="relative grid size-40 place-items-center">
           <svg viewBox="0 0 160 160" className="absolute inset-0 -rotate-90">
-            <motion.circle cx="80" cy="80" r="76" fill="none" stroke="#D8B67A" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.6, ease: EASE_INOUT }} />
+            <motion.circle cx="80" cy="80" r="76" fill="none" stroke="#2997FF" strokeWidth="1.2" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 0.6, ease: EASE_INOUT }} />
           </svg>
-          <span className="font-serif text-5xl font-black tabular-nums">{n}</span>
+          <span className="font-display text-5xl font-semibold tabular-nums">{n}</span>
         </div>
-        <motion.p className="mt-6 text-sm tracking-[0.5em] text-fg-2 [margin-right:-0.5em]" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.5, ease: EASE_OUT }}>
+        <motion.p className="mt-6 text-sm tracking-[0.04em] text-fg-2 [margin-right:-0.5em]" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.5, ease: EASE_OUT }}>
           <T zh="玩机索引" en="WANJI INDEX" />
         </motion.p>
       </motion.div>

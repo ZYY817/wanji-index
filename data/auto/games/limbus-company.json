@@ -1,0 +1,56 @@
+{
+  "id": "limbus-company",
+  "slug": "limbus-company",
+  "name": {
+    "zh": "边狱公司",
+    "en": "Limbus Company"
+  },
+  "summary": "As the Executive Manager of Limbus Company, lead your group of twelve Sinners, venture into the buried facilities of Lobotomy Corporation, a…",
+  "summaryEn": "As the Executive Manager of Limbus Company, lead your group of twelve Sinners, venture into the buried facilities of Lobotomy Corporation, a…",
+  "genres": [],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1973530/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 1973530,
+  "developers": [
+    "ProjectMoon"
+  ],
+  "publishers": [
+    "ProjectMoon"
+  ],
+  "releaseDate": "2023 年 2 月 26 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5\n内存: 8 GB RAM\n显卡: GeForce GT 1030\nDirectX 版本: 10\n存储空间: 需要 10 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5\n内存: 8 GB RAM\n显卡: GeForce GT 1030\nDirectX 版本: 10\n存储空间: 需要 10 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5\nMemory: 8 GB RAM\nGraphics: GeForce GT 1030\nDirectX: Version 10\nStorage: 10 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5\nMemory: 8 GB RAM\nGraphics: GeForce GT 1030\nDirectX: Version 10\nStorage: 10 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1973530/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:10.576Z"
+  }
+}

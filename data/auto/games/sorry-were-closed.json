@@ -1,0 +1,59 @@
+{
+  "id": "sorry-were-closed",
+  "slug": "sorry-were-closed",
+  "name": {
+    "zh": "Sorry We're Closed"
+  },
+  "summary": "《Sorry We're Closed》是一款古怪离奇的剧情向生存恐怖游戏，将经典固定视角探索与街机风格射击相结合，讲述恶魔、天使以及二者碰撞后的故事。主角米歇尔必须使用她的第三只眼来看破不同世界，揭晓其中秘密并破解各种谜题。",
+  "summaryEn": "Sorry We're Closed is an eccentric story-driven survival horror game about demons, angels and what happens when both sides collide.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1796580/",
+      "priceNote": "参考价 ¥ 60.20",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 1796580,
+  "developers": [
+    "à la mode games"
+  ],
+  "publishers": [
+    "Akupara Games"
+  ],
+  "releaseDate": "2024 年 11 月 14 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 or newer, 64-bit\n处理器: Intel i3 or equivalent\n内存: 4 GB RAM\n显卡: Integrated (Intel UHD or AMD Radeon)\n存储空间: 需要 2 GB 可用空间\n附注事项: 游戏可在多种低配置系统上良好运行。如果想要检测游戏在您的机器上的表现，可体验试玩版。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 or newer, 64-bit\nProcessor: Intel i3 or equivalent\nMemory: 4 GB RAM\nGraphics: Integrated (Intel UHD or AMD Radeon)\nStorage: 2 GB available space\nAdditional Notes: The game performs well on many low-spec systems. Try the demo if you would like to check performance on your machine.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1796580/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:36.172Z"
+  }
+}

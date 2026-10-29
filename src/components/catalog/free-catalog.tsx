@@ -95,7 +95,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
       <div className="sticky top-[var(--sticky-top)] z-20 border-b border-border bg-background transition-[top] duration-300">
         <div className="container-x flex flex-wrap items-center gap-x-4 gap-y-2.5 py-2.5">
           {/* Nova 紧凑搜索框 */}
-          <label className="flex min-w-0 flex-1 items-center gap-2 rounded-xs border border-border bg-surface-2/40 px-2.5 py-1 text-sm transition-colors focus-within:border-primary/80 focus-within:bg-card sm:max-w-72">
+          <label className="flex min-w-0 flex-1 items-center gap-2 rounded-full bg-white/[0.07] px-3.5 py-1 text-sm ring-1 ring-transparent transition-[box-shadow,background-color] focus-within:bg-white/[0.1] focus-within:ring-primary/70 sm:max-w-72">
             <Search className="size-3.5 shrink-0 text-fg-3" aria-hidden />
             <span className="sr-only"><T zh="搜索免费游戏" en="Search free games" /></span>
             <input
@@ -155,9 +155,9 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
           /* 筛选结果列表 */
           <section>
             <div className="mb-8 flex items-baseline justify-between gap-4 border-b border-border pb-4">
-              <h2 className="flex items-baseline gap-3 font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+              <h2 className="flex items-baseline gap-3 font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
                 <T zh="筛选结果" en="Results" />
-                <span className="font-mono text-sm font-normal text-fg-3">({current.length})</span>
+                <span className="tabular text-sm font-normal text-fg-3">({current.length})</span>
               </h2>
               <Button
                 variant="ghost"
@@ -181,7 +181,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
               )
             ) : (
               <div className="border-y border-border py-20 text-center">
-                <p className="font-serif text-3xl font-bold text-foreground"><T zh="没有符合条件的免费情报" en="No free games match" /></p>
+                <p className="font-display text-3xl font-semibold text-foreground"><T zh="没有符合条件的免费情报" en="No free games match" /></p>
                 <p className="mt-3 text-base text-fg-2"><T zh="换个关键词或平台试试，也可以看看下方的已结束归档。" en="Try another keyword or platform, or check the archive below." /></p>
               </div>
             )}
@@ -279,8 +279,8 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
         {ended.length > 0 && (
           <details className="group mt-16 border-y border-border">
             <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between py-4 transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden">
-              <span className="font-serif text-2xl font-bold text-foreground"><T zh="已结束归档" en="Ended" /></span>
-              <span className="flex items-center gap-3 font-mono text-sm text-fg-3">
+              <span className="font-display text-2xl font-semibold text-foreground"><T zh="已结束归档" en="Ended" /></span>
+              <span className="flex items-center gap-3 tabular text-sm text-fg-3">
                 {ended.length} <T zh="款" en="games" />
                 <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden />
               </span>
@@ -296,7 +296,7 @@ export function FreeCatalog({ offers }: { offers: OfferVM[] }) {
         {/* 雷达之外第三方来源链接 */}
         <Reveal as="section" aria-labelledby="trackers-title" className="mt-16 grid gap-8 border-t border-border pt-10 md:grid-cols-12">
           <div className="md:col-span-5">
-            <h2 id="trackers-title" className="font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+            <h2 id="trackers-title" className="font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
               <T zh="雷达之外" en="More trackers" />
             </h2>
             <p className="mt-2.5 max-w-[36ch] text-base leading-relaxed text-fg-2">

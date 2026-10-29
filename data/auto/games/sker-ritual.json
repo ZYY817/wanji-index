@@ -1,0 +1,59 @@
+{
+  "id": "sker-ritual",
+  "slug": "sker-ritual",
+  "name": {
+    "zh": "Sker Ritual"
+  },
+  "summary": "在这款合作恐怖尸潮射击游戏中全副武装，释放凯尔特天神之力。",
+  "summaryEn": "Tear through endless waves of supernatural enemies in this co-op horror horde shooter.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1492070/",
+      "priceNote": "参考价 ¥ 20.40",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 1492070,
+  "developers": [
+    "Wales Interactive"
+  ],
+  "publishers": [
+    "Skybound Games"
+  ],
+  "releaseDate": "2024 年 4 月 18 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7, 8.1, 10 (64-bit required)\n处理器: Intel Core i5-4460 / AMD FX-6300\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM\nDirectX 版本: 11\n存储空间: 需要 15 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel Core i5-10500 / AMD Ryzen 5 2600 or better\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 970 / AMD Radeon R9 290 or better\nDirectX 版本: 11\n存储空间: 需要 15 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7, 8.1, 10 (64-bit required)\nProcessor: Intel Core i5-4460 / AMD FX-6300\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 760 / AMD Radeon R7 260x with 2GB Video RAM\nDirectX: Version 11\nStorage: 15 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel Core i5-10500 / AMD Ryzen 5 2600 or better\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 970 / AMD Radeon R9 290 or better\nDirectX: Version 11\nStorage: 15 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1492070/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:32.341Z"
+  }
+}

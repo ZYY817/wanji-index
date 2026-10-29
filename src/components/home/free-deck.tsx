@@ -100,7 +100,7 @@ function OfferTime({ o, lc, target, now, size }: { o: OfferVM; lc: string | null
             className={cn(big ? 'text-[32px] font-medium leading-none tracking-[-0.05em]' : 'text-xl font-medium leading-none tracking-[-0.04em]', lc === 'upcoming' ? 'text-info' : isUrgent(o, lc, now) ? 'text-primary' : 'text-foreground')}
             labelClassName="text-fg-3" />
         ) : (
-          <span className={cn('font-serif font-black leading-none', big ? 'text-[28px]' : 'text-lg')}>{o.type === 'permanent' ? <T zh="免费开玩" en="Free to play" /> : <T zh="长期免费" en="Always free" />}</span>
+          <span className={cn('font-display font-semibold leading-none', big ? 'text-[28px]' : 'text-lg')}>{o.type === 'permanent' ? <T zh="免费开玩" en="Free to play" /> : <T zh="长期免费" en="Always free" />}</span>
         )}
       </div>
     </div>
@@ -114,10 +114,10 @@ export function CardFace({ o, text = 1 }: { o: OfferVM; text?: MotionValue<numbe
   return (
     <>
       <GameArt src={[o.art?.hero, o.art?.capsule, o.art?.header]} name={o.gameName ?? o.title} seed={o.id} variant="wide" loading="eager" className="absolute inset-0" />
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(12,11,10,0.9)_0%,rgba(12,11,10,0.1)_55%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.1)_55%)]" />
       <motion.div className="absolute inset-x-0 bottom-0 p-7" style={{ opacity: text }}>
         <p className="flex items-center gap-2 text-sm text-foreground/85"><PlatformMark platform={o.platform} withLabel /><span className="text-fg-3">·</span>{L('freeType', o.type)}</p>
-        <h3 className="mt-2 text-balance font-serif text-[clamp(26px,2.2vw,38px)] font-black leading-tight tracking-[-0.02em]"><T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} /></h3>
+        <h3 className="mt-2 text-balance font-display text-[clamp(26px,2.2vw,38px)] font-semibold leading-tight tracking-[-0.009em]"><T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} /></h3>
         {o.titleOrig && <p className="mt-1 text-sm text-foreground/70"><T zh={o.titleOrig} en="" /></p>}
       </motion.div>
     </>
@@ -245,7 +245,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
       <section ref={ref} aria-labelledby="free-title" className="bg-background py-16">
         <div className="container-x text-center">
           <p className="text-sm text-primary"><T zh={`免费游戏 · 精选 ${n} 条 / 共 ${total} 条`} en={`Free games · ${n} picks of ${total}`} /></p>
-          <h2 id="free-title" className="mt-2 font-serif text-[clamp(32px,8vw,56px)] font-black tracking-[-0.04em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
+          <h2 id="free-title" className="mt-2 font-display text-[clamp(32px,8vw,56px)] font-semibold tracking-[-0.018em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
         </div>
         <div className="no-scrollbar mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-[var(--gutter)] pb-2">
           {items.map((x) => {
@@ -288,7 +288,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
         {/* 标题：卡组正上方 */}
         <motion.div className="absolute inset-x-0 flex flex-col items-center text-center" style={{ bottom: `calc(50% + ${h / 2 + 32}px)`, opacity: headVis, y: headY }}>
           <p className="text-sm text-primary"><T zh={`免费游戏 · 精选 ${n} 条 / 共 ${total} 条`} en={`Free games · ${n} picks of ${total}`} /></p>
-          <h2 id="free-title" className="mt-2 font-serif text-[clamp(40px,3.8vw,64px)] font-black leading-tight tracking-[-0.04em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
+          <h2 id="free-title" className="mt-2 font-display text-[clamp(40px,3.8vw,64px)] font-semibold leading-tight tracking-[-0.018em]"><T zh={hang('此刻，免费的。')} en="Free, right now." /></h2>
         </motion.div>
 
         {/* 卡组 */}
@@ -308,7 +308,7 @@ export function FreeDeck({ offers, total, from }: { offers: OfferVM[]; total: nu
 
         {/* 底边：进度 + 全部入口 */}
         <motion.div className="container-x absolute inset-x-0 bottom-[4vh] flex items-center gap-6 text-sm text-fg-3" style={{ opacity: barVis }}>
-          <span className="font-mono tabular-nums"><span className="text-foreground">{String(cur + 1).padStart(2, '0')}</span> / {String(n).padStart(2, '0')}</span>
+          <span className="tabular tabular-nums"><span className="text-foreground">{String(cur + 1).padStart(2, '0')}</span> / {String(n).padStart(2, '0')}</span>
           <span className="relative h-px flex-1 bg-border-strong"><motion.span className="absolute inset-0 origin-left bg-primary" style={{ scaleX: progress }} /></span>
           <Link href="/free/" className="border-b border-foreground/25 pb-0.5 text-fg-2 transition-colors hover:border-primary hover:text-foreground"><T zh="全部免费情报" en="All free games" /></Link>
         </motion.div>

@@ -52,7 +52,7 @@ for (const [base, bucket, label] of [['', collections, ''], ['auto', autoRecs, '
     Object.fromEntries(Object.entries(collections).map(([c, l]) => [c, l.map((x) => x.rec)])),
     Object.fromEntries(Object.entries(autoRecs).map(([c, l]) => [c, l.map((x) => x.rec)])),
   );
-  for (const coll of ['games', 'offers']) {
+  for (const coll of ['games', 'offers', 'entries']) {
     const fileOf = new Map([...collections[coll], ...autoRecs[coll]].map((x) => [x.rec, x.file]));
     const handFile = new Map(collections[coll].map((x) => [x.rec.id, x.file]));
     collections[coll] = merged[coll].map((rec) => ({ rec, file: fileOf.get(rec) ?? handFile.get(rec.id) ?? `${coll}/${rec.id}.json` }));

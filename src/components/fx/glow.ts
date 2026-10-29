@@ -3,4 +3,4 @@
  * 首页的档案、免费、资源站三章与内页刊头都用它——换的是光的颜色，不是整屏背景。
  */
 export const GLOW_IMG = 'absolute inset-0 size-full scale-125 object-cover blur-3xl saturate-[1.4]';
-export const GLOW_VEIL = 'absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(12,11,10,0.38)_0%,rgba(12,11,10,0.94)_78%)]';
+export const GLOW_VEIL = 'absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.94)_78%)]';

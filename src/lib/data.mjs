@@ -83,17 +83,27 @@ export function steamAppIdFromUrl(url) {
   return m ? m[1] : null;
 }
 
-/** appid → 各尺寸官方美术 URL；某些尺寸可能 404，由客户端 GameArt 负责回退 */
+// Steam 官方接口给出的真实美术地址（scripts/sync/steam-art.mjs 同步）：新游戏的图片在带哈希的目录里，按旧规则拼会 404
+let STEAM_ART = null;
+function steamArtMap() {
+  if (STEAM_ART) return STEAM_ART;
+  const file = join(PROJECT_ROOT, 'data', 'auto', 'steam-art.json');
+  try { STEAM_ART = existsSync(file) ? JSON.parse(readFileSync(file, 'utf8')) : {}; } catch { STEAM_ART = {}; }
+  return STEAM_ART;
+}
+
+/** appid → 各尺寸官方美术 URL：优先用同步到的真实地址，没有的尺寸按旧规则拼；仍可能 404 的由客户端 GameArt 回退 */
 export function steamArtById(appid) {
   if (!appid) return null;
   const b = `${STEAM_CDN}/${appid}`;
+  const real = steamArtMap()[String(appid)] ?? {};
   return {
     appid,
-    header: `${b}/header.jpg`,          // 460×215
-    poster: `${b}/library_600x900.jpg`, // 竖版海报
-    hero: `${b}/library_hero.jpg`,      // 1920×620 横幅
-    logo: `${b}/logo.png`,              // 透明 logo
-    capsule: `${b}/capsule_616x353.jpg`,
+    header: real.header ?? `${b}/header.jpg`,          // 460×215
+    poster: real.poster ?? `${b}/library_600x900.jpg`, // 竖版海报
+    hero: real.hero ?? `${b}/library_hero.jpg`,        // 1920×620 横幅
+    logo: `${b}/logo.png`,                             // 透明 logo
+    capsule: real.capsule ?? `${b}/capsule_616x353.jpg`,
   };
 }
 

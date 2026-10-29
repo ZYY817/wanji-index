@@ -36,7 +36,7 @@ function Row({
         <span className="flex min-w-0 flex-1 items-baseline justify-between gap-3">
           <span
             className={cn(
-              'font-serif text-[clamp(27px,7.8vw,32px)] font-black leading-none tracking-[-0.04em] transition-colors',
+              'font-display text-[clamp(27px,7.8vw,32px)] font-semibold leading-none tracking-[-0.018em] transition-colors',
               active ? 'text-primary' : 'text-foreground',
             )}
           >
@@ -93,7 +93,7 @@ export function MobileMenu({ counts, pathname }: { counts: NavCounts; pathname: 
                 <span className="absolute inset-0 rounded-full border border-fg-3/70" />
                 <span className="size-[3px] rounded-full bg-foreground" />
               </span>
-              <span className="font-serif text-lg font-black tracking-[-0.04em]">玩机索引</span>
+              <span className="font-display text-lg font-semibold tracking-[-0.018em]">玩机索引</span>
               <span className="meta text-2xs leading-none text-fg-3">/ 目录</span>
             </div>
             <DialogClose className="grid size-11 place-items-center text-fg-2 transition-colors hover:text-foreground" aria-label="关闭目录">

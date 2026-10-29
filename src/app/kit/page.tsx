@@ -67,7 +67,7 @@ export default function KitPage() {
           <ul className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
             {FEATURES.map((f, i) => (
               <li key={i} className="bg-background p-6 md:p-7">
-                <p className="font-mono text-xs text-fg-3">{String(i + 1).padStart(2, '0')}</p>
+                <p className="tabular text-xs text-fg-3">{String(i + 1).padStart(2, '0')}</p>
                 <h3 className="mt-3 text-xl font-semibold leading-snug"><T zh={f.zh[0]} en={f.en[0]} /></h3>
                 <p className="mt-3 text-base leading-[1.75] text-fg-2"><T zh={f.zh[1]} en={f.en[1]} /></p>
               </li>
@@ -100,7 +100,7 @@ export default function KitPage() {
                 return (
                   <section key={c.key} aria-labelledby={`kc-${c.key}`}>
                     <div className="flex flex-wrap items-baseline justify-between gap-3 border-b border-border-strong pb-3">
-                      <h3 id={`kc-${c.key}`} className="text-lg font-semibold"><T zh={c.zh} en={c.en} /> <span className="ml-1 font-mono text-sm font-normal text-fg-3">{list.length}</span></h3>
+                      <h3 id={`kc-${c.key}`} className="text-lg font-semibold"><T zh={c.zh} en={c.en} /> <span className="ml-1 tabular text-sm font-normal text-fg-3">{list.length}</span></h3>
                       {c.fix && (
                         <Link href={`/fixes/${c.fix}/`} className="group inline-flex min-h-11 items-center gap-1.5 text-sm text-fg-2 underline decoration-primary underline-offset-[5px] hover:text-primary">
                           <T zh="相关排障" en="Related fix" />
@@ -113,7 +113,7 @@ export default function KitPage() {
                         <li key={x.id} className="border-b border-border py-3.5">
                           <p className="flex items-baseline justify-between gap-4">
                             <span className="text-base font-medium text-foreground"><T zh={x.name} en={SHORT_EN[x.id] ?? x.short} /></span>
-                            <span className="shrink-0 font-mono text-2xs text-fg-3">
+                            <span className="shrink-0 tabular text-2xs text-fg-3">
                               {x.importance === 'essential' && <span className="mr-2 text-primary"><T zh="必备" en="essential" /></span>}
                               {x.sizeMb ? `${x.sizeMb} MB` : ''}
                             </span>
@@ -133,23 +133,23 @@ export default function KitPage() {
           <ol className="grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
             {STEPS.map(([zh, en], i) => (
               <li key={i} className="bg-background p-6 md:p-7">
-                <p className="font-mono text-3xl leading-none text-primary">{String(i + 1).padStart(2, '0')}</p>
+                <p className="tabular text-3xl leading-none text-primary">{String(i + 1).padStart(2, '0')}</p>
                 <p className="mt-4 text-base leading-[1.75] text-foreground/90"><T zh={zh} en={en} /></p>
               </li>
             ))}
           </ol>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
             {KIT.asset && (
-              <a href={KIT.asset.url} className="inline-flex h-12 items-center gap-2.5 rounded-sm bg-primary px-6 text-base font-medium text-primary-foreground transition-colors hover:bg-primary-hover">
+              <a href={KIT.asset.url} className="inline-flex h-12 items-center gap-2 rounded-full bg-cta px-7 text-[17px] font-medium text-cta-foreground transition-[background-color,transform] active:scale-[0.97] hover:bg-cta-hover">
                 <Download aria-hidden className="size-4" />
                 {KIT.asset.name}
-                <span className="font-mono text-sm opacity-70">{KIT.asset.sizeMb} MB</span>
+                <span className="tabular text-sm opacity-70">{KIT.asset.sizeMb} MB</span>
               </a>
             )}
             <a href={KIT.releaseUrl} target="_blank" rel="noopener noreferrer" className="text-base text-fg-2 underline decoration-border-strong underline-offset-[5px] hover:text-foreground">
               <T zh={`v${KIT.version} 更新说明`} en={`v${KIT.version} release notes`} />
             </a>
-            <span className="font-mono text-xs text-fg-3"><T zh="发布于" en="Released" /> {kitDate(KIT.publishedAt)} · Windows 10 / 11 x64</span>
+            <span className="tabular text-xs text-fg-3"><T zh="发布于" en="Released" /> {kitDate(KIT.publishedAt)} · Windows 10 / 11 x64</span>
           </div>
         </DetailSection>
 

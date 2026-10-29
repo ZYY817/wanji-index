@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 function Block({ id, title, children }: { id?: string; title: React.ReactNode; children: React.ReactNode }) {
   return (
     <Reveal as="section" className="scroll-mt-28 border-t border-border py-12 first:border-t-0 first:pt-0">
-      <h2 id={id} className="font-serif text-3xl font-bold tracking-[-0.03em]">{title}</h2>
+      <h2 id={id} className="font-display text-3xl font-semibold tracking-[-0.013em]">{title}</h2>
       <div className="mt-6">{children}</div>
     </Reveal>
   );
@@ -114,7 +114,7 @@ export default async function GuidePage({ params }: Params) {
               {steps.map((s, i) => (
                 <li key={i} id={`step-${i + 1}`} className="relative grid scroll-mt-28 grid-cols-[48px_minmax(0,1fr)] gap-4 pb-12 last:pb-0 sm:grid-cols-[72px_minmax(0,1fr)] sm:gap-6">
                   <div className="relative">
-                    <span className="font-mono text-3xl leading-none tabular-nums text-primary">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="tabular text-3xl leading-none tabular-nums text-primary">{String(i + 1).padStart(2, '0')}</span>
                     {i < steps.length - 1 && <span aria-hidden className="absolute bottom-[-8px] left-[0.6em] top-12 w-px bg-border" />}
                   </div>
                   <div className="min-w-0">
@@ -145,7 +145,7 @@ export default async function GuidePage({ params }: Params) {
               <ol className="space-y-4">
                 {g.recovery.map((r: string, i: number) => (
                   <li key={r} className="flex gap-4 text-base leading-[1.8] text-foreground/90">
-                    <span className="font-mono text-fg-3">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="tabular text-fg-3">{String(i + 1).padStart(2, '0')}</span>
                     <span>{r}</span>
                   </li>
                 ))}
@@ -168,7 +168,7 @@ export default async function GuidePage({ params }: Params) {
               {steps.map((s, i) => (
                 <li key={i}>
                   <a href={`#step-${i + 1}`} className="flex gap-3 border-b border-border py-3 text-base text-fg-2 transition-colors hover:text-foreground">
-                    <span className="font-mono text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
+                    <span className="tabular text-sm tabular-nums text-fg-3">{String(i + 1).padStart(2, '0')}</span>
                     {s.title || <T zh={`步骤 ${i + 1}`} en={`Step ${i + 1}`} />}
                   </a>
                 </li>

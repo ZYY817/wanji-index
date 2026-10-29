@@ -24,10 +24,9 @@ export function FooterBackToTop() {
       type="button"
       onClick={toTop}
       aria-label={l('回到页面顶部', 'Back to top')}
-      className="group inline-flex min-h-11 items-center gap-3 border border-border-strong px-4 text-sm text-fg-2 transition-colors duration-300 hover:border-foreground/55 hover:text-foreground"
+      className="group inline-flex h-9 items-center gap-1.5 rounded-full bg-white/[0.08] px-4 text-sm text-fg-2 transition-colors duration-300 hover:bg-white/[0.14] hover:text-foreground"
     >
       <span><T zh="回到顶部" en="Back to top" /></span>
-      <span aria-hidden className="h-px w-7 bg-border-strong transition-colors duration-300 group-hover:bg-foreground/50" />
       <ArrowUp aria-hidden className="size-3.5 transition-transform duration-300 group-hover:-translate-y-0.5" />
     </button>
   );

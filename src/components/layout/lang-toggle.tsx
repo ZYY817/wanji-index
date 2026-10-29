@@ -31,7 +31,7 @@ export function setLang(lang: Lang) {
 export function LangToggle({ className }: { className?: string }) {
   const lang = useLang();
   return (
-    <div role="group" aria-label="语言 / Language" className={cn('flex h-9 items-center rounded-sm border border-border-strong p-0.5 text-sm', className)}>
+    <div role="group" aria-label="语言 / Language" className={cn('flex h-8 items-center rounded-full bg-white/[0.08] p-0.5 text-xs', className)}>
       {(['zh', 'en'] as const).map((l) => (
         <button
           key={l}
@@ -39,8 +39,8 @@ export function LangToggle({ className }: { className?: string }) {
           aria-pressed={lang === l}
           onClick={() => setLang(l)}
           className={cn(
-            'h-full min-w-9 rounded-xs px-2 font-medium transition-colors',
-            lang === l ? 'bg-foreground/10 text-foreground' : 'text-fg-3 hover:text-foreground',
+            'h-full min-w-8 rounded-full px-2 font-medium transition-colors',
+            lang === l ? 'bg-white/[0.16] text-foreground shadow-[0_1px_2px_rgba(0,0,0,0.3)]' : 'text-fg-2 hover:text-foreground',
           )}
         >
           {l === 'zh' ? '中' : 'EN'}

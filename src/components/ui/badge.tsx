@@ -11,7 +11,7 @@ export function LifecycleBadge({ value, className, pulse }: { value: string | nu
   return (
     <span
       data-slot="lifecycle-badge"
-      className={cn('meta inline-flex h-[22px] items-center gap-1.5 rounded-xs px-2 font-semibold !tracking-[0.04em] text-on-solid', className)}
+      className={cn('meta inline-flex h-[22px] items-center gap-1.5 rounded-full px-2.5 font-semibold text-on-solid', className)}
       style={{ background: def.tone }}
     >
       {pulse && value === 'active' && <span aria-hidden className="size-1.5 animate-blink rounded-full bg-on-solid" />}
@@ -26,7 +26,7 @@ export function StatusBadge({ value, className }: { value: string | null | undef
   return (
     <span
       data-slot="status-badge"
-      className={cn('meta inline-flex h-[22px] items-center rounded-xs border px-2 !tracking-[0.04em]', def.dashed && 'border-dashed', className)}
+      className={cn('meta inline-flex h-[22px] items-center rounded-full border px-2.5', def.dashed && 'border-dashed', className)}
       style={{ color: def.tone, borderColor: def.tone }}
     >
       <T zh={def.label} en={def.en} />
@@ -36,7 +36,7 @@ export function StatusBadge({ value, className }: { value: string | null | undef
 
 export function Tag({ children, className, ...rest }: React.HTMLAttributes<HTMLSpanElement>) {
   return (
-    <span className={cn('inline-flex h-6 items-center rounded-xs bg-surface-2 px-2 text-xs text-fg-2', className)} {...rest}>
+    <span className={cn('inline-flex h-6 items-center rounded-full bg-white/[0.08] px-2.5 text-xs text-fg-2', className)} {...rest}>
       {children}
     </span>
   );

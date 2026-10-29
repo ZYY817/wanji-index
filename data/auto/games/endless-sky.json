@@ -1,0 +1,63 @@
+{
+  "id": "endless-sky",
+  "slug": "endless-sky",
+  "name": {
+    "zh": "Endless Sky"
+  },
+  "summary": "Endless Sky is a 2D space trading and combat game inspired by the classic Escape Velocity series.",
+  "summaryEn": "Endless Sky is a 2D space trading and combat game inspired by the classic Escape Velocity series.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg",
+    "simulation"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/404410/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 404410,
+  "developers": [
+    "Michael Zahniser"
+  ],
+  "publishers": [
+    "Michael Zahniser"
+  ],
+  "releaseDate": "2015 年 10 月 30 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n内存: 750 MB RAM\n显卡: OpenGL 3.0\n存储空间: 需要 350 MB 可用空间",
+    "recommended": "推荐配置:\n内存: 2 GB RAM\n显卡: OpenGL 3.3\n存储空间: 需要 1500 MB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nMemory: 750 MB RAM\nGraphics: OpenGL 3.0\nStorage: 350 MB available space",
+    "recommended": "Recommended:\nMemory: 2 GB RAM\nGraphics: OpenGL 3.3\nStorage: 1500 MB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/404410/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:28.446Z"
+  }
+}

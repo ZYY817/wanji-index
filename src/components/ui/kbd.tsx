@@ -1,14 +1,13 @@
 import { cn } from '@/lib/utils';
 
 /**
- * 机械键帽组件（Origin UI / Claude Code 风格）：
- * 具备物理键帽下边缘倒角（border-b-2）与按压微位移动效（active:translate-y-0.5），触感强烈。
+ * 键帽：浅灰小圆角块（macOS 菜单里快捷键的样式），不做立体倒角。
  */
 export function Kbd({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <kbd
       className={cn(
-        'inline-flex h-5 min-w-5 select-none items-center justify-center rounded-xs border border-border-strong border-b-2 bg-surface-2 px-1.5 font-mono text-2xs font-semibold leading-none text-fg-2 shadow-2xs transition-transform active:translate-y-0.5 active:border-b',
+        'inline-flex h-5 min-w-5 select-none items-center justify-center rounded-[5px] bg-white/[0.08] px-1.5 font-sans text-2xs font-medium leading-none text-fg-2 ring-1 ring-inset ring-white/[0.06]',
         className,
       )}
     >

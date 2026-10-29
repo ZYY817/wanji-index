@@ -23,7 +23,7 @@ export function SiteFooter({ stats, build }: { stats: { key: string; label: Reac
       {/* 1 · 结语 + 导航 + 收录：一行三栏，压在一屏之内（之前三段纵向堆叠，短页面上页脚比正文还长） */}
       <div className="container-x grid gap-x-12 gap-y-12 pb-4 pt-20 md:pt-24 lg:grid-cols-12">
         <div className="lg:col-span-5">
-          <p className="font-serif text-[clamp(26px,3vw,44px)] font-black leading-[1.15] tracking-[-0.04em]">
+          <p className="font-display text-[clamp(26px,3vw,44px)] font-semibold leading-[1.15] tracking-[-0.018em]">
             <span className="block"><T zh="PC 游戏资源，一处收齐。" en="PC game resources, all in one place." /></span>
             <span className="block text-foreground/45"><T zh="全部免费。" en="All free." /></span>
           </p>
@@ -55,12 +55,12 @@ export function SiteFooter({ stats, build }: { stats: { key: string; label: Reac
             {stats.map((s) => (
               <div key={s.key} className="flex min-h-11 items-center justify-between border-b border-border/60 text-base">
                 <dt className="text-fg-2">{s.label}</dt>
-                <dd className="font-mono tabular-nums text-foreground">{s.value}</dd>
+                <dd className="tabular tabular-nums text-foreground">{s.value}</dd>
               </div>
             ))}
             <div className="flex min-h-11 items-center justify-between border-b border-border/60 text-base">
               <dt className="text-fg-2"><T zh="最近更新" en="Last updated" /></dt>
-              <dd className="font-mono text-sm tabular-nums text-foreground">{build}</dd>
+              <dd className="tabular text-sm tabular-nums text-foreground">{build}</dd>
             </div>
           </dl>
         </div>
@@ -68,7 +68,7 @@ export function SiteFooter({ stats, build }: { stats: { key: string; label: Reac
 
       {/* 2 · 字标：实色、低透明度，被页底裁切 */}
       <div aria-hidden className="relative mt-10 h-[clamp(64px,8vw,150px)] select-none overflow-hidden md:mt-14">
-        <span className="absolute inset-x-0 top-0 block whitespace-nowrap text-center font-serif text-[clamp(72px,12vw,220px)] font-black leading-[0.74] tracking-[-0.075em] text-foreground/[0.07]">
+        <span className="absolute inset-x-0 top-0 block whitespace-nowrap text-center font-display text-[clamp(72px,12vw,220px)] font-semibold leading-[0.74] tracking-[-0.034em] text-foreground/[0.07]">
           玩机索引
         </span>
       </div>

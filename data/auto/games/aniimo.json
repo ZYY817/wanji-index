@@ -1,0 +1,78 @@
+{
+  "id": "aniimo",
+  "slug": "aniimo",
+  "name": {
+    "zh": "伊莫",
+    "en": "Aniimo"
+  },
+  "summary": "《伊莫》是一款多人在线大世界捉宠RPG。你将在广袤的艾德尔大陆上邂逅各种神奇生物——伊莫。和他们联结合体，还能以全新的视角和能力感受这个世界的美好。你也可以来到浮空天际的近未来都市，邂逅其他冒险家，交流旅途心得或是感受竞技的魅力。",
+  "summaryEn": "Aniimo is a free-to-play, next-gen creature-catching open-world RPG.",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo",
+    "rpg",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/4126040/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 4126040,
+  "developers": [
+    "Pawprint Studio"
+  ],
+  "publishers": [
+    "Pawprint Studio"
+  ],
+  "releaseDate": "2026 年 9 月 15 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows10\n处理器: Intel Core i7-4770 / AMD Ryzen 7 2700\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 970 / AMD Radeon RX 5600\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 40 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows11以上\n处理器: Intel Core i7-10700 / AMD Ryzen 5 5600 及以上\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 及以上\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 40 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows10\nProcessor: Intel Core i7-4770 / AMD Ryzen 7 2700\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 970 / AMD Radeon RX 5600\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 40 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows10 or above\nProcessor: Intel Core i7-10700 / AMD Ryzen 5 5600 or better\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 3060 / AMD Radeon RX 6700 or better\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 40 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/4126040/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Aniimo"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:37.361Z",
+    "pcgw": {
+      "syncedAt": "2026-10-28T13:17:58.594Z",
+      "page": "Aniimo"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Aniimo\\Aniimo",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

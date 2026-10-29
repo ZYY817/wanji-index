@@ -79,14 +79,14 @@ export default async function GamePage({ params }: Params) {
         <Reveal as="aside" className="flex flex-wrap items-center gap-x-6 gap-y-3 border-t border-border py-8 text-sm text-fg-2">
           <span className="font-medium text-foreground"><T zh="档案信息" en="About this page" /></span>
           <StatusBadge value={d.reviewStatus} />
-          <span className="font-mono text-2xs text-fg-3"><T zh="核验于" en="Checked" /> {d.checkedAt}</span>
+          <span className="tabular text-2xs text-fg-3"><T zh="核验于" en="Checked" /> {d.checkedAt}</span>
           {d.autoSources.length > 0 && (
             <span className="basis-full text-sm text-fg-3 md:basis-auto">
               <T zh="部分信息自动收录自" en="Some details collected automatically from" />{' '}
               {d.autoSources.map((s, i) => (
                 <span key={s.url}>{i > 0 && '、'}<a href={s.url} target="_blank" rel="noopener noreferrer" className="underline decoration-border-strong underline-offset-4 hover:text-foreground">{s.name === 'Steam 商店' ? <T zh={s.name} en="Steam Store" /> : s.name}</a></span>
               ))}
-              {d.syncedAt && <><T zh="，更新于" en=", updated" /> <span className="font-mono text-2xs">{d.syncedAt}</span></>}
+              {d.syncedAt && <><T zh="，更新于" en=", updated" /> <span className="tabular text-2xs">{d.syncedAt}</span></>}
             </span>
           )}
           <FeedbackLink page={`${vm.name}（/games/${vm.slug}/）`} className="ml-auto inline-flex min-h-11 items-center text-fg-2 underline underline-offset-4 hover:text-foreground">
@@ -99,7 +99,7 @@ export default async function GamePage({ params }: Params) {
         <section aria-labelledby="related-title" className="border-t border-border py-16 md:py-24">
           <div className="container-x">
             <Reveal>
-              <h2 id="related-title" className="font-serif text-3xl font-bold tracking-[-0.03em] md:text-4xl"><T zh="继续探索" en="Keep exploring" /></h2>
+              <h2 id="related-title" className="font-display text-3xl font-semibold tracking-[-0.013em] md:text-4xl"><T zh="继续探索" en="Keep exploring" /></h2>
               <p className="mt-3 text-base text-fg-2"><T zh={`与${vm.name}相近的游戏档案。`} en={`Games similar to ${d.enName || vm.name}.`} /></p>
             </Reveal>
             <Reveal delay={0.08} className="mt-10 grid grid-cols-2 gap-5 sm:grid-cols-4 lg:grid-cols-6">

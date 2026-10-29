@@ -39,7 +39,7 @@ export function DetailMasthead({
             {mark}
             {kicker && <p className="text-sm text-fg-2">{kicker}</p>}
           </div>
-          <h1 className="mt-4 animate-rise break-words font-serif text-4xl font-bold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
+          <h1 className="mt-4 animate-rise break-words font-display text-4xl font-semibold tracking-tight text-foreground md:text-5xl leading-tight" style={rise(2)}>
             {title}
           </h1>
           {summary && (

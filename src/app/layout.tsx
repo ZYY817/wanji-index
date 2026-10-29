@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next';
 import Script from 'next/script';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
-// 宋体只加载网站用到的字（scripts/subset-fonts.mjs 生成；新增内容出现新字时运行 npm run fonts）
-import '../fonts/serif.css';
+// 思源黑体只加载网站用到的字（scripts/subset-fonts.mjs 生成；新增内容出现新字时运行 npm run fonts）
+import '../fonts/sans.css';
 import './globals.css';
 import { Providers } from '@/components/layout/providers';
 import { CommandProvider } from '@/components/layout/command-palette';
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', images: [withBase('/og.jpg')] },
 };
 
-export const viewport: Viewport = { themeColor: '#131211', colorScheme: 'dark' };
+export const viewport: Viewport = { themeColor: '#000000', colorScheme: 'dark' };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const data = loadData();
@@ -49,13 +49,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="min-h-screen">
-        <a href="#main" className="sr-only z-[100] bg-primary px-4 py-2 text-primary-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
+        <a href="#main" className="sr-only z-[100] rounded-full bg-cta px-4 py-2 text-cta-foreground focus:not-sr-only focus:fixed focus:left-4 focus:top-4">
           {t('跳到正文', 'Skip to content')}
         </a>
         <Providers>
           <CommandProvider>
             <SiteHeader counts={counts} />
-            <div aria-hidden className="film-grain" />
             <main id="main">{children}</main>
             <SiteFooter
               build={buildStamp()}

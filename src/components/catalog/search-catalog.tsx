@@ -35,7 +35,7 @@ function ResultRow({ item }: { item: RecentItem }) {
 function Message({ title, children, role = 'status' }: { title: React.ReactNode; children?: React.ReactNode; role?: 'status' | 'alert' }) {
   return (
     <section role={role} className="py-16">
-      <h2 className="font-serif text-3xl font-bold">{title}</h2>
+      <h2 className="font-display text-3xl font-semibold">{title}</h2>
       {children}
     </section>
   );
@@ -81,7 +81,7 @@ export function SearchCatalog() {
     body = (
       <div className="grid gap-12 py-14 lg:grid-cols-12">
         <div className="lg:col-span-4">
-          <h2 className="font-serif text-3xl font-bold leading-snug"><T zh={<>想玩什么，<br />或遇到了什么问题？</>} en={<>What do you want to play,<br />or what went wrong?</>} /></h2>
+          <h2 className="font-display text-3xl font-semibold leading-snug"><T zh={<>想玩什么，<br />或遇到了什么问题？</>} en={<>What do you want to play,<br />or what went wrong?</>} /></h2>
           <p className="mt-4 text-base text-fg-2"><T zh="可以试试这些关键词：" en="Try one of these:" /></p>
           <div className="mt-4 flex flex-wrap gap-2">
             {(lang === 'en' ? SUGGESTIONS_EN : SUGGESTIONS).map((term) => <Button key={term} onClick={() => setQuery(term)}>{term}</Button>)}
@@ -132,7 +132,7 @@ export function SearchCatalog() {
           onChange={(e) => setQuery(e.target.value)}
           placeholder={l('输入游戏名、工具名或报错…', 'Type a game, a tool or an error…')}
           autoComplete="off"
-          className="min-w-0 flex-1 bg-transparent py-2 font-serif text-[clamp(20px,3.6vw,48px)] font-bold tracking-[-0.02em] placeholder:text-fg-3"
+          className="min-w-0 flex-1 bg-transparent py-2 font-display text-[clamp(20px,3.6vw,48px)] font-semibold tracking-[-0.009em] placeholder:text-fg-3"
         />
         {q && <Button size="icon" variant="ghost" onClick={() => setQuery('')} aria-label={l('清空搜索', 'Clear search')}><X aria-hidden /></Button>}
       </div>

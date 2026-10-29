@@ -32,7 +32,7 @@ function SectionHead({ label, count }: { label: React.ReactNode; count?: number 
       <h3 className="text-xs font-medium tracking-[0.08em] text-foreground">
         {label}
       </h3>
-      {count != null && <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>}
+      {count != null && <span className="tabular text-2xs tabular-nums text-fg-3">{pad2(count)}</span>}
     </div>
   );
 }
@@ -44,8 +44,8 @@ function SearchField({ value, onChange, variant = 'rail' }: { value: string; onC
   return (
     <div
       className={cn(
-        'flex items-center rounded-xs border border-border bg-surface-2/40 px-2.5 py-1 text-sm transition-colors focus-within:border-primary/80 focus-within:bg-card',
-        bar ? 'min-h-11 gap-2.5 px-3' : 'gap-2',
+        'flex items-center rounded-full bg-white/[0.07] px-3.5 py-1 text-sm ring-1 ring-transparent transition-[box-shadow,background-color] focus-within:bg-white/[0.1] focus-within:ring-primary/70',
+        bar ? 'min-h-10 gap-2.5 px-4' : 'gap-2',
       )}
     >
       <Search aria-hidden className="size-3.5 shrink-0 text-fg-3" />
@@ -122,7 +122,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
       )}
     >
       <span className="flex-1"><T zh="全部类型" en="All genres" /></span>
-      <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
+      <span className="tabular text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
     </button>
   );
 
@@ -146,7 +146,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
               >
                 <span aria-hidden className={cn('size-1 shrink-0', active ? 'bg-primary' : 'bg-border-strong')} />
                 <span className="truncate">{G(key)}</span>
-                <span className={cn('ml-auto shrink-0 font-mono text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
+                <span className={cn('ml-auto shrink-0 tabular text-2xs tabular-nums', active ? 'text-primary' : 'text-fg-3')}>{pad2(count)}</span>
               </button>
             );
           })}
@@ -175,7 +175,7 @@ function GenreButtons({ q, update, genres, total, primary }: { q: CatalogQuery; 
                 )}
               >
                 <span className="flex-1 truncate">{G(key)}</span>
-                <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
+                <span className="tabular text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
               </button>
             </li>
           );
@@ -210,7 +210,7 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
         )}
       >
         <span className="flex-1"><T zh="全部平台" en="All platforms" /></span>
-        <span className="font-mono text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
+        <span className="tabular text-2xs tabular-nums text-fg-3">{pad2(total)}</span>
       </button>
       {platforms.map(({ key, count }) => {
         const active = q.platform === key;
@@ -227,7 +227,7 @@ function PlatformButtons({ q, update, platforms, primary, total }: { q: CatalogQ
             )}
           >
             <PlatformMark platform={key} withLabel />
-            <span className="ml-auto font-mono text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
+            <span className="ml-auto tabular text-2xs tabular-nums text-fg-3">{pad2(count)}</span>
           </button>
         );
       })}
@@ -330,7 +330,7 @@ export function FilterIndex({ q, update, genres, platforms, total }: { q: Catalo
         className="sticky top-[calc(var(--sticky-top)+28px)] max-h-[calc(100dvh-var(--sticky-top)-48px)] overflow-y-auto overscroll-contain pb-4 pr-1 transition-[top] duration-300"
       >
         <div className="flex items-baseline justify-between gap-3 border-b border-border-strong pb-3">
-          <h2 className="font-serif text-xl font-bold tracking-[-0.02em]"><T zh="筛选" en="Filters" /></h2>
+          <h2 className="font-display text-xl font-semibold tracking-[-0.009em]"><T zh="筛选" en="Filters" /></h2>
         </div>
 
         <div className="mt-4">
@@ -395,7 +395,7 @@ export function MobileFilterBar({
             >
               <SlidersHorizontal className="size-4" aria-hidden />
               {activeCount > 0 && (
-                <span aria-hidden className="absolute -right-1.5 -top-1.5 grid h-[18px] min-w-[18px] place-items-center bg-primary px-1 font-mono text-2xs leading-none tabular-nums text-primary-foreground">
+                <span aria-hidden className="absolute -right-1.5 -top-1.5 grid h-[18px] min-w-[18px] place-items-center rounded-full bg-cta px-1 tabular text-2xs leading-none tabular-nums text-cta-foreground">
                   {activeCount}
                 </span>
               )}
@@ -416,7 +416,7 @@ export function MobileFilterBar({
                 <p className="meta text-fg-3"><T zh={`筛选结果 ${resultCount} 款`} en={`${resultCount} results`} /></p>
                 <div className="mt-1 flex items-baseline gap-2.5">
                   <span aria-hidden className="h-px w-5 bg-primary" />
-                  <DialogTitle className="font-serif text-2xl font-bold leading-none tracking-[-0.02em]"><T zh="筛选" en="Filters" /></DialogTitle>
+                  <DialogTitle className="font-display text-2xl font-semibold leading-none tracking-[-0.009em]"><T zh="筛选" en="Filters" /></DialogTitle>
                 </div>
               </div>
               <div className="flex items-center gap-1">
@@ -448,14 +448,14 @@ export function MobileFilterBar({
 
               <section aria-labelledby="sheet-genre" className="mt-7">
                 <h3 id="sheet-genre" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
-                  <T zh="类型" en="Genre" /> <span className="font-mono text-2xs text-fg-3">{pad2(genres.length)}</span>
+                  <T zh="类型" en="Genre" /> <span className="tabular text-2xs text-fg-3">{pad2(genres.length)}</span>
                 </h3>
                 <GenreButtons q={q} update={update} genres={genres} total={total} primary />
               </section>
 
               <section aria-labelledby="sheet-platform" className="mt-7">
                 <h3 id="sheet-platform" className="mb-2 flex items-baseline justify-between border-b border-border pb-2 text-2xs font-medium tracking-[0.04em] text-fg-2">
-                  <T zh="平台" en="Platform" /> <span className="font-mono text-2xs text-fg-3">{pad2(platforms.length)}</span>
+                  <T zh="平台" en="Platform" /> <span className="tabular text-2xs text-fg-3">{pad2(platforms.length)}</span>
                 </h3>
                 <PlatformButtons q={q} update={update} platforms={platforms} total={total} primary />
               </section>
@@ -467,7 +467,7 @@ export function MobileFilterBar({
                   type="button"
                   className="inline-flex min-h-12 w-full items-center justify-center gap-2.5 bg-foreground px-4 text-base font-medium text-background transition-colors hover:bg-fg-2"
                 >
-                  <T zh="查看" en="Show" /> <span className="font-mono text-sm tabular-nums">{pad3(resultCount)}</span> <T zh="个档案" en="games" />
+                  <T zh="查看" en="Show" /> <span className="tabular text-sm tabular-nums">{pad3(resultCount)}</span> <T zh="个档案" en="games" />
                   <ArrowRight className="size-4" aria-hidden />
                 </button>
               </DialogClose>

@@ -36,7 +36,7 @@ export function ChannelList({ items }: { items: ChannelItem[] }) {
             </div>
             <p className="mt-1.5 text-sm text-fg-2">
               <T zh={c.note} en={c.noteEn} />
-              <span className="font-mono text-2xs text-fg-3"> · <T zh="核验于" en="Checked" /> {c.checkedAt}</span>
+              <span className="tabular text-2xs text-fg-3"> · <T zh="核验于" en="Checked" /> {c.checkedAt}</span>
             </p>
           </div>
           <AcquireButton
@@ -89,7 +89,7 @@ export function EntryList({ items }: { items: EntryItem[] }) {
             title={e.name}
             badge={<><Tag><T zh={e.typeLabel} en={e.typeLabelEn} /></Tag><Health value={e.health === 'dead' ? undefined : e.health} /></>}
             description={e.note}
-            meta={<>{e.site ? <T zh={`来自 ${e.site.name}`} en={`From ${e.site.name}`} /> : <T zh="外部链接" en="External link" />} · <span className="font-mono text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
+            meta={<>{e.site ? <T zh={`来自 ${e.site.name}`} en={`From ${e.site.name}`} /> : <T zh="外部链接" en="External link" />} · <span className="tabular text-2xs"><T zh="核验于" en="Checked" /> {e.checkedAt}</span></>}
           />
         </li>
       ))}

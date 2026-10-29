@@ -57,7 +57,7 @@ export function Hero({ heroes, popular, counts }: {
   const rise = (i: number) => ({ animationDelay: `calc(var(--intro-delay, 0s) + ${0.15 + i * 0.09}s)` });
 
   return (
-    <section ref={ref} aria-label="Wanji Index" className="grain relative h-[100svh] min-h-[680px] overflow-hidden bg-shell">
+    <section ref={ref} aria-label="Wanji Index" className="relative h-[100svh] min-h-[680px] overflow-hidden bg-shell">
       {/* 美术层：滚动推近（motion）× 每张自身的缓慢推近（CSS） */}
       <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale }}>
         {heroes.map((h, i) => (i === 0 || extra) && (
@@ -79,16 +79,16 @@ export function Hero({ heroes, popular, counts }: {
       </motion.div>
 
       {/* 压暗：中心留亮、四周与底部收暗，保证标题在任何美术上都可读 */}
-      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(19,18,17,0.22)_0%,rgba(19,18,17,0.55)_58%,rgba(19,18,17,0.9)_100%)]" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,#131211_0%,transparent_100%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(0,0,0,0.38)_0%,rgba(0,0,0,0.5)_55%,rgba(0,0,0,0.82)_100%)]" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-1/3 bg-[linear-gradient(0deg,#000000_0%,transparent_100%)]" />
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
       {/* 正中内容 */}
       <motion.div className="container-x relative z-10 flex h-full flex-col items-center justify-center pt-[var(--header-h)] text-center" style={{ y: textY, opacity: textFade }}>
-        <p className="animate-rise text-sm tracking-[0.3em] text-primary" style={rise(0)}><T zh="PC 游戏资源索引" en="PC GAME RESOURCE INDEX" /></p>
-        <h1 className="mt-6 font-serif text-[clamp(44px,6.6vw,108px)] font-black leading-[1.04] tracking-[-0.045em]">
+        <p className="animate-rise text-[17px] font-semibold tracking-[-0.005em] text-foreground/90" style={rise(0)}><T zh="PC 游戏资源索引" en="PC game resource index" /></p>
+        <h1 className="mt-6 font-display text-[clamp(44px,6.6vw,108px)] font-semibold leading-[1.04] tracking-[-0.02em]">
           {([['每一款游戏，', 'Every game'], ['都有一份档案。', 'gets a file.']] as const).map(([line, lineEn], i) => (
-            <span key={line} className="block overflow-hidden pb-[0.06em]">
+            <span key={line} className="-mx-[0.6em] block overflow-hidden px-[0.6em] pb-[0.06em]">
               <span className="block animate-line-up" style={{ animationDelay: `calc(var(--intro-delay, 0s) + ${0.25 + i * 0.1}s)` }}><T zh={hang(line)} en={lineEn} /></span>
             </span>
           ))}
@@ -117,18 +117,18 @@ export function Hero({ heroes, popular, counts }: {
             onClick={() => setPaused((v) => !v)}
             aria-label={paused ? 'Play' : 'Pause'}
             aria-pressed={paused}
-            className="grid size-9 shrink-0 place-items-center rounded-full border border-foreground/25 text-fg-2 transition-colors hover:border-foreground/60 hover:text-foreground"
+            className="glass grid size-9 shrink-0 place-items-center rounded-full text-fg-2 transition-colors hover:text-foreground"
           >
             {paused ? <Play className="size-3.5" aria-hidden /> : <Pause className="size-3.5" aria-hidden />}
           </button>
           <div className="flex items-center gap-1.5">
             {heroes.map((h, i) => (
               <button key={h.id} type="button" onClick={() => { setIdx(i); setExtra(true); }} aria-label={h.en || h.name} aria-pressed={i === idx} className="grid h-9 w-8 place-items-center">
-                <span className="relative block h-[2px] w-full overflow-hidden bg-foreground/20">
+                <span className="relative block h-[3px] w-full overflow-hidden rounded-full bg-foreground/25">
                   {i === idx && (
                     <span
                       key={`${idx}-${running}`}
-                      className={cn('absolute inset-y-0 left-0 w-full origin-left bg-primary', running && 'animate-[progress_7s_linear_both]')}
+                      className={cn('absolute inset-y-0 left-0 w-full origin-left rounded-full bg-foreground', running && 'animate-[progress_7s_linear_both]')}
                     />
                   )}
                 </span>

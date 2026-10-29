@@ -95,7 +95,7 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
               onChange={(e) => setQuery(e.target.value)}
               placeholder={l('搜索型号，如 1660、RX 580、Iris Xe', 'Search a model, e.g. 1660, RX 580, Iris Xe')}
               aria-label={l('搜索显卡型号', 'Search GPU model')}
-              className="h-11 w-full rounded-sm border border-input bg-background px-3 text-base text-foreground placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-ring"
+              className="h-11 w-full rounded-full bg-white/[0.07] px-4 text-base text-foreground placeholder:text-fg-3 focus-visible:outline-2 focus-visible:outline-ring"
             />
             {matches.length > 0 && (
               <ul className="absolute inset-x-0 top-full z-10 mt-1 max-h-72 overflow-auto rounded-sm border border-border-strong bg-popover py-1 shadow-lg">
@@ -126,7 +126,7 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
                 aria-checked={ram === r}
                 onClick={() => setRam(r)}
                 className={cn(
-                  'h-11 min-w-[64px] rounded-sm border px-3 font-mono text-base tabular-nums transition-colors',
+                  'h-11 min-w-[64px] rounded-sm border px-3 tabular text-base tabular-nums transition-colors',
                   ram === r ? 'border-primary bg-primary/10 text-primary' : 'border-border-strong text-fg-2 hover:border-foreground/60 hover:text-foreground',
                 )}
               >

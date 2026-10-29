@@ -10,7 +10,7 @@ export function ExtLink({
     return (
       <span aria-disabled="true" className={cn('cursor-not-allowed text-fg-3 line-through decoration-fg-3/60', className)}>
         {children}
-        <span className="ml-2 font-mono text-2xs tracking-[0.04em] text-bad no-underline"><T zh="已失效" en="Broken" /></span>
+        <span className="ml-2 tabular text-2xs tracking-[0.04em] text-bad no-underline"><T zh="已失效" en="Broken" /></span>
       </span>
     );
   return (

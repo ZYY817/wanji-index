@@ -51,6 +51,11 @@ async function candidates(handApps, autoRecs) {
     await sleep(61000); // SteamSpy 的 all 接口每分钟限 1 次
   }
   for (const a of cfg.extraAppIds ?? []) set.set(String(a), null);
+  // 免费情报里的 Steam 游戏（热门免费、限时领取）也建档：免费卡片能点进档案，档案页能显示存档、配置、已知问题
+  for (const o of [...readHand('offers'), ...readAuto('offers').values()]) {
+    const a = o.steamAppId ?? /store\.steampowered\.com\/app\/(\d+)/.exec(o.url ?? '')?.[1];
+    if (a && !set.has(String(a))) set.set(String(a), null);
+  }
   for (const a of cfg.excludeAppIds ?? []) set.delete(String(a));
   return set;
 }

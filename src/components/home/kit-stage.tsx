@@ -40,11 +40,11 @@ const archOf = (c: KitComponent) => /-(x64|x86)$/.exec(c.id)?.[1];
 
 // 类别：底色（纸面上的低饱和色）与图例
 const CATS: { key: string; cats: string[]; zh: string; en: string; tone: string }[] = [
-  { key: 'vc', cats: ['vcredist'], zh: 'Visual C++', en: 'Visual C++', tone: '#E6D9BF' },
-  { key: 'net', cats: ['dotnet'], zh: '.NET', en: '.NET', tone: '#D5DDCF' },
-  { key: 'dx', cats: ['directx', 'runtime', 'windows'], zh: 'DirectX 与系统组件', en: 'DirectX & Windows', tone: '#D3DAE2' },
-  { key: 'mw', cats: ['middleware'], zh: '游戏中间件', en: 'Middleware', tone: '#E3D2CC' },
-  { key: 'opt', cats: ['setting'], zh: '系统优化', en: 'Tweaks', tone: '#ECE6D8' },
+  { key: 'vc', cats: ['vcredist'], zh: 'Visual C++', en: 'Visual C++', tone: '#E3E8F2' },
+  { key: 'net', cats: ['dotnet'], zh: '.NET', en: '.NET', tone: '#E1EFE6' },
+  { key: 'dx', cats: ['directx', 'runtime', 'windows'], zh: 'DirectX 与系统组件', en: 'DirectX & Windows', tone: '#DDE7F5' },
+  { key: 'mw', cats: ['middleware'], zh: '游戏中间件', en: 'Middleware', tone: '#F3E3E1' },
+  { key: 'opt', cats: ['setting'], zh: '系统优化', en: 'Tweaks', tone: '#ECECF0' },
 ];
 const catOf = (c: KitComponent) => CATS.find((k) => k.cats.includes(c.category)) ?? CATS[CATS.length - 1];
 // 按类别排好：同色连成一片
@@ -76,13 +76,13 @@ function TileFace({ c, i }: { c: KitComponent; i: number }) {
         <span>{String(i + 1).padStart(2, '0')}</span>
         {arch && <span>{arch}</span>}
       </span>
-      <span className="font-serif text-[1.5em] font-black leading-none tracking-[-0.03em]">{symbolOf(c)}</span>
+      <span className="font-display text-[1.5em] font-semibold leading-none tracking-[-0.013em]">{symbolOf(c)}</span>
       <span className="truncate text-[0.62em] leading-tight text-ink-2"><T zh={c.short} en={SHORT_EN[c.id] ?? c.short} /></span>
     </>
   );
 }
 
-const TILE_CLS = 'relative flex aspect-[1/1.12] flex-col justify-between overflow-hidden rounded-[6px] p-[0.55em] text-ink shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_10px_20px_-14px_rgba(50,40,25,0.5)]';
+const TILE_CLS = 'relative flex aspect-[1/1.12] flex-col justify-between overflow-hidden rounded-[6px] p-[0.55em] text-ink shadow-[0_1px_0_rgba(255,255,255,0.6)_inset,0_10px_20px_-14px_rgba(0,0,0,0.5)]';
 
 /** 动画版：从窗口方向（左侧）依次落位；缺失项在装齐阶段依次点亮 */
 function LiveTile({ c, i, p }: { c: KitComponent; i: number; p: MotionValue<number> }) {
@@ -100,8 +100,8 @@ function LiveTile({ c, i, p }: { c: KitComponent; i: number; p: MotionValue<numb
       {k >= 0 && (
         <>
           {/* 缺失：虚线外框 + 红点；装好后淡出，换成墨色实点 */}
-          <motion.span aria-hidden className="pointer-events-none absolute inset-0 rounded-[6px] border border-dashed border-[#B4473F]/70 bg-paper/45" style={{ opacity: ringO }} />
-          <motion.span aria-hidden className="absolute right-[0.55em] top-[1.7em] size-[0.45em] rounded-full bg-[#B4473F]" style={{ opacity: ringO }} />
+          <motion.span aria-hidden className="pointer-events-none absolute inset-0 rounded-[6px] border border-dashed border-[#FF3B30]/70 bg-paper/45" style={{ opacity: ringO }} />
+          <motion.span aria-hidden className="absolute right-[0.55em] top-[1.7em] size-[0.45em] rounded-full bg-[#FF3B30]" style={{ opacity: ringO }} />
           <motion.span aria-hidden className="absolute right-[0.55em] top-[1.7em] size-[0.45em] rounded-full bg-ink" style={{ opacity: fixed }} />
         </>
       )}
@@ -120,7 +120,7 @@ function Legend({ className }: { className?: string }) {
     <ul className={cn('flex flex-wrap gap-x-5 gap-y-1.5 text-[0.8em] text-ink-2', className)}>
       {CATS.map((k) => (
         <li key={k.key} className="flex items-center gap-1.5">
-          <span aria-hidden className="size-[0.8em] rounded-[2px]" style={{ background: k.tone, boxShadow: 'inset 0 0 0 1px rgba(18,17,16,0.12)' }} />
+          <span aria-hidden className="size-[0.8em] rounded-[2px]" style={{ background: k.tone, boxShadow: 'inset 0 0 0 1px rgba(0,0,0,0.12)' }} />
           <T zh={k.zh} en={k.en} />
           <span className="font-mono text-ink-3">{COMPS.filter((c) => k.cats.includes(c.category)).length}</span>
         </li>
@@ -152,7 +152,7 @@ function Actions({ className }: { className?: string }) {
   return (
     <div className={cn('flex flex-wrap items-center gap-3', className)}>
       {KIT.asset && (
-        <a href={KIT.asset.url} className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'shadow-[0_24px_40px_-20px_rgba(20,16,10,0.6)]')}>
+        <a href={KIT.asset.url} className={cn(buttonVariants({ variant: 'ink', size: 'lg' }), 'shadow-[0_24px_40px_-20px_rgba(0,0,0,0.6)]')}>
           <Download aria-hidden /> <T zh={`下载 v${KIT.version}`} en={`Download v${KIT.version}`} />
         </a>
       )}
@@ -167,11 +167,11 @@ function Actions({ className }: { className?: string }) {
 function DownloadPanel({ className }: { className?: string }) {
   return (
     <div className={className}>
-      <p className="font-mono text-xs tracking-[0.2em] text-ink-3">WANJI-KIT</p>
+      <p className="tabular text-xs tracking-[0.04em] text-ink-3">WANJI-KIT</p>
       <div className="mt-3 flex items-end gap-8">
-        <p className="font-serif text-[clamp(56px,6vw,104px)] font-black leading-[0.85] tracking-[-0.05em]">v{KIT.version}</p>
+        <p className="font-display text-[clamp(56px,6vw,104px)] font-semibold leading-[0.85] tracking-[-0.023em]">v{KIT.version}</p>
         {KIT.asset && (
-          <p className="pb-1 font-mono text-[clamp(22px,2vw,32px)] leading-none text-ink-2">{KIT.asset.sizeMb}<span className="ml-1 text-[0.55em]">MB</span></p>
+          <p className="pb-1 tabular text-[clamp(22px,2vw,32px)] leading-none text-ink-2">{KIT.asset.sizeMb}<span className="ml-1 text-[0.55em]">MB</span></p>
         )}
       </div>
       <Specs className="mt-7" />
@@ -184,7 +184,7 @@ function DownloadPanel({ className }: { className?: string }) {
 function Frame({ children, className, style }: { children: React.ReactNode; className?: string; style?: React.ComponentProps<typeof motion.div>['style'] }) {
   return (
     <motion.div
-      className={cn('relative overflow-hidden rounded-[12px] bg-[#EFEAE1] ring-1 ring-ink/10 shadow-[0_80px_140px_-60px_rgba(50,40,25,0.65),0_30px_60px_-40px_rgba(50,40,25,0.4)]', className)}
+      className={cn('relative overflow-hidden rounded-[12px] bg-[#FBFBFD] ring-1 ring-ink/10 shadow-[0_80px_140px_-60px_rgba(0,0,0,0.65),0_30px_60px_-40px_rgba(0,0,0,0.4)]', className)}
       style={style}
     >
       {children}
@@ -261,7 +261,7 @@ function KitFilm() {
           {/* 幕 0：标语 */}
           <motion.div className="absolute inset-x-0 top-[calc(var(--header-h)+5vh)] z-10 flex flex-col items-center text-center" style={{ y: headY, opacity: headO, scale: headS }}>
             <p className="text-sm tracking-[0.2em] text-ink-3">{eyebrow}</p>
-            <h2 id="kit-title" className="mt-4 font-serif text-[clamp(48px,6.2vw,112px)] font-black leading-[1] tracking-[-0.05em]">
+            <h2 id="kit-title" className="mt-4 font-display text-[clamp(48px,6.2vw,112px)] font-semibold leading-[1] tracking-[-0.023em]">
               <T zh="缺什么，它比你先知道。" en={<>Knows what’s missing<br />before you do.</>} />
             </h2>
           </motion.div>
@@ -279,8 +279,8 @@ function KitFilm() {
               )}
               {/* 扫描光带 */}
               <motion.span aria-hidden className="pointer-events-none absolute inset-x-0 h-16 -translate-y-1/2" style={{ top: beamTop, opacity: beamO }}>
-                <span className="absolute inset-x-0 top-1/2 h-px bg-[#C9A35B]" />
-                <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(216,182,122,0.3)_50%,transparent)]" />
+                <span className="absolute inset-x-0 top-1/2 h-px bg-[#0071E3]" />
+                <span className="absolute inset-0 bg-[linear-gradient(180deg,transparent,rgba(41,151,255,0.28)_50%,transparent)]" />
               </motion.span>
               {shot('components') && <motion.img src={withBase(shot('components')!)} alt="" decoding="async" className="absolute inset-0 size-full object-cover object-top" style={{ opacity: compsO }} />}
               {shot('install') && <motion.img src={withBase(shot('install')!)} alt="" decoding="async" className="absolute inset-0 size-full object-cover object-top" style={{ opacity: installO }} />}
@@ -290,8 +290,8 @@ function KitFilm() {
           {/* 幕 2–3：组件周期表（右侧） */}
           <motion.div className="absolute left-[53vw] right-[5vw] top-1/2 -translate-y-[55%] text-[clamp(11px,0.95vw,16px)]" style={{ opacity: gridO }}>
             <motion.div className="mb-[1.4em] flex items-end justify-between gap-4" style={{ opacity: legendO }}>
-              <p className="font-serif text-[1.9em] font-black leading-none tracking-[-0.03em]"><T zh="组件周期表" en="The runtime table" /></p>
-              <motion.p className="font-mono text-[0.95em] text-ink-2" style={{ opacity: countO }}>
+              <p className="font-display text-[1.9em] font-semibold leading-none tracking-[-0.013em]"><T zh="组件周期表" en="The runtime table" /></p>
+              <motion.p className="tabular text-[0.95em] text-ink-2" style={{ opacity: countO }}>
                 <T zh="正在装齐" en="Installing" /> <span className="text-ink">{count}</span> / {DEMO_MISSING.length}
               </motion.p>
             </motion.div>
@@ -315,7 +315,7 @@ function KitFilm() {
                 transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                 className={cn('max-w-[34em]', phase === 0 && 'invisible')}
               >
-                <p className="font-mono text-xs text-ink-3">{String(phase + 1).padStart(2, '0')} / {String(CAPTIONS.length).padStart(2, '0')}</p>
+                <p className="tabular text-xs text-ink-3">{String(phase + 1).padStart(2, '0')} / {String(CAPTIONS.length).padStart(2, '0')}</p>
                 <p className="mt-1.5 text-xl font-semibold"><T zh={cap.zh[0]} en={cap.en[0]} /></p>
                 <p className="mt-1 text-[15px] leading-[1.7] text-ink-2"><T zh={cap.zh[1]} en={cap.en[1]} /></p>
               </motion.div>
@@ -340,7 +340,7 @@ function KitStatic({ eyebrow }: { eyebrow: React.ReactNode }) {
     <section aria-labelledby="kit-title" className="bg-paper py-24 text-ink">
       <div className="container-x">
         <p className="text-sm tracking-[0.15em] text-ink-3">{eyebrow}</p>
-        <h2 id="kit-title" className="mt-3 text-balance font-serif text-[clamp(36px,9vw,72px)] font-black leading-[1.08] tracking-[-0.045em]">
+        <h2 id="kit-title" className="mt-3 text-balance font-display text-[clamp(36px,9vw,72px)] font-semibold leading-[1.08] tracking-[-0.02em]">
           <T zh={<>缺什么，<br />它比你先知道。</>} en={<>Knows what’s missing<br />before you do.</>} />
         </h2>
         <p className="mt-5 max-w-[36ch] text-base leading-[1.8] text-ink-2"><T zh={CAPTIONS[0].zh[1]} en={CAPTIONS[0].en[1]} /></p>
@@ -350,7 +350,7 @@ function KitStatic({ eyebrow }: { eyebrow: React.ReactNode }) {
             <img src={withBase(idle)} alt="" loading="lazy" className="absolute inset-0 size-full object-cover object-top" />
           </Frame>
         )}
-        <p className="mt-14 font-serif text-3xl font-black tracking-[-0.03em]"><T zh="组件周期表" en="The runtime table" /></p>
+        <p className="mt-14 font-display text-3xl font-semibold tracking-[-0.013em]"><T zh="组件周期表" en="The runtime table" /></p>
         <p className="mt-2 text-sm text-ink-2"><T zh={CAPTIONS[2].zh[1]} en={CAPTIONS[2].en[1]} /></p>
         <div className="text-[11px] sm:text-[13px]">
           <ol className="mt-6 grid grid-cols-6 gap-1 sm:grid-cols-8 sm:gap-1.5">

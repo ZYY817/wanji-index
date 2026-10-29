@@ -13,7 +13,7 @@ export function Monogram({
   return (
     <span
       aria-hidden
-      className={cn('relative inline-grid shrink-0 place-items-center overflow-hidden rounded-xs font-serif font-black leading-none', className)}
+      className={cn('relative inline-grid shrink-0 place-items-center overflow-hidden rounded-xs font-display font-semibold leading-none', className)}
       style={{
         width: size, height: size,
         background: ink ? 'transparent' : c.bg,
@@ -26,7 +26,7 @@ export function Monogram({
     >
       {ch}
       {!ink && (
-        <span className="absolute bottom-[3px] right-[4px] font-mono text-2xs font-medium tracking-normal opacity-70" style={{ fontSize: Math.max(6, size * 0.15) }}>
+        <span className="absolute bottom-[3px] right-[4px] tabular text-2xs font-medium tracking-normal opacity-70" style={{ fontSize: Math.max(6, size * 0.15) }}>
           {String(c.hue).padStart(3, '0')}
         </span>
       )}

@@ -43,10 +43,10 @@ export function GameRow({ g }: { g: GameVM }) {
       </span>
       <span className="hidden truncate text-sm text-fg-2 md:block">{g.genres.map((x, i) => <span key={x}>{i > 0 && ' · '}{G(x)}</span>)}</span>
       <span className="hidden items-center gap-1.5 text-fg-2 md:flex">{g.platforms.map((p) => <PlatformMark key={p} platform={p} />)}</span>
-      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.entries)}</span>
-      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.tools)}</span>
-      <span className="hidden text-right font-mono text-base tabular-nums text-foreground md:block">{num(g.counts.guides)}</span>
-      <span className="hidden text-right font-mono text-2xs tabular-nums text-fg-3 xl:block">{g.checkedAt}</span>
+      <span className="hidden text-right tabular text-base tabular-nums text-foreground md:block">{num(g.counts.entries)}</span>
+      <span className="hidden text-right tabular text-base tabular-nums text-foreground md:block">{num(g.counts.tools)}</span>
+      <span className="hidden text-right tabular text-base tabular-nums text-foreground md:block">{num(g.counts.guides)}</span>
+      <span className="hidden text-right tabular text-2xs tabular-nums text-fg-3 xl:block">{g.checkedAt}</span>
       <ArrowRight aria-hidden className="size-4 text-fg-3 transition-transform group-hover:translate-x-0.5 group-hover:text-foreground" />
     </Link>
   );

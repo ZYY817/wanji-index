@@ -96,7 +96,7 @@ export function GamesCatalog({ games }: { games: (GameVM & { keywords?: string[]
             </div>
           ) : (
             <div className="mt-6 border-y border-border py-20 text-center lg:mt-8">
-              <p className="mt-4 font-serif text-3xl"><T zh="没有找到这份档案" en="No games found" /></p>
+              <p className="mt-4 font-display text-3xl"><T zh="没有找到这份档案" en="No games found" /></p>
               <p className="mt-3 text-sm text-fg-3"><T zh="试试其他名称，或放宽筛选条件。" en="Try another name or loosen the filters." /></p>
               <Button className="mt-6" onClick={resetFilters}><T zh="清除筛选" en="Clear filters" /></Button>
             </div>

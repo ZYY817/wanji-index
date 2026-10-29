@@ -32,9 +32,9 @@ export function SectionHeading({
 }) {
   return (
     <div id={id} className={cn('mb-6', divider && 'border-b border-border pb-4', className)}>
-      <h2 id={headingId} className="flex items-baseline gap-3 font-serif text-2xl font-bold tracking-tight text-foreground md:text-3xl">
+      <h2 id={headingId} className="flex items-baseline gap-3 font-display text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
         {title}
-        {count != null && <span className="font-mono text-sm font-normal tabular-nums text-fg-3">({count})</span>}
+        {count != null && <span className="tabular text-sm font-normal tabular-nums text-fg-3">({count})</span>}
       </h2>
       {description && <p className="mt-1.5 max-w-[56em] text-base leading-relaxed text-fg-2 text-pretty">{description}</p>}
       {children}

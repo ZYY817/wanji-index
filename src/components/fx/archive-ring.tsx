@@ -12,8 +12,8 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
   const id = useId().replace(/:/g, '');
   // light：亮色展台上用深一些的玻璃边与阴影色，保证在暖白背景上依然有体积
   const c = tone === 'light'
-    ? { hi: '#FFFFFF', mid: '#B8B0A2', edge: '#6E675B', glassHi: 0.95, glassMid: 0.25 }
-    : { hi: '#FFF4E0', mid: '#FFFFFF', edge: '#FFF4E0', glassHi: 0.55, glassMid: 0.08 };
+    ? { hi: '#FFFFFF', mid: '#B0B0B5', edge: '#6E6E73', glassHi: 0.95, glassMid: 0.25 }
+    : { hi: '#FFFFFF', mid: '#FFFFFF', edge: '#FFFFFF', glassHi: 0.55, glassMid: 0.08 };
   return (
     <motion.div aria-hidden className={cn('[perspective:1600px]', className)}>
       <motion.svg viewBox="0 0 600 600" className="size-full overflow-visible" style={{ rotateX: tilt, rotate }}>
@@ -22,7 +22,7 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
             <stop offset="0" stopColor={c.hi} stopOpacity={c.glassHi} />
             <stop offset="0.35" stopColor={c.mid} stopOpacity={c.glassMid} />
             <stop offset="0.65" stopColor={c.mid} stopOpacity={c.glassMid / 2} />
-            <stop offset="1" stopColor="#D8B67A" stopOpacity="0.35" />
+            <stop offset="1" stopColor="#2997FF" stopOpacity="0.35" />
           </linearGradient>
           <linearGradient id={`${id}-edge`} x1="0" y1="0" x2="1" y2="0">
             <stop offset="0" stopColor={c.edge} stopOpacity="0.7" />
@@ -30,9 +30,9 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
             <stop offset="1" stopColor={c.edge} stopOpacity="0.5" />
           </linearGradient>
           <radialGradient id={`${id}-orb`} cx="0.35" cy="0.35" r="0.7">
-            <stop offset="0" stopColor="#FFF1D2" />
-            <stop offset="0.45" stopColor="#D8B67A" />
-            <stop offset="1" stopColor="#5A4320" />
+            <stop offset="0" stopColor="#E6F2FF" />
+            <stop offset="0.45" stopColor="#2997FF" />
+            <stop offset="1" stopColor="#0A3D7A" />
           </radialGradient>
         </defs>
         {/* 玻璃环：粗描边 + 内外高光 */}
@@ -40,8 +40,8 @@ export function ArchiveRing({ rotate, tilt, tone = 'dark', className }: { rotate
         <circle cx="300" cy="300" r="233" fill="none" stroke={`url(#${id}-edge)`} strokeWidth="1.2" />
         <circle cx="300" cy="300" r="187" fill="none" stroke={`url(#${id}-edge)`} strokeWidth="1" opacity="0.7" />
         {/* 香槟金轨道 + 金球 */}
-        <ellipse cx="300" cy="300" rx="285" ry="120" fill="none" stroke="#D8B67A" strokeOpacity="0.75" strokeWidth="1.2" transform="rotate(-24 300 300)" />
-        <ellipse cx="300" cy="300" rx="262" ry="262" fill="none" stroke="#D8B67A" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="2 7" />
+        <ellipse cx="300" cy="300" rx="285" ry="120" fill="none" stroke="#2997FF" strokeOpacity="0.75" strokeWidth="1.2" transform="rotate(-24 300 300)" />
+        <ellipse cx="300" cy="300" rx="262" ry="262" fill="none" stroke="#2997FF" strokeOpacity="0.18" strokeWidth="1" strokeDasharray="2 7" />
         <circle cx="548" cy="186" r="9" fill={`url(#${id}-orb)`} />
       </motion.svg>
     </motion.div>

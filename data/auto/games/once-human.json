@@ -1,0 +1,66 @@
+{
+  "id": "once-human",
+  "slug": "once-human",
+  "name": {
+    "zh": "七日世界",
+    "en": "Once Human"
+  },
+  "summary": "《七日世界》是一款怪奇世界生存游戏，游戏发生在一个怪诞的末日世界中，你需要和好友并肩为了生存资源而战，建造你们的家园领地，并一起战胜恐怖的未知，揭露世界沦陷的真相。曾经，你是人类中的一份子。现在，你仍是吗？",
+  "summaryEn": "Once Human is a Strange Worlds Survival Game set in a strange, post-apocalyptic future.",
+  "genres": [
+    "action",
+    "adventure",
+    "casual",
+    "mmo",
+    "racing",
+    "rpg",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/2139460/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 2139460,
+  "developers": [
+    "Starry Studio"
+  ],
+  "publishers": [
+    "Starry Studio",
+    "NetEase Games"
+  ],
+  "releaseDate": "2024 年 7 月 9 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: Windows 10 64-bit Operating System\n处理器: Intel Core i5-4460 / Snapdragon® X\n内存: 8 GB RAM\n显卡: Nvidia GTX 750ti 4G / AMD Radeon RX550 / Qualcomm® Adreno X1 GPU\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间\n附注事项: 推荐使用固态硬盘",
+    "recommended": "推荐配置:\n操作系统: Windows 10 64-bit Operating System\n处理器: Intel Core i7-7700 / Snapdragon® X2 Elite\n内存: 16 GB RAM\n显卡: Nvidia GTX 1060 6G / AMD Radeon RX 580 2304SP / Intel ARC A380 / Qualcomm® Adreno X2 GPU\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间\n附注事项: 推荐使用固态硬盘"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: Windows 10 64-bit Operating System\nProcessor: Intel Core i5-4460 / Snapdragon® X\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 750ti 4G / AMD Radeon RX550 / Qualcomm® Adreno X1 GPU\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 100 GB available space\nAdditional Notes: SSD is highly recommended",
+    "recommended": "Recommended:\nOS: Windows 10 64-bit Operating System\nProcessor: Intel Core i7-7700 / Snapdragon® X2 Elite\nMemory: 16 GB RAM\nGraphics: Nvidia GTX 1060 6G / AMD Radeon RX 580 2304SP / Intel ARC A380 / Qualcomm® Adreno X2 GPU\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 100 GB available space\nAdditional Notes: SSD is highly recommended"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2139460/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:18.236Z"
+  }
+}

@@ -31,14 +31,14 @@ export function DetailHero({
   const rise = (i: number) => ({ animationDelay: `${0.12 + i * 0.08}s` });
 
   return (
-    <section ref={ref} aria-label={name} className="grain relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
+    <section ref={ref} aria-label={name} className="relative flex min-h-[50svh] md:min-h-[56svh] max-h-[560px] items-end overflow-hidden bg-shell">
       <motion.div aria-hidden className="absolute inset-0 will-change-transform" style={{ scale: artScale, y: artY }}>
         <GameArt src={art?.hero} name={name} en={enName} seed={id} variant="wide" priority className="absolute inset-0" imgClassName="object-[60%_30%]" />
       </motion.div>
       {/* 压暗：左下给文字，右上留给美术 */}
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,18,17,0.9)_0%,rgba(19,18,17,0.55)_42%,rgba(19,18,17,0.1)_75%)]" />
-      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,#131211_0%,rgba(19,18,17,0.72)_26%,rgba(19,18,17,0)_62%)]" />
-      <div aria-hidden className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(19,18,17,0.7),transparent)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(90deg,rgba(0,0,0,0.9)_0%,rgba(0,0,0,0.55)_42%,rgba(0,0,0,0.1)_75%)]" />
+      <div aria-hidden className="absolute inset-0 bg-[linear-gradient(0deg,#000000_0%,rgba(0,0,0,0.72)_26%,rgba(0,0,0,0)_62%)]" />
+      <div aria-hidden className="absolute inset-x-0 top-0 h-40 bg-[linear-gradient(180deg,rgba(0,0,0,0.7),transparent)]" />
       <motion.div aria-hidden className="absolute inset-0 bg-background" style={{ opacity: shade }} />
 
       <motion.div className="container-x relative z-10 w-full pb-8 pt-[calc(var(--header-h)+28px)] md:pb-10" style={{ y: textY, opacity: textFade }}>
@@ -52,7 +52,7 @@ export function DetailHero({
 
         <div className="mt-4 grid items-end gap-6 md:grid-cols-12 md:gap-8">
           <div className="md:col-span-8">
-            <h1 className="animate-rise font-serif text-4xl font-black leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl" style={rise(1)}>
+            <h1 className="animate-rise font-display text-4xl font-semibold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl" style={rise(1)}>
               <T zh={name} en={enName || name} />
             </h1>
             <p className="mt-3 flex animate-rise flex-wrap items-center gap-x-3 gap-y-1 text-sm text-fg-2" style={rise(2)}>

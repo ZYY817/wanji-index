@@ -66,8 +66,8 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
 
     const apply = (instant = false) => {
       const desktop = window.matchMedia('(min-width: 1024px)').matches;
-      const height = desktop ? (home && !scrolled ? 72 : 60) : 56;
-      const backgroundColor = solid ? 'rgba(19,18,17,1)' : 'rgba(19,18,17,0)';
+      const height = desktop ? (home && !scrolled ? 64 : 52) : 52;
+      const backgroundColor = solid ? 'rgba(22,22,24,0.72)' : 'rgba(22,22,24,0)';
       ctrl?.stop();
       if (reduced) {
         el.style.height = `${height}px`;
@@ -92,8 +92,9 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
       ref={scope}
       className={cn(
         // CSS 兜底高度保证 SSR / 首帧不跳；Motion 从同一高度接管
-        'fixed inset-x-0 top-0 z-50 h-14',
-        home ? 'bg-transparent lg:h-[72px]' : 'bg-background lg:h-[60px]',
+        'fixed inset-x-0 top-0 z-50 h-[52px] transition-[backdrop-filter] duration-500',
+        home ? 'bg-transparent lg:h-16' : 'bg-[rgba(22,22,24,0.72)]',
+        solid && '[backdrop-filter:saturate(180%)_blur(20px)] [-webkit-backdrop-filter:saturate(180%)_blur(20px)]',
       )}
       style={{ transform: hidden && !reduced ? 'translateY(-100%)' : 'none', transition: 'transform 0.55s cubic-bezier(0.16, 1, 0.3, 1)' }}
       onFocusCapture={() => setHidden(false)}
@@ -111,7 +112,7 @@ export function SiteHeader({ counts }: { counts: NavCounts }) {
         aria-hidden
         className={cn(
           'pointer-events-none absolute inset-x-0 bottom-0 border-b transition-colors duration-500',
-          solid && !home ? 'border-border' : 'border-transparent',
+          solid ? 'border-white/[0.08]' : 'border-transparent',
         )}
       />
 

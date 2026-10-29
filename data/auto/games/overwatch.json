@@ -1,0 +1,58 @@
+{
+  "id": "overwatch",
+  "slug": "overwatch",
+  "name": {
+    "zh": "守望先锋",
+    "en": "Overwatch"
+  },
+  "summary": "《守望先锋®》，一个值得为之奋战的未来！ 《守望先锋®》是一款长期运营并不断演化的免费团队动作游戏，战场设定在光明的未来，每场对战都是一次5v5或6v6的终极乱斗。",
+  "summaryEn": "Overwatch®, A FUTURE WORTH FIGHTING FOR! Overwatch® is an always-on and ever-evolving free-to-play, team-based action game set in an optimis…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/2357570/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 2357570,
+  "developers": [
+    "Blizzard Entertainment, Inc."
+  ],
+  "publishers": [
+    "Blizzard Entertainment, Inc."
+  ],
+  "releaseDate": "2023 年 8 月 10 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 64-bit (latest Service Pack)\n处理器: Intel® Core™ i3 or AMD Phenom™ X3 8650\n内存: 6 GB RAM\n显卡: NVIDIA® GeForce® GTX 600 series, AMD Radeon™ HD 7000 series\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 64-bit (latest Service Pack)\n处理器: Intel® Core™ i7 or AMD Ryzen™ 5\n内存: 8 GB RAM\n显卡: NVIDIA® GeForce® GTX 1060/ GeForce® GTX 1650 or AMD R9 380/AMD RX 6400 or Intel® Arc™ A770\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 50 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64-bit (latest Service Pack)\nProcessor: Intel® Core™ i3 or AMD Phenom™ X3 8650\nMemory: 6 GB RAM\nGraphics: NVIDIA® GeForce® GTX 600 series, AMD Radeon™ HD 7000 series\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 50 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64-bit (latest Service Pack)\nProcessor: Intel® Core™ i7 or AMD Ryzen™ 5\nMemory: 8 GB RAM\nGraphics: NVIDIA® GeForce® GTX 1060/ GeForce® GTX 1650 or AMD R9 380/AMD RX 6400 or Intel® Arc™ A770\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 50 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2357570/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:17:22.050Z"
+  }
+}

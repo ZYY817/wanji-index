@@ -28,7 +28,7 @@ export function NovaTabs({
       role="tablist"
       aria-label="Categories"
       className={cn(
-        'inline-flex h-9 items-center gap-1 overflow-x-auto rounded-sm border border-border bg-surface-2/60 p-1 no-scrollbar',
+        'inline-flex h-9 items-center gap-0.5 overflow-x-auto rounded-full bg-white/[0.07] p-[3px] no-scrollbar',
         className,
       )}
     >
@@ -42,15 +42,15 @@ export function NovaTabs({
             type="button"
             onClick={() => onChange(tab.id)}
             className={cn(
-              'relative z-10 inline-flex h-7 shrink-0 items-center gap-1.5 whitespace-nowrap rounded-xs px-3 text-xs font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
-              isActive ? 'text-foreground' : 'text-fg-3 hover:text-foreground',
+              'relative z-10 inline-flex h-[30px] shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full px-3.5 text-[13px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring',
+              isActive ? 'text-foreground' : 'text-fg-2 hover:text-foreground',
             )}
           >
             {tab.icon && <span aria-hidden className="shrink-0 [&_svg]:size-3.5">{tab.icon}</span>}
             <span>{tab.label}</span>
             {tab.count != null && (
-              <span className={cn('font-mono text-2xs tabular-nums', isActive ? 'text-primary' : 'text-fg-3')}>
-                ({tab.count})
+              <span className={cn('tabular text-2xs tabular-nums', isActive ? 'text-fg-2' : 'text-fg-3')}>
+                {tab.count}
               </span>
             )}
             {isActive && (

@@ -1,0 +1,59 @@
+{
+  "id": "world-of-tanks",
+  "slug": "world-of-tanks",
+  "name": {
+    "zh": "World of Tanks"
+  },
+  "summary": "《坦克世界》为一款讲究战术的射击游戏，每辆战车依类型与角色不同而有独特玩法。除了常规的PvP战斗，另有竞赛与军团模式，甚至是特殊的PvE与PvPvE活动与其他多元内容。无论您是想在战场上征服对手，或就是喜爱坦克战斗，都能在当中畅享游戏时光。",
+  "summaryEn": "World of Tanks is a tactical action game with very different gameplay depending on the vehicle type and role.",
+  "genres": [
+    "action",
+    "mmo",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1407200/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-28"
+    }
+  ],
+  "steamAppId": 1407200,
+  "developers": [
+    "Wargaming Group Limited"
+  ],
+  "publishers": [
+    "Wargaming Group Limited"
+  ],
+  "releaseDate": "2021 年 4 月 28 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11（仅64位）\n处理器: Intel Core i5-3330 / AMD FX-6300\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 660 / AMD Radeon R9 270，1280x768分辨率\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 120 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11（仅64位）\n处理器: Intel Core i3-9100F / AMD Ryzen 3 3100\n内存: 16 GB RAM\n显卡: Nvidia GTX 1650 / AMD Radeon RX 580\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 120 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 / 11 (64-bit only)\nProcessor: Intel Core i5-3330 / AMD FX-6300\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 660 / AMD Radeon R9 270, 1280x768 screen resolution\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 120 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 / 11 (64-bit only)\nProcessor: Intel Core i3-9100F / AMD Ryzen 3 3100\nMemory: 16 GB RAM\nGraphics: Nvidia GTX 1650 / AMD Radeon RX 580\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 120 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1407200/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-28",
+  "createdAt": "2026-10-28",
+  "updatedAt": "2026-10-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-28T13:16:59.137Z"
+  }
+}
