@@ -19,6 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/check/`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE}/kit/`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE}/about/`, changeFrequency: 'monthly', priority: 0.4 },
+    { url: `${BASE}/author/`, changeFrequency: 'monthly', priority: 0.3 },
   ];
   for (const g of data.games) urls.push({ url: `${BASE}/games/${g.slug}/`, lastModified: g.updatedAt, priority: 0.9 });
   for (const s of data.sites) urls.push({ url: `${BASE}/resources/${s.slug}/`, lastModified: s.updatedAt, priority: 0.7 });

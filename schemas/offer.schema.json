@@ -2,32 +2,126 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "FreeOffer（docs/04 §3）",
   "type": "object",
-  "required": ["id", "gameTitle", "type", "platform", "url", "checkedAt", "linkHealth", "createdAt", "updatedAt", "publishStatus"],
+  "required": [
+    "id",
+    "gameTitle",
+    "type",
+    "platform",
+    "url",
+    "checkedAt",
+    "linkHealth",
+    "createdAt",
+    "updatedAt",
+    "publishStatus"
+  ],
   "properties": {
-    "id": { "type": "string", "minLength": 1 },
-    "gameTitle": { "type": "string", "minLength": 1 },
-    "titleZh": { "type": "string", "minLength": 1, "description": "官方中文名（有才填）；首页卡片以它为主标题" },
-    "gameId": { "type": "string" },
-    "type": { "type": "string", "x-enum": "freeType" },
-    "platform": { "type": "string", "x-enum": "platform" },
-    "url": { "type": "string", "pattern": "^https?://" },
-    "claimNote": { "type": "string" },
-    "claimNoteEn": { "type": "string", "description": "英文领取说明（中英切换用）" },
-    "startDate": { "type": "string" },
-    "endDate": { "type": "string" },
-    "checkedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-    "linkHealth": { "type": "string", "x-enum": "linkHealth" },
-    "note": { "type": "string" },
-    "steamAppId": { "type": "string", "pattern": "^[0-9]+$", "description": "非 Steam 渠道的情报（如 Epic 限免）也在 Steam 上架时，用它取官方多尺寸美术" },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "gameTitle": {
+      "type": "string",
+      "minLength": 1
+    },
+    "titleZh": {
+      "type": "string",
+      "minLength": 1,
+      "description": "官方中文名（有才填）；首页卡片以它为主标题"
+    },
+    "gameId": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "x-enum": "freeType"
+    },
+    "platform": {
+      "type": "string",
+      "x-enum": "platform"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https?://"
+    },
+    "claimNote": {
+      "type": "string"
+    },
+    "claimNoteEn": {
+      "type": "string",
+      "description": "英文领取说明（中英切换用）"
+    },
+    "startDate": {
+      "type": "string"
+    },
+    "endDate": {
+      "type": "string"
+    },
+    "checkedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "linkHealth": {
+      "type": "string",
+      "x-enum": "linkHealth"
+    },
+    "note": {
+      "type": "string"
+    },
+    "steamAppId": {
+      "type": "string",
+      "pattern": "^[0-9]+$",
+      "description": "非 Steam 渠道的情报（如 Epic 限免）也在 Steam 上架时，用它取官方多尺寸美术"
+    },
     "art": {
       "type": "object",
-      "description": "不在 Steam 上的游戏：官方宣传图地址（wide 横版 / tall 竖版）",
-      "properties": { "wide": { "type": "string", "pattern": "^https://" }, "tall": { "type": "string", "pattern": "^https://" } },
+      "description": "不在 Steam 上的游戏：宣传图（wide 横版 / tall 竖版）。可以是官方图片地址，也可以是站内自托管的 /art/... 路径；来自 Wikimedia Commons 等需要署名的图片必须写 credit",
+      "properties": {
+        "wide": {
+          "type": "string",
+          "pattern": "^(https://|/)"
+        },
+        "tall": {
+          "type": "string",
+          "pattern": "^(https://|/)"
+        },
+        "credit": {
+          "type": "object",
+          "description": "图片署名：作者、许可证、出处页面",
+          "properties": {
+            "author": {
+              "type": "string"
+            },
+            "license": {
+              "type": "string"
+            },
+            "source": {
+              "type": "string",
+              "pattern": "^https://"
+            }
+          },
+          "required": [
+            "license",
+            "source"
+          ],
+          "additionalProperties": false
+        }
+      },
       "additionalProperties": false
     },
-    "createdAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-    "updatedAt": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
-    "publishStatus": { "type": "string", "x-enum": "publishStatus" },
-    "_demo": { "type": "boolean" }
+    "createdAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "updatedAt": {
+      "type": "string",
+      "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+    },
+    "publishStatus": {
+      "type": "string",
+      "x-enum": "publishStatus"
+    },
+    "_demo": {
+      "type": "boolean"
+    }
   }
 }

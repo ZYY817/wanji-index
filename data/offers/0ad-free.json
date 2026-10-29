@@ -10,5 +10,13 @@
   "createdAt": "2026-10-24",
   "updatedAt": "2026-10-24",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source historical RTS — free from the official site"
+  "claimNoteEn": "Open-source historical RTS — free from the official site",
+  "art": {
+    "wide": "/art/oss/0ad-free.webp",
+    "credit": {
+      "author": "Wildfire Games",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:0_A.D._alpha_25_-_playing_as_Spartans.jpg"
+    }
+  }
 }

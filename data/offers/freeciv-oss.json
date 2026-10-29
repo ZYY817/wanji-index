@@ -12,5 +12,13 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source turn-based strategy in the classic Civilization style"
+  "claimNoteEn": "Open-source turn-based strategy in the classic Civilization style",
+  "art": {
+    "wide": "/art/oss/freeciv-oss.webp",
+    "credit": {
+      "author": "Medende",
+      "license": "GPL",
+      "source": "https://commons.wikimedia.org/wiki/File:Freeciv_Freeland_screenshot.jpg"
+    }
+  }
 }

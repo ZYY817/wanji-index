@@ -11,5 +11,13 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source fast-paced arena FPS"
+  "claimNoteEn": "Open-source fast-paced arena FPS",
+  "art": {
+    "wide": "/art/oss/xonotic-oss.webp",
+    "credit": {
+      "author": "greewrfdsfsf (screenshot), Xonotic team (game)",
+      "license": "GPL",
+      "source": "https://commons.wikimedia.org/wiki/File:Xonotic_Game_Play_-_Silent_Siege.jpg"
+    }
+  }
 }

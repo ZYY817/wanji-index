@@ -1,5 +1,7 @@
 import { T } from '@/lib/i18n';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import { AUTHOR } from '@/lib/author';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { FeedbackChannels } from '@/components/layout/feedback';
 import { loadData } from '@/lib/data.mjs';
@@ -42,11 +44,13 @@ const SECTIONS: [string, React.ReactNode, React.ReactNode][] = [
 export default function AboutPage() {
   const data = loadData();
   const build = buildStamp();
+  const credits = (data.offers as any[]).filter((o) => o.art?.credit).map((o) => ({ id: o.id as string, title: o.gameTitle as string, ...(o.art.credit as { author?: string; license: string; source: string }) }));
   const facts: [React.ReactNode, React.ReactNode][] = [
     [<T key="v" zh="版本" en="Version" />, <T key="v2" zh={`${pkg.version}，最近构建 ${build}`} en={`${pkg.version}, built ${build}`} />],
     [<T key="c" zh="收录" en="In the index" />, <T key="c2" zh={`${data.games.length} 款游戏、${data.sites.length} 个资源站、${data.tools.length} 个工具、${data.problems.length} 个排障问题、${data.guides.length} 篇教程`} en={`${data.games.length} games, ${data.sites.length} sites, ${data.tools.length} tools, ${data.problems.length} fix pages, ${data.guides.length} guides`} />],
     [<T key="t" zh="技术" en="Built with" />, <>Next.js · React · Tailwind CSS · Motion</>],
     [<T key="f" zh="字体" en="Fonts" />, <>Source Han Sans · Geist</>],
+    [<T key="a" zh="作者" en="Author" />, <Link key="a2" href="/author/" className="underline-offset-4 hover:underline">{AUTHOR.handle} ›</Link>],
   ];
   return (
     <>
@@ -55,7 +59,7 @@ export default function AboutPage() {
         title={<T zh="关于" en="About" />}
         description={<T zh="把分散在各处的游戏实用信息整理成档案：来源交代清楚，状态明明白白，发现疏漏随时纠正。" en="Scattered PC gaming essentials organized into transparent files: verified sources, visible health, open to community corrections." />}
         aside={(
-          <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-5">
             {facts.map(([k, v], i) => (
               <div key={i} className="lift rounded-lg p-5">
                 <dt className="text-sm text-fg-3">{k}</dt>
@@ -73,6 +77,24 @@ export default function AboutPage() {
             <div className="prose-doc max-w-[62ch] text-foreground/90 lg:col-span-8">{body}</div>
           </section>
         ))}
+
+        {/* 图片署名：开源游戏的截图来自 Wikimedia Commons（CC BY-SA / GPL），按许可要求署名 */}
+        {credits.length > 0 && (
+          <section id="image-credits" aria-labelledby="image-credits-title" className="grid scroll-mt-[calc(var(--sticky-top)+32px)] gap-5 border-t border-white/[0.08] py-12 md:py-16 lg:grid-cols-12 lg:gap-10">
+            <h2 id="image-credits-title" className="font-display text-[26px] font-semibold leading-tight tracking-[-0.02em] md:text-[32px] lg:col-span-4"><T zh="图片署名" en="Image credits" /></h2>
+            <div className="lg:col-span-8">
+              <p className="max-w-[62ch] text-base leading-[1.75] text-fg-2"><T zh="游戏美术版权归各自权利方所有。以下开源游戏的截图来自 Wikimedia Commons，按其许可证署名：" en="Game art belongs to its respective owners. Screenshots of these open-source games come from Wikimedia Commons and are credited under their licenses:" /></p>
+              <ul className="mt-5 divide-y divide-white/[0.06]">
+                {credits.map((c) => (
+                  <li key={c.id} className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1 py-3 text-sm">
+                    <span className="font-medium text-foreground">{c.title}</span>
+                    <a href={c.source} target="_blank" rel="noopener noreferrer" className="text-fg-2 underline-offset-4 hover:text-foreground hover:underline">{c.author} · {c.license}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
       </div>
     </>
   );

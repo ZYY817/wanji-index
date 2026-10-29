@@ -12,5 +12,8 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Free to play · Epic launcher; cosmetics and pass for sale"
+  "claimNoteEn": "Free to play · Epic launcher; cosmetics and pass for sale",
+  "art": {
+    "wide": "/art/f2p/fortnite-free.webp"
+  }
 }

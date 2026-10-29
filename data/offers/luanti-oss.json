@@ -12,5 +12,13 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source sandbox builder like Minecraft, with tons of mods"
+  "claimNoteEn": "Open-source sandbox builder like Minecraft, with tons of mods",
+  "art": {
+    "wide": "/art/oss/luanti-oss.webp",
+    "credit": {
+      "author": "Perttu Ahola, Minetest developers",
+      "license": "CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Minetest_Game_Version_5.1.0.jpg"
+    }
+  }
 }

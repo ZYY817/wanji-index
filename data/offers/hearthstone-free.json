@@ -12,5 +12,8 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Free to play · Battle.net; card packs for sale"
+  "claimNoteEn": "Free to play · Battle.net; card packs for sale",
+  "art": {
+    "wide": "/art/f2p/hearthstone-free.webp"
+  }
 }

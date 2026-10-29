@@ -12,5 +12,8 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Free to play · from HoYoverse or Epic; gacha purchases"
+  "claimNoteEn": "Free to play · from HoYoverse or Epic; gacha purchases",
+  "art": {
+    "wide": "/art/f2p/genshin-free.webp"
+  }
 }

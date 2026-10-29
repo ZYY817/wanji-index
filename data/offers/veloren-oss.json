@@ -11,5 +11,13 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source multiplayer voxel RPG with open-world exploration"
+  "claimNoteEn": "Open-source multiplayer voxel RPG with open-world exploration",
+  "art": {
+    "wide": "/art/oss/veloren-oss.webp",
+    "credit": {
+      "author": "PantheraLeo1359531 (screenshot), Veloren team (game)",
+      "license": "GPLv3",
+      "source": "https://commons.wikimedia.org/wiki/File:Veloren_Screenshot_2023.02.09_-_16.06.36.28.png"
+    }
+  }
 }

@@ -4,6 +4,7 @@ import OFFER_ART from '../../data/auto/offer-art.json';
 import { steamArt, steamArtById, steamAppIdFromUrl } from './data.mjs';
 import { computeLifecycle } from './lifecycle.mjs';
 import { domainOf } from './utils';
+import { withBase } from './base';
 import site from '../../config/site.json';
 
 export type Art = { appid: string; header: string; poster: string; hero: string; logo: string; capsule: string } | null;
@@ -120,7 +121,8 @@ export function offerVM(o: any, data: any, now: number): OfferVM {
   // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图 → 自动找到的封面
   const found = (OFFER_ART as Record<string, { steamAppId?: string; wide?: string }>)[o.id];
   // Epic 的活动图是 2560 宽、几 MB 的 PNG：它的图床支持按需缩放，卡片只要 960 宽（大图位用 1920）
-  const sized = (u: string, w: number) => (/^https:\/\/cdn\d*\.epicgames\.com\//.test(u) && !u.includes('?') ? `${u}?resize=1&w=${w}&quality=medium` : u);
+  // 站内自托管的图（/art/...）要加上部署子路径
+  const sized = (u: string, w: number) => (u.startsWith('/') ? withBase(u) : /^https:\/\/cdn\d*\.epicgames\.com\//.test(u) && !u.includes('?') ? `${u}?resize=1&w=${w}&quality=medium` : u);
   const wideArt = (wide: string, tall?: string) => ({ appid: '', header: sized(wide, 960), poster: sized(tall ?? wide, 600), hero: sized(wide, 1920), logo: '', capsule: sized(wide, 960) });
   const art = (game ? steamArt(game) : null)
     ?? steamArtById(o.steamAppId ?? steamAppIdFromUrl(o.url))

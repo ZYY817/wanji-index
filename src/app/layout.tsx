@@ -26,6 +26,8 @@ export const metadata: Metadata = {
   // 分享卡片：各页面不单独设置时都继承这张（scripts/gen-og.mjs 生成）
   openGraph: { siteName: SITE.name, locale: 'zh_CN', type: 'website', images: [{ url: withBase('/og.jpg'), width: 1200, height: 630, alt: `${SITE.name}——PC 游戏资源，一处收齐` }] },
   twitter: { card: 'summary_large_image', images: [withBase('/og.jpg')] },
+  // 告诉 Chrome 不要弹出 / 执行「翻译此页」
+  other: { google: 'notranslate' },
 };
 
 export const viewport: Viewport = { themeColor: '#000000', colorScheme: 'dark' };
@@ -35,7 +37,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const counts = { games: data.games.length, free: data.offers.length, sites: data.sites.length, tools: data.tools.length, guides: data.problems.length + data.guides.length };
   // suppressHydrationWarning：翻译 / 暗色模式类浏览器插件会改写 <html> 属性，只忽略这一层的差异
   return (
-    <html lang="zh-CN" className={`${GeistSans.variable} ${GeistMono.variable}`} suppressHydrationWarning>
+    // translate="no"：网站自带中英切换，禁止浏览器自动翻译（否则 Chrome 会把 Steam 译成「蒸汽」、把英文原名译成中文）
+    <html lang="zh-CN" translate="no" className={`${GeistSans.variable} ${GeistMono.variable} notranslate`} suppressHydrationWarning>
       <head>
         {/* 语言：首帧前从 localStorage 恢复，避免先闪中文再切英文 */}
         <Script id="lang-boot" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: LANG_BOOT }} />

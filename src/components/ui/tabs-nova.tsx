@@ -56,7 +56,7 @@ export function NovaTabs({
             {isActive && (
               <motion.div
                 layoutId={reducedMotion ? undefined : 'nova-active-tab-pill'}
-                className="absolute inset-0 -z-10 rounded-xs border border-border-strong bg-card shadow-xs"
+                className="absolute inset-0 -z-10 rounded-full bg-white/[0.14] shadow-[0_1px_3px_rgba(0,0,0,0.35),inset_0_1px_0_rgba(255,255,255,0.08)]"
                 transition={{ type: 'spring', stiffness: 480, damping: 36 }}
               />
             )}

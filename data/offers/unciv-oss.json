@@ -11,5 +11,8 @@
   "createdAt": "2026-10-28",
   "updatedAt": "2026-10-28",
   "publishStatus": "published",
-  "claimNoteEn": "Open-source turn-based strategy, a lightweight Civilization V-style remake"
+  "claimNoteEn": "Open-source turn-based strategy, a lightweight Civilization V-style remake",
+  "art": {
+    "wide": "/art/oss/unciv-oss.webp"
+  }
 }
