@@ -1,0 +1,75 @@
+{
+  "id": "hexologic",
+  "slug": "hexologic",
+  "name": {
+    "zh": "Hexologic"
+  },
+  "summary": "具有美丽图形以及独特的受数独启发规则的、令人放松的益智游戏",
+  "summaryEn": "Immerse yourself in the beautiful world of Hexologic. Solve challenging, yet rewarding puzzles, listen to relaxing music, dive deep into the…",
+  "genres": [
+    "casual",
+    "indie",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/785890/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "steamAppId": 785890,
+  "developers": [
+    "MythicOwl"
+  ],
+  "publishers": [
+    "MythicOwl"
+  ],
+  "releaseDate": "2018 年 5 月 29 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7\n处理器: 2,4 GHz\n内存: 2 GB RAM\n显卡: 512MB\nDirectX 版本: 9.0\n存储空间: 需要 300 MB 可用空间\n声卡: Stereo",
+    "recommended": "推荐配置:\n操作系统: Windows 10\n处理器: 3 GHz\n内存: 4 GB RAM\n显卡: 2GB\nDirectX 版本: 11\n存储空间: 需要 300 MB 可用空间\n声卡: Stereo"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7\nProcessor: 2,4 GHz\nMemory: 2 GB RAM\nGraphics: 512MB\nDirectX: Version 9.0\nStorage: 300 MB available space\nSound Card: Stereo",
+    "recommended": "Recommended:\nOS: Windows 10\nProcessor: 3 GHz\nMemory: 4 GB RAM\nGraphics: 2GB\nDirectX: Version 11\nStorage: 300 MB available space\nSound Card: Stereo"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/785890/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Hexologic"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-30T12:33:21.279Z",
+    "pcgw": {
+      "syncedAt": "2026-10-30T12:33:50.544Z",
+      "page": "Hexologic"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\MythicOwl\\Hexologic\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

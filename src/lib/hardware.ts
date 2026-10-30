@@ -107,6 +107,18 @@ export function gpuFromRenderer(renderer: string): Gpu | null {
 export type Req = { gpu?: { score: number; names: string[] }; ramGb?: number };
 export type Reqs = { min?: Req; rec?: Req };
 
+/** 配置要求里只写了图形接口版本时的大致门槛（与 GPU 表同一标尺：GTX 1060 = 100）。越新的接口，能跑的最低显卡越强 */
+function apiLevel(t: string): { score: number; name: string } | null {
+  const dx = /directx\s*(?:&reg;|®)?\s*(\d+)/i.exec(t)?.[1];
+  const gl = /opengl\s*(\d+)(?:\.(\d))?/i.exec(t);
+  const glv = gl ? Number(gl[1]) + Number(gl[2] ?? 0) / 10 : 0;
+  if (dx === '12') return { score: 40, name: 'DirectX 12 显卡' };
+  if (dx === '11' || /vulkan/i.test(t) || glv >= 4.3) return { score: 20, name: 'DirectX 11 级显卡' };
+  if (dx === '10' || glv >= 3.3) return { score: 8, name: 'DirectX 10 级显卡' };
+  if ((dx && Number(dx) <= 9) || gl || /shader model\s*[123]/i.test(t)) return { score: 3, name: '早期 DirectX / OpenGL 显卡' };
+  return null;
+}
+
 /** 一段 Steam 配置要求文本 → 显卡门槛（列出的几块里最弱那块就够）+ 内存 */
 export function parseReq(text?: string): Req | undefined {
   if (!text) return undefined;
@@ -125,9 +137,10 @@ export function parseReq(text?: string): Req | undefined {
     // 没写型号、只写显存或 DirectX 版本时按显存粗估：显存越小、年代越早，门槛越低
     const vram = /(\d+(?:\.\d+)?)\s*(gb|mb)/i.exec(gpuText || (/[，,]\s*([^，,]*显卡)/.exec(text)?.[1] ?? ''));
     const gb = vram ? (vram[2].toLowerCase() === 'mb' ? Number(vram[1]) / 1024 : Number(vram[1])) : null;
-    const old = /directx\s*(?:&reg;)?\s*[789]\b|shader model [123]/i.test(gpuText || text);
-    const score = gb != null ? (gb <= 0.5 ? 3 : gb <= 1 ? 10 : gb <= 2 ? 30 : gb <= 4 ? 60 : 100) : old ? 3 : null;
-    if (score != null) out.gpu = { score, names: [gb != null ? `${gb >= 1 ? gb + ' GB' : Math.round(gb * 1024) + ' MB'} 显存级别` : '早期 DirectX 显卡'] };
+    // 只写图形接口（「支持 DirectX 11 的显卡」「OpenGL 2.1」）时按接口年代给保守门槛
+    const api = apiLevel(gpuText || text);
+    const score = gb != null ? (gb <= 0.5 ? 3 : gb <= 1 ? 10 : gb <= 2 ? 30 : gb <= 4 ? 60 : 100) : api?.score ?? null;
+    if (score != null) out.gpu = { score, names: [gb != null ? `${gb >= 1 ? gb + ' GB' : Math.round(gb * 1024) + ' MB'} 显存级别` : api!.name] };
   }
   if (ram) out.ramGb = ram[2].toLowerCase() === 'mb' ? Number(ram[1]) / 1024 : Number(ram[1]);
   return out.gpu || out.ramGb ? out : undefined;
@@ -153,13 +166,23 @@ const meets = (rig: Rig, req?: Req) => {
   return { ok: gpuOk !== false && ramOk !== false, gpuOk, ramOk };
 };
 
-/** 判定：达到推荐 → 流畅；达到最低 → 能玩；连最低都不够 → 吃力（并说明差在哪） */
+/** 远超最低配置：显卡 ≥ 最低要求 2 倍且内存 ≥ 1.5 倍（没写显卡要求时只看内存不算，信息不够） */
+const headroom = (rig: Rig, req?: Req) => {
+  if (!req?.gpu || !rig.gpu) return false;
+  if (rig.gpu.score < req.gpu.score * 2) return false;
+  return !req.ramGb || !rig.ramGb || rig.ramGb >= req.ramGb * 1.5;
+};
+
+/** 判定：达到推荐 → 流畅；没有推荐配置但远超最低 → 流畅；达到最低 → 能玩；连最低都不够 → 吃力（并说明差在哪） */
 const UNKNOWN = { verdict: 'unknown' as const, reason: '这款游戏的配置要求里没有能识别的显卡或内存', reasonEn: 'No recognizable GPU or RAM in the requirements' };
 
 export function judge(rig: Rig, reqs?: Reqs): { verdict: Verdict; reason: string; reasonEn: string } {
   if (!reqs || !rig.gpu && !rig.ramGb) return UNKNOWN;
   const rec = meets(rig, reqs.rec), min = meets(rig, reqs.min);
   if (rec?.ok) return { verdict: 'smooth', reason: '达到推荐配置', reasonEn: 'Meets recommended specs' };
+  // 只公布了最低配置（老游戏、独立游戏很常见）：推荐配置通常约为最低配置的两倍档次。
+  // 显卡达到最低要求的 2 倍以上、内存达到 1.5 倍以上，就按「流畅」算——否则高配电脑玩星露谷也只显示「能玩」
+  if (!rec && min?.ok && headroom(rig, reqs.min)) return { verdict: 'smooth', reason: '远超最低配置（游戏未公布推荐配置）', reasonEn: 'Well above minimum specs (no recommended specs published)' };
   if (min?.ok) return rec
     ? { verdict: 'playable', reason: '达到最低配置，画质需要调低一些', reasonEn: 'Meets minimum specs — lower the settings' }
     : { verdict: 'playable', reason: '达到最低配置', reasonEn: 'Meets minimum specs' };

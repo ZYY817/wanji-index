@@ -1,0 +1,107 @@
+{
+  "id": "skyrim-special-edition",
+  "slug": "skyrim-special-edition",
+  "name": {
+    "zh": "The Elder Scrolls V: Skyrim Special Edition"
+  },
+  "summary": "荣获超过200项年度游戏大奖的《The Elder Scrolls V: Skyrim》推出特别版，以令人惊叹的细致画面带来史诗奇幻巨作。特别版内含大获好评的主游戏、附加内容，还有全新功能。",
+  "summaryEn": "Winner of more than 200 Game of the Year Awards, The Elder Scrolls V: Skyrim Special Edition brings the epic fantasy to life in stunning det…",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/489830/",
+      "priceNote": "参考价 ¥ 165.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "steamAppId": 489830,
+  "developers": [
+    "Bethesda Game Studios"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2016 年 10 月 27 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7/8.1/10 (64-bit Version)\n处理器: Intel i5-750/AMD Phenom II X4-945\n内存: 8 GB RAM\n显卡: NVIDIA GTX 470 1GB /AMD HD 7870 2GB\n存储空间: 需要 12 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7/8.1/10 (64-bit Version)\n处理器: Intel i5-2400/AMD FX-8320\n内存: 8 GB RAM\n显卡: NVIDIA GTX 780 3GB /AMD R9 290 4GB\n存储空间: 需要 12 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7/8.1/10 (64-bit Version)\nProcessor: Intel i5-750/AMD Phenom II X4-945\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 470 1GB /AMD HD 7870 2GB\nStorage: 12 GB available space",
+    "recommended": "Recommended:\nOS *: Windows 7/8.1/10 (64-bit Version)\nProcessor: Intel i5-2400/AMD FX-8320\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 780 3GB /AMD R9 290 4GB\nStorage: 12 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/489830/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-30T12:32:52.847Z",
+    "pcgw": {
+      "syncedAt": "2026-10-30T12:33:52.619Z",
+      "page": "The Elder Scrolls V: Skyrim Special Edition"
+    }
+  },
+  "issues": [
+    {
+      "title": "AMD frame rate stuttering/screen tearing",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#AMD_frame_rate_stuttering%2Fscreen_tearing",
+      "fixed": true
+    },
+    {
+      "title": "No In-game music bug",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#No_In-game_music_bug",
+      "fixed": true
+    },
+    {
+      "title": "GOG Version Freezes/Crashes after about 40 minutes",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#GOG_Version_Freezes%2FCrashes_after_about_40_minutes",
+      "fixed": true
+    },
+    {
+      "title": "G-Sync frame rate stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#G-Sync_frame_rate_stuttering",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes every 10-15 minutes on Windows 10",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#Game_crashes_every_10-15_minutes_on_Windows_10",
+      "fixed": true
+    },
+    {
+      "title": "Game runs at incorrect refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#Game_runs_at_incorrect_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "Allow pressing to close the game",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#Allow_pressing_to_close_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Continue rendering in the background",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Elder_Scrolls_V%3A_Skyrim_Special_Edition#Continue_rendering_in_the_background",
+      "fixed": true
+    }
+  ]
+}

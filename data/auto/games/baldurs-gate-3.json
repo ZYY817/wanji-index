@@ -1,0 +1,105 @@
+{
+  "id": "baldurs-gate-3",
+  "slug": "baldurs-gate-3",
+  "name": {
+    "zh": "博德之门3",
+    "en": "Baldur's Gate 3"
+  },
+  "summary": "《博德之门3》是一款以“龙与地下城”世界为背景的、强调故事与队伍冒险体验的角色扮演游戏。你的每一个选择，都会编织出一段关于同伴与背叛、生存与牺牲，以及至上力量诱惑的故事。",
+  "summaryEn": "Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship an…",
+  "genres": [
+    "adventure",
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1086940/",
+      "priceNote": "参考价 ¥ 268.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "steamAppId": 1086940,
+  "developers": [
+    "Larian Studios"
+  ],
+  "publishers": [
+    "Larian Studios"
+  ],
+  "releaseDate": "2023 年 8 月 3 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel I5 4690 / AMD FX 8350 / Snapdragon X Elite\n内存: 8 GB RAM\n显卡: Nvidia GTX 970 / RX 480 / Intel Arc A380 / Qualcomm Adreno X1 (4GB+ of VRAM)\nDirectX 版本: 11\n存储空间: 需要 150 GB 可用空间\n附注事项: SSD required",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64-bit\n处理器: Intel i7 8700K / AMD r5 3600\n内存: 16 GB RAM\n显卡: Nvidia 2060 Super / RX 5700 XT / Intel Arc A580 (8GB+ of VRAM)\nDirectX 版本: 11\n存储空间: 需要 150 GB 可用空间\n附注事项: SSD required"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel I5 4690 / AMD FX 8350 / Snapdragon X Elite\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 970 / RX 480 / Intel Arc A380 / Qualcomm Adreno X1 (4GB+ of VRAM)\nDirectX: Version 11\nStorage: 150 GB available space\nAdditional Notes: SSD required",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64-bit\nProcessor: Intel i7 8700K / AMD r5 3600\nMemory: 16 GB RAM\nGraphics: Nvidia 2060 Super / RX 5700 XT / Intel Arc A580 (8GB+ of VRAM)\nDirectX: Version 11\nStorage: 150 GB available space\nAdditional Notes: SSD required"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1086940/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Baldur's_Gate_3"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-30T12:32:45.274Z",
+    "pcgw": {
+      "syncedAt": "2026-10-30T12:33:46.548Z",
+      "page": "Baldur's Gate 3"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\PlayerProfiles\\Public\\Savegames\\Story\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Lari'an Studios\\Baldur's Gate 3\\PlayerProfiles\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\graphicSettings.lsx",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\analytics.lsx",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Larian Studios\\Baldur's Gate 3\\imgui.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "AA and Slow HDD mode options do not save their state",
+      "url": "https://www.pcgamingwiki.com/wiki/Baldur's_Gate_3#AA_and_Slow_HDD_mode_options_do_not_save_their_state",
+      "fixed": false
+    }
+  ]
+}

@@ -117,7 +117,9 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
 
         <div>
           <p className="flex items-center gap-2 text-sm font-medium text-foreground"><MemoryStick aria-hidden className="size-4 text-fg-3" /><T zh="内存" en="RAM" /></p>
-          <div role="radiogroup" aria-label="RAM" className="mt-3 flex flex-wrap gap-2">
+          {/* 与左栏同样的三行：标签 → 当前值 → 控件，两栏逐行对齐 */}
+          <p className="mt-2 text-lg font-semibold">{ram ? `${ram} GB` : <span className="text-fg-3"><T zh="未选择" en="Not set" /></span>}</p>
+          <div role="radiogroup" aria-label="RAM" className="mt-3 grid h-11 grid-cols-5 gap-1 rounded-full bg-white/[0.07] p-1">
             {RAMS.map((r) => (
               <button
                 key={r}
@@ -126,8 +128,8 @@ export function RigPicker({ className, onDone }: { className?: string; onDone?: 
                 aria-checked={ram === r}
                 onClick={() => setRam(r)}
                 className={cn(
-                  'h-11 min-w-[64px] rounded-sm border px-3 tabular text-base tabular-nums transition-colors',
-                  ram === r ? 'border-primary bg-primary/10 text-primary' : 'border-border-strong text-fg-2 hover:border-foreground/60 hover:text-foreground',
+                  'rounded-full tabular text-sm tabular-nums transition-colors',
+                  ram === r ? 'bg-white/[0.16] font-medium text-foreground shadow-[0_1px_3px_rgba(0,0,0,0.35)]' : 'text-fg-2 hover:text-foreground',
                 )}
               >
                 {r} GB

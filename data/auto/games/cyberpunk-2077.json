@@ -1,0 +1,123 @@
+{
+  "id": "cyberpunk-2077",
+  "slug": "cyberpunk-2077",
+  "name": {
+    "zh": "赛博朋克 2077",
+    "en": "Cyberpunk 2077"
+  },
+  "summary": "《赛博朋克 2077》是一款开放世界动作冒险 RPG 游戏。故事发生在暗黑未来的夜之城，一座五光十色、危机四伏的超级大都会，权力更迭和无尽的身体改造是这里不变的主题。",
+  "summaryEn": "Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, gl…",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1091500/",
+      "priceNote": "参考价 ¥ 298.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "steamAppId": 1091500,
+  "developers": [
+    "CD PROJEKT RED"
+  ],
+  "publishers": [
+    "CD PROJEKT RED"
+  ],
+  "releaseDate": "2020 年 12 月 9 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: Core i7-6700 or Ryzen 5 1600\n内存: 12 GB RAM\n显卡: GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380\nDirectX 版本: 12\n存储空间: 需要 70 GB 可用空间\n附注事项: SSD required. Attention: In this game you will encounter a variety of visual effects that may provide seizures or loss of consciousness in a minority of people. If you or someone you know experiences any of the above symptoms while playing, stop and seek medical attention immediately.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: 64-bit Windows 10\n处理器: Core i7-12700 or Ryzen 7 7800X3D\n内存: 16 GB RAM\n显卡: GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770\nDirectX 版本: 12\n存储空间: 需要 70 GB 可用空间\n附注事项: SSD required."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: Core i7-6700 or Ryzen 5 1600\nMemory: 12 GB RAM\nGraphics: GeForce GTX 1060 6GB or Radeon RX 580 8GB or Arc A380\nDirectX: Version 12\nStorage: 70 GB available space\nAdditional Notes: SSD required. Attention: In this game you will encounter a variety of visual effects that may provide seizures or loss of consciousness in a minority of people. If you or someone you know experiences any of the above symptoms while playing, stop and seek medical attention immediately.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: 64-bit Windows 10\nProcessor: Core i7-12700 or Ryzen 7 7800X3D\nMemory: 16 GB RAM\nGraphics: GeForce RTX 2060 SUPER or Radeon RX 5700 XT or Arc A770\nDirectX: Version 12\nStorage: 70 GB available space\nAdditional Notes: SSD required."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1091500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-30T12:32:49.078Z",
+    "pcgw": {
+      "syncedAt": "2026-10-30T12:33:48.543Z",
+      "page": "Cyberpunk 2077"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Saved Games\\CD Projekt Red\\Cyberpunk 2077",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\CD Projekt Red\\Cyberpunk 2077",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Bad performance on higher resolutions with DLSS",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Bad_performance_on_higher_resolutions_with_DLSS",
+      "fixed": false
+    },
+    {
+      "title": "Limited color range when playing without ray-tracing or path-tracing",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Limited_color_range_when_playing_without_ray-tracing_or_path-tracing",
+      "fixed": false
+    },
+    {
+      "title": "Upscaling causes wrong settings to be applied",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Upscaling_causes_wrong_settings_to_be_applied",
+      "fixed": false
+    },
+    {
+      "title": "Crash at startup",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Crash_at_startup",
+      "fixed": true
+    },
+    {
+      "title": "Minimap too small for ultrawide and wider resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Minimap_too_small_for_ultrawide_and_wider_resolutions",
+      "fixed": true
+    },
+    {
+      "title": "Middle mouse button not working when using a Logitech mouse",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Middle_mouse_button_not_working_when_using_a_Logitech_mouse",
+      "fixed": true
+    },
+    {
+      "title": "G-Sync not activating",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#G-Sync_not_activating",
+      "fixed": true
+    },
+    {
+      "title": "Audio crackling",
+      "url": "https://www.pcgamingwiki.com/wiki/Cyberpunk_2077#Audio_crackling",
+      "fixed": true
+    }
+  ]
+}

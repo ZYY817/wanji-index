@@ -1,0 +1,62 @@
+{
+  "id": "witcher-3",
+  "slug": "witcher-3",
+  "name": {
+    "zh": "巫师3：狂猎 — 重制版",
+    "en": "The Witcher 3: Wild Hunt — Remastered"
+  },
+  "summary": "《巫师 3：狂猎 — 重制版》为这款广受好评的角色扮演游戏带来了全方位的升级和优化。扮演猎魔人利维亚的杰洛特，在黑暗的奇幻开放世界中踏上追寻养女希里的史诗之旅。",
+  "summaryEn": "The Witcher 3: Wild Hunt — Remastered modernizes the acclaimed role-playing game with a range of upgrades and enhancements.",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/292030/",
+      "priceNote": "参考价 ¥ 199.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-10-30"
+    }
+  ],
+  "steamAppId": 292030,
+  "developers": [
+    "CD PROJEKT RED"
+  ],
+  "publishers": [
+    "CD PROJEKT RED"
+  ],
+  "releaseDate": "2015 年 5 月 18 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: 64-bit Windows 11\n处理器: Core i5-8400 / Ryzen 5 2600\n内存: 12 GB RAM\n显卡: GeForce GTX 1660 / Radeon RX 5500 XT 8GB / Arc A580\n存储空间: 需要 60 SSD GB 可用空间\n附注事项: VRAM 6 GB",
+    "recommended": "推荐配置:\n操作系统: 64-bit Windows 11\n处理器: Intel Core i7 8700K / AMD Ryzen 5 3600X\n内存: 16 GB RAM\n显卡: RTX 2060 Super / AMD Radeon RX 6600 XT / Intel Arc B580\n存储空间: 需要 60 SSD GB 可用空间\n附注事项: VRAM 8 GB"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: 64-bit Windows 11\nProcessor: Core i5-8400 / Ryzen 5 2600\nMemory: 12 GB RAM\nGraphics: GeForce GTX 1660 / Radeon RX 5500 XT 8GB / Arc A580\nStorage: 60 SSD GB available space\nAdditional Notes: VRAM 6 GB",
+    "recommended": "Recommended:\nOS: 64-bit Windows 11\nProcessor: Intel Core i7 8700K / AMD Ryzen 5 3600X\nMemory: 16 GB RAM\nGraphics: RTX 2060 Super / AMD Radeon RX 6600 XT / Intel Arc B580\nStorage: 60 SSD GB available space\nAdditional Notes: VRAM 8 GB"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/292030/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-10-30T12:32:56.754Z",
+    "pcgw": {
+      "syncedAt": "2026-10-30T12:33:56.228Z",
+      "page": null
+    }
+  }
+}

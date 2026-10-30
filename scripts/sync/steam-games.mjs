@@ -83,7 +83,10 @@ for (const [appid, spyName] of pool) {
   const d = await details(appid, 'schinese');
   await sleep(cfg.requestIntervalMs);
   fetched++;
-  if (!d || d.type !== 'game' || (d.content_descriptors?.ids ?? []).some((x) => ADULT.has(x))) { skipped++; continue; }
+  // 成人内容过滤只用于从榜单自动发现的游戏：人工收录的主流大作（博德之门 3、赛博朋克 2077、巫师 3……）
+  // 在 Steam 上也带「部分裸露」标记，不能因此拿不到配置要求和中文名
+  const adult = !handByApp.has(appid) && (d?.content_descriptors?.ids ?? []).some((x) => ADULT.has(x));
+  if (!d || d.type !== 'game' || adult) { skipped++; continue; }
   // 商店名本身是英文时就用它（SteamSpy 的名字可能是旧名，例如 CS:GO → CS2）
   // 英文版商店信息：英文名、英文简介、英文配置要求（中英切换用，官方原文，不做机器翻译）
   const de = await details(appid, 'english');
