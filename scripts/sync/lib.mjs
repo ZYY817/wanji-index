@@ -8,7 +8,7 @@ export const today = () => new Date(Date.now() + 8 * 3600e3).toISOString().slice
 export const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 export const config = () => JSON.parse(readFileSync(join(ROOT, 'config', 'sync.json'), 'utf8'));
 
-const UA = 'wanji-index-sync/1.0 (+https://wanji-index.pages.dev; non-commercial game index)';
+const UA = 'wanji-index-sync/1.0 (+https://zyy817.github.io/wanji-index/; non-commercial game index)';
 
 /** GET JSON：超时 20 秒；429 / 5xx 退避重试最多 3 次 */
 export async function getJson(url, { tries = 3 } = {}) {

@@ -1,0 +1,51 @@
+# 构建并发布到 GitHub Pages（https://zyy817.github.io/wanji-index/）。
+# 触发：推送到 main、手动运行，以及「自动更新内容」工作流跑完之后——
+# 后者很重要：自动更新用 GITHUB_TOKEN 推送的提交不会触发 push 事件，只能靠 workflow_run 接上，
+# 否则每天抓到的新免费情报永远不会上线。
+name: 发布网站
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  workflow_run:
+    workflows: ['自动更新内容']
+    types: [completed]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main # workflow_run 时取最新的 main（含自动更新刚提交的数据）
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: 构建（数据校验 → 字体检查 → Next 静态导出 → 产物检查）
+        run: npm run build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

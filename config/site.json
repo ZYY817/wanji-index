@@ -1,8 +1,8 @@
 {
   "name": "玩机索引",
-  "url": "https://wanji-index.pages.dev",
-  "urlStatus": "placeholder——未购买自定义域名时的开发用地址，正式域名确定后改此一处即可",
-  "base": "/",
+  "url": "https://zyy817.github.io/wanji-index",
+  "urlStatus": "GitHub Pages 项目地址（子路径 /wanji-index/）。换成自定义域名或 Cloudflare Pages 时，把 url 改成新地址、base 改回 \"/\"。",
+  "base": "/wanji-index/",
   "feedback": {
     "issueUrl": "",
     "email": "",
