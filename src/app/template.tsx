@@ -1,4 +1,5 @@
 'use client';
+import { useEffect } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { EASE_INOUT, EASE_OUT } from '@/components/fx/tokens';
 
@@ -6,13 +7,14 @@ import { EASE_INOUT, EASE_OUT } from '@/components/fx/tokens';
 let navigated = false;
 
 /**
- * 页面转场：站内跳转时，一条香槟金细线从左划到右，新页面同时淡入并上浮 16px。
+ * 页面转场：站内跳转时，一条细线从左划到右，新页面同时淡入并上浮 16px。
  * template.tsx 在每次路由变化时重新挂载，所以只需要描述「进场」。
  */
 export default function Template({ children }: { children: React.ReactNode }) {
   const reduced = useReducedMotion();
+  // 渲染期间只读标记、挂载后再写：渲染里改模块变量会让注水重试时第二次渲染多出转场线，与服务端 HTML 不一致（React #418）
   const play = navigated && !reduced;
-  navigated = true;
+  useEffect(() => { navigated = true; }, []);
 
   return (
     <>
