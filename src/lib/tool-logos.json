@@ -6,5 +6,11 @@
   "smapi": "/logos/tools/smapi.png",
   "tmodloader": "/logos/tools/tmodloader.png",
   "vortex": "/logos/tools/vortex.png",
-  "mod-organizer-2": "/logos/tools/mod-organizer-2.ico"
+  "mod-organizer-2": "/logos/tools/mod-organizer-2.ico",
+  "ddu": "/logos/tools/ddu.ico",
+  "fluffy-mod-manager": "/logos/tools/fluffy-mod-manager.png",
+  "reshade": "/logos/tools/reshade.ico",
+  "special-k": "/logos/tools/special-k.png",
+  "bepinex": "/logos/tools/bepinex.png",
+  "ue4ss": "/logos/tools/ue4ss.png"
 }

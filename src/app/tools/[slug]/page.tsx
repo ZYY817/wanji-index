@@ -8,6 +8,7 @@ import { AcquireButton } from '@/components/ui/button';
 import { ExtLink } from '@/components/ui/ext-link';
 import { FeedbackLink } from '@/components/layout/feedback';
 import { DetailMasthead, Notice, type DetailFact } from '@/components/layout/detail-masthead';
+import { SafetyNote } from '@/components/layout/safety-note';
 import { DetailSection, type DetailSectionMeta } from '@/components/layout/detail-section';
 import { Reveal } from '@/components/fx/reveal';
 import { ToolLogo } from '@/components/ui/site-logo';
@@ -94,12 +95,17 @@ export default async function ToolPage({ params }: Params) {
         summary={t.summary}
         action={<AcquireButton href={t.officialUrl} health={t.linkHealth} label={<T zh="从官网获取" en="Get it from the official site" />} size="lg" className="w-full justify-between" />}
         facts={facts}
-        notice={risks.length || t.uninstallNote ? (
-          <Notice title={<T zh="使用前须知" en="Before you use it" />}>
-            {risks.map((r) => <p key={r}>{r}</p>)}
-            {t.uninstallNote && <p><span className="text-foreground"><T zh="恢复 / 卸载：" en="Undo / uninstall: " /></span>{t.uninstallNote}</p>}
-          </Notice>
-        ) : undefined}
+        notice={(
+          <div className="grid gap-4 lg:grid-cols-2">
+            {(risks.length > 0 || t.uninstallNote) && (
+              <Notice title={<T zh="使用前须知" en="Before you use it" />}>
+                {risks.map((r) => <p key={r}>{r}</p>)}
+                {t.uninstallNote && <p><span className="text-foreground"><T zh="恢复 / 卸载：" en="Undo / uninstall: " /></span>{t.uninstallNote}</p>}
+              </Notice>
+            )}
+            <SafetyNote />
+          </div>
+        )}
       />
 
       <div className="container-x">

@@ -1,0 +1,32 @@
+{
+  "id": "gamebanana",
+  "slug": "gamebanana",
+  "name": "GameBanana",
+  "category": "mod",
+  "url": "https://gamebanana.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费下载",
+  "summary": "老牌 MOD 社区：射击游戏（CS 系列、军团要塞 2）、音游、二次元向游戏的模型、贴图与地图 MOD 集中地。",
+  "purposes": [
+    "模型与贴图 MOD",
+    "地图与音效",
+    "工具与教程"
+  ],
+  "risks": [
+    "下载前看评论与更新时间，可执行文件类 MOD 先用杀毒软件扫描"
+  ],
+  "sources": [
+    {
+      "name": "GameBanana",
+      "url": "https://gamebanana.com/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

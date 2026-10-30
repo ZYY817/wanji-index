@@ -1,0 +1,37 @@
+{
+  "id": "keylol",
+  "slug": "keylol",
+  "name": "其乐 Keylol",
+  "aliases": [
+    "Keylol",
+    "其乐",
+    "SteamCN"
+  ],
+  "category": "guide-wiki",
+  "url": "https://keylol.com/",
+  "languages": [
+    "zh"
+  ],
+  "feeNote": "免费，发帖需注册",
+  "summary": "国内最大的 Steam / PC 游戏综合社区（前身 SteamCN）：打折情报、汉化补丁发布、购买与技术求助。",
+  "purposes": [
+    "打折与免费情报",
+    "汉化补丁发布",
+    "技术问题求助"
+  ],
+  "risks": [
+    "帖子里的第三方链接需自行甄别，下载补丁优先看楼主与版规说明"
+  ],
+  "sources": [
+    {
+      "name": "其乐 Keylol",
+      "url": "https://keylol.com/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

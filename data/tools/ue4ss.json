@@ -1,0 +1,33 @@
+{
+  "id": "ue4ss",
+  "slug": "ue4ss",
+  "name": "UE4SS",
+  "type": "mod-loader",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://github.com/UE4SS-RE/RE-UE4SS",
+  "summary": "虚幻 4 / 5 引擎游戏的脚本与 MOD 注入框架（Lua / C++），黑神话：悟空、幻兽帕鲁、霍格沃茨之遗等游戏的常用前置。",
+  "installNotes": "下载 Releases 里的压缩包，解压到游戏的 Binaries/Win64 目录（与游戏 exe 同级）。",
+  "supportedGames": [
+    "black-myth-wukong",
+    "palworld",
+    "hogwarts-legacy"
+  ],
+  "risks": [
+    "不同游戏需要的版本与配置不同，按具体 MOD 的说明安装",
+    "联网游戏使用前确认是否允许"
+  ],
+  "sources": [
+    {
+      "name": "GitHub（UE4SS-RE）",
+      "url": "https://github.com/UE4SS-RE/RE-UE4SS"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

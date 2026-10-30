@@ -8,6 +8,7 @@ import type { OfferVM } from '@/lib/present';
 import { shDateTime } from '@/lib/time';
 import { cn } from '@/lib/utils';
 import { AcquireButton } from '@/components/ui/button';
+import { offerAltZh } from '@/components/offer/offer-panel';
 import { PlatformMark } from '@/components/ui/platform-mark';
 import { GameArt } from '@/components/game/game-art';
 import { Countdown, useNow } from '@/components/offer/countdown';
@@ -118,7 +119,7 @@ export function CardFace({ o, text = 1 }: { o: OfferVM; text?: MotionValue<numbe
       <motion.div className="absolute inset-x-0 bottom-0 p-7" style={{ opacity: text }}>
         <p className="flex items-center gap-2 text-sm text-foreground/85"><PlatformMark platform={o.platform} withLabel /><span className="text-fg-3">·</span>{L('freeType', o.type)}</p>
         <h3 className="mt-2 text-balance font-display text-[clamp(26px,2.2vw,38px)] font-semibold leading-tight tracking-[-0.009em]"><T zh={o.titleZh ?? o.title} en={o.titleOrig ?? o.title} /></h3>
-        {o.titleOrig && <p className="mt-1 text-sm text-foreground/70"><T zh={o.titleOrig} en="" /></p>}
+        {offerAltZh(o) && <p className="mt-1 text-sm text-foreground/70"><T zh={offerAltZh(o)} en="" /></p>}
       </motion.div>
     </>
   );

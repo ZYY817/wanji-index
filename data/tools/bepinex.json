@@ -1,0 +1,35 @@
+{
+  "id": "bepinex",
+  "slug": "bepinex",
+  "name": "BepInEx",
+  "type": "mod-loader",
+  "os": [
+    "windows",
+    "linux",
+    "macos"
+  ],
+  "officialUrl": "https://github.com/BepInEx/BepInEx",
+  "summary": "Unity 游戏通用的插件加载框架：英灵神殿、致命公司、雨中冒险 2 等大量 Unity 游戏的 MOD 前置。",
+  "installNotes": "下载与游戏匹配的版本（x64 / IL2CPP），解压到游戏根目录，运行一次游戏生成配置后再放入插件。用 r2modman 等管理器可自动安装。",
+  "supportedGames": [
+    "valheim",
+    "lethal-company",
+    "risk-of-rain-2",
+    "r-e-p-o"
+  ],
+  "risks": [
+    "版本与游戏不匹配会导致无法启动，优先用 MOD 管理器安装"
+  ],
+  "sources": [
+    {
+      "name": "GitHub（BepInEx）",
+      "url": "https://github.com/BepInEx/BepInEx"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

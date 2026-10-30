@@ -1,0 +1,31 @@
+{
+  "id": "fluffy-mod-manager",
+  "slug": "fluffy-mod-manager",
+  "name": "Fluffy Mod Manager",
+  "type": "mod-manager",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://www.fluffyquack.com/",
+  "summary": "卡普空游戏（怪物猎人、生化危机、鬼泣等）最常用的图形化 MOD 管理器，一键安装与还原替换类 MOD。",
+  "installNotes": "从官网下载解压，选择游戏并指定游戏目录；MOD 压缩包放进对应的 Games 子目录后在列表里启用。",
+  "supportedGames": [
+    "monster-hunter-world",
+    "monster-hunter-wilds"
+  ],
+  "risks": [
+    "只从 fluffyquack.com 下载，其他「整合包」可能被篡改"
+  ],
+  "sources": [
+    {
+      "name": "FluffyQuack 官网",
+      "url": "https://www.fluffyquack.com/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

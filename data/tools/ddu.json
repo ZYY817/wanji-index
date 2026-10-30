@@ -1,0 +1,28 @@
+{
+  "id": "ddu",
+  "slug": "ddu",
+  "name": "DDU（Display Driver Uninstaller）",
+  "type": "driver",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://www.wagnardsoft.com/display-driver-uninstaller-ddu",
+  "summary": "彻底清除显卡驱动残留的卸载工具。换显卡、驱动更新后闪退黑屏、掉帧时，排障的标准第一步。",
+  "installNotes": "先下载好新驱动并断开网络，进入 Windows 安全模式运行 DDU，选择显卡厂商后「清理并重启」，重启后再装新驱动。",
+  "risks": [
+    "务必在安全模式下使用，并提前备份或创建系统还原点",
+    "只从 Wagnardsoft 官网或 Guru3D 下载，名字相似的「驱动清理大师」类软件不是它"
+  ],
+  "sources": [
+    {
+      "name": "Wagnardsoft 官网",
+      "url": "https://www.wagnardsoft.com/display-driver-uninstaller-ddu"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

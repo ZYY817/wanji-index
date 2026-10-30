@@ -2,7 +2,8 @@
   "id": "battle-for-wesnoth",
   "slug": "battle-for-wesnoth",
   "name": {
-    "zh": "Battle for Wesnoth"
+    "zh": "韦诺之战",
+    "en": "Battle for Wesnoth"
   },
   "summary": "韦诺之战是一款以高奇幻为主题的开源回合制策略游戏。在十七场单人战役以及数十张多人地图中探索伊迪亚的四方，在此期间参与无数的冒险吧。",
   "summaryEn": "The Battle for Wesnoth is an open source, turn-based strategy game with a high fantasy theme.",

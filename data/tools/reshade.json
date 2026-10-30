@@ -1,0 +1,28 @@
+{
+  "id": "reshade",
+  "slug": "reshade",
+  "name": "ReShade",
+  "type": "graphics",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://reshade.me/",
+  "summary": "通用的画面后处理注入器：给游戏加锐化、调色、景深、环境光遮蔽等滤镜，社区有大量现成预设。",
+  "installNotes": "运行安装程序选择游戏 exe 与图形 API，勾选需要的着色器包；游戏内按 Home 键打开设置。",
+  "risks": [
+    "部分带反作弊的联网游戏会禁止注入，先查游戏的规定",
+    "滤镜越多帧数下降越明显"
+  ],
+  "sources": [
+    {
+      "name": "ReShade 官网",
+      "url": "https://reshade.me/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

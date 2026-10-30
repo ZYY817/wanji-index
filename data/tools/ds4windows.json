@@ -1,0 +1,29 @@
+{
+  "id": "ds4windows",
+  "slug": "ds4windows",
+  "name": "DS4Windows",
+  "type": "driver",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://github.com/schmaldeo/DS4Windows",
+  "summary": "让 PS4 / PS5 手柄在 Windows 上模拟 Xbox 手柄，非 Steam 游戏也能识别，支持触控板与陀螺仪映射。",
+  "installNotes": "从 GitHub Releases 下载最新版解压运行，按提示安装 ViGEmBus 驱动；Steam 游戏可直接用 Steam 输入，不必同时开启。",
+  "risks": [
+    "原作者仓库已停更，目前由 schmaldeo 继续维护——以这个 GitHub 仓库为准",
+    "搜索结果里的 ds4-windows 同名网站并非官方，下载前核对地址",
+    "与 Steam 输入同时开启可能出现按键重复"
+  ],
+  "sources": [
+    {
+      "name": "GitHub（schmaldeo/DS4Windows）",
+      "url": "https://github.com/schmaldeo/DS4Windows"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

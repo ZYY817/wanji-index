@@ -1,0 +1,27 @@
+{
+  "id": "borderless-gaming",
+  "slug": "borderless-gaming",
+  "name": "Borderless Gaming",
+  "type": "compat-fix",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://github.com/andrewmd5/Borderless-Gaming",
+  "summary": "把不支持「无边框窗口」的老游戏强制变成全屏无边框，切屏不黑屏、多显示器更顺手。开源免费（Steam 版为付费支持）。",
+  "installNotes": "先让游戏以窗口模式运行，再在 Borderless Gaming 里把它加入列表。",
+  "risks": [
+    "少数使用独占全屏的游戏可能出现画面比例异常"
+  ],
+  "sources": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/andrewmd5/Borderless-Gaming"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

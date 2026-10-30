@@ -1,0 +1,28 @@
+{
+  "id": "lossless-scaling",
+  "slug": "lossless-scaling",
+  "name": "Lossless Scaling",
+  "type": "graphics",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://store.steampowered.com/app/993090/Lossless_Scaling/",
+  "summary": "通用的画面放大与插帧工具（LSFG）：对任何窗口化游戏做超分辨率或帧生成，低配显卡、核显和锁帧老游戏的常用救星。Steam 付费软件。",
+  "installNotes": "在 Steam 购买安装后，游戏改为窗口化或无边框，再在 Lossless Scaling 里选择放大 / 插帧方式并点「Scale」。",
+  "risks": [
+    "帧生成会增加输入延迟，对抗类射击游戏慎用",
+    "只有 Steam 一个正规渠道，网上的「免费版」「破解版」常捆绑恶意软件"
+  ],
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/993090/Lossless_Scaling/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

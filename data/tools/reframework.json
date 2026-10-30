@@ -1,0 +1,31 @@
+{
+  "id": "reframework",
+  "slug": "reframework",
+  "name": "REFramework",
+  "type": "mod-loader",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://github.com/praydog/REFramework",
+  "summary": "卡普空 RE 引擎游戏（怪物猎人 荒野 / 崛起、生化危机系列、鬼泣 5、龙之信条 2）的 MOD 底层框架，大部分 RE 引擎 MOD 的前置。",
+  "installNotes": "下载对应游戏的版本，把 dinput8.dll 放到游戏 exe 所在目录；游戏内按 Insert 键打开菜单。",
+  "supportedGames": [
+    "monster-hunter-wilds"
+  ],
+  "risks": [
+    "游戏更新后常需等待 REFramework 跟进，更新前先备份",
+    "在线模式使用 MOD 有被处理的风险"
+  ],
+  "sources": [
+    {
+      "name": "GitHub（praydog/REFramework）",
+      "url": "https://github.com/praydog/REFramework"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

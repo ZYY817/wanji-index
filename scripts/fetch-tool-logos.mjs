@@ -17,6 +17,8 @@ const HINTS = {
   'mod-organizer-2': ['https://raw.githubusercontent.com/ModOrganizer2/modorganizer/master/src/mo_icon.ico'],
   r2modman: ['https://raw.githubusercontent.com/ebkr/r2modmanPlus/develop/src/assets/icon/favicon.png'],
   tmodloader: ['https://github.com/tModLoader.png?size=256'],
+  bepinex: ['https://github.com/BepInEx.png?size=256'],
+  ue4ss: ['https://github.com/UE4SS-RE.png?size=256'],
   vortex: ['https://raw.githubusercontent.com/Nexus-Mods/Vortex/master/assets/images/vortex.png', 'https://raw.githubusercontent.com/Nexus-Mods/Vortex/master/src/assets/images/vortex.png'],
 };
 /** 不能拿站点图标的托管平台 */

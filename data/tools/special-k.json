@@ -1,0 +1,27 @@
+{
+  "id": "special-k",
+  "slug": "special-k",
+  "name": "Special K",
+  "type": "graphics",
+  "os": [
+    "windows"
+  ],
+  "officialUrl": "https://www.special-k.info/",
+  "summary": "画质与帧率调校工具箱：精确锁帧、降低延迟、为不支持的游戏注入 HDR、修复老游戏的高刷撕裂与窗口问题。",
+  "installNotes": "安装后通过 SKIF 启动器启动游戏即可注入；按 Ctrl + Shift + Backspace 打开游戏内控制面板。",
+  "risks": [
+    "带反作弊的联网游戏不要注入（可能被判定为外挂）"
+  ],
+  "sources": [
+    {
+      "name": "Special K 官网",
+      "url": "https://www.special-k.info/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

@@ -1,0 +1,268 @@
+{
+  "auto-epic-idle-champions-of-the-forgotten-realms-20261105": {
+    "steamAppId": "627690",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-epic-sker-ritual-aac702-20261022": {
+    "steamAppId": "1492070",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-epic-sorry-were-closed-724c86-20261029": {
+    "steamAppId": "1796580",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-f2p-3419430": {
+    "steamAppId": "3419430",
+    "genres": [
+      "casual",
+      "indie",
+      "mmo"
+    ]
+  },
+  "auto-f2p-438100": {
+    "steamAppId": "438100",
+    "genres": [
+      "adventure",
+      "casual",
+      "mmo"
+    ]
+  },
+  "auto-f2p-714010": {
+    "steamAppId": "714010",
+    "genres": [
+      "action",
+      "adventure",
+      "casual"
+    ]
+  },
+  "auto-gp-1329": {
+    "steamAppId": "1728080",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-1669": {
+    "steamAppId": "1773460",
+    "genres": [
+      "adventure",
+      "casual",
+      "indie"
+    ]
+  },
+  "auto-gp-2089": {
+    "steamAppId": "2157060",
+    "genres": [
+      "action",
+      "indie"
+    ]
+  },
+  "auto-gp-2091": {
+    "steamAppId": "1039910",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-2204": {
+    "steamAppId": "2299730",
+    "genres": [
+      "casual",
+      "indie",
+      "simulation"
+    ]
+  },
+  "auto-gp-3100": {
+    "steamAppId": "2372870",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3180": {
+    "steamAppId": "2778250",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3301": {
+    "steamAppId": "2256230",
+    "genres": [
+      "adventure",
+      "indie",
+      "strategy"
+    ]
+  },
+  "auto-gp-3313": {
+    "steamAppId": "1334000",
+    "genres": [
+      "casual",
+      "indie",
+      "simulation"
+    ]
+  },
+  "auto-gp-3316": {
+    "steamAppId": "1495670",
+    "genres": [
+      "action",
+      "casual"
+    ]
+  },
+  "auto-gp-3322": {
+    "steamAppId": "1296880",
+    "genres": [
+      "casual"
+    ]
+  },
+  "auto-gp-3324": {
+    "steamAppId": "1262060",
+    "zh": "戰鬥公羊",
+    "genres": [
+      "action",
+      "adventure",
+      "simulation"
+    ]
+  },
+  "auto-gp-3328": {
+    "steamAppId": "1166580",
+    "genres": [
+      "casual",
+      "indie",
+      "simulation"
+    ]
+  },
+  "auto-gp-3331": {
+    "steamAppId": "1334010",
+    "genres": [
+      "action",
+      "adventure",
+      "casual"
+    ]
+  },
+  "auto-gp-3340": {
+    "steamAppId": "1341620",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3422": {
+    "steamAppId": "3063960",
+    "genres": [
+      "indie"
+    ]
+  },
+  "auto-gp-3496": {
+    "steamAppId": "2994800",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3553": {
+    "steamAppId": "4465030",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3628": {
+    "steamAppId": "3542420",
+    "genres": [
+      "adventure",
+      "casual",
+      "indie"
+    ]
+  },
+  "auto-gp-3690": {
+    "steamAppId": "1962950",
+    "genres": [
+      "adventure",
+      "indie",
+      "simulation"
+    ]
+  },
+  "auto-gp-3771": {
+    "steamAppId": "5041880",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3820": {
+    "steamAppId": "4331890",
+    "genres": [
+      "action",
+      "casual",
+      "indie"
+    ]
+  },
+  "auto-gp-3822": {
+    "steamAppId": "3535330",
+    "genres": [
+      "adventure",
+      "casual"
+    ]
+  },
+  "auto-gp-3825": {
+    "steamAppId": "5090990",
+    "genres": [
+      "action",
+      "casual",
+      "indie"
+    ]
+  },
+  "auto-gp-3827": {
+    "steamAppId": "2315570",
+    "genres": [
+      "adventure"
+    ]
+  },
+  "auto-gp-3828": {
+    "steamAppId": "3471070",
+    "genres": [
+      "adventure",
+      "casual",
+      "indie"
+    ]
+  },
+  "auto-gp-3829": {
+    "steamAppId": "4503570",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "ddnet-oss": {
+    "steamAppId": "412220",
+    "genres": [
+      "action",
+      "indie"
+    ]
+  },
+  "openttd-free": {
+    "steamAppId": "1536610",
+    "genres": [
+      "casual",
+      "indie",
+      "simulation"
+    ]
+  }
+}

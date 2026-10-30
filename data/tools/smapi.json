@@ -2,17 +2,30 @@
   "id": "smapi",
   "slug": "smapi",
   "name": "SMAPI",
-  "type": "mod-manager",
+  "type": "mod-loader",
   "summary": "星露谷物语官方 MOD 加载器，绝大多数星露谷 MOD 的前置依赖。",
-  "os": ["windows", "macos", "linux"],
-  "supportedGames": ["stardew-valley"],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "supportedGames": [
+    "stardew-valley"
+  ],
   "officialUrl": "https://smapi.io/",
-  "risks": ["游戏大版本更新后需等待 SMAPI 与 MOD 同步更新"],
+  "risks": [
+    "游戏大版本更新后需等待 SMAPI 与 MOD 同步更新"
+  ],
   "linkHealth": "ok",
   "reviewStatus": "verified",
   "checkedAt": "2026-10-24",
-  "sources": [{ "name": "SMAPI 官网", "url": "https://smapi.io/" }],
+  "sources": [
+    {
+      "name": "SMAPI 官网",
+      "url": "https://smapi.io/"
+    }
+  ],
   "createdAt": "2026-10-24",
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-30",
   "publishStatus": "published"
 }

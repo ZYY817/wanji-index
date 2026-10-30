@@ -11,6 +11,7 @@ import { GameArt } from '@/components/game/game-art';
 import { healthStatus } from '@/lib/status';
 import { shDateTime } from '@/lib/time';
 import { cn } from '@/lib/utils';
+import { genreZh } from '@/lib/genre';
 import { Countdown } from './countdown';
 import { Tilt } from '@/components/fx/interact';
 import { isUrgent, liveLifecycle } from './use-lifecycle';
@@ -19,6 +20,15 @@ import { isUrgent, liveLifecycle } from './use-lifecycle';
 const CTA: Record<string, [string, string]> = { limited: ['领取', 'Claim'], weekend: ['获取', 'Get'], trial: ['试玩', 'Try'], permanent: ['开玩', 'Play'], opensource: ['下载', 'Download'] };
 /** 即将开始的活动还不能领：按钮改为去活动页看看 */
 const ctaOf = (o: OfferVM, lc: string | null) => { const [zhL, enL] = lc === 'upcoming' ? ['活动页', 'Details'] : CTA[o.type] ?? ['领取', 'Claim']; return <T zh={zhL} en={enL} />; };
+
+/**
+ * 中文模式下标题下方的副标题（英文模式不显示）：
+ *   有中文名 → 英文原名；没有通行中文名 → 中文类型（「动作 · 冒险」），保证每张卡都有一行中文信息。
+ */
+export function offerAltZh(o: OfferVM): string | null {
+  if (o.titleZh) return o.titleOrig ?? null;
+  return o.genres.length ? o.genres.map(genreZh).join(' · ') : null;
+}
 
 /** 免费大卡（限时领取 / 即将开始） */
 export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number | null; className?: string }) {
@@ -82,8 +92,8 @@ export function OfferHeroCard({ o, now, className }: { o: OfferVM; now: number |
               mainTitle
             )}
           </h3>
-          {o.titleOrig && (
-            <p className="mt-1 truncate text-sm text-fg-2"><T zh={o.titleOrig} en="" /></p>
+          {offerAltZh(o) && (
+            <p className="mt-1 truncate text-sm text-fg-2"><T zh={offerAltZh(o)} en="" /></p>
           )}
 
           <div aria-hidden className="h-5 shrink-0" />
@@ -174,8 +184,8 @@ export function OfferRow({ o, now: _now }: { o: OfferVM; now?: number | null }) 
                 mainTitle
               )}
             </span>
-            {o.titleOrig && (
-              <span className="text-sm text-fg-2 truncate"><T zh={o.titleOrig} en="" /></span>
+            {offerAltZh(o) && (
+              <span className="truncate text-sm text-fg-2"><T zh={offerAltZh(o)} en="" /></span>
             )}
           </div>
 

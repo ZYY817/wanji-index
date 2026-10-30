@@ -1,0 +1,29 @@
+{
+  "id": "steam250",
+  "slug": "steam250",
+  "name": "Steam 250",
+  "category": "other",
+  "url": "https://steam250.com/",
+  "languages": [
+    "en"
+  ],
+  "feeNote": "免费",
+  "summary": "按评价数量与好评率算出的 Steam 口碑榜：历年最佳、各类型榜单、小众隐藏佳作，适合找下一款玩什么。",
+  "purposes": [
+    "口碑排行",
+    "分类型榜单",
+    "发现冷门佳作"
+  ],
+  "sources": [
+    {
+      "name": "Steam 250",
+      "url": "https://steam250.com/"
+    }
+  ],
+  "linkHealth": "ok",
+  "reviewStatus": "verified",
+  "checkedAt": "2026-10-30",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published"
+}

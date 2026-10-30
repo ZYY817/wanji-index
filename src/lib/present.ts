@@ -1,4 +1,5 @@
 import OFFER_ART from '../../data/auto/offer-art.json';
+import OFFER_NAMES from '../../data/auto/offer-names.json';
 // 展示层视图模型（仅服务端调用）：把 loadData()/buildRelations() 的结果整理成可序列化的 props，
 // 供客户端组件使用。只做「整形与计数」，不做资格过滤（资格唯一判定在 eligibility.mjs）。
 import { steamArt, steamArtById, steamAppIdFromUrl } from './data.mjs';
@@ -31,6 +32,8 @@ export type OfferVM = {
   gameSlug?: string; gameName?: string; art: Art;
   /** 官方中文名（没有则为空）与去掉中文名后的原名，用于「中文主标题 + 原名副标题」 */
   titleZh?: string; titleOrig?: string; claimNoteEn?: string;
+  /** 类型（站内类型键）：没有中文名的情报用它做中文副标题 */
+  genres: string[];
 };
 
 /** 从 releaseDate 解析出时间戳（毫秒）或 null，兼容中英文与即将推出 */
@@ -116,6 +119,26 @@ export function offerMs(str: string | undefined, isEnd: boolean): number | null 
   return Number.isNaN(t) ? null : t;
 }
 
+const CJK = /[一-鿿]/;
+/**
+ * 情报的中英文名（中文主标题 + 英文原名副标题）：
+ *   情报自带 titleZh → 关联游戏档案的中文名 → Steam 简体中文商店的官方中文名（scripts/sync/offer-names.mjs）。
+ *   都没有就不给 titleZh——没有通行中文名的独立游戏保留英文原名，界面改用中文类型做副标题，不硬译。
+ * 类型：关联游戏的类型 → Steam 官方类型；「独立」排在后面（它不说明玩法），最多两个。
+ */
+function offerNames(o: any, game: any): { titleZh?: string; titleOrig?: string; genres: string[] } {
+  const found = (OFFER_NAMES as Record<string, { zh?: string; genres?: string[] }>)[o.id];
+  const gameZh = game && CJK.test(game.name?.zh ?? '') ? game.name.zh : undefined;
+  const titleZh: string | undefined = o.titleZh ?? gameZh ?? found?.zh;
+  const titleOrig = !titleZh ? undefined
+    : o.titleZh ? o.gameTitle.replace(o.titleZh, '').trim() || undefined
+    : gameZh ? (game.name?.en ?? (CJK.test(o.gameTitle) ? undefined : o.gameTitle))
+    : o.gameTitle;
+  const raw: string[] = game?.genres?.length ? game.genres : found?.genres ?? [];
+  const genres = [...raw.filter((g) => g !== 'indie'), ...raw.filter((g) => g === 'indie')].slice(0, 2);
+  return { titleZh, titleOrig, genres };
+}
+
 export function offerVM(o: any, data: any, now: number): OfferVM {
   const game = o.gameId ? data.games.find((g: any) => g.id === o.gameId) : null;
   // 美术来源优先级：关联游戏的 Steam 美术 → 情报自带的 steamAppId → 商店链接里的 appid → 手填的官方宣传图 → 自动找到的封面
@@ -135,7 +158,7 @@ export function offerVM(o: any, data: any, now: number): OfferVM {
     checkedAt: o.checkedAt, linkHealth: o.linkHealth,
     lifecycle: computeLifecycle(o, now, site.review.staleDays.offerTimed),
     gameSlug: game?.slug, gameName: game?.name?.zh, art,
-    claimNoteEn: o.claimNoteEn, titleZh: o.titleZh, titleOrig: o.titleZh ? o.gameTitle.replace(o.titleZh, '').trim() || undefined : undefined,
+    claimNoteEn: o.claimNoteEn, ...offerNames(o, game),
   };
 }
 

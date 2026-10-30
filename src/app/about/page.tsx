@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { AUTHOR } from '@/lib/author';
 import { IndexMasthead } from '@/components/layout/page-masthead';
 import { FeedbackChannels } from '@/components/layout/feedback';
+import { SAFETY_TIPS } from '@/components/layout/safety-note';
 import { loadData } from '@/lib/data.mjs';
 import { buildStamp } from '@/lib/present';
 import site from '../../../config/site.json';
@@ -36,6 +37,15 @@ const SECTIONS: [string, React.ReactNode, React.ReactNode][] = [
     <li>No accounts, no karma points, and no forum clutter. You come here to find what you need quickly and get straight back to playing.</li>
   </ul>} />],
   ['check', <T key="t" zh="时效与链接维护" en="Keeping links fresh" />, <T key="b" zh={<p>互联网上的链接常常变质或失效，因此我们给每条记录都打上了核验时间戳。系统会自动跟踪限时免费活动的截止期，对久未复查或失效的链接也会如实标记，避免大家白跑一趟。</p>} en={<p>Web links break and shift constantly, so every entry is timestamped. Free giveaways are automatically tracked by expiration date, and links are re-verified regularly so you never hit a dead end unexpectedly.</p>} />],
+  ['safety', <T key="t" zh="下载与访问安全" en="Download & browsing safety" />, <T key="b" zh={<>
+    <p>本站只做链接整理与分享：不提供任何游戏、补丁或软件的文件下载，所有入口都指向官方商店、开发者官网或公认的社区平台。第三方网站上的内容、广告和软件不由本站控制，也与本站无关。</p>
+    <ul className="mt-3 list-disc space-y-2 pl-5">{SAFETY_TIPS.map(([zh]) => <li key={zh}>{zh}</li>)}</ul>
+    <p className="mt-3">如果发现某个链接被劫持、跳转到可疑页面或下载到了捆绑软件，请通过下面的方式告诉我，我会尽快核实并处理。</p>
+  </>} en={<>
+    <p>We only collect and share links: no game, patch or software files are hosted here, and every link points to an official store, the developer’s own site or a recognised community platform. Third-party sites, their ads and their software are outside our control.</p>
+    <ul className="mt-3 list-disc space-y-2 pl-5">{SAFETY_TIPS.map(([zh, en]) => <li key={zh}>{en}</li>)}</ul>
+    <p className="mt-3">If a link looks hijacked, redirects somewhere suspicious or serves bundled software, please tell me below and I’ll check it quickly.</p>
+  </>} />],
   ['legal', <T key="t" zh="免责与权利声明" en="Disclaimer & rights" />, <T key="b" zh={<p>本站是由玩家维护的非商业公益项目，与所收录的游戏厂商及平台没有任何隶属关系。相关商标与版权归各自权利方所有；链接健康状态仅反映核验时的网络可达性，请在访问第三方外部站点时自行注意安全。</p>} en={<p>A community-maintained, non-commercial project with no affiliation to the game publishers or platforms listed. Trademarks belong to their respective owners. Link status reflects reachability at verification time; please exercise standard caution on external sites.</p>} />],
   ['feedback', <T key="t" zh="纠错与建议" en="Feedback & corrections" />, <FeedbackChannels key="f" />],
 ];

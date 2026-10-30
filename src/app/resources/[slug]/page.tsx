@@ -10,6 +10,7 @@ import { ExtLink } from '@/components/ui/ext-link';
 import { SiteLogo } from '@/components/ui/site-logo';
 import { FeedbackLink } from '@/components/layout/feedback';
 import { DetailMasthead, Notice, type DetailFact } from '@/components/layout/detail-masthead';
+import { SafetyNote } from '@/components/layout/safety-note';
 import { DetailSection } from '@/components/layout/detail-section';
 import { PosterCard } from '@/components/game/poster-card';
 import { Reveal } from '@/components/fx/reveal';
@@ -66,7 +67,12 @@ export default async function SitePage({ params }: Params) {
           </ExtLink>
         )}
         facts={facts}
-        notice={s.risks?.length ? <Notice title={<T zh="访问前须知" en="Before you go" />}>{s.risks.map((r: string) => <p key={r}>{r}</p>)}</Notice> : undefined}
+        notice={(
+          <div className="grid gap-4 lg:grid-cols-2">
+            {s.risks?.length ? <Notice title={<T zh="访问前须知" en="Before you go" />}>{s.risks.map((r: string) => <p key={r}>{r}</p>)}</Notice> : null}
+            <SafetyNote />
+          </div>
+        )}
       />
 
       <div className="container-x">

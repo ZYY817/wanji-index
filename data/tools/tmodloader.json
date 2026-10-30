@@ -2,7 +2,7 @@
   "id": "tmodloader",
   "slug": "tmodloader",
   "name": "tModLoader",
-  "type": "mod-manager",
+  "type": "mod-loader",
   "summary": "泰拉瑞亚官方认可的 MOD 加载器，在 Steam 上作为免费独立应用发布，内置创意工坊浏览器。",
   "os": [
     "windows",
@@ -25,6 +25,6 @@
     }
   ],
   "createdAt": "2026-10-24",
-  "updatedAt": "2026-10-24",
+  "updatedAt": "2026-10-30",
   "publishStatus": "published"
 }
