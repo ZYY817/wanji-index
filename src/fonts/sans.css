@@ -1,4 +1,4 @@
-/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-sans-sc（已裁剪为网站用到的 1808 个字符） */
+/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-sans-sc（已裁剪为网站用到的 1809 个字符） */
 
 @font-face {
   font-family: 'Noto Sans SC Variable';
@@ -321,7 +321,7 @@
   font-display: swap;
   font-weight: 100 900;
   src: url(./sans/sans-114.woff2) format('woff2-variations');
-  unicode-range: U+7e,U+2026,U+4e03,U+4e25,U+4e30,U+4e34,U+4e45,U+4e5d,U+4e89,U+4eae,U+4ed8,U+4f11,U+4f19,U+4f34,U+4f59,U+4f73,U+4f9d,U+5047,U+505c,U+5170,U+519c,U+51cf,U+5267,U+5356,U+5374,U+5382,U+538b,U+53e6,U+5426,U+542b,U+542f,U+5473,U+5708,U+571f,U+5757,U+57df,U+5802,U+591c,U+591f,U+592b,U+5965,U+5979,U+5a01,U+5b81,U+5ba3,U+5c3c,U+5c42,U+5c81,U+5de7,U+5dee,U+5e0c,U+5e55,U+5e8f,U+5ea7,U+5f02,U+5f52,U+5f81,U+5ff5,U+60ca,U+62ff,U+63cf,U+64cd,U+653b,U+65bd,U+65e9,U+665a,U+66b4,U+66fe,U+6728,U+6742,U+677e,U+67b6,U+680f,U+68a6,U+68c0,U+699c,U+6b4c,U+6b66,U+6b7b,U+6bcd,U+6bdb,U+6c38,U+6c47,U+6c49,U+6cb3,U+6ce2,U+6d32,U+6d3e,U+6d4f,U+6fc0,U+7075,U+7206,U+72c2,U+73ed,U+7565,U+7591,U+75c5,U+76ae,U+76d1,U+76df,U+7834,U+7968,U+7981,U+7a7f,U+7a81,U+7ae5,U+7b14,U+7c89,U+7d27,U+7eaf,U+7eb3,U+7eb8,U+7ee7,U+7eff,U+7ffb,U+805a,U+822c,U+82cf,U+82e5,U+8363,U+836f,U+84dd,U+878d,U+8840,U+8857,U+8865,U+8b66,U+8bb2,U+8bda,U+8c01,U+8c46,U+8d1f,U+8d35,U+8d5b,U+8d5e,U+8ddf,U+8f93,U+8fdd,U+8ff0,U+8ff7,U+8ffd,U+9000,U+9047,U+949f,U+94c1,U+94f6,U+9646,U+9669,U+969c,U+96ea,U+987b,U+987e,U+989d,U+9970,U+9986,U+9c7c,U+9c9c;
+  unicode-range: U+7e,U+2026,U+4e03,U+4e25,U+4e30,U+4e34,U+4e45,U+4e5d,U+4e89,U+4eae,U+4ed8,U+4f11,U+4f19,U+4f34,U+4f59,U+4f73,U+4f9d,U+5047,U+505c,U+5170,U+519c,U+51cf,U+5267,U+5356,U+5374,U+5382,U+538b,U+53e6,U+5426,U+542b,U+542f,U+5473,U+5708,U+571f,U+5757,U+57df,U+5802,U+591c,U+591f,U+592b,U+5965,U+5979,U+5a01,U+5b81,U+5ba3,U+5c3c,U+5c42,U+5c81,U+5de7,U+5dee,U+5e0c,U+5e55,U+5e8f,U+5ea7,U+5f02,U+5f52,U+5f81,U+5ff5,U+60ca,U+60e0,U+62ff,U+63cf,U+64cd,U+653b,U+65bd,U+65e9,U+665a,U+66b4,U+66fe,U+6728,U+6742,U+677e,U+67b6,U+680f,U+68a6,U+68c0,U+699c,U+6b4c,U+6b66,U+6b7b,U+6bcd,U+6bdb,U+6c38,U+6c47,U+6c49,U+6cb3,U+6ce2,U+6d32,U+6d3e,U+6d4f,U+6fc0,U+7075,U+7206,U+72c2,U+73ed,U+7565,U+7591,U+75c5,U+76ae,U+76d1,U+76df,U+7834,U+7968,U+7981,U+7a7f,U+7a81,U+7ae5,U+7b14,U+7c89,U+7d27,U+7eaf,U+7eb3,U+7eb8,U+7ee7,U+7eff,U+7ffb,U+805a,U+822c,U+82cf,U+82e5,U+8363,U+836f,U+84dd,U+878d,U+8840,U+8857,U+8865,U+8b66,U+8bb2,U+8bda,U+8c01,U+8c46,U+8d1f,U+8d35,U+8d5b,U+8d5e,U+8ddf,U+8f93,U+8fdd,U+8ff0,U+8ff7,U+8ffd,U+9000,U+9047,U+949f,U+94c1,U+94f6,U+9646,U+9669,U+969c,U+96ea,U+987b,U+987e,U+989d,U+9970,U+9986,U+9c7c,U+9c9c;
 }
 
 @font-face {

@@ -1,0 +1,16 @@
+{
+  "id": "auto-steam-785890-20261030",
+  "gameTitle": "Hexologic",
+  "type": "limited",
+  "platform": "steam",
+  "url": "https://store.steampowered.com/app/785890/",
+  "checkedAt": "2026-10-30",
+  "linkHealth": "ok",
+  "createdAt": "2026-10-30",
+  "updatedAt": "2026-10-30",
+  "publishStatus": "published",
+  "claimNote": "Steam 限时免费，截止前加入库中即可永久保留",
+  "claimNoteEn": "Free on Steam for a limited time — add it before the deadline to keep it",
+  "steamAppId": "785890",
+  "note": "来自 Steam 商店特惠，自动更新；截止时间以 Steam 页面为准"
+}

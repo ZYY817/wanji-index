@@ -1,6 +1,6 @@
 {
   "id": "mindustry-steam-mod",
-  "name": "Mindustry 创意工坊",
+  "name": "像素工厂 创意工坊",
   "nameEn": "Mindustry Steam Workshop",
   "type": "mod",
   "siteId": "steam",
@@ -9,7 +9,7 @@
   "note": "Steam 内一键订阅，自动更新",
   "noteEn": "One-click subscribe and auto-update in Steam",
   "linkHealth": "ok",
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "publishStatus": "published",
   "reviewStatus": "unverified"
 }

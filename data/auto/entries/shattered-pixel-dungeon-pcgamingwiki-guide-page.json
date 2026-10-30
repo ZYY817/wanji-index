@@ -1,6 +1,6 @@
 {
   "id": "shattered-pixel-dungeon-pcgamingwiki-guide-page",
-  "name": "Shattered Pixel Dungeon 技术资料页",
+  "name": "破碎的像素地牢 技术资料页",
   "nameEn": "Shattered Pixel Dungeon on PCGamingWiki",
   "type": "guide-page",
   "siteId": "pcgamingwiki",
@@ -9,7 +9,7 @@
   "note": "存档与配置位置、画面设置、已知问题修复",
   "noteEn": "Save/config paths, display settings, and bug fixes",
   "linkHealth": "ok",
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "publishStatus": "published",
   "reviewStatus": "unverified"
 }

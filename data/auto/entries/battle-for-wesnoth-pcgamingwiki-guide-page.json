@@ -1,6 +1,6 @@
 {
   "id": "battle-for-wesnoth-pcgamingwiki-guide-page",
-  "name": "Battle for Wesnoth 技术资料页",
+  "name": "韦诺之战 技术资料页",
   "nameEn": "Battle for Wesnoth on PCGamingWiki",
   "type": "guide-page",
   "siteId": "pcgamingwiki",
@@ -9,7 +9,7 @@
   "note": "存档与配置位置、画面设置、已知问题修复",
   "noteEn": "Save/config paths, display settings, and bug fixes",
   "linkHealth": "ok",
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "publishStatus": "published",
   "reviewStatus": "unverified"
 }

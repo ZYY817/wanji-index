@@ -1,6 +1,6 @@
 {
   "id": "world-of-tanks-nexus-mods-mod",
-  "name": "World of Tanks Nexus Mods 专区",
+  "name": "坦克世界 Nexus Mods 专区",
   "nameEn": "World of Tanks on Nexus Mods",
   "type": "mod",
   "siteId": "nexus-mods",
@@ -9,7 +9,7 @@
   "note": "Nexus 上的 MOD 专区，共 659 个 MOD",
   "noteEn": "Nexus Mods hub with 659 mods",
   "linkHealth": "ok",
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "publishStatus": "published",
   "reviewStatus": "unverified"
 }

@@ -1,6 +1,6 @@
 {
   "id": "world-of-tanks-steamdb-other",
-  "name": "World of Tanks 价格与版本史",
+  "name": "坦克世界 价格与版本史",
   "nameEn": "World of Tanks on SteamDB",
   "type": "other",
   "siteId": "steamdb",
@@ -9,7 +9,7 @@
   "note": "史低价格、更新补丁记录、在线人数",
   "noteEn": "All-time low price, update history, and player counts",
   "linkHealth": "ok",
-  "checkedAt": "2026-10-29",
+  "checkedAt": "2026-10-30",
   "publishStatus": "published",
   "reviewStatus": "unverified"
 }

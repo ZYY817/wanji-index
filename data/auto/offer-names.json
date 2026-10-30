@@ -250,6 +250,14 @@
       "indie"
     ]
   },
+  "auto-steam-785890-20261030": {
+    "steamAppId": "785890",
+    "genres": [
+      "casual",
+      "indie",
+      "strategy"
+    ]
+  },
   "ddnet-oss": {
     "steamAppId": "412220",
     "genres": [
