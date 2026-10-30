@@ -1,4 +1,4 @@
-/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-sans-sc（已裁剪为网站用到的 1816 个字符） */
+/* 由 scripts/subset-fonts.mjs 生成，勿手改。来源：@fontsource-variable/noto-sans-sc（已裁剪为网站用到的 1817 个字符） */
 
 @font-face {
   font-family: 'Noto Sans SC Variable';
@@ -231,7 +231,7 @@
   font-display: swap;
   font-weight: 100 900;
   src: url(./sans/sans-104.woff2) format('woff2-variations');
-  unicode-range: U+2193,U+4ea8,U+5c61,U+5f0a,U+67c4,U+6c70,U+6ca6,U+7115,U+7272,U+7504,U+754f,U+778e,U+7f00,U+8086,U+9965,U+ff05,U+ff0b;
+  unicode-range: U+2193,U+4ea8,U+5c61,U+5f0a,U+67c4,U+6c70,U+6ca6,U+7115,U+7272,U+7504,U+754f,U+778e,U+7f00,U+8086,U+83f1,U+9965,U+ff05,U+ff0b;
 }
 
 @font-face {

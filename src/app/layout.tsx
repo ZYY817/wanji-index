@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title: { default: `${SITE.name} — PC 游戏资源与工具索引`, template: `%s · ${SITE.name}` },
   description: '为 PC 玩家收集的游戏资源与情报站：游戏档案、免费游戏情报、MOD 与资源站目录、实用工具与报错排查，全部免费查阅。',
   icons: {
-    icon: [{ url: withBase('/favicon.svg'), type: 'image/svg+xml' }, { url: withBase('/icon-32.png'), sizes: '32x32', type: 'image/png' }],
+    icon: [{ url: withBase('/favicon.svg'), type: 'image/svg+xml' }, { url: withBase('/icon-32.png'), sizes: '32x32', type: 'image/png' }, { url: withBase('/icon-16.png'), sizes: '16x16', type: 'image/png' }],
     apple: withBase('/apple-touch-icon.png'),
   },
   manifest: withBase('/manifest.webmanifest'),
