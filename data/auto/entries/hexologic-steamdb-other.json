@@ -1,0 +1,15 @@
+{
+  "id": "hexologic-steamdb-other",
+  "name": "Hexologic 价格与版本史",
+  "nameEn": "Hexologic on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "hexologic",
+  "url": "https://steamdb.info/app/785890/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-31",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

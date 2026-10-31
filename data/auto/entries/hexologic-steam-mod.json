@@ -1,0 +1,15 @@
+{
+  "id": "hexologic-steam-mod",
+  "name": "Hexologic 创意工坊",
+  "nameEn": "Hexologic Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "hexologic",
+  "url": "https://steamcommunity.com/app/785890/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-31",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

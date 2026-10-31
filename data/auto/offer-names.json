@@ -101,14 +101,6 @@
       "indie"
     ]
   },
-  "auto-gp-3301": {
-    "steamAppId": "2256230",
-    "genres": [
-      "adventure",
-      "indie",
-      "strategy"
-    ]
-  },
   "auto-gp-3313": {
     "steamAppId": "1334000",
     "genres": [
@@ -159,6 +151,12 @@
     "steamAppId": "1341620",
     "genres": [
       "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3346": {
+    "steamAppId": "2207120",
+    "genres": [
       "indie"
     ]
   },
@@ -250,7 +248,31 @@
       "indie"
     ]
   },
+  "auto-gp-3835": {
+    "steamAppId": "105000",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-gp-3836": {
+    "steamAppId": "1583850",
+    "zh": "Asleep 沉睡: Ato 1",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
   "auto-steam-785890-20261030": {
+    "steamAppId": "785890",
+    "genres": [
+      "casual",
+      "indie",
+      "strategy"
+    ]
+  },
+  "auto-steam-785890-20261031": {
     "steamAppId": "785890",
     "genres": [
       "casual",

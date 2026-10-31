@@ -1,0 +1,15 @@
+{
+  "id": "hexologic-pcgamingwiki-guide-page",
+  "name": "Hexologic 技术资料页",
+  "nameEn": "Hexologic on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "hexologic",
+  "url": "https://www.pcgamingwiki.com/wiki/Hexologic",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-10-31",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}
