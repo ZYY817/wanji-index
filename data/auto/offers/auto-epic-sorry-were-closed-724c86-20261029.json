@@ -8,7 +8,7 @@
   "claimNoteEn": "Epic weekly freebie — yours to keep once claimed",
   "startDate": "2026-10-29T15:00:00.000Z",
   "endDate": "2026-11-05T16:00:00.000Z",
-  "checkedAt": "2026-10-31",
+  "checkedAt": "2026-11-01",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
@@ -16,6 +16,6 @@
     "tall": "https://cdn1.epicgames.com/spt-assets/9ab7eaaeb2f041969b350955b789f0f7/sorry-were-closed-16sj7.png"
   },
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-31",
+  "updatedAt": "2026-11-01",
   "publishStatus": "published"
 }
