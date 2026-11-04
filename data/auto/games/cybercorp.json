@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1116170/",
       "priceNote": "参考价 ¥ 58.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-04"
     }
   ],
   "steamAppId": 1116170,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-04",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-04",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T17:24:04.583Z",
+    "syncedAt": "2026-11-04T02:05:06.774Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:17.550Z",
       "page": "CyberCorp"

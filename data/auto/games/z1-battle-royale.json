@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/433850/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-04"
     }
   ],
   "steamAppId": 433850,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-04",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-04",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T17:27:40.608Z",
+    "syncedAt": "2026-11-04T02:08:24.060Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:14:15.081Z",
       "page": "Z1 Battle Royale"

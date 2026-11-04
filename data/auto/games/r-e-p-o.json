@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/3241660/",
       "priceNote": "参考价 ¥ 22.75",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-04"
     }
   ],
   "steamAppId": 3241660,
@@ -30,7 +30,7 @@
     "semiwork"
   ],
   "releaseDate": "2025 年 2 月 26 日",
-  "zhSupport": "none",
+  "zhSupport": "text",
   "requirements": {
     "minimum": "最低配置:\n操作系统: Windows 10\n处理器: Core i5 6600\n内存: 8 GB RAM\n显卡: GTX 970\nDirectX 版本: 10\n网络: 宽带互联网连接\n存储空间: 需要 1 GB 可用空间",
     "recommended": "推荐配置:\n操作系统: Windows 11\n处理器: Intel Core i7 8700\n内存: 8 GB RAM\n显卡: GTX 1070\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 1 GB 可用空间"
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-04",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-04",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T17:26:14.830Z",
+    "syncedAt": "2026-11-04T02:07:05.596Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:02.626Z",
       "page": "R.E.P.O."

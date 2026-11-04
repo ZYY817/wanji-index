@@ -20,9 +20,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/646570/",
-      "priceNote": "参考价 ¥ 22.00",
+      "priceNote": "参考价 ¥ 88.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-04"
     }
   ],
   "steamAppId": 646570,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-04",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-04",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-27T17:22:54.797Z",
+    "syncedAt": "2026-11-04T02:04:05.929Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:25.530Z",
       "page": "Slay the Spire"
