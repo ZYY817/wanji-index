@@ -23,7 +23,7 @@
       "url": "https://store.steampowered.com/app/714010/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-05"
     }
   ],
   "steamAppId": 714010,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-05",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-05",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:41.203Z",
+    "syncedAt": "2026-11-05T02:07:05.676Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:17:55.750Z",
       "page": "Aimlabs"

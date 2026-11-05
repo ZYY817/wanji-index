@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/2073620/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-05"
     }
   ],
   "steamAppId": 2073620,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-05",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-05",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:14.409Z",
+    "syncedAt": "2026-11-05T02:07:12.616Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:18:00.670Z",
       "page": "Arena Breakout: Infinite"

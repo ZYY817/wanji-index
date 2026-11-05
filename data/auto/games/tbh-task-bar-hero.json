@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/3678970/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-05"
     }
   ],
   "steamAppId": 3678970,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-05",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-11-05",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:33.545Z",
+    "syncedAt": "2026-11-05T02:08:11.459Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:55.546Z",
       "page": "TBH: Task Bar Hero"

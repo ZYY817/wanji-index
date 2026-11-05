@@ -26,7 +26,7 @@
       "url": "https://store.steampowered.com/app/2767030/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-05"
     }
   ],
   "steamAppId": 2767030,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-05",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-29",
+  "updatedAt": "2026-11-05",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:16:39.990Z",
+    "syncedAt": "2026-11-05T02:07:43.923Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:30.863Z",
       "page": "Marvel Rivals"

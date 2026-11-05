@@ -25,7 +25,7 @@
       "url": "https://store.steampowered.com/app/4126040/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-10-28"
+      "checkedAt": "2026-11-05"
     }
   ],
   "steamAppId": 4126040,
@@ -56,13 +56,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-10-28",
+  "checkedAt": "2026-11-05",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-10-28",
+  "updatedAt": "2026-11-05",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-10-28T13:17:37.361Z",
+    "syncedAt": "2026-11-05T02:07:09.130Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:17:58.594Z",
       "page": "Aniimo"
