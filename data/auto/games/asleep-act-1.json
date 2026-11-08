@@ -21,11 +21,11 @@
   "channels": [
     {
       "platform": "steam",
-      "type": "free",
+      "type": "buy",
       "url": "https://store.steampowered.com/app/1583850/",
-      "priceNote": "免费开玩",
+      "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-01"
+      "checkedAt": "2026-11-08"
     }
   ],
   "steamAppId": 1583850,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-01",
+  "checkedAt": "2026-11-08",
   "createdAt": "2026-11-01",
-  "updatedAt": "2026-11-01",
+  "updatedAt": "2026-11-08",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-01T00:51:48.277Z",
+    "syncedAt": "2026-11-08T01:14:14.263Z",
     "pcgw": {
       "syncedAt": "2026-11-01T00:51:51.066Z",
       "page": null
