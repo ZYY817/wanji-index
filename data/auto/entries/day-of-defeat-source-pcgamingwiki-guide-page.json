@@ -1,0 +1,15 @@
+{
+  "id": "day-of-defeat-source-pcgamingwiki-guide-page",
+  "name": "Day of Defeat: Source 技术资料页",
+  "nameEn": "Day of Defeat: Source on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "day-of-defeat-source",
+  "url": "https://www.pcgamingwiki.com/wiki/Day_of_Defeat%3A_Source",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "peggle-extreme",
+  "slug": "peggle-extreme",
+  "name": {
+    "zh": "Peggle Extreme"
+  },
+  "summary": "Peggle Extreme delivers fast-paced puzzle action that combines elements of pinball and pachinko to create a truly unique game experience.",
+  "summaryEn": "Peggle Extreme delivers fast-paced puzzle action that combines elements of pinball and pachinko to create a truly unique game experience.",
+  "genres": [
+    "casual"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/3483/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3483,
+  "developers": [
+    "PopCap Games, Inc."
+  ],
+  "publishers": [
+    "Electronic Arts"
+  ],
+  "releaseDate": "2007 年 9 月 11 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：Windows 2000/XP/Vista，256 MB 内存，700MHz处理器或更快，支持DirectX: 7.0",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum Requirements: Windows 2000/XP/Vista, 256 MB RAM, 700MHz or faster, DirectX: 7.0",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3483/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Peggle_Extreme"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:53.534Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:09.310Z",
+      "page": "Peggle Extreme"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%PROGRAMDATA%\\Steam\\PeggleExtreme\\userdata",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Low FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Peggle_Extreme#Low_FPS",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "id": "arx-fatalis",
+  "slug": "arx-fatalis",
+  "name": {
+    "zh": "Arx Fatalis"
+  },
+  "summary": "Arkane Studios出品的这个广受赞誉的第一人称RPG将带领玩家进入Arx的奇幻世界，来一场惊奇之旅。惨烈的战争让Arx来到了毁灭的边缘，这里混乱不堪。头顶的太阳消失了，整个世界被永恒的黑暗笼罩，各种居民被迫进入地下矿场生活。",
+  "summaryEn": "This critically acclaimed first-person RPG from Arkane Studios takes the player on an amazing journey into the fantasy world of Arx.",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1700/",
+      "priceNote": "参考价 ¥ 20.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1700,
+  "developers": [
+    "Arkane Studios"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2007 年 4 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置： Windows XP、500 MHz Pentium ® III 或兼容 CPU、64 MB RAM、DirectX 8 或更高版本、DirectX 8 兼容声卡及 16 MB 显卡、750 MB 磁盘空间\n建议配置： 900 MHz Pentium ® III 或兼容 CPU、256 MB RAM、DirectX 8 或更高版本、DirectX 8 兼容声卡及 32MB 显卡、750 MB 磁盘空间",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: Windows XP, 500 MHz Pentium ® III or compatible, 64 MB RAM , DirectX 8 or higher, DirectX 8 compatible sound- and graphics card with 16 MB, 750 MB fixed disks\n Recommended: 900 MHz Pentium ® III or compatible, 256 MB RAM , DirectX 8 or higher, DirectX 8 compatible sound- and graphics card with 32MB, 750 MB fixed disks",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1700/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Arx_Fatalis"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:38.870Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:52.258Z",
+      "page": "Arx Fatalis"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Save",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\cfg_default.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "HUD doesn't scale at higher resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/Arx_Fatalis#HUD_doesn't_scale_at_higher_resolutions",
+      "fixed": true
+    },
+    {
+      "title": "Invisible text",
+      "url": "https://www.pcgamingwiki.com/wiki/Arx_Fatalis#Invisible_text",
+      "fixed": true
+    }
+  ]
+}

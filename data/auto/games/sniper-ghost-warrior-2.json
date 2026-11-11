@@ -1,0 +1,101 @@
+{
+  "id": "sniper-ghost-warrior-2",
+  "slug": "sniper-ghost-warrior-2",
+  "name": {
+    "zh": "Sniper: Ghost Warrior 2"
+  },
+  "summary": "Sniper: Ghost Warrior 2 takes the bulls-eye precision of its predecessor to new and exciting heights!",
+  "summaryEn": "Sniper: Ghost Warrior 2 takes the bulls-eye precision of its predecessor to new and exciting heights!",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/34870/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 34870,
+  "developers": [
+    "City Interactive"
+  ],
+  "publishers": [
+    "CI Games"
+  ],
+  "releaseDate": "2013 年 3 月 11 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP, Vista or Windows 7, with the latest Service Pack\nProcessor: Intel Core 2 Duo at 2Ghz, or AMD Athlon 64 x2 2Ghz, or better\nMemory: 2GB\nHard Disk Space: 9Gb \nVideo Card:NVidia 8800GT with 512Mb RAM or better\nDirectX®: 9.0c\nSound: DirectX Compatible Sound Card",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP, Vista or Windows 7, with the latest Service Pack\nProcessor: Intel Core 2 Duo at 2Ghz, or AMD Athlon 64 x2 2Ghz, or better\nMemory: 2GB\nHard Disk Space: 9Gb \nVideo Card:NVidia 8800GT with 512Mb RAM or better\nDirectX®: 9.0c\nSound: DirectX Compatible Sound Card",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/34870/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Sniper%3A_Ghost_Warrior_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:18.569Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:33.621Z",
+      "page": "Sniper: Ghost Warrior 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Saved Games\\SniperGhostWarrior2",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\system.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Errors at launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Sniper%3A_Ghost_Warrior_2#Errors_at_launch",
+      "fixed": true
+    },
+    {
+      "title": "Game doesn't save vsync settings",
+      "url": "https://www.pcgamingwiki.com/wiki/Sniper%3A_Ghost_Warrior_2#Game_doesn't_save_vsync_settings",
+      "fixed": true
+    },
+    {
+      "title": "Low/inconsistent framerate with V-Sync enabled",
+      "url": "https://www.pcgamingwiki.com/wiki/Sniper%3A_Ghost_Warrior_2#Low%2Finconsistent_framerate_with_V-Sync_enabled",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Sniper%3A_Ghost_Warrior_2#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "earth-2160-steamdb-other",
+  "name": "Earth 2160 价格与版本史",
+  "nameEn": "Earth 2160 on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "earth-2160",
+  "url": "https://steamdb.info/app/1900/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

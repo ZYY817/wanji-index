@@ -1,0 +1,84 @@
+{
+  "id": "portal-2",
+  "slug": "portal-2",
+  "name": {
+    "zh": "Portal 2"
+  },
+  "summary": "“终身测试计划”现已升级，您可以为您自己或您的好友设计合作谜题！",
+  "summaryEn": "The \"Perpetual Testing Initiative\" has been expanded to allow you to design co-op puzzles for you and your friends!",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/620/",
+      "priceNote": "参考价 ¥ 35.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 620,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2011 年 4 月 18 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 / Vista / XP\n处理器: 3.0 GHz P4、Dual Core 2.0 以上或 AMD64X2 以上\n内存: 2 GB RAM\n显卡: 显卡必须拥有 128 MB 以上显存，并支持 Pixel Shader 2.0b（ATI Radeon X800 以上/ NVIDIA GeForce 7600 以上/ Intel HD Graphics 2000 以上）。\nDirectX 版本: 9.0c\n存储空间: 需要 8 GB 可用空间\n声卡: 兼容 DirectX 9.0c",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 / Vista / XP\nProcessor: 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher)\nMemory: 2 GB RAM\nGraphics: Video card must be 128 MB or more and with support for Pixel Shader 2.0b (ATI Radeon X800 or higher / NVIDIA GeForce 7600 or higher / Intel HD Graphics 2000 or higher).\nDirectX: Version 9.0c\nStorage: 8 GB available space\nSound Card: DirectX 9.0c compatible",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/620/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Portal_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:24.558Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:13.456Z",
+      "page": "Portal 2"
+    }
+  },
+  "issues": [
+    {
+      "title": "\"Portal 2 Failed to create D3D device\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/Portal_2#%22Portal_2_Failed_to_create_D3D_device%22_error",
+      "fixed": true
+    },
+    {
+      "title": "Flickering white grainy graphical artifacts on some surfaces",
+      "url": "https://www.pcgamingwiki.com/wiki/Portal_2#Flickering_white_grainy_graphical_artifacts_on_some_surfaces",
+      "fixed": true
+    },
+    {
+      "title": "After epilogue FMV plays, the game crashes",
+      "url": "https://www.pcgamingwiki.com/wiki/Portal_2#After_epilogue_FMV_plays%2C_the_game_crashes",
+      "fixed": false
+    }
+  ]
+}

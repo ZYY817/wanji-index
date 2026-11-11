@@ -1,0 +1,61 @@
+{
+  "id": "rage",
+  "slug": "rage",
+  "name": {
+    "zh": "RAGE"
+  },
+  "summary": "Powered by id’s revolutionary id Tech® 5 technology, RAGE is an intense first-person shooter with breakneck vehicle combat, an expansive wor…",
+  "summaryEn": "Powered by id’s revolutionary id Tech® 5 technology, RAGE is an intense first-person shooter with breakneck vehicle combat, an expansive wor…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/9200/",
+      "priceNote": "参考价 ¥ 41.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 9200,
+  "developers": [
+    "id Software"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2011 年 10 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n OS *: Win XP SP3, Vista, Win 7\nProcessor: Intel Core 2 Duo or Equivalent AMD\nMemory: 2GB\nHard Disk Space: 25GB \nVideo Card: GeForce 8800, Radeon HD 4200",
+    "recommended": "Recommended:\n OS *: Win XP SP3, Vista, Win 7\nProcessor: Intel Core 2 Quad or Equivalent AMD\nMemory: 4GB\nHard Disk Space: 25GB \nVideo Card: GeForce 9800 GTX, Radeon HD 5550"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Win XP SP3, Vista, Win 7\nProcessor: Intel Core 2 Duo or Equivalent AMD\nMemory: 2GB\nHard Disk Space: 25GB \nVideo Card: GeForce 8800, Radeon HD 4200",
+    "recommended": "Recommended:\n OS *: Win XP SP3, Vista, Win 7\nProcessor: Intel Core 2 Quad or Equivalent AMD\nMemory: 4GB\nHard Disk Space: 25GB \nVideo Card: GeForce 9800 GTX, Radeon HD 5550"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/9200/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:40.778Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:25.276Z",
+      "page": null
+    }
+  }
+}

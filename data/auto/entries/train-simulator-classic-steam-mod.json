@@ -1,0 +1,15 @@
+{
+  "id": "train-simulator-classic-steam-mod",
+  "name": "Train Simulator Classic 创意工坊",
+  "nameEn": "Train Simulator Classic Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "train-simulator-classic",
+  "url": "https://steamcommunity.com/app/24010/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

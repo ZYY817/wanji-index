@@ -1,0 +1,61 @@
+{
+  "id": "bad-rats-the-rats-revenge",
+  "slug": "bad-rats-the-rats-revenge",
+  "name": {
+    "zh": "Bad Rats: the Rats' Revenge"
+  },
+  "summary": "Bad Rats is a physics puzzle game where rats finally get their bloody revenge on their new prisoners: The cats.",
+  "summaryEn": "Bad Rats is a physics puzzle game where rats finally get their bloody revenge on their new prisoners: The cats.",
+  "genres": [
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/34900/",
+      "priceNote": "参考价 ¥ 11.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 34900,
+  "developers": [
+    "Invent4 Entertainment"
+  ],
+  "publishers": [
+    "Strategy First"
+  ],
+  "releaseDate": "2009 年 7 月 20 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP or Vista\nProcessor: Pentium IV 1.6 GHz or better (dual core recommended)\nMemory: 512MB RAM (1GB recommended)\nGraphics: DirectX®9-compatible graphics adapter with 128 MB (256 MB recommended)\nDirectX®: 9 or better\nHard Drive: 300MB\nSound: DirectX®9-compatible",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP or Vista\nProcessor: Pentium IV 1.6 GHz or better (dual core recommended)\nMemory: 512MB RAM (1GB recommended)\nGraphics: DirectX®9-compatible graphics adapter with 128 MB (256 MB recommended)\nDirectX®: 9 or better\nHard Drive: 300MB\nSound: DirectX®9-compatible",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/34900/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:22.031Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:02.887Z",
+      "page": "Bad Rats: The Rats' Revenge"
+    }
+  }
+}

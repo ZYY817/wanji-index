@@ -1,0 +1,86 @@
+{
+  "id": "men-of-war-red-tide",
+  "slug": "men-of-war-red-tide",
+  "name": {
+    "zh": "Men of War: Red Tide"
+  },
+  "summary": "Red Tide 将深度 RTS 战术与第三人称战斗的激烈感融合。与作家亚历山大·佐里奇合作打造，这款独立资料片讲述“黑外套”苏联海军步兵在黑海战役中因冷酷精准而闻名的故事。",
+  "summaryEn": "Red Tide blends deep RTS tactics with the raw intensity of third-person combat.",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3130/",
+      "priceNote": "参考价 ¥ 22.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3130,
+  "developers": [
+    "Fulqrum Publishing"
+  ],
+  "publishers": [
+    "Fulqrum Publishing"
+  ],
+  "releaseDate": "2009 年 11 月 1 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：\n操作系统：Windows XP (service pack 1)\n处理器：Intel Pentium 4 2.6 GHz (Athlon 3000+)\n内存：1 GB 内存\n图形显卡：NVIDIA GeForce 6200 或 ATI Radeon 9600 (128 MB 显存)\nDirectX®：9.0c\n硬盘：5 GB 可用硬盘空间\n音频设备：DirectX 9.0c 兼容声卡",
+    "recommended": "推荐配置：\n操作系统：Windows XP (service pack 1) / Windows Vista\n处理器：Core 2 Duo 2.33 GHz\n内存：2 GB 内存\n图形显卡：NVIDIA GeForce 8600 或 ATI Radeon HD 2600 (256 MB 显存)\nDirectX®：9.0c\n硬盘：5 GB 可用硬盘空间\n音频：兼容 DirectX 9.0c 的声卡"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows XP (service pack 1)\nProcessor: Intel Pentium 4 2,6 GHz (Athlon 3000+)\nMemory: 1 GB RAM\nGraphics: NVIDIA GeForce 6200 or ATI Radeon 9600 (128 MB RAM)\nDirectX®: 9.0c\nHard Drive: 5 GB of free hard disc space\nSound: Sound card compatible with DirectX 9.0c",
+    "recommended": "Recommended:\n OS *: Windows XP (service pack 1) / Windows Vista\nProcessor: Core 2 Duo 2,33 GHz\nMemory: 2 GB RAM\nGraphics: NVIDIA GeForce 8600 or ATI Radeon HD 2600 (256 MB RAM)\nDirectX®: 9.0c\nHard Drive: 5 GB of free hard disc space\nSound: Sound card compatible with DirectX 9.0c"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3130/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Men_of_War%3A_Red_Tide"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:36.090Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:04.929Z",
+      "page": "Men of War: Red Tide"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\mow red tide\\profiles\\player\\save",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\mow red tide\\profiles\\player",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Missing Music on Steam version",
+      "url": "https://www.pcgamingwiki.com/wiki/Men_of_War%3A_Red_Tide#Missing_Music_on_Steam_version",
+      "fixed": true
+    }
+  ]
+}

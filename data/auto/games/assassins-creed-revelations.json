@@ -1,0 +1,128 @@
+{
+  "id": "assassins-creed-revelations",
+  "slug": "assassins-creed-revelations",
+  "name": {
+    "zh": "刺客信条：启示录",
+    "en": "Assassin's Creed Revelations"
+  },
+  "summary": "Ezio Auditore walks in the footsteps of the legendary mentor Altair, on a dangerous journey of discovery and revelation.",
+  "summaryEn": "Ezio Auditore walks in the footsteps of the legendary mentor Altair, on a dangerous journey of discovery and revelation.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/201870/",
+      "priceNote": "参考价 ¥ 75.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 201870,
+  "developers": [
+    "Ubisoft Montreal"
+  ],
+  "publishers": [
+    "Ubisoft"
+  ],
+  "releaseDate": "2011 年 11 月 30 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\n OS *: Windows® XP SP3 / Windows Vista® SP2\nProcessor: Intel® Core™2 Duo E4400 @ 2.0 GHz or AMD Athlon™ 64 X2 4000+ @ 2.1GHz\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista, 7\nGraphics: 256 MB DirectX® 9.0–compliant card with Shader Model 4.0 or higher (see supported list)*\nDirectX®: DirectX® June2010 or newer\nHard Drive: 12 GB\nSound: DirectX 9.0–compliant sound card\nPeripherals: Keyboard, mouse, optional controller\nInternet: Temporary broadband connection required for one-time product registration at first launch, permanent broadband connection required for multi-player.\n *This product does not support Windows® 98/ME/2000/NT\nSupported Video Cards at Time of Release:\n AMD Radeon™ HD2600XT or better/3000/4000/5000/6000 desktop series\n NVIDIA® GeForce® 8600GTS or better/9/GT200/GT400/GT500 desktop series\n Laptop versions of these cards may work but are NOT officially supported. These chipsets are the only ones that will run this game. For the most up-to-date minimum requirement listings, please visit the FAQ for this game on our support website at .",
+    "recommended": "Recommended:\n OS *: Windows® XP SP3 / Windows Vista® SP2\nProcessor: Intel® Core™2 Duo E6700 @ 2.6 GHz or AMD Athlon™ 64 X2 6000+ @ 3.0 GHz or better\nMemory: 2 GB Windows® XP / Windows Vista® / Windows® 7\nGraphics: 512 MB DirectX® 9.0–compliant card with Shader Model 5.0 or higher (see supported list)*\nDirectX®: DirectX® June2010 or newer \nHard Drive: 12 GB\nSound: Surround Sound 5.1 capable sound card\nPeripherals: Keyboard, mouse, joystick optional (Xbox 360® Controller for Windows recommended)\nInternet: Temporary broadband connection required for one-time product registration at first launch, permanent broadband connection required for multi-player.\n *This product does not support Windows® 98/ME/2000/NT\nSupported Video Cards at Time of Release:\n AMD Radeon™ HD2600XT or better/3000/4000/5000/6000 desktop series\n NVIDIA® GeForce® 8600GTS or better/9/GT200/GT400/GT500 desktop series\n Laptop versions of these cards may work but are NOT officially supported. These chipsets are the only ones that will run this game. For the most up-to-date minimum requirement listings, please visit the FAQ for this game on our support website at ."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows® XP SP3 / Windows Vista® SP2\nProcessor: Intel® Core™2 Duo E4400 @ 2.0 GHz or AMD Athlon™ 64 X2 4000+ @ 2.1GHz\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista, 7\nGraphics: 256 MB DirectX® 9.0–compliant card with Shader Model 4.0 or higher (see supported list)*\nDirectX®: DirectX® June2010 or newer\nHard Drive: 12 GB\nSound: DirectX 9.0–compliant sound card\nPeripherals: Keyboard, mouse, optional controller\nInternet: Temporary broadband connection required for one-time product registration at first launch, permanent broadband connection required for multi-player.\n *This product does not support Windows® 98/ME/2000/NT\nSupported Video Cards at Time of Release:\n AMD Radeon™ HD2600XT or better/3000/4000/5000/6000 desktop series\n NVIDIA® GeForce® 8600GTS or better/9/GT200/GT400/GT500 desktop series\n Laptop versions of these cards may work but are NOT officially supported. These chipsets are the only ones that will run this game. For the most up-to-date minimum requirement listings, please visit the FAQ for this game on our support website at .",
+    "recommended": "Recommended:\n OS *: Windows® XP SP3 / Windows Vista® SP2\nProcessor: Intel® Core™2 Duo E6700 @ 2.6 GHz or AMD Athlon™ 64 X2 6000+ @ 3.0 GHz or better\nMemory: 2 GB Windows® XP / Windows Vista® / Windows® 7\nGraphics: 512 MB DirectX® 9.0–compliant card with Shader Model 5.0 or higher (see supported list)*\nDirectX®: DirectX® June2010 or newer \nHard Drive: 12 GB\nSound: Surround Sound 5.1 capable sound card\nPeripherals: Keyboard, mouse, joystick optional (Xbox 360® Controller for Windows recommended)\nInternet: Temporary broadband connection required for one-time product registration at first launch, permanent broadband connection required for multi-player.\n *This product does not support Windows® 98/ME/2000/NT\nSupported Video Cards at Time of Release:\n AMD Radeon™ HD2600XT or better/3000/4000/5000/6000 desktop series\n NVIDIA® GeForce® 8600GTS or better/9/GT200/GT400/GT500 desktop series\n Laptop versions of these cards may work but are NOT officially supported. These chipsets are the only ones that will run this game. For the most up-to-date minimum requirement listings, please visit the FAQ for this game on our support website at ."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/201870/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:25.612Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:55.217Z",
+      "page": "Assassin's Creed: Revelations"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<uplay>\\savegames\\<用户 ID>\\40\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Ubisoft Game Launcher\\savegame_storage\\<用户 ID>\\40\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Assassin's Creed Revelations\\ACRevelations.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "No In-game Audio",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#No_In-game_Audio",
+      "fixed": true
+    },
+    {
+      "title": "CTD after Opening and on Reload",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#CTD_after_Opening_and_on_Reload",
+      "fixed": true
+    },
+    {
+      "title": "Unable to Update to 1.03",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#Unable_to_Update_to_1.03",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes immediately after launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#Game_crashes_immediately_after_launch",
+      "fixed": true
+    },
+    {
+      "title": "Flashing/Flickering while playing game",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#Flashing%2FFlickering_while_playing_game",
+      "fixed": true
+    },
+    {
+      "title": "In-game stuttering, freezing issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#In-game_stuttering%2C_freezing_issues",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes during fight with Shahkulu in \"The Renegade\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#Game_crashes_during_fight_with_Shahkulu_in_%22The_Renegade%22",
+      "fixed": true
+    },
+    {
+      "title": "Unable to finish the fight with Ahmet in \"End of the Road\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed%3A_Revelations#Unable_to_finish_the_fight_with_Ahmet_in_%22End_of_the_Road%22",
+      "fixed": true
+    }
+  ]
+}

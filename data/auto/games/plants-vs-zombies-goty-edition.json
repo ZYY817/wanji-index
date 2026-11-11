@@ -1,0 +1,113 @@
+{
+  "id": "plants-vs-zombies-goty-edition",
+  "slug": "plants-vs-zombies-goty-edition",
+  "name": {
+    "zh": "Plants vs. Zombies GOTY Edition"
+  },
+  "summary": "来自曾开发过宝石迷阵和幻幻球的宝开公司的全新动作策略游戏！ 可怕的僵尸即将入侵你的家，唯一的防御方式就是你栽种的植物！武装你的植物，切换他们不同的功能，诸如强悍的豌豆射手或樱桃炸弹，更加快速有效的将僵尸阻挡在入侵的道路上。",
+  "summaryEn": "Zombies are invading your home, and the only defense is your arsenal of plants! Armed with an alien nursery-worth of zombie-zapping plants l…",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3590/",
+      "priceNote": "参考价 ¥ 21.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3590,
+  "developers": [
+    "PopCap Games, Inc."
+  ],
+  "publishers": [
+    "PopCap Games, Inc.",
+    "Electronic Arts"
+  ],
+  "releaseDate": "2009 年 5 月 5 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "操作系统：Windows XP/Vista/7\n处理器：1.2GHz+ 处理器\n内存：1GB RAM\n显卡：128MB 显存，16 位或 32 位色质\nDirectX：DirectX 8 或更高\n硬盘所需空间：65+MB 硬盘剩余空间\n声卡：DirectX 兼容声卡",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP/Vista/7\nProcessor: 1.2GHz+ processor\nMemory: 1GB of RAM\nGraphics: 128MB of video memory, 16-bit or 32-bit color quality\nDirectX: DirectX 8 or later\nHard Drive: 65+MB of free hard drive space\nSound: DirectX-compatible sound",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3590/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:57.015Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:12.010Z",
+      "page": "Plants vs. Zombies"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%PROGRAMDATA%\\PopCap Games\\PlantsVsZombies\\userdata\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\PopCap\\PlantsVsZombies\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "BASS_ChannelSetAttributes function not found in bass.dll",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#BASS_ChannelSetAttributes_function_not_found_in_bass.dll",
+      "fixed": true
+    },
+    {
+      "title": "Unable to load Steam.dll",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#Unable_to_load_Steam.dll",
+      "fixed": true
+    },
+    {
+      "title": "Invalid Command Line Parameter: -changedir",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#Invalid_Command_Line_Parameter%3A_-changedir",
+      "fixed": true
+    },
+    {
+      "title": "Low frame rate in fullscreen mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#Low_frame_rate_in_fullscreen_mode",
+      "fixed": true
+    },
+    {
+      "title": "Error reading user file: Failed reading file",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#Error_reading_user_file%3A_Failed_reading_file",
+      "fixed": true
+    },
+    {
+      "title": "Completing the Ice Level",
+      "url": "https://www.pcgamingwiki.com/wiki/Plants_vs._Zombies#Completing_the_Ice_Level",
+      "fixed": true
+    }
+  ]
+}

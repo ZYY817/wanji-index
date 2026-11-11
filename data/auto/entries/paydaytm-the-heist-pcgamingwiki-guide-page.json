@@ -1,0 +1,15 @@
+{
+  "id": "paydaytm-the-heist-pcgamingwiki-guide-page",
+  "name": "PAYDAY The Heist 技术资料页",
+  "nameEn": "PAYDAY The Heist on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "paydaytm-the-heist",
+  "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

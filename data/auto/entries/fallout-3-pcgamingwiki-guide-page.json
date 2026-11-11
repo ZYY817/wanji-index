@@ -1,0 +1,15 @@
+{
+  "id": "fallout-3-pcgamingwiki-guide-page",
+  "name": "Fallout 3 技术资料页",
+  "nameEn": "Fallout 3 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "fallout-3",
+  "url": "https://www.pcgamingwiki.com/wiki/Fallout_3",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

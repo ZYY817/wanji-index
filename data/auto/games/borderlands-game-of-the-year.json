@@ -1,0 +1,62 @@
+{
+  "id": "borderlands-game-of-the-year",
+  "slug": "borderlands-game-of-the-year",
+  "name": {
+    "zh": "Borderlands Game of the Year"
+  },
+  "summary": "Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way! With…",
+  "summaryEn": "Get ready for the mind blowing insanity! Play as one of four trigger-happy mercenaries and take out everything that stands in your way! With…",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/8980/",
+      "priceNote": "参考价 ¥ 9.90",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 8980,
+  "developers": [
+    "Gearbox Software"
+  ],
+  "publishers": [
+    "2K"
+  ],
+  "releaseDate": "2023 年 8 月 31 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP/Vista\nProcessor: 2.4 Ghz or equivalent processor with SSE2 support\nMemory: 1GB System RAM (2GB recommended with Vista)\nGraphics: 256mb video ram or better (GeForce 7 series or higher/Radeon HD3000 series or higher)\nHard Drive: 8 GB or more free space\nSound: Windows compatible sound card",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP/Vista\nProcessor: 2.4 Ghz or equivalent processor with SSE2 support\nMemory: 1GB System RAM (2GB recommended with Vista)\nGraphics: 256mb video ram or better (GeForce 7 series or higher/Radeon HD3000 series or higher)\nHard Drive: 8 GB or more free space\nSound: Windows compatible sound card",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/8980/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:37.178Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:08.563Z",
+      "page": null
+    }
+  }
+}

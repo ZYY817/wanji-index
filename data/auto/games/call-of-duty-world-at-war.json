@@ -1,0 +1,131 @@
+{
+  "id": "call-of-duty-world-at-war",
+  "slug": "call-of-duty-world-at-war",
+  "name": {
+    "zh": "Call of Duty: World at War"
+  },
+  "summary": "Call of Duty is back, redefining war like you've never experienced before.",
+  "summaryEn": "Call of Duty is back, redefining war like you've never experienced before.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/10090/",
+      "priceNote": "参考价 ¥ 98.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 10090,
+  "developers": [
+    "Treyarch"
+  ],
+  "publishers": [
+    "Activision"
+  ],
+  "releaseDate": "2008 年 11 月 18 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Supported OS: Windows XP/Vista/7 \nProcessor: Pentium 4 @ 3 GHz/AMD 64 3200+ \nMemory: 512 MB (1 GB for Vista) \nHard Drive: 8 GB Free \nDirectX version: DirectX 9.0c \nSound: on-board or better \nGraphics Card: 256 MB (nVidia GeForce 6600/ATI Radeon X1600)",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Supported OS: Windows XP/Vista/7 \nProcessor: Pentium 4 @ 3 GHz/AMD 64 3200+ \nMemory: 512 MB (1 GB for Vista) \nHard Drive: 8 GB Free \nDirectX version: DirectX 9.0c \nSound: on-board or better \nGraphics Card: 256 MB (nVidia GeForce 6600/ATI Radeon X1600)",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/10090/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:52.929Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:14.453Z",
+      "page": "Call of Duty: World at War"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Activision\\CoDWaW\\players\\profiles\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Activision\\CoDWaW\\players\\profiles\\*.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game hangs or freezes",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Game_hangs_or_freezes",
+      "fixed": true
+    },
+    {
+      "title": "Unhandled exception caught",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Unhandled_exception_caught",
+      "fixed": true
+    },
+    {
+      "title": "PunkBuster kicks with PB_INIT_FAILURE error message",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#PunkBuster_kicks_with_PB_INIT_FAILURE_error_message",
+      "fixed": true
+    },
+    {
+      "title": "Missing profiles",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Missing_profiles",
+      "fixed": true
+    },
+    {
+      "title": "Game unresponsive after pressing Alt+Tab",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Game_unresponsive_after_pressing_Alt%2BTab",
+      "fixed": true
+    },
+    {
+      "title": "Stuttering on modern systems",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Stuttering_on_modern_systems",
+      "fixed": true
+    },
+    {
+      "title": "No sound and debug menu appearing in top right corner",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#No_sound_and_debug_menu_appearing_in_top_right_corner",
+      "fixed": true
+    },
+    {
+      "title": "The game has problems with modern multi-core processors",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#The_game_has_problems_with_modern_multi-core_processors",
+      "fixed": true
+    },
+    {
+      "title": "Nvidia card performance boost",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Nvidia_card_performance_boost",
+      "fixed": true
+    },
+    {
+      "title": "Crashing while changing resolution",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty%3A_World_at_War#Crashing_while_changing_resolution",
+      "fixed": true
+    }
+  ]
+}

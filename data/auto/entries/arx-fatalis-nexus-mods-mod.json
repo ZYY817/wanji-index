@@ -1,0 +1,15 @@
+{
+  "id": "arx-fatalis-nexus-mods-mod",
+  "name": "Arx Fatalis Nexus Mods 专区",
+  "nameEn": "Arx Fatalis on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "arx-fatalis",
+  "url": "https://www.nexusmods.com/arxfatalis",
+  "note": "Nexus 上的 MOD 专区，共 28 个 MOD",
+  "noteEn": "Nexus Mods hub with 28 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

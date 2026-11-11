@@ -1,0 +1,89 @@
+{
+  "id": "alien-swarm",
+  "slug": "alien-swarm",
+  "name": {
+    "zh": "Alien Swarm"
+  },
+  "summary": "免费的多人合作游戏以及完整基础代码。",
+  "summaryEn": "Co-operative multiplayer game and complete code base available for free.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/630/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 630,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2010 年 7 月 19 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：\n操作系统：Windows® 7 / Vista / Vista64 / XP\n处理器：奔腾 4 3.0GHz\n内存：XP 下需要 1 GB / Vista 下需要 2 GB\n显卡：DirectX 9 兼容显卡，128 MB 显存，带有 Shader model 2.0。ATI X800，NVidia 6600 或更高。\n硬盘所需空间：至少 2.5 GB 的可用空间\n声卡：DirectX 9.0c 兼容声卡",
+    "recommended": "建议配置：\n操作系统：Windows® 7 / Vista / Vista64 / XP\n处理器：英特尔酷睿 2 双核 2.4GHz\n内存：XP 下需要 1 GB / Vista 下需要 2 GB\n显卡：DirectX 9 兼容显卡，带有 Shader model 3.0。NVidia 7600，ATI X1600 或更高\n硬盘所需空间：至少 2.5 的可用空间\n声卡：DirectX 9.0c 兼容声卡"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows® 7 / Vista / Vista64 / XP\nProcessor: Pentium 4 3.0GHz\nMemory: 1 GB for XP / 2GB for Vista\nGraphics: DirectX 9 compatible video card with 128 MB, Shader model 2.0. ATI X800, NVidia 6600 or better\nHard Drive: At least 2.5 GB of free space\nSound: DirectX 9.0c compatible sound card",
+    "recommended": "Recommended:\n OS *: Windows® 7 / Vista / Vista64 / XP\nProcessor: Intel core 2 duo 2.4GHz\nMemory: 1 GB for XP / 2GB for Vista\nGraphics: DirectX 9 compatible video card with Shader model 3.0. NVidia 7600, ATI X1600 or better\nHard Drive: At least 2.5 GB of free space\nSound: DirectX 9.0c compatible sound card"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/630/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Alien_Swarm"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:28.192Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:46.418Z",
+      "page": "Alien Swarm"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\swarm\\cfg\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Alien_Swarm#Purple_and_black_broken_textures",
+      "fixed": true
+    },
+    {
+      "title": "Crashes and overheating",
+      "url": "https://www.pcgamingwiki.com/wiki/Alien_Swarm#Crashes_and_overheating",
+      "fixed": true
+    },
+    {
+      "title": "Ping & Latency",
+      "url": "https://www.pcgamingwiki.com/wiki/Alien_Swarm#Ping_%26_Latency",
+      "fixed": true
+    }
+  ]
+}

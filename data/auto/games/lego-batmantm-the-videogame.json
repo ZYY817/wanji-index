@@ -1,0 +1,117 @@
+{
+  "id": "lego-batmantm-the-videogame",
+  "slug": "lego-batmantm-the-videogame",
+  "name": {
+    "zh": "LEGO Batman: The Videogame"
+  },
+  "summary": "当阿卡姆疯人院里的所有恶棍切成一派、肆虐成灾，能拯救哥潭市的，只有那对行侠仗义的活跃二人组。 以独特方式结合乐高的妙趣和《蝙蝠侠》的剧情，打造惊险刺激的漫画风格冒险，这就是《乐高蝙蝠侠》。",
+  "summaryEn": "When all the villains in Arkham Asylum team up and break loose, only the dynamic duo is bold enough to take them on to save Gotham City.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/21000/",
+      "priceNote": "参考价 ¥ 144.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 21000,
+  "developers": [
+    "Traveller's Tales"
+  ],
+  "publishers": [
+    "Warner Bros. Interactive Entertainment"
+  ],
+  "releaseDate": "2008 年 9 月 29 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum: \n Supported OS: Windows Vista®/XP \nProcessor: Intel® P3 1.5 GHz or AMD Athlon™ XP \nMemory: 256 MB RAM, 512 MB RAM required for Windows Vista® \nGraphics: 128 MB with Shader Model 2.0 capability (Shader Model 3.0 recommended)",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n Supported OS: Windows Vista®/XP \nProcessor: Intel® P3 1.5 GHz or AMD Athlon™ XP \nMemory: 256 MB RAM, 512 MB RAM required for Windows Vista® \nGraphics: 128 MB with Shader Model 2.0 capability (Shader Model 3.0 recommended)",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/21000/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:29.495Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:57.585Z",
+      "page": "Lego Batman: The Videogame"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Warner Bros. Interactive Entertainment\\LEGO Batman\\Saved Games",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Warner Bros. Interactive Entertainment\\LEGO Batman",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Vehicles not working",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Vehicles_not_working",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "Various shadows exhibit prominent color banding",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Various_shadows_exhibit_prominent_color_banding",
+      "fixed": true
+    },
+    {
+      "title": "Unable to destroy last two electrical pylons/coils with robot in \"An Enterprising Theft\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Unable_to_destroy_last_two_electrical_pylons%2Fcoils_with_robot_in_%22An_Enterprising_Theft%22",
+      "fixed": true
+    },
+    {
+      "title": "Game Randomly Crashes",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Game_Randomly_Crashes",
+      "fixed": true
+    },
+    {
+      "title": "Custom characters are all black in \"Experiment Room\" (Epic Games Store version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Custom_characters_are_all_black_in_%22Experiment_Room%22_(Epic_Games_Store_version)",
+      "fixed": true
+    },
+    {
+      "title": "Game keeps minimizing itself",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame#Game_keeps_minimizing_itself",
+      "fixed": true
+    }
+  ]
+}

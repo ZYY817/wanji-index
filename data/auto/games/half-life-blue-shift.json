@@ -1,0 +1,128 @@
+{
+  "id": "half-life-blue-shift",
+  "slug": "half-life-blue-shift",
+  "name": {
+    "zh": "Half-Life: Blue Shift"
+  },
+  "summary": "由 Gearbox Software 开发、秉承 2001 年曾作为 Half-Life 附加游戏的同等力作，Blue Shift 让您以 Barney Calhoun 的身份重返黑山基地研究所，保护并辅佐身陷囹圄的 Gordon 摆脱困境。",
+  "summaryEn": "Made by Gearbox Software and originally released in 2001 as an add-on to Half-Life, Blue Shift is a return to the Black Mesa Research Facili…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/130/",
+      "priceNote": "参考价 ¥ 19.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 130,
+  "developers": [
+    "Gearbox Software"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2001 年 6 月 1 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：500 mhz 处理器，96mb 内存，16mb 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：800 mhz 处理器，128mb 内存，32mb 以上的显卡，Windows XP，鼠标，键盘，互联网连接",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/130/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:07.287Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:41.865Z",
+      "page": "Half-Life: Blue Shift"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Half-Life\\bshift\\SAVE\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Half-Life\\bshift\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Run the game at screen refresh rate (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Run_the_game_at_screen_refresh_rate_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Input Lag in Direct3D (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Input_Lag_in_Direct3D_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "No music playback (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#No_music_playback_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Main menu issues (Retail Version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Main_menu_issues_(Retail_Version)",
+      "fixed": true
+    },
+    {
+      "title": "Fatal Error - Available memory less than 15MB (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Fatal_Error_-_Available_memory_less_than_15MB_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on startup (Steam version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Black_screen_on_startup_(Steam_version)",
+      "fixed": true
+    },
+    {
+      "title": "Windows 7/Vista Performance Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Windows_7%2FVista_Performance_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Performance issues with dynamic lights on Intel graphics (OpenGL)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Performance_issues_with_dynamic_lights_on_Intel_graphics_(OpenGL)",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes before entering main menu (Windows)",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life%3A_Blue_Shift#Game_crashes_before_entering_main_menu_(Windows)",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "call-of-duty-4-modern-warfare-2007",
+  "slug": "call-of-duty-4-modern-warfare-2007",
+  "name": {
+    "zh": "Call of Duty 4: Modern Warfare (2007)"
+  },
+  "summary": "The new action-thriller from the award-winning team at Infinity Ward, the creators of the Call of Duty® series, delivers the most intense an…",
+  "summaryEn": "The new action-thriller from the award-winning team at Infinity Ward, the creators of the Call of Duty® series, delivers the most intense an…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/7940/",
+      "priceNote": "参考价 ¥ 98.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 7940,
+  "developers": [
+    "Infinity Ward"
+  ],
+  "publishers": [
+    "Activision"
+  ],
+  "releaseDate": "2007 年 11 月 12 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum: \n Supported OS: Microsoft® Windows® XP/Vista (Windows 95/98/ME/2000 are unsupported)\nDirectX Version: Microsoft DirectX 9.0c (included)\nProcessor: Intel® Pentium® 4 2.4 Ghz / AMD(R) 64 (TM) 2800+ / Intel® and AMD® 1.8 Ghz Dual Core Processor or better supported\nMemory: 512MB RAM (Windows® XP), 768MB RAM (Vista®)\nGraphics: NVIDIA Geforce 6600 or better or ATI Radeon® 9800Pro or better\nSound: 100% DirectX 9.0c compatible sound card\nHard Drive: 8GB of free hard drive space\nInternet: Broadband connection and service required for multiplayer connectivity",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n Supported OS: Microsoft® Windows® XP/Vista (Windows 95/98/ME/2000 are unsupported)\nDirectX Version: Microsoft DirectX 9.0c (included)\nProcessor: Intel® Pentium® 4 2.4 Ghz / AMD(R) 64 (TM) 2800+ / Intel® and AMD® 1.8 Ghz Dual Core Processor or better supported\nMemory: 512MB RAM (Windows® XP), 768MB RAM (Vista®)\nGraphics: NVIDIA Geforce 6600 or better or ATI Radeon® 9800Pro or better\nSound: 100% DirectX 9.0c compatible sound card\nHard Drive: 8GB of free hard drive space\nInternet: Broadband connection and service required for multiplayer connectivity",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/7940/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:21.445Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:12.978Z",
+      "page": null
+    }
+  }
+}

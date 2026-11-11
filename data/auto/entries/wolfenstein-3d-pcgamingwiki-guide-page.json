@@ -1,0 +1,15 @@
+{
+  "id": "wolfenstein-3d-pcgamingwiki-guide-page",
+  "name": "Wolfenstein 3D 技术资料页",
+  "nameEn": "Wolfenstein 3D on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "wolfenstein-3d",
+  "url": "https://www.pcgamingwiki.com/wiki/Wolfenstein_3D",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

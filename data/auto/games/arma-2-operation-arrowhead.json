@@ -1,0 +1,63 @@
+{
+  "id": "arma-2-operation-arrowhead",
+  "slug": "arma-2-operation-arrowhead",
+  "name": {
+    "zh": "Arma 2: Operation Arrowhead"
+  },
+  "summary": "Three years after the conflict in Chernarus, portrayed in the original Arma 2, a new flashpoint explodes in the Green Sea Region.",
+  "summaryEn": "Three years after the conflict in Chernarus, portrayed in the original Arma 2, a new flashpoint explodes in the Green Sea Region.",
+  "genres": [
+    "action",
+    "simulation",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/33930/",
+      "priceNote": "参考价 ¥ 79.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 33930,
+  "developers": [
+    "Bohemia Interactive"
+  ],
+  "publishers": [
+    "Bohemia Interactive"
+  ],
+  "releaseDate": "2010 年 6 月 29 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n OS: Windows 10\nProcessor: Intel Core 2.4 GHz or AMD Dual-Core Athlon 2.5 GHz\nMemory: 1GB\nGraphics: Nvidia Geforce 8600GT or ATI Radeon 3650 or faster with Shader Model 3 and 512 MB VRAM \nDirectX®: DirectX 9.0c\nHard Drive: 10 GB free space",
+    "recommended": "Recommended:\n OS: Windows 10\nProcessor: Intel Core i5 or AMD Athlon Phenom X4 or faster\nMemory: 2GB\nGraphics: Nvidia Geforce GTX 260 or ATI Radeon HD 5770 or faster with Shader Model 3 and 896 MB VRAM\nDirectX®: DirectX 9.0c\nHard Drive: 20 GB free space"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS: Windows 10\nProcessor: Intel Core 2.4 GHz or AMD Dual-Core Athlon 2.5 GHz\nMemory: 1GB\nGraphics: Nvidia Geforce 8600GT or ATI Radeon 3650 or faster with Shader Model 3 and 512 MB VRAM \nDirectX®: DirectX 9.0c\nHard Drive: 10 GB free space",
+    "recommended": "Recommended:\n OS: Windows 10\nProcessor: Intel Core i5 or AMD Athlon Phenom X4 or faster\nMemory: 2GB\nGraphics: Nvidia Geforce GTX 260 or ATI Radeon HD 5770 or faster with Shader Model 3 and 896 MB VRAM\nDirectX®: DirectX 9.0c\nHard Drive: 20 GB free space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/33930/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:11.602Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:50.819Z",
+      "page": null
+    }
+  }
+}

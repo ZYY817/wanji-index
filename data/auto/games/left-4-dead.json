@@ -1,0 +1,109 @@
+{
+  "id": "left-4-dead",
+  "slug": "left-4-dead",
+  "name": {
+    "zh": "Left 4 Dead"
+  },
+  "summary": "Valve 新作震撼上市 — Counter-Strike、Half-Life 等经典游戏的缔造者再次重拳出击，推出力作 — Left 4 Dead，它是针对 PC 和 Xbox 360 推出的新款游戏，四名“生还者”将与僵尸群部落和可怕的“魔王”异种展开殊死战斗。",
+  "summaryEn": "From Valve (the creators of Counter-Strike, Half-Life and more) comes Left 4 Dead, a co-op action horror game for the PC and Xbox 360 that c…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/500/",
+      "priceNote": "参考价 ¥ 35.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 500,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2008 年 11 月 17 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置：\n 支持的操作系统：Windows® 7 32/64位 / Vista 32/64 / XP\n处理器：Pentium 4 3.0GHz\n内存：1 GB\n显卡：128 MB，Shader model 2.0，ATI 9600，NVidia 6600 或更高\n硬盘：至少 7.5 GB 可用空间\n声卡：DirectX 9.0c 兼容声卡",
+    "recommended": "建议配置：\n 支持的操作系统：Windows® 7 32/64位 / Vista 32/64 / XP\n处理器：Intel core 2 duo 2.4GHz\n内存：1 GB \n显卡：Shader model 3.0，NVidia 7600，ATI X1600 或更高"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n Supported OS: Windows® 7 32/64-bit / Vista 32/64 / XP \nProcessor: Pentium 4 3.0GHz \nMemory: 1 GB \nGraphics: 128 MB, Shader model 2.0, ATI 9600, NVidia 6600 or better \nHard Drive: At least 7.5 GB of free space \nSound Card: DirectX 9.0c compatible sound card",
+    "recommended": "Recommended: \n Supported OS: Windows® 7 32/64-bit / Vista 32/64 / XP \nProcessor: Intel core 2 duo 2.4GHz \nMemory: 1 GB \nGraphics: Shader model 3.0, NVidia 7600, ATI X1600 or better"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:21.068Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:54.805Z",
+      "page": "Left 4 Dead"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\left4dead\\cfg\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\left4dead\\cfg\\video.txt",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Some names in credits have special characters",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#Some_names_in_credits_have_special_characters",
+      "fixed": false
+    },
+    {
+      "title": "Credits from extras not loading properly",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#Credits_from_extras_not_loading_properly",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes with \"OUT OF MEMORY!\" message",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#Game_crashes_with_%22OUT_OF_MEMORY!%22_message",
+      "fixed": true
+    },
+    {
+      "title": "AMD GPUs: Game crashes when loading into a campaign on AMD driver versions 25.10.2 and newer",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#AMD_GPUs%3A_Game_crashes_when_loading_into_a_campaign_on_AMD_driver_versions_25.10.2_and_newer",
+      "fixed": true
+    },
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#Purple_and_black_broken_textures",
+      "fixed": true
+    },
+    {
+      "title": "Can't unlock Lamb 2 Slaughter achievement",
+      "url": "https://www.pcgamingwiki.com/wiki/Left_4_Dead#Can't_unlock_Lamb_2_Slaughter_achievement",
+      "fixed": true
+    }
+  ]
+}

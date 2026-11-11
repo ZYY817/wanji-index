@@ -1,0 +1,63 @@
+{
+  "id": "the-ship-murder-party",
+  "slug": "the-ship-murder-party",
+  "name": {
+    "zh": "The Ship: Murder Party"
+  },
+  "summary": "The Ship is a murder mystery multiplayer.",
+  "summaryEn": "The Ship is a murder mystery multiplayer.",
+  "genres": [
+    "action",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2400/",
+      "priceNote": "参考价 ¥ 36.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2400,
+  "developers": [
+    "Outerlight Ltd."
+  ],
+  "publishers": [
+    "Blazing Griffin"
+  ],
+  "releaseDate": "2006 年 7 月 11 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：1.8 GHz 处理器，512MB 内存，DirectX 8 显卡 (1024x768)，Windows 2000/XP/ME/98，鼠标，键盘，互联网连接，DirectX 9.0c\n 建议配置：2.8 GHz 处理器，1024MB 内存，DirectX 9 性能显卡 (1024x768)，Windows 2000/XP/ME/98，鼠标，键盘，互联网连接，DirectX 9.0c",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: 1.8 GHz Processor, 512MB RAM, DirectX 8 level graphics card (1024x768), Windows 2000/XP/ME/98, Mouse, Keyboard, Internet Connection, DirectX 9.0c\n Recommended: 2.8 GHz Processor, 1024MB RAM, DirectX 9 capable Graphics Card (1024x768), Windows 2000/XP/ME/98, Mouse, Keyboard, Internet Connection, DirectX 9.0c",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2400/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:13.582Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:56:50.268Z",
+      "page": null
+    }
+  }
+}

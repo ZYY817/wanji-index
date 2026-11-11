@@ -1,0 +1,61 @@
+{
+  "id": "the-elder-scrolls-iii-morrowind-game-of-the-year-edition",
+  "slug": "the-elder-scrolls-iii-morrowind-game-of-the-year-edition",
+  "name": {
+    "zh": "The Elder Scrolls III: Morrowind Game of the Year Edition"
+  },
+  "summary": "The Elder Scrolls III: Morrowind® Game of the Year Edition includes Morrowind plus all of the content from the Bloodmoon and Tribunal expans…",
+  "summaryEn": "The Elder Scrolls III: Morrowind® Game of the Year Edition includes Morrowind plus all of the content from the Bloodmoon and Tribunal expans…",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/22320/",
+      "priceNote": "参考价 ¥ 62.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 22320,
+  "developers": [
+    "Bethesda Game Studios"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2009 年 6 月 16 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows ME/98/XP/2000\nProcessor: 500 MHz Intel Pentium III, Celeron, or AMD Athlon\nMemory: 256 MB\nGraphics: 32MB Direct3D Compatible video card with 32-bit color support and DirectX 8.1 \nDirectX®: 8.1\nHard Drive: 1GB free hard disk space\nSound: DirectX 8.1 compatible sound card",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows ME/98/XP/2000\nProcessor: 500 MHz Intel Pentium III, Celeron, or AMD Athlon\nMemory: 256 MB\nGraphics: 32MB Direct3D Compatible video card with 32-bit color support and DirectX 8.1 \nDirectX®: 8.1\nHard Drive: 1GB free hard disk space\nSound: DirectX 8.1 compatible sound card",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/22320/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:43.706Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:56:18.861Z",
+      "page": null
+    }
+  }
+}

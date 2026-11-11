@@ -1,0 +1,15 @@
+{
+  "id": "half-life-deathmatch-source-pcgamingwiki-guide-page",
+  "name": "Half-Life Deathmatch: Source 技术资料页",
+  "nameEn": "Half-Life Deathmatch: Source on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "half-life-deathmatch-source",
+  "url": "https://www.pcgamingwiki.com/wiki/Half-Life_Deathmatch%3A_Source",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "quake",
+  "slug": "quake",
+  "name": {
+    "zh": "Quake"
+  },
+  "summary": "Quake®由屡获殊荣的id Software开发，这是一款极具开创性的原创黑暗幻想第一人称射击游戏，启发了现今的许多复古风格第一人称射击游戏。游玩《Quake》增强版，体验原汁原味的乐趣，同时享受更新内容和视觉增强效果。",
+  "summaryEn": "Developed by the award-winning id Software, Quake® is the ground-breaking, original dark fantasy first-person shooter that inspires today’s …",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2310/",
+      "priceNote": "参考价 ¥ 41.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2310,
+  "developers": [
+    "id Software",
+    "Nightdive Studios",
+    "MachineGames"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2007 年 8 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum Spec (1080p/60 HZ) \nWin 10 64-bit version\nIntel Core i5-3570 @3.4 GHz or AMD Ryzen 3 1300X @3.5 GHz \nNVIDIA GeForce GTX 650 TI (2GB) or AMD HD 7750 (1GB) \n8GB System RAM \nMinimum 2GB free space on hard drive (additional space required for add-on downloads) \nHigh speed broadband connection required for online play",
+    "recommended": "Recommended Spec (*4K/120 HZ) \nWin 10 64-bit version\nIntel Core i5-6600k @3.5 GHz or AMD Ryzen 5 1600 @3.2 GHz \nNVIDIA GeForce GTX 1070 (8GB) or AMD RX Vega 56 (8GB) \n8GB System RAM \nMinimum 2GB free space on hard drive (additional space required for add-on downloads) \nHigh speed broadband connection required for online play \n*Compatible display required"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum Spec (1080p/60 HZ) \nWin 10 64-bit version\nIntel Core i5-3570 @3.4 GHz or AMD Ryzen 3 1300X @3.5 GHz \nNVIDIA GeForce GTX 650 TI (2GB) or AMD HD 7750 (1GB) \n8GB System RAM \nMinimum 2GB free space on hard drive (additional space required for add-on downloads) \nHigh speed broadband connection required for online play",
+    "recommended": "Recommended Spec (*4K/120 HZ) \nWin 10 64-bit version\nIntel Core i5-6600k @3.5 GHz or AMD Ryzen 5 1600 @3.2 GHz \nNVIDIA GeForce GTX 1070 (8GB) or AMD RX Vega 56 (8GB) \n8GB System RAM \nMinimum 2GB free space on hard drive (additional space required for add-on downloads) \nHigh speed broadband connection required for online play \n*Compatible display required"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2310/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:10.036Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:19.150Z",
+      "page": "Quake"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\id1\\s#.sav",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\hipnotic\\s#.sav",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\rogue\\s#.sav",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\id1\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\hipnotic\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\rogue\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Restore music playback",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake#Restore_music_playback",
+      "fixed": true
+    },
+    {
+      "title": "Black screen with the DarkPlaces engine (GOG.com)",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake#Black_screen_with_the_DarkPlaces_engine_(GOG.com)",
+      "fixed": true
+    },
+    {
+      "title": "GLQuake does not launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake#GLQuake_does_not_launch",
+      "fixed": true
+    },
+    {
+      "title": "Current music track plays the next one before the loop (GOG.com)",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake#Current_music_track_plays_the_next_one_before_the_loop_(GOG.com)",
+      "fixed": true
+    },
+    {
+      "title": "Music does not loop",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake#Music_does_not_loop",
+      "fixed": true
+    }
+  ]
+}

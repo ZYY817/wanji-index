@@ -1,0 +1,15 @@
+{
+  "id": "earth-2160-pcgamingwiki-guide-page",
+  "name": "Earth 2160 技术资料页",
+  "nameEn": "Earth 2160 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "earth-2160",
+  "url": "https://www.pcgamingwiki.com/wiki/Earth_2160",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

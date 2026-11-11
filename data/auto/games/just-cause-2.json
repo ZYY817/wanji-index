@@ -1,0 +1,112 @@
+{
+  "id": "just-cause-2",
+  "slug": "just-cause-2",
+  "name": {
+    "zh": "Just Cause 2"
+  },
+  "summary": "进入一个极其亢奋动,作性十足的游戏。任玩家们自由探险于方原 400 平方英里 的崎岖和数以百计的武器和车辆。",
+  "summaryEn": "Dive into an adrenaline-fuelled free-roaming adventure with 400 square miles of rugged terrain and hundreds of weapons and vehicles.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/8190/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 8190,
+  "developers": [
+    "Avalanche Studios"
+  ],
+  "publishers": [
+    "Square Enix"
+  ],
+  "releaseDate": "2010 年 3 月 23 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统： Microsoft Windows Vista (不支持 Windows XP)\n处理器: Dual-core CPU 可运算SSE3(Athlon 64 X2 4200 / Pentium D 3GHz)\n内存: 2GB 系统内存\n硬盘： 10GB 剩余空间\n显卡： 兼容DX10的声卡 板载 256 MB显存\n(Nvidia GeForce 8800 系列/ ATI Radeon HD 2600 Pro)\n声卡: 100% 能够处理DX10的声卡\nDirectX®: Microsoft DirectX 10",
+    "recommended": "推荐配置：\n操作系统： Microsoft Windows Vista SP1 或 Windows 7\n处理器: Intel Core® 2 Duo 2.6 GHz 或者 AMD Phenom X3 2.4GHz 或更好\n内存: 3GB 系统内存\n硬盘： 5G 剩余空间 \n显卡： 兼容DX 10的显卡 板载 512 MB 显存\n(Nvidia GeForce GTS 250 系列/ ATI Radeon HD 5750 系列) \n声卡: 100% DirectX 10 并支持 Dolby Digital 5.1 的声卡\nDirectX®: Microsoft DirectX 10.1"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Microsoft Windows Vista (Windows XP is unsupported)\nProcessor: Dual-core CPU with SSE3 (Athlon 64 X2 4200 / Pentium D 3GHz)\nMemory: 2GB System Memory\nHard Drive: 10GB of free drive space\nGraphics: DX10 compatible graphics card with 256 MB of memory\n (Nvidia GeForce 8800 series/ ATI Radeon HD 2600 Pro)\nSound: 100% DirectX 10 compatible sound card\nDirectX®: Microsoft DirectX 10",
+    "recommended": "Recommended:\n OS *: Microsoft Windows Vista SP1 or Windows 7\nProcessor: Intel Core® 2 Duo 2.6 GHz or AMD Phenom X3 2.4GHz or equivalen\nMemory: 3GB system Memory\nHard Drive: \nGraphics: DX10 compatible graphics card with 512 MB of memory\n (Nvidia GeForce GTS 250 series/ ATI Radeon HD 5750 series) \nSound: 100% DirectX 10 compatible Dolby Digital 5.1 sound card\nDirectX®: Microsoft DirectX 10.1"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/8190/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:24.920Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:50.490Z",
+      "page": "Just Cause 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Just Cause 2",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Square Enix\\Just Cause 2\\Saves\\JC2Settings",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "AMD launch crash fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#AMD_launch_crash_fix",
+      "fixed": true
+    },
+    {
+      "title": "Possible crash fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Possible_crash_fix",
+      "fixed": true
+    },
+    {
+      "title": "Directx Error 3",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Directx_Error_3",
+      "fixed": true
+    },
+    {
+      "title": "Very low framerate on NVIDIA GeForce RTX 50 series GPUs",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Very_low_framerate_on_NVIDIA_GeForce_RTX_50_series_GPUs",
+      "fixed": true
+    },
+    {
+      "title": "Slingshotting has reduced momentum",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Slingshotting_has_reduced_momentum",
+      "fixed": true
+    },
+    {
+      "title": "Crash when loading a save game on the GOG version",
+      "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Crash_when_loading_a_save_game_on_the_GOG_version",
+      "fixed": true
+    }
+  ]
+}

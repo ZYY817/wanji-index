@@ -1,0 +1,67 @@
+{
+  "id": "tomb-raider-game-of-the-year",
+  "slug": "tomb-raider-game-of-the-year",
+  "name": {
+    "zh": "Tomb Raider Game of the Year"
+  },
+  "summary": "《古墓丽影》探索了劳拉·克劳馥紧张的起源故事，以及她从年轻女人变为坚强生存者的成长过程。",
+  "summaryEn": "Tomb Raider explores the intense origin story of Lara Croft and her ascent from a young woman to a hardened survivor.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/203160/",
+      "priceNote": "参考价 ¥ 98.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 203160,
+  "developers": [
+    "Crystal Dynamics",
+    "Eidos-Montréal",
+    "Feral Interactive (Mac)",
+    "Nixxes"
+  ],
+  "publishers": [
+    "Crystal Dynamics",
+    "Feral Interactive (Mac)"
+  ],
+  "releaseDate": "2013 年 3 月 4 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "Minimum:\nOS *:Windows XP Service Pack 3, Windows Vista,7,8 (32bit/64bit)\nProcessor:Dual core CPU: AMD Athlon64 X2 2.1 Ghz (4050+), Intel Core2 Duo 1.86 Ghz (E6300)\nMemory:1GB Memory (2GB on Vista)\nGraphics:DirectX 9 graphics card with 512Mb Video RAM: AMD Radeon HD 2600 XT, nVidia 8600\nDirectX®:9.0c\nHard Drive:12 GB HD space\nOther Requirements:Broadband Internet connection",
+    "recommended": "Recommended:\nOS *:Windows Vista, Windows 7 or Windows 8\nProcessor:Quad core CPU: AMD Phenom II X4 955, Intel Core i5-750\nMemory:4 GB RAM\nGraphics:DirectX 11 graphics card with 1GB Video RAM: AMD Radeon HD 5870, nVidia GTX 480\nDirectX®:11\nHard Drive:12 GB HD space\nOther Requirements:Broadband Internet connection"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *:Windows XP Service Pack 3, Windows Vista,7,8 (32bit/64bit)\nProcessor:Dual core CPU: AMD Athlon64 X2 2.1 Ghz (4050+), Intel Core2 Duo 1.86 Ghz (E6300)\nMemory:1GB Memory (2GB on Vista)\nGraphics:DirectX 9 graphics card with 512Mb Video RAM: AMD Radeon HD 2600 XT, nVidia 8600\nDirectX®:9.0c\nHard Drive:12 GB HD space\nOther Requirements:Broadband Internet connection",
+    "recommended": "Recommended:\nOS *:Windows Vista, Windows 7 or Windows 8\nProcessor:Quad core CPU: AMD Phenom II X4 955, Intel Core i5-750\nMemory:4 GB RAM\nGraphics:DirectX 11 graphics card with 1GB Video RAM: AMD Radeon HD 5870, nVidia GTX 480\nDirectX®:11\nHard Drive:12 GB HD space\nOther Requirements:Broadband Internet connection"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/203160/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:30.876Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:56:51.726Z",
+      "page": null
+    }
+  }
+}

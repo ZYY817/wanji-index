@@ -1,0 +1,112 @@
+{
+  "id": "bully-scholarship-edition",
+  "slug": "bully-scholarship-edition",
+  "name": {
+    "zh": "Bully: Scholarship Edition"
+  },
+  "summary": "Bully 讲述调皮的 15 岁少年吉米·霍普金斯（Jimmy Hopkins）经历青春期的欢笑与尴尬的故事。在躲避球中击败运动员、对预科生恶作剧、拯救书呆子、亲吻女生，并在最糟糕的学校中跨越社会等级制度。",
+  "summaryEn": "Bully tells the story of mischievous 15-year-old Jimmy Hopkins as he goes through the hilarity and awkwardness of adolescence.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/12200/",
+      "priceNote": "参考价 ¥ 63.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 12200,
+  "developers": [
+    "Rockstar New England"
+  ],
+  "publishers": [
+    "Rockstar Games"
+  ],
+  "releaseDate": "2010 年 12 月 23 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS: Windows 10 \nProcessor: Intel Pentium 4 (3+ GHZ) / AMD Athlon 3000+ \nMemory: 1 GB RAM \nGraphics: DirectX 9.0c Shader 3.0 supported, Nvidia 6800 or 7300 or better, ATI Radeon X1300 or better \nDirectX Version: DirectX 9.0c \nHard Drive: 4.7 GB free space \nSound Card: DX9-compatible \nInput: Keyboard, Mouse, Xbox 360 Controller supported",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS: Windows 10 \nProcessor: Intel Pentium 4 (3+ GHZ) / AMD Athlon 3000+ \nMemory: 1 GB RAM \nGraphics: DirectX 9.0c Shader 3.0 supported, Nvidia 6800 or 7300 or better, ATI Radeon X1300 or better \nDirectX Version: DirectX 9.0c \nHard Drive: 4.7 GB free space \nSound Card: DX9-compatible \nInput: Keyboard, Mouse, Xbox 360 Controller supported",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/12200/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:10.352Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:10.016Z",
+      "page": "Bully: Scholarship Edition"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Bully Scholarship Edition\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Rockstar Games\\Bully Scholarship Edition\\A0\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Save failed",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#Save_failed",
+      "fixed": true
+    },
+    {
+      "title": "Controller/controls unresponsive",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#Controller%2Fcontrols_unresponsive",
+      "fixed": true
+    },
+    {
+      "title": "Loud audio",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#Loud_audio",
+      "fixed": true
+    },
+    {
+      "title": "The application has failed to start because its side-by-side configuration is incorrect",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#The_application_has_failed_to_start_because_its_side-by-side_configuration_is_incorrect",
+      "fixed": true
+    },
+    {
+      "title": "Game still crashes with SilentPatch",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#Game_still_crashes_with_SilentPatch",
+      "fixed": true
+    },
+    {
+      "title": "Black screen during The Big Game mission",
+      "url": "https://www.pcgamingwiki.com/wiki/Bully%3A_Scholarship_Edition#Black_screen_during_The_Big_Game_mission",
+      "fixed": true
+    }
+  ]
+}

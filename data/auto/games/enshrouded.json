@@ -1,0 +1,65 @@
+{
+  "id": "enshrouded",
+  "slug": "enshrouded",
+  "name": {
+    "zh": "雾锁王国 (Enshrouded)",
+    "en": "Enshrouded"
+  },
+  "summary": "《雾锁王国》是一款单人/合作生存动作RPG，在这里，你的自由与创造力将被摆在第一位。竭尽全力战胜蚕食薪谷王国的腐化瘴气：探索手工打造的瑰丽世界，揭开隐藏的秘密并披荆斩棘开辟道路，在完全支持地形改造的世界中尽情建造。",
+  "summaryEn": "Enshrouded is a solo and co-op survival action RPG where your freedom and creativity come first.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1203620/",
+      "priceNote": "参考价 ¥ 138.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1203620,
+  "developers": [
+    "Keen Games GmbH"
+  ],
+  "publishers": [
+    "Keen Games GmbH"
+  ],
+  "releaseDate": "2026 年 10 月 15 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5-6400 (2.7 GHz 4 Core) / AMD Ryzen 5 1500X (3.5 GHz 4 Core) or equivalent\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060 (req. 6GB VRAM) / AMD Radeon RX 580 (req. 6GB VRAM) / Intel ARC A380\n网络: 宽带互联网连接\n存储空间: 需要 60 GB 可用空间\n声卡: on board",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel i7-8700 (3.7 GHz 6 Core) / AMD Ryzen 7 2700X (3.7 GHz 8 Core) or equivalent\n内存: 16 GB RAM\n显卡: NVIDIA RTX 2070 Super (req. 6GB VRAM) / AMD Radeon RX 6700 XT (req. 6GB VRAM) / Intel ARC A770\n网络: 宽带互联网连接\n存储空间: 需要 60 GB 可用空间\n声卡: on board\n附注事项: 建议使用固态硬盘（SSD）。"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5-6400 (2.7 GHz 4 Core) / AMD Ryzen 5 1500X (3.5 GHz 4 Core) or equivalent\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 (req. 6GB VRAM) / AMD Radeon RX 580 (req. 6GB VRAM) / Intel ARC A380\nNetwork: Broadband Internet connection\nStorage: 60 GB available space\nSound Card: on board",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel i7-8700 (3.7 GHz 6 Core) / AMD Ryzen 7 2700X (3.7 GHz 8 Core) or equivalent\nMemory: 16 GB RAM\nGraphics: NVIDIA RTX 2070 Super (req. 6GB VRAM) / AMD Radeon RX 6700 XT (req. 6GB VRAM) / Intel ARC A770\nNetwork: Broadband Internet connection\nStorage: 60 GB available space\nSound Card: on board\nAdditional Notes: SSD recommended."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1203620/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:34.340Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:33.216Z",
+      "page": "Enshrouded"
+    }
+  }
+}

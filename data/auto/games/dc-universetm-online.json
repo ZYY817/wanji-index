@@ -1,0 +1,64 @@
+{
+  "id": "dc-universetm-online",
+  "slug": "dc-universetm-online",
+  "name": {
+    "zh": "DC Universe Online"
+  },
+  "summary": "DC Universe Online is a Free-to-Play, massive multiplayer online action game set in the popular DC Universe.",
+  "summaryEn": "DC Universe Online is a Free-to-Play, massive multiplayer online action game set in the popular DC Universe.",
+  "genres": [
+    "action",
+    "adventure",
+    "mmo",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/24200/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 24200,
+  "developers": [
+    "Dimensional Ink Games"
+  ],
+  "publishers": [
+    "Daybreak Game Company"
+  ],
+  "releaseDate": "2011 年 11 月 2 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows 7 or newer\nProcessor: P4 3.0GHz or AMD equivalent\nMemory: 1GB RAM\nHard Disk Space: 30 GB of Free Hard Drive Space\nVideo: NVIDIA 7800GTX+ or ATI 1950+ Video Card\nAudio: on Board\nNetwork: Broadband Internet Connection required",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows 7 or newer\nProcessor: P4 3.0GHz or AMD equivalent\nMemory: 1GB RAM\nHard Disk Space: 30 GB of Free Hard Drive Space\nVideo: NVIDIA 7800GTX+ or ATI 1950+ Video Card\nAudio: on Board\nNetwork: Broadband Internet Connection required",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/24200/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:50.767Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:23.216Z",
+      "page": "DC Universe Online"
+    }
+  }
+}

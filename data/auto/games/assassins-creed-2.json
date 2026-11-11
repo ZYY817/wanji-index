@@ -1,0 +1,128 @@
+{
+  "id": "assassins-creed-2",
+  "slug": "assassins-creed-2",
+  "name": {
+    "zh": "刺客信条2",
+    "en": "Assassin's Creed 2"
+  },
+  "summary": "备受期待的刺客信条的续作塑造了一个全新英雄，艾吉奥·奥迪托雷——一个年轻的意大利贵族，同时塑造了全新的时代背景：文艺复兴时期。《刺客信条2》讲述了一个以古时野蛮的文艺复兴时期的意大利为背景，有关家族，复仇以及阴谋的史诗故事。",
+  "summaryEn": "An epic story of family, vengeance and conspiracy set in the pristine, yet brutal, backdrop of a Renaissance Italy. New low price!",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/33230/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 33230,
+  "developers": [
+    "Ubisoft Montreal"
+  ],
+  "publishers": [
+    "Ubisoft"
+  ],
+  "releaseDate": "2010 年 3 月 4 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\n OS *: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits)*\nProcessor: Intel Core® 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista® - Windows 7® \nGraphics: 256 MB DirectX® 9.0–compliant card with Shader Model 3.0 or higher (see supported list)\nDirectX®: DirectX 9.0\nHard Drive: 8 GB free space\nSound: DirectX 9.0 –compliant sound card \nSupported Peripherals: Keyboard, mouse, optional controller\n* This product does not support Windows® 98/ME/2000/NT\n Supported Video Cards at Time of Release: ATI® RADEON® X1950, HD 2000/3000/4000/5000 series NVIDIA GeForce® 7/8/9/100/200 series",
+    "recommended": "Recommended:\n OS *: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits)*\nProcessor: Intel Core® 2 Duo E6700 2.6 GHz or AMD Athlon 64 X2 6000+ or better\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista® - Windows 7®\nGraphics: GeForce 8800 GT or ATI Radeon HD 4700 or better\nDirectX®: DirectX 9.0\nHard Drive: 8 GB free space\nSound: 5.1 sound card\nSupported Peripherals: Keyboard, mouse, joystick optional (Xbox 360® Controller for Windows recommended)"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits)*\nProcessor: Intel Core® 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista® - Windows 7® \nGraphics: 256 MB DirectX® 9.0–compliant card with Shader Model 3.0 or higher (see supported list)\nDirectX®: DirectX 9.0\nHard Drive: 8 GB free space\nSound: DirectX 9.0 –compliant sound card \nSupported Peripherals: Keyboard, mouse, optional controller\n* This product does not support Windows® 98/ME/2000/NT\n Supported Video Cards at Time of Release: ATI® RADEON® X1950, HD 2000/3000/4000/5000 series NVIDIA GeForce® 7/8/9/100/200 series",
+    "recommended": "Recommended:\n OS *: Windows® XP (32-64 bits) /Windows Vista®(32-64 bits)*\nProcessor: Intel Core® 2 Duo E6700 2.6 GHz or AMD Athlon 64 X2 6000+ or better\nMemory: 1.5 GB Windows® XP / 2 GB Windows Vista® - Windows 7®\nGraphics: GeForce 8800 GT or ATI Radeon HD 4700 or better\nDirectX®: DirectX 9.0\nHard Drive: 8 GB free space\nSound: 5.1 sound card\nSupported Peripherals: Keyboard, mouse, joystick optional (Xbox 360® Controller for Windows recommended)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/33230/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:08.175Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:53.717Z",
+      "page": "Assassin's Creed II"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<uplay>\\savegames\\<用户 ID>\\4\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Ubisoft\\Assassin's Creed 2\\Assassin2.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "No background music",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#No_background_music",
+      "fixed": false
+    },
+    {
+      "title": "!!!Game.Startup.AwaitingFirstOsiConnection!!! error when starting story mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#!!!Game.Startup.AwaitingFirstOsiConnection!!!_error_when_starting_story_mode",
+      "fixed": true
+    },
+    {
+      "title": "Ubisoft Connect runs InstallShield installer from the disc when trying to update",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#Ubisoft_Connect_runs_InstallShield_installer_from_the_disc_when_trying_to_update",
+      "fixed": true
+    },
+    {
+      "title": "How to stop the stuttering and low FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#How_to_stop_the_stuttering_and_low_FPS",
+      "fixed": true
+    },
+    {
+      "title": "Stuttering and/or screen tearing with Vsync on or off",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#Stuttering_and%2For_screen_tearing_with_Vsync_on_or_off",
+      "fixed": true
+    },
+    {
+      "title": "Lights shine through walls and other objects",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#Lights_shine_through_walls_and_other_objects",
+      "fixed": true
+    },
+    {
+      "title": "Game freezes when given the hidden blade",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#Game_freezes_when_given_the_hidden_blade",
+      "fixed": true
+    },
+    {
+      "title": "\"A Ubisoft service is unavailable at the moment\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#%22A_Ubisoft_service_is_unavailable_at_the_moment%22_error",
+      "fixed": true
+    },
+    {
+      "title": "Game hangs and screen flashes repeatedly on launch",
+      "url": "https://www.pcgamingwiki.com/wiki/Assassin's_Creed_II#Game_hangs_and_screen_flashes_repeatedly_on_launch",
+      "fixed": true
+    }
+  ]
+}

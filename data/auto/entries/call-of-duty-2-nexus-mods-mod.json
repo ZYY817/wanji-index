@@ -1,0 +1,15 @@
+{
+  "id": "call-of-duty-2-nexus-mods-mod",
+  "name": "Call of Duty 2 Nexus Mods 专区",
+  "nameEn": "Call of Duty 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "call-of-duty-2",
+  "url": "https://www.nexusmods.com/callofduty2",
+  "note": "Nexus 上的 MOD 专区，共 21 个 MOD",
+  "noteEn": "Nexus Mods hub with 21 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

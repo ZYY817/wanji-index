@@ -1,0 +1,59 @@
+{
+  "id": "source-filmmaker",
+  "slug": "source-filmmaker",
+  "name": {
+    "zh": "Source Filmmaker"
+  },
+  "summary": "Source Filmmaker（SFM）是一款电影制作工具，我们 Valve 用它制作 Source 游戏引擎的内置电影。因为 SFM 使用着和游戏相同的资源，所以游戏中任何存在的东西都可以被用在电影之中，反之亦然。",
+  "summaryEn": "The Source Filmmaker (SFM) is the movie-making tool built and used by us here at Valve to make movies inside the Source game engine.",
+  "genres": [],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1840/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1840,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2012 年 7 月 10 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：\n系统：Windows 7 / Vista（推荐 Windows 7 64 位）\n处理器：3.0 GHz P4，Dual Core 2.0（或更高）或者 AMD64X2（或更高）\n内存：2GB（推荐 4GB）\n图形：NVIDIA GeForce 200 系列显卡或更好，或者 AMD Radeon 3000 系列或更好（首选 NVIDIA GeForce 400 系列或者 AMD Radeon 5000 系列）\n显示器：1366 x 768（推荐 1920 x 1080）\n硬盘：至少 15 GB 硬盘空间\n声音：DirectX 9.0c 兼容 USB 耳麦（推荐）",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 / Vista (Windows 7 64 bit suggested)\nProcessor: 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher)\nMemory: 2GB (4 GB suggested)\nGraphics: NVIDIA GeForce 200 series card or better, or AMD Radeon 3000 series or better (NVIDIA GeForce 400 series or AMD Radeon 5000 series preferred)\nMonitor: 1366 x 768 (1920 x 1080 suggested)\nHard Drive: At least 15 GB of Space\nSound: DirectX 9.0c compatible USB headset with mic (suggested)",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1840/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:42.370Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:35.019Z",
+      "page": "Source Filmmaker"
+    }
+  }
+}

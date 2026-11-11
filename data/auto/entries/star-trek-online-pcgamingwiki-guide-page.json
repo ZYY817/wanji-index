@@ -1,0 +1,15 @@
+{
+  "id": "star-trek-online-pcgamingwiki-guide-page",
+  "name": "Star Trek Online 技术资料页",
+  "nameEn": "Star Trek Online on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "star-trek-online",
+  "url": "https://www.pcgamingwiki.com/wiki/Star_Trek_Online",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

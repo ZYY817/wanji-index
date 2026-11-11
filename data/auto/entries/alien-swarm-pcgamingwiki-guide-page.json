@@ -1,0 +1,15 @@
+{
+  "id": "alien-swarm-pcgamingwiki-guide-page",
+  "name": "Alien Swarm 技术资料页",
+  "nameEn": "Alien Swarm on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "alien-swarm",
+  "url": "https://www.pcgamingwiki.com/wiki/Alien_Swarm",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,156 @@
+{
+  "id": "max-payne-2-the-fall-of-max-payne",
+  "slug": "max-payne-2-the-fall-of-max-payne",
+  "name": {
+    "zh": "Max Payne 2: The Fall of Max Payne"
+  },
+  "summary": "Max Payne 2: The Fall of Max Payne 的遊戲體驗緊張刺激，場面兇殘暴力，卻又有華麗的格鬥與慢動作的槍戰，這些儼然已經成為 Max Payne 系列遊戲的招牌特點。",
+  "summaryEn": "Max Payne 2: The Fall of Max Payne is a violent, film-noir love story.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/12150/",
+      "priceNote": "参考价 ¥ 63.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 12150,
+  "developers": [
+    "Remedy Entertainment"
+  ],
+  "publishers": [
+    "Rockstar Games"
+  ],
+  "releaseDate": "2011 年 1 月 6 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n OS *: Microsoft® Windows® 2000/XP\nProcessor: 1Ghz PIII/Athlon or 1.2Ghz Celeron/Duron processor\nMemory: 256MB RAM\nGraphics: 32MB AGP graphics card with hardware transform & lighting support\nDirectX Version: DirectX 9.0\nHard Drive: 1.5 GB hard drive space\nSound Card: DirectSound compatible sound card\nInput: Keyboard and mouse\nRecommended: \n OS *: Microsoft® Windows® 2000/XP\nProcessor: 1Ghz PIII/Athlon or 1.2Ghz Celeron/Duron processor\nMemory: 512MB RAM\nGraphics: 64MB DirectX 9 compatible AGP graphics card with hardware T&L support\nDirectX Version: DirectX 9.0\nHard Drive: 1.5 GB hard drive space\nSound Card: DirectSound compatible sound card\nInput: Keyboard and mouse",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Microsoft® Windows® 2000/XP\nProcessor: 1Ghz PIII/Athlon or 1.2Ghz Celeron/Duron processor\nMemory: 256MB RAM\nGraphics: 32MB AGP graphics card with hardware transform & lighting support\nDirectX Version: DirectX 9.0\nHard Drive: 1.5 GB hard drive space\nSound Card: DirectSound compatible sound card\nInput: Keyboard and mouse\nRecommended: \n OS *: Microsoft® Windows® 2000/XP\nProcessor: 1Ghz PIII/Athlon or 1.2Ghz Celeron/Duron processor\nMemory: 512MB RAM\nGraphics: 64MB DirectX 9 compatible AGP graphics card with hardware T&L support\nDirectX Version: DirectX 9.0\nHard Drive: 1.5 GB hard drive space\nSound Card: DirectSound compatible sound card\nInput: Keyboard and mouse",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/12150/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:06.861Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:03.389Z",
+      "page": "Max Payne 2: The Fall of Max Payne"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Max Payne 2 Savegames\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\MP2_Init.ras",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Remedy Entertainment\\Max Payne 2\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Application load error 5:0000065434",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Application_load_error_5%3A0000065434",
+      "fixed": true
+    },
+    {
+      "title": "The launcher does not start",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#The_launcher_does_not_start",
+      "fixed": true
+    },
+    {
+      "title": "Error: setFullscreen - creating the device failed: E_FAIL",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Error%3A_setFullscreen_-_creating_the_device_failed%3A_E_FAIL",
+      "fixed": true
+    },
+    {
+      "title": "Exception in engineInit: Unable to load save game \"Files\"",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Exception_in_engineInit%3A_Unable_to_load_save_game_%22Files%22",
+      "fixed": true
+    },
+    {
+      "title": "Error: Exception in startupInit: Directory \\data not found",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Error%3A_Exception_in_startupInit%3A_Directory_%5Cdata_not_found",
+      "fixed": true
+    },
+    {
+      "title": "Game won't launch on modern AMD graphics cards, still shows up in task manager",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Game_won't_launch_on_modern_AMD_graphics_cards%2C_still_shows_up_in_task_manager",
+      "fixed": true
+    },
+    {
+      "title": "Launcher starts, but game won't launch on Nvidia graphics cards, crashes and doesn't show up in task manager",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Launcher_starts%2C_but_game_won't_launch_on_Nvidia_graphics_cards%2C_crashes_and_doesn't_show_up_in_task_manager",
+      "fixed": true
+    },
+    {
+      "title": "Mods don't work",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Mods_don't_work",
+      "fixed": true
+    },
+    {
+      "title": "Mouse hitches and stops oddly",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Mouse_hitches_and_stops_oddly",
+      "fixed": true
+    },
+    {
+      "title": "High frame rate and/or V-sync issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#High_frame_rate_and%2For_V-sync_issues",
+      "fixed": true
+    },
+    {
+      "title": "Reshade/SweetFX doesn't work",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Reshade%2FSweetFX_doesn't_work",
+      "fixed": true
+    },
+    {
+      "title": "Max and/or Mona suddenly run continuously without pressing anything",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Max_and%2For_Mona_suddenly_run_continuously_without_pressing_anything",
+      "fixed": true
+    },
+    {
+      "title": "The player's head is not rendered in the reflection while looking in a mirror",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#The_player's_head_is_not_rendered_in_the_reflection_while_looking_in_a_mirror",
+      "fixed": true
+    },
+    {
+      "title": "Missing main display resolutions in launcher",
+      "url": "https://www.pcgamingwiki.com/wiki/Max_Payne_2%3A_The_Fall_of_Max_Payne#Missing_main_display_resolutions_in_launcher",
+      "fixed": true
+    }
+  ]
+}

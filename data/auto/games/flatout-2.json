@@ -1,0 +1,103 @@
+{
+  "id": "flatout-2",
+  "slug": "flatout-2",
+  "name": {
+    "zh": "FlatOut 2"
+  },
+  "summary": "Experience the drive of your life as you throw yourself around on and off the track causing fences to shatter, tyre walls explode, water tan…",
+  "summaryEn": "Experience the drive of your life as you throw yourself around on and off the track causing fences to shatter, tyre walls explode, water tan…",
+  "genres": [
+    "racing"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2990/",
+      "priceNote": "参考价 ¥ 36.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2990,
+  "developers": [
+    "Bugbear Entertainment",
+    "ZOOM Platform Media",
+    "Jordan Freeman Group"
+  ],
+  "publishers": [
+    "Strategy First"
+  ],
+  "releaseDate": "2006 年 12 月 21 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置：Windows XP/2000 XP SP2 / 2000 SP4，256 MB 内存，64 MB* 显卡，2.0 GHz Pentium® 4 或 AMD® 2000+ 处理器，DirectX 兼容声卡，3.5 GB 可用硬盘空间，DirectX 9.0c，需要 TCP/IP 才能进行 LAN 游戏，要求宽带连接最少 512kbs\n FlatOut 2 支持使用游戏手柄。 建议使用最少有 8 个按钮的游戏手柄（以便支持所有可配置游戏命令）。\n * FlatOut 2 支持一下芯片组：nVidia Geforce FX 07-5-6 系列、ATI Radeon 9600 Pro/XT 或更高、ATI Radeon X200 或更高。 不支持板载/集成显卡和笔记本电脑。",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Windows XP/2000 XP SP2 / 2000 SP4, 256 MB RAM, 64 MB video card, 2.0 GHz Pentium® 4 or AMD® 2000+ processor, DirectX compatible sound card, 3.5 GB free hard drive space, DirectX 9.0c, TCP/IP required for LAN play, 512kbs minimum, Broadband connection required",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2990/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:29.045Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:37.517Z",
+      "page": "FlatOut 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Savegame\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\zoom_fo2.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Savegame\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Steam version fails to start",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut_2#Steam_version_fails_to_start",
+      "fixed": true
+    },
+    {
+      "title": "Resolution resets to 4:3 or other graphics issues",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut_2#Resolution_resets_to_4%3A3_or_other_graphics_issues",
+      "fixed": true
+    },
+    {
+      "title": "Juddery motion despite having a consistent frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut_2#Juddery_motion_despite_having_a_consistent_frame_rate",
+      "fixed": true
+    }
+  ]
+}

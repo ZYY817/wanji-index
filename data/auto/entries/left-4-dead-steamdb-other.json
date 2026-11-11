@@ -1,0 +1,15 @@
+{
+  "id": "left-4-dead-steamdb-other",
+  "name": "Left 4 Dead 价格与版本史",
+  "nameEn": "Left 4 Dead on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "left-4-dead",
+  "url": "https://steamdb.info/app/500/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

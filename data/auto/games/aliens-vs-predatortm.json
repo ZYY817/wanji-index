@@ -1,0 +1,96 @@
+{
+  "id": "aliens-vs-predatortm",
+  "slug": "aliens-vs-predatortm",
+  "name": {
+    "zh": "Aliens vs. Predator"
+  },
+  "summary": "Survive, hunt and prey in the deadly jungles and swamps in distinctly new and thrilling first person gameplay.",
+  "summaryEn": "Survive, hunt and prey in the deadly jungles and swamps in distinctly new and thrilling first person gameplay.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/10680/",
+      "priceNote": "参考价 ¥ 50.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 10680,
+  "developers": [
+    "Rebellion"
+  ],
+  "publishers": [
+    "SEGA"
+  ],
+  "releaseDate": "2010 年 2 月 16 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP/Vista\nProcessor: 3.4 GHz Intel Pentium 4 or equivalent processor\nMemory: 1 GB System RAM (XP)/ 2 GB System RAM (Vista)\nGraphics: DirectX 9.0c compliant video card with 128 MB RAM (NVIDIA 7900 or better, ATI X1800 or better)\nHard Drive: 16 GB free hard drive space\nDirectX®: DirectX 9.0c\nMicrosoft no longer supports Windows 10 or older versions",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP/Vista\nProcessor: 3.4 GHz Intel Pentium 4 or equivalent processor\nMemory: 1 GB System RAM (XP)/ 2 GB System RAM (Vista)\nGraphics: DirectX 9.0c compliant video card with 128 MB RAM (NVIDIA 7900 or better, ATI X1800 or better)\nHard Drive: 16 GB free hard drive space\nDirectX®: DirectX 9.0c\nMicrosoft no longer supports Windows 10 or older versions",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/10680/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Aliens_vs._Predator_(2010)"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:01.580Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:47.895Z",
+      "page": "Aliens vs. Predator (2010)"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\AliensVsPredator\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\AliensVsPredator\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game crashes after video cinematics",
+      "url": "https://www.pcgamingwiki.com/wiki/Aliens_vs._Predator_(2010)#Game_crashes_after_video_cinematics",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Aliens_vs._Predator_(2010)#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "No servers available",
+      "url": "https://www.pcgamingwiki.com/wiki/Aliens_vs._Predator_(2010)#No_servers_available",
+      "fixed": true
+    }
+  ]
+}

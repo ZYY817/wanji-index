@@ -1,0 +1,63 @@
+{
+  "id": "grand-theft-auto-iv-the-complete-edition",
+  "slug": "grand-theft-auto-iv-the-complete-edition",
+  "name": {
+    "zh": "Grand Theft Auto IV: The Complete Edition"
+  },
+  "summary": "尼可．贝利（Niko Bellic）、钱宁．克雷比兹（Johnny Klebitz） 以及刘易斯．罗培兹（Luis Lopez）都有一个共通点，那就是他们都住在美国最糟糕的城市里。在利伯维尔这个金钱和地位至上的城市里，现实与梦想的差距甚远。",
+  "summaryEn": "Niko Bellic, Johnny Klebitz and Luis Lopez all have one thing in common - they live in the worst city in America.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/12210/",
+      "priceNote": "参考价 ¥ 29.70",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 12210,
+  "developers": [
+    "Rockstar North",
+    "Rockstar Toronto"
+  ],
+  "publishers": [
+    "Rockstar Games"
+  ],
+  "releaseDate": "2020 年 3 月 24 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "系统需求\n操作系统： Windows 10 (64-bit) \n处理器：Intel Core 2 Duo 1.8GHz、AMD Athlon X2 64 2.4GHz\n内存：1.5GB \n显示适配器：256MB Nvidia 7900 / 256MB ATI X1900\nDirectX 版本：DirectX 9.0c 兼容卡\n硬盘空间：22GB 可用硬盘空间\n声卡：5.1 声道声卡",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS: Windows 10 (64-bit) \nProcessor: Intel Core 2 Duo 1.8GHz, AMD Athlon X2 64 2.4GHz \nMemory: 1.5GB \nGraphics: 256MB Nvidia 7900 / 256MB ATI X1900 \nDirectX Version: DirectX 9.0c Compliant Card \nHard Drive: 22GB of Hard Disc Space \nSound Card: 5.1 Channel Audio Card",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/12210/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:13.787Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:40.442Z",
+      "page": null
+    }
+  }
+}

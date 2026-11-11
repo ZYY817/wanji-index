@@ -1,0 +1,178 @@
+{
+  "id": "f-e-a-r",
+  "slug": "f-e-a-r",
+  "name": {
+    "zh": "F.E.A.R."
+  },
+  "summary": "体验原版 F.E.A.R. 与《极度恐慌：撤退点》和《极度恐慌：珀尔修斯指令》。",
+  "summaryEn": "Experience the original F.E.A.R. along with F.E.A.R. Extraction Point and F.E.A.R. Perseus Mandate.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/21090/",
+      "priceNote": "参考价 ¥ 68.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 21090,
+  "developers": [
+    "Monolith Productions, Inc.",
+    "Timegate"
+  ],
+  "publishers": [
+    "Warner Bros. Games",
+    "Warner Bros. Interactive Entertainment"
+  ],
+  "releaseDate": "2010 年 5 月 21 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n Operating System: Windows® XP, x64 or 2000 with latest service pack installed\nProcessor: Pentium® 4 1.7 GHz or equivalent processor\nMemory: 512 MB of RAM or more\nGraphics: 64 MB GeForce™ 4 Ti or Radeon® 9000 video card; Monitor that can display in 4:3 aspect ratio\nDirectX®: 9.0c (August Edition) or higher\nHard Drive: 17 GB free Hard Drive Space for installation; Additional hard drive space for a swap file and saved game files\nSound: 16-bit DirectX® 9.0 compliant sound card with support for EAX™ 2.0\nMultiplayer Requirements: Broadband or LAN connection for multiplayer games",
+    "recommended": "Recommended:\n Processor: Pentium® 4 3.0 GHz or equivalent processor\nMemory: 1 GB RAM\nGraphics: A 256 MB Radeon® 9800 Pro or GeForce™ 6600 or equivalent supported\nDirectX®: DirectX® 9 compliant video card with hardware T&L and pixel shader 2.0 support\nSound: Sound Blaster® X-Fi™ series sound card"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n Operating System: Windows® XP, x64 or 2000 with latest service pack installed\nProcessor: Pentium® 4 1.7 GHz or equivalent processor\nMemory: 512 MB of RAM or more\nGraphics: 64 MB GeForce™ 4 Ti or Radeon® 9000 video card; Monitor that can display in 4:3 aspect ratio\nDirectX®: 9.0c (August Edition) or higher\nHard Drive: 17 GB free Hard Drive Space for installation; Additional hard drive space for a swap file and saved game files\nSound: 16-bit DirectX® 9.0 compliant sound card with support for EAX™ 2.0\nMultiplayer Requirements: Broadband or LAN connection for multiplayer games",
+    "recommended": "Recommended:\n Processor: Pentium® 4 3.0 GHz or equivalent processor\nMemory: 1 GB RAM\nGraphics: A 256 MB Radeon® 9800 Pro or GeForce™ 6600 or equivalent supported\nDirectX®: DirectX® 9 compliant video card with hardware T&L and pixel shader 2.0 support\nSound: Sound Blaster® X-Fi™ series sound card"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/21090/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R."
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:33.086Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:34.700Z",
+      "page": "F.E.A.R."
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\Monolith Productions\\FEAR\\Save\\Profile000\\SinglePlayer{{note",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\TimeGate Studios\\FEARXP\\Save\\Profile000\\SinglePlayer{{note",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\TimeGate Studios\\FEARXP2\\Save\\Profile000\\SinglePlayer{{note",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\Monolith Productions\\FEAR\\settings.cfg{{note",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\TimeGate Studios\\FEARXP\\settings.cfg{{note",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\TimeGate Studios\\FEARXP2\\settings.cfg{{note",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Long save times",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Long_save_times",
+      "fixed": false
+    },
+    {
+      "title": "Game crashes after checkpoints and level loads",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Game_crashes_after_checkpoints_and_level_loads",
+      "fixed": false
+    },
+    {
+      "title": "Low frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Low_frame_rate",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes when loading a map in LAN as a Listen server",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Game_crashes_when_loading_a_map_in_LAN_as_a_Listen_server",
+      "fixed": true
+    },
+    {
+      "title": "\"Disconnected from server\" when playing singleplayer",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#%22Disconnected_from_server%22_when_playing_singleplayer",
+      "fixed": true
+    },
+    {
+      "title": "Slow level loading",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Slow_level_loading",
+      "fixed": true
+    },
+    {
+      "title": "Levels don't load",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Levels_don't_load",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on ATI/AMD graphics cards",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Black_screen_on_ATI%2FAMD_graphics_cards",
+      "fixed": true
+    },
+    {
+      "title": "Flickering textures on modern systems",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Flickering_textures_on_modern_systems",
+      "fixed": true
+    },
+    {
+      "title": "Broken shadow rendering on Nvidia graphics cards",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Broken_shadow_rendering_on_Nvidia_graphics_cards",
+      "fixed": true
+    },
+    {
+      "title": "No dialogue playing",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#No_dialogue_playing",
+      "fixed": true
+    },
+    {
+      "title": "Missing radio voices when using hardware audio mixing",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Missing_radio_voices_when_using_hardware_audio_mixing",
+      "fixed": true
+    },
+    {
+      "title": "No gunshot sound",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#No_gunshot_sound",
+      "fixed": true
+    },
+    {
+      "title": "Key mappings are not assigned",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Key_mappings_are_not_assigned",
+      "fixed": true
+    },
+    {
+      "title": "Game starts up on Secondary Monitor",
+      "url": "https://www.pcgamingwiki.com/wiki/F.E.A.R.#Game_starts_up_on_Secondary_Monitor",
+      "fixed": true
+    }
+  ]
+}

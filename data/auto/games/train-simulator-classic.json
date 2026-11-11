@@ -1,0 +1,73 @@
+{
+  "id": "train-simulator-classic",
+  "slug": "train-simulator-classic",
+  "name": {
+    "zh": "Train Simulator Classic"
+  },
+  "summary": "15 余年来的终极铁路爱好！从经典的蒸汽机车到现代的高速列车与重载货运列车，以及世界各地的铁路线路，《经典模拟列车》是铁道迷为同好们制作的模拟游戏。",
+  "summaryEn": "The ultimate railway hobby for more than 15 years! From historic steam locomotives to modern high-speed and heavy freight trains, and routes…",
+  "genres": [
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/24010/",
+      "priceNote": "参考价 ¥ 21.60",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 24010,
+  "developers": [
+    "Dovetail Games"
+  ],
+  "publishers": [
+    "Dovetail Games - Trains",
+    "Dovetail Games"
+  ],
+  "releaseDate": "2015 年 9 月 17 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "32位系统最低配置：\n操作系统：要求32位Windows 7 Service Pack 1，8.1或10（不支持其他操作系统版本和类型）\n处理器：英特尔Core-i3 4330 3.50 GHz双核或AMD A8 6600K 3.90 GHz四核或更高\n内存：4 GB 内存\n显卡：NVIDIA GeForce GTX 750 Ti或AMD Radeon R9显卡（1 GB VRAM）或更高\nDirectX：9.0c\n网络：宽带连接（可能会产生额外费用）\n存储器：40 GB或更多可用空间（附加程序将需要更多空间）\n声卡：DirectX兼容音频驱动\n其他：需要鼠标和键盘或Xbox手柄\n拥有上述系统配置（包括英特尔和集成显卡）的笔记本电脑、手机或低功率设备或许也可以运行，但是不受支持。可能要求对芯片集，显卡和音频设备驱动进行升级。欲了解更多关于《模拟列车》64位系统推荐配置的信息，请参阅《模拟列车2019用户指南》。",
+    "recommended": "32位系统推荐配置：\n操作系统：要求32位或64位Windows 7 Service Pack 1，8.1或10（不支持其他操作系统版本和类型）\n处理器： 英特尔Core-i5 4690 3.50 GHz四核或AMD Ryzen 7 1700 3.80 GHz四核或更高\n内存：4 GB 内存（32位Windows系统最高配置）/16 GB或更高（64位Windows系统）\n显卡：NVIDIA GeForce GTX 970或 AMD Radeon RX 480显卡（4 GB VRAM）或更高\nDirectX：9.0c\n网络：宽带连接（可能会产生额外费用）\n存储器：推荐40 GB或可用空间更大的高效能固态硬盘（附加程序将需要更多空间）\n声卡：DirectX兼容音频驱动\n其他：需要鼠标和键盘或Xbox手柄\n拥有上述系统配置（包括英特尔和集成显卡）的笔记本电脑、手机或低功率设备或许也可以运行，但是不受支持。可能要求对芯片集，显卡和音频设备驱动进行升级。欲了解更多关于《模拟列车》64位系统推荐配置的信息，请参阅《模拟列车2019用户指南》。"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum\nOS: 32-bit Windows 10*\nProcessor: Intel Core-i3 4330 3.50 GHz Dual Core or AMD A8 6600K 3.90 GHz Quad Core or Better\nMemory: 4 GB RAM\nGraphics: NVIDIA GeForce GTX 750 Ti or AMD Radeon R9 Graphics with 1 GB Dedicated VRAM or Better\nDirectX®: 9.0c\nNetwork: Broadband Connection (May incur additional costs for use)\nStorage: 40 GB or more available space (Additional Add-Ons will require more)\nSound Card: DirectX Compatible Audio Device\nAdditional Notes: Requires mouse and keyboard or Xbox Controller\nLaptop, Notebook, Mobile or Low Power versions of the above specifications (including Intel or Integrated Graphics) may work but are not supported.\nUpdates to Chipset, Graphics and Audio Device Drivers may be required.\n*The Steam Client only supports Windows 10 and later.",
+    "recommended": "Recommended\nOS: 64-bit Windows 10, Windows 11 or later* \nProcessor: Intel Core-i5 4690 3.50 GHz Quad Core or AMD Ryzen 7 1700 3.80 GHz Quad Core or Better\nMemory: 16 GB or Better\nGraphics: NVIDIA GeForce GTX 970 or AMD Radeon RX 480 with 4 GB Dedicated VRAM or Better\nDirectX®: 9.0c\nNetwork: Broadband Connection (May incur additional costs for use)\nStorage: 40 GB or more available space (Additional Add-Ons will require more)\nSound Card: DirectX Compatible Audio Device\nAdditional Notes: Requires mouse and keyboard or Xbox Controller\nLaptop, Notebook, Mobile or Low Power versions of the above specifications (including Intel or Integrated Graphics) may work but are not supported. \nUpdates to Chipset, Graphics and Audio Device Drivers may be required. \n*The Steam Client only supports Windows 10 and later."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/24010/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Train_Simulator"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:47.257Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:56:59.980Z",
+      "page": "Train Simulator"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Content\\PlayerProfiles.bin",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

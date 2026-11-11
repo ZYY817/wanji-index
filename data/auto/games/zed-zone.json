@@ -1,0 +1,65 @@
+{
+  "id": "zed-zone",
+  "slug": "zed-zone",
+  "name": {
+    "zh": "隔离区-丧尸末日生存",
+    "en": "ZED ZONE"
+  },
+  "summary": "大灾变已经到来，执行任务的你不幸坠机被困在隔离区，这里到处都是丧尸和变异怪物，想要逃离这里，你必须努力搜集原料，升级技能，建造避难所，击败尸潮和神秘的机甲，最终寻得一线生机。",
+  "summaryEn": "A great catastrophe has struck. While on a mission, your aircraft crashes and you are trapped in the Zed Zone.",
+  "genres": [
+    "action",
+    "indie",
+    "rpg",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1211600/",
+      "priceNote": "参考价 ¥ 28.80",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1211600,
+  "developers": [
+    "Leven Liu"
+  ],
+  "publishers": [
+    "INDIECN"
+  ],
+  "releaseDate": "2026 年 11 月 5 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Win XP\n处理器: INTEL i3/ AMD R3\n内存: 2 GB RAM\n显卡: Nvidia GTX 660\nDirectX 版本: 10\n存储空间: 需要 300 MB 可用空间",
+    "recommended": "推荐配置:\n操作系统: Win 10\n处理器: INTEL i7/ AMD R7\n内存: 8 GB RAM\n显卡: Nvidia GTX 1060\nDirectX 版本: 11\n存储空间: 需要 500 MB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Win XP\nProcessor: INTEL i3/ AMD R3\nMemory: 2 GB RAM\nGraphics: Nvidia GTX 660\nDirectX: Version 10\nStorage: 300 MB available space",
+    "recommended": "Recommended:\nOS: Win 10\nProcessor: INTEL i7/ AMD R7\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 1060\nDirectX: Version 11\nStorage: 500 MB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1211600/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:37.902Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:57:09.931Z",
+      "page": "ZED ZONE"
+    }
+  }
+}

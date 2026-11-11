@@ -1,0 +1,15 @@
+{
+  "id": "zed-zone-steam-mod",
+  "name": "隔离区-丧尸末日生存 创意工坊",
+  "nameEn": "ZED ZONE Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "zed-zone",
+  "url": "https://steamcommunity.com/app/1211600/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

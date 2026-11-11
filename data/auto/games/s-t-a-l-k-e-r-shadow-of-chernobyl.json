@@ -1,0 +1,127 @@
+{
+  "id": "s-t-a-l-k-e-r-shadow-of-chernobyl",
+  "slug": "s-t-a-l-k-e-r-shadow-of-chernobyl",
+  "name": {
+    "zh": "S.T.A.L.K.E.R.: Shadow of Chernobyl"
+  },
+  "summary": "《潜行者：切尔诺贝利的阴影》讲述了一个关于在封锁区内挣扎求生的故事。封锁区是一个异常凶险的地方，辐射、异常现象、致命生物，乃至别有用心的其他潜行者都将成为令人畏惧的噩梦。",
+  "summaryEn": "S.T.A.L.K.E.R.: Shadow of Chernobyl tells a story about survival in the Zone – a very dangerous place, where you fear not only the radiation…",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/4500/",
+      "priceNote": "参考价 ¥ 88.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 4500,
+  "developers": [
+    "GSC Game World"
+  ],
+  "publishers": [
+    "GSC Game World"
+  ],
+  "releaseDate": "2007 年 3 月 20 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "最低配置：Microsoft® Windows® XP SP2\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\Microsoft® Windows® 2000 SP4, Intel Pentium 4 2 Ghz/AMD XP 2200+, 512 MB RAM, 10 GB 可用硬盘空间， 128 MB DirectX® 9c 显卡/ nVIDIA® GeForce™ 5700/ATI Radeon® 9600, DirectX® 9 兼容声卡, LAN/ Internet 连接（多人游戏），鼠标、键盘。\n建议： Intel Core 2 Duo E6400/AMD Athlon 64 X2 4200+, 1 GB RAM 或更好, 256 MB DirectX® 9c 显卡/ nVIDIA® GeForce™ 7900/ ATI Radeon® X1850",
+    "recommended": "Supported OS: Microsoft® Windows® XP/Vista (SP1) \nProcessor: Intel Core 2 Duo E6400 / AMD 64 X2 4200+ \nGraphics: 256 MB DirectX® 9.0c compatible card* / nVIDIA® GeForce™ 8800 GT / ATI Radeon® HD 2900 XT \nMemory: 2 GB RAM \nSound: DirectX® 9.0 compatible sound card \nHard Drive: 10 GB free hard disc space"
+  },
+  "requirementsEn": {
+    "minimum": "Supported OS: Microsoft® Windows® XP(Service Pack 2)/Microsoft® Windows® 2000 SP4 \nProcessor: Intel Pentium 4 2.0 Ghz / AMD XP 2200+ \nGraphics: 128 MB DirectX® 8.0 compatible card / nVIDIA® GeForce™ 5700 / ATI Radeon® 9600 \nMemory: 512 MB RAM \nSound: DirectX® 9.0 compatible sound card \nHard Drive: 6 GB free hard disc space",
+    "recommended": "Supported OS: Microsoft® Windows® XP/Vista (SP1) \nProcessor: Intel Core 2 Duo E6400 / AMD 64 X2 4200+ \nGraphics: 256 MB DirectX® 9.0c compatible card* / nVIDIA® GeForce™ 8800 GT / ATI Radeon® HD 2900 XT \nMemory: 2 GB RAM \nSound: DirectX® 9.0 compatible sound card \nHard Drive: 10 GB free hard disc space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/4500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:04.065Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:32.184Z",
+      "page": "S.T.A.L.K.E.R.: Shadow of Chernobyl"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\stalker-shoc\\savedgames\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%PUBLIC%\\Documents\\stalker-shoc\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "\"Unable to connect to master server\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#%22Unable_to_connect_to_master_server%22_error",
+      "fixed": true
+    },
+    {
+      "title": "Aim down sights isn't toggeable",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Aim_down_sights_isn't_toggeable",
+      "fixed": true
+    },
+    {
+      "title": "Mouse delay and bad frametimes",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Mouse_delay_and_bad_frametimes",
+      "fixed": true
+    },
+    {
+      "title": "Key bindings are lost every game restart",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Key_bindings_are_lost_every_game_restart",
+      "fixed": true
+    },
+    {
+      "title": "Glitchy shadows when using widescreen resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Glitchy_shadows_when_using_widescreen_resolutions",
+      "fixed": true
+    },
+    {
+      "title": "Stretched scopes when using widescreen resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Stretched_scopes_when_using_widescreen_resolutions",
+      "fixed": true
+    },
+    {
+      "title": "Steam version does not launch on Windows 10/11, BugTrap reports error at 0023:000DB95E",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Steam_version_does_not_launch_on_Windows_10%2F11%2C_BugTrap_reports_error_at_0023%3A000DB95E",
+      "fixed": true
+    },
+    {
+      "title": "Unofficial v1.0008 Patch crashing",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Unofficial_v1.0008_Patch_crashing",
+      "fixed": true
+    },
+    {
+      "title": "Multimedia controls don't work",
+      "url": "https://www.pcgamingwiki.com/wiki/S.T.A.L.K.E.R.%3A_Shadow_of_Chernobyl#Multimedia_controls_don't_work",
+      "fixed": true
+    }
+  ]
+}

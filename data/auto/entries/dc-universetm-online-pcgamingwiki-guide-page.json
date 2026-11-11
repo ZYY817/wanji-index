@@ -1,0 +1,15 @@
+{
+  "id": "dc-universetm-online-pcgamingwiki-guide-page",
+  "name": "DC Universe Online 技术资料页",
+  "nameEn": "DC Universe Online on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "dc-universetm-online",
+  "url": "https://www.pcgamingwiki.com/wiki/DC_Universe_Online",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

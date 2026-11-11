@@ -1,0 +1,77 @@
+{
+  "id": "audiosurf",
+  "slug": "audiosurf",
+  "name": {
+    "zh": "AudioSurf"
+  },
+  "summary": "Ride your music. Audiosurf is a music-adapting puzzle racer where you use your own music to create your own experience.",
+  "summaryEn": "Ride your music. Audiosurf is a music-adapting puzzle racer where you use your own music to create your own experience.",
+  "genres": [
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/12900/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 12900,
+  "developers": [
+    "Dylan Fitterer"
+  ],
+  "publishers": [],
+  "releaseDate": "2008 年 2 月 15 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：\n操作系统：Microsoft® Windows® XP/Vista\n处理器：1.6 GHz 英特尔® 奔腾® 4 \n内存：512 MB 内存\n显卡：32 MB 英伟达 GeForce® 2（建议支持 Pixel Shader 3.0）\nDirectX 版本：DirectX® 9.0 或更高\n声卡：DirectX® 9.0c 兼容声卡",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Microsoft® Windows® XP/Vista\nProcessor: 1.6 GHz Intel® Pentium® 4 \nMemory: 512 MB RAM \nGraphics: 32 MB NVIDIA GeForce® 2 (support for Pixel Shader 3.0 recommended)\nDirectX Version: DirectX® 9.0 or higher\nSound: DirectX® 9.0c-compatible sound card",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/12900/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Audiosurf"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:17.284Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:00.131Z",
+      "page": "Audiosurf"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\config.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game does not recognize QuickTime being installed",
+      "url": "https://www.pcgamingwiki.com/wiki/Audiosurf#Game_does_not_recognize_QuickTime_being_installed",
+      "fixed": true
+    }
+  ]
+}

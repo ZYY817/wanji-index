@@ -1,0 +1,15 @@
+{
+  "id": "two-worlds-epic-edition-pcgamingwiki-guide-page",
+  "name": "Two Worlds Epic Edition 技术资料页",
+  "nameEn": "Two Worlds Epic Edition on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "two-worlds-epic-edition",
+  "url": "https://www.pcgamingwiki.com/wiki/Two_Worlds",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

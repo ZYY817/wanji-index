@@ -1,0 +1,106 @@
+{
+  "id": "quake-iii-arena",
+  "slug": "quake-iii-arena",
+  "name": {
+    "zh": "Quake III Arena"
+  },
+  "summary": "古往今来的最强勇者们应召参战，为一个古老的外星种族带来娱乐。这款快节奏的第一人称多人射击游戏需要玩家掌握各种枪械和道具，与无情的对手作战，争夺荣誉。",
+  "summaryEn": "The greatest warriors of all time and space have been summoned to battle for the amusement of an ancient alien race.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2200/",
+      "priceNote": "参考价 ¥ 62.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2200,
+  "developers": [
+    "id Software"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2007 年 8 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "硬件3D加速并完全支持 OpenGL® ，Pentium® 233 Mhz MMX®处理器与 8 MB 显卡，或 Pentium II 266 Mhz 处理器与 4 MB 显卡，或 AMD® 350 Mhz K6®-2 处理器与 4 MB 显卡，64 MB 内存，100%兼容 Windows® XP/Vista 的计算机系统（包括兼容的32位显卡、声卡和输入设备驱动），25 MB 未压缩的硬盘空间（最小化安装）与为 Windows 交换文件提供 45 MB 硬盘空间，100% 兼容 DirectX 3.0 或更高的声卡，100% 兼容 Microsoft 的鼠标驱动，控制杆（可选）",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "3-D Hardware Accelerator with full OpenGL® support, Pentium® 233 Mhz MMX®processor with 8 MB Video Card or Pentium II 266 Mhz processor with 4 MB Video Card, or AMD® 350 Mhz K6®-2 processor with 4 MB Video Card, 64 MB RAM, a 100% Windows® XP/Vista compatible computer system (including compatible 32-bit drivers for video card, sound card and input devices), 25 MB of uncompressed hard disk space for game files (Minimum Install), plus 45 MB for the Windows swap file, 100% DirectX 3.0 or higher compatible sound card, 100% Microsoft-compatible mouse and driver, joystick (optional)",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2200/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:56.178Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:17.704Z",
+      "page": "Quake III Arena"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\baseq3\\q3config.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\baseq3\\q3config.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "The game crashes on exit (Steam)",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena#The_game_crashes_on_exit_(Steam)",
+      "fixed": true
+    },
+    {
+      "title": "Random FPS drops",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena#Random_FPS_drops",
+      "fixed": true
+    },
+    {
+      "title": "Invalid CD key",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena#Invalid_CD_key",
+      "fixed": true
+    },
+    {
+      "title": "Brightness issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena#Brightness_issues",
+      "fixed": true
+    },
+    {
+      "title": "View bob",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_III_Arena#View_bob",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "kings-bounty-armored-princess",
+  "slug": "kings-bounty-armored-princess",
+  "name": {
+    "zh": "国王的恩赐：戎装公主",
+    "en": "King's Bounty: Armored Princess"
+  },
+  "summary": "《King’s Bounty: Armored Princess》在《The Legend》的基础上进一步拓展经典玩法，带来更深度的回合制战术、更庞大的手工打造世界，以及全新机制，改变你对战斗与成长的理解与策略。",
+  "summaryEn": "King’s Bounty: Armored Princess builds on the foundation of The Legend, expanding the classic formula with deeper turn-based tactics, a huge…",
+  "genres": [
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3170/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3170,
+  "developers": [
+    "Katauri Interactive"
+  ],
+  "publishers": [
+    "Fulqrum Publishing"
+  ],
+  "releaseDate": "2009 年 11 月 19 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置：\n操作系统：Windows XP/Vista\n处理器：2.6GHz\n内存：1GB\n图形显卡：nVidia GeForce 6600 带有 128 MB 显存或同等 ATI 显卡\n硬盘：5.5 GB 可用空间\n声卡：DirectX-兼容声卡",
+    "recommended": "推荐配置：\n操作系统：Windows XP/Vista \n处理器：3 GHz\n内存：2 GB\n图形显卡：nVidia GeForce 7950GT 带有 512 MB 显存或同等 ATI 显卡\n硬盘：5.5 GB 可用空间\n声卡：DirectX-兼容声卡"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows XP/Vista\nProcessor: 2.6GHz\nMemory: 1GB\nGraphics: nVidia GeForce 6600 with 128 MB or equivalent ATI\nHard Drive: 5.5 GB of free space\nSound: DirectX-compatible soundcard",
+    "recommended": "Recommended:\n OS *: Windows XP/Vista \nProcessor: 3 GHz\nMemory: 2 GB\nGraphics: nVidia GeForce 7950GT with 512 MB or equivalent ATI\nHard Drive: 5.5 GB of free space\nSound: DirectX-compatible soundcard"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3170/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/King's_Bounty%3A_Armored_Princess"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:39.567Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:53.374Z",
+      "page": "King's Bounty: Armored Princess"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Kings Bounty Princess\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Kings Bounty Princess\\game.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

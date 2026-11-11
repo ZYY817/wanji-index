@@ -1,0 +1,151 @@
+{
+  "id": "fallout-3",
+  "slug": "fallout-3",
+  "name": {
+    "zh": "Fallout 3"
+  },
+  "summary": "Vault-Tec engineers have worked around the clock on an interactive reproduction of Wasteland life for you to enjoy from the comfort of your …",
+  "summaryEn": "Vault-Tec engineers have worked around the clock on an interactive reproduction of Wasteland life for you to enjoy from the comfort of your …",
+  "genres": [
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/22300/",
+      "priceNote": "参考价 ¥ 41.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 22300,
+  "developers": [
+    "Bethesda Game Studios"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2008 年 10 月 28 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum: \n Operating system: Windows XP/Vista \nProcessor: 2.4 Ghz Intel Pentium 4 or equivalent processor \nMemory: 1 GB (XP)/ 2 GB (Vista) \nHard disk space: 7 GB \nVideo: Direct X 9.0c compliant video card with 256MB RAM (NVIDIA 6800 or better/ATI X850 or better) \nSound: DirectX®: 9.0c \nController support: Xbox 360 controller \nOther Requirements: Online play requires log-in to Games For Windows - Live \nSupported Video Card Chipsets: \n NVIDIA GeForce 200 series, Geforce 9800 series, Geforce 9600 series, Geforce 8800 series, Geforce 8600 series, Geforce 8500 series, Geforce 8400 series, Geforce 7900 series, Geforce 7800 series, Geforce 7600 series, Geforce 7300 series, GeForce 6800 series \nATI HD 4800 series, HD 4600 series, HD 3800 series, HD 3600 series, HD 3400 series, HD 2900 series, HD 2600 series, HD 2400 series, X1900 series, X1800 series, X1600 series, X1300 series, X850 series",
+    "recommended": "Recommended: \n Operating system: Windows XP/Vista \nProcessor: Intel Core 2 Duo processor \nMemory: 2 GB System RAM \nHard disk space: 7 GB \nVideo: Direct X 9.0c compliant video card with 512MB RAM (NVIDIA 8800 series, ATI 3800 series) \nSound: DirectX®: 9.0c \nController support: Xbox 360 controller"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n Operating system: Windows XP/Vista \nProcessor: 2.4 Ghz Intel Pentium 4 or equivalent processor \nMemory: 1 GB (XP)/ 2 GB (Vista) \nHard disk space: 7 GB \nVideo: Direct X 9.0c compliant video card with 256MB RAM (NVIDIA 6800 or better/ATI X850 or better) \nSound: DirectX®: 9.0c \nController support: Xbox 360 controller \nOther Requirements: Online play requires log-in to Games For Windows - Live \nSupported Video Card Chipsets: \n NVIDIA GeForce 200 series, Geforce 9800 series, Geforce 9600 series, Geforce 8800 series, Geforce 8600 series, Geforce 8500 series, Geforce 8400 series, Geforce 7900 series, Geforce 7800 series, Geforce 7600 series, Geforce 7300 series, GeForce 6800 series \nATI HD 4800 series, HD 4600 series, HD 3800 series, HD 3600 series, HD 3400 series, HD 2900 series, HD 2600 series, HD 2400 series, X1900 series, X1800 series, X1600 series, X1300 series, X850 series",
+    "recommended": "Recommended: \n Operating system: Windows XP/Vista \nProcessor: Intel Core 2 Duo processor \nMemory: 2 GB System RAM \nHard disk space: 7 GB \nVideo: Direct X 9.0c compliant video card with 512MB RAM (NVIDIA 8800 series, ATI 3800 series) \nSound: DirectX®: 9.0c \nController support: Xbox 360 controller"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/22300/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:40.153Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:36.085Z",
+      "page": "Fallout 3"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Fallout3\\Saves\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Fallout3\\*.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Drop button & functionality stops working",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Drop_button_%26_functionality_stops_working",
+      "fixed": false
+    },
+    {
+      "title": "Microsoft Store game download is unusually big",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Microsoft_Store_game_download_is_unusually_big",
+      "fixed": false
+    },
+    {
+      "title": "Game crashes randomly",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_crashes_randomly",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes on start-up",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_crashes_on_start-up",
+      "fixed": true
+    },
+    {
+      "title": "Crash when starting new game or loading save",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Crash_when_starting_new_game_or_loading_save",
+      "fixed": true
+    },
+    {
+      "title": "Game keeps minimizing",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_keeps_minimizing",
+      "fixed": true
+    },
+    {
+      "title": "Certain non-conversation voices, such as museum exhibits, random speech and holotapes are too quiet",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Certain_non-conversation_voices%2C_such_as_museum_exhibits%2C_random_speech_and_holotapes_are_too_quiet",
+      "fixed": true
+    },
+    {
+      "title": "Pip-Boy radio skipping or stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Pip-Boy_radio_skipping_or_stuttering",
+      "fixed": true
+    },
+    {
+      "title": "Crash when leaving Rivet City marketplace",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Crash_when_leaving_Rivet_City_marketplace",
+      "fixed": true
+    },
+    {
+      "title": "Game hangs on closing",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_hangs_on_closing",
+      "fixed": true
+    },
+    {
+      "title": "Game hangs a few seconds after loading",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_hangs_a_few_seconds_after_loading",
+      "fixed": true
+    },
+    {
+      "title": "Game becomes unresponsive after",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Game_becomes_unresponsive_after",
+      "fixed": true
+    },
+    {
+      "title": "Save games missing",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Save_games_missing",
+      "fixed": true
+    },
+    {
+      "title": "Greyed out options in the launcher",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_3#Greyed_out_options_in_the_launcher",
+      "fixed": true
+    }
+  ]
+}

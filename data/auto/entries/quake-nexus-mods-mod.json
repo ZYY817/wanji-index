@@ -1,0 +1,15 @@
+{
+  "id": "quake-nexus-mods-mod",
+  "name": "Quake Nexus Mods 专区",
+  "nameEn": "Quake on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "quake",
+  "url": "https://www.nexusmods.com/quake",
+  "note": "Nexus 上的 MOD 专区，共 20 个 MOD",
+  "noteEn": "Nexus Mods hub with 20 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

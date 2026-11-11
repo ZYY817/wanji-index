@@ -1,0 +1,15 @@
+{
+  "id": "flatout-2-nexus-mods-mod",
+  "name": "FlatOut 2 Nexus Mods 专区",
+  "nameEn": "FlatOut 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "flatout-2",
+  "url": "https://www.nexusmods.com/flatout2",
+  "note": "Nexus 上的 MOD 专区，共 56 个 MOD",
+  "noteEn": "Nexus Mods hub with 56 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

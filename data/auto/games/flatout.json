@@ -1,0 +1,110 @@
+{
+  "id": "flatout",
+  "slug": "flatout",
+  "name": {
+    "zh": "FlatOut"
+  },
+  "summary": "Ram through pile-ups and smash through your windshield as you push racing to the edge! FlatOut™ delivers more heart-stopping thrills than an…",
+  "summaryEn": "Ram through pile-ups and smash through your windshield as you push racing to the edge! FlatOut™ delivers more heart-stopping thrills than an…",
+  "genres": [
+    "action",
+    "racing",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/6220/",
+      "priceNote": "参考价 ¥ 31.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 6220,
+  "developers": [
+    "Bugbear Entertainment",
+    "ZOOM Platform Media",
+    "Jordan Freeman Group"
+  ],
+  "publishers": [
+    "Strategy First"
+  ],
+  "releaseDate": "2007 年 2 月 2 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置：奔腾 4 1.5GHz 或者相同水平的AMD处理器，256 MB 内存，64 MB 显卡，兼容DirectX的声卡，1.1 GB 可用硬盘空间，Win 98/ME/2000/XP，DirectX9.0c\n推荐配置：奔腾 4 2.0GHz 或者 AMD 2000+，512 MB 内存，128 MB 显卡，兼容DirectX的声卡，游戏手柄或游戏方向盘，Windows XP SP2",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: 1.5 GHz Pentium 4 or AMD Equivalent, 256 MB RAM, 64 MB Graphics Card, DirectX Compatible Sound Card, 1.1 GB of free Hard Drive Space, Win 98/ME/2000/XP, DirectX 9.0c\nRecommended: 2.0 GHz Pentium 4 or AMD 2000+, 512 MB RAM, 128 MB Graphics Card, DirectX Compatible Sound Card, Gamepad or Steering Wheel, Windows XP SP2",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/6220/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:17.980Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:38.978Z",
+      "page": "FlatOut"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Savegame\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Savegame\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Steam version fails to start",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut#Steam_version_fails_to_start",
+      "fixed": true
+    },
+    {
+      "title": "Resolution resets to 4:3 or other graphics issues",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut#Resolution_resets_to_4%3A3_or_other_graphics_issues",
+      "fixed": true
+    },
+    {
+      "title": "\"Access Denied - Please login with administrator privileges and try again\" error on launch",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut#%22Access_Denied_-_Please_login_with_administrator_privileges_and_try_again%22_error_on_launch",
+      "fixed": true
+    },
+    {
+      "title": "Missing car texture in some races (GOG.com)",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut#Missing_car_texture_in_some_races_(GOG.com)",
+      "fixed": true
+    },
+    {
+      "title": "LAN multiplayer crashes when hosting a game (GOG.com)",
+      "url": "https://www.pcgamingwiki.com/wiki/FlatOut#LAN_multiplayer_crashes_when_hosting_a_game_(GOG.com)",
+      "fixed": true
+    }
+  ]
+}

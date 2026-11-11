@@ -1,0 +1,63 @@
+{
+  "id": "peggle-deluxe",
+  "slug": "peggle-deluxe",
+  "name": {
+    "zh": "Peggle Deluxe"
+  },
+  "summary": "Take your best shot with energizing arcade fun! Aim, shoot, clear the orange pegs, then sit back and cheer as 10 whimsical teachers guide yo…",
+  "summaryEn": "Take your best shot with energizing arcade fun! Aim, shoot, clear the orange pegs, then sit back and cheer as 10 whimsical teachers guide yo…",
+  "genres": [
+    "casual"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3480/",
+      "priceNote": "参考价 ¥ 28.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3480,
+  "developers": [
+    "PopCap Games, Inc."
+  ],
+  "publishers": [
+    "PopCap Games, Inc.",
+    "Electronic Arts"
+  ],
+  "releaseDate": "2007 年 3 月 6 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum Requirements: Windows 98/ME/2000/XP/Vista, 256 MB RAM, 500MHz or faster, DirectX: 7.0",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum Requirements: Windows 98/ME/2000/XP/Vista, 256 MB RAM, 500MHz or faster, DirectX: 7.0",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3480/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:50.001Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:07.857Z",
+      "page": null
+    }
+  }
+}

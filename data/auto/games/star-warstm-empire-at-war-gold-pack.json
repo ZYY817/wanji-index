@@ -1,0 +1,93 @@
+{
+  "id": "star-warstm-empire-at-war-gold-pack",
+  "slug": "star-warstm-empire-at-war-gold-pack",
+  "name": {
+    "zh": "STAR WARS Empire at War - Gold Pack"
+  },
+  "summary": "Command or corrupt an entire galaxy in the definitive Star Wars strategy collection. It is a time of galactic civil war.",
+  "summaryEn": "Command or corrupt an entire galaxy in the definitive Star Wars strategy collection. It is a time of galactic civil war.",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/32470/",
+      "priceNote": "参考价 ¥ 76.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 32470,
+  "developers": [
+    "Petroglyph"
+  ],
+  "publishers": [
+    "LucasArts",
+    "Lucasfilm",
+    "Disney"
+  ],
+  "releaseDate": "2010 年 5 月 25 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n Computer: 100% DirectX 9.0c compatible computer\nProcessor: Intel Pentium III 1.0GHz or AMD Athlon 1.0 GHz\nOS *: Windows XP SP3, Windows Vista SP2, Windows 7\nRAM: 512 MB\nGraphics Card: 64 MB graphics card with Shader Model 2.0 support / ATI Radeon 9600 / NVIDIA 7200 / Intel 965\nSound Card: 100% DirectX 9.0c compatible PCI, USB, or Onboard Audio Device\nInternet: 56kbps or faster connection (required for multiplayer only)",
+    "recommended": "Recommended:\n Computer: 100% DirectX 9.0c compatible computer\nProcessor: Intel Pentium Dual Core CPU\nOS *: Windows XP SP3, Windows Vista SP2, Windows 7\nRAM: 1 GB\nGraphics Card: 256 MB graphics card with Shader Model 3.0 support / ATI Radeon X1900 / NVIDIA 8600\nSound Card: 100% DirectX 9.0c compatible PCI, USB, or Onboard Audio Device\nInternet: 1.5Mb DSL/Cable connection (required for multiplayer only)"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n Computer: 100% DirectX 9.0c compatible computer\nProcessor: Intel Pentium III 1.0GHz or AMD Athlon 1.0 GHz\nOS *: Windows XP SP3, Windows Vista SP2, Windows 7\nRAM: 512 MB\nGraphics Card: 64 MB graphics card with Shader Model 2.0 support / ATI Radeon 9600 / NVIDIA 7200 / Intel 965\nSound Card: 100% DirectX 9.0c compatible PCI, USB, or Onboard Audio Device\nInternet: 56kbps or faster connection (required for multiplayer only)",
+    "recommended": "Recommended:\n Computer: 100% DirectX 9.0c compatible computer\nProcessor: Intel Pentium Dual Core CPU\nOS *: Windows XP SP3, Windows Vista SP2, Windows 7\nRAM: 1 GB\nGraphics Card: 256 MB graphics card with Shader Model 3.0 support / ATI Radeon X1900 / NVIDIA 8600\nSound Card: 100% DirectX 9.0c compatible PCI, USB, or Onboard Audio Device\nInternet: 1.5Mb DSL/Cable connection (required for multiplayer only)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/32470/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Star_Wars%3A_Empire_at_War"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:04.674Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:39.103Z",
+      "page": "Star Wars: Empire at War"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Saved Games\\Petroglyph\\Empire At War\\Save\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Petroglyph\\StarWars",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Game crashes",
+      "url": "https://www.pcgamingwiki.com/wiki/Star_Wars%3A_Empire_at_War#Game_crashes",
+      "fixed": true
+    },
+    {
+      "title": "Low framerate on Empire at War",
+      "url": "https://www.pcgamingwiki.com/wiki/Star_Wars%3A_Empire_at_War#Low_framerate_on_Empire_at_War",
+      "fixed": true
+    }
+  ]
+}

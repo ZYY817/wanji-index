@@ -1,0 +1,80 @@
+{
+  "id": "half-life-deathmatch-source",
+  "slug": "half-life-deathmatch-source",
+  "name": {
+    "zh": "Half-Life Deathmatch: Source"
+  },
+  "summary": "Half-Life Deathmatch: Source 是 Half-Life 世界中的首款多人娱乐游戏。 集合所有的经典武器和热门地图，现在已经能在 Source 引擎上运行。",
+  "summaryEn": "Half-Life Deathmatch: Source is a recreation of the first multiplayer game set in the Half-Life universe.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/360/",
+      "priceNote": "参考价 ¥ 35.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 360,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2006 年 5 月 1 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows® 7 (32/64-bit)/Vista/XP\n处理器: 1.7 GHz Processor, requires support for SSE\n内存: 1024 MB RAM\nDirectX 版本: 8.1\n网络: 宽带互联网连接\n存储空间: 需要 4 GB 可用空间",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows® 7 (32/64-bit)/Vista/XP\nProcessor: 1.7 GHz Processor, requires support for SSE\nMemory: 1024 MB RAM\nDirectX: Version 8.1\nNetwork: Broadband Internet connection\nStorage: 4 GB available space",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_Deathmatch%3A_Source"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:17.606Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:43.325Z",
+      "page": "Half-Life Deathmatch: Source"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\hl1mp\\cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Purple and black broken textures",
+      "url": "https://www.pcgamingwiki.com/wiki/Half-Life_Deathmatch%3A_Source#Purple_and_black_broken_textures",
+      "fixed": true
+    }
+  ]
+}

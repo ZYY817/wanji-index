@@ -1,0 +1,110 @@
+{
+  "id": "bioshock-infinite",
+  "slug": "bioshock-infinite",
+  "name": {
+    "zh": "生化奇兵：无限 完全版",
+    "en": "BioShock Infinite"
+  },
+  "summary": "Indebted to the wrong people, with his life on the line, veteran of the U.S.",
+  "summaryEn": "Indebted to the wrong people, with his life on the line, veteran of the U.S.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/8870/",
+      "priceNote": "参考价 ¥ 95.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 8870,
+  "developers": [
+    "Irrational Games",
+    "Virtual Programming (Linux)"
+  ],
+  "publishers": [
+    "2K"
+  ],
+  "releaseDate": "2013 年 3 月 25 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "Minimum:\nOS *: Windows Vista Service Pack 2 32-bit\nProcessor: Intel Core 2 DUO 2.4 GHz / AMD Athlon X2 2.7 GHz\nMemory: 2GB\nHard Disk Space: 20 GB free\nVideo Card: DirectX10 Compatible ATI Radeon HD 3870 / NVIDIA 8800 GT / Intel HD 3000 Integrated Graphics\nVideo Card Memory: 512 MB \nSound: DirectX Compatible",
+    "recommended": "Recommended:\nOS *: Windows 7 Service Pack 1 64-bit\nProcessor: Quad Core Processor\nMemory: 4GB\nHard Disk Space: 30 GB free\nVideo Card: DirectX11 Compatible, AMD Radeon HD 6950 / NVIDIA GeForce GTX 560\nVideo Card Memory: 1024 MB \nSound: DirectX Compatible"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows Vista Service Pack 2 32-bit\nProcessor: Intel Core 2 DUO 2.4 GHz / AMD Athlon X2 2.7 GHz\nMemory: 2GB\nHard Disk Space: 20 GB free\nVideo Card: DirectX10 Compatible ATI Radeon HD 3870 / NVIDIA 8800 GT / Intel HD 3000 Integrated Graphics\nVideo Card Memory: 512 MB \nSound: DirectX Compatible",
+    "recommended": "Recommended:\nOS *: Windows 7 Service Pack 1 64-bit\nProcessor: Quad Core Processor\nMemory: 4GB\nHard Disk Space: 30 GB free\nVideo Card: DirectX11 Compatible, AMD Radeon HD 6950 / NVIDIA GeForce GTX 560\nVideo Card Memory: 1024 MB \nSound: DirectX Compatible"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/8870/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:33.702Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:05.760Z",
+      "page": "BioShock Infinite"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\BioShock Infinite\\XGame\\SaveData",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\BioShock Infinite\\XGame\\Config\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Stuttering during gameplay",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite#Stuttering_during_gameplay",
+      "fixed": true
+    },
+    {
+      "title": "Texture streaming quality problems",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite#Texture_streaming_quality_problems",
+      "fixed": true
+    },
+    {
+      "title": "FPS dropping",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite#FPS_dropping",
+      "fixed": true
+    },
+    {
+      "title": "Make the Game",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite#Make_the_Game",
+      "fixed": true
+    },
+    {
+      "title": "Disable aim-assist",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_Infinite#Disable_aim-assist",
+      "fixed": true
+    }
+  ]
+}

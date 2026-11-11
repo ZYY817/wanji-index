@@ -1,0 +1,15 @@
+{
+  "id": "lego-batmantm-the-videogame-pcgamingwiki-guide-page",
+  "name": "LEGO Batman: The Videogame 技术资料页",
+  "nameEn": "LEGO Batman: The Videogame on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "lego-batmantm-the-videogame",
+  "url": "https://www.pcgamingwiki.com/wiki/Lego_Batman%3A_The_Videogame",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

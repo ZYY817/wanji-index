@@ -1,0 +1,79 @@
+{
+  "id": "alpha-prime",
+  "slug": "alpha-prime",
+  "name": {
+    "zh": "Alpha Prime"
+  },
+  "summary": "Somewhere in deep space, at an apparently abandoned mining base on the asteriod Alpha Prime, something has gone terribly wrong.",
+  "summaryEn": "Somewhere in deep space, at an apparently abandoned mining base on the asteriod Alpha Prime, something has gone terribly wrong.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2590/",
+      "priceNote": "参考价 ¥ 24.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2590,
+  "developers": [
+    "Black Element"
+  ],
+  "publishers": [
+    "Bohemia Interactive"
+  ],
+  "releaseDate": "2007 年 11 月 7 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "支持系统： Windows® 2000/XP/Vista\n处理器： 2.0 GHz 处理器 \n内存： 512 MB 内存\n显卡： 兼容 DirectX 128 MB 图像卡\nDirectX 版本： DirectX® 9.0c\n声卡： 兼容 DirectX 声卡\n硬盘： 3 GB 硬盘空间",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Supported OS: Windows® 10\nProcessor: 2.0 GHz Processor \nMemory: 512 MB RAM \nGraphics: DirectX compatible 128 MB graphics card \nDirectX Version: DirectX® 9.0c\nSound: DirectX compatible sound card\nHard Drive: 3 GB Hard Drive space",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2590/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Alpha_Prime"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:17.012Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:49.368Z",
+      "page": "Alpha Prime"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\save\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\settings.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

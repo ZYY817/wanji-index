@@ -1,0 +1,137 @@
+{
+  "id": "call-of-duty-2",
+  "slug": "call-of-duty-2",
+  "name": {
+    "zh": "Call of Duty 2"
+  },
+  "summary": "Call of Duty® 2 重新定义了普通士兵在二次世界大战中所见到的战场，不但更有戏剧张力，更重现了战场的混乱。 继 2003 年推出的 Call of Duty 勇夺 80 多项年度最佳游戏奖，现在 Call of Duty 2 采用了 COD™2 引擎，带来比以往更宽广…",
+  "summaryEn": "Call of Duty® 2 redefines the cinematic intensity and chaos of battle as seen through the eyes of ordinary soldiers fighting together in epi…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2630/",
+      "priceNote": "参考价 ¥ 98.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2630,
+  "developers": [
+    "Infinity Ward"
+  ],
+  "publishers": [
+    "Activision"
+  ],
+  "releaseDate": "2006 年 10 月 13 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：必须带有 3D 硬件加速卡 - 100% DirectX 9.0c 兼容 64MB 硬件加速显示卡和最新驱动程序*，英文版 Microsoft Windows 2000/XP，Pentium IV 1.4GHz 或 AMD Athlon XP 1700+ 处理器或更高等级，256MB 内存（建议 512MB 内存），100% DirectX 9.0c 兼容 16 位声卡和最新驱动程序，100% Windows 2000/XP 兼容鼠标、键盘和最新驱动程序，4.0GB 未压缩可用硬盘空间（另需 600MB 供 Windows 2000/XP 用于交换文件）\n 多人游戏要求：\n 支持 Internet (TCP/IP) 和局域网络 (LAN TCP/IP) 游戏\nInternet 游戏需要宽带连接和最新驱动程序\nLAN 游戏需要网卡和最新驱动程序\n重要：*部份 3D 加速卡虽然使用此处列出的芯片组，但不一定与 Call of Duty 所使用的 3D 加速功能兼容。 请向硬件制造商咨询是否完全兼容 DirectX 9.0c。\n 支持芯片组\n ATI Radeon 8500\nATI Radeon 9000\nATI Radeon 9200\nATI Radeon 9500\nATI Radeon 9600\nATI Radeon 9700\nATI Radeon 9800\nATI Radeon X300\nATI Radeon X550\nATI Radeon X600\nATI Radeon X700\nATI Radeon X800\nATI Radeon X850\nnVidia GeForce 2 Ultra\nnVidia GeForce 3/Ti 系列\nnVidia GeForce 4/Ti 系列\nnVidia GeForce FX 系列\nnVidia GeForce 6 系列\n建议使用 nVidia GeForce 7 系列或更高等级",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: 3D hardware accelerator card required - 100% DirectX 9.0c compatible 64MB hardware accelerator video card and the latest drivers*, Microsoft Windows 2000/XP, Pentium IV 1.4GHz or AMD Athlon XP 1700+ processor or higher, 256MB RAM (512MB RAM recommended), 100% DirectX 9.0c compatible 16-bit sound card and latest drivers, 100% Windows 2000/XP compatible mouse, keyboard and latest drivers, 4.0GB of uncompressed free hard disk space (plus 600MB for Windows 2000/XP swap file)\n Multi-player Requirements:\n Internet (TCP/IP) and LAN (TCP/IP) play supported\nInternet play requires broadband connection and latest drivers\nLAN play requires network interface card and latest drivers\nImportant Notice: *Some 3D accelerator cards with the chipset listed here may not be compatible with the 3D acceleration features utilized by Call of Duty. Please refer to your hardware manufacturer for 100% DirectX 9.0c compatibility.\n Supported Chipsets\n ATI Radeon 8500\nATI Radeon 9000\nATI Radeon 9200\nATI Radeon 9500\nATI Radeon 9600\nATI Radeon 9700\nATI Radeon 9800\nATI Radeon X300\nATI Radeon X550\nATI Radeon X600\nATI Radeon X700\nATI Radeon X800\nATI Radeon X850\nnVidia GeForce 2 Ultra\nAll nVidia GeForce 3/Ti Series\nAll nVidia GeForce 4/Ti Series\nAll nVidia GeForce FX Series\nAll nVidia GeForce 6 Series\nRecommend nVidia GeForce 7 Series or higher",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2630/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:22.123Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:11.518Z",
+      "page": "Call of Duty 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\main\\players\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\main\\players\\<用户 ID>\\*.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Texture/vertex glitches",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Texture%2Fvertex_glitches",
+      "fixed": true
+    },
+    {
+      "title": "Fix gray screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Fix_gray_screen",
+      "fixed": true
+    },
+    {
+      "title": "OBS Studio crashes the game with Game Capture",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#OBS_Studio_crashes_the_game_with_Game_Capture",
+      "fixed": true
+    },
+    {
+      "title": "Possible fixes for general crashing",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Possible_fixes_for_general_crashing",
+      "fixed": true
+    },
+    {
+      "title": "Game freezes during FMV movie clips such as the intro with spinning Activision logo",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Game_freezes_during_FMV_movie_clips_such_as_the_intro_with_spinning_Activision_logo",
+      "fixed": true
+    },
+    {
+      "title": "Getting automatically kicked from servers",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Getting_automatically_kicked_from_servers",
+      "fixed": true
+    },
+    {
+      "title": "Game does not start on Windows Vista and higher",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Game_does_not_start_on_Windows_Vista_and_higher",
+      "fixed": true
+    },
+    {
+      "title": "Low fps when using compatibility settings",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Low_fps_when_using_compatibility_settings",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes when changing any graphics setting",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Game_crashes_when_changing_any_graphics_setting",
+      "fixed": true
+    },
+    {
+      "title": "\"Failed to find Steam\" error",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#%22Failed_to_find_Steam%22_error",
+      "fixed": true
+    },
+    {
+      "title": "Reduce visual popups in the distance (less strict LOD limitations)",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2#Reduce_visual_popups_in_the_distance_(less_strict_LOD_limitations)",
+      "fixed": true
+    }
+  ]
+}

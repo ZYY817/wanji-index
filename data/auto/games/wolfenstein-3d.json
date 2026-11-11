@@ -1,0 +1,82 @@
+{
+  "id": "wolfenstein-3d",
+  "slug": "wolfenstein-3d",
+  "name": {
+    "zh": "Wolfenstein 3D"
+  },
+  "summary": "二战期间，纳粹计划打造无人能挡的变异军团。你接到任务，要去偷取这个秘密计划，但不幸被俘。现在你幸运地逃脱了，不过前方等待你的却是迷宫般的路线和嗜血的纳粹。",
+  "summaryEn": "World War II rages. The Nazis are planning to build an unstoppable, mutant army.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2270/",
+      "priceNote": "参考价 ¥ 20.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2270,
+  "developers": [
+    "id Software"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2007 年 8 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低： 一个 100% 兼容 Windows XP/Vista 的电脑系统",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: A 100% Windows XP/Vista-compatible computer system",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2270/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Wolfenstein_3D"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:03.119Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:57:07.035Z",
+      "page": "Wolfenstein 3D"
+    }
+  },
+  "issues": [
+    {
+      "title": "No Sound",
+      "url": "https://www.pcgamingwiki.com/wiki/Wolfenstein_3D#No_Sound",
+      "fixed": true
+    },
+    {
+      "title": "Lag/Low FPS (Steam DOSBox release)",
+      "url": "https://www.pcgamingwiki.com/wiki/Wolfenstein_3D#Lag%2FLow_FPS_(Steam_DOSBox_release)",
+      "fixed": true
+    },
+    {
+      "title": "Super Upgrades crashes in DOSBox",
+      "url": "https://www.pcgamingwiki.com/wiki/Wolfenstein_3D#Super_Upgrades_crashes_in_DOSBox",
+      "fixed": true
+    }
+  ]
+}

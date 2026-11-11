@@ -1,0 +1,79 @@
+{
+  "id": "supreme-commander-forged-alliance",
+  "slug": "supreme-commander-forged-alliance",
+  "name": {
+    "zh": "Supreme Commander: Forged Alliance"
+  },
+  "summary": "The last days of man are at hand.. Two years after the Infinite War the once great warring nations now lie in ruins, and humanity’s hope for…",
+  "summaryEn": "The last days of man are at hand.. Two years after the Infinite War the once great warring nations now lie in ruins, and humanity’s hope for…",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/9420/",
+      "priceNote": "参考价 ¥ 45.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 9420,
+  "developers": [
+    "Gas Powered Games"
+  ],
+  "publishers": [
+    "Square Enix"
+  ],
+  "releaseDate": "2011 年 9 月 28 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "Minimum:\n OS *: Windows® XP Service Pack 2, Windows® Vista\nProcessor: 1.8 GHz processor \nMemory: 512 MB RAM\nHard Disk Space: 8GB available hard drive space \nVideo Card: 128 MB video RAM or greater, with DirectX 9 Vertex Shader / Pixel Shader 2.0 support (ATI 9600+, Nvidia 6200+)",
+    "recommended": "Recommended:\n OS *: Windows® XP Service Pack 2, Windows® Vista\nProcessor: 3.0 GHz Intel or equivalent AMD processor or better\nMemory: 1 GB RAM or better\nHard Disk Space: 8GB available hard drive space \nVideo Card: 256 MB video RAM, with DirectX 9 Vertex Shader / Pixel Shader 2.0 support (Nvidia 6800 or better)"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows® XP Service Pack 2, Windows® Vista\nProcessor: 1.8 GHz processor \nMemory: 512 MB RAM\nHard Disk Space: 8GB available hard drive space \nVideo Card: 128 MB video RAM or greater, with DirectX 9 Vertex Shader / Pixel Shader 2.0 support (ATI 9600+, Nvidia 6200+)",
+    "recommended": "Recommended:\n OS *: Windows® XP Service Pack 2, Windows® Vista\nProcessor: 3.0 GHz Intel or equivalent AMD processor or better\nMemory: 1 GB RAM or better\nHard Disk Space: 8GB available hard drive space \nVideo Card: 256 MB video RAM, with DirectX 9 Vertex Shader / Pixel Shader 2.0 support (Nvidia 6800 or better)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/9420/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Supreme_Commander%3A_Forged_Alliance"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:44.197Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:45.901Z",
+      "page": "Supreme Commander: Forged Alliance"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Gas Powered Games\\Supreme Commander Forged Alliance\\savegames",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Gas Powered Games\\Supreme Commander Forged Alliance\\Game.prefs",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "id": "earth-2160",
+  "slug": "earth-2160",
+  "name": {
+    "zh": "Earth 2160"
+  },
+  "summary": "深受欢迎的 RTS 源于 EARTH 系列，支持单人和多人游戏模式。 在地球被毁灭之后，欧亚王朝的领导者们纷纷逃亡在外，为人类种族的生存而战。 从四种敌对阵营中进行选择，在单人游戏的各种战争或多人游戏模式下大显身手。",
+  "summaryEn": "After the destruction of the EARTH in 2150, the leaders of the Eurasian Dynasty escaped on board an evacuation fleet.",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1900/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1900,
+  "developers": [
+    "Reality Pump Studios"
+  ],
+  "publishers": [
+    "Topware Interactive",
+    "ACE"
+  ],
+  "releaseDate": "2006 年 4 月 1 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：处理器为 Pentium IV 或同等的 AMD（1500+ 处理器）的 PC，Windows XP，512 MB 内存，DirectX TM 8.1 兼容显卡（128 MB 显存），DirectX 兼容声卡，1.5 GB 可用硬盘空间\n建议配置：处理器为 Pentium IV 或同等的 AMD（1500+ 处理器）的 PC，Windows XP，512 MB 内存，DirectX 9.0c 兼容显卡（256 MB 显存），DirectX TM 兼容声卡，2 GB 可用硬盘空间",
+    "recommended": "Recommended: \nWindows XP / Vista / 7 / 8\nIntel/AMD Core Duo CPU with 2.0 GHz\n2 GB RAM\nGraphics Card with Shader 2.0 support and 256 MB\nDirectX compatible sound card\n2.5 GB free disk space\nBroad band Internet connection\nKeyboard and Mouse"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \nWindows XP / Vista / 7 / 8\nIntel/AMD Single Core CPU with 2.0 GHz\n1 GB RAM\nDirectX 9.0 compatible graphics card with 128 MB RAM\nDirectX compatible sound card\n2.0 GB free disk space\nBroad band Internet connection\nKeyboard and Mouse",
+    "recommended": "Recommended: \nWindows XP / Vista / 7 / 8\nIntel/AMD Core Duo CPU with 2.0 GHz\n2 GB RAM\nGraphics Card with Shader 2.0 support and 256 MB\nDirectX compatible sound card\n2.5 GB free disk space\nBroad band Internet connection\nKeyboard and Mouse"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1900/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Earth_2160"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:45.829Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:30.370Z",
+      "page": "Earth 2160"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Earth 2160\\Players",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Reality Pump\\Earth 2160\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "In-game cutscenes do not display correctly using non-4:3 resolutions",
+      "url": "https://www.pcgamingwiki.com/wiki/Earth_2160#In-game_cutscenes_do_not_display_correctly_using_non-4%3A3_resolutions",
+      "fixed": false
+    },
+    {
+      "title": "Cannot select non-4:3 resolutions in options menu",
+      "url": "https://www.pcgamingwiki.com/wiki/Earth_2160#Cannot_select_non-4%3A3_resolutions_in_options_menu",
+      "fixed": true
+    },
+    {
+      "title": "UI is stretched/illegible",
+      "url": "https://www.pcgamingwiki.com/wiki/Earth_2160#UI_is_stretched%2Fillegible",
+      "fixed": true
+    }
+  ]
+}

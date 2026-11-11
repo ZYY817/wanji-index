@@ -1,0 +1,62 @@
+{
+  "id": "insaniquarium-deluxe",
+  "slug": "insaniquarium-deluxe",
+  "name": {
+    "zh": "Insaniquarium Deluxe"
+  },
+  "summary": "The craziest aquarium game ever! Tend to your fish, keep them happy and they'll reward you with coins and jewels.",
+  "summaryEn": "The craziest aquarium game ever! Tend to your fish, keep them happy and they'll reward you with coins and jewels.",
+  "genres": [
+    "casual"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3320/",
+      "priceNote": "参考价 ¥ 21.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3320,
+  "developers": [
+    "PopCap Games, Inc."
+  ],
+  "publishers": [
+    "PopCap Games, Inc.",
+    "Electronic Arts"
+  ],
+  "releaseDate": "2006 年 8 月 30 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低要求： Windows 98/ME/2000/XP，128 MB 内存，500MHz 或更高，DirectX: 7.0",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum Requirements: Windows 98/ME/2000/XP, 128 MB RAM, 500MHz or faster, DirectX: 7.0",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3320/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:43.017Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:47.670Z",
+      "page": null
+    }
+  }
+}

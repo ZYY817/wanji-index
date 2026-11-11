@@ -1,0 +1,15 @@
+{
+  "id": "killing-floor-steam-mod",
+  "name": "Killing Floor 创意工坊",
+  "nameEn": "Killing Floor Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "killing-floor",
+  "url": "https://steamcommunity.com/app/1250/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

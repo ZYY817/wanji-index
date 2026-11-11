@@ -1,0 +1,64 @@
+{
+  "id": "total-war-napoleon-definitive-edition",
+  "slug": "total-war-napoleon-definitive-edition",
+  "name": {
+    "zh": "Total War: NAPOLEON – Definitive Edition"
+  },
+  "summary": "Complete your Total War collection with this Definitive Edition of Total War: NAPOLEON, which includes all DLC and feature updates since the…",
+  "summaryEn": "Complete your Total War collection with this Definitive Edition of Total War: NAPOLEON, which includes all DLC and feature updates since the…",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/34030/",
+      "priceNote": "参考价 ¥ 68.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 34030,
+  "developers": [
+    "CREATIVE ASSEMBLY",
+    "Feral Interactive (Mac)"
+  ],
+  "publishers": [
+    "SEGA",
+    "Feral Interactive (Mac)"
+  ],
+  "releaseDate": "2010 年 2 月 25 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\n OS *:Microsoft® Windows Vista®/XP®/Windows® 7 \nProcessor: 2.3 GHz CPU with SSE2 \nMemory: 1 GB RAM (XP), 2 GB RAM (Vista®/Windows® 7) \nGraphics: 256 MB DirectX® 9.0c shader model 2b compatible GPU \nDirectX®: DirectX® 9.0c \nHard Drive: 21 GB free space \nMicrosoft no longer supports Windows 10 or older versions.",
+    "recommended": "Recommended:\n OS *: Microsoft® Windows Vista®/XP®/Windows® 7 \nProcessor: 2.6 GHz Dual Core CPU \nMemory: 2 GB RAM (XP), 4 GB RAM (Vista®/Windows® 7) \nGraphics: 256 MB DirectX® 9.0c shader model 3 compatible GPU \nDirectX®: DirectX® 9.0c \nHard Drive: 21 GB free space \nMicrosoft no longer supports Windows 10 or older versions."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *:Microsoft® Windows Vista®/XP®/Windows® 7 \nProcessor: 2.3 GHz CPU with SSE2 \nMemory: 1 GB RAM (XP), 2 GB RAM (Vista®/Windows® 7) \nGraphics: 256 MB DirectX® 9.0c shader model 2b compatible GPU \nDirectX®: DirectX® 9.0c \nHard Drive: 21 GB free space \nMicrosoft no longer supports Windows 10 or older versions.",
+    "recommended": "Recommended:\n OS *: Microsoft® Windows Vista®/XP®/Windows® 7 \nProcessor: 2.6 GHz Dual Core CPU \nMemory: 2 GB RAM (XP), 4 GB RAM (Vista®/Windows® 7) \nGraphics: 256 MB DirectX® 9.0c shader model 3 compatible GPU \nDirectX®: DirectX® 9.0c \nHard Drive: 21 GB free space \nMicrosoft no longer supports Windows 10 or older versions."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/34030/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:15.072Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:56:58.537Z",
+      "page": null
+    }
+  }
+}

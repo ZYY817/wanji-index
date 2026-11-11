@@ -1,0 +1,111 @@
+{
+  "id": "call-of-juarez",
+  "slug": "call-of-juarez",
+  "name": {
+    "zh": "Call of Juarez"
+  },
+  "summary": "《Call of Juarez》是一款史诗般的西部题材第一人称射击冒险游戏。玩家需交替扮演两个截然不同的对立角色：东躲西藏的逃犯Billy和他的追捕者牧师Ray。",
+  "summaryEn": "Call of Juarez is an epic adventure western themed FPS game. The player alternately assumes the roles of two distinct, antagonistic characte…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3020/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3020,
+  "developers": [
+    "Techland"
+  ],
+  "publishers": [
+    "Techland Publishing"
+  ],
+  "releaseDate": "2007 年 11 月 8 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Windows® 2000/XP (仅限)，2.2 GHz Pentium® 4，AMD Athlon™ 2400+，或 2.4 GHz Celeron 或更好 (推荐 3 GHz Pentium 4，AMD Athlon 3000+，或 3 GHz Celeron 或更好)，512 MB 内存 (推荐 1 GB)，nVidia：GF6600，ATI：Radeon 9800 或更好的显卡*，DirectX 9-适用音频设备，DirectX 9.0c 或更高，2 GB 硬盘空间，Windows-适用鼠标和键盘\n*发布时支持的显卡：nVidia GeForce 6600，6800，7600，7800，7900 ATI Radeon：9800，X800，X1300，X1600，X1800，X1900",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Windows® 2000/XP (only), 2.2 GHz Pentium® 4, AMD Athlon™ 2400+, or 2.4 GHz Celeron or better (3 GHz Pentium 4, AMD Athlon 3000+, or 3 GHz Celeron or better recommended), 512 MB RAM (1 GB recommended), nVidia: GF6600, ATI: Radeon 9800 or better video card*, DirectX 9-compliant sound device, DirectX 9.0c or higher, 2 GB Hard Drive Space, Windows-compliant mouse and keyboard\n *Supported Video Cards at Time of Release: nVidia GeForce 6600, 6800, 7600, 7800, 7900 ATI Radeon: 9800, X800, X1300, X1600, X1800. X1900",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3020/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Juarez"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:49:32.498Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:15.968Z",
+      "page": "Call of Juarez"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\call of juarez\\out\\save\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\out\\save",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\call of juarez\\out\\Settings\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\out\\Settings\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Crash in Episode 4 when reloading left gun",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Juarez#Crash_in_Episode_4_when_reloading_left_gun",
+      "fixed": false
+    },
+    {
+      "title": "Random crashing and stability fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Juarez#Random_crashing_and_stability_fix",
+      "fixed": false
+    },
+    {
+      "title": "Game crashes on launch after Techland logo when running in DirectX 10 mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Juarez#Game_crashes_on_launch_after_Techland_logo_when_running_in_DirectX_10_mode",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Call_of_Juarez#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    }
+  ]
+}

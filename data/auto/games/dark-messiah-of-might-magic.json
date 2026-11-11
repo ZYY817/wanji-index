@@ -1,0 +1,132 @@
+{
+  "id": "dark-messiah-of-might-magic",
+  "slug": "dark-messiah-of-might-magic",
+  "name": {
+    "zh": "Dark Messiah of Might & Magic"
+  },
+  "summary": "探索由 Valve 的增强版 Source™ 引擎驱动的新一代动作 RPG 游戏。 身处 Might & Magic® 宇宙中，玩家将在黑暗和变化莫测的魔幻环境中迎接异常激烈的战斗。 利剑、隐形、魔法。 用您选择的方式去战斗。",
+  "summaryEn": "Discover a new breed of Action-RPG game powered by an enhanced version of the Source™ Engine by Valve.",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2100/",
+      "priceNote": "参考价 ¥ 25.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2100,
+  "developers": [
+    "Arkane Studios"
+  ],
+  "publishers": [
+    "Ubisoft"
+  ],
+  "releaseDate": "2006 年 10 月 25 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低：AMD Athlon™，Pentium® 2.4GHz，512MB 内存，128MB 显示卡，7GB 硬盘空间，Windows XP，鼠标，键盘，Internet 连接\n建议：AMD Athlon™，Pentium® 3.0GHz，256MB DirectX 9 显示卡，7GB 硬盘空间，Windows XP，鼠标，键盘，Internet 连接",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: AMD Athlon™, Pentium® 2.4 GHz, 512MB RAM, 128MB video card, 7GB HDD Space, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: AMD Athlon™, Pentium® 3.0 GHz, 256mb dx9 video card, 7GB HDD Space, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2100/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:52.745Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:18.825Z",
+      "page": "Dark Messiah of Might and Magic"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\mm\\SAVE\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\mm\\cfg\\config.cfg",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Valve\\Source\\mm\\Settings\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Changing language doesn't take effect (Steam version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Changing_language_doesn't_take_effect_(Steam_version)",
+      "fixed": true
+    },
+    {
+      "title": "FoV lowers after using ballista at the start",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#FoV_lowers_after_using_ballista_at_the_start",
+      "fixed": true
+    },
+    {
+      "title": "Increase the corpse limit",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Increase_the_corpse_limit",
+      "fixed": true
+    },
+    {
+      "title": "Game fails to start on Windows 11 / Windows 10",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Game_fails_to_start_on_Windows_11_%2F_Windows_10",
+      "fixed": true
+    },
+    {
+      "title": "Fault Module Name: ntdll.dll",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Fault_Module_Name%3A_ntdll.dll",
+      "fixed": true
+    },
+    {
+      "title": "Crash when exiting the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Crash_when_exiting_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Xana speaks German in a Russian version of the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Xana_speaks_German_in_a_Russian_version_of_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Game installs AZERTY (French) keyboard layout",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Game_installs_AZERTY_(French)_keyboard_layout",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on start-up (Steam)",
+      "url": "https://www.pcgamingwiki.com/wiki/Dark_Messiah_of_Might_and_Magic#Black_screen_on_start-up_(Steam)",
+      "fixed": true
+    }
+  ]
+}

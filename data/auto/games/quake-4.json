@@ -1,0 +1,127 @@
+{
+  "id": "quake-4",
+  "slug": "quake-4",
+  "name": {
+    "zh": "Quake 4"
+  },
+  "summary": "作为精英犀牛小队的一员，你必须带领地球军队入侵一个充满敌意的外星家园。但是，在这场为人类的生存而与无情敌人开展的恶战中，你可能会发现，打败他们的唯一方法……便是成为他们中的一员。",
+  "summaryEn": "As part of the elite Rhino Squad, you must spearhead Earth’s military invasion of a hostile alien homeworld.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2210/",
+      "priceNote": "参考价 ¥ 62.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 2210,
+  "developers": [
+    "RavenSoft",
+    "id Software"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2011 年 8 月 4 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Operating System: Windows® XP \nProcessor: Intel® Pentium® 4 2.0 GHz or AMD® Athlon® XP 2000+ processor or higher\nMemory: 512MB RAM\nHard Disk Space: 2.8GB of uncompressed free hard disk space (plus 400MB for Windows® swap file)\nVideo: 100% DirectX® 9.0c compatible 64MB 3D hardware accelerated video card required\nSound: 100% DirectX® 9.0c compatible 16-bit sound card and latest drivers\nDirectX® Version: 9.0c",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Operating System: Windows® XP \nProcessor: Intel® Pentium® 4 2.0 GHz or AMD® Athlon® XP 2000+ processor or higher\nMemory: 512MB RAM\nHard Disk Space: 2.8GB of uncompressed free hard disk space (plus 400MB for Windows® swap file)\nVideo: 100% DirectX® 9.0c compatible 64MB 3D hardware accelerated video card required\nSound: 100% DirectX® 9.0c compatible 16-bit sound card and latest drivers\nDirectX® Version: 9.0c",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2210/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:59.624Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:16.291Z",
+      "page": "Quake 4"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\q4base\\savegames\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\q4base\\Quake4Config.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Poor image quality on modern systems",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Poor_image_quality_on_modern_systems",
+      "fixed": true
+    },
+    {
+      "title": "Commands not taking effect even after including them in 'autoexec.cfg'",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Commands_not_taking_effect_even_after_including_them_in_'autoexec.cfg'",
+      "fixed": true
+    },
+    {
+      "title": "Stretched UI on 16:9 widescreens",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Stretched_UI_on_16%3A9_widescreens",
+      "fixed": true
+    },
+    {
+      "title": "Low resolution font scaling",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Low_resolution_font_scaling",
+      "fixed": true
+    },
+    {
+      "title": "Micro stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Micro_stuttering",
+      "fixed": true
+    },
+    {
+      "title": "Poor performance/\"slow-motion\" effect on Nvidia cards",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Poor_performance%2F%22slow-motion%22_effect_on_Nvidia_cards",
+      "fixed": true
+    },
+    {
+      "title": "Steam Overlay doesn't work",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Steam_Overlay_doesn't_work",
+      "fixed": true
+    },
+    {
+      "title": "Sluggish mouse view",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#Sluggish_mouse_view",
+      "fixed": true
+    },
+    {
+      "title": "ReShade overlay inaccessible to mouse",
+      "url": "https://www.pcgamingwiki.com/wiki/Quake_4#ReShade_overlay_inaccessible_to_mouse",
+      "fixed": true
+    }
+  ]
+}

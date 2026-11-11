@@ -1,0 +1,15 @@
+{
+  "id": "train-simulator-classic-pcgamingwiki-guide-page",
+  "name": "Train Simulator Classic 技术资料页",
+  "nameEn": "Train Simulator Classic on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "train-simulator-classic",
+  "url": "https://www.pcgamingwiki.com/wiki/Train_Simulator",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,62 @@
+{
+  "id": "assassins-creedtm-directors-cut-edition",
+  "slug": "assassins-creedtm-directors-cut-edition",
+  "name": {
+    "zh": "Assassin's Creed: Director's Cut Edition"
+  },
+  "summary": "Assassin's Creed™ is the next-gen game developed by Ubisoft Montreal that redefines the action genre.",
+  "summaryEn": "Assassin's Creed™ is the next-gen game developed by Ubisoft Montreal that redefines the action genre.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/15100/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 15100,
+  "developers": [
+    "Ubisoft Montreal"
+  ],
+  "publishers": [
+    "Ubisoft"
+  ],
+  "releaseDate": "2008 年 4 月 9 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum: \n Supported OS: Windows® XP/Windows Vista® (only)\nProcessor: Dual core processor 2.6 GHz Intel® Pentium® D or AMD Athlon™ 64 X2 3800+ (Intel Core® 2 Duo 2.2 GHz or AMD Athlon 64 X2 4400+ or better recommended)\nSystem Memory: Windows XP: 1 GB RAM / Windows Vista: 2 GB RAM\nVideo Card: 256 MB DirectX® 10.0-compliant video card or DirectX 9.0-compliant card with Shader Model 3.0 or higher (*see supported list)\nSound Card: DirectX 9.0 or 10.0-compliant sound card (5.1 sound card recommended)\nDirectX Version: Direct X 9.0 (Windows XP) or 10.0 (Windows Vista) libraries \nHard Disk: 8 GB available hard disk space\nSupported Peripherals: Keyboard, mouse, optional controller (Xbox 360® Controller for Windows recommended)\n*Supported video cards at time of release: ATI® RADEON® X1600** /1650**- 1950/ HD 2000/3000 series, NVIDIA GeForce® 6800**/7/8/9 series. **PCI Express only supported. Laptop versions of these cards may work but are NOT supported. These chipsets are the only ones that will run this game. For the most up-to-date requirements, please visit the FAQ for this game at: .",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n Supported OS: Windows® XP/Windows Vista® (only)\nProcessor: Dual core processor 2.6 GHz Intel® Pentium® D or AMD Athlon™ 64 X2 3800+ (Intel Core® 2 Duo 2.2 GHz or AMD Athlon 64 X2 4400+ or better recommended)\nSystem Memory: Windows XP: 1 GB RAM / Windows Vista: 2 GB RAM\nVideo Card: 256 MB DirectX® 10.0-compliant video card or DirectX 9.0-compliant card with Shader Model 3.0 or higher (*see supported list)\nSound Card: DirectX 9.0 or 10.0-compliant sound card (5.1 sound card recommended)\nDirectX Version: Direct X 9.0 (Windows XP) or 10.0 (Windows Vista) libraries \nHard Disk: 8 GB available hard disk space\nSupported Peripherals: Keyboard, mouse, optional controller (Xbox 360® Controller for Windows recommended)\n*Supported video cards at time of release: ATI® RADEON® X1600** /1650**- 1950/ HD 2000/3000 series, NVIDIA GeForce® 6800**/7/8/9 series. **PCI Express only supported. Laptop versions of these cards may work but are NOT supported. These chipsets are the only ones that will run this game. For the most up-to-date requirements, please visit the FAQ for this game at: .",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/15100/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:20.791Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:52:56.684Z",
+      "page": null
+    }
+  }
+}

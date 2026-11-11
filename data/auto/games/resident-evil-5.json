@@ -1,0 +1,127 @@
+{
+  "id": "resident-evil-5",
+  "slug": "resident-evil-5",
+  "name": {
+    "zh": "Resident Evil 5"
+  },
+  "summary": "这游戏是在2009年推出的Games for Windows - Live version。如果你在Steam上购买Untold Stories Bundle，它将会升级令内容与Resident Evil 5 Gold Edition相同。",
+  "summaryEn": "This game is a port of the Games for Windows - Live version that was released in 2009.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/21690/",
+      "priceNote": "参考价 ¥ 98.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 21690,
+  "developers": [
+    "Capcom"
+  ],
+  "publishers": [
+    "Capcom"
+  ],
+  "releaseDate": "2009 年 9 月 15 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Supported OS: Windows®10 \nProcessor: Intel Core™ 2 Quad 2.4GHz or better, AMD Phenom™ II x4 3.4GHZ or better \nMemory: 4GB or better \nGraphics: 512 MB VRAM, NVIDIA® GeForce 9800 series or better, ATI Radeon HD 7770 or better\nDisplay: Minimum 800 x 600 pixel resolution\nSound: DirectSound Compatible (DirectX 9.0c or higher) \nDirectX®: DirectX 9.0c / Shader 3.0 or better \nHard Drive: 15 GB free hard drive space \nPeripherals: Keyboard and mouse \nInternet connection required for game activation.",
+    "recommended": "Supported OS: Windows®10 \nProcessor: Intel Core™ i5-3570 or better, AMD Phenom™ II x4 3.4GHZ or better \nMemory: 4GB or better \nGraphics: 512 MB VRAM, NVIDIA(R) GeForce® GTX 650 or better, ATI Radeon HD 7770 or better\nDisplay: Minimum 1280 x 720 pixel resolution\nSound: DirectSound Compatible (DirectX 9.0c or higher) \nDirectX®: DirectX 9.0c / Shader 3.0 or better \nHard Drive: 15 GB free hard drive space \nPeripherals: Keyboard and mouse, controller supported \nInternet connection required for game activation."
+  },
+  "requirementsEn": {
+    "minimum": "Supported OS: Windows®10 \nProcessor: Intel Core™ 2 Quad 2.4GHz or better, AMD Phenom™ II x4 3.4GHZ or better \nMemory: 4GB or better \nGraphics: 512 MB VRAM, NVIDIA® GeForce 9800 series or better, ATI Radeon HD 7770 or better\nDisplay: Minimum 800 x 600 pixel resolution\nSound: DirectSound Compatible (DirectX 9.0c or higher) \nDirectX®: DirectX 9.0c / Shader 3.0 or better \nHard Drive: 15 GB free hard drive space \nPeripherals: Keyboard and mouse \nInternet connection required for game activation.",
+    "recommended": "Supported OS: Windows®10 \nProcessor: Intel Core™ i5-3570 or better, AMD Phenom™ II x4 3.4GHZ or better \nMemory: 4GB or better \nGraphics: 512 MB VRAM, NVIDIA(R) GeForce® GTX 650 or better, ATI Radeon HD 7770 or better\nDisplay: Minimum 1280 x 720 pixel resolution\nSound: DirectSound Compatible (DirectX 9.0c or higher) \nDirectX®: DirectX 9.0c / Shader 3.0 or better \nHard Drive: 15 GB free hard drive space \nPeripherals: Keyboard and mouse, controller supported \nInternet connection required for game activation."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/21690/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:36.561Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:29.382Z",
+      "page": "Resident Evil 5"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\capcom\\RESIDENT EVIL 5\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\capcom\\RESIDENT EVIL 5\\config.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Chapter 5-2 boss can't be hurt by Flamethrower",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Chapter_5-2_boss_can't_be_hurt_by_Flamethrower",
+      "fixed": false
+    },
+    {
+      "title": "Lost in Nightmares boss QTE fail",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Lost_in_Nightmares_boss_QTE_fail",
+      "fixed": false
+    },
+    {
+      "title": "Unable to trade weapons with A.I partners in Single-Player",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Unable_to_trade_weapons_with_A.I_partners_in_Single-Player",
+      "fixed": false
+    },
+    {
+      "title": "Enemies get stuck in containers and similar drop-down points",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Enemies_get_stuck_in_containers_and_similar_drop-down_points",
+      "fixed": false
+    },
+    {
+      "title": "Issues with Games for Windows - LIVE",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Issues_with_Games_for_Windows_-_LIVE",
+      "fixed": true
+    },
+    {
+      "title": "Startup video mode errors",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Startup_video_mode_errors",
+      "fixed": true
+    },
+    {
+      "title": "Stretched pre-rendered video playback and incorrect UI scaling at high aspect ratios",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Stretched_pre-rendered_video_playback_and_incorrect_UI_scaling_at_high_aspect_ratios",
+      "fixed": true
+    },
+    {
+      "title": "Graphics flicker in fullscreen",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Graphics_flicker_in_fullscreen",
+      "fixed": true
+    },
+    {
+      "title": "Incorrect lens flare coming from light sources",
+      "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5#Incorrect_lens_flare_coming_from_light_sources",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "wolfenstein-3d-steamdb-other",
+  "name": "Wolfenstein 3D 价格与版本史",
+  "nameEn": "Wolfenstein 3D on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "wolfenstein-3d",
+  "url": "https://steamdb.info/app/2270/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

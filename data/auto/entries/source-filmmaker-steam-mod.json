@@ -1,0 +1,15 @@
+{
+  "id": "source-filmmaker-steam-mod",
+  "name": "Source Filmmaker 创意工坊",
+  "nameEn": "Source Filmmaker Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "source-filmmaker",
+  "url": "https://steamcommunity.com/app/1840/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

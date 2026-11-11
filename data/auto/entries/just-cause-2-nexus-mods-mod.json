@@ -1,0 +1,15 @@
+{
+  "id": "just-cause-2-nexus-mods-mod",
+  "name": "Just Cause 2 Nexus Mods 专区",
+  "nameEn": "Just Cause 2 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "just-cause-2",
+  "url": "https://www.nexusmods.com/justcause2",
+  "note": "Nexus 上的 MOD 专区，共 32 个 MOD",
+  "noteEn": "Nexus Mods hub with 32 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "star-warstm-knights-of-the-old-republictm",
+  "slug": "star-warstm-knights-of-the-old-republictm",
+  "name": {
+    "zh": "STAR WARS Knights of the Old Republic"
+  },
+  "summary": "It is four thousand years before the Galactic Empire and hundreds of Jedi Knights have fallen in battle against the ruthless Sith.",
+  "summaryEn": "It is four thousand years before the Galactic Empire and hundreds of Jedi Knights have fallen in battle against the ruthless Sith.",
+  "genres": [
+    "adventure",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/32370/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 32370,
+  "developers": [
+    "BioWare",
+    "Aspyr (Mac)"
+  ],
+  "publishers": [
+    "LucasArts",
+    "Aspyr (Mac)",
+    "Disney",
+    "Lucasfilm"
+  ],
+  "releaseDate": "2009 年 9 月 5 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP and Windows Vista\nProcessor: Intel Pentium 3 1Ghz or AMD Athlon 1GHz\nMemory: 256 RAM\nGraphics: 32 MB with Hardware T&L\nDirectX®: Directx 9.0b or better\nHard Drive: 3.5 GB\nSound: Directx 9.0b compatible",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP and Windows Vista\nProcessor: Intel Pentium 3 1Ghz or AMD Athlon 1GHz\nMemory: 256 RAM\nGraphics: 32 MB with Hardware T&L\nDirectX®: Directx 9.0b or better\nHard Drive: 3.5 GB\nSound: Directx 9.0b compatible",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/32370/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:57.787Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:44.475Z",
+      "page": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "deathmatch-classic-pcgamingwiki-guide-page",
+  "name": "Deathmatch Classic 技术资料页",
+  "nameEn": "Deathmatch Classic on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "deathmatch-classic",
+  "url": "https://www.pcgamingwiki.com/wiki/Deathmatch_Classic",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

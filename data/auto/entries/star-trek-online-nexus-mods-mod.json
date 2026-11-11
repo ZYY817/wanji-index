@@ -1,0 +1,15 @@
+{
+  "id": "star-trek-online-nexus-mods-mod",
+  "name": "Star Trek Online Nexus Mods 专区",
+  "nameEn": "Star Trek Online on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "star-trek-online",
+  "url": "https://www.nexusmods.com/startrekonline",
+  "note": "Nexus 上的 MOD 专区，共 186 个 MOD",
+  "noteEn": "Nexus Mods hub with 186 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

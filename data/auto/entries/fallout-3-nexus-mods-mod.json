@@ -1,0 +1,15 @@
+{
+  "id": "fallout-3-nexus-mods-mod",
+  "name": "Fallout 3 Nexus Mods 专区",
+  "nameEn": "Fallout 3 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "fallout-3",
+  "url": "https://www.nexusmods.com/fallout3",
+  "note": "Nexus 上的 MOD 专区，共 17,286 个 MOD",
+  "noteEn": "Nexus Mods hub with 17,286 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

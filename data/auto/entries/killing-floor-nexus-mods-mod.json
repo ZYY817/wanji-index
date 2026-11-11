@@ -1,0 +1,15 @@
+{
+  "id": "killing-floor-nexus-mods-mod",
+  "name": "Killing Floor Nexus Mods 专区",
+  "nameEn": "Killing Floor on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "killing-floor",
+  "url": "https://www.nexusmods.com/killingfloor",
+  "note": "Nexus 上的 MOD 专区，共 23 个 MOD",
+  "noteEn": "Nexus Mods hub with 23 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

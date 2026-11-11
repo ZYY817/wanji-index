@@ -1,0 +1,15 @@
+{
+  "id": "x3-terran-conflict-pcgamingwiki-guide-page",
+  "name": "X3: Terran Conflict 技术资料页",
+  "nameEn": "X3: Terran Conflict on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "x3-terran-conflict",
+  "url": "https://www.pcgamingwiki.com/wiki/X3%3A_Terran_Conflict",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "f-e-a-r-nexus-mods-mod",
+  "name": "F.E.A.R. Nexus Mods 专区",
+  "nameEn": "F.E.A.R. on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "f-e-a-r",
+  "url": "https://www.nexusmods.com/fear",
+  "note": "Nexus 上的 MOD 专区，共 40 个 MOD",
+  "noteEn": "Nexus Mods hub with 40 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,106 @@
+{
+  "id": "paydaytm-the-heist",
+  "slug": "paydaytm-the-heist",
+  "name": {
+    "zh": "PAYDAY The Heist"
+  },
+  "summary": "开启硬派的职业犯罪生涯，在充满变数的掠夺中不断追求下一笔“大买卖”",
+  "summaryEn": "Take on the role of a hardened career criminal executing intense, dynamic heists in constant pursuit of the next “big score”",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/24240/",
+      "priceNote": "参考价 ¥ 35.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 24240,
+  "developers": [
+    "OVERKILL - a Starbreeze Studio."
+  ],
+  "publishers": [
+    "Starbreeze Entertainment"
+  ],
+  "releaseDate": "2011 年 10 月 20 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows XP, Vista, 7\n处理器: Intel Pentium 4 3 GHz / AMD Athlon XP 3400+\n内存: 1 GB RAM\n显卡: NVIDIA GeForce 7800 GTX / ATI Radeon X1900\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 6 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统 *: Windows XP, Vista, 7\n处理器: Intel Core 2 Duo / AMD Athlon X2\n内存: 2 GB RAM\n显卡: NVIDIA GeForce GTX 260 / ATI Radeon HD 4850\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 6 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP, Vista, 7\nProcessor: Intel Pentium 4 3 GHz / AMD Athlon XP 3400+\nMemory: 1 GB RAM\nGraphics: NVIDIA GeForce 7800 GTX / ATI Radeon X1900\nDirectX: Version 9.0c\nNetwork: Broadband Internet connection\nStorage: 6 GB available space",
+    "recommended": "Recommended:\nOS *: Windows XP, Vista, 7\nProcessor: Intel Core 2 Duo / AMD Athlon X2\nMemory: 2 GB RAM\nGraphics: NVIDIA GeForce GTX 260 / ATI Radeon HD 4850\nDirectX: Version 9.0c\nNetwork: Broadband Internet connection\nStorage: 6 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/24240/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:54.374Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:06.433Z",
+      "page": "Payday: The Heist"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\PAYDAY\\saves\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\PAYDAY\\renderer_settings.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Crash just before level starts",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist#Crash_just_before_level_starts",
+      "fixed": false
+    },
+    {
+      "title": "Black screen on start up or random crashes during the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist#Black_screen_on_start_up_or_random_crashes_during_the_game",
+      "fixed": true
+    },
+    {
+      "title": "Run the game at screen refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist#Run_the_game_at_screen_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "PhysX redistributable installation aborts",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist#PhysX_redistributable_installation_aborts",
+      "fixed": true
+    },
+    {
+      "title": "Freezes on Windows 11",
+      "url": "https://www.pcgamingwiki.com/wiki/Payday%3A_The_Heist#Freezes_on_Windows_11",
+      "fixed": true
+    }
+  ]
+}

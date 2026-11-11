@@ -1,0 +1,15 @@
+{
+  "id": "flatout-2-steam-mod",
+  "name": "FlatOut 2 创意工坊",
+  "nameEn": "FlatOut 2 Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "flatout-2",
+  "url": "https://steamcommunity.com/app/2990/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

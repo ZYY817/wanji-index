@@ -1,0 +1,78 @@
+{
+  "id": "lightyear-frontier",
+  "slug": "lightyear-frontier",
+  "name": {
+    "zh": "Lightyear Frontier"
+  },
+  "summary": "体验轻松惬意的开放世界农场生活，让机甲替你包揽重活。打造理想中的农场，让日常农务自动运转。调校机甲，清理大片林地、翻耕广袤田野；或与最多三位好友放慢脚步，共赏落日余晖。",
+  "summaryEn": "Experience a relaxing open-world farming game where your mech does the heavy lifting. Build your ideal farm and automate the upkeep.",
+  "genres": [],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1677110/",
+      "priceNote": "参考价 ¥ 71.20",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1677110,
+  "developers": [
+    "FRAME BREAK"
+  ],
+  "publishers": [
+    "FRAME BREAK",
+    "Coffee Stain Publishing"
+  ],
+  "releaseDate": "2026 年 11 月 4 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i3-4170 / AMD Ryzen 5 1500X\n内存: 12 GB RAM\n显卡: NVIDIA Geforce GTX 1050 / AMD Radeon RX 460\n存储空间: 需要 10 GB 可用空间\n附注事项: Low settings, 720p, 30 fps",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i7-4790K / AMD Ryzen 5 3600\n内存: 16 GB RAM\n显卡: AMD Radeon RX 6600 / NVIDIA Geforce GTX 1660 Ti\n存储空间: 需要 10 GB 可用空间\n附注事项: SSD Recommended - (High settings, 1080p, 60fps)"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i3-4170 / AMD Ryzen 5 1500X\nMemory: 12 GB RAM\nGraphics: NVIDIA Geforce GTX 1050 / AMD Radeon RX 460\nStorage: 10 GB available space\nAdditional Notes: Low settings, 720p, 30 fps",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i7-4790K / AMD Ryzen 5 3600\nMemory: 16 GB RAM\nGraphics: AMD Radeon RX 6600 / NVIDIA Geforce GTX 1660 Ti\nStorage: 10 GB available space\nAdditional Notes: SSD Recommended - (High settings, 1080p, 60fps)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1677110/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Lightyear_Frontier"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:41.411Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:01.795Z",
+      "page": "Lightyear Frontier"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\FarMech\\Saved\\SaveGames",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\FarMech\\Saved\\Config\\WindowsNoEditor",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

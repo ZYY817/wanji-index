@@ -1,0 +1,15 @@
+{
+  "id": "call-of-duty-2-pcgamingwiki-guide-page",
+  "name": "Call of Duty 2 技术资料页",
+  "nameEn": "Call of Duty 2 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "call-of-duty-2",
+  "url": "https://www.pcgamingwiki.com/wiki/Call_of_Duty_2",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

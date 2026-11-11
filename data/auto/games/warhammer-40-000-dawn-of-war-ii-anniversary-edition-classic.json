@@ -1,0 +1,65 @@
+{
+  "id": "warhammer-40-000-dawn-of-war-ii-anniversary-edition-classic",
+  "slug": "warhammer-40-000-dawn-of-war-ii-anniversary-edition-classic",
+  "name": {
+    "zh": "Warhammer 40,000: Dawn of War II - Anniversary Edition (Classic)"
+  },
+  "summary": "以一个捆绑包囊括全部《Warhammer 40,000: Dawn of War II》内容。体验这款屡获殊荣的实时战略游戏所有精彩内容，包括三个完整战役、六个多人派系，以及完整的Last Stand合作模式和八位独特英雄。",
+  "summaryEn": "All of Warhammer 40,000: Dawn of War II in one package. Play the award-winning real-time strategy game in all its glory, including three ful…",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/15620/",
+      "priceNote": "参考价 ¥ 148.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 15620,
+  "developers": [
+    "Relic Entertainment",
+    "Feral Interactive (Mac/Linux)"
+  ],
+  "publishers": [
+    "Relic Entertainment",
+    "Feral Interactive (Mac/Linux)"
+  ],
+  "releaseDate": "2009 年 2 月 18 日",
+  "zhSupport": "traditional",
+  "requirements": {
+    "minimum": "Minimum: \n OS *: Windows XP SP2 or Windows Vista SP1 \nProcessor: P4 3.2 GHz (single core) or any Dual Core processor \nMemory: 1 GB RAM (XP), 1.5 GB RAM (Vista) \nGraphics: A 128MB Video Card (Shader Model 3) - Nvidia GeForce 6600 GT / ATI X1600, or equivalent \nHard Drive: 6.5 GB of uncompressed Hard Drive space \nREQUIRED FOR MULTIPLAYER: INTERNET: Cable modem, DSL modem, or 56.6kbps modem for online multiplayer play: Network: TCP/IP compliant network",
+    "recommended": "Recommended: \n OS *: Windows XP SP2 or Windows Vista SP1 \nProcessor: AMD Athlon 64x2 4400+ or any Intel Core 2 Duo \nMemory: 2 GB RAM (XP and Vista) \nGraphics: A 256MB Video Card (Shader Model 3) - Nvidia GeForce 7800 GT / ATI X1900, or equivalent \nHard Drive: 6.5 GB of uncompressed Hard Drive space"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: \n OS *: Windows XP SP2 or Windows Vista SP1 \nProcessor: P4 3.2 GHz (single core) or any Dual Core processor \nMemory: 1 GB RAM (XP), 1.5 GB RAM (Vista) \nGraphics: A 128MB Video Card (Shader Model 3) - Nvidia GeForce 6600 GT / ATI X1600, or equivalent \nHard Drive: 6.5 GB of uncompressed Hard Drive space \nREQUIRED FOR MULTIPLAYER: INTERNET: Cable modem, DSL modem, or 56.6kbps modem for online multiplayer play: Network: TCP/IP compliant network",
+    "recommended": "Recommended: \n OS *: Windows XP SP2 or Windows Vista SP1 \nProcessor: AMD Athlon 64x2 4400+ or any Intel Core 2 Duo \nMemory: 2 GB RAM (XP and Vista) \nGraphics: A 256MB Video Card (Shader Model 3) - Nvidia GeForce 7800 GT / ATI X1900, or equivalent \nHard Drive: 6.5 GB of uncompressed Hard Drive space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/15620/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:51:24.245Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:57:05.628Z",
+      "page": null
+    }
+  }
+}

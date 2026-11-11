@@ -1,0 +1,15 @@
+{
+  "id": "quake-iii-arena-steamdb-other",
+  "name": "Quake III Arena 价格与版本史",
+  "nameEn": "Quake III Arena on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "quake-iii-arena",
+  "url": "https://steamdb.info/app/2200/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

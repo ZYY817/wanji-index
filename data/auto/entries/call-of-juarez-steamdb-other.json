@@ -1,0 +1,15 @@
+{
+  "id": "call-of-juarez-steamdb-other",
+  "name": "Call of Juarez 价格与版本史",
+  "nameEn": "Call of Juarez on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "call-of-juarez",
+  "url": "https://steamdb.info/app/3020/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

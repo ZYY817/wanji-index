@@ -1,0 +1,15 @@
+{
+  "id": "fallout-3-steamdb-other",
+  "name": "Fallout 3 价格与版本史",
+  "nameEn": "Fallout 3 on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "fallout-3",
+  "url": "https://steamdb.info/app/22300/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

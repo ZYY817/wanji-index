@@ -1,0 +1,143 @@
+{
+  "id": "psychonauts",
+  "slug": "psychonauts",
+  "name": {
+    "zh": "Psychonauts"
+  },
+  "summary": "A Psychic Odyssey Through the Minds of Misfits, Monsters, and Madmen.",
+  "summaryEn": "A Psychic Odyssey Through the Minds of Misfits, Monsters, and Madmen.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/3830/",
+      "priceNote": "参考价 ¥ 36.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 3830,
+  "developers": [
+    "Double Fine Productions"
+  ],
+  "publishers": [
+    "Double Fine Productions"
+  ],
+  "releaseDate": "2006 年 10 月 11 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows 98 SE/2000/XP\nProcessor: 1.0 GHz Pentium(R) III and AMD Athlon(tm)\nMemory: 256 MB of RAM\nGraphics: 64 MB GeForce (tm) 3 or higher or ATI(R) Radeon 8500 or higher (except GeForce 4 MX and Go series)\nDirectX®: version 9.0 or higher (included with game)\nHard Drive: 3.75 GB minimum hard drive space\nSound: DirectX&reg 9.0 or higher compatible sound card\nControls: Windows-compatible keyboard and mouse",
+    "recommended": "OS *: Windows 2000/XP\nProcessor: 2.0 GHz Pentium(R) IV and AMD Athlon(tm)\nMemory: 512 MB of RAM\nGraphics: , 128 MB GeForce FX 5600 or higher or ATI(R) Radeon 9600 or higher\nDirectX®: version 9.0 or higher (included with game)\nHard Drive: 6.0 GB minimum hard drive space\nSound: DirectX&reg 9.0 or higher and Sound Blaster Audigy 2 series sound card\nControls: Game Pad (optional)"
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows 98 SE/2000/XP\nProcessor: 1.0 GHz Pentium(R) III and AMD Athlon(tm)\nMemory: 256 MB of RAM\nGraphics: 64 MB GeForce (tm) 3 or higher or ATI(R) Radeon 8500 or higher (except GeForce 4 MX and Go series)\nDirectX®: version 9.0 or higher (included with game)\nHard Drive: 3.75 GB minimum hard drive space\nSound: DirectX&reg 9.0 or higher compatible sound card\nControls: Windows-compatible keyboard and mouse",
+    "recommended": "OS *: Windows 2000/XP\nProcessor: 2.0 GHz Pentium(R) IV and AMD Athlon(tm)\nMemory: 512 MB of RAM\nGraphics: , 128 MB GeForce FX 5600 or higher or ATI(R) Radeon 9600 or higher\nDirectX®: version 9.0 or higher (included with game)\nHard Drive: 6.0 GB minimum hard drive space\nSound: DirectX&reg 9.0 or higher and Sound Blaster Audigy 2 series sound card\nControls: Game Pad (optional)"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/3830/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:00.506Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:14.886Z",
+      "page": "Psychonauts"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Profiles",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Smart camera option does not work",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Smart_camera_option_does_not_work",
+      "fixed": false
+    },
+    {
+      "title": "Fullscreen issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Fullscreen_issues",
+      "fixed": false
+    },
+    {
+      "title": "Cannot interact with main menu; Raz T-poses",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Cannot_interact_with_main_menu%3B_Raz_T-poses",
+      "fixed": true
+    },
+    {
+      "title": "Non-smooth, \"wavy\" mouse movement in menu.",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Non-smooth%2C_%22wavy%22_mouse_movement_in_menu.",
+      "fixed": true
+    },
+    {
+      "title": "Game uses incorrect refresh rate",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Game_uses_incorrect_refresh_rate",
+      "fixed": true
+    },
+    {
+      "title": "Object flickering on AMD hardware",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Object_flickering_on_AMD_hardware",
+      "fixed": true
+    },
+    {
+      "title": "Crashing",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Crashing",
+      "fixed": true
+    },
+    {
+      "title": "Crash with 0xc0000005 error message",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Crash_with_0xc0000005_error_message",
+      "fixed": true
+    },
+    {
+      "title": "Crash when loading certain cutscenes",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Crash_when_loading_certain_cutscenes",
+      "fixed": true
+    },
+    {
+      "title": "Graphics error preventing startup",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Graphics_error_preventing_startup",
+      "fixed": true
+    },
+    {
+      "title": "Windows 8.1/10 black screen on startup / Freezes loading screen",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Windows_8.1%2F10_black_screen_on_startup_%2F_Freezes_loading_screen",
+      "fixed": true
+    },
+    {
+      "title": "Thermometer bar in wrong location",
+      "url": "https://www.pcgamingwiki.com/wiki/Psychonauts#Thermometer_bar_in_wrong_location",
+      "fixed": true
+    }
+  ]
+}

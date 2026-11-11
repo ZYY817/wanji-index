@@ -1,0 +1,119 @@
+{
+  "id": "killing-floor",
+  "slug": "killing-floor",
+  "name": {
+    "zh": "Killing Floor"
+  },
+  "summary": "6-player co-op survival horror at its finest! Free updates, free special events and a ridiculous amount of fun!",
+  "summaryEn": "6-player co-op survival horror at its finest! Free updates, free special events and a ridiculous amount of fun!",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1250/",
+      "priceNote": "参考价 ¥ 68.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 1250,
+  "developers": [
+    "Tripwire Interactive"
+  ],
+  "publishers": [
+    "Tripwire Interactive"
+  ],
+  "releaseDate": "2009 年 5 月 14 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置：\n系统：Windows XP/Vista\n处理器：1.2 GHZ 或相同级别\n内存：1 GB\n显卡：64 MB DX9 兼容显卡\n硬盘：2 GB 硬盘可用空间\n声卡：DX 8.1 兼容声卡",
+    "recommended": "建议配置：\n系统：Windows XP/Vista\n处理器：2.4 GHZ 或相同级别\n内存：2 GB\n显卡：128 MB DX9 兼容显卡，支持 PS 2.0\n硬盘：2 GB 硬盘可用空间\n声卡：Eax 环绕声效兼容声卡"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\n OS *: Windows XP/Vista\nProcessor: 1.2 GHZ or Equivalent\nMemory: 1 GB RAM\nGraphics: 64 MB DX9 Compliant\nHard Drive: 2 GB free hard drive space\nSound: DX 8.1 Compatible Audio",
+    "recommended": "Recommended:\n OS *: Windows XP/Vista\nProcessor: 2.4 GHZ or Equivalent\nMemory: 2 GB RAM\nGraphics: 128 MB DX9 Compliant with PS 2.0 support\nHard Drive: 2 GB free hard drive space\nSound: Eax Compatible"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1250/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:48:35.393Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:54:51.923Z",
+      "page": "Killing Floor"
+    }
+  },
+  "issues": [
+    {
+      "title": "CustomSpawnFix",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#CustomSpawnFix",
+      "fixed": true
+    },
+    {
+      "title": "Grenade Arm Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Grenade_Arm_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Paramedic Alfred Anderson Viewmodel Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Paramedic_Alfred_Anderson_Viewmodel_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Unicode Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Unicode_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Mouse sensitivity resets",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Mouse_sensitivity_resets",
+      "fixed": true
+    },
+    {
+      "title": "Crash to desktop",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Crash_to_desktop",
+      "fixed": true
+    },
+    {
+      "title": "Flickering",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Flickering",
+      "fixed": true
+    },
+    {
+      "title": "No Online Games/0 Servers from Master list",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#No_Online_Games%2F0_Servers_from_Master_list",
+      "fixed": true
+    },
+    {
+      "title": "Re-enable gore",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Re-enable_gore",
+      "fixed": true
+    },
+    {
+      "title": "Main menu unreadable in windowed mode",
+      "url": "https://www.pcgamingwiki.com/wiki/Killing_Floor#Main_menu_unreadable_in_windowed_mode",
+      "fixed": true
+    }
+  ]
+}

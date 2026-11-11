@@ -1,0 +1,144 @@
+{
+  "id": "bioshock-2",
+  "slug": "bioshock-2",
+  "name": {
+    "zh": "BioShock 2"
+  },
+  "summary": "Set approximately 10 years after the events of the original BioShock, the halls of Rapture once again echo with sins of the past.",
+  "summaryEn": "Set approximately 10 years after the events of the original BioShock, the halls of Rapture once again echo with sins of the past.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/8850/",
+      "priceNote": "参考价 ¥ 64.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 8850,
+  "developers": [
+    "2K Marin",
+    "2K China",
+    "Digital Extremes",
+    "2K Australia"
+  ],
+  "publishers": [
+    "2K"
+  ],
+  "releaseDate": "2010 年 2 月 9 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum:\nOS *: Windows XP, Vista, Windows 7\nProcessor: AMD Athlon 64 Processor 3800+ 2.4Ghz or better, Intel Pentium 4 530 3.0Ghz Processor or better\nMemory: 2GB\nGraphics: NVIDIA 7800GT 256MB graphics card or better, ATI Radeon X1900 256MB graphics card or better\nDirectX®: DirectX 9.0c\nHard Drive: 11GB\nSound: 100% DirectX 9.0C compliant sound card or onboard sound",
+    "recommended": "Recommended:\nProcessor: AMD Athlon 64 X2 5200+ Dual Core 2.60Ghz, Intel Core 2 Duo E6420 Dual Core 2.13Ghz\nMemory: 3GB\nGraphics: NVIDIA 8800GT 512MB graphics card or better, ATI Radeon HD4830 512MB graphics card or better\nOther Requirements: Initial installation requires one-time internet connection; software installations required including Microsoft Visual C++2008 Runtime Libraries, Microsoft DirectX."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP, Vista, Windows 7\nProcessor: AMD Athlon 64 Processor 3800+ 2.4Ghz or better, Intel Pentium 4 530 3.0Ghz Processor or better\nMemory: 2GB\nGraphics: NVIDIA 7800GT 256MB graphics card or better, ATI Radeon X1900 256MB graphics card or better\nDirectX®: DirectX 9.0c\nHard Drive: 11GB\nSound: 100% DirectX 9.0C compliant sound card or onboard sound",
+    "recommended": "Recommended:\nProcessor: AMD Athlon 64 X2 5200+ Dual Core 2.60Ghz, Intel Core 2 Duo E6420 Dual Core 2.13Ghz\nMemory: 3GB\nGraphics: NVIDIA 8800GT 512MB graphics card or better, ATI Radeon HD4830 512MB graphics card or better\nOther Requirements: Initial installation requires one-time internet connection; software installations required including Microsoft Visual C++2008 Runtime Libraries, Microsoft DirectX."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/8850/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:30.277Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:53:04.348Z",
+      "page": "BioShock 2"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\Bioshock2\\SaveGames\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Bioshock2Steam\\<用户 ID>.profile",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Bioshock2\\*.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Mouse sensitivity not correctly adjusting",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Mouse_sensitivity_not_correctly_adjusting",
+      "fixed": false
+    },
+    {
+      "title": "Crash on startup",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Crash_on_startup",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes randomly",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Game_crashes_randomly",
+      "fixed": true
+    },
+    {
+      "title": "Menu flickering",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Menu_flickering",
+      "fixed": true
+    },
+    {
+      "title": "Game brightness is extremely high in DirectX 9 mode",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Game_brightness_is_extremely_high_in_DirectX_9_mode",
+      "fixed": true
+    },
+    {
+      "title": "Audio Cutting Out in Combat Sequences",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Audio_Cutting_Out_in_Combat_Sequences",
+      "fixed": true
+    },
+    {
+      "title": "Left Plasmid hand disappears",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Left_Plasmid_hand_disappears",
+      "fixed": true
+    },
+    {
+      "title": "Game cannot load or save",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Game_cannot_load_or_save",
+      "fixed": true
+    },
+    {
+      "title": "Game crashes in DirectX 10 mode",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Game_crashes_in_DirectX_10_mode",
+      "fixed": true
+    },
+    {
+      "title": "No Little Sister voice acting",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#No_Little_Sister_voice_acting",
+      "fixed": true
+    },
+    {
+      "title": "Game overwrites desktop color profile",
+      "url": "https://www.pcgamingwiki.com/wiki/BioShock_2#Game_overwrites_desktop_color_profile",
+      "fixed": true
+    }
+  ]
+}

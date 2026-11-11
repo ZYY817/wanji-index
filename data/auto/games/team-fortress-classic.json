@@ -1,0 +1,111 @@
+{
+  "id": "team-fortress-classic",
+  "slug": "team-fortress-classic",
+  "name": {
+    "zh": "Team Fortress Classic"
+  },
+  "summary": "一款风靡全球的联机对战游戏 - Team Fortress Classic，九种游戏角色任你选择 - 从实习医生、间谍到战争狂人 - 以其鲜明的个性游走于网络激战的世界。 游戏中提供多种团队对战模式，每种角色都拥有不同的武器、物品和能力。",
+  "summaryEn": "One of the most popular online action games of all time, Team Fortress Classic features over nine character classes -- from Medic to Spy to …",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/20/",
+      "priceNote": "参考价 ¥ 19.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 20,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "1999 年 4 月 1 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置：500 mhz 处理器，96mb 内存，16mb 显卡，Windows XP，鼠标，键盘，互联网连接\n建议配置：800 mhz 处理器，128mb 内存，32mb 以上的显卡，Windows XP，鼠标，键盘，互联网连接",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum: 500 mhz processor, 96mb ram, 16mb video card, Windows XP, Mouse, Keyboard, Internet Connection\n Recommended: 800 mhz processor, 128mb ram, 32mb+ video card, Windows XP, Mouse, Keyboard, Internet Connection",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/20/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:47:46.322Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:47.316Z",
+      "page": "Team Fortress Classic"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Half-Life\\tfc\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Run the game at screen refresh rate (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Run_the_game_at_screen_refresh_rate_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Input Lag in Direct3D (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Input_Lag_in_Direct3D_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Main menu issues (Retail Version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Main_menu_issues_(Retail_Version)",
+      "fixed": true
+    },
+    {
+      "title": "Fatal Error - Available memory less than 15MB (Retail version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Fatal_Error_-_Available_memory_less_than_15MB_(Retail_version)",
+      "fixed": true
+    },
+    {
+      "title": "Black screen on startup (Steam version)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Black_screen_on_startup_(Steam_version)",
+      "fixed": true
+    },
+    {
+      "title": "Windows 7/Vista Performance Fix",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Windows_7%2FVista_Performance_Fix",
+      "fixed": true
+    },
+    {
+      "title": "Performance issues with dynamic lights on Intel graphics (OpenGL)",
+      "url": "https://www.pcgamingwiki.com/wiki/Team_Fortress_Classic#Performance_issues_with_dynamic_lights_on_Intel_graphics_(OpenGL)",
+      "fixed": true
+    }
+  ]
+}

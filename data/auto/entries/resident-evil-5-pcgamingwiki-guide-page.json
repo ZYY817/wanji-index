@@ -1,0 +1,15 @@
+{
+  "id": "resident-evil-5-pcgamingwiki-guide-page",
+  "name": "Resident Evil 5 技术资料页",
+  "nameEn": "Resident Evil 5 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "resident-evil-5",
+  "url": "https://www.pcgamingwiki.com/wiki/Resident_Evil_5",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-11",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

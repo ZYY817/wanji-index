@@ -1,0 +1,73 @@
+{
+  "id": "star-trek-online",
+  "slug": "star-trek-online",
+  "name": {
+    "zh": "Star Trek Online"
+  },
+  "summary": "In Star Trek Online, the Star Trek universe appears for the first time on a truly massive scale.",
+  "summaryEn": "In Star Trek Online, the Star Trek universe appears for the first time on a truly massive scale.",
+  "genres": [
+    "mmo",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/9900/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 9900,
+  "developers": [
+    "Cryptic Studios"
+  ],
+  "publishers": [
+    "Arc Games"
+  ],
+  "releaseDate": "2012 年 1 月 31 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "Minimum\nOS: Windows® 10/11 (64-bit)\nProcessor: Core 2 Duo 2.2Ghz (or equivalent AMD CPU)\nMemory: 4GB RAM\nGraphics: NVidia GeForce GTX 4xx, ATI/AMD Radeon HD 5xxx, or Intel HD Graphics 4xxx (Direct3D Hardware Feature Level 11)\nDirectX: Version 11.0\nNetwork: Broadband Internet Connection\nStorage: 21GB\nAudio: DirectX 11 compatible sound chip or onboard audio capability with the latest sound drivers",
+    "recommended": "Recommended\nOS: Windows® 10/11 (64-bit)\nProcessor: Core i5-6xxx Quad Core or better\nMemory: 6GB RAM or better\nGraphics: NVidia GeForce GTX 9xx or AMD Radeon RX 4xx or better\nDirectX: Version 11.0 or better\nNetwork: Broadband Internet Connection\nStorage: 21GB\nAudio: DirectX 11 compatible sound chip or onboard audio capability with the latest sound drivers"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum\nOS: Windows® 10/11 (64-bit)\nProcessor: Core 2 Duo 2.2Ghz (or equivalent AMD CPU)\nMemory: 4GB RAM\nGraphics: NVidia GeForce GTX 4xx, ATI/AMD Radeon HD 5xxx, or Intel HD Graphics 4xxx (Direct3D Hardware Feature Level 11)\nDirectX: Version 11.0\nNetwork: Broadband Internet Connection\nStorage: 21GB\nAudio: DirectX 11 compatible sound chip or onboard audio capability with the latest sound drivers",
+    "recommended": "Recommended\nOS: Windows® 10/11 (64-bit)\nProcessor: Core i5-6xxx Quad Core or better\nMemory: 6GB RAM or better\nGraphics: NVidia GeForce GTX 9xx or AMD Radeon RX 4xx or better\nDirectX: Version 11.0 or better\nNetwork: Broadband Internet Connection\nStorage: 21GB\nAudio: DirectX 11 compatible sound chip or onboard audio capability with the latest sound drivers"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/9900/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Star_Trek_Online"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:50:49.472Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:36.431Z",
+      "page": "Star Trek Online"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Star Trek Online\\Live\\localdata",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

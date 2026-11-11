@@ -1,0 +1,93 @@
+{
+  "id": "lego-star-warstm-the-complete-saga",
+  "slug": "lego-star-warstm-the-complete-saga",
+  "name": {
+    "zh": "LEGO Star Wars - The Complete Saga"
+  },
+  "summary": "Kick Some Brick in I through VI! Play through all six Star Wars movies in one videogame! Adding new characters, new levels, new features and…",
+  "summaryEn": "Kick Some Brick in I through VI! Play through all six Star Wars movies in one videogame! Adding new characters, new levels, new features and…",
+  "genres": [
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/32440/",
+      "priceNote": "参考价 ¥ 76.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-11"
+    }
+  ],
+  "steamAppId": 32440,
+  "developers": [
+    "Traveller's Tales"
+  ],
+  "publishers": [
+    "LucasArts",
+    "Lucasfilm",
+    "Disney"
+  ],
+  "releaseDate": "2009 年 11 月 12 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "OS *: Windows XP SP2/Vista\nProcessor: Intel P3 1.0GHz or AMD Athlon XP or higher\nMemory: 156MB of RAM, 512MB required for Vista\nGraphics: 128MB Graphics card with Shader Model 2.0 Capability\nHard Drive: 5GB of free space",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "OS *: Windows XP SP2/Vista\nProcessor: Intel P3 1.0GHz or AMD Athlon XP or higher\nMemory: 156MB of RAM, 512MB required for Vista\nGraphics: 128MB Graphics card with Shader Model 2.0 Capability\nHard Drive: 5GB of free space",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/32440/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Star_Wars%3A_The_Complete_Saga"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-11",
+  "createdAt": "2026-11-11",
+  "updatedAt": "2026-11-11",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-11T01:52:01.230Z",
+    "pcgw": {
+      "syncedAt": "2026-11-11T01:55:00.337Z",
+      "page": "Lego Star Wars: The Complete Saga"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\LucasArts\\LEGO Star Wars - The Complete Saga\\SavedGames\\SaveGame*.LEGO Star Wars - The Complete Saga_SavedGame",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\LucasArts\\LEGO Star Wars - The Complete Saga\\pcconfig.txt",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "\"The Great Pit of Carkoon\" is too dark",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Star_Wars%3A_The_Complete_Saga#%22The_Great_Pit_of_Carkoon%22_is_too_dark",
+      "fixed": false
+    },
+    {
+      "title": "Random BSOD during the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Lego_Star_Wars%3A_The_Complete_Saga#Random_BSOD_during_the_game",
+      "fixed": true
+    }
+  ]
+}
