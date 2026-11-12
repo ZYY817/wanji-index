@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/377160/",
       "priceNote": "参考价 ¥ 83.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 377160,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:03:38.716Z",
+    "syncedAt": "2026-11-12T02:48:16.325Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:58.067Z",
       "page": "Fallout 4"

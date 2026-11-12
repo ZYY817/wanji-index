@@ -18,7 +18,7 @@
       "url": "https://store.steampowered.com/app/1973530/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-05"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 1973530,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-05",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-05T02:07:36.836Z",
+    "syncedAt": "2026-11-12T02:51:41.054Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:24.494Z",
       "page": "Limbus Company"

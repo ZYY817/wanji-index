@@ -19,9 +19,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1492070/",
-      "priceNote": "参考价 ¥ 20.40",
+      "priceNote": "参考价 ¥ 60.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-05"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 1492070,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-05",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-05T02:08:04.547Z",
+    "syncedAt": "2026-11-12T02:53:05.743Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:50.646Z",
       "page": "Sker Ritual"

@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/221100/",
       "priceNote": "参考价 ¥ 239.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 221100,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:05:10.099Z",
+    "syncedAt": "2026-11-12T02:50:05.596Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:19.809Z",
       "page": "DayZ"

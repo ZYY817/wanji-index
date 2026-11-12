@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/294100/",
       "priceNote": "参考价 ¥ 128.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 294100,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:03:58.975Z",
+    "syncedAt": "2026-11-12T02:48:36.543Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:09.667Z",
       "page": "RimWorld"

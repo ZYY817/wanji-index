@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/477160/",
       "priceNote": "参考价 ¥ 17.40",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 477160,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:06:14.133Z",
+    "syncedAt": "2026-11-12T02:51:23.916Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:59.579Z",
       "page": "Human: Fall Flat"

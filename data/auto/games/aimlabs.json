@@ -23,7 +23,7 @@
       "url": "https://store.steampowered.com/app/714010/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-05"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 714010,
@@ -36,12 +36,12 @@
   "releaseDate": "2023 年 6 月 16 日",
   "zhSupport": "text",
   "requirements": {
-    "minimum": "最低配置:\n操作系统 *: Windows 7/8/10\n处理器: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\n内存: 4 GB RAM\n显卡: GTX 560 and up\n网络: 宽带互联网连接\n存储空间: 需要 12 GB 可用空间",
-    "recommended": "推荐配置:\n操作系统 *: Windows 7/8/10\n处理器: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\n内存: 4 GB RAM\n显卡: GTX 560 and up\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间"
+    "minimum": "最低配置:\n操作系统: Windows 10\n处理器: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\n内存: 4 GB RAM\n显卡: GTX 560 and up\n网络: 宽带互联网连接\n存储空间: 需要 12 GB 可用空间",
+    "recommended": "推荐配置:\n操作系统: Windows 10\n处理器: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\n内存: 4 GB RAM\n显卡: GTX 560 and up\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间"
   },
   "requirementsEn": {
-    "minimum": "Minimum:\nOS *: Windows 7/8/10\nProcessor: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\nMemory: 4 GB RAM\nGraphics: GTX 560 and up\nNetwork: Broadband Internet connection\nStorage: 12 GB available space",
-    "recommended": "Recommended:\nOS *: Windows 7/8/10\nProcessor: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\nMemory: 4 GB RAM\nGraphics: GTX 560 and up\nNetwork: Broadband Internet connection\nStorage: 20 GB available space"
+    "minimum": "Minimum:\nOS: Windows 10\nProcessor: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\nMemory: 4 GB RAM\nGraphics: GTX 560 and up\nNetwork: Broadband Internet connection\nStorage: 12 GB available space",
+    "recommended": "Recommended:\nOS: Windows 10\nProcessor: Intel® Core™ 2 Duo E6600 or AMD Phenom™ X3 8750 processor or better\nMemory: 4 GB RAM\nGraphics: GTX 560 and up\nNetwork: Broadband Internet connection\nStorage: 20 GB available space"
   },
   "sources": [
     {
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-05",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-05",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-05T02:07:05.676Z",
+    "syncedAt": "2026-11-12T02:49:00.158Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:17:55.750Z",
       "page": "Aimlabs"

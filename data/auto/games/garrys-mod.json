@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/4000/",
       "priceNote": "参考价 ¥ 36.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 4000,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:05:33.827Z",
+    "syncedAt": "2026-11-12T02:50:43.055Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:00.298Z",
       "page": "Garry's Mod"

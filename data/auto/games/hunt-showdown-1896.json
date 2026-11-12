@@ -20,7 +20,7 @@
       "url": "https://store.steampowered.com/app/594650/",
       "priceNote": "参考价 ¥ 128.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 594650,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:06:17.514Z",
+    "syncedAt": "2026-11-12T02:51:27.286Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:01.420Z",
       "page": "Hunt: Showdown 1896"

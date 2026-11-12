@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/70/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 70,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:05:57.331Z",
+    "syncedAt": "2026-11-12T02:51:07.131Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:24.869Z",
       "page": "Half-Life"

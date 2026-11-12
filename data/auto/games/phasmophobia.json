@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/739630/",
       "priceNote": "参考价 ¥ 68.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-04"
+      "checkedAt": "2026-11-12"
     }
   ],
   "steamAppId": 739630,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-04",
+  "checkedAt": "2026-11-12",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-12",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-04T02:06:52.053Z",
+    "syncedAt": "2026-11-12T02:52:25.243Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:51.504Z",
       "page": "Phasmophobia"
