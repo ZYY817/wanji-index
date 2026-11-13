@@ -1,0 +1,88 @@
+{
+  "id": "geometry-dash",
+  "slug": "geometry-dash",
+  "name": {
+    "zh": "Geometry Dash"
+  },
+  "summary": "Jump and fly your way through danger in this rhythm-based action platformer!",
+  "summaryEn": "Jump and fly your way through danger in this rhythm-based action platformer!",
+  "genres": [
+    "action",
+    "indie"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/322170/",
+      "priceNote": "参考价 ¥ 22.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 322170,
+  "developers": [
+    "RobTop Games"
+  ],
+  "publishers": [
+    "RobTop Games"
+  ],
+  "releaseDate": "2014 年 12 月 22 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows XP\n处理器: 2.0+ GHz\n内存: 512 MB RAM\n显卡: OpenGL 2.0 support\n存储空间: 需要 100 MB 可用空间",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP\nProcessor: 2.0+ GHz\nMemory: 512 MB RAM\nGraphics: OpenGL 2.0 support\nStorage: 100 MB available space",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/322170/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Geometry_Dash"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:05.163Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:53.835Z",
+      "page": "Geometry Dash"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\GeometryDash\\*.dat",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\GeometryDash\\*.dat",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "VRAM leak resulting in unplayable experience until you alt-tab out",
+      "url": "https://www.pcgamingwiki.com/wiki/Geometry_Dash#VRAM_leak_resulting_in_unplayable_experience_until_you_alt-tab_out",
+      "fixed": true
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "beamng-drive",
+  "slug": "beamng-drive",
+  "name": {
+    "zh": "BeamNG.drive"
+  },
+  "summary": "一款搭载软体物理系统的动态车辆模拟游戏，能够让任何事情成为可能。",
+  "summaryEn": "A dynamic soft-body physics vehicle simulator capable of doing just about anything.",
+  "genres": [
+    "racing",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/284160/",
+      "priceNote": "参考价 ¥ 68.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 284160,
+  "developers": [
+    "BeamNG"
+  ],
+  "publishers": [
+    "BeamNG"
+  ],
+  "releaseDate": "2015 年 5 月 29 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64 Bit\n处理器: AMD Ryzen 5 1600 / Intel Core i5 8400\n内存: 16 GB RAM\n显卡: Minimum 6GB VRAM (AMD Radeon RX 570 / Nvidia GeForce GTX 1060)\nDirectX 版本: 11\n存储空间: 需要 60 GB 可用空间\n附注事项: Installing game mods will increase required storage space. Gamepad recommended.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64 Bit\n处理器: AMD Ryzen 7 3700X / Intel Core i7 9700\n内存: 32 GB RAM\n显卡: Minimum 8GB VRAM (AMD RX 6700 / Nvidia GeForce RTX 3060)\nDirectX 版本: 11\n存储空间: 需要 60 GB 可用空间\n支持 VR: 10GB VRAM GPU with Vulkan support and OpenXR\n附注事项: Recommended spec based on 1080p resolution. Installing game mods will increase required storage space. Gamepad recommended."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64 Bit\nProcessor: AMD Ryzen 5 1600 / Intel Core i5 8400\nMemory: 16 GB RAM\nGraphics: Minimum 6GB VRAM (AMD Radeon RX 570 / Nvidia GeForce GTX 1060)\nDirectX: Version 11\nStorage: 60 GB available space\nAdditional Notes: Installing game mods will increase required storage space. Gamepad recommended.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64 Bit\nProcessor: AMD Ryzen 7 3700X / Intel Core i7 9700\nMemory: 32 GB RAM\nGraphics: Minimum 8GB VRAM (AMD RX 6700 / Nvidia GeForce RTX 3060)\nDirectX: Version 11\nStorage: 60 GB available space\nVR Support: 10GB VRAM GPU with Vulkan support and OpenXR\nAdditional Notes: Recommended spec based on 1080p resolution. Installing game mods will increase required storage space. Gamepad recommended."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/284160/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/BeamNG.drive"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:01.758Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:44.229Z",
+      "page": "BeamNG.drive"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\BeamNG\\BeamNG.drive\\<game.version>\\settings\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

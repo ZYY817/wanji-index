@@ -1,0 +1,64 @@
+{
+  "id": "dota-underlords",
+  "slug": "dota-underlords",
+  "name": {
+    "zh": "Dota Underlords"
+  },
+  "summary": "在这款以 Dota 世界为背景的全新战略对战游戏中，雇用一个军团，打败你的对手。 隆重推出第 1 赛季：探索白色尖塔，获取勇士令状奖励。 在数个不同的游戏模式中任意挑选，自己独乐，或与好友同乐，同时也别放过 PC 和移动设备间的跨平台畅玩功能！",
+  "summaryEn": "Hire a crew and destroy your rivals in this new strategy battler set in the world of Dota.",
+  "genres": [
+    "casual",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1046930/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 1046930,
+  "developers": [
+    "Valve"
+  ],
+  "publishers": [
+    "Valve"
+  ],
+  "releaseDate": "2019 年 6 月 20 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: 64-bit Windows 7 / 8 / 10\n处理器: Intel i5, 2.4 Ghz or better\n内存: 4 GB RAM\n显卡: Integrated HD Graphics 520 w/128 MB or better\n网络: 宽带互联网连接\n存储空间: 需要 7 GB 可用空间\n声卡: DirectX Compatible Sound Card",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: 64-bit Windows 7 / 8 / 10\nProcessor: Intel i5, 2.4 Ghz or better\nMemory: 4 GB RAM\nGraphics: Integrated HD Graphics 520 w/128 MB or better\nNetwork: Broadband Internet connection\nStorage: 7 GB available space\nSound Card: DirectX Compatible Sound Card",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1046930/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:23.930Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:48.480Z",
+      "page": "Dota Underlords"
+    }
+  }
+}

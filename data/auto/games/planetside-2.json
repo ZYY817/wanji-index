@@ -1,0 +1,100 @@
+{
+  "id": "planetside-2",
+  "slug": "planetside-2",
+  "name": {
+    "zh": "PlanetSide 2"
+  },
+  "summary": "《行星边际2》是一场全面动员的行星战争，成千上万的玩家在横跨数个浩瀚大陆的广大世界中一同战斗。利用步兵、地面和空中载具，发挥团队合作，在这个开创性的大规模第一人称射击游戏中消灭敌人。",
+  "summaryEn": "PlanetSide 2 is an all-out planetary war, where thousands of players battle as one across enormous continents.",
+  "genres": [
+    "action",
+    "mmo"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/218230/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 218230,
+  "developers": [
+    "Rogue Planet Games"
+  ],
+  "publishers": [
+    "Daybreak Game Company"
+  ],
+  "releaseDate": "2012 年 11 月 20 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\nOS *: 64-bit Windows 7 or later\nProcessor:: Core i5-4460 or better\nGraphics: Nvidia GeForce GTX 480 or better\nMemory: 6 GB RAM (64-bit)\nHard Drive: 20 GB HD space\nDirectX®: 11.0\nSound:DirectX compatible Sound Card \nOther Requirements:Broadband Internet connection",
+    "recommended": "Recommended:\nOS *:64-bit Windows 7 or later\nProcessor:Intel i5 6600K or higher / AMD Ryzen 5 1600 or higher\nGraphics:Nvidia GeForce 960 or higher / AMD R9 280X or higher\nMemory:8 GB RAM\nHard Drive:20 GB HD space\nDirectX®:11.0\nSound:DirectX compatible Sound Card \nOther Requirements:Broadband Internet connection"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: 64-bit Windows 7 or later\nProcessor:: Core i5-4460 or better\nGraphics: Nvidia GeForce GTX 480 or better\nMemory: 6 GB RAM (64-bit)\nHard Drive: 20 GB HD space\nDirectX®: 11.0\nSound:DirectX compatible Sound Card \nOther Requirements:Broadband Internet connection",
+    "recommended": "Recommended:\nOS *:64-bit Windows 7 or later\nProcessor:Intel i5 6600K or higher / AMD Ryzen 5 1600 or higher\nGraphics:Nvidia GeForce 960 or higher / AMD R9 280X or higher\nMemory:8 GB RAM\nHard Drive:20 GB HD space\nDirectX®:11.0\nSound:DirectX compatible Sound Card \nOther Requirements:Broadband Internet connection"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/218230/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:29:39.476Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:31:00.965Z",
+      "page": "PlanetSide 2"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\InputProfile_User.xml",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\UserOptions.ini",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Cannot install game (Steam)",
+      "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2#Cannot_install_game_(Steam)",
+      "fixed": true
+    },
+    {
+      "title": "Planetside2.exe has stopped working",
+      "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2#Planetside2.exe_has_stopped_working",
+      "fixed": true
+    },
+    {
+      "title": "Low frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2#Low_frame_rate",
+      "fixed": true
+    },
+    {
+      "title": "Random Freezing for a few seconds",
+      "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2#Random_Freezing_for_a_few_seconds",
+      "fixed": true
+    }
+  ]
+}

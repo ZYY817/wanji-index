@@ -1,0 +1,62 @@
+{
+  "id": "resident-evil-4",
+  "slug": "resident-evil-4",
+  "name": {
+    "zh": "Resident Evil 4"
+  },
+  "summary": "成功逃脱并战胜死亡的快感。 前所未有的生化灾难“浣熊市事件”六年后...... 成为特务的里昂·斯科特·肯尼迪被派去营救被绑架的总统千金。 里昂踏进被“疯狂”支配之地，他的结局会是…… 一场生与死、恐怖与感情瞬间交错的严酷营救剧即将揭开帷幕。",
+  "summaryEn": "Survival is just the beginning. Six years have passed since the biological disaster in Raccoon City. Leon S.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2050650/",
+      "priceNote": "参考价 ¥ 198.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 2050650,
+  "developers": [
+    "CAPCOM Co., Ltd."
+  ],
+  "publishers": [
+    "CAPCOM Co., Ltd."
+  ],
+  "releaseDate": "2023 年 3 月 23 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10(必须为64bit)\n处理器: AMD Ryzen 3 1200 / Intel Core i5-7500\n内存: 8 GB RAM\n显卡: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM\nDirectX 版本: 12\n网络: 宽带互联网连接\n附注事项: 画面设定为\"性能优先\"的情况下，能够以1080p/45fps进行游戏。 ※若负荷过大，帧数可能会降低。 为了支持光线追踪，显卡性能需达AMD Radeon RX 6700 XT或NVIDIA GeForce RTX 2060。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10(必须为64bit)/Windows 11(必须为64bit)\n处理器: AMD Ryzen 5 3600 / Intel Core i7 8700\n内存: 16 GB RAM\n显卡: AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070\nDirectX 版本: 12\n网络: 宽带互联网连接\n附注事项: 画面设定为\"优先图像\"的情况下，能够以1080p/60fps进行游戏。 ※若负荷过大，帧数可能会降低。 为了支持光线追踪，显卡性能需达AMD Radeon RX 6700 XT或NVIDIA GeForce RTX 2070。"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (64 bit)\nProcessor: AMD Ryzen 3 1200 / Intel Core i5-7500\nMemory: 8 GB RAM\nGraphics: AMD Radeon RX 560 with 4GB VRAM / NVIDIA GeForce GTX 1050 Ti with 4GB VRAM\nDirectX: Version 12\nNetwork: Broadband Internet connection\nAdditional Notes: Estimated performance (when set to Prioritize Performance): 1080p/45fps. ・Framerate might drop in graphics-intensive scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2060 required to support ray tracing.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (64 bit)/Windows 11 (64 bit)\nProcessor: AMD Ryzen 5 3600 / Intel Core i7 8700\nMemory: 16 GB RAM\nGraphics: AMD Radeon RX 5700 / NVIDIA GeForce GTX 1070\nDirectX: Version 12\nNetwork: Broadband Internet connection\nAdditional Notes: Estimated performance: 1080p/60fps ・Framerate might drop in graphics-intensive scenes. ・AMD Radeon RX 6700 XT or NVIDIA GeForce RTX 2070 required to support ray tracing."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2050650/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:32.461Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:31:05.808Z",
+      "page": null
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "beamng-drive-steamdb-other",
+  "name": "BeamNG.drive 价格与版本史",
+  "nameEn": "BeamNG.drive on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "beamng-drive",
+  "url": "https://steamdb.info/app/284160/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

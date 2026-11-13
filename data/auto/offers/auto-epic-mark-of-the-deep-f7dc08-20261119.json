@@ -1,0 +1,21 @@
+{
+  "id": "auto-epic-mark-of-the-deep-f7dc08-20261119",
+  "gameTitle": "Mark of the Deep",
+  "type": "limited",
+  "platform": "epic",
+  "url": "https://store.epicgames.com/zh-CN/p/mark-of-the-deep-f7dc08",
+  "claimNote": "Epic 下一期每周限免（已公布）",
+  "claimNoteEn": "Next Epic weekly freebie (announced)",
+  "startDate": "2026-11-19T16:00:00.000Z",
+  "endDate": "2026-11-26T16:00:00.000Z",
+  "checkedAt": "2026-11-13",
+  "linkHealth": "ok",
+  "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
+  "art": {
+    "wide": "https://cdn1.epicgames.com/spt-assets/83a240506a884c10ad8fb99694e57a0d/mark-of-the-deep-w1ygr.png",
+    "tall": "https://cdn1.epicgames.com/spt-assets/83a240506a884c10ad8fb99694e57a0d/mark-of-the-deep-1lope.png"
+  },
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "war-robots",
+  "slug": "war-robots",
+  "name": {
+    "zh": "War Robots"
+  },
+  "summary": "《War Robots》是在线三人 6v6 Pvp 射击游戏，在其中有数十种战斗机器人，数百种武器组合，以及白热 化的派系战斗。",
+  "summaryEn": "War Robots is an online third-person 6v6 PvP shooter—we’re talking dozens of combat robots, hundreds of weapons combinations, and heated cla…",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/767560/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 767560,
+  "developers": [
+    "MY.GAMES"
+  ],
+  "publishers": [
+    "MY.GAMES"
+  ],
+  "releaseDate": "2018 年 4 月 4 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: 2.5 GHz\n内存: 2 GB RAM\n显卡: Video Card with DX11 support, 2GB VRAM\nDirectX 版本: 11\n存储空间: 需要 4 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: 3.2 GHz\n内存: 8 GB RAM\n显卡: NVIDIA GTX 960\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 8 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: 2.5 GHz\nMemory: 2 GB RAM\nGraphics: Video Card with DX11 support, 2GB VRAM\nDirectX: Version 11\nStorage: 4 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: 3.2 GHz\nMemory: 8 GB RAM\nGraphics: NVIDIA GTX 960\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 8 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/767560/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:20.543Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:31:10.053Z",
+      "page": "War Robots"
+    }
+  }
+}

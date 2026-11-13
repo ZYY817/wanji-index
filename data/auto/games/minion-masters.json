@@ -1,0 +1,78 @@
+{
+  "id": "minion-masters",
+  "slug": "minion-masters",
+  "name": {
+    "zh": "随从大师",
+    "en": "Minion Masters"
+  },
+  "summary": "这是一款包含了卡牌收集、MOBA以及塔防元素的快节奏游戏。 您可以进行1V1决斗或者叫上好友进行2V2战斗，并在这场充满变数的游戏中尽情享受！ 您可以免费获取、收集超过200张机制各异的卡牌！",
+  "summaryEn": "An addictive fast-paced hybrid of Card games & Tower-Defense. Play 1v1 - or bring a friend for 2v2 - and engage in epic online multiplayer b…",
+  "genres": [
+    "action",
+    "adventure",
+    "indie",
+    "rpg",
+    "strategy"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/489520/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 489520,
+  "developers": [
+    "BetaDwarf"
+  ],
+  "publishers": [
+    "BetaDwarf"
+  ],
+  "releaseDate": "2019 年 5 月 24 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7, Windows 8, Windows 10\n处理器: Intel Core i3, 2.4 Ghz or equivalent\n内存: 4 GB RAM\n显卡: Nvidia Geforce GT 240 or equivalent, minimum 512 MB of VRAM\nDirectX 版本: 10\n网络: 宽带互联网连接\n存储空间: 需要 6 GB 可用空间",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7, Windows 8, Windows 10\nProcessor: Intel Core i3, 2.4 Ghz or equivalent\nMemory: 4 GB RAM\nGraphics: Nvidia Geforce GT 240 or equivalent, minimum 512 MB of VRAM\nDirectX: Version 10\nNetwork: Broadband Internet connection\nStorage: 6 GB available space",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/489520/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Minion_Masters"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:10.283Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:56.683Z",
+      "page": "Minion Masters"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\BetaDwarf ApS\\Minion Masters\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

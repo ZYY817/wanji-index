@@ -1,0 +1,15 @@
+{
+  "id": "subnautica-pcgamingwiki-guide-page",
+  "name": "Subnautica - 深海迷航 技术资料页",
+  "nameEn": "Subnautica on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "subnautica",
+  "url": "https://www.pcgamingwiki.com/wiki/Subnautica",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -1,0 +1,15 @@
+{
+  "id": "geometry-dash-pcgamingwiki-guide-page",
+  "name": "Geometry Dash 技术资料页",
+  "nameEn": "Geometry Dash on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "geometry-dash",
+  "url": "https://www.pcgamingwiki.com/wiki/Geometry_Dash",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

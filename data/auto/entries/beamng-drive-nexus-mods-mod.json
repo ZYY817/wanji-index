@@ -1,0 +1,15 @@
+{
+  "id": "beamng-drive-nexus-mods-mod",
+  "name": "BeamNG.drive Nexus Mods 专区",
+  "nameEn": "BeamNG.drive on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "beamng-drive",
+  "url": "https://www.nexusmods.com/beamngdrive",
+  "note": "Nexus 上的 MOD 专区，共 163 个 MOD",
+  "noteEn": "Nexus Mods hub with 163 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

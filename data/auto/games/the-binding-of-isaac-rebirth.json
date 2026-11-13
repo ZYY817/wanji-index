@@ -1,0 +1,164 @@
+{
+  "id": "the-binding-of-isaac-rebirth",
+  "slug": "the-binding-of-isaac-rebirth",
+  "name": {
+    "zh": "The Binding of Isaac: Rebirth"
+  },
+  "summary": "The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements.",
+  "summaryEn": "The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows",
+    "macos",
+    "linux"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/250900/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 250900,
+  "developers": [
+    "Nicalis, Inc.",
+    "Edmund McMillen"
+  ],
+  "publishers": [
+    "Nicalis, Inc."
+  ],
+  "releaseDate": "2014 年 11 月 4 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: XP\n处理器: Core 2 Duo\n内存: 2 GB RAM\n显卡: Discreet video card\n存储空间: 需要 449 MB 可用空间\n声卡: Yes",
+    "recommended": "推荐配置:\n操作系统 *: Windows 8 / 7 / Vista / XP\n处理器: 2.4 GHz Quad Core 2.0 (or higher)\n内存: 8 GB RAM\n显卡: Intel HD Graphics 4000 and higher, ATI Radeon HD-Series 4650 and higher, Nvidia GeForce 2xx-Series and up\n存储空间: 需要 449 MB 可用空间\n声卡: Yes"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: XP\nProcessor: Core 2 Duo\nMemory: 2 GB RAM\nGraphics: Discreet video card\nStorage: 449 MB available space\nSound Card: Yes",
+    "recommended": "Recommended:\nOS *: Windows 8 / 7 / Vista / XP\nProcessor: 2.4 GHz Quad Core 2.0 (or higher)\nMemory: 8 GB RAM\nGraphics: Intel HD Graphics 4000 and higher, ATI Radeon HD-Series 4650 and higher, Nvidia GeForce 2xx-Series and up\nStorage: 449 MB available space\nSound Card: Yes"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/250900/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:29:49.722Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:31:08.630Z",
+      "page": "The Binding of Isaac: Rebirth"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Rebirth\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Afterbirth\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Afterbirth+\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Repentance\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Repentance+\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Rebirth\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Afterbirth\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Afterbirth+\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Repentance\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\Binding of Isaac Repentance+\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Improve performance on old hardware",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Improve_performance_on_old_hardware",
+      "fixed": true
+    },
+    {
+      "title": "Crash on game start",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Crash_on_game_start",
+      "fixed": true
+    },
+    {
+      "title": "Keyboard getting stuck sometimes",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Keyboard_getting_stuck_sometimes",
+      "fixed": true
+    },
+    {
+      "title": "Sound effects not working",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Sound_effects_not_working",
+      "fixed": true
+    },
+    {
+      "title": "Speed issues, unstable frame rate",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Speed_issues%2C_unstable_frame_rate",
+      "fixed": true
+    },
+    {
+      "title": "Audio noise for hardware connected via USB",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Audio_noise_for_hardware_connected_via_USB",
+      "fixed": true
+    },
+    {
+      "title": "Motion sickness caused by the camera",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Motion_sickness_caused_by_the_camera",
+      "fixed": true
+    },
+    {
+      "title": "Transfering save files from Rebirth to Repentance",
+      "url": "https://www.pcgamingwiki.com/wiki/The_Binding_of_Isaac%3A_Rebirth#Transfering_save_files_from_Rebirth_to_Repentance",
+      "fixed": true
+    }
+  ]
+}

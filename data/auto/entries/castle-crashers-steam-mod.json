@@ -1,0 +1,15 @@
+{
+  "id": "castle-crashers-steam-mod",
+  "name": "Castle Crashers 创意工坊",
+  "nameEn": "Castle Crashers Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "castle-crashers",
+  "url": "https://steamcommunity.com/app/204360/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

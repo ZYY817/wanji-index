@@ -1,0 +1,15 @@
+{
+  "id": "resident-evil-4-steamdb-other",
+  "name": "Resident Evil 4 价格与版本史",
+  "nameEn": "Resident Evil 4 on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "resident-evil-4",
+  "url": "https://steamdb.info/app/2050650/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

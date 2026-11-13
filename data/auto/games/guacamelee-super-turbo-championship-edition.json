@@ -1,0 +1,76 @@
+{
+  "id": "guacamelee-super-turbo-championship-edition",
+  "slug": "guacamelee-super-turbo-championship-edition",
+  "name": {
+    "zh": "墨西哥英雄大混战:超级漩涡冠军版 Guacamelee! Super Turbo Championship Edition",
+    "en": "Guacamelee! Super Turbo Championship Edition"
+  },
+  "summary": "《墨西哥英雄大混战:超级漩涡冠军版》是备受好评的冒险平台游戏，融合了类银河战士恶魔城风格。该最终版本为原版《墨西哥英雄大混战:黄金版》的墨西哥风格冒险之旅增加了新的关卡、能力、挑战和改进。这个版本将原版游戏中宏大、荒诞的世界推向了新的高潮。",
+  "summaryEn": "The definitive version of the smash-hit Metroidvania-style action-platformer, Guacamelee! STCE adds new levels, powers, challenges, and refi…",
+  "genres": [
+    "action",
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/275390/",
+      "priceNote": "参考价 ¥ 59.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 275390,
+  "developers": [
+    "Drinkbox Studios"
+  ],
+  "publishers": [
+    "Drinkbox Studios",
+    "Kepler Ghost"
+  ],
+  "releaseDate": "2014 年 8 月 21 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7, 8, XP, 2000 and Vista\n处理器: 2 Ghz+\n内存: 512 MB RAM\n显卡: Shader Model 3.0, 512 MB VRAM\nDirectX 版本: 9.0c\n存储空间: 需要 800 MB 可用空间\n附注事项: Supports Xbox 360 Controller and other XInput-compatible controllers",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7, 8, XP, 2000 and Vista\nProcessor: 2 Ghz+\nMemory: 512 MB RAM\nGraphics: Shader Model 3.0, 512 MB VRAM\nDirectX: Version 9.0c\nStorage: 800 MB available space\nAdditional Notes: Supports Xbox 360 Controller and other XInput-compatible controllers",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/275390/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Guacamelee!_Super_Turbo_Championship_Edition"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:29:58.316Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:55.276Z",
+      "page": "Guacamelee! Super Turbo Championship Edition"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\GuacameleeSTCE\\LOCALSETTINGS.DAT",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

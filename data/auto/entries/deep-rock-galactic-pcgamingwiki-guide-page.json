@@ -1,0 +1,15 @@
+{
+  "id": "deep-rock-galactic-pcgamingwiki-guide-page",
+  "name": "深岩银河 技术资料页",
+  "nameEn": "Deep Rock Galactic on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "deep-rock-galactic",
+  "url": "https://www.pcgamingwiki.com/wiki/Deep_Rock_Galactic",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

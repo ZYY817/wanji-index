@@ -1,0 +1,15 @@
+{
+  "id": "planetside-2-pcgamingwiki-guide-page",
+  "name": "PlanetSide 2 技术资料页",
+  "nameEn": "PlanetSide 2 on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "planetside-2",
+  "url": "https://www.pcgamingwiki.com/wiki/PlanetSide_2",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

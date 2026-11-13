@@ -1,0 +1,82 @@
+{
+  "id": "elden-ring-nightreign",
+  "slug": "elden-ring-nightreign",
+  "name": {
+    "zh": "艾尔登法环 黑夜君临",
+    "en": "ELDEN RING NIGHTREIGN"
+  },
+  "summary": "《艾尔登法环 黑夜君临》（ELDEN RING NIGHTREIGN）为基于《艾尔登法环》（ELDEN RING）的世界观， 重新构思游戏的核心设计，带给玩家全新体验的衍生作品。",
+  "summaryEn": "ELDEN RING NIGHTREIGN is a standalone adventure within the ELDEN RING universe, crafted to offer players a new gaming experience by reimagin…",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2622380/",
+      "priceNote": "参考价 ¥ 198.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 2622380,
+  "developers": [
+    "FromSoftware, Inc."
+  ],
+  "publishers": [
+    "FromSoftware, Inc.",
+    "Bandai Namco Entertainment"
+  ],
+  "releaseDate": "2025 年 5 月 29 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5-10600 / AMD RYZEN 5 5500\n内存: 12 GB RAM\n显卡: NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB\nDirectX 版本: 12\n存储空间: 需要 30 GB 可用空间\n声卡: Windows compatible audio device",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11\n处理器: Intel Core i5-11500 / AMD RYZEN 5 5600\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1070 8GB / AMD Radeon RX Vega-56 8GB\nDirectX 版本: 12\n存储空间: 需要 30 GB 可用空间\n声卡: Windows compatible audio device"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5-10600 / AMD RYZEN 5 5500\nMemory: 12 GB RAM\nGraphics: NVIDIA GeForce GTX 1060 3GB / AMD Radeon RX 580 4GB\nDirectX: Version 12\nStorage: 30 GB available space\nSound Card: Windows compatible audio device",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 11\nProcessor: Intel Core i5-11500 / AMD RYZEN 5 5600\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1070 8GB / AMD Radeon RX Vega-56 8GB\nDirectX: Version 12\nStorage: 30 GB available space\nSound Card: Windows compatible audio device"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2622380/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Elden_Ring_Nightreign"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:35.911Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:52.437Z",
+      "page": "Elden Ring Nightreign"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Nightreign\\<用户 ID>\\NR0000.sl2",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Nightreign\\GraphicsConfig.xml",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

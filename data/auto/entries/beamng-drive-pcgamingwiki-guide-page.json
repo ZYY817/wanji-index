@@ -1,0 +1,15 @@
+{
+  "id": "beamng-drive-pcgamingwiki-guide-page",
+  "name": "BeamNG.drive 技术资料页",
+  "nameEn": "BeamNG.drive on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "beamng-drive",
+  "url": "https://www.pcgamingwiki.com/wiki/BeamNG.drive",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

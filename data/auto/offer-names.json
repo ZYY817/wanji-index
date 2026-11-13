@@ -1,4 +1,10 @@
 {
+  "auto-epic-alien-isolation-20261119": {
+    "steamAppId": "214490",
+    "genres": [
+      "action"
+    ]
+  },
   "auto-epic-idle-champions-of-the-forgotten-realms-20261105": {
     "steamAppId": "627690",
     "genres": [
@@ -7,8 +13,9 @@
       "indie"
     ]
   },
-  "auto-epic-sker-ritual-aac702-20261022": {
-    "steamAppId": "1492070",
+  "auto-epic-mark-of-the-deep-f7dc08-20261119": {
+    "steamAppId": "1933370",
+    "zh": "深渊之印",
     "genres": [
       "action",
       "adventure",

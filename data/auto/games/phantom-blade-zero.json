@@ -1,0 +1,86 @@
+{
+  "id": "phantom-blade-zero",
+  "slug": "phantom-blade-zero",
+  "name": {
+    "zh": "影之刃零",
+    "en": "Phantom Blade Zero"
+  },
+  "summary": "由灵游坊自主研发及发行，虚幻5引擎打造的暗黑武侠动作冒险游戏。 你将化身心脏遭受重创的剑客，在仅余六十六天的生命里，逃亡于刀光剑影和腥风血雨之间，并粉碎一桩笼罩在整个武林上方的惊天阴谋。在失序末法的武林中以身证道，以命寻心。",
+  "summaryEn": "S-GAME presents Phantom Blade Zero, a fusion of classic Wuxia storytelling and exhilarating action powered by Unreal Engine 5.",
+  "genres": [
+    "action",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/4115450/",
+      "priceNote": "参考价 ¥ 268.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 4115450,
+  "developers": [
+    "S-GAME Studio"
+  ],
+  "publishers": [
+    "S-GAME Publishing"
+  ],
+  "releaseDate": "2026 年 10 月 28 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11 (需要 64 位处理器和操作系统)\n处理器: Intel Core i7-8700K / AMD Ryzen 5 3600\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1660 6GB / AMD Radeon RX 5500 XT 8GB\nDirectX 版本: 12\n存储空间: 需要 145 GB 可用空间\n附注事项: 1080p / 30 FPS（开启超分辨率重建）；游戏须安装在 SSD 上。",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11 (需要 64 位处理器和操作系统)\n处理器: Intel Core i5-10600K / AMD Ryzen 5 5600X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB\nDirectX 版本: 12\n存储空间: 需要 145 GB 可用空间\n附注事项: 1440p / 60 FPS（开启超分辨率重建）；游戏须安装在 SSD 上。"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10/11 (64bit required)\nProcessor: Intel Core i7-8700K / AMD Ryzen 5 3600\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1660 6GB / AMD Radeon RX 5500 XT 8GB\nDirectX: Version 12\nStorage: 145 GB available space\nAdditional Notes: 1080p / 30 FPS with upscaling enabled. SSD installation required.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10/11 (64bit required)\nProcessor: Intel Core i5-10600K / AMD Ryzen 5 5600X\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce RTX 3060 Ti 8GB / AMD Radeon RX 6700 XT 12GB\nDirectX: Version 12\nStorage: 145 GB available space\nAdditional Notes: 1440p / 60 FPS with upscaling enabled. SSD installation required."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/4115450/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Phantom_Blade_Zero"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:30:41.035Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:59.532Z",
+      "page": "Phantom Blade Zero"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\ProjectPBZ\\Saved\\SaveGames\\Steam\\<用户 ID>\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\ProjectPBZ\\Saved\\Config\\Windows\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\ProjectPBZ\\Saved\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

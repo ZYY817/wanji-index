@@ -1,0 +1,66 @@
+{
+  "id": "castle-crashers",
+  "slug": "castle-crashers",
+  "name": {
+    "zh": "Castle Crashers"
+  },
+  "summary": "Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from The Behemoth!",
+  "summaryEn": "Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from The Behemoth!",
+  "genres": [
+    "action",
+    "adventure",
+    "casual",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/204360/",
+      "priceNote": "参考价 ¥ 48.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-13"
+    }
+  ],
+  "steamAppId": 204360,
+  "developers": [
+    "The Behemoth"
+  ],
+  "publishers": [
+    "The Behemoth"
+  ],
+  "releaseDate": "2012 年 9 月 26 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "Minimum:\nOS:Microsoft® Windows® 10\nProcessor:Intel Core 2 Duo 2GHz+ or better\nMemory:8 GB RAM\nGraphics:2GB RAM \nDirectX®:9.0c\nHard Drive:512 MB HD space\nSound:DirectX compatible\nOther Requirements:Broadband Internet connection\nAdditional:Supports Direct Input compatible controllers\nAdditional:Ultra Graphics Mode requires a 64-bit OS, at least 8GB of RAM, and 2GB VRAM.",
+    "recommended": ""
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS:Microsoft® Windows® 10\nProcessor:Intel Core 2 Duo 2GHz+ or better\nMemory:8 GB RAM\nGraphics:2GB RAM \nDirectX®:9.0c\nHard Drive:512 MB HD space\nSound:DirectX compatible\nOther Requirements:Broadband Internet connection\nAdditional:Supports Direct Input compatible controllers\nAdditional:Ultra Graphics Mode requires a 64-bit OS, at least 8GB of RAM, and 2GB VRAM.",
+    "recommended": ""
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/204360/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-13",
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-13T02:29:36.084Z",
+    "pcgw": {
+      "syncedAt": "2026-11-13T02:30:45.614Z",
+      "page": "Castle Crashers"
+    }
+  }
+}

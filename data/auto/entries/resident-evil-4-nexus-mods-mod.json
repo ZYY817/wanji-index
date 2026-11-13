@@ -1,0 +1,15 @@
+{
+  "id": "resident-evil-4-nexus-mods-mod",
+  "name": "Resident Evil 4 Nexus Mods 专区",
+  "nameEn": "Resident Evil 4 on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "resident-evil-4",
+  "url": "https://www.nexusmods.com/residentevil4",
+  "note": "Nexus 上的 MOD 专区，共 601 个 MOD",
+  "noteEn": "Nexus Mods hub with 601 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

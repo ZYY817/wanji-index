@@ -1,0 +1,15 @@
+{
+  "id": "no-more-room-in-hell-steam-mod",
+  "name": "No More Room in Hell 创意工坊",
+  "nameEn": "No More Room in Hell Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "no-more-room-in-hell",
+  "url": "https://steamcommunity.com/app/224260/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

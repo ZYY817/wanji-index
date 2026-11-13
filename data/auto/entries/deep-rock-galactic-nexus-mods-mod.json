@@ -1,0 +1,15 @@
+{
+  "id": "deep-rock-galactic-nexus-mods-mod",
+  "name": "深岩银河 Nexus Mods 专区",
+  "nameEn": "Deep Rock Galactic on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "deep-rock-galactic",
+  "url": "https://www.nexusmods.com/deeprockgalactic",
+  "note": "Nexus 上的 MOD 专区，共 41 个 MOD",
+  "noteEn": "Nexus Mods hub with 41 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

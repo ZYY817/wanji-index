@@ -1,0 +1,15 @@
+{
+  "id": "subnautica-nexus-mods-mod",
+  "name": "Subnautica - 深海迷航 Nexus Mods 专区",
+  "nameEn": "Subnautica on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "subnautica",
+  "url": "https://www.nexusmods.com/subnautica",
+  "note": "Nexus 上的 MOD 专区，共 2,281 个 MOD",
+  "noteEn": "Nexus Mods hub with 2,281 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-13",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}
