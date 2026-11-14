@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1091500/",
       "priceNote": "参考价 ¥ 298.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-07"
+      "checkedAt": "2026-11-14"
     }
   ],
   "steamAppId": 1091500,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-07",
+  "checkedAt": "2026-11-14",
   "createdAt": "2026-10-30",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-14",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-07T01:44:38.079Z",
+    "syncedAt": "2026-11-14T02:08:02.806Z",
     "pcgw": {
       "syncedAt": "2026-10-30T12:33:48.543Z",
       "page": "Cyberpunk 2077"

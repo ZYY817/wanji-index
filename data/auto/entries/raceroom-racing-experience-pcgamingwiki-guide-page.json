@@ -1,0 +1,15 @@
+{
+  "id": "raceroom-racing-experience-pcgamingwiki-guide-page",
+  "name": "RaceRoom Racing Experience 技术资料页",
+  "nameEn": "RaceRoom Racing Experience on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "raceroom-racing-experience",
+  "url": "https://www.pcgamingwiki.com/wiki/RaceRoom_Racing_Experience",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-14",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

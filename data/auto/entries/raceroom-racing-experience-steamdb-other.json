@@ -1,0 +1,15 @@
+{
+  "id": "raceroom-racing-experience-steamdb-other",
+  "name": "RaceRoom Racing Experience 价格与版本史",
+  "nameEn": "RaceRoom Racing Experience on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "raceroom-racing-experience",
+  "url": "https://steamdb.info/app/211500/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-14",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

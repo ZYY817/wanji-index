@@ -1,0 +1,119 @@
+{
+  "id": "no-mans-sky",
+  "slug": "no-mans-sky",
+  "name": {
+    "zh": "No Man's Sky 无人深空",
+    "en": "No Man's Sky"
+  },
+  "summary": "《无人深空》是一款打破边界的科幻游戏，通过创新的随机生成技术，打造了一个无尽宇宙供玩家自由探索，玩家可以穿越星际、挖掘未知星球、建立基地并与神秘外星生物共生，每个探险家都将书写属于自己的宇宙传奇。",
+  "summaryEn": "No Man's Sky is a game about exploration and survival in an infinite procedurally generated universe.",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/275850/",
+      "priceNote": "参考价 ¥ 175.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-14"
+    }
+  ],
+  "steamAppId": 275850,
+  "developers": [
+    "Hello Games"
+  ],
+  "publishers": [
+    "Hello Games"
+  ],
+  "releaseDate": "2016 年 8 月 12 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10/11 (64-bit versions)\n处理器: Intel Core i3\n内存: 8 GB RAM\n显卡: Nvidia GTX 1060 3GB, AMD RX 470 4GB, Intel UHD graphics 630\n存储空间: 需要 15 GB 可用空间\n支持 VR: SteamVR",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10/11 (64-bit versions)\nProcessor: Intel Core i3\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 1060 3GB, AMD RX 470 4GB, Intel UHD graphics 630\nStorage: 15 GB available space\nVR Support: SteamVR",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/275850/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-14",
+  "createdAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-14T02:08:28.175Z",
+    "pcgw": {
+      "syncedAt": "2026-11-14T02:08:57.450Z",
+      "page": "No Man's Sky"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\HelloGames\\NMS\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\Binaries\\SETTINGS\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Adaptive triggers not working on DualSense/DualSense Edge after certain game updates",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Adaptive_triggers_not_working_on_DualSense%2FDualSense_Edge_after_certain_game_updates",
+      "fixed": false
+    },
+    {
+      "title": "Lost Connection to Host",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Lost_Connection_to_Host",
+      "fixed": true
+    },
+    {
+      "title": "Low resolution photo mode screenshots",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Low_resolution_photo_mode_screenshots",
+      "fixed": true
+    },
+    {
+      "title": "Heavy game stutter/stutter in general",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Heavy_game_stutter%2Fstutter_in_general",
+      "fixed": true
+    },
+    {
+      "title": "NVIDIA Low FPS",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#NVIDIA_Low_FPS",
+      "fixed": true
+    },
+    {
+      "title": "Long pauses/freezing during starfield intro and during gameplay",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Long_pauses%2Ffreezing_during_starfield_intro_and_during_gameplay",
+      "fixed": true
+    },
+    {
+      "title": "Old save from 2016 and 2017 doesn't appear in menus",
+      "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky#Old_save_from_2016_and_2017_doesn't_appear_in_menus",
+      "fixed": true
+    }
+  ]
+}

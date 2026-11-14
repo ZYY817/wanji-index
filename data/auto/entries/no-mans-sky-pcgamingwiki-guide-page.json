@@ -1,0 +1,15 @@
+{
+  "id": "no-mans-sky-pcgamingwiki-guide-page",
+  "name": "No Man's Sky 无人深空 技术资料页",
+  "nameEn": "No Man's Sky on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "no-mans-sky",
+  "url": "https://www.pcgamingwiki.com/wiki/No_Man's_Sky",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-14",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

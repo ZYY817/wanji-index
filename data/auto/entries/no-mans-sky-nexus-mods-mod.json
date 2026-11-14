@@ -1,0 +1,15 @@
+{
+  "id": "no-mans-sky-nexus-mods-mod",
+  "name": "No Man's Sky 无人深空 Nexus Mods 专区",
+  "nameEn": "No Man's Sky on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "no-mans-sky",
+  "url": "https://www.nexusmods.com/nomanssky",
+  "note": "Nexus 上的 MOD 专区，共 3,094 个 MOD",
+  "noteEn": "Nexus Mods hub with 3,094 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-14",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

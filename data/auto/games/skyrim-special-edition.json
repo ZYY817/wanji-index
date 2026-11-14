@@ -17,9 +17,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/489830/",
-      "priceNote": "参考价 ¥ 165.00",
+      "priceNote": "参考价 ¥ 33.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-07"
+      "checkedAt": "2026-11-14"
     }
   ],
   "steamAppId": 489830,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-07",
+  "checkedAt": "2026-11-14",
   "createdAt": "2026-10-30",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-14",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-07T01:44:41.419Z",
+    "syncedAt": "2026-11-14T02:08:06.348Z",
     "pcgw": {
       "syncedAt": "2026-10-30T12:33:52.619Z",
       "page": "The Elder Scrolls V: Skyrim Special Edition"

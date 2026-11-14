@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/785890/",
       "priceNote": "参考价 ¥ 22.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-07"
+      "checkedAt": "2026-11-14"
     }
   ],
   "steamAppId": 785890,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-07",
+  "checkedAt": "2026-11-14",
   "createdAt": "2026-10-30",
-  "updatedAt": "2026-11-07",
+  "updatedAt": "2026-11-14",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-07T01:44:48.051Z",
+    "syncedAt": "2026-11-14T02:08:13.661Z",
     "pcgw": {
       "syncedAt": "2026-10-30T12:33:50.544Z",
       "page": "Hexologic"

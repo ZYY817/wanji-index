@@ -1,0 +1,15 @@
+{
+  "id": "it-takes-two-steamdb-other",
+  "name": "双人成行 价格与版本史",
+  "nameEn": "It Takes Two on SteamDB",
+  "type": "other",
+  "siteId": "steamdb",
+  "gameId": "it-takes-two",
+  "url": "https://steamdb.info/app/1426210/",
+  "note": "史低价格、更新补丁记录、在线人数",
+  "noteEn": "All-time low price, update history, and player counts",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-14",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

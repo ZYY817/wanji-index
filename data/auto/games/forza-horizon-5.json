@@ -1,0 +1,107 @@
+{
+  "id": "forza-horizon-5",
+  "slug": "forza-horizon-5",
+  "name": {
+    "zh": "极限竞速：地平线 5",
+    "en": "Forza Horizon 5"
+  },
+  "summary": "驾驶世界上最棒的赛车，探索墨西哥生机勃勃的开放世界景观，体验无限的驾驶乐趣。",
+  "summaryEn": "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world’s greatest cars.",
+  "genres": [
+    "action",
+    "adventure",
+    "racing",
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1551360/",
+      "priceNote": "参考价 ¥ 198.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-14"
+    }
+  ],
+  "steamAppId": 1551360,
+  "developers": [
+    "Playground Games"
+  ],
+  "publishers": [
+    "Xbox Game Studios"
+  ],
+  "releaseDate": "2021 年 11 月 8 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 18362.0 or higher\n处理器: Intel i5-4460 or AMD Ryzen 3 1200\n内存: 8 GB RAM\n显卡: NVidia GTX 970, AMD RX 470, OR Intel Arc A380\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 110 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 18362.0 or higher\n处理器: Intel i5-8400 or AMD Ryzen 5 1500X\n内存: 16 GB RAM\n显卡: NVidia GTX 1070, AMD RX 590, OR Intel Arc A750\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 110 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 version 18362.0 or higher\nProcessor: Intel i5-4460 or AMD Ryzen 3 1200\nMemory: 8 GB RAM\nGraphics: NVidia GTX 970, AMD RX 470, OR Intel Arc A380\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 110 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 version 18362.0 or higher\nProcessor: Intel i5-8400 or AMD Ryzen 5 1500X\nMemory: 16 GB RAM\nGraphics: NVidia GTX 1070, AMD RX 590, OR Intel Arc A750\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 110 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1551360/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-14",
+  "createdAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-14T02:08:47.750Z",
+    "pcgw": {
+      "syncedAt": "2026-11-14T02:08:54.527Z",
+      "page": "Forza Horizon 5"
+    }
+  },
+  "issues": [
+    {
+      "title": "Photo mode crashes the game",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#Photo_mode_crashes_the_game",
+      "fixed": false
+    },
+    {
+      "title": "Visual issues (dark patches and odd shadows)",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#Visual_issues_(dark_patches_and_odd_shadows)",
+      "fixed": true
+    },
+    {
+      "title": "Crashes during gameplay on newer NVIDIA drivers",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#Crashes_during_gameplay_on_newer_NVIDIA_drivers",
+      "fixed": true
+    },
+    {
+      "title": "There was an error retrieving the EventLab event",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#There_was_an_error_retrieving_the_EventLab_event",
+      "fixed": true
+    },
+    {
+      "title": "Stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#Stuttering",
+      "fixed": true
+    },
+    {
+      "title": "NVIDIA DLSS option disappeared",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#NVIDIA_DLSS_option_disappeared",
+      "fixed": true
+    },
+    {
+      "title": "Steam Version Controller Trigger Rumble",
+      "url": "https://www.pcgamingwiki.com/wiki/Forza_Horizon_5#Steam_Version_Controller_Trigger_Rumble",
+      "fixed": true
+    }
+  ]
+}

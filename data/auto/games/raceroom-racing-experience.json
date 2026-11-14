@@ -1,0 +1,75 @@
+{
+  "id": "raceroom-racing-experience",
+  "slug": "raceroom-racing-experience",
+  "name": {
+    "zh": "RaceRoom Racing Experience"
+  },
+  "summary": "RaceRoom 具备精确重现的真实物理与力反馈。驾驶官方 DTM、FIA WTCC、WTCR 赛事车辆，并体验包括最新版本的纽博格林北环在内的大量赛车与赛道内容。",
+  "summaryEn": "RaceRoom is free to download and built on true-to-life physics and Force Feedback.",
+  "genres": [
+    "racing",
+    "simulation",
+    "sports"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/211500/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-14"
+    }
+  ],
+  "steamAppId": 211500,
+  "developers": [
+    "KW Studios"
+  ],
+  "publishers": [
+    "KW Studios",
+    "RaceRoom Entertainment AG"
+  ],
+  "releaseDate": "2013 年 2 月 12 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Dual Core 2.4 GHz\n内存: 4 GB RAM\n显卡: VRAM 512MB\nDirectX 版本: 9.0c\n网络: 宽带互联网连接\n存储空间: 需要 90 GB 可用空间\n支持 VR: SteamVR. Keyboard or gamepad required",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11\n处理器: Quad Core 3.0 GHz\n内存: 16 GB RAM\n显卡: VRAM 8GB\n网络: 宽带互联网连接\n存储空间: 需要 90 GB 可用空间\n支持 VR: SteamVR. Keyboard or gamepad required.\n附注事项: To enhance your experience with the simulation aspect, we highly recommend using a steering wheel controller for optimal gameplay."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Dual Core 2.4 GHz\nMemory: 4 GB RAM\nGraphics: VRAM 512MB\nDirectX: Version 9.0c\nNetwork: Broadband Internet connection\nStorage: 90 GB available space\nVR Support: SteamVR. Keyboard or gamepad required",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 11\nProcessor: Quad Core 3.0 GHz\nMemory: 16 GB RAM\nGraphics: VRAM 8GB\nNetwork: Broadband Internet connection\nStorage: 90 GB available space\nVR Support: SteamVR. Keyboard or gamepad required.\nAdditional Notes: To enhance your experience with the simulation aspect, we highly recommend using a steering wheel controller for optimal gameplay."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/211500/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/RaceRoom_Racing_Experience"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-14",
+  "createdAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-14T02:08:19.179Z",
+    "pcgw": {
+      "syncedAt": "2026-11-14T02:08:58.869Z",
+      "page": "RaceRoom Racing Experience"
+    }
+  },
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\SimBin\\RaceRoom Racing Experience\\UserData",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}
