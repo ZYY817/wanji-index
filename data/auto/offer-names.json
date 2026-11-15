@@ -93,13 +93,6 @@
       "simulation"
     ]
   },
-  "auto-gp-3100": {
-    "steamAppId": "2372870",
-    "genres": [
-      "adventure",
-      "indie"
-    ]
-  },
   "auto-gp-3180": {
     "steamAppId": "2778250",
     "genres": [
@@ -167,36 +160,6 @@
   },
   "auto-gp-3496": {
     "steamAppId": "2994800",
-    "genres": [
-      "adventure",
-      "indie"
-    ]
-  },
-  "auto-gp-3553": {
-    "steamAppId": "4465030",
-    "genres": [
-      "adventure",
-      "indie"
-    ]
-  },
-  "auto-gp-3628": {
-    "steamAppId": "3542420",
-    "genres": [
-      "adventure",
-      "casual",
-      "indie"
-    ]
-  },
-  "auto-gp-3690": {
-    "steamAppId": "1962950",
-    "genres": [
-      "adventure",
-      "indie",
-      "simulation"
-    ]
-  },
-  "auto-gp-3771": {
-    "steamAppId": "5041880",
     "genres": [
       "adventure",
       "indie"

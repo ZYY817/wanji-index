@@ -1,0 +1,15 @@
+{
+  "id": "halo-the-master-chief-collection-steam-mod",
+  "name": "Halo: The Master Chief Collection 创意工坊",
+  "nameEn": "Halo: The Master Chief Collection Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "halo-the-master-chief-collection",
+  "url": "https://steamcommunity.com/app/976730/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-15",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

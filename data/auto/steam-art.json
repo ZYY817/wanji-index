@@ -965,6 +965,12 @@
     "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/library_hero.jpg",
     "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/945360/27d201d871b3d617dc4b80c603ca900999c2f11e/capsule_616x353.jpg"
   },
+  "976730": {
+    "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/header.jpg",
+    "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/library_600x900.jpg",
+    "hero": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/library_hero.jpg",
+    "capsule": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/capsule_616x353.jpg"
+  },
   "990080": {
     "header": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/be2971b1023bccb04f993887d70ef4d2060262cf/header.jpg",
     "poster": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/dca9bb926befe37ff9754e3336cd9fe4c969c1e9/library_capsule.jpg",

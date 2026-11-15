@@ -1,0 +1,76 @@
+{
+  "id": "halo-the-master-chief-collection",
+  "slug": "halo-the-master-chief-collection",
+  "name": {
+    "zh": "Halo: The Master Chief Collection"
+  },
+  "summary": "士官长横跨 6 款游戏的经典英雄旅程，现在合而为一推出 PC 版。无论您是长期支持的粉丝，或是第一次与斯巴达战士 117 打照面，《光环：士官长合集》绝对能满足您，提供最棒的光环体验。",
+  "summaryEn": "The Master Chief’s iconic journey includes six games, built for PC and collected in a single integrated experience.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/976730/",
+      "priceNote": "参考价 ¥ 269.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-15"
+    }
+  ],
+  "steamAppId": 976730,
+  "developers": [
+    "343 Industries",
+    "Splash Damage",
+    "Ruffian Games",
+    "Bungie",
+    "Saber Interactive"
+  ],
+  "publishers": [
+    "Xbox Game Studios"
+  ],
+  "releaseDate": "2019 年 12 月 3 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7\n处理器: AMD Phenom II X4 960T ; Intel i3550\n显卡: AMD HD 6850 ; NVIDIA GeForce GTS 450\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 43 GB 可用空间\n附注事项: Direct3D feature Level 11.1",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7\nProcessor: AMD Phenom II X4 960T ; Intel i3550\nGraphics: AMD HD 6850 ; NVIDIA GeForce GTS 450\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 43 GB available space\nAdditional Notes: Direct3D feature Level 11.1",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/976730/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo%3A_The_Master_Chief_Collection"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-15",
+  "createdAt": "2026-11-15",
+  "updatedAt": "2026-11-15",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-15T01:39:35.616Z",
+    "pcgw": {
+      "syncedAt": "2026-11-15T01:39:44.454Z",
+      "page": "Halo: The Master Chief Collection"
+    }
+  },
+  "issues": [
+    {
+      "title": "Achievements out-of-sync",
+      "url": "https://www.pcgamingwiki.com/wiki/Halo%3A_The_Master_Chief_Collection#Achievements_out-of-sync",
+      "fixed": false
+    }
+  ]
+}
