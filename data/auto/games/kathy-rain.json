@@ -1,0 +1,81 @@
+{
+  "id": "kathy-rain",
+  "slug": "kathy-rain",
+  "name": {
+    "zh": "Kathy Rain"
+  },
+  "summary": "Set in the '90s, Kathy Rain tells the story of a strong-willed journalism major who has to come to terms with her troubled past as she inves…",
+  "summaryEn": "Set in the '90s, Kathy Rain tells the story of a strong-willed journalism major who has to come to terms with her troubled past as she inves…",
+  "genres": [
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/370910/",
+      "priceNote": "参考价 ¥ 42.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-16"
+    }
+  ],
+  "steamAppId": 370910,
+  "developers": [
+    "Clifftop Games"
+  ],
+  "publishers": [
+    "Raw Fury"
+  ],
+  "releaseDate": "2016 年 5 月 5 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows XP\n处理器: 300 MHz Processor\n内存: 128 MB RAM\n显卡: 320 x 240 32 bit\nDirectX 版本: 9.0\n存储空间: 需要 1 GB 可用空间\n附注事项: Video: DirectX & Directdraw Supported",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7 or higher\n处理器: 1 gigahertz (GHz) or faster 32-bit (x86) or 64-bit (x64) processor\n内存: 2 GB RAM\n显卡: DirectX 9 graphics device with WDDM 1.0 or higher driver\nDirectX 版本: 9.0\n存储空间: 需要 1 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows XP\nProcessor: 300 MHz Processor\nMemory: 128 MB RAM\nGraphics: 320 x 240 32 bit\nDirectX: Version 9.0\nStorage: 1 GB available space\nAdditional Notes: Video: DirectX & Directdraw Supported",
+    "recommended": "Recommended:\nOS *: Windows 7 or higher\nProcessor: 1 gigahertz (GHz) or faster 32-bit (x86) or 64-bit (x64) processor\nMemory: 2 GB RAM\nGraphics: DirectX 9 graphics device with WDDM 1.0 or higher driver\nDirectX: Version 9.0\nStorage: 1 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/370910/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Kathy_Rain"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-16",
+  "createdAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-16T01:43:45.152Z",
+    "pcgw": {
+      "syncedAt": "2026-11-16T01:43:57.176Z",
+      "page": "Kathy Rain"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\agssave.*",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\acsetup.cfg",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}
