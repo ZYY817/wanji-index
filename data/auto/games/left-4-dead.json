@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/500/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 500,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:21.068Z",
+    "syncedAt": "2026-11-18T03:32:29.765Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:54:54.805Z",
       "page": "Left 4 Dead"

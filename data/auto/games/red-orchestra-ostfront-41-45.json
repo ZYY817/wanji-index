@@ -19,9 +19,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1200/",
-      "priceNote": "参考价 ¥ 22.00",
+      "priceNote": "参考价 ¥ 8.80",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 1200,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:31.909Z",
+    "syncedAt": "2026-11-18T03:33:26.072Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:55:26.719Z",
       "page": "Red Orchestra: Ostfront 41-45"

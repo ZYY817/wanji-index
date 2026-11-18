@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/280/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 280,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:10.723Z",
+    "syncedAt": "2026-11-18T03:32:12.161Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:54:46.262Z",
       "page": "Half-Life: Source"

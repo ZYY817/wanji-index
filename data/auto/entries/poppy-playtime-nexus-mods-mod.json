@@ -1,0 +1,15 @@
+{
+  "id": "poppy-playtime-nexus-mods-mod",
+  "name": "Poppy Playtime Nexus Mods 专区",
+  "nameEn": "Poppy Playtime on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "poppy-playtime",
+  "url": "https://www.nexusmods.com/poppyplaytime",
+  "note": "Nexus 上的 MOD 专区，共 60 个 MOD",
+  "noteEn": "Nexus Mods hub with 60 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-18",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

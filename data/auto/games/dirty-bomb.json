@@ -1,0 +1,79 @@
+{
+  "id": "dirty-bomb",
+  "slug": "dirty-bomb",
+  "name": {
+    "zh": "Dirty Bomb"
+  },
+  "summary": "不与团队合作，只有死路一条！在这款最富挑战性的团队向射击游戏中，你可以为恢复伦敦和平而战，也可以大肆破坏、从中牟取暴利！",
+  "summaryEn": "Work together or die alone! Fight to restore peace to London or tear it down for profit in the most challenging team based shooter around.",
+  "genres": [
+    "action"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/333930/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-18"
+    }
+  ],
+  "steamAppId": 333930,
+  "developers": [
+    "Splash Damage"
+  ],
+  "publishers": [
+    "Warchest Ltd."
+  ],
+  "releaseDate": "2015 年 6 月 2 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统 *: Windows 7 (64-bit)\n处理器: 2.33 GHz Dual Core\n内存: 3 GB RAM\n显卡: 512MB - GeForce 7800GTX\nDirectX 版本: 9.0\n网络: 宽带互联网连接\n存储空间: 需要 7 GB 可用空间\n声卡: Generic Sound Card",
+    "recommended": "推荐配置:\n操作系统 *: Windows 7 (64-bit) or better\n处理器: 2.0 GHz Quad Core or better\n内存: 4 GB RAM\n显卡: 2GB - GeForce 710 or better\nDirectX 版本: 9.0\n网络: 宽带互联网连接\n存储空间: 需要 7 GB 可用空间\n声卡: Generic Sound Card"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *: Windows 7 (64-bit)\nProcessor: 2.33 GHz Dual Core\nMemory: 3 GB RAM\nGraphics: 512MB - GeForce 7800GTX\nDirectX: Version 9.0\nNetwork: Broadband Internet connection\nStorage: 7 GB available space\nSound Card: Generic Sound Card",
+    "recommended": "Recommended:\nOS *: Windows 7 (64-bit) or better\nProcessor: 2.0 GHz Quad Core or better\nMemory: 4 GB RAM\nGraphics: 2GB - GeForce 710 or better\nDirectX: Version 9.0\nNetwork: Broadband Internet connection\nStorage: 7 GB available space\nSound Card: Generic Sound Card"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/333930/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Dirty_Bomb"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-18",
+  "createdAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-18T03:35:00.363Z",
+    "pcgw": {
+      "syncedAt": "2026-11-18T03:35:20.931Z",
+      "page": "Dirty Bomb"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\UnrealEngine3\\ShooterGame\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\My Games\\UnrealEngine3\\ShooterGame\\Config\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

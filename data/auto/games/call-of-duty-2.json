@@ -18,9 +18,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/2630/",
-      "priceNote": "参考价 ¥ 98.00",
+      "priceNote": "参考价 ¥ 49.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 2630,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:49:22.123Z",
+    "syncedAt": "2026-11-18T03:30:56.295Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:11.518Z",
       "page": "Call of Duty 2"

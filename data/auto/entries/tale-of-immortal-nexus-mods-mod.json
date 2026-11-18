@@ -1,0 +1,15 @@
+{
+  "id": "tale-of-immortal-nexus-mods-mod",
+  "name": "鬼谷八荒 Nexus Mods 专区",
+  "nameEn": "鬼谷八荒 Tale of Immortal on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "tale-of-immortal",
+  "url": "https://www.nexusmods.com/taleofimmortal",
+  "note": "Nexus 上的 MOD 专区，共 74 个 MOD",
+  "noteEn": "Nexus Mods hub with 74 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-18",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1900/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 1900,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:45.829Z",
+    "syncedAt": "2026-11-18T03:31:34.220Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:30.370Z",
       "page": "Earth 2160"

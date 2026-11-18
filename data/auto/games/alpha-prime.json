@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/2590/",
       "priceNote": "参考价 ¥ 24.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 2590,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:49:17.012Z",
+    "syncedAt": "2026-11-18T03:30:14.805Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:49.368Z",
       "page": "Alpha Prime"

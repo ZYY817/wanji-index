@@ -1,0 +1,86 @@
+{
+  "id": "poppy-playtime",
+  "slug": "poppy-playtime",
+  "name": {
+    "zh": "Poppy Playtime"
+  },
+  "summary": "You must stay alive in this horror/puzzle adventure. Try to survive the vengeful toys waiting for you in the abandoned toy factory.",
+  "summaryEn": "You must stay alive in this horror/puzzle adventure. Try to survive the vengeful toys waiting for you in the abandoned toy factory.",
+  "genres": [
+    "action",
+    "adventure",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1721470/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-18"
+    }
+  ],
+  "steamAppId": 1721470,
+  "developers": [
+    "Mob Entertainment"
+  ],
+  "publishers": [
+    "Mob Entertainment"
+  ],
+  "releaseDate": "2021 年 10 月 12 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5\n内存: 8 GB RAM\n显卡: Nvidia GeForce GTX 1060 / Radeon RX 580\n存储空间: 需要 20 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: Intel Core i5\n内存: 8 GB RAM\n显卡: Nvidia GeForce GTX 1060 / Radeon RX 580\n存储空间: 需要 20 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5\nMemory: 8 GB RAM\nGraphics: Nvidia GeForce GTX 1060 / Radeon RX 580\nStorage: 20 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: Intel Core i5\nMemory: 8 GB RAM\nGraphics: Nvidia GeForce GTX 1060 / Radeon RX 580\nStorage: 20 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1721470/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Poppy_Playtime"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-18",
+  "createdAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-18T03:35:15.989Z",
+    "pcgw": {
+      "syncedAt": "2026-11-18T03:35:23.482Z",
+      "page": "Poppy Playtime"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Poppy_Playtime\\Saved\\SaveGames\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Playtime_Prototype4\\Saved\\SaveGames{{note",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\Poppy_Playtime\\Saved\\Config\\WindowsNoEditor\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

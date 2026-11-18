@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/2400/",
       "priceNote": "参考价 ¥ 36.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 2400,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:49:13.582Z",
+    "syncedAt": "2026-11-18T03:34:07.208Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:56:50.268Z",
       "page": null

@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/1700/",
       "priceNote": "参考价 ¥ 20.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 1700,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:38.870Z",
+    "syncedAt": "2026-11-18T03:30:21.647Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:52.258Z",
       "page": "Arx Fatalis"

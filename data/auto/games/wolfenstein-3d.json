@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/2270/",
       "priceNote": "参考价 ¥ 20.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 2270,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:49:03.119Z",
+    "syncedAt": "2026-11-18T03:34:38.044Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:57:07.035Z",
       "page": "Wolfenstein 3D"

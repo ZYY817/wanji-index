@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/8870/",
       "priceNote": "参考价 ¥ 95.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 8870,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:50:33.702Z",
+    "syncedAt": "2026-11-18T03:30:45.790Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:05.760Z",
       "page": "BioShock Infinite"

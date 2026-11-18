@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/2200/",
       "priceNote": "参考价 ¥ 62.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 2200,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:48:56.178Z",
+    "syncedAt": "2026-11-18T03:33:15.369Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:55:17.704Z",
       "page": "Quake III Arena"

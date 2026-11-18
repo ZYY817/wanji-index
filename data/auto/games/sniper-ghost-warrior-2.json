@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/34870/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 34870,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:52:18.569Z",
+    "syncedAt": "2026-11-18T03:33:39.930Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:55:33.621Z",
       "page": "Sniper: Ghost Warrior 2"

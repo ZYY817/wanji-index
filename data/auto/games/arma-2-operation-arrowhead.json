@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/33930/",
       "priceNote": "参考价 ¥ 79.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 33930,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:52:11.602Z",
+    "syncedAt": "2026-11-18T03:30:18.253Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:50.819Z",
       "page": null

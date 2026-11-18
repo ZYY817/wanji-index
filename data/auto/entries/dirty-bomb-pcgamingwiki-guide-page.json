@@ -1,0 +1,15 @@
+{
+  "id": "dirty-bomb-pcgamingwiki-guide-page",
+  "name": "Dirty Bomb 技术资料页",
+  "nameEn": "Dirty Bomb on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "dirty-bomb",
+  "url": "https://www.pcgamingwiki.com/wiki/Dirty_Bomb",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-18",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

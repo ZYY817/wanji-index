@@ -1,0 +1,15 @@
+{
+  "id": "tale-of-immortal-steam-mod",
+  "name": "鬼谷八荒 创意工坊",
+  "nameEn": "鬼谷八荒 Tale of Immortal Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "tale-of-immortal",
+  "url": "https://steamcommunity.com/app/1468810/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-18",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/24200/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-11"
+      "checkedAt": "2026-11-18"
     }
   ],
   "steamAppId": 24200,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-11",
+  "checkedAt": "2026-11-18",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-11",
+  "updatedAt": "2026-11-18",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-11T01:51:50.767Z",
+    "syncedAt": "2026-11-18T03:31:23.812Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:23.216Z",
       "page": "DC Universe Online"
