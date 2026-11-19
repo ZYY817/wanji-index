@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1796580/",
       "priceNote": "参考价 ¥ 86.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 1796580,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:53:12.494Z",
+    "syncedAt": "2026-11-19T03:07:53.376Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:52.908Z",
       "page": "Sorry We're Closed"

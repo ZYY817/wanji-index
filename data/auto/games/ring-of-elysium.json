@@ -20,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/755790/",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 755790,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:52:45.549Z",
+    "syncedAt": "2026-11-19T03:07:25.554Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:11.879Z",
       "page": "Ring of Elysium"

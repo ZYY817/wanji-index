@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/291550/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 291550,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:49:41.357Z",
+    "syncedAt": "2026-11-19T03:04:17.307Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:48.874Z",
       "page": "Brawlhalla"

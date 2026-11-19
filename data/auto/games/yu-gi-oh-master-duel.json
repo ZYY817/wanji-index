@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1449850/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 1449850,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:54:14.544Z",
+    "syncedAt": "2026-11-19T03:08:56.074Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:57:18.722Z",
       "page": "Yu-Gi-Oh! Master Duel"

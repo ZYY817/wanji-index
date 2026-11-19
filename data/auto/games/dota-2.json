@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/570/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 570,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:50:22.572Z",
+    "syncedAt": "2026-11-19T03:04:59.739Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:19.591Z",
       "page": "Dota 2"

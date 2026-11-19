@@ -62,14 +62,6 @@
       "indie"
     ]
   },
-  "auto-gp-1669": {
-    "steamAppId": "1773460",
-    "genres": [
-      "adventure",
-      "casual",
-      "indie"
-    ]
-  },
   "auto-gp-2089": {
     "steamAppId": "2157060",
     "genres": [
@@ -161,20 +153,6 @@
   "auto-gp-3496": {
     "steamAppId": "2994800",
     "genres": [
-      "adventure",
-      "indie"
-    ]
-  },
-  "auto-gp-3827": {
-    "steamAppId": "2315570",
-    "genres": [
-      "adventure"
-    ]
-  },
-  "auto-gp-3829": {
-    "steamAppId": "4503570",
-    "genres": [
-      "action",
       "adventure",
       "indie"
     ]

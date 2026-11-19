@@ -21,9 +21,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/49520/",
-      "priceNote": "参考价 ¥ 6.40",
+      "priceNote": "参考价 ¥ 64.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 49520,
@@ -58,13 +58,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:49:37.931Z",
+    "syncedAt": "2026-11-19T03:04:13.867Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:46.643Z",
       "page": "Borderlands 2"

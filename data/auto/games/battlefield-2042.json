@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1517290/",
       "priceNote": "参考价 ¥ 248.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 1517290,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:49:27.619Z",
+    "syncedAt": "2026-11-19T03:04:03.503Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:37.990Z",
       "page": "Battlefield 2042"

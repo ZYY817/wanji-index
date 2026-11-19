@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1407200/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 1407200,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:54:07.852Z",
+    "syncedAt": "2026-11-19T03:08:49.050Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:57:16.470Z",
       "page": "World of Tanks"

@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/240/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 240,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:49:55.313Z",
+    "syncedAt": "2026-11-19T03:04:31.535Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:13.086Z",
       "page": "Counter-Strike: Source"

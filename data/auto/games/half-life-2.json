@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/220/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-12"
+      "checkedAt": "2026-11-19"
     }
   ],
   "steamAppId": 220,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-12",
+  "checkedAt": "2026-11-19",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-12",
+  "updatedAt": "2026-11-19",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-12T02:51:03.802Z",
+    "syncedAt": "2026-11-19T03:05:41.625Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:22.803Z",
       "page": "Half-Life 2"
