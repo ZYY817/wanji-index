@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/204360/",
       "priceNote": "参考价 ¥ 48.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-13"
+      "checkedAt": "2026-11-20"
     }
   ],
   "steamAppId": 204360,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-13",
+  "checkedAt": "2026-11-20",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-20",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-13T02:29:36.084Z",
+    "syncedAt": "2026-11-20T02:54:53.041Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:45.614Z",
       "page": "Castle Crashers"

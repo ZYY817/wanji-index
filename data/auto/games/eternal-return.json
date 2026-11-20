@@ -1,0 +1,80 @@
+{
+  "id": "eternal-return",
+  "slug": "eternal-return",
+  "name": {
+    "zh": "永恒轮回",
+    "en": "Eternal Return"
+  },
+  "summary": "永恒轮回是一款采用俯视视角免费的竞技生存游戏。 体验制作、狩猎、战斗和各种风格迥异的角色 通过生存策略和精彩刺激的战斗玩法，成为生存实验中最后的幸存者！",
+  "summaryEn": "Eternal Return is a free-to-play, 2.5D perspective Battle Royale game. Search, Craft, Hunt, and Fight using a variety of characters.",
+  "genres": [],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/1049590/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 1049590,
+  "developers": [
+    "Nimble Neuron"
+  ],
+  "publishers": [
+    "Nimble Neuron",
+    "SapStaR Games",
+    "KRAFTON, Inc."
+  ],
+  "releaseDate": "2023 年 7 月 19 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n操作系统: WINDOWS® 10 (64Bit)\n处理器: Intel Core i5-6400, AMD Ryzen 5 2600\n内存: 8 GB RAM\n显卡: NVIDIA GeForce GTX 650 Ti, AMD Radeon HD 7770\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间\n附注事项: Installing the game on an SSD improves loading times.",
+    "recommended": "推荐配置:\n操作系统: WINDOWS 11 (64Bit)\n处理器: Intel Core i5-8400, AMD Ryzen 5 3500X\n内存: 16 GB RAM\n显卡: NVIDIA GeForce GTX 1060, AMD Radeon RX 580\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 20 GB 可用空间\n附注事项: Installing the game on an SSD improves loading times."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS: WINDOWS® 10 (64Bit)\nProcessor: Intel Core i5-6400, AMD Ryzen 5 2600\nMemory: 8 GB RAM\nGraphics: NVIDIA GeForce GTX 650 Ti, AMD Radeon HD 7770\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 20 GB available space\nAdditional Notes: Installing the game on an SSD improves loading times.",
+    "recommended": "Recommended:\nOS: WINDOWS 11 (64Bit)\nProcessor: Intel Core i5-8400, AMD Ryzen 5 3500X\nMemory: 16 GB RAM\nGraphics: NVIDIA GeForce GTX 1060, AMD Radeon RX 580\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 20 GB available space\nAdditional Notes: Installing the game on an SSD improves loading times."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1049590/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Eternal_Return%3A_Black_Survival"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:55:59.409Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:30.722Z",
+      "page": "Eternal Return: Black Survival"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\NimbleNeuron\\BlackSurvivalER\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\SOFTWARE\\NimbleNeuron\\BlackSurvivalER",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

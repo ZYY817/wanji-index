@@ -1,0 +1,64 @@
+{
+  "id": "warhammer-40-000-space-marine-2",
+  "slug": "warhammer-40-000-space-marine-2",
+  "name": {
+    "zh": "Warhammer 40,000: 星际战士2",
+    "en": "Warhammer 40,000: Space Marine 2"
+  },
+  "summary": "体验星际战士的超人技能和残暴手段。利用致命能力和毁灭性武器消灭无穷无尽的泰伦虫群。选择单人或多人模式，在恢弘的第三人称战斗中保卫帝国。",
+  "summaryEn": "Embody the superhuman skill and brutality of a Space Marine. Unleash deadly abilities and devastating weaponry to obliterate the relentless …",
+  "genres": [
+    "action",
+    "adventure",
+    "rpg"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/2183900/",
+      "priceNote": "参考价 ¥ 249.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 2183900,
+  "developers": [
+    "Saber Interactive"
+  ],
+  "publishers": [
+    "Focus Entertainment"
+  ],
+  "releaseDate": "2024 年 9 月 9 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (1903 min)/11 64-bit\n处理器: AMD Ryzen 5 2600X / Intel Core i5-8600K\n内存: 8 GB RAM\n显卡: 6 GB VRAM, AMD Radeon RX 580 / Nvidia GeForce GTX 1060\nDirectX 版本: 12\n存储空间: 需要 75 GB 可用空间\n附注事项: SSD required. 30 FPS in 1920x1080 with \"Low\" preset.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (1903 min)/11 64-bit\n处理器: AMD Ryzen 7 5800X / Intel Core i7-12700\n内存: 16 GB RAM\n显卡: 8 GB VRAM, AMD Radeon RX 6800 XT / Nvidia GeForce RTX 3070\nDirectX 版本: 12\n存储空间: 需要 75 GB 可用空间\n附注事项: SSD required. 60 FPS in 1920x1080 with the \"Ultra\" preset."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (1903 min)/11 64-bit\nProcessor: AMD Ryzen 5 2600X / Intel Core i5-8600K\nMemory: 8 GB RAM\nGraphics: 6 GB VRAM, AMD Radeon RX 580 / Nvidia GeForce GTX 1060\nDirectX: Version 12\nStorage: 75 GB available space\nAdditional Notes: SSD required. 30 FPS in 1920x1080 with \"Low\" preset.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (1903 min)/11 64-bit\nProcessor: AMD Ryzen 7 5800X / Intel Core i7-12700\nMemory: 16 GB RAM\nGraphics: 8 GB VRAM, AMD Radeon RX 6800 XT / Nvidia GeForce RTX 3070\nDirectX: Version 12\nStorage: 75 GB available space\nAdditional Notes: SSD required. 60 FPS in 1920x1080 with the \"Ultra\" preset."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/2183900/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:56:19.772Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:39.599Z",
+      "page": "Warhammer 40,000: Space Marine II"
+    }
+  }
+}

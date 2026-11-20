@@ -1,0 +1,84 @@
+{
+  "id": "vampire-survivors",
+  "slug": "vampire-survivors",
+  "name": {
+    "zh": "Vampire Survivors - 吸血鬼幸存者",
+    "en": "Vampire Survivors"
+  },
+  "summary": "来猎杀暗夜的魔物吧！杀出重围，迎来胜利的黎明！ Vampire Survivors是一款结合了哥特式恐怖和肉鸽元素的休闲游戏，通过一次次的选择让角色越变越强，身处怪物的重重包围也无所畏惧。",
+  "summaryEn": "Mow down thousands of night creatures and survive until dawn! Vampire Survivors is a gothic horror casual game with rogue-lite elements, whe…",
+  "genres": [
+    "action",
+    "casual",
+    "indie",
+    "rpg"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1794680/",
+      "priceNote": "参考价 ¥ 25.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 1794680,
+  "developers": [
+    "poncle"
+  ],
+  "publishers": [
+    "poncle"
+  ],
+  "releaseDate": "2022 年 10 月 20 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 64bit\n处理器: x64 architecture with SSE2 instruction set support\n内存: 1 GB RAM\n显卡: DX11, DX12 capable\n存储空间: 需要 2500 MB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 64bit\nProcessor: x64 architecture with SSE2 instruction set support\nMemory: 1 GB RAM\nGraphics: DX11, DX12 capable\nStorage: 2500 MB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1794680/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Vampire_Survivors"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:56:16.398Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:38.085Z",
+      "page": "Vampire Survivors"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Vampire_Survivors\\saves",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\poncle\\Vampire Survivors",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

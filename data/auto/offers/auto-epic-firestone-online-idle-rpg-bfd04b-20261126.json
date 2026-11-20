@@ -9,14 +9,14 @@
   "claimNoteEn": "Next Epic weekly freebie (announced)",
   "startDate": "2026-11-26T16:00:00.000Z",
   "endDate": "2026-12-03T16:00:00.000Z",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-20",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
-    "wide": "https://cdn1.epicgames.com/spt-assets/69576a28f7154fe9a0dce97508da5163/firestone-online-idle-rpg-9irk3.jpg",
-    "tall": "https://cdn1.epicgames.com/spt-assets/69576a28f7154fe9a0dce97508da5163/firestone-online-idle-rpg-m9n9b.jpg"
+    "wide": "https://cdn1.epicgames.com/spt-assets/69576a28f7154fe9a0dce97508da5163/firestone-online-idle-rpg-6j7cs.jpg",
+    "tall": "https://cdn1.epicgames.com/spt-assets/69576a28f7154fe9a0dce97508da5163/firestone-online-idle-rpg-vyd8o.jpg"
   },
   "createdAt": "2026-11-19",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-20",
   "publishStatus": "published"
 }

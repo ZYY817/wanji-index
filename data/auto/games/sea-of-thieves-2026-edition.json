@@ -1,0 +1,62 @@
+{
+  "id": "sea-of-thieves-2026-edition",
+  "slug": "sea-of-thieves-2026-edition",
+  "name": {
+    "zh": "Sea of Thieves: 2026 Edition"
+  },
+  "summary": "《Sea of Thieves》是一款十分受欢迎的海盗冒险游戏，带你感受最正宗的海盗生活：寻找遗失的宝藏占为己有，和各方势力战个痛快，打败深海怪物等。深度体验改版之后的游戏，包括数字版奖励内容。",
+  "summaryEn": "Sea of Thieves is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense bat…",
+  "genres": [
+    "action",
+    "adventure"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1172620/",
+      "priceNote": "参考价 ¥ 138.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 1172620,
+  "developers": [
+    "Rare Ltd"
+  ],
+  "publishers": [
+    "Xbox Game Studios"
+  ],
+  "releaseDate": "2020 年 6 月 3 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 version 18362.0 or higher\n处理器: Intel i3 4170 @ 3.7 GHz or AMD FX-6300 @ 3.5 GHz\n内存: 8 GB RAM\n显卡: Nvidia GeForce GTX 660 or AMD Radeon R9 270\nDirectX 版本: 11\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows® 10 64-bit\n处理器: Intel i7 4790 @4Ghz - AMD Ryzen 5 1600 @3.6Ghz\n内存: 16 GB RAM\n显卡: Nvidia Geforce GTX 1080ti - AMD Radeon Rx Vega 64 - Intel A750\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 100 GB 可用空间"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 version 18362.0 or higher\nProcessor: Intel i3 4170 @ 3.7 GHz or AMD FX-6300 @ 3.5 GHz\nMemory: 8 GB RAM\nGraphics: Nvidia GeForce GTX 660 or AMD Radeon R9 270\nDirectX: Version 11\nNetwork: Broadband Internet connection\nStorage: 100 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows® 10 64-bit\nProcessor: Intel i7 4790 @4Ghz - AMD Ryzen 5 1600 @3.6Ghz\nMemory: 16 GB RAM\nGraphics: Nvidia Geforce GTX 1080ti - AMD Radeon Rx Vega 64 - Intel A750\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 100 GB available space"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1172620/"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:56:04.596Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:33.767Z",
+      "page": null
+    }
+  }
+}

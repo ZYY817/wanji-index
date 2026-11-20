@@ -1,0 +1,15 @@
+{
+  "id": "ultrakill-nexus-mods-mod",
+  "name": "ULTRAKILL Nexus Mods 专区",
+  "nameEn": "ULTRAKILL on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "ultrakill",
+  "url": "https://www.nexusmods.com/ultrakill",
+  "note": "Nexus 上的 MOD 专区，共 165 个 MOD",
+  "noteEn": "Nexus Mods hub with 165 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

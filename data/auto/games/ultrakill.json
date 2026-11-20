@@ -1,0 +1,80 @@
+{
+  "id": "ultrakill",
+  "slug": "ultrakill",
+  "name": {
+    "zh": "ULTRAKILL"
+  },
+  "summary": "《ULTRAKILL》是一款节奏紧凑、极度血腥的复古第一人称射击游戏，它将角色动作游戏中的技巧型评分机制与受90年代经典射击游戏启发的纯粹屠杀场面完美融合。",
+  "summaryEn": "ULTRAKILL is a fast-paced ultra-violent retro FPS that combines the skill-based style scoring of character action games with the unadulterat…",
+  "genres": [
+    "action",
+    "indie"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/1229490/",
+      "priceNote": "参考价 ¥ 108.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 1229490,
+  "developers": [
+    "Arsi \"Hakita\" Patala"
+  ],
+  "publishers": [
+    "New Blood Interactive"
+  ],
+  "releaseDate": "2020 年 9 月 3 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10\n处理器: 2.4 GHz Dual Core Processor Or Higher\n内存: 4 GB RAM\n显卡: GeForce GTX 560 Or Equivalent\nDirectX 版本: 11\n存储空间: 需要 3 GB 可用空间\n声卡: No vocal interface detected.",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11\n处理器: 3.1 GHz Quad Core Processor Or Higher\n内存: 8 GB RAM\n显卡: Geforce GTX 970 Or Equivalent\nDirectX 版本: 12\n存储空间: 需要 3 GB 可用空间\n声卡: Yet I must scream."
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10\nProcessor: 2.4 GHz Dual Core Processor Or Higher\nMemory: 4 GB RAM\nGraphics: GeForce GTX 560 Or Equivalent\nDirectX: Version 11\nStorage: 3 GB available space\nSound Card: No vocal interface detected.",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 11\nProcessor: 3.1 GHz Quad Core Processor Or Higher\nMemory: 8 GB RAM\nGraphics: Geforce GTX 970 Or Equivalent\nDirectX: Version 12\nStorage: 3 GB available space\nSound Card: Yet I must scream."
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/1229490/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Ultrakill"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:56:07.984Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:36.582Z",
+      "page": "Ultrakill"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<Steam 安装目录>\\steamapps\\common\\ULTRAKILL\\Saves",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Hakita\\ULTRAKILL",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "vampire-survivors-nexus-mods-mod",
+  "name": "Vampire Survivors - 吸血鬼幸存者 Nexus Mods 专区",
+  "nameEn": "Vampire Survivors on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "vampire-survivors",
+  "url": "https://www.nexusmods.com/vampiresurvivors",
+  "note": "Nexus 上的 MOD 专区，共 90 个 MOD",
+  "noteEn": "Nexus Mods hub with 90 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

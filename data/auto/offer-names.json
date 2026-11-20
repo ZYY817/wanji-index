@@ -22,14 +22,6 @@
       "indie"
     ]
   },
-  "auto-epic-sorry-were-closed-724c86-20261029": {
-    "steamAppId": "1796580",
-    "genres": [
-      "action",
-      "adventure",
-      "indie"
-    ]
-  },
   "auto-f2p-3419430": {
     "steamAppId": "3419430",
     "genres": [
@@ -54,43 +46,12 @@
       "casual"
     ]
   },
-  "auto-gp-1329": {
-    "steamAppId": "1728080",
-    "genres": [
-      "action",
-      "adventure",
-      "indie"
-    ]
-  },
-  "auto-gp-2089": {
-    "steamAppId": "2157060",
-    "genres": [
-      "action",
-      "indie"
-    ]
-  },
-  "auto-gp-2091": {
-    "steamAppId": "1039910",
-    "genres": [
-      "action",
-      "adventure",
-      "indie"
-    ]
-  },
   "auto-gp-2204": {
     "steamAppId": "2299730",
     "genres": [
       "casual",
       "indie",
       "simulation"
-    ]
-  },
-  "auto-gp-3180": {
-    "steamAppId": "2778250",
-    "genres": [
-      "action",
-      "adventure",
-      "indie"
     ]
   },
   "auto-gp-3316": {
@@ -141,19 +102,6 @@
   "auto-gp-3346": {
     "steamAppId": "2207120",
     "genres": [
-      "indie"
-    ]
-  },
-  "auto-gp-3422": {
-    "steamAppId": "3063960",
-    "genres": [
-      "indie"
-    ]
-  },
-  "auto-gp-3496": {
-    "steamAppId": "2994800",
-    "genres": [
-      "adventure",
       "indie"
     ]
   },

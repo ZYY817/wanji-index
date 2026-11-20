@@ -1,0 +1,80 @@
+{
+  "id": "fallout-shelter",
+  "slug": "fallout-shelter",
+  "name": {
+    "zh": "Fallout Shelter"
+  },
+  "summary": "Fallout Shelter puts you in control of a state-of-the-art underground Vault from Vault-Tec.",
+  "summaryEn": "Fallout Shelter puts you in control of a state-of-the-art underground Vault from Vault-Tec.",
+  "genres": [
+    "rpg",
+    "simulation"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "free",
+      "url": "https://store.steampowered.com/app/588430/",
+      "priceNote": "免费开玩",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 588430,
+  "developers": [
+    "Bethesda Game Studios"
+  ],
+  "publishers": [
+    "Bethesda Softworks"
+  ],
+  "releaseDate": "2017 年 3 月 29 日",
+  "zhSupport": "none",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7 64 bit\n处理器: Intel Core 2 Quad CPU Q9550 @2.83GHZ\n内存: 2 GB RAM\n显卡: NVIDIA GeForce GTS 250 1Ghz, Radeon HD 6970 1GHz\n存储空间: 需要 2 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7 64 bit\nProcessor: Intel Core 2 Quad CPU Q9550 @2.83GHZ\nMemory: 2 GB RAM\nGraphics: NVIDIA GeForce GTS 250 1Ghz, Radeon HD 6970 1GHz\nStorage: 2 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/588430/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Fallout_Shelter"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:55:56.048Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:32.205Z",
+      "page": "Fallout Shelter"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\FalloutShelter\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Bethesda\\Fallout Shelter\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "id": "age-of-empires-ii-retired",
+  "slug": "age-of-empires-ii-retired",
+  "name": {
+    "zh": "Age of Empires II (Retired)"
+  },
+  "summary": "《帝国时代 II》已经以高清的形式进行了重新构想。随着《帝国时代 II：决定版》发布之后，此产品将不再更新。",
+  "summaryEn": "Age of Empires II has been re-imagined in high definition. With the release of Age of Empires II: Definitive Edition, this product will not …",
+  "genres": [
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/221380/",
+      "priceNote": "参考价 ¥ 68.00",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-20"
+    }
+  ],
+  "steamAppId": 221380,
+  "developers": [
+    "Skybox Labs",
+    "Hidden Path Entertainment",
+    "Ensemble Studios",
+    "Forgotten Empires"
+  ],
+  "publishers": [
+    "Xbox Game Studios"
+  ],
+  "releaseDate": "2013 年 4 月 9 日",
+  "zhSupport": "full-audio",
+  "requirements": {
+    "minimum": "Minimum:\nOS *:Windows Vista, 7, 8 Pro+\nProcessor:1.2GHZ CPU\nMemory:1 GB RAM\nGraphics:Direct X 9.0c Capable GPU\nDirectX®:9.0c\nHard Drive:2 GB HD space",
+    "recommended": "Recommended:\nAdditional:900x600 minimum display resolution"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nOS *:Windows Vista, 7, 8 Pro+\nProcessor:1.2GHZ CPU\nMemory:1 GB RAM\nGraphics:Direct X 9.0c Capable GPU\nDirectX®:9.0c\nHard Drive:2 GB HD space",
+    "recommended": "Recommended:\nAdditional:900x600 minimum display resolution"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/221380/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Age_of_Empires_II%3A_HD_Edition"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-20",
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-20T02:55:40.849Z",
+    "pcgw": {
+      "syncedAt": "2026-11-20T02:56:26.531Z",
+      "page": "Age of Empires II: HD Edition"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "<游戏安装目录>\\savegame",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Age2HD\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Missing DPI scaling",
+      "url": "https://www.pcgamingwiki.com/wiki/Age_of_Empires_II%3A_HD_Edition#Missing_DPI_scaling",
+      "fixed": true
+    }
+  ]
+}

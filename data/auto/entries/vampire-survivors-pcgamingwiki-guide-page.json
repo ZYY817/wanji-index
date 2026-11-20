@@ -1,0 +1,15 @@
+{
+  "id": "vampire-survivors-pcgamingwiki-guide-page",
+  "name": "Vampire Survivors - 吸血鬼幸存者 技术资料页",
+  "nameEn": "Vampire Survivors on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "vampire-survivors",
+  "url": "https://www.pcgamingwiki.com/wiki/Vampire_Survivors",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

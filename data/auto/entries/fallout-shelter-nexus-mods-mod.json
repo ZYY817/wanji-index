@@ -1,0 +1,15 @@
+{
+  "id": "fallout-shelter-nexus-mods-mod",
+  "name": "Fallout Shelter Nexus Mods 专区",
+  "nameEn": "Fallout Shelter on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "fallout-shelter",
+  "url": "https://www.nexusmods.com/falloutshelter",
+  "note": "Nexus 上的 MOD 专区，共 166 个 MOD",
+  "noteEn": "Nexus Mods hub with 166 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

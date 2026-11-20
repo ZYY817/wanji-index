@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/224260/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-13"
+      "checkedAt": "2026-11-20"
     }
   ],
   "steamAppId": 224260,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-13",
+  "checkedAt": "2026-11-20",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-13",
+  "updatedAt": "2026-11-20",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-13T02:29:42.902Z",
+    "syncedAt": "2026-11-20T02:55:16.644Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:58.113Z",
       "page": "No More Room in Hell"

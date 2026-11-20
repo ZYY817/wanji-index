@@ -1,0 +1,15 @@
+{
+  "id": "fallout-shelter-pcgamingwiki-guide-page",
+  "name": "Fallout Shelter 技术资料页",
+  "nameEn": "Fallout Shelter on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "fallout-shelter",
+  "url": "https://www.pcgamingwiki.com/wiki/Fallout_Shelter",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

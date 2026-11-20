@@ -1,0 +1,15 @@
+{
+  "id": "age-of-empires-ii-retired-steam-mod",
+  "name": "Age of Empires II (Retired) 创意工坊",
+  "nameEn": "Age of Empires II (Retired) Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "age-of-empires-ii-retired",
+  "url": "https://steamcommunity.com/app/221380/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-20",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}
