@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/370910/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-16"
+      "checkedAt": "2026-11-23"
     }
   ],
   "steamAppId": 370910,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-16",
+  "checkedAt": "2026-11-23",
   "createdAt": "2026-11-16",
-  "updatedAt": "2026-11-16",
+  "updatedAt": "2026-11-23",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-16T01:43:45.152Z",
+    "syncedAt": "2026-11-23T02:25:06.398Z",
     "pcgw": {
       "syncedAt": "2026-11-16T01:43:57.176Z",
       "page": "Kathy Rain"
