@@ -8,7 +8,7 @@
   "claimNoteEn": "Next Epic weekly freebie (announced)",
   "startDate": "2026-11-26T16:00:00.000Z",
   "endDate": "2026-12-03T16:00:00.000Z",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-25",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
@@ -16,6 +16,6 @@
     "tall": "https://cdn1.epicgames.com/spt-assets/545b4dd8bb364c12b719268198a93ef3/bread-and-fred-pr4o2.jpg"
   },
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published"
 }

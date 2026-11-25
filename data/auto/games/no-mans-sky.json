@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/275850/",
       "priceNote": "参考价 ¥ 175.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-14"
+      "checkedAt": "2026-11-21"
     }
   ],
   "steamAppId": 275850,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-14",
+  "checkedAt": "2026-11-21",
   "createdAt": "2026-11-14",
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-21",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-14T02:08:28.175Z",
+    "syncedAt": "2026-11-21T03:03:07.207Z",
     "pcgw": {
       "syncedAt": "2026-11-14T02:08:57.450Z",
       "page": "No Man's Sky"

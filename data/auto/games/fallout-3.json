@@ -17,9 +17,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/22300/",
-      "priceNote": "参考价 ¥ 41.00",
+      "priceNote": "参考价 ¥ 10.25",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 22300,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:31:48.052Z",
+    "syncedAt": "2026-11-25T04:51:43.524Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:36.085Z",
       "page": "Fallout 3"

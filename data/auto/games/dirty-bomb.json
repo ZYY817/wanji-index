@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/333930/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 333930,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-18",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:35:00.363Z",
+    "syncedAt": "2026-11-25T04:51:22.573Z",
     "pcgw": {
       "syncedAt": "2026-11-18T03:35:20.931Z",
       "page": "Dirty Bomb"

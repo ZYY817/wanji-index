@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/766570/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 766570,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-18",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:35:03.896Z",
+    "syncedAt": "2026-11-25T04:53:37.677Z",
     "pcgw": {
       "syncedAt": "2026-11-18T03:35:24.905Z",
       "page": "Russian Fishing 4"

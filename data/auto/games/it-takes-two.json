@@ -19,9 +19,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1426210/",
-      "priceNote": "参考价 ¥ 198.00",
+      "priceNote": "参考价 ¥ 39.60",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-14"
+      "checkedAt": "2026-11-21"
     }
   ],
   "steamAppId": 1426210,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-14",
+  "checkedAt": "2026-11-21",
   "createdAt": "2026-11-14",
-  "updatedAt": "2026-11-14",
+  "updatedAt": "2026-11-21",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-14T02:08:44.161Z",
+    "syncedAt": "2026-11-21T03:03:03.747Z",
     "pcgw": {
       "syncedAt": "2026-11-14T02:08:56.016Z",
       "page": "It Takes Two"

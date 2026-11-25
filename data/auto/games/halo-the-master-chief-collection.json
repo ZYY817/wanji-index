@@ -17,9 +17,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/976730/",
-      "priceNote": "参考价 ¥ 269.00",
+      "priceNote": "参考价 ¥ 67.25",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-15"
+      "checkedAt": "2026-11-22"
     }
   ],
   "steamAppId": 976730,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-15",
+  "checkedAt": "2026-11-22",
   "createdAt": "2026-11-15",
-  "updatedAt": "2026-11-15",
+  "updatedAt": "2026-11-22",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-15T01:39:35.616Z",
+    "syncedAt": "2026-11-22T01:59:49.774Z",
     "pcgw": {
       "syncedAt": "2026-11-15T01:39:44.454Z",
       "page": "Halo: The Master Chief Collection"

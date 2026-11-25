@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/24240/",
       "priceNote": "参考价 ¥ 35.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 24240,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:32:50.769Z",
+    "syncedAt": "2026-11-25T04:52:49.181Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:55:06.433Z",
       "page": "Payday: The Heist"
