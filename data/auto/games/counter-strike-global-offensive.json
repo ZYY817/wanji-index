@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/730/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 730,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:04:27.847Z",
+    "syncedAt": "2026-11-25T14:20:51.269Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:17:30.412Z",
       "page": "Counter-Strike 2"

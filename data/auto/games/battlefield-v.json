@@ -18,9 +18,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1238810/",
-      "priceNote": "参考价 ¥ 228.00",
+      "priceNote": "参考价 ¥ 11.40",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1238810,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:04:06.954Z",
+    "syncedAt": "2026-11-25T14:19:47.671Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:09:40.371Z",
       "page": "Battlefield V"

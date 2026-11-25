@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/105600/",
       "priceNote": "参考价 ¥ 42.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 105600,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:03:25.594Z",
+    "syncedAt": "2026-11-25T14:18:14.763Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:40.316Z",
       "page": "Terraria"

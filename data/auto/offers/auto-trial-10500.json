@@ -1,0 +1,17 @@
+{
+  "id": "auto-trial-10500",
+  "gameTitle": "Total War: EMPIRE – Definitive Edition 全面战争：帝国 - 终极版",
+  "titleZh": "全面战争：帝国 - 终极版",
+  "type": "trial",
+  "platform": "steam",
+  "url": "https://store.steampowered.com/app/10620/",
+  "claimNote": "Steam 免费试玩版，内容为本体的一部分，不限时间",
+  "claimNoteEn": "Free demo on Steam — a slice of the full game, no time limit",
+  "steamAppId": "10500",
+  "checkedAt": "2026-11-25",
+  "linkHealth": "ok",
+  "note": "试玩版信息来自 Steam 商店接口，自动更新；试玩进度通常不继承到正式版",
+  "createdAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "publishStatus": "published"
+}

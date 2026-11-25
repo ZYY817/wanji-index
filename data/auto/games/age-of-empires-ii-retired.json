@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/221380/",
       "priceNote": "参考价 ¥ 68.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 221380,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:40.849Z",
+    "syncedAt": "2026-11-25T14:18:29.833Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:26.531Z",
       "page": "Age of Empires II: HD Edition"

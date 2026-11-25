@@ -71,5 +71,6 @@
       "path": "<游戏安装目录>\\config.ini",
       "note": "来源：PCGamingWiki"
     }
-  ]
+  ],
+  "demoAppId": 4379380
 }

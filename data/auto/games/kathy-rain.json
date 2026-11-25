@@ -77,5 +77,6 @@
       "path": "<游戏安装目录>\\acsetup.cfg",
       "note": "来源：PCGamingWiki"
     }
-  ]
+  ],
+  "demoAppId": 466590
 }

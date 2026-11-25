@@ -22,11 +22,87 @@
       "indie"
     ]
   },
+  "auto-f2p-1046930": {
+    "steamAppId": "1046930",
+    "genres": [
+      "casual",
+      "strategy"
+    ]
+  },
+  "auto-f2p-1491000": {
+    "steamAppId": "1491000",
+    "genres": [
+      "action",
+      "simulation"
+    ]
+  },
+  "auto-f2p-1721470": {
+    "steamAppId": "1721470",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-f2p-1840": {
+    "steamAppId": "1840",
+    "genres": []
+  },
+  "auto-f2p-211500": {
+    "steamAppId": "211500",
+    "genres": [
+      "racing",
+      "simulation",
+      "sports"
+    ]
+  },
+  "auto-f2p-218230": {
+    "steamAppId": "218230",
+    "genres": [
+      "action",
+      "mmo"
+    ]
+  },
+  "auto-f2p-224260": {
+    "steamAppId": "224260",
+    "genres": [
+      "action",
+      "indie"
+    ]
+  },
+  "auto-f2p-24200": {
+    "steamAppId": "24200",
+    "genres": [
+      "action",
+      "adventure",
+      "mmo"
+    ]
+  },
+  "auto-f2p-333930": {
+    "steamAppId": "333930",
+    "genres": [
+      "action"
+    ]
+  },
   "auto-f2p-3419430": {
     "steamAppId": "3419430",
     "genres": [
       "casual",
       "indie",
+      "mmo"
+    ]
+  },
+  "auto-f2p-3483": {
+    "steamAppId": "3483",
+    "genres": [
+      "casual"
+    ]
+  },
+  "auto-f2p-433850": {
+    "steamAppId": "433850",
+    "genres": [
+      "action",
+      "adventure",
       "mmo"
     ]
   },
@@ -38,12 +114,54 @@
       "mmo"
     ]
   },
+  "auto-f2p-588430": {
+    "steamAppId": "588430",
+    "genres": [
+      "rpg",
+      "simulation"
+    ]
+  },
+  "auto-f2p-6100": {
+    "steamAppId": "6100",
+    "genres": [
+      "casual",
+      "indie",
+      "strategy"
+    ]
+  },
+  "auto-f2p-630": {
+    "steamAppId": "630",
+    "genres": [
+      "action"
+    ]
+  },
   "auto-f2p-714010": {
     "steamAppId": "714010",
     "genres": [
       "action",
       "adventure",
       "casual"
+    ]
+  },
+  "auto-f2p-766570": {
+    "steamAppId": "766570",
+    "genres": [
+      "adventure",
+      "casual",
+      "mmo"
+    ]
+  },
+  "auto-f2p-767560": {
+    "steamAppId": "767560",
+    "genres": [
+      "action"
+    ]
+  },
+  "auto-f2p-9900": {
+    "steamAppId": "9900",
+    "genres": [
+      "mmo",
+      "rpg"
     ]
   },
   "auto-gp-2204": {
@@ -119,6 +237,128 @@
       "casual",
       "indie",
       "strategy"
+    ]
+  },
+  "auto-trial-10680": {
+    "steamAppId": "10680",
+    "genres": [
+      "action"
+    ]
+  },
+  "auto-trial-1229490": {
+    "steamAppId": "1229490",
+    "genres": [
+      "action",
+      "indie"
+    ]
+  },
+  "auto-trial-12900": {
+    "steamAppId": "12900",
+    "genres": [
+      "indie"
+    ]
+  },
+  "auto-trial-1700": {
+    "steamAppId": "1700",
+    "genres": [
+      "rpg"
+    ]
+  },
+  "auto-trial-1796580": {
+    "steamAppId": "1796580",
+    "genres": [
+      "action",
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-trial-204360": {
+    "steamAppId": "204360",
+    "genres": [
+      "action",
+      "adventure",
+      "casual"
+    ]
+  },
+  "auto-trial-2050650": {
+    "steamAppId": "2050650",
+    "genres": [
+      "action",
+      "adventure"
+    ]
+  },
+  "auto-trial-3164500": {
+    "steamAppId": "3164500",
+    "genres": [
+      "action",
+      "indie",
+      "simulation"
+    ]
+  },
+  "auto-trial-3320": {
+    "steamAppId": "3320",
+    "genres": [
+      "casual"
+    ]
+  },
+  "auto-trial-3330": {
+    "steamAppId": "3330",
+    "genres": [
+      "casual"
+    ]
+  },
+  "auto-trial-33930": {
+    "steamAppId": "33930",
+    "genres": [
+      "action",
+      "simulation",
+      "strategy"
+    ]
+  },
+  "auto-trial-34030": {
+    "steamAppId": "34030",
+    "genres": [
+      "strategy"
+    ]
+  },
+  "auto-trial-34870": {
+    "steamAppId": "34870",
+    "genres": [
+      "action"
+    ]
+  },
+  "auto-trial-34900": {
+    "steamAppId": "34900",
+    "genres": [
+      "indie"
+    ]
+  },
+  "auto-trial-3590": {
+    "steamAppId": "3590",
+    "genres": [
+      "strategy"
+    ]
+  },
+  "auto-trial-370910": {
+    "steamAppId": "370910",
+    "genres": [
+      "adventure",
+      "indie"
+    ]
+  },
+  "auto-trial-6220": {
+    "steamAppId": "6220",
+    "genres": [
+      "action",
+      "racing",
+      "simulation"
+    ]
+  },
+  "auto-trial-8190": {
+    "steamAppId": "8190",
+    "genres": [
+      "action",
+      "adventure"
     ]
   },
   "ddnet-oss": {

@@ -23,7 +23,7 @@
       "url": "https://store.steampowered.com/app/599390/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 599390,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:04:00.023Z",
+    "syncedAt": "2026-11-25T14:19:40.344Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:18:02.741Z",
       "page": "The Battle for Wesnoth"

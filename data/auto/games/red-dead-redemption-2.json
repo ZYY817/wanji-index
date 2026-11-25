@@ -18,9 +18,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1174180/",
-      "priceNote": "参考价 ¥ 279.00",
+      "priceNote": "参考价 ¥ 69.75",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1174180,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:03:08.322Z",
+    "syncedAt": "2026-11-25T14:17:52.311Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:13:07.431Z",
       "page": "Red Dead Redemption 2"

@@ -23,6 +23,7 @@
     }
   ],
   "steamAppId": 1700,
+  "demoAppId": 1710,
   "developers": [
     "Arkane Studios"
   ],
@@ -56,7 +57,7 @@
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-25T04:50:12.559Z",
+    "syncedAt": "2026-11-25T14:19:14.617Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:52.258Z",
       "page": "Arx Fatalis"

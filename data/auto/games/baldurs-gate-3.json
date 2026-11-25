@@ -21,9 +21,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1086940/",
-      "priceNote": "参考价 ¥ 268.00",
+      "priceNote": "参考价 ¥ 187.60",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1086940,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-21",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-30",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-21T03:02:42.897Z",
+    "syncedAt": "2026-11-25T14:17:03.601Z",
     "pcgw": {
       "syncedAt": "2026-10-30T12:33:46.548Z",
       "page": "Baldur's Gate 3"

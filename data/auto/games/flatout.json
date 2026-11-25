@@ -106,5 +106,6 @@
       "url": "https://www.pcgamingwiki.com/wiki/FlatOut#LAN_multiplayer_crashes_when_hosting_a_game_(GOG.com)",
       "fixed": true
     }
-  ]
+  ],
+  "demoAppId": 6230
 }

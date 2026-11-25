@@ -113,6 +113,7 @@ for (const [appid, spyName] of pool) {
       linkHealth: 'ok', checkedAt: today(),
     }],
     steamAppId: Number(appid),
+    ...(d.demos?.[0]?.appid ? { demoAppId: Number(d.demos[0].appid) } : {}),
     developers: d.developers ?? [],
     publishers: d.publishers ?? [],
     releaseDate: d.release_date?.coming_soon ? `即将推出（${d.release_date.date}）` : d.release_date?.date ?? '',

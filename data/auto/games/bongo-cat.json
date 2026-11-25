@@ -23,7 +23,7 @@
       "url": "https://store.steampowered.com/app/3419430/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 3419430,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:04:10.409Z",
+    "syncedAt": "2026-11-25T14:20:02.536Z",
     "pcgw": {
       "syncedAt": "2026-10-28T13:18:05.195Z",
       "page": "Bongo Cat"

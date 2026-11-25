@@ -23,6 +23,7 @@
     }
   ],
   "steamAppId": 12900,
+  "demoAppId": 12910,
   "developers": [
     "Dylan Fitterer"
   ],
@@ -54,7 +55,7 @@
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-25T04:50:26.625Z",
+    "syncedAt": "2026-11-25T14:19:32.973Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:00.131Z",
       "page": "Audiosurf"

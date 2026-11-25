@@ -49,6 +49,9 @@ jobs:
       - name: 热门免费游戏（Steam 在玩人数榜单）
         run: node scripts/sync/free-to-play.mjs
         continue-on-error: true
+      - name: Steam 免费试玩版（商店 demos 字段，零成本）
+        run: node scripts/sync/free-trials.mjs
+        continue-on-error: true
       - name: 免费情报封面（Steam 同名游戏 / 官网分享图）
         run: node scripts/sync/offer-art.mjs
         continue-on-error: true

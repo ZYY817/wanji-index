@@ -108,5 +108,6 @@
       "url": "https://www.pcgamingwiki.com/wiki/Just_Cause_2#Crash_when_loading_a_save_game_on_the_GOG_version",
       "fixed": true
     }
-  ]
+  ],
+  "demoAppId": 35110
 }

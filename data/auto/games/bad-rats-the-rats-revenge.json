@@ -23,6 +23,7 @@
     }
   ],
   "steamAppId": 34900,
+  "demoAppId": 34910,
   "developers": [
     "Invent4 Entertainment"
   ],
@@ -52,7 +53,7 @@
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-25T04:50:30.125Z",
+    "syncedAt": "2026-11-25T14:19:36.656Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:02.887Z",
       "page": "Bad Rats: The Rats' Revenge"

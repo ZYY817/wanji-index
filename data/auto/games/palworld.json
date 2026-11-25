@@ -23,7 +23,7 @@
       "url": "https://store.steampowered.com/app/1623730/",
       "priceNote": "参考价 ¥ 108.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1623730,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:03:04.915Z",
+    "syncedAt": "2026-11-25T14:17:48.608Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:12:22.228Z",
       "page": "Palworld"

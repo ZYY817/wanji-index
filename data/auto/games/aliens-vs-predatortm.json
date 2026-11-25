@@ -23,6 +23,7 @@
     }
   ],
   "steamAppId": 10680,
+  "demoAppId": 34200,
   "developers": [
     "Rebellion"
   ],
@@ -56,7 +57,7 @@
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-25T04:50:02.065Z",
+    "syncedAt": "2026-11-25T14:18:41.099Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:47.895Z",
       "page": "Aliens vs. Predator (2010)"
