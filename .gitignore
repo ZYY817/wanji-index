@@ -13,3 +13,5 @@ dev.log
 .DS_Store
 .shots/
 reports/
+.playwright-cli/
+output/

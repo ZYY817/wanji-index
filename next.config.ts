@@ -7,6 +7,8 @@ const site = loadSiteConfig();
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
+  // 开发预览经 127.0.0.1 代理访问时的跨源许可（仅影响 dev）
+  allowedDevOrigins: ['127.0.0.1'],
   // GitHub Pages 备用：site.json 的 base 注入 basePath（CF 根路径时为 '/'）
   basePath: site.base === '/' ? '' : site.base.replace(/\/$/, ''),
   images: { unoptimized: true }, // 静态导出；Steam CDN 外链图不走优化器

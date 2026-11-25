@@ -43,6 +43,9 @@ jobs:
       - name: 其他平台限时免费（Steam / GOG / itch.io / IndieGala）
         run: node scripts/sync/free-giveaways.mjs
         continue-on-error: true
+      - name: Steam 周末免费试玩（商店页扫描）
+        run: node scripts/sync/free-weekends.mjs
+        continue-on-error: true
       - name: 热门免费游戏（Steam 在玩人数榜单）
         run: node scripts/sync/free-to-play.mjs
         continue-on-error: true
