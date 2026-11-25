@@ -17,9 +17,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/12150/",
-      "priceNote": "参考价 ¥ 63.00",
+      "priceNote": "参考价 ¥ 15.75",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 12150,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:32:43.818Z",
+    "syncedAt": "2026-11-25T04:52:42.149Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:55:03.389Z",
       "page": "Max Payne 2: The Fall of Max Payne"

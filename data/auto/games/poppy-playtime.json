@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/1721470/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1721470,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-18",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:35:15.989Z",
+    "syncedAt": "2026-11-25T04:53:03.105Z",
     "pcgw": {
       "syncedAt": "2026-11-18T03:35:23.482Z",
       "page": "Poppy Playtime"

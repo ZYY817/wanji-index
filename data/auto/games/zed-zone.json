@@ -21,9 +21,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1211600/",
-      "priceNote": "参考价 ¥ 28.80",
+      "priceNote": "参考价 ¥ 48.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 1211600,
@@ -50,13 +50,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:34:44.891Z",
+    "syncedAt": "2026-11-25T04:54:54.535Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:57:09.931Z",
       "page": "ZED ZONE"

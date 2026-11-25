@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/201870/",
       "priceNote": "参考价 ¥ 75.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 201870,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:30:28.484Z",
+    "syncedAt": "2026-11-25T04:50:19.575Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:52:55.217Z",
       "page": "Assassin's Creed: Revelations"

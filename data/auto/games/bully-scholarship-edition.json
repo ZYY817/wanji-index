@@ -20,7 +20,7 @@
       "url": "https://store.steampowered.com/app/12200/",
       "priceNote": "参考价 ¥ 63.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 12200,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:30:52.809Z",
+    "syncedAt": "2026-11-25T04:50:44.084Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:10.016Z",
       "page": "Bully: Scholarship Edition"

@@ -18,9 +18,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/3330/",
-      "priceNote": "参考价 ¥ 21.00",
+      "priceNote": "参考价 ¥ 4.20",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 3330,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:34:48.313Z",
+    "syncedAt": "2026-11-25T04:54:57.949Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:57:11.369Z",
       "page": null

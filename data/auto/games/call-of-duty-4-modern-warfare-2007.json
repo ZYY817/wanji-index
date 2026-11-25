@@ -20,7 +20,7 @@
       "url": "https://store.steampowered.com/app/7940/",
       "priceNote": "参考价 ¥ 49.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-18"
+      "checkedAt": "2026-11-25"
     }
   ],
   "steamAppId": 7940,
@@ -47,13 +47,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-18",
+  "checkedAt": "2026-11-25",
   "createdAt": "2026-11-11",
-  "updatedAt": "2026-11-18",
+  "updatedAt": "2026-11-25",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-18T03:30:59.763Z",
+    "syncedAt": "2026-11-25T04:50:51.066Z",
     "pcgw": {
       "syncedAt": "2026-11-11T01:53:12.978Z",
       "page": null
