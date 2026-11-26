@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1329410/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 1329410,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:06:23.069Z",
+    "syncedAt": "2026-11-26T04:04:19.205Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:28.100Z",
       "page": null

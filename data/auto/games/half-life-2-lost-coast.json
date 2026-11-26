@@ -20,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/340/",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 340,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:05:38.162Z",
+    "syncedAt": "2026-11-26T04:03:33.850Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:20.521Z",
       "page": "Half-Life 2: Lost Coast"

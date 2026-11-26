@@ -20,7 +20,7 @@
       "type": "buy",
       "url": "https://store.steampowered.com/app/1811260/",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 1811260,
@@ -48,13 +48,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:05:06.702Z",
+    "syncedAt": "2026-11-26T04:03:02.688Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:36.674Z",
       "page": null

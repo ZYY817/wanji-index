@@ -21,12 +21,13 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/227300/",
-      "priceNote": "参考价 ¥ 23.24",
+      "priceNote": "参考价 ¥ 92.99",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 227300,
+  "demoAppId": 231120,
   "developers": [
     "SCS Software"
   ],
@@ -54,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:05:13.756Z",
+    "syncedAt": "2026-11-26T04:03:09.575Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:10:44.479Z",
       "page": "Euro Truck Simulator 2"
@@ -91,6 +92,5 @@
       "url": "https://www.pcgamingwiki.com/wiki/Euro_Truck_Simulator_2#Windows%3A_shortcuts_to_ogg_audio_files_don't_work",
       "fixed": true
     }
-  ],
-  "demoAppId": 231120
+  ]
 }

@@ -27,7 +27,7 @@
       "url": "https://store.steampowered.com/app/2139460/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 2139460,
@@ -59,13 +59,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:06:50.886Z",
+    "syncedAt": "2026-11-26T04:04:46.945Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:36.128Z",
       "page": "Once Human"

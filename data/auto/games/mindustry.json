@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1127400/",
       "priceNote": "参考价 ¥ 37.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 1127400,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:06:29.972Z",
+    "syncedAt": "2026-11-26T04:04:26.137Z",
     "pcgw": {
       "syncedAt": "2026-10-29T13:56:33.654Z",
       "page": "Mindustry"

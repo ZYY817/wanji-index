@@ -20,9 +20,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/990080/",
-      "priceNote": "参考价 ¥ 384.00",
+      "priceNote": "参考价 ¥ 38.40",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-19"
+      "checkedAt": "2026-11-26"
     }
   ],
   "steamAppId": 990080,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-19",
+  "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-26",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-19T03:05:58.827Z",
+    "syncedAt": "2026-11-26T04:03:54.624Z",
     "pcgw": {
       "syncedAt": "2026-10-27T16:11:35.834Z",
       "page": "Hogwarts Legacy"
