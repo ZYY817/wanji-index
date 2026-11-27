@@ -55,13 +55,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-25",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-25T14:17:07.317Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:09:43.056Z",
+      "syncedAt": "2026-11-27T04:01:49.659Z",
       "page": "Black Myth: Wukong"
     }
   },

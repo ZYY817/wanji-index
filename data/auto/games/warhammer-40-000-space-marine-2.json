@@ -20,9 +20,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/2183900/",
-      "priceNote": "参考价 ¥ 249.00",
+      "priceNote": "参考价 ¥ 62.25",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 2183900,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:56:19.772Z",
+    "syncedAt": "2026-11-27T04:01:14.357Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:39.599Z",
       "page": "Warhammer 40,000: Space Marine II"

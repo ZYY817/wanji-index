@@ -19,9 +19,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/250900/",
-      "priceNote": "参考价 ¥ 38.40",
+      "priceNote": "参考价 ¥ 48.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 250900,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:33.986Z",
+    "syncedAt": "2026-11-27T04:01:00.048Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:31:08.630Z",
       "page": "The Binding of Isaac: Rebirth"

@@ -58,13 +58,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:06:38.099Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:14:07.318Z",
+      "syncedAt": "2026-11-27T04:06:18.537Z",
       "page": "Warhammer 40,000: Rogue Trader"
     }
   },

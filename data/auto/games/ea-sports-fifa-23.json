@@ -45,19 +45,44 @@
     {
       "name": "Steam 商店",
       "url": "https://store.steampowered.com/app/1811260/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/FIFA_23"
     }
   ],
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:03:02.688Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:10:36.674Z",
-      "page": null
+      "syncedAt": "2026-11-27T04:02:20.601Z",
+      "page": "FIFA 23"
     }
-  }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\FIFA 23\\settings\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\Documents\\FIFA 23\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Crash at startup",
+      "url": "https://www.pcgamingwiki.com/wiki/FIFA_23#Crash_at_startup",
+      "fixed": true
+    }
+  ]
 }

@@ -18,12 +18,13 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1229490/",
-      "priceNote": "参考价 ¥ 108.00",
+      "priceNote": "参考价 ¥ 81.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 1229490,
+  "demoAppId": 1230260,
   "developers": [
     "Arsi \"Hakita\" Patala"
   ],
@@ -51,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:56:07.984Z",
+    "syncedAt": "2026-11-27T04:01:03.609Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:36.582Z",
       "page": "Ultrakill"
@@ -76,6 +77,5 @@
       "path": "HKEY_CURRENT_USER\\Software\\Hakita\\ULTRAKILL",
       "note": "来源：PCGamingWiki"
     }
-  ],
-  "demoAppId": 1230260
+  ]
 }

@@ -4,11 +4,11 @@
   "type": "limited",
   "platform": "epic",
   "url": "https://store.epicgames.com/zh-CN/p/bread-and-fred-1db362",
-  "claimNote": "Epic 下一期每周限免（已公布）",
-  "claimNoteEn": "Next Epic weekly freebie (announced)",
+  "claimNote": "Epic 每周限免，领取后永久保留在库中",
+  "claimNoteEn": "Epic weekly freebie — yours to keep once claimed",
   "startDate": "2026-11-26T16:00:00.000Z",
   "endDate": "2026-12-03T16:00:00.000Z",
-  "checkedAt": "2026-11-26",
+  "checkedAt": "2026-11-27",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
@@ -16,6 +16,6 @@
     "tall": "https://cdn1.epicgames.com/spt-assets/545b4dd8bb364c12b719268198a93ef3/bread-and-fred-pr4o2.jpg"
   },
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published"
 }

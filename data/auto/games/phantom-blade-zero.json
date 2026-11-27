@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/4115450/",
       "priceNote": "参考价 ¥ 268.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 4115450,
@@ -52,13 +52,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:20.047Z",
+    "syncedAt": "2026-11-27T04:00:42.185Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:59.532Z",
       "page": "Phantom Blade Zero"

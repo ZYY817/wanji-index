@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:05:14.537Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:13:02.626Z",
+      "syncedAt": "2026-11-27T04:04:32.778Z",
       "page": "R.E.P.O."
     }
   },

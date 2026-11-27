@@ -18,9 +18,9 @@
       "platform": "steam",
       "type": "buy",
       "url": "https://store.steampowered.com/app/1172620/",
-      "priceNote": "参考价 ¥ 138.00",
+      "priceNote": "参考价 ¥ 48.30",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 1172620,
@@ -47,13 +47,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:56:04.596Z",
+    "syncedAt": "2026-11-27T04:00:52.856Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:33.767Z",
       "page": null

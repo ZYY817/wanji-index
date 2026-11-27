@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/1794680/",
       "priceNote": "参考价 ¥ 25.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 1794680,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:56:16.398Z",
+    "syncedAt": "2026-11-27T04:01:07.152Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:38.085Z",
       "page": "Vampire Survivors"

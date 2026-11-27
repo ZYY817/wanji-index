@@ -54,13 +54,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:03:12.996Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:10:55.591Z",
+      "syncedAt": "2026-11-27T04:02:30.203Z",
       "page": "Fall Guys"
     }
   },

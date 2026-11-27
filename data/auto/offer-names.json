@@ -5,20 +5,20 @@
       "action"
     ]
   },
-  "auto-epic-idle-champions-of-the-forgotten-realms-20261105": {
-    "steamAppId": "627690",
-    "genres": [
-      "action",
-      "adventure",
-      "indie"
-    ]
-  },
   "auto-epic-mark-of-the-deep-f7dc08-20261119": {
     "steamAppId": "1933370",
     "zh": "深渊之印",
     "genres": [
       "action",
       "adventure",
+      "indie"
+    ]
+  },
+  "auto-epic-strange-antiquities-e37660-20261203": {
+    "steamAppId": "2885870",
+    "genres": [
+      "adventure",
+      "casual",
       "indie"
     ]
   },

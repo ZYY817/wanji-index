@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/264710/",
       "priceNote": "参考价 ¥ 149.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 264710,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:30.384Z",
+    "syncedAt": "2026-11-27T04:00:56.441Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:31:07.154Z",
       "page": "Subnautica"

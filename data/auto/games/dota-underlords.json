@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/1046930/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 1046930,
@@ -49,13 +49,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:54:59.776Z",
+    "syncedAt": "2026-11-27T04:00:12.640Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:48.480Z",
       "page": "Dota Underlords"

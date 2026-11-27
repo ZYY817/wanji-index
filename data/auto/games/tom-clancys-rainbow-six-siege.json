@@ -53,13 +53,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:06:06.779Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:13:44.789Z",
+      "syncedAt": "2026-11-27T04:06:02.801Z",
       "page": "Tom Clancy's Rainbow Six Siege"
     }
   },

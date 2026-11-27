@@ -54,13 +54,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:06:55.567Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:14:15.081Z",
+      "syncedAt": "2026-11-27T04:06:23.020Z",
       "page": "Z1 Battle Royale"
     }
   },

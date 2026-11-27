@@ -21,7 +21,7 @@
       "url": "https://store.steampowered.com/app/2622380/",
       "priceNote": "参考价 ¥ 198.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 2622380,
@@ -53,13 +53,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:03.121Z",
+    "syncedAt": "2026-11-27T04:00:16.297Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:52.437Z",
       "page": "Elden Ring Nightreign"

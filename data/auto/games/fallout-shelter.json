@@ -20,7 +20,7 @@
       "url": "https://store.steampowered.com/app/588430/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 588430,
@@ -51,13 +51,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-20",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:56.048Z",
+    "syncedAt": "2026-11-27T04:00:23.873Z",
     "pcgw": {
       "syncedAt": "2026-11-20T02:56:32.205Z",
       "page": "Fallout Shelter"

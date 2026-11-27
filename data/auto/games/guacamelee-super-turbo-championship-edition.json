@@ -22,7 +22,7 @@
       "url": "https://store.steampowered.com/app/275390/",
       "priceNote": "参考价 ¥ 59.00",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 275390,
@@ -54,13 +54,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:09.903Z",
+    "syncedAt": "2026-11-27T04:00:31.147Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:30:55.276Z",
       "page": "Guacamelee! Super Turbo Championship Edition"

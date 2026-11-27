@@ -53,13 +53,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:02:45.074Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:10:22.037Z",
+      "syncedAt": "2026-11-27T04:02:14.917Z",
       "page": "Dead by Daylight"
     }
   },

@@ -52,13 +52,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:04:40.097Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:12:18.616Z",
+      "syncedAt": "2026-11-27T04:04:14.434Z",
       "page": "NBA 2K20"
     }
   },

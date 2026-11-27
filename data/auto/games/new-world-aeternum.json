@@ -51,13 +51,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:04:43.493Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:12:20.417Z",
+      "syncedAt": "2026-11-27T04:04:17.219Z",
       "page": null
     }
   }

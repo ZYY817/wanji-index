@@ -51,13 +51,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-26",
   "createdAt": "2026-10-27",
-  "updatedAt": "2026-11-26",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-26T04:05:18.047Z",
     "pcgw": {
-      "syncedAt": "2026-10-27T16:13:04.848Z",
+      "syncedAt": "2026-11-27T04:04:34.231Z",
       "page": "Raft"
     }
   }

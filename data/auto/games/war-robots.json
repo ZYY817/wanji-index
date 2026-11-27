@@ -19,7 +19,7 @@
       "url": "https://store.steampowered.com/app/767560/",
       "priceNote": "免费开玩",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-20"
+      "checkedAt": "2026-11-27"
     }
   ],
   "steamAppId": 767560,
@@ -46,13 +46,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-20",
+  "checkedAt": "2026-11-27",
   "createdAt": "2026-11-13",
-  "updatedAt": "2026-11-20",
+  "updatedAt": "2026-11-27",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-20T02:55:37.336Z",
+    "syncedAt": "2026-11-27T04:01:10.861Z",
     "pcgw": {
       "syncedAt": "2026-11-13T02:31:10.053Z",
       "page": "War Robots"
