@@ -1,0 +1,15 @@
+{
+  "id": "squad-steam-mod",
+  "name": "Squad 创意工坊",
+  "nameEn": "Squad Steam Workshop",
+  "type": "mod",
+  "siteId": "steam",
+  "gameId": "squad",
+  "url": "https://steamcommunity.com/app/393380/workshop/",
+  "note": "Steam 内一键订阅，自动更新",
+  "noteEn": "One-click subscribe and auto-update in Steam",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-28",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

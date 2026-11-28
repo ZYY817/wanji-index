@@ -1,0 +1,15 @@
+{
+  "id": "stumble-guys-pcgamingwiki-guide-page",
+  "name": "Stumble Guys 技术资料页",
+  "nameEn": "Stumble Guys on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "stumble-guys",
+  "url": "https://www.pcgamingwiki.com/wiki/Stumble_Guys",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-28",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

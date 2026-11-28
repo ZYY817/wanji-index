@@ -1,0 +1,15 @@
+{
+  "id": "cuphead-nexus-mods-mod",
+  "name": "Cuphead Nexus Mods 专区",
+  "nameEn": "Cuphead on Nexus Mods",
+  "type": "mod",
+  "siteId": "nexus-mods",
+  "gameId": "cuphead",
+  "url": "https://www.nexusmods.com/cuphead",
+  "note": "Nexus 上的 MOD 专区，共 61 个 MOD",
+  "noteEn": "Nexus Mods hub with 61 mods",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-28",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

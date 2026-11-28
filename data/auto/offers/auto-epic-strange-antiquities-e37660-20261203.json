@@ -8,7 +8,7 @@
   "claimNoteEn": "Next Epic weekly freebie (announced)",
   "startDate": "2026-12-03T16:00:00.000Z",
   "endDate": "2026-12-10T16:00:00.000Z",
-  "checkedAt": "2026-11-27",
+  "checkedAt": "2026-11-28",
   "linkHealth": "ok",
   "note": "来自 Epic 官方免费游戏接口，自动更新；截止时间以 Epic 页面为准",
   "art": {
@@ -16,6 +16,6 @@
     "tall": "https://cdn1.epicgames.com/spt-assets/d0e3b7c3690c485ca7a435d298262ab2/strange-antiquities-1ozyj.png"
   },
   "createdAt": "2026-11-27",
-  "updatedAt": "2026-11-27",
+  "updatedAt": "2026-11-28",
   "publishStatus": "published"
 }

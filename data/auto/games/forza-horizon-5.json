@@ -24,7 +24,7 @@
       "url": "https://store.steampowered.com/app/1551360/",
       "priceNote": "参考价 ¥ 79.20",
       "linkHealth": "ok",
-      "checkedAt": "2026-11-21"
+      "checkedAt": "2026-11-28"
     }
   ],
   "steamAppId": 1551360,
@@ -55,13 +55,13 @@
     }
   ],
   "reviewStatus": "unverified",
-  "checkedAt": "2026-11-21",
+  "checkedAt": "2026-11-28",
   "createdAt": "2026-11-14",
-  "updatedAt": "2026-11-21",
+  "updatedAt": "2026-11-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
-    "syncedAt": "2026-11-21T03:02:56.828Z",
+    "syncedAt": "2026-11-28T03:48:28.673Z",
     "pcgw": {
       "syncedAt": "2026-11-14T02:08:54.527Z",
       "page": "Forza Horizon 5"

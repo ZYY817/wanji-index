@@ -1,0 +1,15 @@
+{
+  "id": "cuphead-thunderstore-mod",
+  "name": "Cuphead Thunderstore 社区 MOD",
+  "nameEn": "Cuphead on Thunderstore",
+  "type": "mod",
+  "siteId": "thunderstore",
+  "gameId": "cuphead",
+  "url": "https://thunderstore.io/c/cuphead/",
+  "note": "配合 r2modman 一键安装",
+  "noteEn": "One-click install with r2modman",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-28",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

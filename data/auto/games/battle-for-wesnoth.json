@@ -56,13 +56,13 @@
   "reviewStatus": "unverified",
   "checkedAt": "2026-11-25",
   "createdAt": "2026-10-28",
-  "updatedAt": "2026-11-25",
+  "updatedAt": "2026-11-28",
   "publishStatus": "published",
   "_auto": {
     "source": "steam",
     "syncedAt": "2026-11-25T14:19:40.344Z",
     "pcgw": {
-      "syncedAt": "2026-10-28T13:18:02.741Z",
+      "syncedAt": "2026-11-28T03:49:42.093Z",
       "page": "The Battle for Wesnoth"
     }
   },

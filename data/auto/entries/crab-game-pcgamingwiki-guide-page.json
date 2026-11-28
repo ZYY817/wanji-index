@@ -1,0 +1,15 @@
+{
+  "id": "crab-game-pcgamingwiki-guide-page",
+  "name": "Crab Game 技术资料页",
+  "nameEn": "Crab Game on PCGamingWiki",
+  "type": "guide-page",
+  "siteId": "pcgamingwiki",
+  "gameId": "crab-game",
+  "url": "https://www.pcgamingwiki.com/wiki/Crab_Game",
+  "note": "存档与配置位置、画面设置、已知问题修复",
+  "noteEn": "Save/config paths, display settings, and bug fixes",
+  "linkHealth": "ok",
+  "checkedAt": "2026-11-28",
+  "publishStatus": "published",
+  "reviewStatus": "unverified"
+}

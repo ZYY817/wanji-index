@@ -1,0 +1,86 @@
+{
+  "id": "cuphead",
+  "slug": "cuphead",
+  "name": {
+    "zh": "Cuphead"
+  },
+  "summary": "《茶杯头》是一款以BOSS对战为主的经典横版卷轴类射击游戏。受上世纪30年代动画片的启发，游戏无论是画面还是音效都努力再现了当时的技术，如传统的赛璐璐手绘动画、水彩背景还有原声爵士乐录音等。",
+  "summaryEn": "Cuphead is a classic run and gun action game heavily focused on boss battles.",
+  "genres": [
+    "action",
+    "indie"
+  ],
+  "os": [
+    "windows",
+    "macos"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/268910/",
+      "priceNote": "参考价 ¥ 47.60",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "steamAppId": 268910,
+  "developers": [
+    "Studio MDHR Entertainment Inc."
+  ],
+  "publishers": [
+    "Studio MDHR Entertainment Inc."
+  ],
+  "releaseDate": "2017 年 9 月 29 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统 *: Windows 7\n处理器: Intel Core2 Duo E8400, 3.0GHz or AMD Athlon 64 X2 6000+, 3.0GHz or higher\n内存: 3 GB RAM\n显卡: Geforce 9600 GT or AMD HD 3870 512MB or higher\nDirectX 版本: 11\n存储空间: 需要 4 GB 可用空间",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS *: Windows 7\nProcessor: Intel Core2 Duo E8400, 3.0GHz or AMD Athlon 64 X2 6000+, 3.0GHz or higher\nMemory: 3 GB RAM\nGraphics: Geforce 9600 GT or AMD HD 3870 512MB or higher\nDirectX: Version 11\nStorage: 4 GB available space",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/268910/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Cuphead"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-28",
+  "createdAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-28T03:48:58.968Z",
+    "pcgw": {
+      "syncedAt": "2026-11-28T03:49:47.708Z",
+      "page": "Cuphead"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%USERPROFILE%\\AppData\\LocalLow\\Studio MDHR\\Cuphead\\",
+      "note": "来源：PCGamingWiki"
+    },
+    {
+      "os": "windows",
+      "path": "%APPDATA%\\Cuphead\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "HKEY_CURRENT_USER\\Software\\Studio MDHR\\Cuphead",
+      "note": "来源：PCGamingWiki"
+    }
+  ]
+}

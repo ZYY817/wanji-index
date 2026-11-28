@@ -1,0 +1,99 @@
+{
+  "id": "squad",
+  "slug": "squad",
+  "name": {
+    "zh": "Squad"
+  },
+  "summary": "Squad（战术小队）是一款战术第一人称射击，通过团队合作、持续沟通和逼真的游戏玩法提供真实的战斗体验。旨在通过 100 人大型战场、步兵与载具联合作战、基地建设和集成的 VOIP语音沟通系统拉近射击游戏与军事模拟体验之间的距离。",
+  "summaryEn": "Squad is a tactical FPS that provides authentic combat experiences through teamwork, communication, and realistic combat.",
+  "genres": [
+    "action",
+    "indie",
+    "mmo",
+    "strategy"
+  ],
+  "os": [
+    "windows"
+  ],
+  "channels": [
+    {
+      "platform": "steam",
+      "type": "buy",
+      "url": "https://store.steampowered.com/app/393380/",
+      "priceNote": "参考价 ¥ 94.40",
+      "linkHealth": "ok",
+      "checkedAt": "2026-11-28"
+    }
+  ],
+  "steamAppId": 393380,
+  "developers": [
+    "Offworld"
+  ],
+  "publishers": [
+    "Offworld"
+  ],
+  "releaseDate": "2020 年 9 月 23 日",
+  "zhSupport": "text",
+  "requirements": {
+    "minimum": "最低配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 10 (x64)\n处理器: Intel Core i5-8400, AMD Ryzen 3600\n内存: 8 GB RAM\n显卡: Nvidia GTX 1060 6GB, AMD Radeon RX 580 with at least 6GB of VRAM\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 65 GB 可用空间\n附注事项: A teamwork oriented mindset",
+    "recommended": "推荐配置:\n需要 64 位处理器和操作系统\n操作系统: Windows 11 \n处理器: Intel Core i5-12400, AMD Ryzen 5600\n内存: 16 GB RAM\n显卡: Nvidia GeForce RTX 3060, AMD Radeon RX 6600 XT\nDirectX 版本: 12\n网络: 宽带互联网连接\n存储空间: 需要 65 GB 可用空间\n附注事项: A microphone"
+  },
+  "requirementsEn": {
+    "minimum": "Minimum:\nRequires a 64-bit processor and operating system\nOS: Windows 10 (x64)\nProcessor: Intel Core i5-8400, AMD Ryzen 3600\nMemory: 8 GB RAM\nGraphics: Nvidia GTX 1060 6GB, AMD Radeon RX 580 with at least 6GB of VRAM\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 65 GB available space\nAdditional Notes: A teamwork oriented mindset",
+    "recommended": "Recommended:\nRequires a 64-bit processor and operating system\nOS: Windows 11 \nProcessor: Intel Core i5-12400, AMD Ryzen 5600\nMemory: 16 GB RAM\nGraphics: Nvidia GeForce RTX 3060, AMD Radeon RX 6600 XT\nDirectX: Version 12\nNetwork: Broadband Internet connection\nStorage: 65 GB available space\nAdditional Notes: A microphone"
+  },
+  "sources": [
+    {
+      "name": "Steam 商店",
+      "url": "https://store.steampowered.com/app/393380/"
+    },
+    {
+      "name": "PCGamingWiki",
+      "url": "https://www.pcgamingwiki.com/wiki/Squad"
+    }
+  ],
+  "reviewStatus": "unverified",
+  "checkedAt": "2026-11-28",
+  "createdAt": "2026-11-28",
+  "updatedAt": "2026-11-28",
+  "publishStatus": "published",
+  "_auto": {
+    "source": "steam",
+    "syncedAt": "2026-11-28T03:49:08.059Z",
+    "pcgw": {
+      "syncedAt": "2026-11-28T03:49:50.605Z",
+      "page": "Squad"
+    }
+  },
+  "savePaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\SquadGame\\Saved\\SaveGames\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "configPaths": [
+    {
+      "os": "windows",
+      "path": "%LOCALAPPDATA%\\SquadGame\\Saved\\Config\\WindowsNoEditor\\",
+      "note": "来源：PCGamingWiki"
+    }
+  ],
+  "issues": [
+    {
+      "title": "Miscellaneous issues",
+      "url": "https://www.pcgamingwiki.com/wiki/Squad#Miscellaneous_issues",
+      "fixed": true
+    },
+    {
+      "title": "Stuttering",
+      "url": "https://www.pcgamingwiki.com/wiki/Squad#Stuttering",
+      "fixed": true
+    },
+    {
+      "title": "Ultra-widescreen Aspect Ratio",
+      "url": "https://www.pcgamingwiki.com/wiki/Squad#Ultra-widescreen_Aspect_Ratio",
+      "fixed": true
+    }
+  ]
+}
